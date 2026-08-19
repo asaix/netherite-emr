@@ -1,0 +1,140 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.conda/
+conda-meta/
+pyvenv.cfg
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+
+# --- Tooling caches ---
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.dmypy.json
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.hypothesis/
+.ipynb_checkpoints/
+
+# --- Editors / OS ---
+/.vscode
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Jupyter / notebooks ---
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# --- Research artifacts ---
+# Raw/large data: keep out of git, use DVC/git-lfs/external storage instead.
+data/
+!data/.gitkeep
+!data/README.md
+datasets/
+raw/
+interim/
+
+# Model checkpoints & weights
+models/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.onnx
+*.safetensors
+*.bin
+*.pkl
+*.joblib
+
+# Big/binary data formats
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.arrow
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.7z
+
+# Outputs, logs, experiment tracking
+outputs/
+results/
+logs/
+runs/
+figures/
+*.log
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+events.out.tfevents.*
+.neptune/
+catboost_info/
+
+# HuggingFace / torch caches if pointed at the repo
+.cache/
+hf_cache/
+transformers_cache/
+
+# --- LaTeX (papers/reports) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# --- Experiment records (see README: experiments/ convention) ---
+# The rules above (outputs/, logs/, figures/, *.csv ...) would swallow the very
+# records final analysis needs. Re-include the small, text-y ones per experiment.
+!experiments/*/outputs/
+!experiments/*/outputs/**/*.json
+!experiments/*/outputs/**/*.jsonl
+!experiments/*/outputs/**/*.csv
+!experiments/*/outputs/**/*.md
+!experiments/*/figures/
+!experiments/*/figures/**/*.png
+!experiments/*/figures/**/*.pdf
+# Big artifacts stay out even inside experiments/
+experiments/**/*.pt
+experiments/**/*.ckpt
+experiments/**/*.safetensors
+experiments/**/*.parquet
