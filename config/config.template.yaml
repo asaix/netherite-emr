@@ -1,0 +1,31 @@
+# Copy this into experiments/<date>_<name>/config.yaml and edit for each
+experiment_tag: my_experiment
+
+# Which TRD task types to pull problems from. Use "all" for all 9, or list
+# specific ones: date_addition, date_subtraction, time_addition,
+# time_subtraction, date_duration, time_duration, date_recurrence,
+# interval_date, day_of_week
+tasks: "all"
+
+# shorthand here - list the ones you want: short, medium, long, very_long,
+# very_very_long
+difficulties: ["medium"]
+
+# Question languages to build. Currently generated: en, hi
+question_langs: ["en"]
+
+# none = no-insertions, related = insertions-similar, unrelated = insertions-dissimilar
+distractor_types: ["none"]
+
+# How many distinct problems to sample per (task, difficulty) cell. Total
+# problems = len(tasks) * len(difficulties) * n_per_cell.
+n_per_cell: 10
+
+# Experimental conditions to run every sampled problem through. Each arm
+# multiplies the request count, and needs a matching
+# {condition}_{question_lang}_{reasoning_lang}_v1 entry in prompt.yaml.
+arms:
+  - condition: direct      # must also be a key under max_tokens in sarvam.yaml
+    reasoning_lang: match   # "match" = reason in the question's own language, or set an explicit code (e.g. "hi") to test cross-lingual reasoning
+  - condition: cot
+    reasoning_lang: match

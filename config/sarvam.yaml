@@ -10,5 +10,6 @@ backoff_cap: 60
 timeout: 180
 retry_status: [429, 500, 502, 503, 504]
 max_tokens:
-  direct: 256
-  cot: 2048
+  direct: 4096
+  cot: 4096 
+
