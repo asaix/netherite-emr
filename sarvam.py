@@ -36,7 +36,7 @@ def load(input_path, prompts_path, problems_per_task):
             for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
                 for mode, instruction in prompts["modes"].items():
                     content = prompts["template"].format(
-                        mode=instruction, language=language, format=answer_format, question=q[insertion])
+                        mode=instruction.format(language=language), language=language, format=answer_format, question=q[insertion])
                     reqs.append({
                         "id": f"{difficulty}/{path.stem}/{qid}/{insertion}/{mode}",
                         "condition": mode,

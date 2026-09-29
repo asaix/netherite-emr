@@ -1,11 +1,11 @@
 template: |
-  {mode} Write your response in {language}. End your response with a final line of the form "Answer: <answer>", where <answer> is {format}. Keep the word "Answer:" in English, use Western digits (0-9), and put nothing else on that line.
+  {mode} Write your entire response in {language}. End your response with a final line of the form "Answer: <answer>", where <answer> is {format}. Keep the word "Answer:" in English, use Western digits (0-9), and put nothing else on that line.
 
   {question}
 
 modes:
   direct: Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer.
-  cot: Solve the following question by reasoning through it step by step.
+  cot: Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in {language}; do not switch to another language at any point.
 
 formats:
   date_addition: a date in YYYY-MM-DD format (e.g., 2025-03-07)
