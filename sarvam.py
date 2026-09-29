@@ -12,9 +12,10 @@ import yaml
 from tqdm.asyncio import tqdm_asyncio
 
 
-def load(input_path, prompts_path):
+def load(input_path, prompts_path, problems_per_task):
     # input_path: str, dataset dir or one <difficulty>/<task>_<lang>.json file
     # prompts_path: str
+    # problems_per_task: int, first N question ids taken from each file
     # returns: list[dict], each shaped as
     #   {"id": str, "condition": str,
     #    "messages": [{"role": "user", "content": str}], "meta": dict}
@@ -31,7 +32,7 @@ def load(input_path, prompts_path):
         with open(path, encoding="utf-8") as f:
             questions = json.load(f)
 
-        for qid, q in questions.items():
+        for qid, q in list(questions.items())[:problems_per_task]:
             for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
                 for mode, instruction in prompts["modes"].items():
                     content = prompts["template"].format(
@@ -118,8 +119,10 @@ async def worker(req, client, cfg, sem, lock, out_f, err_f):
 async def main(args):
     with open(args.config, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
+    with open(args.general, encoding="utf-8") as f:
+        general = yaml.safe_load(f)
 
-    reqs = load(args.input, args.prompts)
+    reqs = load(args.input, args.prompts, general["problems_per_task"])
 
     ids = [r["id"] for r in reqs]
     if len(ids) != len(set(ids)):
@@ -159,6 +162,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="config/sarvam.yaml")
     ap.add_argument("--prompts", default="config/prompt.yaml")
+    ap.add_argument("--general", default="config/general.yaml")
     ap.add_argument("--input", required=True)
     ap.add_argument("--output", required=True)
     asyncio.run(main(ap.parse_args()))
