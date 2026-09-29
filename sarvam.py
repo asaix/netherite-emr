@@ -5,6 +5,7 @@ import os
 import random
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
 import httpx
 import yaml
@@ -12,11 +13,40 @@ from tqdm.asyncio import tqdm_asyncio
 
 
 def load(input_path, prompts_path):
-    # input_path: str, prompts_path: str
+    # input_path: str, dataset dir or one <difficulty>/<task>_<lang>.json file
+    # prompts_path: str
     # returns: list[dict], each shaped as
     #   {"id": str, "condition": str,
     #    "messages": [{"role": "user", "content": str}], "meta": dict}
-    pass
+    with open(prompts_path, encoding="utf-8") as f:
+        prompts = yaml.safe_load(f)
+
+    root = Path(input_path)
+    reqs = []
+    for path in sorted(root.rglob("*.json")) if root.is_dir() else [root]:
+        difficulty = path.parent.name
+        task, lang, region = path.stem.rsplit("_", 2)
+        with open(path, encoding="utf-8") as f:
+            questions = json.load(f)
+
+        for qid, q in questions.items():
+            for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
+                for prompt_name, template in prompts.items():
+                    reqs.append({
+                        "id": f"{difficulty}/{path.stem}/{qid}/{insertion}/{prompt_name}",
+                        "condition": prompt_name.split("_")[0],
+                        "messages": [{"role": "user", "content": template.format(question=q[insertion])}],
+                        "meta": {
+                            "difficulty": difficulty,
+                            "task": task,
+                            "language": f"{lang}_{region}",
+                            "question_id": qid,
+                            "insertion": insertion,
+                            "prompt": prompt_name,
+                            "answer": q["answer"],
+                        },
+                    })
+    return reqs
 
 
 async def call_api(client, cfg, payload):
