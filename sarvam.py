@@ -9,7 +9,7 @@ from pathlib import Path
 
 import httpx
 import yaml
-from tqdm.asyncio import tqdm_asyncio
+from tqdm import tqdm
 
 
 def load(input_path, prompts_path, problems_per_task):
@@ -81,7 +81,7 @@ def save_json(path, data):
     os.replace(tmp, path)
 
 
-async def worker(req, client, cfg, sem, results, errors, save):
+async def worker(req, client, cfg, sem, results, errors, save, pbar):
     payload = {
         "model": cfg["model"],
         "messages": req["messages"],
@@ -98,6 +98,9 @@ async def worker(req, client, cfg, sem, results, errors, save):
         except RuntimeError as e:
             errors.append({"id": req["id"], "error": str(e)})
             save()
+            pbar.write(f"error {req['id']}: {e}")
+            pbar.set_postfix(errors=len(errors))
+            pbar.update()
             return False
         latency = time.perf_counter() - t0
 
@@ -119,6 +122,7 @@ async def worker(req, client, cfg, sem, results, errors, save):
     results.append(rec)
     if len(results) % cfg["save_every"] == 0:
         save()
+    pbar.update()
     return True
 
 
@@ -157,9 +161,10 @@ async def main(args):
 
     sem = asyncio.Semaphore(cfg["concurrency"])
     try:
-        async with httpx.AsyncClient() as client:
-            ok = await tqdm_asyncio.gather(
-                *[worker(r, client, cfg, sem, results, errors, save) for r in todo])
+        with tqdm(total=len(todo), postfix={"errors": 0}) as pbar:
+            async with httpx.AsyncClient() as client:
+                ok = await asyncio.gather(
+                    *[worker(r, client, cfg, sem, results, errors, save, pbar) for r in todo])
     finally:
         save()
 
