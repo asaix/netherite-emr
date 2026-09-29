@@ -26,23 +26,26 @@ def load(input_path, prompts_path):
     for path in sorted(root.rglob("*.json")) if root.is_dir() else [root]:
         difficulty = path.parent.name
         task, lang, region = path.stem.rsplit("_", 2)
+        language = prompts["languages"][f"{lang}_{region}"]
+        answer_format = prompts["formats"][task].format(language=language)
         with open(path, encoding="utf-8") as f:
             questions = json.load(f)
 
         for qid, q in questions.items():
             for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
-                for prompt_name, template in prompts.items():
+                for mode, instruction in prompts["modes"].items():
+                    content = prompts["template"].format(
+                        mode=instruction, language=language, format=answer_format, question=q[insertion])
                     reqs.append({
-                        "id": f"{difficulty}/{path.stem}/{qid}/{insertion}/{prompt_name}",
-                        "condition": prompt_name.split("_")[0],
-                        "messages": [{"role": "user", "content": template.format(question=q[insertion])}],
+                        "id": f"{difficulty}/{path.stem}/{qid}/{insertion}/{mode}",
+                        "condition": mode,
+                        "messages": [{"role": "user", "content": content}],
                         "meta": {
                             "difficulty": difficulty,
                             "task": task,
                             "language": f"{lang}_{region}",
                             "question_id": qid,
                             "insertion": insertion,
-                            "prompt": prompt_name,
                             "answer": q["answer"],
                         },
                     })

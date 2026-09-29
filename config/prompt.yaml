@@ -1,8 +1,31 @@
-direct_en_en_v1: |
-  Answer the following Question and provide an answer after the Answer keyword. When needed, use machine format, YYYY-MM-DD or HH:MM. Do not add further explanations or comments.
+template: |
+  {mode} Write your response in {language}. End your response with a final line of the form "Answer: <answer>", where <answer> is {format}. Keep the word "Answer:" in English, use Western digits (0-9), and put nothing else on that line.
 
   {question}
-cot_en_en_v1: |
-  Solve the following Question reasoning through step by step. At the end, write the final answer after the Answer keyword, using machine format YYYY-MM-DD or HH:MM.
 
-  {question}
+modes:
+  direct: Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer.
+  cot: Solve the following question by reasoning through it step by step.
+
+formats:
+  date_addition: a date in YYYY-MM-DD format (e.g., 2025-03-07)
+  date_subtraction: a date in YYYY-MM-DD format (e.g., 2025-03-07)
+  date_recurrence: a date in YYYY-MM-DD format (e.g., 2025-03-07)
+  time_addition: a 24-hour clock time in HH:MM format, without a date (e.g., 09:05)
+  time_subtraction: a 24-hour clock time in HH:MM format, without a date (e.g., 09:05)
+  date_duration: the number of days as a whole number, digits only, without units (e.g., 12)
+  time_duration: the number of minutes as a whole number, digits only, without units (e.g., 95)
+  interval_date: the start and end dates in YYYY-MM-DD format joined by the English word "to" (e.g., 2025-03-10 to 2025-03-16)
+  day_of_week: the full name of the day of the week in {language}, spelled exactly like the examples in the question
+
+languages:
+  en_US: English
+  es_ES: Spanish
+  de_DE: German
+  fr_FR: French
+  it_IT: Italian
+  pt_BR: Portuguese
+  nl_NL: Dutch
+  hi_IN: Hindi
+  ar_SA: Arabic
+  ja_JP: Japanese
