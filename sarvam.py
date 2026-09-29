@@ -74,7 +74,14 @@ async def call_api(client, cfg, payload):
     raise RuntimeError(f"gave up after {cfg['max_retries']} attempts: {last_err}")
 
 
-async def worker(req, client, cfg, sem, lock, out_f, err_f):
+def save_json(path, data):
+    tmp = path.with_suffix(".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, path)
+
+
+async def worker(req, client, cfg, sem, results, errors, save):
     payload = {
         "model": cfg["model"],
         "messages": req["messages"],
@@ -89,9 +96,8 @@ async def worker(req, client, cfg, sem, lock, out_f, err_f):
         try:
             data = await call_api(client, cfg, payload)
         except RuntimeError as e:
-            async with lock:
-                err_f.write(json.dumps({"id": req["id"], "error": str(e)}) + "\n")
-                err_f.flush()
+            errors.append({"id": req["id"], "error": str(e)})
+            save()
             return False
         latency = time.perf_counter() - t0
 
@@ -110,9 +116,9 @@ async def worker(req, client, cfg, sem, lock, out_f, err_f):
         "time": datetime.now(timezone.utc).isoformat(),
     }
 
-    async with lock:
-        out_f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-        out_f.flush()
+    results.append(rec)
+    if len(results) % cfg["save_every"] == 0:
+        save()
     return True
 
 
@@ -131,28 +137,33 @@ async def main(args):
     if unknown:
         raise SystemExit(f"unknown conditions: {unknown}")
 
-    os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
-    errors_path = args.output.replace(".jsonl", "") + ".errors.jsonl"
+    out_dir = Path(args.output)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    results_path, errors_path = out_dir / "results.json", out_dir / "errors.json"
 
-    done = set()
-    if os.path.exists(args.output):
-        with open(args.output, encoding="utf-8") as f:
-            for line in f:
-                if line.strip():
-                    done.add(json.loads(line)["id"])
+    results = []
+    if results_path.exists():
+        with open(results_path, encoding="utf-8") as f:
+            results = json.load(f)
+    errors = []
+    done = {r["id"] for r in results}
 
     todo = [r for r in reqs if r["id"] not in done]
     print(f"{len(reqs)} requests | {len(done)} already done | {len(todo)} to run")
 
-    sem = asyncio.Semaphore(cfg["concurrency"])
-    lock = asyncio.Lock()
-    async with httpx.AsyncClient() as client:
-        with open(args.output, "a", encoding="utf-8") as out_f, \
-             open(errors_path, "a", encoding="utf-8") as err_f:
-            results = await tqdm_asyncio.gather(
-                *[worker(r, client, cfg, sem, lock, out_f, err_f) for r in todo])
+    def save():
+        save_json(results_path, results)
+        save_json(errors_path, errors)
 
-    failed = results.count(False)
+    sem = asyncio.Semaphore(cfg["concurrency"])
+    try:
+        async with httpx.AsyncClient() as client:
+            ok = await tqdm_asyncio.gather(
+                *[worker(r, client, cfg, sem, results, errors, save) for r in todo])
+    finally:
+        save()
+
+    failed = ok.count(False)
     print(f"{len(todo) - failed} ok, {failed} failed")
     if failed:
         print(f"see {errors_path}; re-run the same command to retry")
