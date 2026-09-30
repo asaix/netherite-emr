@@ -119,7 +119,25 @@ def write_csv(rows, path):
 
 
 def fmt(value):
-    return "-" if value is None else f"{value:.3f}"
+    if value is None:
+        return "-"
+    return f"{value:.3f}" if isinstance(value, float) else str(value)
+
+
+def print_table(title, rows):
+    header = list(rows[0])
+    cells = [[fmt(v) for v in row.values()] for row in rows]
+    widths = [max(len(h), *(len(c[i]) for c in cells)) for i, h in enumerate(header)]
+    numeric = [not isinstance(v, str) for v in rows[0].values()]
+
+    def line(values):
+        return " | ".join(v.rjust(w) if n else v.ljust(w) for v, w, n in zip(values, widths, numeric))
+
+    print(f"\n{title}")
+    print(line(header))
+    print("-+-".join("-" * w for w in widths))
+    for c in cells:
+        print(line(c))
 
 
 if __name__ == "__main__":
@@ -139,11 +157,8 @@ if __name__ == "__main__":
 
     for by in GROUPINGS:
         rows = summary(records, by)
-        print(f"({', '.join(by)}): accuracy | CoT ratio avg | CoT ratio pooled")
-        for row in rows:
-            key = tuple(row[k] for k in by)
-            print(f"  {key}: {fmt(row['accuracy'])} | {fmt(row['cot_ratio_avg'])} | {fmt(row['cot_ratio_pooled'])}")
+        print_table(f"by {', '.join(by)}", rows)
         write_csv(rows, out_dir / f"by_{'_'.join(by)}.csv")
 
     write_csv(per_response(records), out_dir / "per_response.csv")
-    print(f"csvs written to {out_dir}")
+    print(f"\ncsvs written to {out_dir}")
