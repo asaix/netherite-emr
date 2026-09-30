@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "tools" / "temporal-reasoning-dataset" / "src"))
 
+from trd.config.timeframes import DIFFICULTY_LEVELS
 from trd.utils.locale import DAY_NAMES
 
 ANSWER = re.compile(r"(?:Answer|उत्तर)\s*\**\s*[:：]\s*(.*)")
@@ -15,6 +16,7 @@ DIGITS = str.maketrans("०१२३४५६७८९٠١٢٣٤٥٦٧٨٩", "01
 WEEKDAYS = {name.casefold(): day for names in DAY_NAMES.values() for day, name in names.items()}
 HINDI_WORD = re.compile(r"[\u0900-\u0963\u0971-\u097F]+")
 ENGLISH_WORD = re.compile(r"[A-Za-z]+")
+DIFFICULTY_ORDER = {d: i for i, d in enumerate(DIFFICULTY_LEVELS)}
 
 
 def extract_answer(content):
@@ -42,7 +44,7 @@ def group(records, by):
     for r in records:
         fields = {**r["meta"], "condition": r["condition"]}
         groups[tuple(fields[k] for k in by)].append(r)
-    return dict(sorted(groups.items()))
+    return dict(sorted(groups.items(), key=lambda kv: tuple(DIFFICULTY_ORDER.get(v, v) for v in kv[0])))
 
 
 def average_accuracy(records, by=()):
@@ -76,11 +78,7 @@ def pooled_target_language_cot_ratio(records, by=()):
     return pooled
 
 
-GROUPINGS = [
-    ("language", "condition", "insertion"),
-    ("language", "condition", "insertion", "task"),
-    ("language", "condition", "difficulty"),
-]
+FIELDS = ["difficulty", "language", "condition", "insertion", "task"]
 
 
 def summary(records, by):
@@ -103,6 +101,7 @@ def summary(records, by):
 def per_response(records):
     return [
         {
+            "difficulty": r["meta"]["difficulty"],
             "id": r["id"],
             "correct": int(is_correct(r)) if extract_answer(r["content"]) is not None else None,
             "cot_ratio": target_language_cot_ratio(r) if r["condition"] == "cot" else None,
@@ -155,10 +154,11 @@ if __name__ == "__main__":
     if len(discarded) > cut_off:
         print(f"{len(discarded) - cut_off} discarded because they had no answer line")
 
-    for by in GROUPINGS:
-        rows = summary(records, by)
-        print_table(f"by {', '.join(by)}", rows)
-        write_csv(rows, out_dir / f"by_{'_'.join(by)}.csv")
+    by = tuple(f for f in FIELDS if not input(f"group by {f}? [Y/n] ").strip().lower().startswith("n"))
+    rows = summary(records, by)
+    name = f"by_{'_'.join(by)}" if by else "overall"
+    print_table(name, rows)
+    write_csv(rows, out_dir / f"{name}.csv")
 
     write_csv(per_response(records), out_dir / "per_response.csv")
     print(f"\ncsvs written to {out_dir}")
