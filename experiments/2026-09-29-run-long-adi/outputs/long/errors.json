@@ -1,0 +1,22 @@
+[
+  {
+    "id": "long/date_duration_en_US/118/dissimilar_insertion/cot",
+    "error": "HTTP 402: {\"error\":{\"message\":\"No credits available.\",\"code\":\"insufficient_quota_error\",\"request_id\":\"20260929_97f0d4c3-73a1-4879-86c0-32c267525eb8\"}}"
+  },
+  {
+    "id": "long/date_duration_en_US/118/similar_insertion/cot",
+    "error": "HTTP 402: {\"error\":{\"message\":\"No credits available.\",\"code\":\"insufficient_quota_error\",\"request_id\":\"20260929_d604255d-8474-4b41-9251-68fb8a957f27\"}}"
+  },
+  {
+    "id": "long/date_duration_en_US/119/no_insertion/cot",
+    "error": "HTTP 402: {\"error\":{\"message\":\"No credits available.\",\"code\":\"insufficient_quota_error\",\"request_id\":\"20260929_955ae49e-bd08-4e1f-891f-9c4380ed6531\"}}"
+  },
+  {
+    "id": "long/date_duration_en_US/119/no_insertion/direct",
+    "error": "HTTP 402: {\"error\":{\"message\":\"No credits available.\",\"code\":\"insufficient_quota_error\",\"request_id\":\"20260929_ea1af1ee-2854-418b-ad7d-67baa1852e2c\"}}"
+  },
+  {
+    "id": "long/date_duration_en_US/119/similar_insertion/cot",
+    "error": "HTTP 402: {\"error\":{\"message\":\"No credits available.\",\"code\":\"insufficient_quota_error\",\"request_id\":\"20260929_1f2f6f49-ef5b-46cb-b509-6f7ad11c5723\"}}"
+  }
+]
