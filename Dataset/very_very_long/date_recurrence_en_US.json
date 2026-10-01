@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "Today is 2029-10-05, and I have a recurrence every 38 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-10-05, and I have a recurrence every 38 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2029-10-05, and I have a recurrence every 38 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2031-06-05"
+  },
+  "1": {
+    "no_insertion": "Today is 2034-03-24, and I have a recurrence every 60 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2034-03-24, and I have a recurrence every 60 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2034-03-24, and I have a recurrence every 60 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2038-03-03"
+  },
+  "2": {
+    "no_insertion": "Today is 2034-05-27, and I have a recurrence every 32 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2034-05-27, and I have a recurrence every 32 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2034-05-27, and I have a recurrence every 32 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2036-09-05"
+  },
+  "3": {
+    "no_insertion": "Today is 2033-04-08, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2033-04-08, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-04-08, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2036-10-09"
+  },
+  "4": {
+    "no_insertion": "Today is 2028-01-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2028-01-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2028-01-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2030-12-25"
+  },
+  "5": {
+    "no_insertion": "Today is 2029-09-28, and I have a recurrence every 55 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2029-09-28, and I have a recurrence every 55 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2029-09-28, and I have a recurrence every 55 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2034-05-30"
+  },
+  "6": {
+    "no_insertion": "Today is 2035-10-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2035-10-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2035-10-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2038-03-21"
+  },
+  "7": {
+    "no_insertion": "Today is 2028-12-24, and I have a recurrence every 54 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2028-12-24, and I have a recurrence every 54 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2028-12-24, and I have a recurrence every 54 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2032-05-19"
+  },
+  "8": {
+    "no_insertion": "Today is 2035-03-27, and I have a recurrence every 39 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2035-03-27, and I have a recurrence every 39 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-03-27, and I have a recurrence every 39 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2037-09-09"
+  },
+  "9": {
+    "no_insertion": "Today is 2033-08-03, and I have a recurrence every 62 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2033-08-03, and I have a recurrence every 62 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2033-08-03, and I have a recurrence every 62 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2038-03-04"
+  },
+  "10": {
+    "no_insertion": "Today is 2025-10-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2025-10-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2025-10-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2030-05-07"
+  },
+  "11": {
+    "no_insertion": "Today is 2032-02-16, and I have a recurrence every 52 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2032-02-16, and I have a recurrence every 52 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2032-02-16, and I have a recurrence every 52 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2034-10-31"
+  },
+  "12": {
+    "no_insertion": "Today is 2035-07-22, and I have a recurrence every 38 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2035-07-22, and I have a recurrence every 38 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-07-22, and I have a recurrence every 38 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2038-01-19"
+  },
+  "13": {
+    "no_insertion": "Today is 2033-05-30, and I have a recurrence every 63 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2033-05-30, and I have a recurrence every 63 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2033-05-30, and I have a recurrence every 63 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2036-03-03"
+  },
+  "14": {
+    "no_insertion": "Today is 2036-09-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2036-09-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2036-09-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2038-05-25"
+  },
+  "15": {
+    "no_insertion": "Today is 2025-12-09, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2025-12-09, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2025-12-09, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2028-04-07"
+  },
+  "16": {
+    "no_insertion": "Today is 2025-10-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2025-10-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2025-10-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2029-06-03"
+  },
+  "17": {
+    "no_insertion": "Today is 2025-07-13, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2025-07-13, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2025-07-13, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2029-07-31"
+  },
+  "18": {
+    "no_insertion": "Today is 2027-03-27, and I have a recurrence every 64 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2027-03-27, and I have a recurrence every 64 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2027-03-27, and I have a recurrence every 64 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2031-06-10"
+  },
+  "19": {
+    "no_insertion": "Today is 2032-01-11, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2032-01-11, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2032-01-11, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2033-06-06"
+  },
+  "20": {
+    "no_insertion": "Today is 2028-01-27, and I have a recurrence every 41 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2028-01-27, and I have a recurrence every 41 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2028-01-27, and I have a recurrence every 41 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2031-06-10"
+  },
+  "21": {
+    "no_insertion": "Today is 2029-01-07, and I have a recurrence every 37 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2029-01-07, and I have a recurrence every 37 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2029-01-07, and I have a recurrence every 37 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2031-02-23"
+  },
+  "22": {
+    "no_insertion": "Today is 2031-01-26, and I have a recurrence every 49 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2031-01-26, and I have a recurrence every 49 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-01-26, and I have a recurrence every 49 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2035-05-13"
+  },
+  "23": {
+    "no_insertion": "Today is 2026-02-02, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2026-02-02, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2026-02-02, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2029-03-30"
+  },
+  "24": {
+    "no_insertion": "Today is 2029-11-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 25 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-11-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 25 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2029-11-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 25 occurrence?",
+    "answer": "2032-03-03"
+  },
+  "25": {
+    "no_insertion": "Today is 2031-04-13, and I have a recurrence every 60 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2031-04-13, and I have a recurrence every 60 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2031-04-13, and I have a recurrence every 60 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2034-03-28"
+  },
+  "26": {
+    "no_insertion": "Today is 2030-12-04, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2030-12-04, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2030-12-04, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2032-10-14"
+  },
+  "27": {
+    "no_insertion": "Today is 2033-10-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2033-10-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-10-19, and I have a recurrence every 63 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2038-04-14"
+  },
+  "28": {
+    "no_insertion": "Today is 2034-07-18, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2034-07-18, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2034-07-18, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2037-01-03"
+  },
+  "29": {
+    "no_insertion": "Today is 2030-09-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 22 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2030-09-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 22 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2030-09-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 22 occurrence?",
+    "answer": "2034-03-03"
+  },
+  "30": {
+    "no_insertion": "Today is 2025-05-23, and I have a recurrence every 52 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2025-05-23, and I have a recurrence every 52 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2025-05-23, and I have a recurrence every 52 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2028-10-22"
+  },
+  "31": {
+    "no_insertion": "Today is 2035-07-15, and I have a recurrence every 36 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2035-07-15, and I have a recurrence every 36 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-07-15, and I have a recurrence every 36 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2038-03-13"
+  },
+  "32": {
+    "no_insertion": "Today is 2033-11-14, and I have a recurrence every 44 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2033-11-14, and I have a recurrence every 44 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-11-14, and I have a recurrence every 44 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2037-05-13"
+  },
+  "33": {
+    "no_insertion": "Today is 2029-07-06, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-07-06, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-07-06, and I have a recurrence every 63 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2032-06-11"
+  },
+  "34": {
+    "no_insertion": "Today is 2032-01-07, and I have a recurrence every 42 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2032-01-07, and I have a recurrence every 42 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2032-01-07, and I have a recurrence every 42 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2034-10-11"
+  },
+  "35": {
+    "no_insertion": "Today is 2030-06-18, and I have a recurrence every 55 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2030-06-18, and I have a recurrence every 55 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2030-06-18, and I have a recurrence every 55 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2033-06-22"
+  },
+  "36": {
+    "no_insertion": "Today is 2032-12-13, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2032-12-13, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2032-12-13, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2036-04-14"
+  },
+  "37": {
+    "no_insertion": "Today is 2034-03-04, and I have a recurrence every 63 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2034-03-04, and I have a recurrence every 63 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2034-03-04, and I have a recurrence every 63 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2039-05-07"
+  },
+  "38": {
+    "no_insertion": "Today is 2031-03-19, and I have a recurrence every 34 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2031-03-19, and I have a recurrence every 34 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-03-19, and I have a recurrence every 34 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2033-10-26"
+  },
+  "39": {
+    "no_insertion": "Today is 2028-08-28, and I have a recurrence every 45 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2028-08-28, and I have a recurrence every 45 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2028-08-28, and I have a recurrence every 45 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2031-06-29"
+  },
+  "40": {
+    "no_insertion": "Today is 2035-04-13, and I have a recurrence every 40 days. Without counting today, what is the date of the 22 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-04-13, and I have a recurrence every 40 days. Without counting today, what is the date of the 22 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-04-13, and I have a recurrence every 40 days. Without counting today, what is the date of the 22 occurrence?",
+    "answer": "2037-09-09"
+  },
+  "41": {
+    "no_insertion": "Today is 2027-09-18, and I have a recurrence every 37 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2027-09-18, and I have a recurrence every 37 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2027-09-18, and I have a recurrence every 37 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2029-08-21"
+  },
+  "42": {
+    "no_insertion": "Today is 2030-09-26, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2030-09-26, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2030-09-26, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2034-03-09"
+  },
+  "43": {
+    "no_insertion": "Today is 2033-04-20, and I have a recurrence every 46 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2033-04-20, and I have a recurrence every 46 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2033-04-20, and I have a recurrence every 46 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2036-04-28"
+  },
+  "44": {
+    "no_insertion": "Today is 2034-02-08, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2034-02-08, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2034-02-08, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2038-03-23"
+  },
+  "45": {
+    "no_insertion": "Today is 2030-07-23, and I have a recurrence every 35 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2030-07-23, and I have a recurrence every 35 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2030-07-23, and I have a recurrence every 35 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2033-06-07"
+  },
+  "46": {
+    "no_insertion": "Today is 2036-12-08, and I have a recurrence every 39 days. Without counting today, what is the date of the 25 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2036-12-08, and I have a recurrence every 39 days. Without counting today, what is the date of the 25 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2036-12-08, and I have a recurrence every 39 days. Without counting today, what is the date of the 25 occurrence?",
+    "answer": "2039-08-10"
+  },
+  "47": {
+    "no_insertion": "Today is 2027-09-15, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2027-09-15, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2027-09-15, and I have a recurrence every 51 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2031-10-03"
+  },
+  "48": {
+    "no_insertion": "Today is 2033-12-20, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2033-12-20, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2033-12-20, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2036-01-11"
+  },
+  "49": {
+    "no_insertion": "Today is 2028-11-07, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2028-11-07, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2028-11-07, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2031-04-27"
+  },
+  "50": {
+    "no_insertion": "Today is 2031-04-17, and I have a recurrence every 48 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2031-04-17, and I have a recurrence every 48 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-04-17, and I have a recurrence every 48 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2033-12-02"
+  },
+  "51": {
+    "no_insertion": "Today is 2033-03-08, and I have a recurrence every 46 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2033-03-08, and I have a recurrence every 46 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2033-03-08, and I have a recurrence every 46 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2036-11-01"
+  },
+  "52": {
+    "no_insertion": "Today is 2029-10-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2029-10-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-10-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2032-05-10"
+  },
+  "53": {
+    "no_insertion": "Today is 2033-04-02, and I have a recurrence every 53 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2033-04-02, and I have a recurrence every 53 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2033-04-02, and I have a recurrence every 53 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2036-04-19"
+  },
+  "54": {
+    "no_insertion": "Today is 2030-04-08, and I have a recurrence every 42 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2030-04-08, and I have a recurrence every 42 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2030-04-08, and I have a recurrence every 42 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2032-06-14"
+  },
+  "55": {
+    "no_insertion": "Today is 2028-03-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 25 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2028-03-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 25 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2028-03-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 25 occurrence?",
+    "answer": "2031-03-14"
+  },
+  "56": {
+    "no_insertion": "Today is 2032-07-28, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2032-07-28, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2032-07-28, and I have a recurrence every 64 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2035-09-23"
+  },
+  "57": {
+    "no_insertion": "Today is 2035-04-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2035-04-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2035-04-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2038-02-24"
+  },
+  "58": {
+    "no_insertion": "Today is 2029-12-10, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2029-12-10, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-12-10, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2033-02-13"
+  },
+  "59": {
+    "no_insertion": "Today is 2035-02-04, and I have a recurrence every 32 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-02-04, and I have a recurrence every 32 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-02-04, and I have a recurrence every 32 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2037-08-20"
+  },
+  "60": {
+    "no_insertion": "Today is 2028-12-21, and I have a recurrence every 64 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2028-12-21, and I have a recurrence every 64 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2028-12-21, and I have a recurrence every 64 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2034-03-25"
+  },
+  "61": {
+    "no_insertion": "Today is 2025-12-19, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2025-12-19, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2025-12-19, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2030-09-20"
+  },
+  "62": {
+    "no_insertion": "Today is 2028-04-28, and I have a recurrence every 60 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2028-04-28, and I have a recurrence every 60 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2028-04-28, and I have a recurrence every 60 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2033-06-01"
+  },
+  "63": {
+    "no_insertion": "Today is 2036-04-14, and I have a recurrence every 52 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2036-04-14, and I have a recurrence every 52 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2036-04-14, and I have a recurrence every 52 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2038-09-15"
+  },
+  "64": {
+    "no_insertion": "Today is 2035-03-07, and I have a recurrence every 64 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2035-03-07, and I have a recurrence every 64 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-03-07, and I have a recurrence every 64 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2039-09-26"
+  },
+  "65": {
+    "no_insertion": "Today is 2032-10-21, and I have a recurrence every 61 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2032-10-21, and I have a recurrence every 61 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2032-10-21, and I have a recurrence every 61 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2037-08-25"
+  },
+  "66": {
+    "no_insertion": "Today is 2029-11-30, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-11-30, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2029-11-30, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2033-12-09"
+  },
+  "67": {
+    "no_insertion": "Today is 2027-06-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2027-06-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2027-06-19, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2031-06-28"
+  },
+  "68": {
+    "no_insertion": "Today is 2035-12-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2035-12-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-12-23, and I have a recurrence every 44 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2039-10-31"
+  },
+  "69": {
+    "no_insertion": "Today is 2027-03-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2027-03-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2027-03-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2028-10-25"
+  },
+  "70": {
+    "no_insertion": "Today is 2028-09-12, and I have a recurrence every 61 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2028-09-12, and I have a recurrence every 61 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2028-09-12, and I have a recurrence every 61 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2033-03-17"
+  },
+  "71": {
+    "no_insertion": "Today is 2034-08-17, and I have a recurrence every 58 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2034-08-17, and I have a recurrence every 58 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2034-08-17, and I have a recurrence every 58 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2039-05-23"
+  },
+  "72": {
+    "no_insertion": "Today is 2033-03-19, and I have a recurrence every 46 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2033-03-19, and I have a recurrence every 46 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-03-19, and I have a recurrence every 46 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2035-03-25"
+  },
+  "73": {
+    "no_insertion": "Today is 2027-02-10, and I have a recurrence every 62 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2027-02-10, and I have a recurrence every 62 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2027-02-10, and I have a recurrence every 62 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2031-11-12"
+  },
+  "74": {
+    "no_insertion": "Today is 2035-12-26, and I have a recurrence every 64 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2035-12-26, and I have a recurrence every 64 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2035-12-26, and I have a recurrence every 64 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2039-08-31"
+  },
+  "75": {
+    "no_insertion": "Today is 2026-09-24, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2026-09-24, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2026-09-24, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2028-08-28"
+  },
+  "76": {
+    "no_insertion": "Today is 2029-08-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-08-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-08-09, and I have a recurrence every 44 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2031-07-14"
+  },
+  "77": {
+    "no_insertion": "Today is 2034-11-10, and I have a recurrence every 47 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2034-11-10, and I have a recurrence every 47 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2034-11-10, and I have a recurrence every 47 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2038-03-16"
+  },
+  "78": {
+    "no_insertion": "Today is 2026-05-09, and I have a recurrence every 37 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2026-05-09, and I have a recurrence every 37 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2026-05-09, and I have a recurrence every 37 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2029-06-29"
+  },
+  "79": {
+    "no_insertion": "Today is 2029-06-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2029-06-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2029-06-29, and I have a recurrence every 33 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2030-12-09"
+  },
+  "80": {
+    "no_insertion": "Today is 2030-04-01, and I have a recurrence every 50 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2030-04-01, and I have a recurrence every 50 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2030-04-01, and I have a recurrence every 50 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2032-11-06"
+  },
+  "81": {
+    "no_insertion": "Today is 2030-12-17, and I have a recurrence every 55 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2030-12-17, and I have a recurrence every 55 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2030-12-17, and I have a recurrence every 55 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2033-09-02"
+  },
+  "82": {
+    "no_insertion": "Today is 2030-08-16, and I have a recurrence every 36 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2030-08-16, and I have a recurrence every 36 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2030-08-16, and I have a recurrence every 36 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2032-05-25"
+  },
+  "83": {
+    "no_insertion": "Today is 2028-04-02, and I have a recurrence every 38 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2028-04-02, and I have a recurrence every 38 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2028-04-02, and I have a recurrence every 38 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2031-04-09"
+  },
+  "84": {
+    "no_insertion": "Today is 2030-12-20, and I have a recurrence every 35 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2030-12-20, and I have a recurrence every 35 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2030-12-20, and I have a recurrence every 35 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2034-01-13"
+  },
+  "85": {
+    "no_insertion": "Today is 2033-03-19, and I have a recurrence every 42 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2033-03-19, and I have a recurrence every 42 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2033-03-19, and I have a recurrence every 42 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2035-03-03"
+  },
+  "86": {
+    "no_insertion": "Today is 2028-01-09, and I have a recurrence every 58 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2028-01-09, and I have a recurrence every 58 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2028-01-09, and I have a recurrence every 58 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2031-05-11"
+  },
+  "87": {
+    "no_insertion": "Today is 2032-01-08, and I have a recurrence every 38 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2032-01-08, and I have a recurrence every 38 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2032-01-08, and I have a recurrence every 38 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2033-10-15"
+  },
+  "88": {
+    "no_insertion": "Today is 2030-03-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2030-03-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2030-03-26, and I have a recurrence every 57 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2034-08-08"
+  },
+  "89": {
+    "no_insertion": "Today is 2029-03-17, and I have a recurrence every 41 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-03-17, and I have a recurrence every 41 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-03-17, and I have a recurrence every 41 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2031-10-16"
+  },
+  "90": {
+    "no_insertion": "Today is 2033-01-01, and I have a recurrence every 59 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2033-01-01, and I have a recurrence every 59 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2033-01-01, and I have a recurrence every 59 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2037-03-15"
+  },
+  "91": {
+    "no_insertion": "Today is 2035-01-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-01-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2035-01-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2036-11-25"
+  },
+  "92": {
+    "no_insertion": "Today is 2034-08-25, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2034-08-25, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2034-08-25, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2039-05-31"
+  },
+  "93": {
+    "no_insertion": "Today is 2028-03-26, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2028-03-26, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2028-03-26, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2031-08-10"
+  },
+  "94": {
+    "no_insertion": "Today is 2035-09-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2035-09-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-09-05, and I have a recurrence every 33 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2038-07-27"
+  },
+  "95": {
+    "no_insertion": "Today is 2029-05-10, and I have a recurrence every 54 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-05-10, and I have a recurrence every 54 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2029-05-10, and I have a recurrence every 54 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2033-05-07"
+  },
+  "96": {
+    "no_insertion": "Today is 2025-03-30, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2025-03-30, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2025-03-30, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2027-12-12"
+  },
+  "97": {
+    "no_insertion": "Today is 2033-08-25, and I have a recurrence every 32 days. Without counting today, what is the date of the 25 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2033-08-25, and I have a recurrence every 32 days. Without counting today, what is the date of the 25 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2033-08-25, and I have a recurrence every 32 days. Without counting today, what is the date of the 25 occurrence?",
+    "answer": "2035-11-03"
+  },
+  "98": {
+    "no_insertion": "Today is 2034-02-04, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2034-02-04, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2034-02-04, and I have a recurrence every 50 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2036-06-03"
+  },
+  "99": {
+    "no_insertion": "Today is 2028-01-29, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2028-01-29, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2028-01-29, and I have a recurrence every 44 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2031-06-14"
+  },
+  "100": {
+    "no_insertion": "Today is 2035-05-09, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2035-05-09, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2035-05-09, and I have a recurrence every 53 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2037-10-26"
+  },
+  "101": {
+    "no_insertion": "Today is 2029-01-23, and I have a recurrence every 39 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2029-01-23, and I have a recurrence every 39 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-01-23, and I have a recurrence every 39 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2030-10-09"
+  },
+  "102": {
+    "no_insertion": "Today is 2027-09-06, and I have a recurrence every 49 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2027-09-06, and I have a recurrence every 49 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2027-09-06, and I have a recurrence every 49 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2030-11-25"
+  },
+  "103": {
+    "no_insertion": "Today is 2031-03-31, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2031-03-31, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-03-31, and I have a recurrence every 56 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2035-12-31"
+  },
+  "104": {
+    "no_insertion": "Today is 2033-06-29, and I have a recurrence every 64 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2033-06-29, and I have a recurrence every 64 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-06-29, and I have a recurrence every 64 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2038-12-04"
+  },
+  "105": {
+    "no_insertion": "Today is 2033-07-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2033-07-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2033-07-20, and I have a recurrence every 34 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2036-05-05"
+  },
+  "106": {
+    "no_insertion": "Today is 2034-08-09, and I have a recurrence every 54 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2034-08-09, and I have a recurrence every 54 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2034-08-09, and I have a recurrence every 54 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2036-12-20"
+  },
+  "107": {
+    "no_insertion": "Today is 2036-04-02, and I have a recurrence every 36 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2036-04-02, and I have a recurrence every 36 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2036-04-02, and I have a recurrence every 36 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2037-10-30"
+  },
+  "108": {
+    "no_insertion": "Today is 2031-07-17, and I have a recurrence every 64 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2031-07-17, and I have a recurrence every 64 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2031-07-17, and I have a recurrence every 64 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2035-07-28"
+  },
+  "109": {
+    "no_insertion": "Today is 2025-11-27, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2025-11-27, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2025-11-27, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2027-10-21"
+  },
+  "110": {
+    "no_insertion": "Today is 2025-03-28, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2025-03-28, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2025-03-28, and I have a recurrence every 42 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2028-07-28"
+  },
+  "111": {
+    "no_insertion": "Today is 2031-08-28, and I have a recurrence every 47 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2031-08-28, and I have a recurrence every 47 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-08-28, and I have a recurrence every 47 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2035-05-22"
+  },
+  "112": {
+    "no_insertion": "Today is 2026-12-12, and I have a recurrence every 36 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2026-12-12, and I have a recurrence every 36 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2026-12-12, and I have a recurrence every 36 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2029-03-19"
+  },
+  "113": {
+    "no_insertion": "Today is 2025-01-21, and I have a recurrence every 51 days. Without counting today, what is the date of the 25 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2025-01-21, and I have a recurrence every 51 days. Without counting today, what is the date of the 25 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2025-01-21, and I have a recurrence every 51 days. Without counting today, what is the date of the 25 occurrence?",
+    "answer": "2028-07-19"
+  },
+  "114": {
+    "no_insertion": "Today is 2033-06-09, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2033-06-09, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2033-06-09, and I have a recurrence every 43 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2036-08-13"
+  },
+  "115": {
+    "no_insertion": "Today is 2035-04-09, and I have a recurrence every 41 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-04-09, and I have a recurrence every 41 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-04-09, and I have a recurrence every 41 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2038-05-31"
+  },
+  "116": {
+    "no_insertion": "Today is 2032-05-28, and I have a recurrence every 34 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2032-05-28, and I have a recurrence every 34 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2032-05-28, and I have a recurrence every 34 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2033-12-27"
+  },
+  "117": {
+    "no_insertion": "Today is 2031-08-18, and I have a recurrence every 57 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2031-08-18, and I have a recurrence every 57 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-08-18, and I have a recurrence every 57 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2035-11-04"
+  },
+  "118": {
+    "no_insertion": "Today is 2032-07-15, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2032-07-15, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2032-07-15, and I have a recurrence every 32 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2033-12-09"
+  },
+  "119": {
+    "no_insertion": "Today is 2027-09-06, and I have a recurrence every 37 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2027-09-06, and I have a recurrence every 37 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2027-09-06, and I have a recurrence every 37 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2029-05-27"
+  },
+  "120": {
+    "no_insertion": "Today is 2035-05-09, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-05-09, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-05-09, and I have a recurrence every 33 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2037-04-01"
+  },
+  "121": {
+    "no_insertion": "Today is 2028-09-21, and I have a recurrence every 46 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2028-09-21, and I have a recurrence every 46 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2028-09-21, and I have a recurrence every 46 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2032-04-01"
+  },
+  "122": {
+    "no_insertion": "Today is 2029-05-15, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-05-15, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-05-15, and I have a recurrence every 49 days. Without counting today, what is the date of the 30 occurrence?",
+    "answer": "2033-05-24"
+  },
+  "123": {
+    "no_insertion": "Today is 2025-12-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2025-12-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2025-12-25, and I have a recurrence every 58 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2030-06-06"
+  },
+  "124": {
+    "no_insertion": "Today is 2030-06-26, and I have a recurrence every 56 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2030-06-26, and I have a recurrence every 56 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2030-06-26, and I have a recurrence every 56 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2034-06-21"
+  },
+  "125": {
+    "no_insertion": "Today is 2029-06-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 17 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2029-06-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 17 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2029-06-30, and I have a recurrence every 55 days. Without counting today, what is the date of the 17 occurrence?",
+    "answer": "2032-01-21"
+  },
+  "126": {
+    "no_insertion": "Today is 2029-09-27, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2029-09-27, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2029-09-27, and I have a recurrence every 45 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2032-03-15"
+  },
+  "127": {
+    "no_insertion": "Today is 2029-01-15, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2029-01-15, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2029-01-15, and I have a recurrence every 60 days. Without counting today, what is the date of the 29 occurrence?",
+    "answer": "2033-10-21"
+  },
+  "128": {
+    "no_insertion": "Today is 2033-12-01, and I have a recurrence every 51 days. Without counting today, what is the date of the 31 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2033-12-01, and I have a recurrence every 51 days. Without counting today, what is the date of the 31 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2033-12-01, and I have a recurrence every 51 days. Without counting today, what is the date of the 31 occurrence?",
+    "answer": "2038-03-31"
+  },
+  "129": {
+    "no_insertion": "Today is 2030-12-16, and I have a recurrence every 58 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2030-12-16, and I have a recurrence every 58 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2030-12-16, and I have a recurrence every 58 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2035-03-31"
+  },
+  "130": {
+    "no_insertion": "Today is 2025-10-29, and I have a recurrence every 52 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2025-10-29, and I have a recurrence every 52 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2025-10-29, and I have a recurrence every 52 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2028-02-08"
+  },
+  "131": {
+    "no_insertion": "Today is 2029-09-27, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2029-09-27, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-09-27, and I have a recurrence every 47 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2032-06-10"
+  },
+  "132": {
+    "no_insertion": "Today is 2035-02-07, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2035-02-07, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2035-02-07, and I have a recurrence every 47 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2039-03-22"
+  },
+  "133": {
+    "no_insertion": "Today is 2028-11-30, and I have a recurrence every 64 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2028-11-30, and I have a recurrence every 64 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2028-11-30, and I have a recurrence every 64 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2032-06-02"
+  },
+  "134": {
+    "no_insertion": "Today is 2031-02-17, and I have a recurrence every 63 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2031-02-17, and I have a recurrence every 63 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2031-02-17, and I have a recurrence every 63 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2036-08-25"
+  },
+  "135": {
+    "no_insertion": "Today is 2029-08-18, and I have a recurrence every 50 days. Without counting today, what is the date of the 21 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2029-08-18, and I have a recurrence every 50 days. Without counting today, what is the date of the 21 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-08-18, and I have a recurrence every 50 days. Without counting today, what is the date of the 21 occurrence?",
+    "answer": "2032-07-03"
+  },
+  "136": {
+    "no_insertion": "Today is 2026-04-24, and I have a recurrence every 43 days. Without counting today, what is the date of the 23 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2026-04-24, and I have a recurrence every 43 days. Without counting today, what is the date of the 23 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2026-04-24, and I have a recurrence every 43 days. Without counting today, what is the date of the 23 occurrence?",
+    "answer": "2029-01-07"
+  },
+  "137": {
+    "no_insertion": "Today is 2025-10-15, and I have a recurrence every 35 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2025-10-15, and I have a recurrence every 35 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2025-10-15, and I have a recurrence every 35 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2027-09-15"
+  },
+  "138": {
+    "no_insertion": "Today is 2029-05-10, and I have a recurrence every 42 days. Without counting today, what is the date of the 27 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2029-05-10, and I have a recurrence every 42 days. Without counting today, what is the date of the 27 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-05-10, and I have a recurrence every 42 days. Without counting today, what is the date of the 27 occurrence?",
+    "answer": "2032-06-17"
+  },
+  "139": {
+    "no_insertion": "Today is 2031-10-14, and I have a recurrence every 61 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2031-10-14, and I have a recurrence every 61 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2031-10-14, and I have a recurrence every 61 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2034-12-16"
+  },
+  "140": {
+    "no_insertion": "Today is 2031-03-21, and I have a recurrence every 41 days. Without counting today, what is the date of the 18 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2031-03-21, and I have a recurrence every 41 days. Without counting today, what is the date of the 18 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2031-03-21, and I have a recurrence every 41 days. Without counting today, what is the date of the 18 occurrence?",
+    "answer": "2033-03-28"
+  },
+  "141": {
+    "no_insertion": "Today is 2025-07-09, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "similar_insertion": "Seven is actually my lucky number. Today is 2025-07-09, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "dissimilar_insertion": "Penguins are great swimmers. Today is 2025-07-09, and I have a recurrence every 47 days. Without counting today, what is the date of the 16 occurrence?",
+    "answer": "2027-07-31"
+  },
+  "142": {
+    "no_insertion": "Today is 2027-09-23, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2027-09-23, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2027-09-23, and I have a recurrence every 63 days. Without counting today, what is the date of the 20 occurrence?",
+    "answer": "2031-03-06"
+  },
+  "143": {
+    "no_insertion": "Today is 2031-05-23, and I have a recurrence every 32 days. Without counting today, what is the date of the 19 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2031-05-23, and I have a recurrence every 32 days. Without counting today, what is the date of the 19 occurrence?",
+    "dissimilar_insertion": "The sky looks blue today. Today is 2031-05-23, and I have a recurrence every 32 days. Without counting today, what is the date of the 19 occurrence?",
+    "answer": "2033-01-20"
+  },
+  "144": {
+    "no_insertion": "Today is 2030-12-10, and I have a recurrence every 60 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "My scheduling app keeps crashing when I try to set this up. Today is 2030-12-10, and I have a recurrence every 60 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2030-12-10, and I have a recurrence every 60 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2035-07-17"
+  },
+  "145": {
+    "no_insertion": "Today is 2030-09-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 24 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2030-09-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 24 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2030-09-13, and I have a recurrence every 37 days. Without counting today, what is the date of the 24 occurrence?",
+    "answer": "2033-02-17"
+  },
+  "146": {
+    "no_insertion": "Today is 2035-08-16, and I have a recurrence every 40 days. Without counting today, what is the date of the 26 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2035-08-16, and I have a recurrence every 40 days. Without counting today, what is the date of the 26 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2035-08-16, and I have a recurrence every 40 days. Without counting today, what is the date of the 26 occurrence?",
+    "answer": "2038-06-21"
+  },
+  "147": {
+    "no_insertion": "Today is 2029-03-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "February is such a unique month with its varying days. Today is 2029-03-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "My neighbor bought a bicycle. Today is 2029-03-15, and I have a recurrence every 40 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2032-09-15"
+  },
+  "148": {
+    "no_insertion": "Today is 2026-01-09, and I have a recurrence every 55 days. Without counting today, what is the date of the 32 occurrence?",
+    "similar_insertion": "Dates in February always confuse me a bit. Today is 2026-01-09, and I have a recurrence every 55 days. Without counting today, what is the date of the 32 occurrence?",
+    "dissimilar_insertion": "The library has nice chairs. Today is 2026-01-09, and I have a recurrence every 55 days. Without counting today, what is the date of the 32 occurrence?",
+    "answer": "2030-11-04"
+  },
+  "149": {
+    "no_insertion": "Today is 2026-01-17, and I have a recurrence every 50 days. Without counting today, what is the date of the 28 occurrence?",
+    "similar_insertion": "The last time I had a weekly commitment was in January. Today is 2026-01-17, and I have a recurrence every 50 days. Without counting today, what is the date of the 28 occurrence?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. Today is 2026-01-17, and I have a recurrence every 50 days. Without counting today, what is the date of the 28 occurrence?",
+    "answer": "2029-11-17"
+  }
+}

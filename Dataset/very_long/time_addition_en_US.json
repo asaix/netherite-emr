@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "It is now 23:04, what will the time be in 1 hour and 39 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:04, what will the time be in 1 hour and 39 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 23:04, what will the time be in 1 hour and 39 minutes?",
+    "answer": "00:43"
+  },
+  "1": {
+    "no_insertion": "It is now 12:49, what will the time be in 10 hours and 7 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 12:49, what will the time be in 10 hours and 7 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 12:49, what will the time be in 10 hours and 7 minutes?",
+    "answer": "22:56"
+  },
+  "2": {
+    "no_insertion": "It is now 05:04, what will the time be in 15 hours and 39 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 05:04, what will the time be in 15 hours and 39 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 05:04, what will the time be in 15 hours and 39 minutes?",
+    "answer": "20:43"
+  },
+  "3": {
+    "no_insertion": "It is now 10:04, what will the time be in 12 hours and 30 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 10:04, what will the time be in 12 hours and 30 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 10:04, what will the time be in 12 hours and 30 minutes?",
+    "answer": "22:34"
+  },
+  "4": {
+    "no_insertion": "It is now 06:33, what will the time be in 22 hours and 19 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 06:33, what will the time be in 22 hours and 19 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 06:33, what will the time be in 22 hours and 19 minutes?",
+    "answer": "04:52"
+  },
+  "5": {
+    "no_insertion": "It is now 13:59, what will the time be in 23 hours and 44 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 13:59, what will the time be in 23 hours and 44 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 13:59, what will the time be in 23 hours and 44 minutes?",
+    "answer": "13:43"
+  },
+  "6": {
+    "no_insertion": "It is now 03:21, what will the time be in 23 hours and 54 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 03:21, what will the time be in 23 hours and 54 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 03:21, what will the time be in 23 hours and 54 minutes?",
+    "answer": "03:15"
+  },
+  "7": {
+    "no_insertion": "It is now 21:37, what will the time be in 8 hours and 29 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 21:37, what will the time be in 8 hours and 29 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 21:37, what will the time be in 8 hours and 29 minutes?",
+    "answer": "06:06"
+  },
+  "8": {
+    "no_insertion": "It is now 14:32, what will the time be in 22 hours and 37 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:32, what will the time be in 22 hours and 37 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 14:32, what will the time be in 22 hours and 37 minutes?",
+    "answer": "13:09"
+  },
+  "9": {
+    "no_insertion": "It is now 23:04, what will the time be in 16 hours and 31 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:04, what will the time be in 16 hours and 31 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 23:04, what will the time be in 16 hours and 31 minutes?",
+    "answer": "15:35"
+  },
+  "10": {
+    "no_insertion": "It is now 17:06, what will the time be in 24 hours and 49 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:06, what will the time be in 24 hours and 49 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 17:06, what will the time be in 24 hours and 49 minutes?",
+    "answer": "17:55"
+  },
+  "11": {
+    "no_insertion": "It is now 02:38, what will the time be in 15 hours and 52 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 02:38, what will the time be in 15 hours and 52 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 02:38, what will the time be in 15 hours and 52 minutes?",
+    "answer": "18:30"
+  },
+  "12": {
+    "no_insertion": "It is now 03:47, what will the time be in 5 hours and 49 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 03:47, what will the time be in 5 hours and 49 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 03:47, what will the time be in 5 hours and 49 minutes?",
+    "answer": "09:36"
+  },
+  "13": {
+    "no_insertion": "It is now 13:02, what will the time be in 0 hours and 49 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 13:02, what will the time be in 0 hours and 49 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 13:02, what will the time be in 0 hours and 49 minutes?",
+    "answer": "13:51"
+  },
+  "14": {
+    "no_insertion": "It is now 10:37, what will the time be in 9 hours and 5 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 10:37, what will the time be in 9 hours and 5 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 10:37, what will the time be in 9 hours and 5 minutes?",
+    "answer": "19:42"
+  },
+  "15": {
+    "no_insertion": "It is now 15:44, what will the time be in 31 hours and 27 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 15:44, what will the time be in 31 hours and 27 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 15:44, what will the time be in 31 hours and 27 minutes?",
+    "answer": "23:11"
+  },
+  "16": {
+    "no_insertion": "It is now 11:59, what will the time be in 30 hours and 34 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 11:59, what will the time be in 30 hours and 34 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 11:59, what will the time be in 30 hours and 34 minutes?",
+    "answer": "18:33"
+  },
+  "17": {
+    "no_insertion": "It is now 23:35, what will the time be in 8 hours and 49 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:35, what will the time be in 8 hours and 49 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 23:35, what will the time be in 8 hours and 49 minutes?",
+    "answer": "08:24"
+  },
+  "18": {
+    "no_insertion": "It is now 14:56, what will the time be in 12 hours and 9 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 14:56, what will the time be in 12 hours and 9 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 14:56, what will the time be in 12 hours and 9 minutes?",
+    "answer": "03:05"
+  },
+  "19": {
+    "no_insertion": "It is now 01:04, what will the time be in 10 hours and 41 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 01:04, what will the time be in 10 hours and 41 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 01:04, what will the time be in 10 hours and 41 minutes?",
+    "answer": "11:45"
+  },
+  "20": {
+    "no_insertion": "It is now 23:29, what will the time be in 14 hours and 9 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 23:29, what will the time be in 14 hours and 9 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 23:29, what will the time be in 14 hours and 9 minutes?",
+    "answer": "13:38"
+  },
+  "21": {
+    "no_insertion": "It is now 17:33, what will the time be in 0 hours and 32 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 17:33, what will the time be in 0 hours and 32 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 17:33, what will the time be in 0 hours and 32 minutes?",
+    "answer": "18:05"
+  },
+  "22": {
+    "no_insertion": "It is now 22:09, what will the time be in 27 hours and 15 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 22:09, what will the time be in 27 hours and 15 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 22:09, what will the time be in 27 hours and 15 minutes?",
+    "answer": "01:24"
+  },
+  "23": {
+    "no_insertion": "It is now 20:36, what will the time be in 12 hours and 34 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:36, what will the time be in 12 hours and 34 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 20:36, what will the time be in 12 hours and 34 minutes?",
+    "answer": "09:10"
+  },
+  "24": {
+    "no_insertion": "It is now 22:32, what will the time be in 6 hours and 12 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 22:32, what will the time be in 6 hours and 12 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 22:32, what will the time be in 6 hours and 12 minutes?",
+    "answer": "04:44"
+  },
+  "25": {
+    "no_insertion": "It is now 14:02, what will the time be in 2 hours and 44 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:02, what will the time be in 2 hours and 44 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 14:02, what will the time be in 2 hours and 44 minutes?",
+    "answer": "16:46"
+  },
+  "26": {
+    "no_insertion": "It is now 19:53, what will the time be in 6 hours and 19 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 19:53, what will the time be in 6 hours and 19 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 19:53, what will the time be in 6 hours and 19 minutes?",
+    "answer": "02:12"
+  },
+  "27": {
+    "no_insertion": "It is now 09:00, what will the time be in 4 hours and 23 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 09:00, what will the time be in 4 hours and 23 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 09:00, what will the time be in 4 hours and 23 minutes?",
+    "answer": "13:23"
+  },
+  "28": {
+    "no_insertion": "It is now 06:15, what will the time be in 24 hours and 12 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 06:15, what will the time be in 24 hours and 12 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 06:15, what will the time be in 24 hours and 12 minutes?",
+    "answer": "06:27"
+  },
+  "29": {
+    "no_insertion": "It is now 15:52, what will the time be in 28 hours and 22 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 15:52, what will the time be in 28 hours and 22 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 15:52, what will the time be in 28 hours and 22 minutes?",
+    "answer": "20:14"
+  },
+  "30": {
+    "no_insertion": "It is now 16:39, what will the time be in 22 hours and 46 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 16:39, what will the time be in 22 hours and 46 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 16:39, what will the time be in 22 hours and 46 minutes?",
+    "answer": "15:25"
+  },
+  "31": {
+    "no_insertion": "It is now 22:33, what will the time be in 14 hours and 38 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 22:33, what will the time be in 14 hours and 38 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 22:33, what will the time be in 14 hours and 38 minutes?",
+    "answer": "13:11"
+  },
+  "32": {
+    "no_insertion": "It is now 04:59, what will the time be in 26 hours and 55 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 04:59, what will the time be in 26 hours and 55 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 04:59, what will the time be in 26 hours and 55 minutes?",
+    "answer": "07:54"
+  },
+  "33": {
+    "no_insertion": "It is now 14:17, what will the time be in 6 hours and 2 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:17, what will the time be in 6 hours and 2 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 14:17, what will the time be in 6 hours and 2 minutes?",
+    "answer": "20:19"
+  },
+  "34": {
+    "no_insertion": "It is now 05:36, what will the time be in 21 hours and 56 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:36, what will the time be in 21 hours and 56 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 05:36, what will the time be in 21 hours and 56 minutes?",
+    "answer": "03:32"
+  },
+  "35": {
+    "no_insertion": "It is now 08:36, what will the time be in 5 hours and 9 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 08:36, what will the time be in 5 hours and 9 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 08:36, what will the time be in 5 hours and 9 minutes?",
+    "answer": "13:45"
+  },
+  "36": {
+    "no_insertion": "It is now 00:27, what will the time be in 13 hours and 54 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 00:27, what will the time be in 13 hours and 54 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 00:27, what will the time be in 13 hours and 54 minutes?",
+    "answer": "14:21"
+  },
+  "37": {
+    "no_insertion": "It is now 07:48, what will the time be in 32 hours and 29 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 07:48, what will the time be in 32 hours and 29 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 07:48, what will the time be in 32 hours and 29 minutes?",
+    "answer": "16:17"
+  },
+  "38": {
+    "no_insertion": "It is now 04:43, what will the time be in 15 hours and 55 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 04:43, what will the time be in 15 hours and 55 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 04:43, what will the time be in 15 hours and 55 minutes?",
+    "answer": "20:38"
+  },
+  "39": {
+    "no_insertion": "It is now 18:43, what will the time be in 28 hours and 22 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 18:43, what will the time be in 28 hours and 22 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 18:43, what will the time be in 28 hours and 22 minutes?",
+    "answer": "23:05"
+  },
+  "40": {
+    "no_insertion": "It is now 02:10, what will the time be in 21 hours and 54 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 02:10, what will the time be in 21 hours and 54 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 02:10, what will the time be in 21 hours and 54 minutes?",
+    "answer": "00:04"
+  },
+  "41": {
+    "no_insertion": "It is now 20:31, what will the time be in 25 hours and 39 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 20:31, what will the time be in 25 hours and 39 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 20:31, what will the time be in 25 hours and 39 minutes?",
+    "answer": "22:10"
+  },
+  "42": {
+    "no_insertion": "It is now 12:28, what will the time be in 5 hours and 35 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:28, what will the time be in 5 hours and 35 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 12:28, what will the time be in 5 hours and 35 minutes?",
+    "answer": "18:03"
+  },
+  "43": {
+    "no_insertion": "It is now 14:11, what will the time be in 2 hours and 4 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:11, what will the time be in 2 hours and 4 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 14:11, what will the time be in 2 hours and 4 minutes?",
+    "answer": "16:15"
+  },
+  "44": {
+    "no_insertion": "It is now 06:27, what will the time be in 32 hours and 43 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 06:27, what will the time be in 32 hours and 43 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 06:27, what will the time be in 32 hours and 43 minutes?",
+    "answer": "15:10"
+  },
+  "45": {
+    "no_insertion": "It is now 11:01, what will the time be in 21 hours and 12 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 11:01, what will the time be in 21 hours and 12 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 11:01, what will the time be in 21 hours and 12 minutes?",
+    "answer": "08:13"
+  },
+  "46": {
+    "no_insertion": "It is now 19:15, what will the time be in 19 hours and 48 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 19:15, what will the time be in 19 hours and 48 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 19:15, what will the time be in 19 hours and 48 minutes?",
+    "answer": "15:03"
+  },
+  "47": {
+    "no_insertion": "It is now 10:58, what will the time be in 2 hours and 42 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 10:58, what will the time be in 2 hours and 42 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 10:58, what will the time be in 2 hours and 42 minutes?",
+    "answer": "13:40"
+  },
+  "48": {
+    "no_insertion": "It is now 14:58, what will the time be in 29 hours and 25 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:58, what will the time be in 29 hours and 25 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 14:58, what will the time be in 29 hours and 25 minutes?",
+    "answer": "20:23"
+  },
+  "49": {
+    "no_insertion": "It is now 20:50, what will the time be in 13 hours and 22 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 20:50, what will the time be in 13 hours and 22 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 20:50, what will the time be in 13 hours and 22 minutes?",
+    "answer": "10:12"
+  },
+  "50": {
+    "no_insertion": "It is now 20:34, what will the time be in 28 hours and 4 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:34, what will the time be in 28 hours and 4 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 20:34, what will the time be in 28 hours and 4 minutes?",
+    "answer": "00:38"
+  },
+  "51": {
+    "no_insertion": "It is now 14:11, what will the time be in 23 hours and 16 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:11, what will the time be in 23 hours and 16 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 14:11, what will the time be in 23 hours and 16 minutes?",
+    "answer": "13:27"
+  },
+  "52": {
+    "no_insertion": "It is now 13:06, what will the time be in 32 hours and 12 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 13:06, what will the time be in 32 hours and 12 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 13:06, what will the time be in 32 hours and 12 minutes?",
+    "answer": "21:18"
+  },
+  "53": {
+    "no_insertion": "It is now 22:02, what will the time be in 20 hours and 38 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 22:02, what will the time be in 20 hours and 38 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 22:02, what will the time be in 20 hours and 38 minutes?",
+    "answer": "18:40"
+  },
+  "54": {
+    "no_insertion": "It is now 17:43, what will the time be in 21 hours and 21 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:43, what will the time be in 21 hours and 21 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 17:43, what will the time be in 21 hours and 21 minutes?",
+    "answer": "15:04"
+  },
+  "55": {
+    "no_insertion": "It is now 13:53, what will the time be in 9 hours and 2 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 13:53, what will the time be in 9 hours and 2 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 13:53, what will the time be in 9 hours and 2 minutes?",
+    "answer": "22:55"
+  },
+  "56": {
+    "no_insertion": "It is now 19:39, what will the time be in 7 hours and 20 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 19:39, what will the time be in 7 hours and 20 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 19:39, what will the time be in 7 hours and 20 minutes?",
+    "answer": "02:59"
+  },
+  "57": {
+    "no_insertion": "It is now 00:12, what will the time be in 15 hours and 25 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 00:12, what will the time be in 15 hours and 25 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 00:12, what will the time be in 15 hours and 25 minutes?",
+    "answer": "15:37"
+  },
+  "58": {
+    "no_insertion": "It is now 12:56, what will the time be in 32 hours and 24 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:56, what will the time be in 32 hours and 24 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 12:56, what will the time be in 32 hours and 24 minutes?",
+    "answer": "21:20"
+  },
+  "59": {
+    "no_insertion": "It is now 02:54, what will the time be in 15 hours and 42 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 02:54, what will the time be in 15 hours and 42 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 02:54, what will the time be in 15 hours and 42 minutes?",
+    "answer": "18:36"
+  },
+  "60": {
+    "no_insertion": "It is now 07:23, what will the time be in 32 hours and 56 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 07:23, what will the time be in 32 hours and 56 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 07:23, what will the time be in 32 hours and 56 minutes?",
+    "answer": "16:19"
+  },
+  "61": {
+    "no_insertion": "It is now 23:51, what will the time be in 6 hours and 42 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:51, what will the time be in 6 hours and 42 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 23:51, what will the time be in 6 hours and 42 minutes?",
+    "answer": "06:33"
+  },
+  "62": {
+    "no_insertion": "It is now 09:54, what will the time be in 27 hours and 32 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 09:54, what will the time be in 27 hours and 32 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 09:54, what will the time be in 27 hours and 32 minutes?",
+    "answer": "13:26"
+  },
+  "63": {
+    "no_insertion": "It is now 18:03, what will the time be in 10 hours and 55 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 18:03, what will the time be in 10 hours and 55 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 18:03, what will the time be in 10 hours and 55 minutes?",
+    "answer": "04:58"
+  },
+  "64": {
+    "no_insertion": "It is now 09:24, what will the time be in 29 hours and 45 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 09:24, what will the time be in 29 hours and 45 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 09:24, what will the time be in 29 hours and 45 minutes?",
+    "answer": "15:09"
+  },
+  "65": {
+    "no_insertion": "It is now 18:37, what will the time be in 2 hours and 59 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 18:37, what will the time be in 2 hours and 59 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 18:37, what will the time be in 2 hours and 59 minutes?",
+    "answer": "21:36"
+  },
+  "66": {
+    "no_insertion": "It is now 01:24, what will the time be in 10 hours and 9 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:24, what will the time be in 10 hours and 9 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 01:24, what will the time be in 10 hours and 9 minutes?",
+    "answer": "11:33"
+  },
+  "67": {
+    "no_insertion": "It is now 16:33, what will the time be in 5 hours and 2 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 16:33, what will the time be in 5 hours and 2 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 16:33, what will the time be in 5 hours and 2 minutes?",
+    "answer": "21:35"
+  },
+  "68": {
+    "no_insertion": "It is now 13:30, what will the time be in 14 hours and 40 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 13:30, what will the time be in 14 hours and 40 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 13:30, what will the time be in 14 hours and 40 minutes?",
+    "answer": "04:10"
+  },
+  "69": {
+    "no_insertion": "It is now 23:17, what will the time be in 19 hours and 15 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:17, what will the time be in 19 hours and 15 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 23:17, what will the time be in 19 hours and 15 minutes?",
+    "answer": "18:32"
+  },
+  "70": {
+    "no_insertion": "It is now 18:08, what will the time be in 0 hours and 40 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 18:08, what will the time be in 0 hours and 40 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 18:08, what will the time be in 0 hours and 40 minutes?",
+    "answer": "18:48"
+  },
+  "71": {
+    "no_insertion": "It is now 12:58, what will the time be in 27 hours and 14 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 12:58, what will the time be in 27 hours and 14 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 12:58, what will the time be in 27 hours and 14 minutes?",
+    "answer": "16:12"
+  },
+  "72": {
+    "no_insertion": "It is now 21:25, what will the time be in 16 hours and 3 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:25, what will the time be in 16 hours and 3 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 21:25, what will the time be in 16 hours and 3 minutes?",
+    "answer": "13:28"
+  },
+  "73": {
+    "no_insertion": "It is now 20:55, what will the time be in 7 hours and 35 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 20:55, what will the time be in 7 hours and 35 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 20:55, what will the time be in 7 hours and 35 minutes?",
+    "answer": "04:30"
+  },
+  "74": {
+    "no_insertion": "It is now 23:56, what will the time be in 19 hours and 15 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:56, what will the time be in 19 hours and 15 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 23:56, what will the time be in 19 hours and 15 minutes?",
+    "answer": "19:11"
+  },
+  "75": {
+    "no_insertion": "It is now 14:17, what will the time be in 15 hours and 59 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:17, what will the time be in 15 hours and 59 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 14:17, what will the time be in 15 hours and 59 minutes?",
+    "answer": "06:16"
+  },
+  "76": {
+    "no_insertion": "It is now 11:40, what will the time be in 28 hours and 31 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 11:40, what will the time be in 28 hours and 31 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 11:40, what will the time be in 28 hours and 31 minutes?",
+    "answer": "16:11"
+  },
+  "77": {
+    "no_insertion": "It is now 12:02, what will the time be in 7 hours and 8 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 12:02, what will the time be in 7 hours and 8 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 12:02, what will the time be in 7 hours and 8 minutes?",
+    "answer": "19:10"
+  },
+  "78": {
+    "no_insertion": "It is now 23:53, what will the time be in 20 hours and 41 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 23:53, what will the time be in 20 hours and 41 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 23:53, what will the time be in 20 hours and 41 minutes?",
+    "answer": "20:34"
+  },
+  "79": {
+    "no_insertion": "It is now 22:38, what will the time be in 23 hours and 30 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 22:38, what will the time be in 23 hours and 30 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 22:38, what will the time be in 23 hours and 30 minutes?",
+    "answer": "22:08"
+  },
+  "80": {
+    "no_insertion": "It is now 07:06, what will the time be in 4 hours and 26 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 07:06, what will the time be in 4 hours and 26 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 07:06, what will the time be in 4 hours and 26 minutes?",
+    "answer": "11:32"
+  },
+  "81": {
+    "no_insertion": "It is now 22:16, what will the time be in 11 hours and 36 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 22:16, what will the time be in 11 hours and 36 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 22:16, what will the time be in 11 hours and 36 minutes?",
+    "answer": "09:52"
+  },
+  "82": {
+    "no_insertion": "It is now 07:49, what will the time be in 8 hours and 30 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 07:49, what will the time be in 8 hours and 30 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 07:49, what will the time be in 8 hours and 30 minutes?",
+    "answer": "16:19"
+  },
+  "83": {
+    "no_insertion": "It is now 02:38, what will the time be in 21 hours and 54 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 02:38, what will the time be in 21 hours and 54 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 02:38, what will the time be in 21 hours and 54 minutes?",
+    "answer": "00:32"
+  },
+  "84": {
+    "no_insertion": "It is now 15:35, what will the time be in 25 hours and 33 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 15:35, what will the time be in 25 hours and 33 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 15:35, what will the time be in 25 hours and 33 minutes?",
+    "answer": "17:08"
+  },
+  "85": {
+    "no_insertion": "It is now 07:17, what will the time be in 11 hours and 58 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 07:17, what will the time be in 11 hours and 58 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 07:17, what will the time be in 11 hours and 58 minutes?",
+    "answer": "19:15"
+  },
+  "86": {
+    "no_insertion": "It is now 09:44, what will the time be in 0 hours and 13 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 09:44, what will the time be in 0 hours and 13 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 09:44, what will the time be in 0 hours and 13 minutes?",
+    "answer": "09:57"
+  },
+  "87": {
+    "no_insertion": "It is now 07:41, what will the time be in 23 hours and 36 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 07:41, what will the time be in 23 hours and 36 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 07:41, what will the time be in 23 hours and 36 minutes?",
+    "answer": "07:17"
+  },
+  "88": {
+    "no_insertion": "It is now 05:37, what will the time be in 9 hours and 29 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:37, what will the time be in 9 hours and 29 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 05:37, what will the time be in 9 hours and 29 minutes?",
+    "answer": "15:06"
+  },
+  "89": {
+    "no_insertion": "It is now 05:30, what will the time be in 19 hours and 53 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:30, what will the time be in 19 hours and 53 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 05:30, what will the time be in 19 hours and 53 minutes?",
+    "answer": "01:23"
+  },
+  "90": {
+    "no_insertion": "It is now 02:48, what will the time be in 30 hours and 26 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 02:48, what will the time be in 30 hours and 26 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 02:48, what will the time be in 30 hours and 26 minutes?",
+    "answer": "09:14"
+  },
+  "91": {
+    "no_insertion": "It is now 12:22, what will the time be in 14 hours and 48 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 12:22, what will the time be in 14 hours and 48 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 12:22, what will the time be in 14 hours and 48 minutes?",
+    "answer": "03:10"
+  },
+  "92": {
+    "no_insertion": "It is now 13:48, what will the time be in 23 hours and 30 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 13:48, what will the time be in 23 hours and 30 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 13:48, what will the time be in 23 hours and 30 minutes?",
+    "answer": "13:18"
+  },
+  "93": {
+    "no_insertion": "It is now 17:29, what will the time be in 17 hours and 10 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 17:29, what will the time be in 17 hours and 10 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 17:29, what will the time be in 17 hours and 10 minutes?",
+    "answer": "10:39"
+  },
+  "94": {
+    "no_insertion": "It is now 20:17, what will the time be in 0 hours and 7 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:17, what will the time be in 0 hours and 7 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 20:17, what will the time be in 0 hours and 7 minutes?",
+    "answer": "20:24"
+  },
+  "95": {
+    "no_insertion": "It is now 02:15, what will the time be in 11 hours and 12 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 02:15, what will the time be in 11 hours and 12 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 02:15, what will the time be in 11 hours and 12 minutes?",
+    "answer": "13:27"
+  },
+  "96": {
+    "no_insertion": "It is now 06:32, what will the time be in 6 hours and 57 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 06:32, what will the time be in 6 hours and 57 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 06:32, what will the time be in 6 hours and 57 minutes?",
+    "answer": "13:29"
+  },
+  "97": {
+    "no_insertion": "It is now 12:43, what will the time be in 5 hours and 58 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:43, what will the time be in 5 hours and 58 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 12:43, what will the time be in 5 hours and 58 minutes?",
+    "answer": "18:41"
+  },
+  "98": {
+    "no_insertion": "It is now 12:55, what will the time be in 11 hours and 33 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 12:55, what will the time be in 11 hours and 33 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 12:55, what will the time be in 11 hours and 33 minutes?",
+    "answer": "00:28"
+  },
+  "99": {
+    "no_insertion": "It is now 07:22, what will the time be in 17 hours and 41 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 07:22, what will the time be in 17 hours and 41 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 07:22, what will the time be in 17 hours and 41 minutes?",
+    "answer": "01:03"
+  },
+  "100": {
+    "no_insertion": "It is now 01:17, what will the time be in 31 hours and 48 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 01:17, what will the time be in 31 hours and 48 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 01:17, what will the time be in 31 hours and 48 minutes?",
+    "answer": "09:05"
+  },
+  "101": {
+    "no_insertion": "It is now 19:36, what will the time be in 8 hours and 34 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 19:36, what will the time be in 8 hours and 34 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 19:36, what will the time be in 8 hours and 34 minutes?",
+    "answer": "04:10"
+  },
+  "102": {
+    "no_insertion": "It is now 20:26, what will the time be in 1 hour and 9 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 20:26, what will the time be in 1 hour and 9 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 20:26, what will the time be in 1 hour and 9 minutes?",
+    "answer": "21:35"
+  },
+  "103": {
+    "no_insertion": "It is now 17:39, what will the time be in 10 hours and 58 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 17:39, what will the time be in 10 hours and 58 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 17:39, what will the time be in 10 hours and 58 minutes?",
+    "answer": "04:37"
+  },
+  "104": {
+    "no_insertion": "It is now 08:54, what will the time be in 2 hours and 33 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 08:54, what will the time be in 2 hours and 33 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 08:54, what will the time be in 2 hours and 33 minutes?",
+    "answer": "11:27"
+  },
+  "105": {
+    "no_insertion": "It is now 10:46, what will the time be in 9 hours and 41 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 10:46, what will the time be in 9 hours and 41 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 10:46, what will the time be in 9 hours and 41 minutes?",
+    "answer": "20:27"
+  },
+  "106": {
+    "no_insertion": "It is now 01:21, what will the time be in 5 hours and 35 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 01:21, what will the time be in 5 hours and 35 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 01:21, what will the time be in 5 hours and 35 minutes?",
+    "answer": "06:56"
+  },
+  "107": {
+    "no_insertion": "It is now 20:14, what will the time be in 13 hours and 39 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:14, what will the time be in 13 hours and 39 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 20:14, what will the time be in 13 hours and 39 minutes?",
+    "answer": "09:53"
+  },
+  "108": {
+    "no_insertion": "It is now 08:14, what will the time be in 25 hours and 23 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 08:14, what will the time be in 25 hours and 23 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 08:14, what will the time be in 25 hours and 23 minutes?",
+    "answer": "09:37"
+  },
+  "109": {
+    "no_insertion": "It is now 09:33, what will the time be in 0 hours and 23 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 09:33, what will the time be in 0 hours and 23 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 09:33, what will the time be in 0 hours and 23 minutes?",
+    "answer": "09:56"
+  },
+  "110": {
+    "no_insertion": "It is now 20:07, what will the time be in 5 hours and 38 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 20:07, what will the time be in 5 hours and 38 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 20:07, what will the time be in 5 hours and 38 minutes?",
+    "answer": "01:45"
+  },
+  "111": {
+    "no_insertion": "It is now 23:48, what will the time be in 22 hours and 55 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:48, what will the time be in 22 hours and 55 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 23:48, what will the time be in 22 hours and 55 minutes?",
+    "answer": "22:43"
+  },
+  "112": {
+    "no_insertion": "It is now 15:14, what will the time be in 5 hours and 44 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 15:14, what will the time be in 5 hours and 44 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 15:14, what will the time be in 5 hours and 44 minutes?",
+    "answer": "20:58"
+  },
+  "113": {
+    "no_insertion": "It is now 23:17, what will the time be in 1 hour and 56 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 23:17, what will the time be in 1 hour and 56 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 23:17, what will the time be in 1 hour and 56 minutes?",
+    "answer": "01:13"
+  },
+  "114": {
+    "no_insertion": "It is now 15:05, what will the time be in 14 hours and 47 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 15:05, what will the time be in 14 hours and 47 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 15:05, what will the time be in 14 hours and 47 minutes?",
+    "answer": "05:52"
+  },
+  "115": {
+    "no_insertion": "It is now 22:21, what will the time be in 27 hours and 45 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 22:21, what will the time be in 27 hours and 45 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 22:21, what will the time be in 27 hours and 45 minutes?",
+    "answer": "02:06"
+  },
+  "116": {
+    "no_insertion": "It is now 15:21, what will the time be in 5 hours and 59 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 15:21, what will the time be in 5 hours and 59 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 15:21, what will the time be in 5 hours and 59 minutes?",
+    "answer": "21:20"
+  },
+  "117": {
+    "no_insertion": "It is now 15:34, what will the time be in 23 hours and 36 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 15:34, what will the time be in 23 hours and 36 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 15:34, what will the time be in 23 hours and 36 minutes?",
+    "answer": "15:10"
+  },
+  "118": {
+    "no_insertion": "It is now 17:44, what will the time be in 20 hours and 50 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 17:44, what will the time be in 20 hours and 50 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 17:44, what will the time be in 20 hours and 50 minutes?",
+    "answer": "14:34"
+  },
+  "119": {
+    "no_insertion": "It is now 12:44, what will the time be in 32 hours and 56 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:44, what will the time be in 32 hours and 56 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 12:44, what will the time be in 32 hours and 56 minutes?",
+    "answer": "21:40"
+  },
+  "120": {
+    "no_insertion": "It is now 23:30, what will the time be in 32 hours and 41 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:30, what will the time be in 32 hours and 41 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 23:30, what will the time be in 32 hours and 41 minutes?",
+    "answer": "08:11"
+  },
+  "121": {
+    "no_insertion": "It is now 03:57, what will the time be in 12 hours and 50 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 03:57, what will the time be in 12 hours and 50 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 03:57, what will the time be in 12 hours and 50 minutes?",
+    "answer": "16:47"
+  },
+  "122": {
+    "no_insertion": "It is now 21:55, what will the time be in 10 hours and 19 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 21:55, what will the time be in 10 hours and 19 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 21:55, what will the time be in 10 hours and 19 minutes?",
+    "answer": "08:14"
+  },
+  "123": {
+    "no_insertion": "It is now 23:40, what will the time be in 4 hours and 11 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:40, what will the time be in 4 hours and 11 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 23:40, what will the time be in 4 hours and 11 minutes?",
+    "answer": "03:51"
+  },
+  "124": {
+    "no_insertion": "It is now 09:50, what will the time be in 32 hours and 19 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 09:50, what will the time be in 32 hours and 19 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 09:50, what will the time be in 32 hours and 19 minutes?",
+    "answer": "18:09"
+  },
+  "125": {
+    "no_insertion": "It is now 06:10, what will the time be in 27 hours and 22 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 06:10, what will the time be in 27 hours and 22 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 06:10, what will the time be in 27 hours and 22 minutes?",
+    "answer": "09:32"
+  },
+  "126": {
+    "no_insertion": "It is now 20:59, what will the time be in 29 hours and 44 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 20:59, what will the time be in 29 hours and 44 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 20:59, what will the time be in 29 hours and 44 minutes?",
+    "answer": "02:43"
+  },
+  "127": {
+    "no_insertion": "It is now 07:15, what will the time be in 32 hours and 2 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 07:15, what will the time be in 32 hours and 2 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 07:15, what will the time be in 32 hours and 2 minutes?",
+    "answer": "15:17"
+  },
+  "128": {
+    "no_insertion": "It is now 15:36, what will the time be in 28 hours and 24 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 15:36, what will the time be in 28 hours and 24 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 15:36, what will the time be in 28 hours and 24 minutes?",
+    "answer": "20:00"
+  },
+  "129": {
+    "no_insertion": "It is now 04:44, what will the time be in 14 hours and 17 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 04:44, what will the time be in 14 hours and 17 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 04:44, what will the time be in 14 hours and 17 minutes?",
+    "answer": "19:01"
+  },
+  "130": {
+    "no_insertion": "It is now 21:05, what will the time be in 30 hours and 16 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 21:05, what will the time be in 30 hours and 16 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 21:05, what will the time be in 30 hours and 16 minutes?",
+    "answer": "03:21"
+  },
+  "131": {
+    "no_insertion": "It is now 23:06, what will the time be in 3 hours and 40 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 23:06, what will the time be in 3 hours and 40 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 23:06, what will the time be in 3 hours and 40 minutes?",
+    "answer": "02:46"
+  },
+  "132": {
+    "no_insertion": "It is now 11:27, what will the time be in 16 hours and 8 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 11:27, what will the time be in 16 hours and 8 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 11:27, what will the time be in 16 hours and 8 minutes?",
+    "answer": "03:35"
+  },
+  "133": {
+    "no_insertion": "It is now 22:35, what will the time be in 30 hours and 57 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 22:35, what will the time be in 30 hours and 57 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 22:35, what will the time be in 30 hours and 57 minutes?",
+    "answer": "05:32"
+  },
+  "134": {
+    "no_insertion": "It is now 08:52, what will the time be in 23 hours and 46 minutes?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 08:52, what will the time be in 23 hours and 46 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 08:52, what will the time be in 23 hours and 46 minutes?",
+    "answer": "08:38"
+  },
+  "135": {
+    "no_insertion": "It is now 12:02, what will the time be in 24 hours and 25 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:02, what will the time be in 24 hours and 25 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 12:02, what will the time be in 24 hours and 25 minutes?",
+    "answer": "12:27"
+  },
+  "136": {
+    "no_insertion": "It is now 21:54, what will the time be in 23 hours and 13 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:54, what will the time be in 23 hours and 13 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 21:54, what will the time be in 23 hours and 13 minutes?",
+    "answer": "21:07"
+  },
+  "137": {
+    "no_insertion": "It is now 09:12, what will the time be in 19 hours and 1 minute?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 09:12, what will the time be in 19 hours and 1 minute?",
+    "dissimilar_insertion": "The library expanded its section. It is now 09:12, what will the time be in 19 hours and 1 minute?",
+    "answer": "04:13"
+  },
+  "138": {
+    "no_insertion": "It is now 05:14, what will the time be in 29 hours and 26 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 05:14, what will the time be in 29 hours and 26 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 05:14, what will the time be in 29 hours and 26 minutes?",
+    "answer": "10:40"
+  },
+  "139": {
+    "no_insertion": "It is now 13:04, what will the time be in 1 hour and 58 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 13:04, what will the time be in 1 hour and 58 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 13:04, what will the time be in 1 hour and 58 minutes?",
+    "answer": "15:02"
+  },
+  "140": {
+    "no_insertion": "It is now 22:11, what will the time be in 22 hours and 36 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 22:11, what will the time be in 22 hours and 36 minutes?",
+    "dissimilar_insertion": "Electric cars are popular. It is now 22:11, what will the time be in 22 hours and 36 minutes?",
+    "answer": "20:47"
+  },
+  "141": {
+    "no_insertion": "It is now 09:37, what will the time be in 22 hours and 30 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 09:37, what will the time be in 22 hours and 30 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 09:37, what will the time be in 22 hours and 30 minutes?",
+    "answer": "08:07"
+  },
+  "142": {
+    "no_insertion": "It is now 14:03, what will the time be in 25 hours and 28 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:03, what will the time be in 25 hours and 28 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 14:03, what will the time be in 25 hours and 28 minutes?",
+    "answer": "15:31"
+  },
+  "143": {
+    "no_insertion": "It is now 21:29, what will the time be in 13 hours and 24 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 21:29, what will the time be in 13 hours and 24 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 21:29, what will the time be in 13 hours and 24 minutes?",
+    "answer": "10:53"
+  },
+  "144": {
+    "no_insertion": "It is now 23:26, what will the time be in 20 hours and 17 minutes?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:26, what will the time be in 20 hours and 17 minutes?",
+    "dissimilar_insertion": "The mountain was covered in snow. It is now 23:26, what will the time be in 20 hours and 17 minutes?",
+    "answer": "19:43"
+  },
+  "145": {
+    "no_insertion": "It is now 10:52, what will the time be in 11 hours and 56 minutes?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 10:52, what will the time be in 11 hours and 56 minutes?",
+    "dissimilar_insertion": "The library expanded its section. It is now 10:52, what will the time be in 11 hours and 56 minutes?",
+    "answer": "22:48"
+  },
+  "146": {
+    "no_insertion": "It is now 15:35, what will the time be in 1 hour and 49 minutes?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 15:35, what will the time be in 1 hour and 49 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 15:35, what will the time be in 1 hour and 49 minutes?",
+    "answer": "17:24"
+  },
+  "147": {
+    "no_insertion": "It is now 07:51, what will the time be in 19 hours and 14 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 07:51, what will the time be in 19 hours and 14 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 07:51, what will the time be in 19 hours and 14 minutes?",
+    "answer": "03:05"
+  },
+  "148": {
+    "no_insertion": "It is now 13:52, what will the time be in 26 hours and 29 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 13:52, what will the time be in 26 hours and 29 minutes?",
+    "dissimilar_insertion": "Bamboo grows quickly. It is now 13:52, what will the time be in 26 hours and 29 minutes?",
+    "answer": "16:21"
+  },
+  "149": {
+    "no_insertion": "It is now 05:09, what will the time be in 10 hours and 35 minutes?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:09, what will the time be in 10 hours and 35 minutes?",
+    "dissimilar_insertion": "My grandmother's recipe uses vanilla. It is now 05:09, what will the time be in 10 hours and 35 minutes?",
+    "answer": "15:44"
+  }
+}

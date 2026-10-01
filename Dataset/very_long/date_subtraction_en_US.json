@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "Today is 2033-02-09, what was the date 32 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2033-02-09, what was the date 32 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2033-02-09, what was the date 32 days ago?",
+    "answer": "2033-01-08"
+  },
+  "1": {
+    "no_insertion": "Today is 2025-05-20, what was the date 21 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2025-05-20, what was the date 21 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-05-20, what was the date 21 days ago?",
+    "answer": "2025-04-29"
+  },
+  "2": {
+    "no_insertion": "Today is 2028-02-08, what was the date 30 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2028-02-08, what was the date 30 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2028-02-08, what was the date 30 days ago?",
+    "answer": "2028-01-09"
+  },
+  "3": {
+    "no_insertion": "Today is 2029-11-22, what was the date 29 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2029-11-22, what was the date 29 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-11-22, what was the date 29 days ago?",
+    "answer": "2029-10-24"
+  },
+  "4": {
+    "no_insertion": "Today is 2029-01-10, what was the date 23 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2029-01-10, what was the date 23 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2029-01-10, what was the date 23 days ago?",
+    "answer": "2028-12-18"
+  },
+  "5": {
+    "no_insertion": "Today is 2029-02-03, what was the date 30 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2029-02-03, what was the date 30 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-02-03, what was the date 30 days ago?",
+    "answer": "2029-01-04"
+  },
+  "6": {
+    "no_insertion": "Today is 2029-07-29, what was the date 32 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2029-07-29, what was the date 32 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-07-29, what was the date 32 days ago?",
+    "answer": "2029-06-27"
+  },
+  "7": {
+    "no_insertion": "Today is 2032-04-08, what was the date 19 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2032-04-08, what was the date 19 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2032-04-08, what was the date 19 days ago?",
+    "answer": "2032-03-20"
+  },
+  "8": {
+    "no_insertion": "Today is 2030-07-19, what was the date 16 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-07-19, what was the date 16 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2030-07-19, what was the date 16 days ago?",
+    "answer": "2030-07-03"
+  },
+  "9": {
+    "no_insertion": "Today is 2025-11-19, what was the date 28 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-11-19, what was the date 28 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2025-11-19, what was the date 28 days ago?",
+    "answer": "2025-10-22"
+  },
+  "10": {
+    "no_insertion": "Today is 2031-07-23, what was the date 31 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2031-07-23, what was the date 31 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2031-07-23, what was the date 31 days ago?",
+    "answer": "2031-06-22"
+  },
+  "11": {
+    "no_insertion": "Today is 2025-05-02, what was the date 23 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-05-02, what was the date 23 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-05-02, what was the date 23 days ago?",
+    "answer": "2025-04-09"
+  },
+  "12": {
+    "no_insertion": "Today is 2030-10-26, what was the date 19 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2030-10-26, what was the date 19 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2030-10-26, what was the date 19 days ago?",
+    "answer": "2030-10-07"
+  },
+  "13": {
+    "no_insertion": "Today is 2025-01-24, what was the date 22 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2025-01-24, what was the date 22 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2025-01-24, what was the date 22 days ago?",
+    "answer": "2025-01-02"
+  },
+  "14": {
+    "no_insertion": "Today is 2026-02-23, what was the date 28 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2026-02-23, what was the date 28 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2026-02-23, what was the date 28 days ago?",
+    "answer": "2026-01-26"
+  },
+  "15": {
+    "no_insertion": "Today is 2032-09-30, what was the date 21 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2032-09-30, what was the date 21 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2032-09-30, what was the date 21 days ago?",
+    "answer": "2032-09-09"
+  },
+  "16": {
+    "no_insertion": "Today is 2030-11-19, what was the date 25 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2030-11-19, what was the date 25 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2030-11-19, what was the date 25 days ago?",
+    "answer": "2030-10-25"
+  },
+  "17": {
+    "no_insertion": "Today is 2027-01-15, what was the date 22 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2027-01-15, what was the date 22 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2027-01-15, what was the date 22 days ago?",
+    "answer": "2026-12-24"
+  },
+  "18": {
+    "no_insertion": "Today is 2028-03-10, what was the date 31 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2028-03-10, what was the date 31 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2028-03-10, what was the date 31 days ago?",
+    "answer": "2028-02-08"
+  },
+  "19": {
+    "no_insertion": "Today is 2032-08-21, what was the date 32 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2032-08-21, what was the date 32 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-08-21, what was the date 32 days ago?",
+    "answer": "2032-07-20"
+  },
+  "20": {
+    "no_insertion": "Today is 2031-08-16, what was the date 31 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2031-08-16, what was the date 31 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2031-08-16, what was the date 31 days ago?",
+    "answer": "2031-07-16"
+  },
+  "21": {
+    "no_insertion": "Today is 2029-07-28, what was the date 26 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2029-07-28, what was the date 26 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2029-07-28, what was the date 26 days ago?",
+    "answer": "2029-07-02"
+  },
+  "22": {
+    "no_insertion": "Today is 2026-10-29, what was the date 20 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2026-10-29, what was the date 20 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2026-10-29, what was the date 20 days ago?",
+    "answer": "2026-10-09"
+  },
+  "23": {
+    "no_insertion": "Today is 2031-01-04, what was the date 31 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2031-01-04, what was the date 31 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2031-01-04, what was the date 31 days ago?",
+    "answer": "2030-12-04"
+  },
+  "24": {
+    "no_insertion": "Today is 2030-09-18, what was the date 16 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-09-18, what was the date 16 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2030-09-18, what was the date 16 days ago?",
+    "answer": "2030-09-02"
+  },
+  "25": {
+    "no_insertion": "Today is 2032-11-15, what was the date 18 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2032-11-15, what was the date 18 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-11-15, what was the date 18 days ago?",
+    "answer": "2032-10-28"
+  },
+  "26": {
+    "no_insertion": "Today is 2033-07-31, what was the date 21 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2033-07-31, what was the date 21 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2033-07-31, what was the date 21 days ago?",
+    "answer": "2033-07-10"
+  },
+  "27": {
+    "no_insertion": "Today is 2028-09-12, what was the date 32 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-09-12, what was the date 32 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2028-09-12, what was the date 32 days ago?",
+    "answer": "2028-08-11"
+  },
+  "28": {
+    "no_insertion": "Today is 2033-08-13, what was the date 27 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2033-08-13, what was the date 27 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2033-08-13, what was the date 27 days ago?",
+    "answer": "2033-07-17"
+  },
+  "29": {
+    "no_insertion": "Today is 2026-10-26, what was the date 26 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2026-10-26, what was the date 26 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2026-10-26, what was the date 26 days ago?",
+    "answer": "2026-09-30"
+  },
+  "30": {
+    "no_insertion": "Today is 2030-05-09, what was the date 18 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-05-09, what was the date 18 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2030-05-09, what was the date 18 days ago?",
+    "answer": "2030-04-21"
+  },
+  "31": {
+    "no_insertion": "Today is 2026-01-20, what was the date 24 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2026-01-20, what was the date 24 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2026-01-20, what was the date 24 days ago?",
+    "answer": "2025-12-27"
+  },
+  "32": {
+    "no_insertion": "Today is 2031-10-30, what was the date 28 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2031-10-30, what was the date 28 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2031-10-30, what was the date 28 days ago?",
+    "answer": "2031-10-02"
+  },
+  "33": {
+    "no_insertion": "Today is 2028-06-05, what was the date 29 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2028-06-05, what was the date 29 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2028-06-05, what was the date 29 days ago?",
+    "answer": "2028-05-07"
+  },
+  "34": {
+    "no_insertion": "Today is 2028-04-20, what was the date 28 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-04-20, what was the date 28 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2028-04-20, what was the date 28 days ago?",
+    "answer": "2028-03-23"
+  },
+  "35": {
+    "no_insertion": "Today is 2025-06-22, what was the date 22 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2025-06-22, what was the date 22 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-06-22, what was the date 22 days ago?",
+    "answer": "2025-05-31"
+  },
+  "36": {
+    "no_insertion": "Today is 2031-06-09, what was the date 18 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2031-06-09, what was the date 18 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2031-06-09, what was the date 18 days ago?",
+    "answer": "2031-05-22"
+  },
+  "37": {
+    "no_insertion": "Today is 2033-09-02, what was the date 25 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2033-09-02, what was the date 25 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2033-09-02, what was the date 25 days ago?",
+    "answer": "2033-08-08"
+  },
+  "38": {
+    "no_insertion": "Today is 2028-04-05, what was the date 17 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-04-05, what was the date 17 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2028-04-05, what was the date 17 days ago?",
+    "answer": "2028-03-19"
+  },
+  "39": {
+    "no_insertion": "Today is 2026-10-14, what was the date 18 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2026-10-14, what was the date 18 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2026-10-14, what was the date 18 days ago?",
+    "answer": "2026-09-26"
+  },
+  "40": {
+    "no_insertion": "Today is 2026-05-09, what was the date 21 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2026-05-09, what was the date 21 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2026-05-09, what was the date 21 days ago?",
+    "answer": "2026-04-18"
+  },
+  "41": {
+    "no_insertion": "Today is 2027-12-02, what was the date 23 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2027-12-02, what was the date 23 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2027-12-02, what was the date 23 days ago?",
+    "answer": "2027-11-09"
+  },
+  "42": {
+    "no_insertion": "Today is 2030-07-13, what was the date 22 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-07-13, what was the date 22 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2030-07-13, what was the date 22 days ago?",
+    "answer": "2030-06-21"
+  },
+  "43": {
+    "no_insertion": "Today is 2030-03-26, what was the date 23 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-03-26, what was the date 23 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2030-03-26, what was the date 23 days ago?",
+    "answer": "2030-03-03"
+  },
+  "44": {
+    "no_insertion": "Today is 2027-11-11, what was the date 24 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2027-11-11, what was the date 24 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2027-11-11, what was the date 24 days ago?",
+    "answer": "2027-10-18"
+  },
+  "45": {
+    "no_insertion": "Today is 2033-06-07, what was the date 16 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2033-06-07, what was the date 16 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2033-06-07, what was the date 16 days ago?",
+    "answer": "2033-05-22"
+  },
+  "46": {
+    "no_insertion": "Today is 2029-04-13, what was the date 20 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2029-04-13, what was the date 20 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2029-04-13, what was the date 20 days ago?",
+    "answer": "2029-03-24"
+  },
+  "47": {
+    "no_insertion": "Today is 2026-05-17, what was the date 19 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2026-05-17, what was the date 19 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2026-05-17, what was the date 19 days ago?",
+    "answer": "2026-04-28"
+  },
+  "48": {
+    "no_insertion": "Today is 2029-06-04, what was the date 26 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2029-06-04, what was the date 26 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2029-06-04, what was the date 26 days ago?",
+    "answer": "2029-05-09"
+  },
+  "49": {
+    "no_insertion": "Today is 2028-10-08, what was the date 23 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2028-10-08, what was the date 23 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2028-10-08, what was the date 23 days ago?",
+    "answer": "2028-09-15"
+  },
+  "50": {
+    "no_insertion": "Today is 2032-01-07, what was the date 18 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2032-01-07, what was the date 18 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-01-07, what was the date 18 days ago?",
+    "answer": "2031-12-20"
+  },
+  "51": {
+    "no_insertion": "Today is 2025-01-03, what was the date 27 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2025-01-03, what was the date 27 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2025-01-03, what was the date 27 days ago?",
+    "answer": "2024-12-07"
+  },
+  "52": {
+    "no_insertion": "Today is 2029-02-14, what was the date 23 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2029-02-14, what was the date 23 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2029-02-14, what was the date 23 days ago?",
+    "answer": "2029-01-22"
+  },
+  "53": {
+    "no_insertion": "Today is 2032-04-29, what was the date 16 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2032-04-29, what was the date 16 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-04-29, what was the date 16 days ago?",
+    "answer": "2032-04-13"
+  },
+  "54": {
+    "no_insertion": "Today is 2032-09-06, what was the date 26 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2032-09-06, what was the date 26 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-09-06, what was the date 26 days ago?",
+    "answer": "2032-08-11"
+  },
+  "55": {
+    "no_insertion": "Today is 2025-09-15, what was the date 25 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2025-09-15, what was the date 25 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-09-15, what was the date 25 days ago?",
+    "answer": "2025-08-21"
+  },
+  "56": {
+    "no_insertion": "Today is 2031-11-12, what was the date 21 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2031-11-12, what was the date 21 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2031-11-12, what was the date 21 days ago?",
+    "answer": "2031-10-22"
+  },
+  "57": {
+    "no_insertion": "Today is 2025-04-19, what was the date 23 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2025-04-19, what was the date 23 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2025-04-19, what was the date 23 days ago?",
+    "answer": "2025-03-27"
+  },
+  "58": {
+    "no_insertion": "Today is 2025-03-13, what was the date 21 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2025-03-13, what was the date 21 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-03-13, what was the date 21 days ago?",
+    "answer": "2025-02-20"
+  },
+  "59": {
+    "no_insertion": "Today is 2032-01-12, what was the date 28 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2032-01-12, what was the date 28 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2032-01-12, what was the date 28 days ago?",
+    "answer": "2031-12-15"
+  },
+  "60": {
+    "no_insertion": "Today is 2033-01-06, what was the date 24 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2033-01-06, what was the date 24 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2033-01-06, what was the date 24 days ago?",
+    "answer": "2032-12-13"
+  },
+  "61": {
+    "no_insertion": "Today is 2025-10-31, what was the date 29 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2025-10-31, what was the date 29 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-10-31, what was the date 29 days ago?",
+    "answer": "2025-10-02"
+  },
+  "62": {
+    "no_insertion": "Today is 2026-03-17, what was the date 32 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2026-03-17, what was the date 32 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2026-03-17, what was the date 32 days ago?",
+    "answer": "2026-02-13"
+  },
+  "63": {
+    "no_insertion": "Today is 2030-05-08, what was the date 32 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-05-08, what was the date 32 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2030-05-08, what was the date 32 days ago?",
+    "answer": "2030-04-06"
+  },
+  "64": {
+    "no_insertion": "Today is 2029-02-15, what was the date 19 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2029-02-15, what was the date 19 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2029-02-15, what was the date 19 days ago?",
+    "answer": "2029-01-27"
+  },
+  "65": {
+    "no_insertion": "Today is 2032-03-28, what was the date 25 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2032-03-28, what was the date 25 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-03-28, what was the date 25 days ago?",
+    "answer": "2032-03-03"
+  },
+  "66": {
+    "no_insertion": "Today is 2027-07-31, what was the date 31 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2027-07-31, what was the date 31 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2027-07-31, what was the date 31 days ago?",
+    "answer": "2027-06-30"
+  },
+  "67": {
+    "no_insertion": "Today is 2030-11-10, what was the date 27 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-11-10, what was the date 27 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2030-11-10, what was the date 27 days ago?",
+    "answer": "2030-10-14"
+  },
+  "68": {
+    "no_insertion": "Today is 2026-11-04, what was the date 26 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2026-11-04, what was the date 26 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2026-11-04, what was the date 26 days ago?",
+    "answer": "2026-10-09"
+  },
+  "69": {
+    "no_insertion": "Today is 2025-12-05, what was the date 22 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-12-05, what was the date 22 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2025-12-05, what was the date 22 days ago?",
+    "answer": "2025-11-13"
+  },
+  "70": {
+    "no_insertion": "Today is 2032-12-14, what was the date 16 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2032-12-14, what was the date 16 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-12-14, what was the date 16 days ago?",
+    "answer": "2032-11-28"
+  },
+  "71": {
+    "no_insertion": "Today is 2032-12-30, what was the date 17 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2032-12-30, what was the date 17 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-12-30, what was the date 17 days ago?",
+    "answer": "2032-12-13"
+  },
+  "72": {
+    "no_insertion": "Today is 2032-03-22, what was the date 25 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2032-03-22, what was the date 25 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-03-22, what was the date 25 days ago?",
+    "answer": "2032-02-26"
+  },
+  "73": {
+    "no_insertion": "Today is 2029-11-21, what was the date 22 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2029-11-21, what was the date 22 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2029-11-21, what was the date 22 days ago?",
+    "answer": "2029-10-30"
+  },
+  "74": {
+    "no_insertion": "Today is 2026-01-16, what was the date 19 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2026-01-16, what was the date 19 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2026-01-16, what was the date 19 days ago?",
+    "answer": "2025-12-28"
+  },
+  "75": {
+    "no_insertion": "Today is 2028-07-30, what was the date 17 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-07-30, what was the date 17 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2028-07-30, what was the date 17 days ago?",
+    "answer": "2028-07-13"
+  },
+  "76": {
+    "no_insertion": "Today is 2033-01-18, what was the date 24 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2033-01-18, what was the date 24 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2033-01-18, what was the date 24 days ago?",
+    "answer": "2032-12-25"
+  },
+  "77": {
+    "no_insertion": "Today is 2026-02-08, what was the date 24 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2026-02-08, what was the date 24 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2026-02-08, what was the date 24 days ago?",
+    "answer": "2026-01-15"
+  },
+  "78": {
+    "no_insertion": "Today is 2025-08-27, what was the date 17 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-08-27, what was the date 17 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-08-27, what was the date 17 days ago?",
+    "answer": "2025-08-10"
+  },
+  "79": {
+    "no_insertion": "Today is 2026-08-15, what was the date 26 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2026-08-15, what was the date 26 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2026-08-15, what was the date 26 days ago?",
+    "answer": "2026-07-20"
+  },
+  "80": {
+    "no_insertion": "Today is 2033-11-10, what was the date 23 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2033-11-10, what was the date 23 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2033-11-10, what was the date 23 days ago?",
+    "answer": "2033-10-18"
+  },
+  "81": {
+    "no_insertion": "Today is 2031-07-01, what was the date 17 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2031-07-01, what was the date 17 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2031-07-01, what was the date 17 days ago?",
+    "answer": "2031-06-14"
+  },
+  "82": {
+    "no_insertion": "Today is 2032-12-11, what was the date 27 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2032-12-11, what was the date 27 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2032-12-11, what was the date 27 days ago?",
+    "answer": "2032-11-14"
+  },
+  "83": {
+    "no_insertion": "Today is 2027-03-04, what was the date 20 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2027-03-04, what was the date 20 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2027-03-04, what was the date 20 days ago?",
+    "answer": "2027-02-12"
+  },
+  "84": {
+    "no_insertion": "Today is 2030-12-23, what was the date 30 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2030-12-23, what was the date 30 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2030-12-23, what was the date 30 days ago?",
+    "answer": "2030-11-23"
+  },
+  "85": {
+    "no_insertion": "Today is 2030-01-08, what was the date 31 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2030-01-08, what was the date 31 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2030-01-08, what was the date 31 days ago?",
+    "answer": "2029-12-08"
+  },
+  "86": {
+    "no_insertion": "Today is 2030-04-10, what was the date 24 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-04-10, what was the date 24 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2030-04-10, what was the date 24 days ago?",
+    "answer": "2030-03-17"
+  },
+  "87": {
+    "no_insertion": "Today is 2030-04-15, what was the date 22 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2030-04-15, what was the date 22 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2030-04-15, what was the date 22 days ago?",
+    "answer": "2030-03-24"
+  },
+  "88": {
+    "no_insertion": "Today is 2026-10-15, what was the date 31 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2026-10-15, what was the date 31 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2026-10-15, what was the date 31 days ago?",
+    "answer": "2026-09-14"
+  },
+  "89": {
+    "no_insertion": "Today is 2029-03-12, what was the date 21 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2029-03-12, what was the date 21 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2029-03-12, what was the date 21 days ago?",
+    "answer": "2029-02-19"
+  },
+  "90": {
+    "no_insertion": "Today is 2031-12-27, what was the date 19 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2031-12-27, what was the date 19 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2031-12-27, what was the date 19 days ago?",
+    "answer": "2031-12-08"
+  },
+  "91": {
+    "no_insertion": "Today is 2025-09-26, what was the date 27 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-09-26, what was the date 27 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-09-26, what was the date 27 days ago?",
+    "answer": "2025-08-30"
+  },
+  "92": {
+    "no_insertion": "Today is 2030-10-04, what was the date 24 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2030-10-04, what was the date 24 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2030-10-04, what was the date 24 days ago?",
+    "answer": "2030-09-10"
+  },
+  "93": {
+    "no_insertion": "Today is 2028-02-04, what was the date 30 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-02-04, what was the date 30 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2028-02-04, what was the date 30 days ago?",
+    "answer": "2028-01-05"
+  },
+  "94": {
+    "no_insertion": "Today is 2033-10-22, what was the date 28 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2033-10-22, what was the date 28 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2033-10-22, what was the date 28 days ago?",
+    "answer": "2033-09-24"
+  },
+  "95": {
+    "no_insertion": "Today is 2032-03-09, what was the date 28 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2032-03-09, what was the date 28 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-03-09, what was the date 28 days ago?",
+    "answer": "2032-02-10"
+  },
+  "96": {
+    "no_insertion": "Today is 2028-12-14, what was the date 20 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2028-12-14, what was the date 20 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2028-12-14, what was the date 20 days ago?",
+    "answer": "2028-11-24"
+  },
+  "97": {
+    "no_insertion": "Today is 2025-07-02, what was the date 17 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-07-02, what was the date 17 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2025-07-02, what was the date 17 days ago?",
+    "answer": "2025-06-15"
+  },
+  "98": {
+    "no_insertion": "Today is 2025-10-03, what was the date 30 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2025-10-03, what was the date 30 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-10-03, what was the date 30 days ago?",
+    "answer": "2025-09-03"
+  },
+  "99": {
+    "no_insertion": "Today is 2032-12-31, what was the date 16 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2032-12-31, what was the date 16 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2032-12-31, what was the date 16 days ago?",
+    "answer": "2032-12-15"
+  },
+  "100": {
+    "no_insertion": "Today is 2033-07-11, what was the date 30 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2033-07-11, what was the date 30 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2033-07-11, what was the date 30 days ago?",
+    "answer": "2033-06-11"
+  },
+  "101": {
+    "no_insertion": "Today is 2025-07-16, what was the date 24 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2025-07-16, what was the date 24 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2025-07-16, what was the date 24 days ago?",
+    "answer": "2025-06-22"
+  },
+  "102": {
+    "no_insertion": "Today is 2025-04-19, what was the date 24 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2025-04-19, what was the date 24 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-04-19, what was the date 24 days ago?",
+    "answer": "2025-03-26"
+  },
+  "103": {
+    "no_insertion": "Today is 2027-05-02, what was the date 29 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2027-05-02, what was the date 29 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2027-05-02, what was the date 29 days ago?",
+    "answer": "2027-04-03"
+  },
+  "104": {
+    "no_insertion": "Today is 2025-08-17, what was the date 28 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-08-17, what was the date 28 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2025-08-17, what was the date 28 days ago?",
+    "answer": "2025-07-20"
+  },
+  "105": {
+    "no_insertion": "Today is 2031-10-10, what was the date 18 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2031-10-10, what was the date 18 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2031-10-10, what was the date 18 days ago?",
+    "answer": "2031-09-22"
+  },
+  "106": {
+    "no_insertion": "Today is 2028-11-11, what was the date 23 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2028-11-11, what was the date 23 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2028-11-11, what was the date 23 days ago?",
+    "answer": "2028-10-19"
+  },
+  "107": {
+    "no_insertion": "Today is 2026-10-08, what was the date 29 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2026-10-08, what was the date 29 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2026-10-08, what was the date 29 days ago?",
+    "answer": "2026-09-09"
+  },
+  "108": {
+    "no_insertion": "Today is 2033-06-08, what was the date 27 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2033-06-08, what was the date 27 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2033-06-08, what was the date 27 days ago?",
+    "answer": "2033-05-12"
+  },
+  "109": {
+    "no_insertion": "Today is 2029-01-02, what was the date 25 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2029-01-02, what was the date 25 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2029-01-02, what was the date 25 days ago?",
+    "answer": "2028-12-08"
+  },
+  "110": {
+    "no_insertion": "Today is 2033-03-25, what was the date 16 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2033-03-25, what was the date 16 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2033-03-25, what was the date 16 days ago?",
+    "answer": "2033-03-09"
+  },
+  "111": {
+    "no_insertion": "Today is 2032-05-02, what was the date 31 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2032-05-02, what was the date 31 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2032-05-02, what was the date 31 days ago?",
+    "answer": "2032-04-01"
+  },
+  "112": {
+    "no_insertion": "Today is 2027-02-10, what was the date 23 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2027-02-10, what was the date 23 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2027-02-10, what was the date 23 days ago?",
+    "answer": "2027-01-18"
+  },
+  "113": {
+    "no_insertion": "Today is 2028-12-19, what was the date 28 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2028-12-19, what was the date 28 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2028-12-19, what was the date 28 days ago?",
+    "answer": "2028-11-21"
+  },
+  "114": {
+    "no_insertion": "Today is 2028-11-25, what was the date 29 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-11-25, what was the date 29 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2028-11-25, what was the date 29 days ago?",
+    "answer": "2028-10-27"
+  },
+  "115": {
+    "no_insertion": "Today is 2029-02-18, what was the date 28 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2029-02-18, what was the date 28 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2029-02-18, what was the date 28 days ago?",
+    "answer": "2029-01-21"
+  },
+  "116": {
+    "no_insertion": "Today is 2029-02-11, what was the date 19 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2029-02-11, what was the date 19 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-02-11, what was the date 19 days ago?",
+    "answer": "2029-01-23"
+  },
+  "117": {
+    "no_insertion": "Today is 2029-10-05, what was the date 25 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2029-10-05, what was the date 25 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2029-10-05, what was the date 25 days ago?",
+    "answer": "2029-09-10"
+  },
+  "118": {
+    "no_insertion": "Today is 2031-05-22, what was the date 22 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2031-05-22, what was the date 22 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2031-05-22, what was the date 22 days ago?",
+    "answer": "2031-04-30"
+  },
+  "119": {
+    "no_insertion": "Today is 2030-09-04, what was the date 26 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-09-04, what was the date 26 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2030-09-04, what was the date 26 days ago?",
+    "answer": "2030-08-09"
+  },
+  "120": {
+    "no_insertion": "Today is 2029-02-25, what was the date 26 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2029-02-25, what was the date 26 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-02-25, what was the date 26 days ago?",
+    "answer": "2029-01-30"
+  },
+  "121": {
+    "no_insertion": "Today is 2025-11-08, what was the date 17 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2025-11-08, what was the date 17 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-11-08, what was the date 17 days ago?",
+    "answer": "2025-10-22"
+  },
+  "122": {
+    "no_insertion": "Today is 2027-03-29, what was the date 19 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2027-03-29, what was the date 19 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2027-03-29, what was the date 19 days ago?",
+    "answer": "2027-03-10"
+  },
+  "123": {
+    "no_insertion": "Today is 2031-06-29, what was the date 20 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2031-06-29, what was the date 20 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2031-06-29, what was the date 20 days ago?",
+    "answer": "2031-06-09"
+  },
+  "124": {
+    "no_insertion": "Today is 2031-06-07, what was the date 27 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2031-06-07, what was the date 27 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2031-06-07, what was the date 27 days ago?",
+    "answer": "2031-05-11"
+  },
+  "125": {
+    "no_insertion": "Today is 2028-04-23, what was the date 19 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2028-04-23, what was the date 19 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2028-04-23, what was the date 19 days ago?",
+    "answer": "2028-04-04"
+  },
+  "126": {
+    "no_insertion": "Today is 2025-02-21, what was the date 16 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2025-02-21, what was the date 16 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2025-02-21, what was the date 16 days ago?",
+    "answer": "2025-02-05"
+  },
+  "127": {
+    "no_insertion": "Today is 2027-08-07, what was the date 28 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2027-08-07, what was the date 28 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2027-08-07, what was the date 28 days ago?",
+    "answer": "2027-07-10"
+  },
+  "128": {
+    "no_insertion": "Today is 2028-06-13, what was the date 19 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2028-06-13, what was the date 19 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2028-06-13, what was the date 19 days ago?",
+    "answer": "2028-05-25"
+  },
+  "129": {
+    "no_insertion": "Today is 2033-02-12, what was the date 24 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2033-02-12, what was the date 24 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2033-02-12, what was the date 24 days ago?",
+    "answer": "2033-01-19"
+  },
+  "130": {
+    "no_insertion": "Today is 2033-12-19, what was the date 30 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2033-12-19, what was the date 30 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2033-12-19, what was the date 30 days ago?",
+    "answer": "2033-11-19"
+  },
+  "131": {
+    "no_insertion": "Today is 2029-01-28, what was the date 27 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2029-01-28, what was the date 27 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2029-01-28, what was the date 27 days ago?",
+    "answer": "2029-01-01"
+  },
+  "132": {
+    "no_insertion": "Today is 2025-01-08, what was the date 26 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-01-08, what was the date 26 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-01-08, what was the date 26 days ago?",
+    "answer": "2024-12-13"
+  },
+  "133": {
+    "no_insertion": "Today is 2026-11-23, what was the date 25 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2026-11-23, what was the date 25 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2026-11-23, what was the date 25 days ago?",
+    "answer": "2026-10-29"
+  },
+  "134": {
+    "no_insertion": "Today is 2033-04-13, what was the date 16 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2033-04-13, what was the date 16 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2033-04-13, what was the date 16 days ago?",
+    "answer": "2033-03-28"
+  },
+  "135": {
+    "no_insertion": "Today is 2030-02-13, what was the date 19 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-02-13, what was the date 19 days ago?",
+    "dissimilar_insertion": "The library closes at 8 PM. Today is 2030-02-13, what was the date 19 days ago?",
+    "answer": "2030-01-25"
+  },
+  "136": {
+    "no_insertion": "Today is 2026-08-31, what was the date 32 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2026-08-31, what was the date 32 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2026-08-31, what was the date 32 days ago?",
+    "answer": "2026-07-30"
+  },
+  "137": {
+    "no_insertion": "Today is 2032-07-16, what was the date 16 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2032-07-16, what was the date 16 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2032-07-16, what was the date 16 days ago?",
+    "answer": "2032-06-30"
+  },
+  "138": {
+    "no_insertion": "Today is 2033-01-27, what was the date 17 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2033-01-27, what was the date 17 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2033-01-27, what was the date 17 days ago?",
+    "answer": "2033-01-10"
+  },
+  "139": {
+    "no_insertion": "Today is 2025-01-21, what was the date 17 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-01-21, what was the date 17 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-01-21, what was the date 17 days ago?",
+    "answer": "2025-01-04"
+  },
+  "140": {
+    "no_insertion": "Today is 2025-12-01, what was the date 26 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-12-01, what was the date 26 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-12-01, what was the date 26 days ago?",
+    "answer": "2025-11-05"
+  },
+  "141": {
+    "no_insertion": "Today is 2025-08-01, what was the date 21 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2025-08-01, what was the date 21 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-08-01, what was the date 21 days ago?",
+    "answer": "2025-07-11"
+  },
+  "142": {
+    "no_insertion": "Today is 2029-05-31, what was the date 22 days ago?",
+    "similar_insertion": "The summer of 2025 has been quite interesting. Today is 2029-05-31, what was the date 22 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2029-05-31, what was the date 22 days ago?",
+    "answer": "2029-05-09"
+  },
+  "143": {
+    "no_insertion": "Today is 2027-12-23, what was the date 16 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2027-12-23, what was the date 16 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2027-12-23, what was the date 16 days ago?",
+    "answer": "2027-12-07"
+  },
+  "144": {
+    "no_insertion": "Today is 2026-12-02, what was the date 23 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2026-12-02, what was the date 23 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2026-12-02, what was the date 23 days ago?",
+    "answer": "2026-11-09"
+  },
+  "145": {
+    "no_insertion": "Today is 2025-12-19, what was the date 16 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2025-12-19, what was the date 16 days ago?",
+    "dissimilar_insertion": "Birds fly south for winter. Today is 2025-12-19, what was the date 16 days ago?",
+    "answer": "2025-12-03"
+  },
+  "146": {
+    "no_insertion": "Today is 2030-07-30, what was the date 26 days ago?",
+    "similar_insertion": "It's interesting how we measure time in different cultures. Today is 2030-07-30, what was the date 26 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2030-07-30, what was the date 26 days ago?",
+    "answer": "2030-07-04"
+  },
+  "147": {
+    "no_insertion": "Today is 2025-04-10, what was the date 25 days ago?",
+    "similar_insertion": "I always get confused with months that have 31 days. Today is 2025-04-10, what was the date 25 days ago?",
+    "dissimilar_insertion": "I need new running shoes. Today is 2025-04-10, what was the date 25 days ago?",
+    "answer": "2025-03-16"
+  },
+  "148": {
+    "no_insertion": "Today is 2025-03-01, what was the date 18 days ago?",
+    "similar_insertion": "I always forget how many days are in each month. Today is 2025-03-01, what was the date 18 days ago?",
+    "dissimilar_insertion": "My favorite color is purple. Today is 2025-03-01, what was the date 18 days ago?",
+    "answer": "2025-02-11"
+  },
+  "149": {
+    "no_insertion": "Today is 2031-04-09, what was the date 28 days ago?",
+    "similar_insertion": "August is my favorite month of the year. Today is 2031-04-09, what was the date 28 days ago?",
+    "dissimilar_insertion": "Coffee tastes better with milk. Today is 2031-04-09, what was the date 28 days ago?",
+    "answer": "2031-03-12"
+  }
+}

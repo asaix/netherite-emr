@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "It is now 20:47, what was the time 1 hour and 2 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 20:47, what was the time 1 hour and 2 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 20:47, what was the time 1 hour and 2 minutes ago?",
+    "answer": "19:45"
+  },
+  "1": {
+    "no_insertion": "It is now 05:39, what was the time 3 hours and 53 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 05:39, what was the time 3 hours and 53 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 05:39, what was the time 3 hours and 53 minutes ago?",
+    "answer": "01:46"
+  },
+  "2": {
+    "no_insertion": "It is now 10:32, what was the time 4 hours and 40 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 10:32, what was the time 4 hours and 40 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 10:32, what was the time 4 hours and 40 minutes ago?",
+    "answer": "05:52"
+  },
+  "3": {
+    "no_insertion": "It is now 18:26, what was the time 3 hours and 53 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 18:26, what was the time 3 hours and 53 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 18:26, what was the time 3 hours and 53 minutes ago?",
+    "answer": "14:33"
+  },
+  "4": {
+    "no_insertion": "It is now 22:32, what was the time 1 hour and 45 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 22:32, what was the time 1 hour and 45 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 22:32, what was the time 1 hour and 45 minutes ago?",
+    "answer": "20:47"
+  },
+  "5": {
+    "no_insertion": "It is now 21:52, what was the time 2 hours and 41 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 21:52, what was the time 2 hours and 41 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 21:52, what was the time 2 hours and 41 minutes ago?",
+    "answer": "19:11"
+  },
+  "6": {
+    "no_insertion": "It is now 23:40, what was the time 2 hours and 39 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 23:40, what was the time 2 hours and 39 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 23:40, what was the time 2 hours and 39 minutes ago?",
+    "answer": "21:01"
+  },
+  "7": {
+    "no_insertion": "It is now 14:26, what was the time 4 hours and 37 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 14:26, what was the time 4 hours and 37 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 14:26, what was the time 4 hours and 37 minutes ago?",
+    "answer": "09:49"
+  },
+  "8": {
+    "no_insertion": "It is now 01:15, what was the time 3 hours and 21 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 01:15, what was the time 3 hours and 21 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 01:15, what was the time 3 hours and 21 minutes ago?",
+    "answer": "21:54"
+  },
+  "9": {
+    "no_insertion": "It is now 16:18, what was the time 4 hours and 41 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 16:18, what was the time 4 hours and 41 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 16:18, what was the time 4 hours and 41 minutes ago?",
+    "answer": "11:37"
+  },
+  "10": {
+    "no_insertion": "It is now 02:32, what was the time 2 hours and 45 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 02:32, what was the time 2 hours and 45 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 02:32, what was the time 2 hours and 45 minutes ago?",
+    "answer": "23:47"
+  },
+  "11": {
+    "no_insertion": "It is now 13:14, what was the time 3 hours and 12 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 13:14, what was the time 3 hours and 12 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 13:14, what was the time 3 hours and 12 minutes ago?",
+    "answer": "10:02"
+  },
+  "12": {
+    "no_insertion": "It is now 18:47, what was the time 2 hours and 17 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 18:47, what was the time 2 hours and 17 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 18:47, what was the time 2 hours and 17 minutes ago?",
+    "answer": "16:30"
+  },
+  "13": {
+    "no_insertion": "It is now 10:22, what was the time 0 hours and 29 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 10:22, what was the time 0 hours and 29 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 10:22, what was the time 0 hours and 29 minutes ago?",
+    "answer": "09:53"
+  },
+  "14": {
+    "no_insertion": "It is now 01:02, what was the time 4 hours and 37 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 01:02, what was the time 4 hours and 37 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 01:02, what was the time 4 hours and 37 minutes ago?",
+    "answer": "20:25"
+  },
+  "15": {
+    "no_insertion": "It is now 10:56, what was the time 2 hours and 45 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 10:56, what was the time 2 hours and 45 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 10:56, what was the time 2 hours and 45 minutes ago?",
+    "answer": "08:11"
+  },
+  "16": {
+    "no_insertion": "It is now 01:16, what was the time 1 hour and 36 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:16, what was the time 1 hour and 36 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 01:16, what was the time 1 hour and 36 minutes ago?",
+    "answer": "23:40"
+  },
+  "17": {
+    "no_insertion": "It is now 10:19, what was the time 3 hours and 25 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 10:19, what was the time 3 hours and 25 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 10:19, what was the time 3 hours and 25 minutes ago?",
+    "answer": "06:54"
+  },
+  "18": {
+    "no_insertion": "It is now 08:43, what was the time 2 hours and 32 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 08:43, what was the time 2 hours and 32 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 08:43, what was the time 2 hours and 32 minutes ago?",
+    "answer": "06:11"
+  },
+  "19": {
+    "no_insertion": "It is now 11:03, what was the time 3 hours and 14 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 11:03, what was the time 3 hours and 14 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 11:03, what was the time 3 hours and 14 minutes ago?",
+    "answer": "07:49"
+  },
+  "20": {
+    "no_insertion": "It is now 19:05, what was the time 4 hours and 2 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 19:05, what was the time 4 hours and 2 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 19:05, what was the time 4 hours and 2 minutes ago?",
+    "answer": "15:03"
+  },
+  "21": {
+    "no_insertion": "It is now 08:22, what was the time 3 hours and 19 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 08:22, what was the time 3 hours and 19 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 08:22, what was the time 3 hours and 19 minutes ago?",
+    "answer": "05:03"
+  },
+  "22": {
+    "no_insertion": "It is now 16:45, what was the time 2 hours and 31 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 16:45, what was the time 2 hours and 31 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 16:45, what was the time 2 hours and 31 minutes ago?",
+    "answer": "14:14"
+  },
+  "23": {
+    "no_insertion": "It is now 14:24, what was the time 4 hours and 46 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 14:24, what was the time 4 hours and 46 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 14:24, what was the time 4 hours and 46 minutes ago?",
+    "answer": "09:38"
+  },
+  "24": {
+    "no_insertion": "It is now 14:27, what was the time 0 hours and 7 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:27, what was the time 0 hours and 7 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 14:27, what was the time 0 hours and 7 minutes ago?",
+    "answer": "14:20"
+  },
+  "25": {
+    "no_insertion": "It is now 19:07, what was the time 0 hours and 51 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 19:07, what was the time 0 hours and 51 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 19:07, what was the time 0 hours and 51 minutes ago?",
+    "answer": "18:16"
+  },
+  "26": {
+    "no_insertion": "It is now 09:39, what was the time 0 hours and 50 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 09:39, what was the time 0 hours and 50 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 09:39, what was the time 0 hours and 50 minutes ago?",
+    "answer": "08:49"
+  },
+  "27": {
+    "no_insertion": "It is now 01:19, what was the time 3 hours and 22 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:19, what was the time 3 hours and 22 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 01:19, what was the time 3 hours and 22 minutes ago?",
+    "answer": "21:57"
+  },
+  "28": {
+    "no_insertion": "It is now 21:15, what was the time 0 hours and 17 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:15, what was the time 0 hours and 17 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 21:15, what was the time 0 hours and 17 minutes ago?",
+    "answer": "20:58"
+  },
+  "29": {
+    "no_insertion": "It is now 00:42, what was the time 0 hours and 58 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 00:42, what was the time 0 hours and 58 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 00:42, what was the time 0 hours and 58 minutes ago?",
+    "answer": "23:44"
+  },
+  "30": {
+    "no_insertion": "It is now 11:45, what was the time 4 hours and 1 minute ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 11:45, what was the time 4 hours and 1 minute ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 11:45, what was the time 4 hours and 1 minute ago?",
+    "answer": "07:44"
+  },
+  "31": {
+    "no_insertion": "It is now 23:18, what was the time 1 hour and 46 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 23:18, what was the time 1 hour and 46 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 23:18, what was the time 1 hour and 46 minutes ago?",
+    "answer": "21:32"
+  },
+  "32": {
+    "no_insertion": "It is now 21:22, what was the time 4 hours and 43 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 21:22, what was the time 4 hours and 43 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 21:22, what was the time 4 hours and 43 minutes ago?",
+    "answer": "16:39"
+  },
+  "33": {
+    "no_insertion": "It is now 16:16, what was the time 3 hours and 4 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 16:16, what was the time 3 hours and 4 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 16:16, what was the time 3 hours and 4 minutes ago?",
+    "answer": "13:12"
+  },
+  "34": {
+    "no_insertion": "It is now 04:55, what was the time 3 hours and 5 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 04:55, what was the time 3 hours and 5 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 04:55, what was the time 3 hours and 5 minutes ago?",
+    "answer": "01:50"
+  },
+  "35": {
+    "no_insertion": "It is now 14:47, what was the time 3 hours and 45 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:47, what was the time 3 hours and 45 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 14:47, what was the time 3 hours and 45 minutes ago?",
+    "answer": "11:02"
+  },
+  "36": {
+    "no_insertion": "It is now 01:54, what was the time 2 hours and 19 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:54, what was the time 2 hours and 19 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 01:54, what was the time 2 hours and 19 minutes ago?",
+    "answer": "23:35"
+  },
+  "37": {
+    "no_insertion": "It is now 01:23, what was the time 4 hours and 14 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 01:23, what was the time 4 hours and 14 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 01:23, what was the time 4 hours and 14 minutes ago?",
+    "answer": "21:09"
+  },
+  "38": {
+    "no_insertion": "It is now 17:30, what was the time 3 hours and 18 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 17:30, what was the time 3 hours and 18 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 17:30, what was the time 3 hours and 18 minutes ago?",
+    "answer": "14:12"
+  },
+  "39": {
+    "no_insertion": "It is now 20:07, what was the time 2 hours and 48 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:07, what was the time 2 hours and 48 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 20:07, what was the time 2 hours and 48 minutes ago?",
+    "answer": "17:19"
+  },
+  "40": {
+    "no_insertion": "It is now 21:30, what was the time 4 hours and 12 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:30, what was the time 4 hours and 12 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 21:30, what was the time 4 hours and 12 minutes ago?",
+    "answer": "17:18"
+  },
+  "41": {
+    "no_insertion": "It is now 17:12, what was the time 2 hours and 0 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:12, what was the time 2 hours and 0 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 17:12, what was the time 2 hours and 0 minutes ago?",
+    "answer": "15:12"
+  },
+  "42": {
+    "no_insertion": "It is now 14:01, what was the time 3 hours and 59 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 14:01, what was the time 3 hours and 59 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 14:01, what was the time 3 hours and 59 minutes ago?",
+    "answer": "10:02"
+  },
+  "43": {
+    "no_insertion": "It is now 03:30, what was the time 4 hours and 49 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 03:30, what was the time 4 hours and 49 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 03:30, what was the time 4 hours and 49 minutes ago?",
+    "answer": "22:41"
+  },
+  "44": {
+    "no_insertion": "It is now 07:47, what was the time 3 hours and 19 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 07:47, what was the time 3 hours and 19 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 07:47, what was the time 3 hours and 19 minutes ago?",
+    "answer": "04:28"
+  },
+  "45": {
+    "no_insertion": "It is now 17:15, what was the time 1 hour and 33 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 17:15, what was the time 1 hour and 33 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 17:15, what was the time 1 hour and 33 minutes ago?",
+    "answer": "15:42"
+  },
+  "46": {
+    "no_insertion": "It is now 03:56, what was the time 3 hours and 4 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 03:56, what was the time 3 hours and 4 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 03:56, what was the time 3 hours and 4 minutes ago?",
+    "answer": "00:52"
+  },
+  "47": {
+    "no_insertion": "It is now 21:33, what was the time 3 hours and 40 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:33, what was the time 3 hours and 40 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 21:33, what was the time 3 hours and 40 minutes ago?",
+    "answer": "17:53"
+  },
+  "48": {
+    "no_insertion": "It is now 18:16, what was the time 4 hours and 53 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 18:16, what was the time 4 hours and 53 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 18:16, what was the time 4 hours and 53 minutes ago?",
+    "answer": "13:23"
+  },
+  "49": {
+    "no_insertion": "It is now 12:11, what was the time 0 hours and 4 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 12:11, what was the time 0 hours and 4 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 12:11, what was the time 0 hours and 4 minutes ago?",
+    "answer": "12:07"
+  },
+  "50": {
+    "no_insertion": "It is now 16:07, what was the time 3 hours and 35 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 16:07, what was the time 3 hours and 35 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 16:07, what was the time 3 hours and 35 minutes ago?",
+    "answer": "12:32"
+  },
+  "51": {
+    "no_insertion": "It is now 16:40, what was the time 3 hours and 29 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 16:40, what was the time 3 hours and 29 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 16:40, what was the time 3 hours and 29 minutes ago?",
+    "answer": "13:11"
+  },
+  "52": {
+    "no_insertion": "It is now 19:49, what was the time 4 hours and 41 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 19:49, what was the time 4 hours and 41 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 19:49, what was the time 4 hours and 41 minutes ago?",
+    "answer": "15:08"
+  },
+  "53": {
+    "no_insertion": "It is now 16:29, what was the time 0 hours and 3 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 16:29, what was the time 0 hours and 3 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 16:29, what was the time 0 hours and 3 minutes ago?",
+    "answer": "16:26"
+  },
+  "54": {
+    "no_insertion": "It is now 03:47, what was the time 1 hour and 43 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 03:47, what was the time 1 hour and 43 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 03:47, what was the time 1 hour and 43 minutes ago?",
+    "answer": "02:04"
+  },
+  "55": {
+    "no_insertion": "It is now 15:02, what was the time 3 hours and 26 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 15:02, what was the time 3 hours and 26 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 15:02, what was the time 3 hours and 26 minutes ago?",
+    "answer": "11:36"
+  },
+  "56": {
+    "no_insertion": "It is now 16:35, what was the time 2 hours and 11 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 16:35, what was the time 2 hours and 11 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 16:35, what was the time 2 hours and 11 minutes ago?",
+    "answer": "14:24"
+  },
+  "57": {
+    "no_insertion": "It is now 19:15, what was the time 3 hours and 46 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 19:15, what was the time 3 hours and 46 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 19:15, what was the time 3 hours and 46 minutes ago?",
+    "answer": "15:29"
+  },
+  "58": {
+    "no_insertion": "It is now 01:45, what was the time 2 hours and 16 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 01:45, what was the time 2 hours and 16 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 01:45, what was the time 2 hours and 16 minutes ago?",
+    "answer": "23:29"
+  },
+  "59": {
+    "no_insertion": "It is now 17:27, what was the time 1 hour and 8 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:27, what was the time 1 hour and 8 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 17:27, what was the time 1 hour and 8 minutes ago?",
+    "answer": "16:19"
+  },
+  "60": {
+    "no_insertion": "It is now 05:57, what was the time 2 hours and 46 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 05:57, what was the time 2 hours and 46 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 05:57, what was the time 2 hours and 46 minutes ago?",
+    "answer": "03:11"
+  },
+  "61": {
+    "no_insertion": "It is now 09:56, what was the time 4 hours and 24 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 09:56, what was the time 4 hours and 24 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 09:56, what was the time 4 hours and 24 minutes ago?",
+    "answer": "05:32"
+  },
+  "62": {
+    "no_insertion": "It is now 15:29, what was the time 2 hours and 22 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 15:29, what was the time 2 hours and 22 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 15:29, what was the time 2 hours and 22 minutes ago?",
+    "answer": "13:07"
+  },
+  "63": {
+    "no_insertion": "It is now 22:39, what was the time 4 hours and 21 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 22:39, what was the time 4 hours and 21 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 22:39, what was the time 4 hours and 21 minutes ago?",
+    "answer": "18:18"
+  },
+  "64": {
+    "no_insertion": "It is now 17:27, what was the time 3 hours and 37 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 17:27, what was the time 3 hours and 37 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 17:27, what was the time 3 hours and 37 minutes ago?",
+    "answer": "13:50"
+  },
+  "65": {
+    "no_insertion": "It is now 02:22, what was the time 1 hour and 51 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 02:22, what was the time 1 hour and 51 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 02:22, what was the time 1 hour and 51 minutes ago?",
+    "answer": "00:31"
+  },
+  "66": {
+    "no_insertion": "It is now 10:27, what was the time 0 hours and 33 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 10:27, what was the time 0 hours and 33 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 10:27, what was the time 0 hours and 33 minutes ago?",
+    "answer": "09:54"
+  },
+  "67": {
+    "no_insertion": "It is now 19:33, what was the time 4 hours and 11 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 19:33, what was the time 4 hours and 11 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 19:33, what was the time 4 hours and 11 minutes ago?",
+    "answer": "15:22"
+  },
+  "68": {
+    "no_insertion": "It is now 13:23, what was the time 1 hour and 39 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 13:23, what was the time 1 hour and 39 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 13:23, what was the time 1 hour and 39 minutes ago?",
+    "answer": "11:44"
+  },
+  "69": {
+    "no_insertion": "It is now 07:07, what was the time 0 hours and 54 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 07:07, what was the time 0 hours and 54 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 07:07, what was the time 0 hours and 54 minutes ago?",
+    "answer": "06:13"
+  },
+  "70": {
+    "no_insertion": "It is now 17:53, what was the time 0 hours and 7 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:53, what was the time 0 hours and 7 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 17:53, what was the time 0 hours and 7 minutes ago?",
+    "answer": "17:46"
+  },
+  "71": {
+    "no_insertion": "It is now 12:53, what was the time 1 hour and 32 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:53, what was the time 1 hour and 32 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 12:53, what was the time 1 hour and 32 minutes ago?",
+    "answer": "11:21"
+  },
+  "72": {
+    "no_insertion": "It is now 08:17, what was the time 0 hours and 2 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 08:17, what was the time 0 hours and 2 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 08:17, what was the time 0 hours and 2 minutes ago?",
+    "answer": "08:15"
+  },
+  "73": {
+    "no_insertion": "It is now 15:19, what was the time 3 hours and 43 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 15:19, what was the time 3 hours and 43 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 15:19, what was the time 3 hours and 43 minutes ago?",
+    "answer": "11:36"
+  },
+  "74": {
+    "no_insertion": "It is now 01:16, what was the time 2 hours and 33 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 01:16, what was the time 2 hours and 33 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 01:16, what was the time 2 hours and 33 minutes ago?",
+    "answer": "22:43"
+  },
+  "75": {
+    "no_insertion": "It is now 12:31, what was the time 4 hours and 38 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 12:31, what was the time 4 hours and 38 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 12:31, what was the time 4 hours and 38 minutes ago?",
+    "answer": "07:53"
+  },
+  "76": {
+    "no_insertion": "It is now 13:48, what was the time 3 hours and 21 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 13:48, what was the time 3 hours and 21 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 13:48, what was the time 3 hours and 21 minutes ago?",
+    "answer": "10:27"
+  },
+  "77": {
+    "no_insertion": "It is now 18:41, what was the time 0 hours and 48 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 18:41, what was the time 0 hours and 48 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 18:41, what was the time 0 hours and 48 minutes ago?",
+    "answer": "17:53"
+  },
+  "78": {
+    "no_insertion": "It is now 14:46, what was the time 2 hours and 55 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 14:46, what was the time 2 hours and 55 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 14:46, what was the time 2 hours and 55 minutes ago?",
+    "answer": "11:51"
+  },
+  "79": {
+    "no_insertion": "It is now 08:53, what was the time 1 hour and 20 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 08:53, what was the time 1 hour and 20 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 08:53, what was the time 1 hour and 20 minutes ago?",
+    "answer": "07:33"
+  },
+  "80": {
+    "no_insertion": "It is now 07:17, what was the time 4 hours and 24 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 07:17, what was the time 4 hours and 24 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 07:17, what was the time 4 hours and 24 minutes ago?",
+    "answer": "02:53"
+  },
+  "81": {
+    "no_insertion": "It is now 17:35, what was the time 1 hour and 6 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 17:35, what was the time 1 hour and 6 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 17:35, what was the time 1 hour and 6 minutes ago?",
+    "answer": "16:29"
+  },
+  "82": {
+    "no_insertion": "It is now 00:51, what was the time 2 hours and 38 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 00:51, what was the time 2 hours and 38 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 00:51, what was the time 2 hours and 38 minutes ago?",
+    "answer": "22:13"
+  },
+  "83": {
+    "no_insertion": "It is now 13:26, what was the time 3 hours and 1 minute ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 13:26, what was the time 3 hours and 1 minute ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 13:26, what was the time 3 hours and 1 minute ago?",
+    "answer": "10:25"
+  },
+  "84": {
+    "no_insertion": "It is now 21:39, what was the time 4 hours and 49 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 21:39, what was the time 4 hours and 49 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 21:39, what was the time 4 hours and 49 minutes ago?",
+    "answer": "16:50"
+  },
+  "85": {
+    "no_insertion": "It is now 00:04, what was the time 3 hours and 42 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 00:04, what was the time 3 hours and 42 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 00:04, what was the time 3 hours and 42 minutes ago?",
+    "answer": "20:22"
+  },
+  "86": {
+    "no_insertion": "It is now 23:28, what was the time 2 hours and 26 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 23:28, what was the time 2 hours and 26 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 23:28, what was the time 2 hours and 26 minutes ago?",
+    "answer": "21:02"
+  },
+  "87": {
+    "no_insertion": "It is now 01:01, what was the time 4 hours and 29 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 01:01, what was the time 4 hours and 29 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 01:01, what was the time 4 hours and 29 minutes ago?",
+    "answer": "20:32"
+  },
+  "88": {
+    "no_insertion": "It is now 02:58, what was the time 3 hours and 4 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 02:58, what was the time 3 hours and 4 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 02:58, what was the time 3 hours and 4 minutes ago?",
+    "answer": "23:54"
+  },
+  "89": {
+    "no_insertion": "It is now 18:25, what was the time 4 hours and 56 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 18:25, what was the time 4 hours and 56 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 18:25, what was the time 4 hours and 56 minutes ago?",
+    "answer": "13:29"
+  },
+  "90": {
+    "no_insertion": "It is now 07:25, what was the time 2 hours and 8 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 07:25, what was the time 2 hours and 8 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 07:25, what was the time 2 hours and 8 minutes ago?",
+    "answer": "05:17"
+  },
+  "91": {
+    "no_insertion": "It is now 04:36, what was the time 1 hour and 6 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 04:36, what was the time 1 hour and 6 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 04:36, what was the time 1 hour and 6 minutes ago?",
+    "answer": "03:30"
+  },
+  "92": {
+    "no_insertion": "It is now 22:06, what was the time 0 hours and 57 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 22:06, what was the time 0 hours and 57 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 22:06, what was the time 0 hours and 57 minutes ago?",
+    "answer": "21:09"
+  },
+  "93": {
+    "no_insertion": "It is now 22:31, what was the time 3 hours and 53 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 22:31, what was the time 3 hours and 53 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 22:31, what was the time 3 hours and 53 minutes ago?",
+    "answer": "18:38"
+  },
+  "94": {
+    "no_insertion": "It is now 20:57, what was the time 2 hours and 59 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 20:57, what was the time 2 hours and 59 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 20:57, what was the time 2 hours and 59 minutes ago?",
+    "answer": "17:58"
+  },
+  "95": {
+    "no_insertion": "It is now 14:03, what was the time 3 hours and 49 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 14:03, what was the time 3 hours and 49 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 14:03, what was the time 3 hours and 49 minutes ago?",
+    "answer": "10:14"
+  },
+  "96": {
+    "no_insertion": "It is now 14:57, what was the time 1 hour and 32 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 14:57, what was the time 1 hour and 32 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 14:57, what was the time 1 hour and 32 minutes ago?",
+    "answer": "13:25"
+  },
+  "97": {
+    "no_insertion": "It is now 11:46, what was the time 0 hours and 28 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 11:46, what was the time 0 hours and 28 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 11:46, what was the time 0 hours and 28 minutes ago?",
+    "answer": "11:18"
+  },
+  "98": {
+    "no_insertion": "It is now 10:38, what was the time 4 hours and 4 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 10:38, what was the time 4 hours and 4 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 10:38, what was the time 4 hours and 4 minutes ago?",
+    "answer": "06:34"
+  },
+  "99": {
+    "no_insertion": "It is now 16:52, what was the time 1 hour and 24 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 16:52, what was the time 1 hour and 24 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 16:52, what was the time 1 hour and 24 minutes ago?",
+    "answer": "15:28"
+  },
+  "100": {
+    "no_insertion": "It is now 21:36, what was the time 0 hours and 27 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 21:36, what was the time 0 hours and 27 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 21:36, what was the time 0 hours and 27 minutes ago?",
+    "answer": "21:09"
+  },
+  "101": {
+    "no_insertion": "It is now 04:34, what was the time 2 hours and 38 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 04:34, what was the time 2 hours and 38 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 04:34, what was the time 2 hours and 38 minutes ago?",
+    "answer": "01:56"
+  },
+  "102": {
+    "no_insertion": "It is now 15:01, what was the time 0 hours and 46 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 15:01, what was the time 0 hours and 46 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 15:01, what was the time 0 hours and 46 minutes ago?",
+    "answer": "14:15"
+  },
+  "103": {
+    "no_insertion": "It is now 17:51, what was the time 0 hours and 58 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 17:51, what was the time 0 hours and 58 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 17:51, what was the time 0 hours and 58 minutes ago?",
+    "answer": "16:53"
+  },
+  "104": {
+    "no_insertion": "It is now 05:27, what was the time 2 hours and 45 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 05:27, what was the time 2 hours and 45 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 05:27, what was the time 2 hours and 45 minutes ago?",
+    "answer": "02:42"
+  },
+  "105": {
+    "no_insertion": "It is now 16:01, what was the time 1 hour and 27 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 16:01, what was the time 1 hour and 27 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 16:01, what was the time 1 hour and 27 minutes ago?",
+    "answer": "14:34"
+  },
+  "106": {
+    "no_insertion": "It is now 02:22, what was the time 3 hours and 19 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 02:22, what was the time 3 hours and 19 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 02:22, what was the time 3 hours and 19 minutes ago?",
+    "answer": "23:03"
+  },
+  "107": {
+    "no_insertion": "It is now 04:52, what was the time 4 hours and 20 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 04:52, what was the time 4 hours and 20 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 04:52, what was the time 4 hours and 20 minutes ago?",
+    "answer": "00:32"
+  },
+  "108": {
+    "no_insertion": "It is now 14:34, what was the time 4 hours and 45 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 14:34, what was the time 4 hours and 45 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 14:34, what was the time 4 hours and 45 minutes ago?",
+    "answer": "09:49"
+  },
+  "109": {
+    "no_insertion": "It is now 14:28, what was the time 1 hour and 50 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 14:28, what was the time 1 hour and 50 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 14:28, what was the time 1 hour and 50 minutes ago?",
+    "answer": "12:38"
+  },
+  "110": {
+    "no_insertion": "It is now 05:33, what was the time 2 hours and 40 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 05:33, what was the time 2 hours and 40 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 05:33, what was the time 2 hours and 40 minutes ago?",
+    "answer": "02:53"
+  },
+  "111": {
+    "no_insertion": "It is now 05:13, what was the time 1 hour and 48 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:13, what was the time 1 hour and 48 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 05:13, what was the time 1 hour and 48 minutes ago?",
+    "answer": "03:25"
+  },
+  "112": {
+    "no_insertion": "It is now 21:37, what was the time 4 hours and 6 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 21:37, what was the time 4 hours and 6 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 21:37, what was the time 4 hours and 6 minutes ago?",
+    "answer": "17:31"
+  },
+  "113": {
+    "no_insertion": "It is now 18:57, what was the time 4 hours and 24 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 18:57, what was the time 4 hours and 24 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 18:57, what was the time 4 hours and 24 minutes ago?",
+    "answer": "14:33"
+  },
+  "114": {
+    "no_insertion": "It is now 02:56, what was the time 1 hour and 47 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 02:56, what was the time 1 hour and 47 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 02:56, what was the time 1 hour and 47 minutes ago?",
+    "answer": "01:09"
+  },
+  "115": {
+    "no_insertion": "It is now 15:02, what was the time 0 hours and 20 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 15:02, what was the time 0 hours and 20 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 15:02, what was the time 0 hours and 20 minutes ago?",
+    "answer": "14:42"
+  },
+  "116": {
+    "no_insertion": "It is now 18:11, what was the time 2 hours and 16 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 18:11, what was the time 2 hours and 16 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 18:11, what was the time 2 hours and 16 minutes ago?",
+    "answer": "15:55"
+  },
+  "117": {
+    "no_insertion": "It is now 19:32, what was the time 2 hours and 38 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 19:32, what was the time 2 hours and 38 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 19:32, what was the time 2 hours and 38 minutes ago?",
+    "answer": "16:54"
+  },
+  "118": {
+    "no_insertion": "It is now 11:37, what was the time 0 hours and 18 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 11:37, what was the time 0 hours and 18 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 11:37, what was the time 0 hours and 18 minutes ago?",
+    "answer": "11:19"
+  },
+  "119": {
+    "no_insertion": "It is now 03:57, what was the time 3 hours and 50 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 03:57, what was the time 3 hours and 50 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 03:57, what was the time 3 hours and 50 minutes ago?",
+    "answer": "00:07"
+  },
+  "120": {
+    "no_insertion": "It is now 04:28, what was the time 4 hours and 49 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 04:28, what was the time 4 hours and 49 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 04:28, what was the time 4 hours and 49 minutes ago?",
+    "answer": "23:39"
+  },
+  "121": {
+    "no_insertion": "It is now 23:14, what was the time 0 hours and 41 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 23:14, what was the time 0 hours and 41 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 23:14, what was the time 0 hours and 41 minutes ago?",
+    "answer": "22:33"
+  },
+  "122": {
+    "no_insertion": "It is now 07:24, what was the time 4 hours and 53 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 07:24, what was the time 4 hours and 53 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 07:24, what was the time 4 hours and 53 minutes ago?",
+    "answer": "02:31"
+  },
+  "123": {
+    "no_insertion": "It is now 08:34, what was the time 1 hour and 30 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 08:34, what was the time 1 hour and 30 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 08:34, what was the time 1 hour and 30 minutes ago?",
+    "answer": "07:04"
+  },
+  "124": {
+    "no_insertion": "It is now 01:07, what was the time 3 hours and 54 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:07, what was the time 3 hours and 54 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 01:07, what was the time 3 hours and 54 minutes ago?",
+    "answer": "21:13"
+  },
+  "125": {
+    "no_insertion": "It is now 11:31, what was the time 3 hours and 15 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 11:31, what was the time 3 hours and 15 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 11:31, what was the time 3 hours and 15 minutes ago?",
+    "answer": "08:16"
+  },
+  "126": {
+    "no_insertion": "It is now 04:53, what was the time 1 hour and 50 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 04:53, what was the time 1 hour and 50 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 04:53, what was the time 1 hour and 50 minutes ago?",
+    "answer": "03:03"
+  },
+  "127": {
+    "no_insertion": "It is now 05:57, what was the time 4 hours and 33 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 05:57, what was the time 4 hours and 33 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 05:57, what was the time 4 hours and 33 minutes ago?",
+    "answer": "01:24"
+  },
+  "128": {
+    "no_insertion": "It is now 18:24, what was the time 3 hours and 7 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 18:24, what was the time 3 hours and 7 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 18:24, what was the time 3 hours and 7 minutes ago?",
+    "answer": "15:17"
+  },
+  "129": {
+    "no_insertion": "It is now 22:56, what was the time 2 hours and 22 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 22:56, what was the time 2 hours and 22 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 22:56, what was the time 2 hours and 22 minutes ago?",
+    "answer": "20:34"
+  },
+  "130": {
+    "no_insertion": "It is now 08:33, what was the time 4 hours and 31 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 08:33, what was the time 4 hours and 31 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 08:33, what was the time 4 hours and 31 minutes ago?",
+    "answer": "04:02"
+  },
+  "131": {
+    "no_insertion": "It is now 20:12, what was the time 2 hours and 5 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 20:12, what was the time 2 hours and 5 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 20:12, what was the time 2 hours and 5 minutes ago?",
+    "answer": "18:07"
+  },
+  "132": {
+    "no_insertion": "It is now 03:49, what was the time 4 hours and 35 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 03:49, what was the time 4 hours and 35 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 03:49, what was the time 4 hours and 35 minutes ago?",
+    "answer": "23:14"
+  },
+  "133": {
+    "no_insertion": "It is now 14:24, what was the time 2 hours and 11 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 14:24, what was the time 2 hours and 11 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 14:24, what was the time 2 hours and 11 minutes ago?",
+    "answer": "12:13"
+  },
+  "134": {
+    "no_insertion": "It is now 06:16, what was the time 0 hours and 10 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 06:16, what was the time 0 hours and 10 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 06:16, what was the time 0 hours and 10 minutes ago?",
+    "answer": "06:06"
+  },
+  "135": {
+    "no_insertion": "It is now 01:37, what was the time 4 hours and 50 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 01:37, what was the time 4 hours and 50 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 01:37, what was the time 4 hours and 50 minutes ago?",
+    "answer": "20:47"
+  },
+  "136": {
+    "no_insertion": "It is now 08:43, what was the time 2 hours and 36 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 08:43, what was the time 2 hours and 36 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 08:43, what was the time 2 hours and 36 minutes ago?",
+    "answer": "06:07"
+  },
+  "137": {
+    "no_insertion": "It is now 06:35, what was the time 0 hours and 47 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 06:35, what was the time 0 hours and 47 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 06:35, what was the time 0 hours and 47 minutes ago?",
+    "answer": "05:48"
+  },
+  "138": {
+    "no_insertion": "It is now 01:50, what was the time 3 hours and 9 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 01:50, what was the time 3 hours and 9 minutes ago?",
+    "dissimilar_insertion": "Tennis needs coordination. It is now 01:50, what was the time 3 hours and 9 minutes ago?",
+    "answer": "22:41"
+  },
+  "139": {
+    "no_insertion": "It is now 10:34, what was the time 1 hour and 11 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 10:34, what was the time 1 hour and 11 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 10:34, what was the time 1 hour and 11 minutes ago?",
+    "answer": "09:23"
+  },
+  "140": {
+    "no_insertion": "It is now 21:06, what was the time 0 hours and 11 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 21:06, what was the time 0 hours and 11 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 21:06, what was the time 0 hours and 11 minutes ago?",
+    "answer": "20:55"
+  },
+  "141": {
+    "no_insertion": "It is now 23:39, what was the time 0 hours and 56 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 23:39, what was the time 0 hours and 56 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 23:39, what was the time 0 hours and 56 minutes ago?",
+    "answer": "22:43"
+  },
+  "142": {
+    "no_insertion": "It is now 16:35, what was the time 4 hours and 14 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 16:35, what was the time 4 hours and 14 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 16:35, what was the time 4 hours and 14 minutes ago?",
+    "answer": "12:21"
+  },
+  "143": {
+    "no_insertion": "It is now 15:52, what was the time 4 hours and 11 minutes ago?",
+    "similar_insertion": "I always lose track of time in the morning. It is now 15:52, what was the time 4 hours and 11 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 15:52, what was the time 4 hours and 11 minutes ago?",
+    "answer": "11:41"
+  },
+  "144": {
+    "no_insertion": "It is now 11:14, what was the time 0 hours and 55 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 11:14, what was the time 0 hours and 55 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 11:14, what was the time 0 hours and 55 minutes ago?",
+    "answer": "10:19"
+  },
+  "145": {
+    "no_insertion": "It is now 08:36, what was the time 1 hour and 8 minutes ago?",
+    "similar_insertion": "Time zones can be really confusing sometimes. It is now 08:36, what was the time 1 hour and 8 minutes ago?",
+    "dissimilar_insertion": "Space telescopes capture images. It is now 08:36, what was the time 1 hour and 8 minutes ago?",
+    "answer": "07:28"
+  },
+  "146": {
+    "no_insertion": "It is now 01:17, what was the time 0 hours and 27 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 01:17, what was the time 0 hours and 27 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 01:17, what was the time 0 hours and 27 minutes ago?",
+    "answer": "00:50"
+  },
+  "147": {
+    "no_insertion": "It is now 05:26, what was the time 0 hours and 28 minutes ago?",
+    "similar_insertion": "I always lose track of time in the evening. It is now 05:26, what was the time 0 hours and 28 minutes ago?",
+    "dissimilar_insertion": "Fresh bread smells wonderful. It is now 05:26, what was the time 0 hours and 28 minutes ago?",
+    "answer": "04:58"
+  },
+  "148": {
+    "no_insertion": "It is now 22:37, what was the time 1 hour and 16 minutes ago?",
+    "similar_insertion": "The sunset is beautiful at this hour. It is now 22:37, what was the time 1 hour and 16 minutes ago?",
+    "dissimilar_insertion": "Maple trees turn colors in autumn. It is now 22:37, what was the time 1 hour and 16 minutes ago?",
+    "answer": "21:21"
+  },
+  "149": {
+    "no_insertion": "It is now 14:09, what was the time 0 hours and 46 minutes ago?",
+    "similar_insertion": "My watch always runs a bit slow. It is now 14:09, what was the time 0 hours and 46 minutes ago?",
+    "dissimilar_insertion": "Dolphins communicate with clicks. It is now 14:09, what was the time 0 hours and 46 minutes ago?",
+    "answer": "13:23"
+  }
+}

@@ -1,0 +1,15 @@
+api_url: https://api.sarvam.ai/v1/chat/completions
+api_key: "sk_ibretzf5_m1rLenkNrXLFn2fznqKIVAG6"
+model: sarvam-105b
+reasoning_effort: null
+temperature: 0.0
+top_p: 1.0
+concurrency: 4
+max_retries: 6
+backoff_cap: 60
+timeout: 180
+save_every: 50
+retry_status: [429, 500, 502, 503, 504]
+max_tokens:
+  direct: 4096
+  cot: 4096

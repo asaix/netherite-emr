@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-28 and 2028-06-12?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-05-28 and 2028-06-12?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-05-28 and 2028-06-12?",
+    "answer": "15"
+  },
+  "1": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-09-06 and 2030-09-20?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2030-09-06 and 2030-09-20?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2030-09-06 and 2030-09-20?",
+    "answer": "14"
+  },
+  "2": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-11-29 and 2027-12-15?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-11-29 and 2027-12-15?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-11-29 and 2027-12-15?",
+    "answer": "16"
+  },
+  "3": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-08 and 2029-01-16?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-01-08 and 2029-01-16?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2029-01-08 and 2029-01-16?",
+    "answer": "8"
+  },
+  "4": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-02-02 and 2028-02-10?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-02-02 and 2028-02-10?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-02-02 and 2028-02-10?",
+    "answer": "8"
+  },
+  "5": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-21 and 2028-05-29?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-05-21 and 2028-05-29?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-05-21 and 2028-05-29?",
+    "answer": "8"
+  },
+  "6": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-08-09 and 2028-08-19?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-08-09 and 2028-08-19?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-08-09 and 2028-08-19?",
+    "answer": "10"
+  },
+  "7": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-10-18 and 2030-11-03?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2030-10-18 and 2030-11-03?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2030-10-18 and 2030-11-03?",
+    "answer": "16"
+  },
+  "8": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-06?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-06?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-06?",
+    "answer": "12"
+  },
+  "9": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-11 and 2029-01-26?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-01-11 and 2029-01-26?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-01-11 and 2029-01-26?",
+    "answer": "15"
+  },
+  "10": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-01-20 and 2025-01-28?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2025-01-20 and 2025-01-28?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-01-20 and 2025-01-28?",
+    "answer": "8"
+  },
+  "11": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-09-24 and 2026-10-10?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-09-24 and 2026-10-10?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-09-24 and 2026-10-10?",
+    "answer": "16"
+  },
+  "12": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-18?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-18?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-18?",
+    "answer": "16"
+  },
+  "13": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-03-21 and 2028-04-02?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-03-21 and 2028-04-02?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-03-21 and 2028-04-02?",
+    "answer": "12"
+  },
+  "14": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-29 and 2028-06-06?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-05-29 and 2028-06-06?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-05-29 and 2028-06-06?",
+    "answer": "8"
+  },
+  "15": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-09-18 and 2029-09-29?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2029-09-18 and 2029-09-29?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-09-18 and 2029-09-29?",
+    "answer": "11"
+  },
+  "16": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-10-31 and 2030-11-08?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2030-10-31 and 2030-11-08?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2030-10-31 and 2030-11-08?",
+    "answer": "8"
+  },
+  "17": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-11-22 and 2028-12-08?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-11-22 and 2028-12-08?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2028-11-22 and 2028-12-08?",
+    "answer": "16"
+  },
+  "18": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-03-07 and 2025-03-19?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-03-07 and 2025-03-19?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-03-07 and 2025-03-19?",
+    "answer": "12"
+  },
+  "19": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-08-15 and 2029-08-23?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-08-15 and 2029-08-23?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-08-15 and 2029-08-23?",
+    "answer": "8"
+  },
+  "20": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-08-19 and 2028-09-02?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2028-08-19 and 2028-09-02?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-08-19 and 2028-09-02?",
+    "answer": "14"
+  },
+  "21": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-17 and 2029-01-27?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-01-17 and 2029-01-27?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-01-17 and 2029-01-27?",
+    "answer": "10"
+  },
+  "22": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-04-03 and 2025-04-11?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-04-03 and 2025-04-11?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2025-04-03 and 2025-04-11?",
+    "answer": "8"
+  },
+  "23": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-05-12 and 2027-05-26?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2027-05-12 and 2027-05-26?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-05-12 and 2027-05-26?",
+    "answer": "14"
+  },
+  "24": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-09-05 and 2026-09-13?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-09-05 and 2026-09-13?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-09-05 and 2026-09-13?",
+    "answer": "8"
+  },
+  "25": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-08-01 and 2027-08-17?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-08-01 and 2027-08-17?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2027-08-01 and 2027-08-17?",
+    "answer": "16"
+  },
+  "26": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-10-11 and 2028-10-24?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2028-10-11 and 2028-10-24?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2028-10-11 and 2028-10-24?",
+    "answer": "13"
+  },
+  "27": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-06-14 and 2028-06-26?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2028-06-14 and 2028-06-26?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-06-14 and 2028-06-26?",
+    "answer": "12"
+  },
+  "28": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-12-31 and 2030-01-10?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2029-12-31 and 2030-01-10?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2029-12-31 and 2030-01-10?",
+    "answer": "10"
+  },
+  "29": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-11-11 and 2030-11-21?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-11-11 and 2030-11-21?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-11-11 and 2030-11-21?",
+    "answer": "10"
+  },
+  "30": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-12-15 and 2027-12-31?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2027-12-15 and 2027-12-31?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2027-12-15 and 2027-12-31?",
+    "answer": "16"
+  },
+  "31": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-02-08 and 2027-02-24?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2027-02-08 and 2027-02-24?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2027-02-08 and 2027-02-24?",
+    "answer": "16"
+  },
+  "32": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-01-21 and 2028-01-31?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-01-21 and 2028-01-31?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2028-01-21 and 2028-01-31?",
+    "answer": "10"
+  },
+  "33": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-01-20 and 2027-02-02?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-01-20 and 2027-02-02?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2027-01-20 and 2027-02-02?",
+    "answer": "13"
+  },
+  "34": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-11 and 2028-05-21?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-05-11 and 2028-05-21?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-05-11 and 2028-05-21?",
+    "answer": "10"
+  },
+  "35": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-05-12 and 2026-05-23?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-05-12 and 2026-05-23?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-05-12 and 2026-05-23?",
+    "answer": "11"
+  },
+  "36": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-02 and 2029-01-16?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2029-01-02 and 2029-01-16?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-01-02 and 2029-01-16?",
+    "answer": "14"
+  },
+  "37": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-07-12 and 2029-07-20?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2029-07-12 and 2029-07-20?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2029-07-12 and 2029-07-20?",
+    "answer": "8"
+  },
+  "38": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2024-12-19 and 2025-01-01?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2024-12-19 and 2025-01-01?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2024-12-19 and 2025-01-01?",
+    "answer": "13"
+  },
+  "39": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-08-04 and 2026-08-19?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-08-04 and 2026-08-19?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2026-08-04 and 2026-08-19?",
+    "answer": "15"
+  },
+  "40": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-07-26 and 2028-08-04?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-07-26 and 2028-08-04?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2028-07-26 and 2028-08-04?",
+    "answer": "9"
+  },
+  "41": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-06-29 and 2026-07-12?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-06-29 and 2026-07-12?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-06-29 and 2026-07-12?",
+    "answer": "13"
+  },
+  "42": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-05-16 and 2025-05-28?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-05-16 and 2025-05-28?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2025-05-16 and 2025-05-28?",
+    "answer": "12"
+  },
+  "43": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-05-20 and 2026-05-29?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-05-20 and 2026-05-29?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2026-05-20 and 2026-05-29?",
+    "answer": "9"
+  },
+  "44": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-03-08 and 2025-03-24?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2025-03-08 and 2025-03-24?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2025-03-08 and 2025-03-24?",
+    "answer": "16"
+  },
+  "45": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-08-04 and 2028-08-15?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-08-04 and 2028-08-15?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-08-04 and 2028-08-15?",
+    "answer": "11"
+  },
+  "46": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-06-01 and 2030-06-11?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2030-06-01 and 2030-06-11?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-06-01 and 2030-06-11?",
+    "answer": "10"
+  },
+  "47": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-12 and 2025-06-26?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-06-12 and 2025-06-26?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2025-06-12 and 2025-06-26?",
+    "answer": "14"
+  },
+  "48": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-08-16 and 2029-08-30?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-08-16 and 2029-08-30?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-08-16 and 2029-08-30?",
+    "answer": "14"
+  },
+  "49": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-01-08 and 2025-01-17?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-01-08 and 2025-01-17?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-01-08 and 2025-01-17?",
+    "answer": "9"
+  },
+  "50": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-01-11 and 2027-01-19?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2027-01-11 and 2027-01-19?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2027-01-11 and 2027-01-19?",
+    "answer": "8"
+  },
+  "51": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-09-07 and 2027-09-17?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-09-07 and 2027-09-17?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-09-07 and 2027-09-17?",
+    "answer": "10"
+  },
+  "52": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-08-20 and 2025-08-29?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2025-08-20 and 2025-08-29?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2025-08-20 and 2025-08-29?",
+    "answer": "9"
+  },
+  "53": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-13 and 2025-06-29?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2025-06-13 and 2025-06-29?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2025-06-13 and 2025-06-29?",
+    "answer": "16"
+  },
+  "54": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-01-17 and 2027-01-29?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-01-17 and 2027-01-29?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-01-17 and 2027-01-29?",
+    "answer": "12"
+  },
+  "55": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-11-21 and 2025-11-29?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-11-21 and 2025-11-29?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2025-11-21 and 2025-11-29?",
+    "answer": "8"
+  },
+  "56": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-04-13 and 2029-04-27?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-04-13 and 2029-04-27?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2029-04-13 and 2029-04-27?",
+    "answer": "14"
+  },
+  "57": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-26 and 2029-02-10?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-01-26 and 2029-02-10?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-01-26 and 2029-02-10?",
+    "answer": "15"
+  },
+  "58": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-02-01 and 2030-02-17?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2030-02-01 and 2030-02-17?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-02-01 and 2030-02-17?",
+    "answer": "16"
+  },
+  "59": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-10-14 and 2029-10-29?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2029-10-14 and 2029-10-29?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2029-10-14 and 2029-10-29?",
+    "answer": "15"
+  },
+  "60": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-10-18 and 2028-10-28?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2028-10-18 and 2028-10-28?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2028-10-18 and 2028-10-28?",
+    "answer": "10"
+  },
+  "61": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-09-03 and 2030-09-14?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2030-09-03 and 2030-09-14?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-09-03 and 2030-09-14?",
+    "answer": "11"
+  },
+  "62": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-09-14 and 2025-09-27?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-09-14 and 2025-09-27?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-09-14 and 2025-09-27?",
+    "answer": "13"
+  },
+  "63": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-06-28 and 2029-07-08?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-06-28 and 2029-07-08?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2029-06-28 and 2029-07-08?",
+    "answer": "10"
+  },
+  "64": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-06-22 and 2030-07-06?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-06-22 and 2030-07-06?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-06-22 and 2030-07-06?",
+    "answer": "14"
+  },
+  "65": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-03-25 and 2026-04-04?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2026-03-25 and 2026-04-04?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-03-25 and 2026-04-04?",
+    "answer": "10"
+  },
+  "66": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-01-18 and 2030-01-26?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2030-01-18 and 2030-01-26?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-01-18 and 2030-01-26?",
+    "answer": "8"
+  },
+  "67": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-05-17 and 2026-05-29?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2026-05-17 and 2026-05-29?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2026-05-17 and 2026-05-29?",
+    "answer": "12"
+  },
+  "68": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-09-08 and 2028-09-18?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2028-09-08 and 2028-09-18?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-09-08 and 2028-09-18?",
+    "answer": "10"
+  },
+  "69": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-04-13 and 2025-04-29?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-04-13 and 2025-04-29?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2025-04-13 and 2025-04-29?",
+    "answer": "16"
+  },
+  "70": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-06-15 and 2026-06-23?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-06-15 and 2026-06-23?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-06-15 and 2026-06-23?",
+    "answer": "8"
+  },
+  "71": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-08?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-08?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-12-25 and 2027-01-08?",
+    "answer": "14"
+  },
+  "72": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-30 and 2028-06-15?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-05-30 and 2028-06-15?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2028-05-30 and 2028-06-15?",
+    "answer": "16"
+  },
+  "73": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-12-28 and 2030-01-11?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2029-12-28 and 2030-01-11?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2029-12-28 and 2030-01-11?",
+    "answer": "14"
+  },
+  "74": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-01-10 and 2025-01-19?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2025-01-10 and 2025-01-19?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2025-01-10 and 2025-01-19?",
+    "answer": "9"
+  },
+  "75": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-03-07 and 2026-03-18?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2026-03-07 and 2026-03-18?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2026-03-07 and 2026-03-18?",
+    "answer": "11"
+  },
+  "76": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-22 and 2025-07-08?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-06-22 and 2025-07-08?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-06-22 and 2025-07-08?",
+    "answer": "16"
+  },
+  "77": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-08-21 and 2030-09-06?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2030-08-21 and 2030-09-06?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-08-21 and 2030-09-06?",
+    "answer": "16"
+  },
+  "78": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-01-23 and 2029-02-06?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-01-23 and 2029-02-06?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-01-23 and 2029-02-06?",
+    "answer": "14"
+  },
+  "79": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-27 and 2027-01-12?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2026-12-27 and 2027-01-12?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-12-27 and 2027-01-12?",
+    "answer": "16"
+  },
+  "80": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-07-27 and 2028-08-11?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-07-27 and 2028-08-11?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-07-27 and 2028-08-11?",
+    "answer": "15"
+  },
+  "81": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-11-30 and 2030-12-12?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-11-30 and 2030-12-12?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2030-11-30 and 2030-12-12?",
+    "answer": "12"
+  },
+  "82": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-05-19 and 2029-06-01?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2029-05-19 and 2029-06-01?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2029-05-19 and 2029-06-01?",
+    "answer": "13"
+  },
+  "83": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-25 and 2028-06-06?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2028-05-25 and 2028-06-06?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2028-05-25 and 2028-06-06?",
+    "answer": "12"
+  },
+  "84": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-12-23 and 2030-01-08?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2029-12-23 and 2030-01-08?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2029-12-23 and 2030-01-08?",
+    "answer": "16"
+  },
+  "85": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-05-02 and 2026-05-18?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-05-02 and 2026-05-18?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2026-05-02 and 2026-05-18?",
+    "answer": "16"
+  },
+  "86": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-11-29 and 2026-12-07?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-11-29 and 2026-12-07?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-11-29 and 2026-12-07?",
+    "answer": "8"
+  },
+  "87": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-08-02 and 2027-08-13?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-08-02 and 2027-08-13?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2027-08-02 and 2027-08-13?",
+    "answer": "11"
+  },
+  "88": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-07-29 and 2026-08-11?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-07-29 and 2026-08-11?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-07-29 and 2026-08-11?",
+    "answer": "13"
+  },
+  "89": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-04-10 and 2028-04-18?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-04-10 and 2028-04-18?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-04-10 and 2028-04-18?",
+    "answer": "8"
+  },
+  "90": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-26 and 2025-07-06?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-06-26 and 2025-07-06?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-06-26 and 2025-07-06?",
+    "answer": "10"
+  },
+  "91": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-03-11 and 2029-03-19?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2029-03-11 and 2029-03-19?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-03-11 and 2029-03-19?",
+    "answer": "8"
+  },
+  "92": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-03-08 and 2028-03-18?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-03-08 and 2028-03-18?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2028-03-08 and 2028-03-18?",
+    "answer": "10"
+  },
+  "93": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-10-01 and 2027-10-15?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2027-10-01 and 2027-10-15?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2027-10-01 and 2027-10-15?",
+    "answer": "14"
+  },
+  "94": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-05-14 and 2025-05-29?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-05-14 and 2025-05-29?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-05-14 and 2025-05-29?",
+    "answer": "15"
+  },
+  "95": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-04-14 and 2027-04-30?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-04-14 and 2027-04-30?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2027-04-14 and 2027-04-30?",
+    "answer": "16"
+  },
+  "96": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-10-11 and 2025-10-23?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2025-10-11 and 2025-10-23?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2025-10-11 and 2025-10-23?",
+    "answer": "12"
+  },
+  "97": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-01-23 and 2025-02-03?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-01-23 and 2025-02-03?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-01-23 and 2025-02-03?",
+    "answer": "11"
+  },
+  "98": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-01-17 and 2026-02-02?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-01-17 and 2026-02-02?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-01-17 and 2026-02-02?",
+    "answer": "16"
+  },
+  "99": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-12-06 and 2027-12-22?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-12-06 and 2027-12-22?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-12-06 and 2027-12-22?",
+    "answer": "16"
+  },
+  "100": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-08-07 and 2029-08-21?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2029-08-07 and 2029-08-21?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-08-07 and 2029-08-21?",
+    "answer": "14"
+  },
+  "101": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-02-10 and 2027-02-25?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2027-02-10 and 2027-02-25?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2027-02-10 and 2027-02-25?",
+    "answer": "15"
+  },
+  "102": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-07-12 and 2028-07-21?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-07-12 and 2028-07-21?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-07-12 and 2028-07-21?",
+    "answer": "9"
+  },
+  "103": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-07-03 and 2028-07-15?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-07-03 and 2028-07-15?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-07-03 and 2028-07-15?",
+    "answer": "12"
+  },
+  "104": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-11-15 and 2029-11-23?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2029-11-15 and 2029-11-23?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2029-11-15 and 2029-11-23?",
+    "answer": "8"
+  },
+  "105": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-05-18 and 2027-05-26?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-05-18 and 2027-05-26?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2027-05-18 and 2027-05-26?",
+    "answer": "8"
+  },
+  "106": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-05-28 and 2025-06-05?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2025-05-28 and 2025-06-05?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-05-28 and 2025-06-05?",
+    "answer": "8"
+  },
+  "107": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-02-10 and 2025-02-22?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-02-10 and 2025-02-22?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-02-10 and 2025-02-22?",
+    "answer": "12"
+  },
+  "108": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-07-07 and 2027-07-22?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2027-07-07 and 2027-07-22?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2027-07-07 and 2027-07-22?",
+    "answer": "15"
+  },
+  "109": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-09-24 and 2030-10-05?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2030-09-24 and 2030-10-05?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-09-24 and 2030-10-05?",
+    "answer": "11"
+  },
+  "110": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-11-09 and 2029-11-20?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-11-09 and 2029-11-20?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2029-11-09 and 2029-11-20?",
+    "answer": "11"
+  },
+  "111": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-17?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-17?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-01-02 and 2028-01-17?",
+    "answer": "15"
+  },
+  "112": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-12-29 and 2028-01-12?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-12-29 and 2028-01-12?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2027-12-29 and 2028-01-12?",
+    "answer": "14"
+  },
+  "113": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-10-05 and 2026-10-19?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2026-10-05 and 2026-10-19?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2026-10-05 and 2026-10-19?",
+    "answer": "14"
+  },
+  "114": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-09-19 and 2025-10-04?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-09-19 and 2025-10-04?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2025-09-19 and 2025-10-04?",
+    "answer": "15"
+  },
+  "115": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-16?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-16?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-16?",
+    "answer": "8"
+  },
+  "116": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-05-26 and 2025-06-03?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-05-26 and 2025-06-03?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2025-05-26 and 2025-06-03?",
+    "answer": "8"
+  },
+  "117": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-03-24 and 2026-04-02?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-03-24 and 2026-04-02?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2026-03-24 and 2026-04-02?",
+    "answer": "9"
+  },
+  "118": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-10-25 and 2027-11-06?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-10-25 and 2027-11-06?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-10-25 and 2027-11-06?",
+    "answer": "12"
+  },
+  "119": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-25?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-25?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-25?",
+    "answer": "14"
+  },
+  "120": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-05-26 and 2030-06-04?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2030-05-26 and 2030-06-04?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-05-26 and 2030-06-04?",
+    "answer": "9"
+  },
+  "121": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-04-23 and 2029-05-09?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2029-04-23 and 2029-05-09?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2029-04-23 and 2029-05-09?",
+    "answer": "16"
+  },
+  "122": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-10-20 and 2026-11-01?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2026-10-20 and 2026-11-01?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-10-20 and 2026-11-01?",
+    "answer": "12"
+  },
+  "123": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-08-03 and 2028-08-18?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2028-08-03 and 2028-08-18?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2028-08-03 and 2028-08-18?",
+    "answer": "15"
+  },
+  "124": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-09-15 and 2026-09-30?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2026-09-15 and 2026-09-30?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-09-15 and 2026-09-30?",
+    "answer": "15"
+  },
+  "125": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-02-19 and 2027-03-03?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2027-02-19 and 2027-03-03?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2027-02-19 and 2027-03-03?",
+    "answer": "12"
+  },
+  "126": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-06-20 and 2030-07-01?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-06-20 and 2030-07-01?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-06-20 and 2030-07-01?",
+    "answer": "11"
+  },
+  "127": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-01-21 and 2030-02-04?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2030-01-21 and 2030-02-04?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2030-01-21 and 2030-02-04?",
+    "answer": "14"
+  },
+  "128": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2027-01-06 and 2027-01-21?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2027-01-06 and 2027-01-21?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2027-01-06 and 2027-01-21?",
+    "answer": "15"
+  },
+  "129": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-12-13 and 2028-12-25?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-12-13 and 2028-12-25?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-12-13 and 2028-12-25?",
+    "answer": "12"
+  },
+  "130": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-08-31 and 2026-09-10?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-08-31 and 2026-09-10?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2026-08-31 and 2026-09-10?",
+    "answer": "10"
+  },
+  "131": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-06-18 and 2030-06-30?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-06-18 and 2030-06-30?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-06-18 and 2030-06-30?",
+    "answer": "12"
+  },
+  "132": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-11-30 and 2029-12-09?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2029-11-30 and 2029-12-09?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2029-11-30 and 2029-12-09?",
+    "answer": "9"
+  },
+  "133": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-05-12 and 2028-05-21?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2028-05-12 and 2028-05-21?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2028-05-12 and 2028-05-21?",
+    "answer": "9"
+  },
+  "134": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-15 and 2025-07-01?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2025-06-15 and 2025-07-01?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2025-06-15 and 2025-07-01?",
+    "answer": "16"
+  },
+  "135": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2029-07-19 and 2029-07-28?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2029-07-19 and 2029-07-28?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2029-07-19 and 2029-07-28?",
+    "answer": "9"
+  },
+  "136": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-07?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-07?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-07?",
+    "answer": "8"
+  },
+  "137": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-08?",
+    "similar_insertion": "Time seems to move differently in spring compared to winter. How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-08?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2030-07-30 and 2030-08-08?",
+    "answer": "9"
+  },
+  "138": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-08-13 and 2026-08-27?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2026-08-13 and 2026-08-27?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2026-08-13 and 2026-08-27?",
+    "answer": "14"
+  },
+  "139": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-07-23 and 2026-08-03?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2026-07-23 and 2026-08-03?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-07-23 and 2026-08-03?",
+    "answer": "11"
+  },
+  "140": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-03-10 and 2028-03-24?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2028-03-10 and 2028-03-24?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-03-10 and 2028-03-24?",
+    "answer": "14"
+  },
+  "141": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-31 and 2027-01-13?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2026-12-31 and 2027-01-13?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-12-31 and 2027-01-13?",
+    "answer": "13"
+  },
+  "142": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-03-31 and 2025-04-13?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2025-03-31 and 2025-04-13?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2025-03-31 and 2025-04-13?",
+    "answer": "13"
+  },
+  "143": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-22?",
+    "similar_insertion": "Spring dates are my favorite to keep track of. How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-22?",
+    "dissimilar_insertion": "Violins have four strings. How many day(s) (e.g., 5, 9) have passed between 2026-07-08 and 2026-07-22?",
+    "answer": "14"
+  },
+  "144": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-24?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-24?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2026-12-11 and 2026-12-24?",
+    "answer": "13"
+  },
+  "145": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2030-04-17 and 2030-04-27?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2030-04-17 and 2030-04-27?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2030-04-17 and 2030-04-27?",
+    "answer": "10"
+  },
+  "146": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2028-12-01 and 2028-12-12?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2028-12-01 and 2028-12-12?",
+    "dissimilar_insertion": "Bamboo can grow very fast. How many day(s) (e.g., 5, 9) have passed between 2028-12-01 and 2028-12-12?",
+    "answer": "11"
+  },
+  "147": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-06-29 and 2025-07-13?",
+    "similar_insertion": "Time really flies when you're having fun. How many day(s) (e.g., 5, 9) have passed between 2025-06-29 and 2025-07-13?",
+    "dissimilar_insertion": "The Sahara has rock formations. How many day(s) (e.g., 5, 9) have passed between 2025-06-29 and 2025-07-13?",
+    "answer": "14"
+  },
+  "148": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2025-11-13 and 2025-11-25?",
+    "similar_insertion": "The calendar on my wall needs updating. How many day(s) (e.g., 5, 9) have passed between 2025-11-13 and 2025-11-25?",
+    "dissimilar_insertion": "Fresh basil adds flavor. How many day(s) (e.g., 5, 9) have passed between 2025-11-13 and 2025-11-25?",
+    "answer": "12"
+  },
+  "149": {
+    "no_insertion": "How many day(s) (e.g., 5, 9) have passed between 2026-04-12 and 2026-04-20?",
+    "similar_insertion": "I wonder if counting backwards with dates is harder than forwards. How many day(s) (e.g., 5, 9) have passed between 2026-04-12 and 2026-04-20?",
+    "dissimilar_insertion": "Blue whales use low sounds. How many day(s) (e.g., 5, 9) have passed between 2026-04-12 and 2026-04-20?",
+    "answer": "8"
+  }
+}

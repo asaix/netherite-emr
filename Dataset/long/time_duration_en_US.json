@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "If I looked at the clock at 01:45 and now it is 05:17, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 01:45 and now it is 05:17, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 01:45 and now it is 05:17, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "212"
+  },
+  "1": {
+    "no_insertion": "If I looked at the clock at 18:27 and now it is 21:38, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 18:27 and now it is 21:38, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 18:27 and now it is 21:38, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "191"
+  },
+  "2": {
+    "no_insertion": "If I looked at the clock at 15:17 and now it is 17:35, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 15:17 and now it is 17:35, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:17 and now it is 17:35, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "138"
+  },
+  "3": {
+    "no_insertion": "If I looked at the clock at 10:48 and now it is 14:09, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 10:48 and now it is 14:09, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 10:48 and now it is 14:09, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "201"
+  },
+  "4": {
+    "no_insertion": "If I looked at the clock at 06:43 and now it is 10:26, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 06:43 and now it is 10:26, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 06:43 and now it is 10:26, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "223"
+  },
+  "5": {
+    "no_insertion": "If I looked at the clock at 02:50 and now it is 05:24, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 02:50 and now it is 05:24, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 02:50 and now it is 05:24, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "154"
+  },
+  "6": {
+    "no_insertion": "If I looked at the clock at 05:36 and now it is 08:34, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 05:36 and now it is 08:34, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 05:36 and now it is 08:34, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "178"
+  },
+  "7": {
+    "no_insertion": "If I looked at the clock at 21:19 and now it is 00:48, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 21:19 and now it is 00:48, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 21:19 and now it is 00:48, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "209"
+  },
+  "8": {
+    "no_insertion": "If I looked at the clock at 22:04 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 22:04 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 22:04 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "203"
+  },
+  "9": {
+    "no_insertion": "If I looked at the clock at 11:48 and now it is 15:23, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 11:48 and now it is 15:23, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 11:48 and now it is 15:23, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "215"
+  },
+  "10": {
+    "no_insertion": "If I looked at the clock at 16:06 and now it is 18:45, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 16:06 and now it is 18:45, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 16:06 and now it is 18:45, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "159"
+  },
+  "11": {
+    "no_insertion": "If I looked at the clock at 19:52 and now it is 22:40, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 19:52 and now it is 22:40, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 19:52 and now it is 22:40, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "168"
+  },
+  "12": {
+    "no_insertion": "If I looked at the clock at 15:55 and now it is 19:40, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 15:55 and now it is 19:40, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 15:55 and now it is 19:40, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "225"
+  },
+  "13": {
+    "no_insertion": "If I looked at the clock at 14:52 and now it is 17:14, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 14:52 and now it is 17:14, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 14:52 and now it is 17:14, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "142"
+  },
+  "14": {
+    "no_insertion": "If I looked at the clock at 15:45 and now it is 19:35, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 15:45 and now it is 19:35, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:45 and now it is 19:35, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "230"
+  },
+  "15": {
+    "no_insertion": "If I looked at the clock at 19:44 and now it is 21:49, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 19:44 and now it is 21:49, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 19:44 and now it is 21:49, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "125"
+  },
+  "16": {
+    "no_insertion": "If I looked at the clock at 20:16 and now it is 23:46, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 20:16 and now it is 23:46, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 20:16 and now it is 23:46, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "210"
+  },
+  "17": {
+    "no_insertion": "If I looked at the clock at 01:07 and now it is 04:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 01:07 and now it is 04:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 01:07 and now it is 04:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "181"
+  },
+  "18": {
+    "no_insertion": "If I looked at the clock at 10:40 and now it is 12:41, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 10:40 and now it is 12:41, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 10:40 and now it is 12:41, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "121"
+  },
+  "19": {
+    "no_insertion": "If I looked at the clock at 09:14 and now it is 11:57, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 09:14 and now it is 11:57, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 09:14 and now it is 11:57, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "163"
+  },
+  "20": {
+    "no_insertion": "If I looked at the clock at 15:59 and now it is 19:53, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 15:59 and now it is 19:53, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 15:59 and now it is 19:53, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "234"
+  },
+  "21": {
+    "no_insertion": "If I looked at the clock at 15:02 and now it is 18:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 15:02 and now it is 18:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 15:02 and now it is 18:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "186"
+  },
+  "22": {
+    "no_insertion": "If I looked at the clock at 21:02 and now it is 23:31, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 21:02 and now it is 23:31, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 21:02 and now it is 23:31, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "149"
+  },
+  "23": {
+    "no_insertion": "If I looked at the clock at 02:43 and now it is 06:43, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 02:43 and now it is 06:43, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 02:43 and now it is 06:43, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "240"
+  },
+  "24": {
+    "no_insertion": "If I looked at the clock at 19:24 and now it is 21:45, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 19:24 and now it is 21:45, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 19:24 and now it is 21:45, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "141"
+  },
+  "25": {
+    "no_insertion": "If I looked at the clock at 03:59 and now it is 06:04, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 03:59 and now it is 06:04, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 03:59 and now it is 06:04, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "125"
+  },
+  "26": {
+    "no_insertion": "If I looked at the clock at 12:12 and now it is 14:17, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 12:12 and now it is 14:17, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 12:12 and now it is 14:17, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "125"
+  },
+  "27": {
+    "no_insertion": "If I looked at the clock at 01:13 and now it is 05:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 01:13 and now it is 05:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 01:13 and now it is 05:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "235"
+  },
+  "28": {
+    "no_insertion": "If I looked at the clock at 11:56 and now it is 14:26, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 11:56 and now it is 14:26, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 11:56 and now it is 14:26, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "150"
+  },
+  "29": {
+    "no_insertion": "If I looked at the clock at 01:49 and now it is 04:37, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 01:49 and now it is 04:37, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 01:49 and now it is 04:37, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "168"
+  },
+  "30": {
+    "no_insertion": "If I looked at the clock at 00:34 and now it is 04:11, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 00:34 and now it is 04:11, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 00:34 and now it is 04:11, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "217"
+  },
+  "31": {
+    "no_insertion": "If I looked at the clock at 20:17 and now it is 22:51, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 20:17 and now it is 22:51, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 20:17 and now it is 22:51, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "154"
+  },
+  "32": {
+    "no_insertion": "If I looked at the clock at 05:51 and now it is 09:17, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 05:51 and now it is 09:17, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 05:51 and now it is 09:17, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "206"
+  },
+  "33": {
+    "no_insertion": "If I looked at the clock at 01:57 and now it is 04:16, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 01:57 and now it is 04:16, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 01:57 and now it is 04:16, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "139"
+  },
+  "34": {
+    "no_insertion": "If I looked at the clock at 14:11 and now it is 17:12, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 14:11 and now it is 17:12, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 14:11 and now it is 17:12, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "181"
+  },
+  "35": {
+    "no_insertion": "If I looked at the clock at 03:27 and now it is 05:51, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 03:27 and now it is 05:51, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 03:27 and now it is 05:51, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "144"
+  },
+  "36": {
+    "no_insertion": "If I looked at the clock at 04:20 and now it is 06:44, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 04:20 and now it is 06:44, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 04:20 and now it is 06:44, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "144"
+  },
+  "37": {
+    "no_insertion": "If I looked at the clock at 06:12 and now it is 08:21, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 06:12 and now it is 08:21, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 06:12 and now it is 08:21, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "129"
+  },
+  "38": {
+    "no_insertion": "If I looked at the clock at 08:13 and now it is 10:22, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 08:13 and now it is 10:22, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 08:13 and now it is 10:22, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "129"
+  },
+  "39": {
+    "no_insertion": "If I looked at the clock at 01:00 and now it is 03:54, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 01:00 and now it is 03:54, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 01:00 and now it is 03:54, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "174"
+  },
+  "40": {
+    "no_insertion": "If I looked at the clock at 16:16 and now it is 18:39, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 16:16 and now it is 18:39, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 16:16 and now it is 18:39, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "143"
+  },
+  "41": {
+    "no_insertion": "If I looked at the clock at 11:09 and now it is 13:50, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 11:09 and now it is 13:50, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 11:09 and now it is 13:50, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "161"
+  },
+  "42": {
+    "no_insertion": "If I looked at the clock at 07:34 and now it is 10:40, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 07:34 and now it is 10:40, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 07:34 and now it is 10:40, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "186"
+  },
+  "43": {
+    "no_insertion": "If I looked at the clock at 18:50 and now it is 22:47, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 18:50 and now it is 22:47, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 18:50 and now it is 22:47, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "237"
+  },
+  "44": {
+    "no_insertion": "If I looked at the clock at 05:00 and now it is 08:12, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 05:00 and now it is 08:12, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 05:00 and now it is 08:12, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "192"
+  },
+  "45": {
+    "no_insertion": "If I looked at the clock at 22:17 and now it is 01:06, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 22:17 and now it is 01:06, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 22:17 and now it is 01:06, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "169"
+  },
+  "46": {
+    "no_insertion": "If I looked at the clock at 12:35 and now it is 15:39, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 12:35 and now it is 15:39, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 12:35 and now it is 15:39, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "184"
+  },
+  "47": {
+    "no_insertion": "If I looked at the clock at 12:36 and now it is 15:49, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 12:36 and now it is 15:49, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 12:36 and now it is 15:49, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "193"
+  },
+  "48": {
+    "no_insertion": "If I looked at the clock at 10:48 and now it is 13:14, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 10:48 and now it is 13:14, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 10:48 and now it is 13:14, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "146"
+  },
+  "49": {
+    "no_insertion": "If I looked at the clock at 19:15 and now it is 22:48, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 19:15 and now it is 22:48, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 19:15 and now it is 22:48, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "213"
+  },
+  "50": {
+    "no_insertion": "If I looked at the clock at 17:51 and now it is 21:39, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 17:51 and now it is 21:39, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 17:51 and now it is 21:39, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "228"
+  },
+  "51": {
+    "no_insertion": "If I looked at the clock at 20:24 and now it is 23:11, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 20:24 and now it is 23:11, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 20:24 and now it is 23:11, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "167"
+  },
+  "52": {
+    "no_insertion": "If I looked at the clock at 16:47 and now it is 19:49, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 16:47 and now it is 19:49, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 16:47 and now it is 19:49, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "182"
+  },
+  "53": {
+    "no_insertion": "If I looked at the clock at 17:13 and now it is 20:41, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 17:13 and now it is 20:41, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 17:13 and now it is 20:41, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "208"
+  },
+  "54": {
+    "no_insertion": "If I looked at the clock at 07:17 and now it is 11:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 07:17 and now it is 11:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 07:17 and now it is 11:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "231"
+  },
+  "55": {
+    "no_insertion": "If I looked at the clock at 06:24 and now it is 09:36, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 06:24 and now it is 09:36, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 06:24 and now it is 09:36, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "192"
+  },
+  "56": {
+    "no_insertion": "If I looked at the clock at 20:44 and now it is 23:54, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 20:44 and now it is 23:54, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 20:44 and now it is 23:54, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "190"
+  },
+  "57": {
+    "no_insertion": "If I looked at the clock at 12:17 and now it is 15:48, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 12:17 and now it is 15:48, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 12:17 and now it is 15:48, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "211"
+  },
+  "58": {
+    "no_insertion": "If I looked at the clock at 16:33 and now it is 19:11, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 16:33 and now it is 19:11, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 16:33 and now it is 19:11, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "158"
+  },
+  "59": {
+    "no_insertion": "If I looked at the clock at 15:18 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 15:18 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 15:18 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "190"
+  },
+  "60": {
+    "no_insertion": "If I looked at the clock at 16:12 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 16:12 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 16:12 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "136"
+  },
+  "61": {
+    "no_insertion": "If I looked at the clock at 23:44 and now it is 03:10, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 23:44 and now it is 03:10, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 23:44 and now it is 03:10, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "206"
+  },
+  "62": {
+    "no_insertion": "If I looked at the clock at 08:01 and now it is 11:50, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 08:01 and now it is 11:50, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 08:01 and now it is 11:50, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "229"
+  },
+  "63": {
+    "no_insertion": "If I looked at the clock at 01:30 and now it is 05:00, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 01:30 and now it is 05:00, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 01:30 and now it is 05:00, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "210"
+  },
+  "64": {
+    "no_insertion": "If I looked at the clock at 02:38 and now it is 05:42, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 02:38 and now it is 05:42, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 02:38 and now it is 05:42, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "184"
+  },
+  "65": {
+    "no_insertion": "If I looked at the clock at 08:49 and now it is 11:26, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 08:49 and now it is 11:26, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 08:49 and now it is 11:26, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "157"
+  },
+  "66": {
+    "no_insertion": "If I looked at the clock at 15:10 and now it is 18:11, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 15:10 and now it is 18:11, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:10 and now it is 18:11, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "181"
+  },
+  "67": {
+    "no_insertion": "If I looked at the clock at 01:59 and now it is 04:20, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 01:59 and now it is 04:20, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 01:59 and now it is 04:20, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "141"
+  },
+  "68": {
+    "no_insertion": "If I looked at the clock at 17:12 and now it is 19:25, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 17:12 and now it is 19:25, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 17:12 and now it is 19:25, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "133"
+  },
+  "69": {
+    "no_insertion": "If I looked at the clock at 02:26 and now it is 05:21, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 02:26 and now it is 05:21, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 02:26 and now it is 05:21, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "175"
+  },
+  "70": {
+    "no_insertion": "If I looked at the clock at 16:41 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 16:41 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 16:41 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "185"
+  },
+  "71": {
+    "no_insertion": "If I looked at the clock at 12:49 and now it is 16:20, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 12:49 and now it is 16:20, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 12:49 and now it is 16:20, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "211"
+  },
+  "72": {
+    "no_insertion": "If I looked at the clock at 18:25 and now it is 22:00, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 18:25 and now it is 22:00, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 18:25 and now it is 22:00, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "215"
+  },
+  "73": {
+    "no_insertion": "If I looked at the clock at 01:36 and now it is 04:19, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 01:36 and now it is 04:19, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 01:36 and now it is 04:19, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "163"
+  },
+  "74": {
+    "no_insertion": "If I looked at the clock at 23:07 and now it is 03:00, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 23:07 and now it is 03:00, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 23:07 and now it is 03:00, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "233"
+  },
+  "75": {
+    "no_insertion": "If I looked at the clock at 11:04 and now it is 13:30, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 11:04 and now it is 13:30, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 11:04 and now it is 13:30, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "146"
+  },
+  "76": {
+    "no_insertion": "If I looked at the clock at 21:34 and now it is 01:23, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 21:34 and now it is 01:23, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 21:34 and now it is 01:23, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "229"
+  },
+  "77": {
+    "no_insertion": "If I looked at the clock at 18:25 and now it is 20:56, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 18:25 and now it is 20:56, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 18:25 and now it is 20:56, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "151"
+  },
+  "78": {
+    "no_insertion": "If I looked at the clock at 14:42 and now it is 17:28, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 14:42 and now it is 17:28, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 14:42 and now it is 17:28, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "166"
+  },
+  "79": {
+    "no_insertion": "If I looked at the clock at 03:05 and now it is 06:09, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 03:05 and now it is 06:09, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 03:05 and now it is 06:09, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "184"
+  },
+  "80": {
+    "no_insertion": "If I looked at the clock at 06:54 and now it is 10:10, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 06:54 and now it is 10:10, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 06:54 and now it is 10:10, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "196"
+  },
+  "81": {
+    "no_insertion": "If I looked at the clock at 12:36 and now it is 16:33, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 12:36 and now it is 16:33, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 12:36 and now it is 16:33, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "237"
+  },
+  "82": {
+    "no_insertion": "If I looked at the clock at 23:15 and now it is 02:41, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 23:15 and now it is 02:41, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 23:15 and now it is 02:41, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "206"
+  },
+  "83": {
+    "no_insertion": "If I looked at the clock at 07:59 and now it is 11:12, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 07:59 and now it is 11:12, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 07:59 and now it is 11:12, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "193"
+  },
+  "84": {
+    "no_insertion": "If I looked at the clock at 13:20 and now it is 16:19, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 13:20 and now it is 16:19, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 13:20 and now it is 16:19, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "179"
+  },
+  "85": {
+    "no_insertion": "If I looked at the clock at 18:30 and now it is 21:27, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 18:30 and now it is 21:27, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 18:30 and now it is 21:27, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "177"
+  },
+  "86": {
+    "no_insertion": "If I looked at the clock at 00:20 and now it is 03:36, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 00:20 and now it is 03:36, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 00:20 and now it is 03:36, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "196"
+  },
+  "87": {
+    "no_insertion": "If I looked at the clock at 01:10 and now it is 03:42, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 01:10 and now it is 03:42, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 01:10 and now it is 03:42, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "152"
+  },
+  "88": {
+    "no_insertion": "If I looked at the clock at 01:59 and now it is 04:55, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 01:59 and now it is 04:55, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 01:59 and now it is 04:55, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "176"
+  },
+  "89": {
+    "no_insertion": "If I looked at the clock at 06:38 and now it is 10:38, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 06:38 and now it is 10:38, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 06:38 and now it is 10:38, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "240"
+  },
+  "90": {
+    "no_insertion": "If I looked at the clock at 04:45 and now it is 07:12, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 04:45 and now it is 07:12, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 04:45 and now it is 07:12, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "147"
+  },
+  "91": {
+    "no_insertion": "If I looked at the clock at 20:34 and now it is 00:04, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 20:34 and now it is 00:04, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 20:34 and now it is 00:04, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "210"
+  },
+  "92": {
+    "no_insertion": "If I looked at the clock at 06:53 and now it is 09:05, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 06:53 and now it is 09:05, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 06:53 and now it is 09:05, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "132"
+  },
+  "93": {
+    "no_insertion": "If I looked at the clock at 07:51 and now it is 10:07, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 07:51 and now it is 10:07, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 07:51 and now it is 10:07, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "136"
+  },
+  "94": {
+    "no_insertion": "If I looked at the clock at 23:05 and now it is 01:38, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 23:05 and now it is 01:38, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 23:05 and now it is 01:38, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "153"
+  },
+  "95": {
+    "no_insertion": "If I looked at the clock at 18:47 and now it is 22:43, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 18:47 and now it is 22:43, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 18:47 and now it is 22:43, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "236"
+  },
+  "96": {
+    "no_insertion": "If I looked at the clock at 08:33 and now it is 11:25, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 08:33 and now it is 11:25, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 08:33 and now it is 11:25, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "172"
+  },
+  "97": {
+    "no_insertion": "If I looked at the clock at 06:29 and now it is 08:40, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 06:29 and now it is 08:40, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 06:29 and now it is 08:40, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "131"
+  },
+  "98": {
+    "no_insertion": "If I looked at the clock at 17:00 and now it is 20:29, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 17:00 and now it is 20:29, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 17:00 and now it is 20:29, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "209"
+  },
+  "99": {
+    "no_insertion": "If I looked at the clock at 19:10 and now it is 21:41, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 19:10 and now it is 21:41, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 19:10 and now it is 21:41, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "151"
+  },
+  "100": {
+    "no_insertion": "If I looked at the clock at 16:26 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 16:26 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 16:26 and now it is 19:46, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "200"
+  },
+  "101": {
+    "no_insertion": "If I looked at the clock at 11:05 and now it is 14:30, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 11:05 and now it is 14:30, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 11:05 and now it is 14:30, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "205"
+  },
+  "102": {
+    "no_insertion": "If I looked at the clock at 15:25 and now it is 17:26, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 15:25 and now it is 17:26, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 15:25 and now it is 17:26, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "121"
+  },
+  "103": {
+    "no_insertion": "If I looked at the clock at 06:17 and now it is 09:29, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 06:17 and now it is 09:29, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 06:17 and now it is 09:29, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "192"
+  },
+  "104": {
+    "no_insertion": "If I looked at the clock at 23:44 and now it is 01:58, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 23:44 and now it is 01:58, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 23:44 and now it is 01:58, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "134"
+  },
+  "105": {
+    "no_insertion": "If I looked at the clock at 14:03 and now it is 17:49, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 14:03 and now it is 17:49, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 14:03 and now it is 17:49, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "226"
+  },
+  "106": {
+    "no_insertion": "If I looked at the clock at 23:13 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 23:13 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 23:13 and now it is 01:27, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "134"
+  },
+  "107": {
+    "no_insertion": "If I looked at the clock at 13:53 and now it is 17:05, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 13:53 and now it is 17:05, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 13:53 and now it is 17:05, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "192"
+  },
+  "108": {
+    "no_insertion": "If I looked at the clock at 10:36 and now it is 13:23, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 10:36 and now it is 13:23, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 10:36 and now it is 13:23, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "167"
+  },
+  "109": {
+    "no_insertion": "If I looked at the clock at 08:11 and now it is 10:46, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 08:11 and now it is 10:46, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 08:11 and now it is 10:46, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "155"
+  },
+  "110": {
+    "no_insertion": "If I looked at the clock at 15:16 and now it is 17:25, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 15:16 and now it is 17:25, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:16 and now it is 17:25, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "129"
+  },
+  "111": {
+    "no_insertion": "If I looked at the clock at 13:51 and now it is 16:26, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 13:51 and now it is 16:26, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 13:51 and now it is 16:26, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "155"
+  },
+  "112": {
+    "no_insertion": "If I looked at the clock at 08:09 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 08:09 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 08:09 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "204"
+  },
+  "113": {
+    "no_insertion": "If I looked at the clock at 20:03 and now it is 22:15, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 20:03 and now it is 22:15, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 20:03 and now it is 22:15, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "132"
+  },
+  "114": {
+    "no_insertion": "If I looked at the clock at 03:48 and now it is 07:19, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 03:48 and now it is 07:19, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 03:48 and now it is 07:19, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "211"
+  },
+  "115": {
+    "no_insertion": "If I looked at the clock at 12:44 and now it is 15:55, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 12:44 and now it is 15:55, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 12:44 and now it is 15:55, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "191"
+  },
+  "116": {
+    "no_insertion": "If I looked at the clock at 08:42 and now it is 10:57, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 08:42 and now it is 10:57, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 08:42 and now it is 10:57, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "135"
+  },
+  "117": {
+    "no_insertion": "If I looked at the clock at 09:06 and now it is 11:56, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 09:06 and now it is 11:56, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 09:06 and now it is 11:56, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "170"
+  },
+  "118": {
+    "no_insertion": "If I looked at the clock at 02:30 and now it is 05:18, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 02:30 and now it is 05:18, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 02:30 and now it is 05:18, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "168"
+  },
+  "119": {
+    "no_insertion": "If I looked at the clock at 07:09 and now it is 10:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 07:09 and now it is 10:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 07:09 and now it is 10:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "179"
+  },
+  "120": {
+    "no_insertion": "If I looked at the clock at 21:56 and now it is 00:19, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 21:56 and now it is 00:19, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 21:56 and now it is 00:19, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "143"
+  },
+  "121": {
+    "no_insertion": "If I looked at the clock at 17:38 and now it is 19:48, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 17:38 and now it is 19:48, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 17:38 and now it is 19:48, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "130"
+  },
+  "122": {
+    "no_insertion": "If I looked at the clock at 14:46 and now it is 18:10, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 14:46 and now it is 18:10, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 14:46 and now it is 18:10, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "204"
+  },
+  "123": {
+    "no_insertion": "If I looked at the clock at 13:43 and now it is 16:21, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 13:43 and now it is 16:21, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 13:43 and now it is 16:21, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "158"
+  },
+  "124": {
+    "no_insertion": "If I looked at the clock at 00:22 and now it is 03:40, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 00:22 and now it is 03:40, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 00:22 and now it is 03:40, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "198"
+  },
+  "125": {
+    "no_insertion": "If I looked at the clock at 16:36 and now it is 19:22, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 16:36 and now it is 19:22, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 16:36 and now it is 19:22, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "166"
+  },
+  "126": {
+    "no_insertion": "If I looked at the clock at 06:17 and now it is 10:02, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 06:17 and now it is 10:02, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 06:17 and now it is 10:02, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "225"
+  },
+  "127": {
+    "no_insertion": "If I looked at the clock at 10:06 and now it is 13:45, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 10:06 and now it is 13:45, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 10:06 and now it is 13:45, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "219"
+  },
+  "128": {
+    "no_insertion": "If I looked at the clock at 17:02 and now it is 19:08, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 17:02 and now it is 19:08, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 17:02 and now it is 19:08, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "126"
+  },
+  "129": {
+    "no_insertion": "If I looked at the clock at 15:17 and now it is 17:43, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 15:17 and now it is 17:43, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:17 and now it is 17:43, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "146"
+  },
+  "130": {
+    "no_insertion": "If I looked at the clock at 23:54 and now it is 03:11, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 23:54 and now it is 03:11, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 23:54 and now it is 03:11, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "197"
+  },
+  "131": {
+    "no_insertion": "If I looked at the clock at 00:50 and now it is 04:22, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 00:50 and now it is 04:22, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 00:50 and now it is 04:22, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "212"
+  },
+  "132": {
+    "no_insertion": "If I looked at the clock at 08:44 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 08:44 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 08:44 and now it is 11:33, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "169"
+  },
+  "133": {
+    "no_insertion": "If I looked at the clock at 21:34 and now it is 00:37, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 21:34 and now it is 00:37, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 21:34 and now it is 00:37, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "183"
+  },
+  "134": {
+    "no_insertion": "If I looked at the clock at 01:20 and now it is 04:49, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 01:20 and now it is 04:49, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 01:20 and now it is 04:49, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "209"
+  },
+  "135": {
+    "no_insertion": "If I looked at the clock at 05:55 and now it is 09:16, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 05:55 and now it is 09:16, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 05:55 and now it is 09:16, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "201"
+  },
+  "136": {
+    "no_insertion": "If I looked at the clock at 15:26 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 15:26 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 15:26 and now it is 18:28, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "182"
+  },
+  "137": {
+    "no_insertion": "If I looked at the clock at 14:36 and now it is 17:19, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 14:36 and now it is 17:19, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 14:36 and now it is 17:19, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "163"
+  },
+  "138": {
+    "no_insertion": "If I looked at the clock at 06:15 and now it is 09:39, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 06:15 and now it is 09:39, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 06:15 and now it is 09:39, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "204"
+  },
+  "139": {
+    "no_insertion": "If I looked at the clock at 13:21 and now it is 16:45, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 13:21 and now it is 16:45, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 13:21 and now it is 16:45, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "204"
+  },
+  "140": {
+    "no_insertion": "If I looked at the clock at 20:39 and now it is 23:38, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 20:39 and now it is 23:38, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 20:39 and now it is 23:38, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "179"
+  },
+  "141": {
+    "no_insertion": "If I looked at the clock at 07:04 and now it is 11:04, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 07:04 and now it is 11:04, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 07:04 and now it is 11:04, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "240"
+  },
+  "142": {
+    "no_insertion": "If I looked at the clock at 15:47 and now it is 18:57, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never understood why we don't use decimal time. If I looked at the clock at 15:47 and now it is 18:57, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 15:47 and now it is 18:57, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "190"
+  },
+  "143": {
+    "no_insertion": "If I looked at the clock at 22:11 and now it is 01:44, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 22:11 and now it is 01:44, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 22:11 and now it is 01:44, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "213"
+  },
+  "144": {
+    "no_insertion": "If I looked at the clock at 18:15 and now it is 20:42, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 18:15 and now it is 20:42, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Blue whales weigh a lot. If I looked at the clock at 18:15 and now it is 20:42, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "147"
+  },
+  "145": {
+    "no_insertion": "If I looked at the clock at 01:04 and now it is 03:07, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 01:04 and now it is 03:07, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 01:04 and now it is 03:07, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "123"
+  },
+  "146": {
+    "no_insertion": "If I looked at the clock at 09:01 and now it is 12:10, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I never know if my watch is running fast. If I looked at the clock at 09:01 and now it is 12:10, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Sunflowers grew tall this year. If I looked at the clock at 09:01 and now it is 12:10, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "189"
+  },
+  "147": {
+    "no_insertion": "If I looked at the clock at 00:37 and now it is 04:17, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "Time really flies during lunch break. If I looked at the clock at 00:37 and now it is 04:17, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "My cousin plays the violin. If I looked at the clock at 00:37 and now it is 04:17, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "220"
+  },
+  "148": {
+    "no_insertion": "If I looked at the clock at 10:52 and now it is 14:36, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "The clock in my kitchen always shows different times. If I looked at the clock at 10:52 and now it is 14:36, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "Japan has many islands. If I looked at the clock at 10:52 and now it is 14:36, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "224"
+  },
+  "149": {
+    "no_insertion": "If I looked at the clock at 17:08 and now it is 19:24, how many minutes (e.g., 15, 23) have gone by?",
+    "similar_insertion": "I should get my clock battery replaced soon. If I looked at the clock at 17:08 and now it is 19:24, how many minutes (e.g., 15, 23) have gone by?",
+    "dissimilar_insertion": "The recipe uses basil. If I looked at the clock at 17:08 and now it is 19:24, how many minutes (e.g., 15, 23) have gone by?",
+    "answer": "136"
+  }
+}

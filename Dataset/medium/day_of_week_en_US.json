@@ -1,0 +1,902 @@
+{
+  "0": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-26?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-26?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-26?",
+    "answer": "Tuesday"
+  },
+  "1": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-23?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-23?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-23?",
+    "answer": "Sunday"
+  },
+  "2": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-04?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-04?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-04?",
+    "answer": "Tuesday"
+  },
+  "3": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-13?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-13?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-13?",
+    "answer": "Saturday"
+  },
+  "4": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-31?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-31?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-31?",
+    "answer": "Thursday"
+  },
+  "5": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-18?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-18?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-18?",
+    "answer": "Thursday"
+  },
+  "6": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-10?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-10?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-10?",
+    "answer": "Wednesday"
+  },
+  "7": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-24?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-24?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-24?",
+    "answer": "Tuesday"
+  },
+  "8": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-02?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-02?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-02?",
+    "answer": "Thursday"
+  },
+  "9": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-02?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-02?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-02?",
+    "answer": "Monday"
+  },
+  "10": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-08?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-08?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-08?",
+    "answer": "Wednesday"
+  },
+  "11": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-19?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-19?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-19?",
+    "answer": "Wednesday"
+  },
+  "12": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-13?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-13?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-13?",
+    "answer": "Saturday"
+  },
+  "13": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-26?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-26?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-26?",
+    "answer": "Sunday"
+  },
+  "14": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-09?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-09?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-09?",
+    "answer": "Tuesday"
+  },
+  "15": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-05?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-05?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-05?",
+    "answer": "Saturday"
+  },
+  "16": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-22?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-22?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-22?",
+    "answer": "Sunday"
+  },
+  "17": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-25?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-25?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-25?",
+    "answer": "Monday"
+  },
+  "18": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-02?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-02?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-02?",
+    "answer": "Sunday"
+  },
+  "19": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-26?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-26?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-26?",
+    "answer": "Saturday"
+  },
+  "20": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-12?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-12?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-12?",
+    "answer": "Friday"
+  },
+  "21": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-03?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-03?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-03?",
+    "answer": "Thursday"
+  },
+  "22": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-14?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-14?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-14?",
+    "answer": "Saturday"
+  },
+  "23": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-08?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-08?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-08?",
+    "answer": "Monday"
+  },
+  "24": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-02?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-02?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-02?",
+    "answer": "Monday"
+  },
+  "25": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-24?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-24?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-24?",
+    "answer": "Monday"
+  },
+  "26": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-12?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-12?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-12?",
+    "answer": "Saturday"
+  },
+  "27": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-05-31?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2026-05-31?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2026-05-31?",
+    "answer": "Sunday"
+  },
+  "28": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-20?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-20?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-20?",
+    "answer": "Saturday"
+  },
+  "29": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-16?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-16?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-16?",
+    "answer": "Tuesday"
+  },
+  "30": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-04?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-04?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-04?",
+    "answer": "Saturday"
+  },
+  "31": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-27?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-27?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-27?",
+    "answer": "Monday"
+  },
+  "32": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-24?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-24?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-24?",
+    "answer": "Tuesday"
+  },
+  "33": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-19?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-19?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-19?",
+    "answer": "Wednesday"
+  },
+  "34": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-04-18?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-04-18?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2026-04-18?",
+    "answer": "Saturday"
+  },
+  "35": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-08?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-08?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-08?",
+    "answer": "Friday"
+  },
+  "36": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-02?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-02?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-02?",
+    "answer": "Saturday"
+  },
+  "37": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-20?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-20?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-20?",
+    "answer": "Monday"
+  },
+  "38": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-01?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-01?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-01?",
+    "answer": "Monday"
+  },
+  "39": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-03?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-03?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-03?",
+    "answer": "Wednesday"
+  },
+  "40": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-12?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-12?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-12?",
+    "answer": "Sunday"
+  },
+  "41": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-26?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-26?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-26?",
+    "answer": "Thursday"
+  },
+  "42": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-19?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-19?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-19?",
+    "answer": "Monday"
+  },
+  "43": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-23?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-23?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-23?",
+    "answer": "Monday"
+  },
+  "44": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-13?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-13?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-13?",
+    "answer": "Tuesday"
+  },
+  "45": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-07?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-07?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-07?",
+    "answer": "Monday"
+  },
+  "46": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-22?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-22?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-22?",
+    "answer": "Saturday"
+  },
+  "47": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-27?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-27?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-27?",
+    "answer": "Sunday"
+  },
+  "48": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-13?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-13?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-13?",
+    "answer": "Thursday"
+  },
+  "49": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-28?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-28?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-08-28?",
+    "answer": "Thursday"
+  },
+  "50": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-15?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-15?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-15?",
+    "answer": "Sunday"
+  },
+  "51": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-21?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-21?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-21?",
+    "answer": "Thursday"
+  },
+  "52": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-15?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-15?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-15?",
+    "answer": "Saturday"
+  },
+  "53": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-29?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-29?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-29?",
+    "answer": "Tuesday"
+  },
+  "54": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-23?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-23?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-23?",
+    "answer": "Monday"
+  },
+  "55": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-13?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-13?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-13?",
+    "answer": "Monday"
+  },
+  "56": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-09?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-09?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-09?",
+    "answer": "Tuesday"
+  },
+  "57": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-28?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-28?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-28?",
+    "answer": "Tuesday"
+  },
+  "58": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-23?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-23?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-23?",
+    "answer": "Saturday"
+  },
+  "59": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-01?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-01?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-01?",
+    "answer": "Saturday"
+  },
+  "60": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-07?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-07?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-07?",
+    "answer": "Thursday"
+  },
+  "61": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-27?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-27?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-27?",
+    "answer": "Tuesday"
+  },
+  "62": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-04?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-04?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-04?",
+    "answer": "Wednesday"
+  },
+  "63": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-28?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-28?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-08-28?",
+    "answer": "Saturday"
+  },
+  "64": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-10-20?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2026-10-20?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2026-10-20?",
+    "answer": "Tuesday"
+  },
+  "65": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-09?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-09?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-04-09?",
+    "answer": "Wednesday"
+  },
+  "66": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-17?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-17?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-03-17?",
+    "answer": "Friday"
+  },
+  "67": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-04-11?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-04-11?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-04-11?",
+    "answer": "Sunday"
+  },
+  "68": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-01?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-01?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-01?",
+    "answer": "Sunday"
+  },
+  "69": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-01?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-01?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-01?",
+    "answer": "Saturday"
+  },
+  "70": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-11?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-11?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-11?",
+    "answer": "Friday"
+  },
+  "71": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-02?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-02?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-02?",
+    "answer": "Friday"
+  },
+  "72": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-14?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-14?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-14?",
+    "answer": "Tuesday"
+  },
+  "73": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-30?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-30?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-30?",
+    "answer": "Thursday"
+  },
+  "74": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-23?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-23?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2026-03-23?",
+    "answer": "Monday"
+  },
+  "75": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-03?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-03?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-03?",
+    "answer": "Sunday"
+  },
+  "76": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-21?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-21?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-21?",
+    "answer": "Thursday"
+  },
+  "77": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-24?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-24?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-24?",
+    "answer": "Sunday"
+  },
+  "78": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-08?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-08?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-08?",
+    "answer": "Monday"
+  },
+  "79": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-09?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-09?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-09?",
+    "answer": "Wednesday"
+  },
+  "80": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-13?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-13?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-13?",
+    "answer": "Saturday"
+  },
+  "81": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-04?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-04?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-01-04?",
+    "answer": "Monday"
+  },
+  "82": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-07?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-07?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-07?",
+    "answer": "Sunday"
+  },
+  "83": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-17?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-17?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-17?",
+    "answer": "Friday"
+  },
+  "84": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-08?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-08?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-08?",
+    "answer": "Wednesday"
+  },
+  "85": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-26?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-26?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-26?",
+    "answer": "Wednesday"
+  },
+  "86": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-09?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-09?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-09?",
+    "answer": "Wednesday"
+  },
+  "87": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-30?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-30?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-30?",
+    "answer": "Wednesday"
+  },
+  "88": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-01?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-01?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-06-01?",
+    "answer": "Tuesday"
+  },
+  "89": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-15?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-15?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-15?",
+    "answer": "Saturday"
+  },
+  "90": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-15?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-15?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-09-15?",
+    "answer": "Monday"
+  },
+  "91": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-20?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-20?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-20?",
+    "answer": "Sunday"
+  },
+  "92": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-30?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-30?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-30?",
+    "answer": "Wednesday"
+  },
+  "93": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-01?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-01?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-01?",
+    "answer": "Wednesday"
+  },
+  "94": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-11-19?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-11-19?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-11-19?",
+    "answer": "Wednesday"
+  },
+  "95": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-27?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-27?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-27?",
+    "answer": "Thursday"
+  },
+  "96": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-08?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-08?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-08?",
+    "answer": "Tuesday"
+  },
+  "97": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-08?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-08?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-08?",
+    "answer": "Saturday"
+  },
+  "98": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-19?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-19?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-19?",
+    "answer": "Thursday"
+  },
+  "99": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-19?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-19?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-19?",
+    "answer": "Saturday"
+  },
+  "100": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-02?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-02?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-11-02?",
+    "answer": "Monday"
+  },
+  "101": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-17?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-17?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-02-17?",
+    "answer": "Thursday"
+  },
+  "102": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-30?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-30?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-30?",
+    "answer": "Tuesday"
+  },
+  "103": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-16?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-16?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-16?",
+    "answer": "Thursday"
+  },
+  "104": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-04?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-04?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-04?",
+    "answer": "Sunday"
+  },
+  "105": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-01?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-01?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-01?",
+    "answer": "Sunday"
+  },
+  "106": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-27?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-27?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-27?",
+    "answer": "Saturday"
+  },
+  "107": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-30?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-30?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-12-30?",
+    "answer": "Thursday"
+  },
+  "108": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-15?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-15?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2027-10-15?",
+    "answer": "Friday"
+  },
+  "109": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-08?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-08?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-05-08?",
+    "answer": "Thursday"
+  },
+  "110": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-25?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-25?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-10-25?",
+    "answer": "Saturday"
+  },
+  "111": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-10?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-10?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-07-10?",
+    "answer": "Monday"
+  },
+  "112": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-15?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-15?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-15?",
+    "answer": "Friday"
+  },
+  "113": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-28?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-28?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2026-09-28?",
+    "answer": "Monday"
+  },
+  "114": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-04?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-04?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-07-04?",
+    "answer": "Friday"
+  },
+  "115": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-06?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-06?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-06?",
+    "answer": "Saturday"
+  },
+  "116": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-06?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-06?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-04-06?",
+    "answer": "Thursday"
+  },
+  "117": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-10?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-10?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-03-10?",
+    "answer": "Monday"
+  },
+  "118": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-07?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-07?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-07?",
+    "answer": "Tuesday"
+  },
+  "119": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-10?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-10?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-10?",
+    "answer": "Wednesday"
+  },
+  "120": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-28?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-28?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-28?",
+    "answer": "Sunday"
+  },
+  "121": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-06?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-06?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-06-06?",
+    "answer": "Saturday"
+  },
+  "122": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-23?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-23?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-23?",
+    "answer": "Sunday"
+  },
+  "123": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-05?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-05?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-12-05?",
+    "answer": "Tuesday"
+  },
+  "124": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-23?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-23?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2026-12-23?",
+    "answer": "Wednesday"
+  },
+  "125": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-25?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-25?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2028-01-25?",
+    "answer": "Tuesday"
+  },
+  "126": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-26?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-26?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-26?",
+    "answer": "Thursday"
+  },
+  "127": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-24?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-24?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-24?",
+    "answer": "Wednesday"
+  },
+  "128": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-20?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-20?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-06-20?",
+    "answer": "Tuesday"
+  },
+  "129": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-13?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-13?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-09-13?",
+    "answer": "Wednesday"
+  },
+  "130": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-07?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-07?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-05-07?",
+    "answer": "Sunday"
+  },
+  "131": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-20?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-20?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-20?",
+    "answer": "Monday"
+  },
+  "132": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-27?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-27?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-01-27?",
+    "answer": "Monday"
+  },
+  "133": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-29?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-29?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-05-29?",
+    "answer": "Saturday"
+  },
+  "134": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-17?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-17?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-17?",
+    "answer": "Wednesday"
+  },
+  "135": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-02?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-02?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2025-12-02?",
+    "answer": "Tuesday"
+  },
+  "136": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-15?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-15?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2026-02-15?",
+    "answer": "Sunday"
+  },
+  "137": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-11?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-11?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-09-11?",
+    "answer": "Saturday"
+  },
+  "138": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-19?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-19?",
+    "dissimilar_insertion": "That documentary was fascinating. What day of the week (e.g., Monday, Tuesday, ...) is 2025-06-19?",
+    "answer": "Thursday"
+  },
+  "139": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-06?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-06?",
+    "dissimilar_insertion": "Ocean waves crash on rocks. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-06?",
+    "answer": "Saturday"
+  },
+  "140": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-27?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-27?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2025-02-27?",
+    "answer": "Thursday"
+  },
+  "141": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-06?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-06?",
+    "dissimilar_insertion": "The wooden chair needs paint. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-06?",
+    "answer": "Monday"
+  },
+  "142": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-29?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-29?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-11-29?",
+    "answer": "Monday"
+  },
+  "143": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-10?",
+    "similar_insertion": "September always reminds me of fall leaves. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-10?",
+    "dissimilar_insertion": "Solar panels need sunlight. What day of the week (e.g., Monday, Tuesday, ...) is 2027-03-10?",
+    "answer": "Wednesday"
+  },
+  "144": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-12?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-12?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-11-12?",
+    "answer": "Sunday"
+  },
+  "145": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-04?",
+    "similar_insertion": "I prefer knowing weekdays for planning purposes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-04?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-04?",
+    "answer": "Saturday"
+  },
+  "146": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-08?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-08?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2027-02-08?",
+    "answer": "Monday"
+  },
+  "147": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-16?",
+    "similar_insertion": "Calendar dates can be so confusing sometimes. What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-16?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-01-16?",
+    "answer": "Friday"
+  },
+  "148": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-10?",
+    "similar_insertion": "The 22nd seems to come around faster each month. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-10?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2026-07-10?",
+    "answer": "Friday"
+  },
+  "149": {
+    "no_insertion": "What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-14?",
+    "similar_insertion": "I wonder if it will be a sunny day. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-14?",
+    "dissimilar_insertion": "My grandmother uses fresh basil. What day of the week (e.g., Monday, Tuesday, ...) is 2028-10-14?",
+    "answer": "Saturday"
+  }
+}
