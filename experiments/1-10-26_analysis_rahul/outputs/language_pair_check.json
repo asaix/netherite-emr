@@ -1,0 +1,50 @@
+{
+  "questions": 3089,
+  "checks": {
+    "question_has_12_records_in_both_languages": {
+      "checked": 3089,
+      "failed": 0,
+      "examples": []
+    },
+    "gold_answer_same_in_en_and_hi_and_across_all_12_records": {
+      "checked": 3089,
+      "failed": 0,
+      "examples": []
+    },
+    "numbers_in_no_insertion_question_same_in_en_and_hi_ignoring_order": {
+      "checked": 3089,
+      "failed": 0,
+      "examples": []
+    },
+    "prompt_ends_with_no_insertion_question": {
+      "checked": 37068,
+      "failed": 0,
+      "examples": []
+    },
+    "prompt_tail_same_for_direct_and_cot": {
+      "checked": 18534,
+      "failed": 0,
+      "examples": []
+    },
+    "distractor_numbers_months_weekdays_same_in_en_and_hi": {
+      "checked": 6178,
+      "failed": 0,
+      "examples": []
+    },
+    "similar_insertion_distractor_pairing_is_one_to_one": {
+      "distinct_en_distractors": 35,
+      "distinct_hi_distractors": 35,
+      "en_with_several_hi": 0,
+      "hi_with_several_en": 0,
+      "examples": {}
+    },
+    "dissimilar_insertion_distractor_pairing_is_one_to_one": {
+      "distinct_en_distractors": 43,
+      "distinct_hi_distractors": 43,
+      "en_with_several_hi": 0,
+      "hi_with_several_en": 0,
+      "examples": {}
+    }
+  },
+  "all_passed": true
+}

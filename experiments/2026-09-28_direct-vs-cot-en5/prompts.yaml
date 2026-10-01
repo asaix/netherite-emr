@@ -1,8 +1,0 @@
-direct_en_en_v1: |
-  Answer the following Question and provide an answer after the Answer keyword. When needed, use machine format, YYYY-MM-DD or HH:MM. Do not add further explanations or comments.
-
-  {question}
-cot_en_en_v1: |
-  Solve the following Question reasoning through step by step. At the end, write the final answer after the Answer keyword, using machine format YYYY-MM-DD or HH:MM.
-
-  {question}
