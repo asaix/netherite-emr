@@ -1,0 +1,13 @@
+language,condition,insertion,responses,scored,accuracy,cot_ratio_avg,cot_ratio_pooled
+en_US,cot,dissimilar_insertion,3089,3015,0.9117744610281924,1.0,1.0
+en_US,cot,no_insertion,3089,2998,0.9156104069379586,1.0,1.0
+en_US,cot,similar_insertion,3089,2974,0.9061869535978481,1.0,1.0
+en_US,direct,dissimilar_insertion,3089,3088,0.626619170984456,,
+en_US,direct,no_insertion,3089,3088,0.6389248704663213,,
+en_US,direct,similar_insertion,3089,3075,0.6295934959349594,,
+hi_IN,cot,dissimilar_insertion,3089,3073,0.6267491051090139,0.9923161236484249,0.989768809945762
+hi_IN,cot,no_insertion,3089,3060,0.6519607843137255,0.9874201787454342,0.9734136678771872
+hi_IN,cot,similar_insertion,3089,3066,0.6073059360730594,0.9910648067503074,0.9865868022900136
+hi_IN,direct,dissimilar_insertion,3089,3089,0.5772094528973778,,
+hi_IN,direct,no_insertion,3089,3089,0.5739721592748462,,
+hi_IN,direct,similar_insertion,3089,3089,0.5810942052444157,,

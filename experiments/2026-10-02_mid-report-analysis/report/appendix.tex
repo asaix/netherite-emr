@@ -1,0 +1,26 @@
+\section{Odds-Ratio Analyses of CoT Traces}
+\label{app:or}
+
+We relate three properties of CoT traces to answer correctness: mentioning the distractor, drifting into English, and containing a verification step. Pooled comparisons are misleading here, because tasks differ in both accuracy and how often each property occurs, and pooled comparisons can reverse \citep{simpson-1951-interpretation}; this happens for drift and for verification. We therefore compare traces with and without the property within each task and difficulty, and combine these groups with a Mantel--Haenszel odds ratio (OR) \citep{mantel-haenszel-1959-statistical}, using only groups that contain traces of both kinds. An OR of 1 means no difference; an OR above 1 means that traces with the property are more often correct, and an OR below 1 that they are less often correct. Square brackets give 95\% CIs.
+
+\subsection{Distractor Mentions}
+\label{app:mention}
+
+\input{tables/mention_or}
+
+Table~\ref{tab:mention-or} compares CoT traces that mention the distractor (Section~\ref{sec:distraction}) with traces that do not. Traces that mention the time-related distractor have about \EnMentionSimOddsDrop{}\% (English) and \HiMentionSimOddsDrop{}\% (Hindi) lower odds of a correct answer, and both intervals lie below 1. For the unrelated distractor both intervals include 1, so mentioning it is not linked to accuracy: the model brings it up and then ignores it.
+
+\subsection{Language Drift}
+\label{app:drift}
+
+Section~\ref{sec:traces} compares drifting Hindi CoT traces (target-language ratio below 0.9) with the other Hindi CoT traces. Drifting traces are concentrated in the hardest tasks, so they look less accurate when pooled. Within task and difficulty, over the \DriftStrata{} groups that contain both kinds of trace, the OR is \DriftOR{} [\DriftORLo{}, \DriftORHi{}] (\DriftP{}): a drifting trace has about twice the odds of a correct answer. This comparison is observational; drifting may accompany easier instances within a task rather than cause correct answers, which the cross-lingual prompting condition will test directly.
+
+\subsection{Verification Steps}
+\label{app:verification}
+
+English traces with a verification step look less accurate when pooled (\VerAccWith{}\% vs.\ \VerAccWithout{}\%), but verification is concentrated in the hardest tasks: it appears in \VerDowN{} of the \VerDowTotal{} graded English day-of-week traces. Within task and difficulty, the OR is \VerOR{} [\VerORLo{}, \VerORHi{}] (\VerP{}). The interval includes 1, so verifying makes no clear difference to accuracy, and the much higher rate of verification in English (\EnVerification{}\% vs.\ \HiVerification{}\%) does not explain the English advantage.
+
+\section{Error Types}
+\label{app:errors}
+
+\input{figures/error_types_float}

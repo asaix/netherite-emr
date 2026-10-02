@@ -1,0 +1,217 @@
+% Netherite mid submission. Based on the official ACL LuaLaTeX/XeLaTeX template (acl_lualatex.tex).
+% Compile with LuaLaTeX or XeLaTeX (the text contains Devanagari), not pdfLaTeX.
+\documentclass[11pt]{article}
+
+\usepackage[final]{acl}
+
+\usepackage{microtype}
+\usepackage[english,bidi=default]{babel}
+\babelfont{rm}{TeXGyreTermesX}
+\babelprovide[import, hyphenrules=nohyphenation]{hindi}
+\IfFontExistsTF{Lohit Devanagari}
+  {\babelfont[*devanagari]{rm}{Lohit Devanagari}}
+  {\babelfont[*devanagari]{rm}{Kohinoor Devanagari}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\input{tables/macros}
+
+\title{Evaluating Multilingual Reasoning through a Chain-of-Thought Lens}
+
+\author{
+  Aayush Batra \quad Aditya Sai \quad Rahul Kannan \quad Shaurya Kochar \\[0.4em]
+  Team Netherite \\
+  International Institute of Information Technology, Hyderabad, India
+}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Does asking a large language model to think step by step help it reason about time, and does the answer change across languages? We study this with Sarvam-105B on the Temporal Reasoning Dataset (TRD), comparing direct answers with chain-of-thought (CoT) prompting in English and Hindi, with and without controlled distractor sentences. On 3,089 questions answered in all twelve conditions, CoT raises English accuracy by 27.9 percentage points but Hindi accuracy by only 5.1, and it significantly lowers Hindi accuracy on two tasks. The English-Hindi gap under CoT widens with difficulty, and distractors make CoT more fragile only in Hindi, whose reasoning traces often weave the distractor into the solution. Hindi traces stay in Hindi, are shorter, rarely check their work, and fail on different questions from English traces. We describe the problem, related work, our pipeline, the progress so far, and a timeline for the remaining conditions: Hinglish reasoning, cross-lingual prompting, and a structural comparison of English and Hindi traces.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Chain-of-thought (CoT) prompting asks a large language model (LLM) to write out intermediate steps before giving an answer. Surveys describe CoT as a way to break a difficult problem into smaller pieces, and asking for explicit steps can improve multi-step reasoning \citep{wei-etal-2022-chain,huang-chang-2023-towards}. We use ``reasoning trace'' to mean the text the model generates, and we do not assume that this text is a transparent record of its internal computation \citep{turpin-etal-2023-unfaithful}.
+
+The language matters too. The MGSM study found that multilingual models can solve reasoning problems in many languages, but English intermediate steps often perform as well as or better than steps written in the language of the question \citep{shi-etal-2023-mgsm}. That leads to a practical question: if we ask the model to reason in Hindi, does it reason as well as it does in English, and does it get there the same way?
+
+We study this question on temporal reasoning, using the Temporal Reasoning Dataset (TRD) of \citet{mazzia-etal-2026-benchmarking}. TRD generates date and time problems in ten languages at controlled difficulty, and can prepend a distractor sentence to any question. Some distractors relate to time (``I always get confused with months that have 31 days''), while others have nothing to do with the question, such as a sentence about someone buying a motorcycle. This gives us a direct test of our main idea:
+\begin{quote}
+If a model can ignore the motorcycle when it answers directly, does making it think step by step give the motorcycle more chances to enter its reasoning and derail the answer?
+\end{quote}
+TRD evaluates its benchmark without CoT, telling the model not to add explanations, and explicitly leaves the effect of CoT on temporal reasoning for future work \citep{mazzia-etal-2026-benchmarking}. We investigate that missing condition, in English and Hindi, with Sarvam-105B \citep{sarvam-2026-models}.
+
+\section{Problem Statement}
+\label{sec:problem}
+
+We work with one model, Sarvam-105B, and TRD problems whose answers have a fixed, machine-readable form: a date (YYYY-MM-DD), a clock time (HH:MM), a whole number of days or minutes, a pair of dates for an interval, or a weekday name. Every gold answer has a known form, so responses can be scored automatically.
+
+We vary four things. The question is given in English or Hindi. The distractor is absent, a sentence about time, or a sentence about something unrelated. The prompt is \emph{direct}, which asks only for the answer, or \emph{CoT}, which asks the model to reason step by step; a third prompt, the cross-lingual prompting (CLP) of \citet{qin-etal-2023-cross}, is planned. Whenever we ask for step-by-step reasoning we also choose the language the model should reason in: so far the question's own language, and in the remaining work Hinglish as well. Running the model on one problem gives back the final answer and, in every condition except direct, a reasoning trace.
+
+From the answers we read off differences in accuracy. The \emph{CoT delta} is the change in accuracy when CoT replaces direct answering; a positive delta means step-by-step reasoning helped. The \emph{distraction drop} is how much accuracy falls when a distractor is added. The quantity we care about most combines the two: the \emph{CoT distraction penalty}, the distraction drop under CoT minus the distraction drop under direct answering. If it is positive, thinking out loud gives the distractor room to creep into the answer. We also track the \emph{English--Hindi gap}, English accuracy minus Hindi accuracy, at each difficulty level.
+
+The traces let us look past the final answer. We record how much of a Hindi trace stays in Hindi with the target-language ratio (TLR; Section~\ref{sec:setup}), whether the trace mentions the distractor, and how its final answer relates to its reasoning. In the remaining work we will turn each trace into a short sequence of step types, such as identify a date, add a duration, or check a constraint, and compare the English and Hindi sequences for the same problem. The \emph{reasoning divergence score} (RDS) is the normalised edit distance between the two sequences, so that $0$ means the same structure and $1$ means they share nothing. A logistic regression that predicts whether an answer is wrong from its RDS, difficulty and language will test whether taking a different route goes with more errors.
+
+We ask four questions. (1) Does CoT help, and does that depend on language and difficulty? (2) Does CoT make distractors more harmful, and does that differ by distractor type or language? (3) How does reasoning in Hinglish change accuracy and trace structure? (4) Does CLP beat Hindi CoT and bring Hindi reasoning closer to English? This report answers the first two.
+
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{CoT, and when it stops helping.}
+\citet{wei-etal-2022-chain} introduced CoT prompting by adding worked examples whose solutions show a chain of natural-language steps; gains appeared mainly in very large models such as PaLM 540B. \citet{kojima2022large} then showed that the examples are not needed: appending ``Let's think step by step'' and running a second prompt to extract the answer raised text-davinci-002 from 17.7\% to 78.7\% on MultiArith and from 10.4\% to 40.7\% on GSM8K. We use this zero-shot form, since TRD has no worked solutions. \citet{wang2023selfconsistency} kept the CoT prompt but sampled several paths and took a majority vote, improving GSM8K by 17.9\%; CLP's ensemble variant reuses that idea. \citet{sprague2025cot} combined a meta-analysis of over 100 papers with their own runs on 20 datasets and 14 models, and found that CoT helps mainly on math and symbolic problems, with most of the benefit coming from executing symbolic steps rather than planning them. \citet{liu2025mind} took six tasks where thinking out loud makes humans worse and showed that models degrade in the same way, with o1-preview losing up to 36.3\% against GPT-4o answering directly. TRD's reasoning tasks are date arithmetic, so the first paper predicts that CoT should help there, while its memorisation tasks look more like recall. Neither lets us assume that CoT always helps.
+
+\paragraph{Distractors and irrelevant context.}
+\citet{shi-etal-2023-distracted} built GSM-IC by adding one irrelevant sentence to GSM8K problems, varying its topic, whether it reused a name, and which numbers it carried. Accuracy fell sharply under CoT, zero-shot CoT, least-to-most and program prompting, and self-consistency and an explicit instruction to ignore irrelevant information both helped. \citet{mirzadeh2025gsmsymbolic} turned GSM8K into symbolic templates so that names and numbers could be resampled, and found accuracy moving between versions of the same question and falling as clauses were added; their GSM-NoOp clause, which looks relevant but changes nothing, cost up to 65\%. Neither compares CoT on and off under the same distractor, and both work in English.
+
+\paragraph{Reasoning across languages.}
+\citet{shi-etal-2023-mgsm} built MGSM by translating 250 GSM8K problems into ten languages and comparing direct answers, native-language CoT, English CoT and translate-test; English CoT usually matched or beat native CoT. Hindi is not in MGSM, which is one reason we work with TRD. \citet{qin-etal-2023-cross} proposed cross-lingual prompting (CLP): a first stage asks the model to act as an expert in multilingual understanding and to work through the request step by step in a target language, usually English, and a second stage asks it to solve the task from its own restatement. Cross-lingual self-consistent prompting (CLSP) runs the first stage in several languages and votes over the answers. \citet{huang-etal-2023-languages} packed the same idea into one cross-lingual-thought template and narrowed the gap between languages. \citet{lai-nissim-2024-mcot} found that open models do not answer the same math problem consistently across languages and instruction-tuned a 7B model on about 6.3M CoT samples in eleven languages, though Hindi is not among them. For English-centric reasoning models, \citet{yong2025crosslingual} found that more test-time thinking improves multilingual math enough to beat models twice their size, with traces that stay mostly English and quote the non-English input; models reason better in high-resource languages.
+
+\paragraph{Language drift, temporal benchmarks, and trace comparison.}
+Models seem to pivot through English internally: Llama-2's middle layers decode more readily to English than to the input language \citep{wendler-etal-2024-llamas}, and \citet{zhao2024handle} describe an understand--solve--respond workflow supported by language-specific neurons. On the output side, \citet{marchisio-etal-2024-understanding} counted how often models answer in the wrong language and found serious confusion in several strong models, and \citet{qi-etal-2025-models} saw the same in reasoning traces: leading models fall back to English, and prompts that force the user's language improve readability but cost accuracy. Our target-language ratio measures whether the model's reasoning stayed in the given language or not. Temporal reasoning has its own benchmarks, including TimeQA, TempReason, MenatQA, TRAM, TimeBench and Test of Time \citep{chen2021timeqa,tan-etal-2023-towards,wei-etal-2023-menatqa,wang-zhao-2024-tram,chu-etal-2024-timebench,fatemi2025test}, but they are English-only and none uses controlled distractors. Code-mixing has benchmarks, including Hindi--English ones \citep{khanuja-etal-2020-gluecos,aguilar-etal-2020-lince,yang-chai-2025-codemixbench}, and code-mixed few-shot examples add to CoT gains \citep{shankar-etal-2024-context}, but we found no study of CoT traces written in Hinglish, so we keep that condition exploratory. Finally, ROSCOE and ReCEval score reasoning chains step by step \citep{golovneva2023roscoe,prasad-etal-2023-receval}, but both lean on English text models, so instead of scoring quality we will reduce each step to a language-independent type and compare sequences with edit distance \citep{levenshtein1966binary}.
+
+\paragraph{The gap.}
+As Table~\ref{tab:gap} shows, no study has measured how CoT, distraction and language interact on the same problems, or compared the structure of English and Hindi traces for them; TRD provides the problems but leaves CoT out.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Work & Multi. & Temp. & CoT & Distr. & Trace \\
+\midrule
+\citet{wei-etal-2022-chain} & -- & $\circ$ & \checkmark & -- & -- \\
+\citet{sprague2025cot} & -- & -- & \checkmark & -- & -- \\
+\citet{shi-etal-2023-distracted} & -- & -- & \checkmark & \checkmark & -- \\
+\citet{mirzadeh2025gsmsymbolic} & -- & -- & \checkmark & \checkmark & -- \\
+\citet{shi-etal-2023-mgsm} & \checkmark & -- & \checkmark & -- & -- \\
+\citet{qin-etal-2023-cross} & \checkmark & -- & \checkmark & -- & -- \\
+\citet{qi-etal-2025-models} & \checkmark & -- & \checkmark & -- & $\circ$ \\
+\citet{golovneva2023roscoe} & -- & -- & \checkmark & -- & \checkmark \\
+\citet{chu-etal-2024-timebench} & -- & \checkmark & \checkmark & -- & -- \\
+\citet{mazzia-etal-2026-benchmarking} & \checkmark & \checkmark & -- & \checkmark & -- \\
+\midrule
+Ours & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\caption{Prior work by multilinguality (Multi.), temporal focus (Temp.), CoT, distractors (Distr.) and trace-level analysis (Trace); $\circ$ means partly covered.}
+\label{tab:gap}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\footnotesize,
+              minimum height=0.95cm, text width=1.82cm, inner sep=2pt, fill=gray!10},
+  plan/.style={box, dashed, fill=white},
+  arr/.style={-{Stealth[length=1.8mm]}, thick},
+  node distance=0.45cm and 0.28cm]
+\node[box] (trd) {TRD question\\and gold answer};
+\node[box, right=of trd] (lang) {Language\\EN / HI};
+\node[box, right=of lang] (dist) {Distractor:\\none / time /\\unrelated};
+\node[box, right=of dist] (prompt) {Prompt:\\direct / CoT};
+\node[box, right=of prompt] (model) {Sarvam-105B};
+\node[box, right=of model] (ext) {Last \texttt{Answer:}\\line, parsed};
+\node[box, right=of ext] (acc) {Accuracy, delta,\\penalty, gap};
+\node[plan, below=of dist] (planprompt) {Planned: CLP,\\Hinglish};
+\node[box, below=of prompt] (tlr) {TLR, mention,\\error types};
+\node[box, below=of model] (trace) {Reasoning\\trace};
+\node[plan, below=of ext] (tag) {Step-type\\tagging};
+\node[plan, below=of acc] (rds) {RDS $\rightarrow$\\logistic $P(\mathrm{err})$};
+\draw[arr] (trd) -- (lang);
+\draw[arr] (lang) -- (dist);
+\draw[arr] (dist) -- (prompt);
+\draw[arr] (prompt) -- (model);
+\draw[arr] (model) -- (ext);
+\draw[arr] (ext) -- (acc);
+\draw[arr] (model) -- (trace);
+\draw[arr] (trace) -- (tlr);
+\draw[arr, dashed] (planprompt.north east) -- (prompt.south west);
+\draw[arr, dashed] (trace) -- (tag);
+\draw[arr, dashed] (tag) -- (rds);
+\draw[arr, dashed] (acc) -- (rds);
+\end{tikzpicture}
+\caption{Our pipeline. Each TRD question is posed in English or Hindi, given a distractor, and wrapped in a direct or CoT prompt before Sarvam-105B answers it; the answer is scored and the trace analysed. Solid boxes are implemented and used in this report; dashed boxes are planned.}
+\label{fig:pipeline}
+\end{figure*}
+
+\section{Experimental Setup}
+\label{sec:setup}
+
+\paragraph{Data.}
+Figure~\ref{fig:pipeline} shows the pipeline. TRD has nine task types: date addition and subtraction, time addition and subtraction, date and time duration, date recurrence, interval date and day of week, which its authors group into three reasoning tasks (arithmetic, duration, recurrence) and two memorisation tasks (intervals, day of week). Five difficulty levels scale the offsets and spans involved, from \emph{short} to \emph{very very long}, and each question fills a carrier phrase written with native speakers, such as ``Today is [DATE], what is the date going to be in [N] days?'' \citep{mazzia-etal-2026-benchmarking}. We extend the TRD generator so that, for each task and level, it draws 150 questions (seed 9), each with a no-distractor, a time-related and an unrelated version taken from TRD's templates, and replays the same random draws for English and Hindi. The two languages therefore share dates, offsets, gold answers and distractor choice, and differ only in wording.
+
+\paragraph{Prompts and model.}
+Both prompts share one template. The direct prompt says ``Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer.'' The CoT prompt says ``Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in [language]; do not switch to another language at any point.'' Both then ask for the whole response in the question's language and for a final line of the form \texttt{Answer: <answer>} in a task-specific format, with the word \texttt{Answer:} kept in English and Western digits. We call \texttt{sarvam-105b}, a mixture-of-experts model built mainly for Indian languages, through Sarvam's API with greedy decoding (temperature 0, as in TRD), a 4,096-token output limit and the model's separate thinking mode turned off in both conditions, so that a direct answer really is direct and the CoT is the visible response.
+
+\paragraph{Scoring and trace measures.}
+We take the last \texttt{Answer:} line of a response, remove stray markdown and punctuation, convert Devanagari and Arabic-Indic digits to Western digits, and compare it with the gold answer by exact match, as TRD does; for day of week we compare the weekday itself, so that a Hindi or English spelling of the correct day both count. We measure language drift with the target-language ratio,
+\begin{equation}
+\mathrm{TLR}(t)=\frac{N_{\mathrm{hi}}(t)}{N_{\mathrm{hi}}(t)+N_{\mathrm{en}}(t)},
+\end{equation}
+where $N_{\mathrm{hi}}$ and $N_{\mathrm{en}}$ count the Devanagari and Latin-script words in trace $t$ outside the answer line; punctuation, symbols and digits count towards neither. For English traces the numerator counts English words instead. For Hinglish, where Hindi words are also written in Roman script, we will switch to word-level language identification.
+
+\section{Progress So Far}
+\label{sec:progress}
+
+\input{tables/coverage}
+
+\paragraph{Pipeline.}
+The solid boxes in Figure~\ref{fig:pipeline} are built and in use: the extended generator; an asynchronous runner that calls the Sarvam API in parallel, retries rate-limit and server errors with exponential back-off, and resumes an interrupted run without repeating finished requests; a scoring module for answer extraction, accuracy and the TLR; and analysis scripts for the measures and tests of Section~\ref{sec:analysis}. Every run is stored with a copy of its code, configuration and outputs.
+
+\paragraph{Runs.}
+Of the \NPlannedQuestions{} questions planned (nine tasks, five difficulty levels, 150 questions each), \NQuestions{} (\CoveragePct{}\%) have been answered in all 12 conditions (Table~\ref{tab:coverage}). The runs stopped when the API credit ran out, so the very-very-long level has not been run and some tasks are missing at the short, medium and long levels. We analyse only questions with all 12 responses, which keeps every comparison paired.
+
+\paragraph{Data checks.}
+We checked that the English and Hindi versions are parallel. For all \NQuestions{} questions the gold answer is identical across languages and all 12 records, the question numbers match across languages, the direct and CoT prompts share the same question, and every English distractor maps to exactly one Hindi distractor and back (35 time-related and 43 unrelated pairs).
+
+\input{analysis}
+
+\section{Timeline and Remaining Work}
+\label{sec:timeline}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{5.6cm}@{}}
+\toprule
+Week & Work \\
+\midrule
+5--11 Oct & Top up API credit; finish the missing short, medium and long runs (Table~\ref{tab:coverage}) and run the very-very-long level. \\
+\addlinespace[5pt]
+12--18 Oct & Hinglish reasoning condition and word-level language identification for its TLR; rerun Hindi date recurrence with a reworded question to test the template confound; start the rule-based step-type tagger. \\
+\addlinespace[5pt]
+19--25 Oct & CLP for Hindi questions, and CLSP with English and Hindi if time allows, compared with Hindi CoT; finish the step-type tagger and hand-tag a sample of traces to validate it and the mention, reuse and verification heuristics. \\
+\addlinespace[5pt]
+26--31 Oct & RDS and the logistic model $P(\mathrm{err})$ from RDS, difficulty and language; significance tests across all conditions; final analysis, report and viva preparation. \\
+\bottomrule
+\end{tabular}
+\caption{Timeline for the rest of the project (deadline 31 October).}
+\label{tab:timeline}
+\end{table}
+
+Table~\ref{tab:timeline} lists the remaining work. Completing the grid comes first; the new conditions follow in order of dependence, since Hinglish needs only a new instruction, CLP a second turn, and RDS a tagger validated by hand. 
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+On \NQuestions{} TRD questions answered in English and Hindi, with and without distractors, CoT helps Sarvam-105B far more in English than in Hindi, the gap grows with difficulty, and distractors harm CoT only in Hindi, where they often become part of the reasoning. The remaining work tests whether Hinglish reasoning or an English restatement closes this gap, and whether Hindi traces that diverge from English ones fail more.
+
+\section*{Limitations}
+
+All results come from one model, decoded greedily with one prompt template, so they describe this configuration rather than CoT in general. Our runs stopped early when the API credit ran out, so the data cover only four of the five TRD difficulty levels and not every task at every level; Figure~\ref{fig:difficulty} works around this by comparing levels only on tasks present at all of them. Three of our measures, whether a trace mentions the distractor, whether a wrong answer reuses it, and whether a trace verifies its work, are simple word-matching rules rather than human judgements. They can miss a paraphrased mention and can count a word that appears for an unrelated reason. The placebo rates estimate how often such accidental matches happen, and comparing within each task removes differences between tasks, but neither catches missed paraphrases; we will check a hand-labelled sample for the final report. Cut-off responses are excluded from accuracy and are concentrated in English CoT, but counting them as wrong changes no conclusion. Finally, the CLP, Hinglish and trace-structure conditions are not yet run, so the claims here are limited to direct answers and CoT in the question's own language.
+
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{appendix}
+
+\end{document}
