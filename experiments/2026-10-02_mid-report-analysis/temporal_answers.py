@@ -58,7 +58,7 @@ FEATURE_OF = {
 
 
 def load_records():
-    return json.load(open(HERE.parent / "1-10-26_analysis_rahul" / "merged_results.json", encoding="utf-8"))
+    return json.load(open(HERE.parent / "2026-10-01_analysis-rahul" / "merged_results.json", encoding="utf-8"))
 
 
 def normalise(text):

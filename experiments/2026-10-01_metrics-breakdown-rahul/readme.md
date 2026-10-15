@@ -1,5 +1,8 @@
 all the analysis in this folder is using metrics.py only. 
 
+input is `experiments/2026-10-01_analysis-rahul/merged_results.json` (rebuild it with `build_merged.py` there). from the repo root:
+`python3 metrics.py experiments/2026-10-01_analysis-rahul/merged_results.json --output experiments/2026-10-01_metrics-breakdown-rahul/outputs`
+
 
 by_task.csv : 364 dicarded because they were cut off at max_tokens. day of the week is the worst performing task.
 

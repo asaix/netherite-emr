@@ -1,6 +1,6 @@
 # Mid-report analysis: what is new, and how it was found
 
-This folder builds the Analysis section of the mid-submission report (`report/analysis.tex`). It reuses `merged_results.json` from `experiments/1-10-26_analysis_rahul/` (3,089 questions x 12 responses = 37,068 responses) and does not call the API.
+This folder builds the Analysis section of the mid-submission report (`report/analysis.tex`). It reuses `merged_results.json` from `experiments/2026-10-01_analysis-rahul/` (3,089 questions x 12 responses = 37,068 responses) and does not call the API.
 
 ## How to rebuild
 
@@ -11,7 +11,7 @@ cp outputs/tables/*.tex report/tables/ && cp outputs/figures/*.pdf report/figure
 cd report && tectonic -X compile main.tex   # XeLaTeX; on Overleaf set the compiler to LuaLaTeX or XeLaTeX
 ```
 
-Needs `pandas scipy statsmodels matplotlib numpy` and the TRD package in `tools/`. `metrics.py` is an unchanged copy of the root one. `temporal_answers.py` is a copy of the one in `1-10-26_analysis_rahul/`, changed only so it loads `merged_results.json` from that folder.
+Needs `pandas scipy statsmodels matplotlib numpy` and the TRD package in `tools/`. `metrics.py` is an unchanged copy of the root one. `temporal_answers.py` is a copy of the one in `2026-10-01_analysis-rahul/`, changed only so it loads `merged_results.json` from that folder.
 
 The report contains Devanagari, so it must be compiled with LuaLaTeX or XeLaTeX, not pdfLaTeX. `main.tex` follows ACL's official `acl_lualatex.tex` preamble (babel + Hindi, Lohit Devanagari font, falling back to Kohinoor Devanagari on macOS); copy its babel lines into the full paper. The odds-ratio analyses (distractor mentions, language drift, verification) are in `report/appendix.tex` (Appendix A), which goes after the references.
 
@@ -30,7 +30,7 @@ Every number in the text is a LaTeX macro from `outputs/tables/macros.tex` (232 
 - Hindi: 57.7% -> 62.9%, +5.1 points, CI [+3.8, +6.4]. Significant gain in 5 tasks, significant loss in 2:
   - date subtraction 92.2 -> 78.2 (-14.0)
   - interval date 35.1 -> 17.9 (-17.2)
-- **Correction to my earlier readme note** (`1-10-26_analysis_rahul_1/readme.md`): I wrote that interval date is the only task where CoT hurts Hindi. Date subtraction also drops, by -14.0 points, and it is significant. The readme has been fixed.
+- **Correction to my earlier readme note** (`2026-10-01_metrics-breakdown-rahul/readme.md`): I wrote that interval date is the only task where CoT hurts Hindi. Date subtraction also drops, by -14.0 points, and it is significant. The readme has been fixed.
 - Time duration is the only task where Hindi gains more than English (+43.8 vs +40.9), because Hindi direct is very poor there (28.9%).
 - Robustness: counting the 364 unscored (token-limit) responses as wrong gives CoT gains of +25.3 (English) and +4.7 (Hindi). Same conclusion.
 
@@ -103,7 +103,7 @@ Under CoT, English alone is right in 2,585 of 8,931 pairs and Hindi alone in 172
 5. Proposal items **not yet done**, for the timeline section: the Hinglish condition, the CLP condition, and the RDS / edit-distance trace-structure analysis with the logistic model P(err) ~ RDS + difficulty + language.
 
 ## Verification done
-- Accuracies in Tables 1–2 match `metrics.py` outputs in `1-10-26_analysis_rahul_1/outputs` (e.g. `by_language_condition_insertion.csv`, `by_language_condition_task.csv`) to every printed digit.
+- Accuracies in Tables 1–2 match `metrics.py` outputs in `2026-10-01_metrics-breakdown-rahul/outputs` (e.g. `by_language_condition_insertion.csv`, `by_language_condition_task.csv`) to every printed digit.
 - Error-type count (11,537) and reuse rows (3,719) match the earlier scripts exactly.
 - All references were checked against ACL Anthology, PMLR, NeurIPS proceedings, OpenReview, publisher DOI pages and JSTOR.
 - Compiled PDF: A4 (595.28 x 841.89 pt), all fonts embedded (`pdffonts`), 0 overfull boxes, 0 undefined references or citations.
