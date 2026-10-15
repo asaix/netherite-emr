@@ -1,6 +1,6 @@
 # Analysis log (2026-10-01)
 
-Working notes for the mid-submission analysis section. Everything here lives in `experiments/1-10-26_analysis_rahul/`.
+Working notes for the mid-submission analysis section. Everything here lives in `experiments/2026-10-01_analysis-rahul/`.
 
 ## 1. Project in one paragraph
 
@@ -10,17 +10,17 @@ Netherite evaluates Sarvam (`sarvam-105b`) on the Temporal Reasoning Dataset (TR
 
 | Difficulty | Run folder | Status |
 |---|---|---|
-| short | `experiments/29-9-2026_short_rahul` | 4 tasks complete; `day_of_week` almost; `interval_date` partial; `time_*` not run |
-| medium | `experiments/29-9-26_med_rahul` | same as short |
-| long | `experiments/2026-09-29-run-long-adi` | `date_addition` complete, `date_duration` 135/150 questions, `date_recurrence` 77/150, rest not run |
-| very_long | `experiments/30-9-26_v_long_aayush` | all 9 tasks, a few `time_*` questions missing |
+| short | `experiments/2026-09-29_run-short-rahul` | 4 tasks complete; `day_of_week` almost; `interval_date` partial; `time_*` not run |
+| medium | `experiments/2026-09-29_run-medium-rahul` | same as short |
+| long | `experiments/2026-09-29_run-long-adi` | `date_addition` complete, `date_duration` 135/150 questions, `date_recurrence` 77/150, rest not run |
+| very_long | `experiments/2026-09-30_run-very-long-aayush` | all 9 tasks, a few `time_*` questions missing |
 | very_very_long | not run | |
 
 Runs stopped because the Sarvam API credit ran out (HTTP 402) and a few requests hit 429 after 6 retries. `reasoning_content` is null in every record, so the CoT text is in `content`.
 
 ## 3. Merged analysis dataset
 
-`merged_results.json` (37,068 records, 3,089 questions, 85 MB) was built from `inputs/{short,medium,long,very_long}.json`, which are byte-identical copies of the four runs' `results.json`. It was built with a one-off inline command, so there is no script for it.
+`merged_results.json` (37,068 records, 3,089 questions, 85 MB) is built by `python3 build_merged.py`, which reads the four runs' `results.json` directly and keeps their record order (short, medium, long, very_long). The output is byte-identical to the file originally built with a one-off command.
 
 Selection rules:
 - short and medium: `date_addition`, `date_subtraction`, `date_duration`, `date_recurrence`, `day_of_week`
@@ -46,6 +46,7 @@ A first version of a clean-set script (`build_clean_set.py`) was written, tested
 
 ## 4. Code in this folder
 
+- `build_merged.py`: rebuilds `merged_results.json` from the run folders (selection rules in section 3).
 - `metrics.py`: copy of the root `metrics.py`, unchanged. It cannot find the TRD package from this folder, so every script here puts `tools/temporal-reasoning-dataset/src` (two levels up) on `sys.path` before `import metrics`.
 - `cot_delta.py`: accuracy for each (difficulty, task, language) under direct and CoT, and `cot_delta = cot - direct`. Fixed grouping, uses pandas. Output: `outputs/cot_delta.csv`. An interactive group-by version (ask y/n per field like `metrics.py`) was worked out and tested in a scratch copy but has not been applied to this file.
 - `cot_insertion_deltas.py`: non-interactive, writes three CSVs (below).
@@ -121,7 +122,6 @@ These come from the CSVs above and a scratch run of the interactive grouping. Th
 - Whether verification steps in English CoTs change accuracy (they exist in 79% of English CoTs and 1.5% of Hindi ones).
 - Share of Hindi CoT responses with ratio below 0.9 and their accuracy.
 - Error types for the `other` bucket (`date_recurrence`, `time_*`, Hindi `date_subtraction`), which is still large.
-- Move this folder to the `<YYYY-MM-DD>_<name>` naming from `CLAUDE.md`, and add a script that rebuilds `merged_results.json`.
 - Re-running the missing requests (long `date_duration` / `date_recurrence`, a few `day_of_week` and `time_*` questions) and `very_very_long`, once API credit is available.
 - Apply the interactive group-by version to `cot_delta.py`.
 
