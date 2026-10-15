@@ -64,6 +64,7 @@ datasets/
 raw/
 interim/
 dataset/
+Dataset/
 # Model checkpoints & weights
 models/
 checkpoints/
