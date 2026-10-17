@@ -1,0 +1,66 @@
+[
+  {
+    "id": "medium/time_addition_en_US/63/dissimilar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_addition_hi_IN/0/dissimilar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_addition_hi_IN/50/similar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_addition_hi_IN/133/no_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_addition_hi_IN/145/dissimilar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_en_US/13/similar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_en_US/81/similar_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_en_US/130/similar_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_hi_IN/5/dissimilar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_hi_IN/109/dissimilar_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_duration_hi_IN/125/similar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_subtraction_en_US/0/no_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_subtraction_en_US/70/dissimilar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_subtraction_hi_IN/0/similar_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_subtraction_hi_IN/83/similar_insertion/direct",
+    "error": "gave up after 6 attempts: HTTP 429"
+  },
+  {
+    "id": "medium/time_subtraction_hi_IN/119/no_insertion/cot",
+    "error": "gave up after 6 attempts: HTTP 429"
+  }
+]
