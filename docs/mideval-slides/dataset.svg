@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600">
+  <style>
+    .sans { font-family: Inter, "Segoe UI", Helvetica, Arial, "Noto Sans Devanagari", "Nirmala UI", sans-serif; }
+    .mono { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
+    .ink { fill: #1F2328; }
+    .muted { fill: #6B7280; }
+    .faint { fill: #9CA3AF; }
+    .card { fill: #FFFFFF; stroke: #D9DCE1; stroke-width: 1; }
+    .wire { stroke: #B6BCC6; stroke-width: 1.5; fill: none; }
+    .colhead { font-size: 11.5px; font-weight: 600; letter-spacing: 1.2px; fill: #6B7280; }
+    .chip { font-size: 11.5px; font-weight: 700; }
+    .name { font-size: 14px; font-weight: 700; }
+    .task { font-size: 13px; }
+    .sub { font-size: 11.5px; }
+    .code { font-size: 12px; }
+    .prose { font-size: 12.5px; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B6BCC6"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="600" fill="#FAFAF7"/>
+
+  <text x="40" y="58" class="sans ink" font-size="26" font-weight="700">Dataset structure</text>
+  <text x="40" y="92" class="mono" font-size="15">
+    <tspan class="ink">dataset/</tspan><tspan fill="#1D4ED8" font-weight="700">&lt;difficulty&gt;</tspan><tspan class="ink">/</tspan><tspan fill="#0F766E" font-weight="700">&lt;task&gt;</tspan><tspan class="ink">_</tspan><tspan fill="#6D28D9" font-weight="700">&lt;lang&gt;</tspan><tspan class="ink">.json</tspan>
+  </text>
+  <text x="1240" y="58" text-anchor="end" class="sans muted" font-size="13">seed 9 · 150 questions per file</text>
+  <text x="1240" y="92" text-anchor="end" class="mono faint" font-size="12.5">config/generator.cfg · custom-generator.py</text>
+
+  <text x="40" y="160" class="sans colhead">DIFFICULTY <tspan class="chip" fill="#1D4ED8">×5</tspan></text>
+  <text x="330" y="160" class="sans colhead">TASK <tspan class="chip" fill="#0F766E">×9</tspan></text>
+  <text x="620" y="160" class="sans colhead">LANGUAGE <tspan class="chip" fill="#6D28D9">×2</tspan></text>
+  <text x="850" y="160" class="sans colhead">ONE FILE <tspan class="chip ink">= 150 QUESTIONS</tspan></text>
+
+  <g class="sans">
+    <rect x="40" y="180" width="230" height="68" rx="8" class="card"/>
+    <rect x="40" y="180" width="5" height="68" rx="2" fill="#BFDBFE"/>
+    <text x="56" y="208" class="mono name ink">short</text>
+    <text x="56" y="228" class="sub muted">±1–4 days/hours · 2025</text>
+
+    <rect x="40" y="260" width="230" height="68" rx="8" class="card"/>
+    <rect x="40" y="260" width="5" height="68" rx="2" fill="#93C5FD"/>
+    <text x="56" y="288" class="mono name ink">medium</text>
+    <text x="56" y="308" class="sub muted">±4–8 days/hours · 2025–2028</text>
+
+    <rect x="40" y="340" width="230" height="68" rx="8" class="card"/>
+    <rect x="40" y="340" width="5" height="68" rx="2" fill="#60A5FA"/>
+    <text x="56" y="368" class="mono name ink">long</text>
+    <text x="56" y="388" class="sub muted">±8–16 days/hours · 2025–2030</text>
+
+    <rect x="40" y="420" width="230" height="68" rx="8" class="card"/>
+    <rect x="40" y="420" width="5" height="68" rx="2" fill="#3B82F6"/>
+    <text x="56" y="448" class="mono name ink">very_long</text>
+    <text x="56" y="468" class="sub muted">±16–32 days/hours · 2025–2033</text>
+
+    <rect x="40" y="500" width="230" height="68" rx="8" class="card"/>
+    <rect x="40" y="500" width="5" height="68" rx="2" fill="#1D4ED8"/>
+    <text x="56" y="528" class="mono name ink">very_very_long</text>
+    <text x="56" y="548" class="sub muted">±32–64 days/hours · 2025–2036</text>
+  </g>
+
+  <path class="wire" d="M270,214 H290 M270,294 H290 M270,374 H290 M270,454 H290 M270,534 H290 M290,214 V534"/>
+  <path class="wire" d="M290,374 H312" marker-end="url(#arrow)"/>
+  <path class="wire" d="M316,216 V546 M316,216 H330 M316,254 H330 M316,292 H330 M316,330 H330 M316,368 H330 M316,406 H330 M316,470 H330 M316,508 H330 M316,546 H330"/>
+
+  <g class="sans">
+    <text x="330" y="193" class="sub" font-weight="700" fill="#0F766E" letter-spacing="1">DATE · 6</text>
+    <rect x="330" y="200" width="230" height="32" rx="6" class="card"/><rect x="330" y="200" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="221" class="mono task ink">date_addition</text>
+    <rect x="330" y="238" width="230" height="32" rx="6" class="card"/><rect x="330" y="238" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="259" class="mono task ink">date_subtraction</text>
+    <rect x="330" y="276" width="230" height="32" rx="6" class="card"/><rect x="330" y="276" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="297" class="mono task ink">date_duration</text>
+    <rect x="330" y="314" width="230" height="32" rx="6" class="card"/><rect x="330" y="314" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="335" class="mono task ink">date_recurrence</text>
+    <rect x="330" y="352" width="230" height="32" rx="6" class="card"/><rect x="330" y="352" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="373" class="mono task ink">day_of_week</text>
+    <rect x="330" y="390" width="230" height="32" rx="6" class="card"/><rect x="330" y="390" width="4" height="32" rx="2" fill="#0D9488"/>
+    <text x="346" y="411" class="mono task ink">interval_date</text>
+
+    <text x="330" y="447" class="sub" font-weight="700" fill="#B45309" letter-spacing="1">TIME · 3</text>
+    <rect x="330" y="454" width="230" height="32" rx="6" class="card"/><rect x="330" y="454" width="4" height="32" rx="2" fill="#D97706"/>
+    <text x="346" y="475" class="mono task ink">time_addition</text>
+    <rect x="330" y="492" width="230" height="32" rx="6" class="card"/><rect x="330" y="492" width="4" height="32" rx="2" fill="#D97706"/>
+    <text x="346" y="513" class="mono task ink">time_subtraction</text>
+    <rect x="330" y="530" width="230" height="32" rx="6" class="card"/><rect x="330" y="530" width="4" height="32" rx="2" fill="#D97706"/>
+    <text x="346" y="551" class="mono task ink">time_duration</text>
+  </g>
+
+  <path class="wire" d="M560,216 H576 M560,254 H576 M560,292 H576 M560,330 H576 M560,368 H576 M560,406 H576 M560,470 H576 M560,508 H576 M560,546 H576 M576,216 V546"/>
+  <path class="wire" d="M576,375 H602" marker-end="url(#arrow)"/>
+  <path class="wire" d="M606,315 V435 M606,315 H620 M606,435 H620"/>
+
+  <g class="sans">
+    <rect x="620" y="280" width="170" height="70" rx="8" class="card"/>
+    <rect x="620" y="280" width="5" height="70" rx="2" fill="#7C3AED"/>
+    <text x="638" y="310" class="mono name ink">en_US</text>
+    <text x="638" y="332" class="sub muted">English</text>
+
+    <rect x="620" y="400" width="170" height="70" rx="8" class="card"/>
+    <rect x="620" y="400" width="5" height="70" rx="2" fill="#7C3AED"/>
+    <text x="638" y="430" class="mono name ink">hi_IN</text>
+    <text x="638" y="452" class="sub muted">हिन्दी · Hindi</text>
+
+    <path d="M705,352 V398" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="638" y="363" width="134" height="24" rx="12" fill="#F5F3FF" stroke="#DDD6FE"/>
+    <text x="705" y="379" text-anchor="middle" class="sub" fill="#6D28D9" font-weight="600">same IDs &amp; answers</text>
+  </g>
+
+  <path class="wire" d="M790,315 H806 M790,435 H806 M806,315 V435"/>
+  <path class="wire" d="M806,375 H842" marker-end="url(#arrow)"/>
+
+  <rect x="850" y="180" width="390" height="388" rx="10" class="card"/>
+  <path d="M850,212 H1240" stroke="#E5E7EB"/>
+  <path d="M860,180 H1230 A10,10 0 0 1 1240,190 V212 H850 V190 A10,10 0 0 1 860,180 z" fill="#F3F4F6"/>
+  <text x="866" y="201" class="mono code ink">short/date_addition_en_US.json</text>
+  <text x="1226" y="201" text-anchor="end" class="sans sub muted">IDs "0" … "149"</text>
+
+  <g class="mono code">
+    <text x="866" y="236" class="muted">{</text>
+    <text x="880" y="253"><tspan class="ink" font-weight="700">"0"</tspan><tspan class="muted">: {</tspan></text>
+    <text x="894" y="270" fill="#4B5563" font-weight="700">"no_insertion":</text>
+    <text x="894" y="321" fill="#2563EB" font-weight="700">"similar_insertion":</text>
+    <text x="894" y="372" fill="#DC2626" font-weight="700">"dissimilar_insertion":</text>
+    <text x="894" y="423"><tspan fill="#15803D" font-weight="700">"answer":</tspan><tspan dx="4" class="ink">"2025-08-29"</tspan></text>
+    <text x="880" y="440" class="muted">},</text>
+    <text x="880" y="457" class="muted">"1": { … },  …  "149": { … }</text>
+    <text x="866" y="474" class="muted">}</text>
+  </g>
+  <g class="sans prose">
+    <text x="908" y="287" class="ink">Today is 2025-08-26, what is the date</text>
+    <text x="908" y="304" class="ink">going to be in 3 days?</text>
+    <text x="908" y="338" fill="#2563EB" font-weight="600">I always forget how many days are in</text>
+    <text x="908" y="355"><tspan fill="#2563EB" font-weight="600">each month.</tspan><tspan dx="4" class="ink">Today is 2025-08-26, …</tspan></text>
+    <text x="908" y="389"><tspan fill="#DC2626" font-weight="600">My brother bought a motorcycle.</tspan><tspan dx="4" class="ink">Today</tspan></text>
+    <text x="908" y="406" class="ink">is 2025-08-26, …</text>
+  </g>
+
+  <path d="M866,492 H1224" stroke="#E5E7EB" stroke-dasharray="4 4"/>
+  <text x="866" y="512" class="mono sub muted">hi_IN · same ID "0" · no_insertion</text>
+  <text x="866" y="535" class="sans ink" font-size="13.5">आज 2025-08-26 है, 3 दिनों में तिथि क्या होगी?</text>
+  <text x="866" y="555" class="mono sub"><tspan fill="#15803D" font-weight="700">answer</tspan><tspan dx="4" class="ink">"2025-08-29"</tspan></text>
+
+</svg>

@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="770" viewBox="0 0 1320 770">
+  <style>
+    .sans { font-family: Inter, "Segoe UI", Helvetica, Arial, "Noto Sans Devanagari", "Nirmala UI", sans-serif; }
+    .mono { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
+    .ink { fill: #1F2328; }
+    .muted { fill: #6B7280; }
+    .faint { fill: #9CA3AF; }
+    .card { fill: #FFFFFF; stroke: #D9DCE1; stroke-width: 1; }
+    .chip { fill: #FAFAF7; stroke: #B6BCC6; stroke-width: 1; stroke-dasharray: 4 3; }
+    .wire { stroke: #B6BCC6; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B6BCC6"/>
+    </marker>
+  </defs>
+  <rect width="1320" height="770" fill="#FAFAF7"/>
+  <text x="40" y="58" class="sans ink" font-size="26" font-weight="700">Pipeline so far</text>
+  <text x="1280" y="58" text-anchor="end" class="sans muted" font-size="13">as of 2026-10-16</text>
+  <text x="1280" y="90" text-anchor="end" class="mono faint" font-size="12.5">dataset → responses → scores → statistics</text>
+  <g class="sans">
+    <text x="40" y="152" font-size="11.5" font-weight="700" letter-spacing="1.2"><tspan fill="#1D4ED8">01</tspan><tspan dx="6" class="muted">GENERATE</tspan></text>
+    <rect x="40" y="168" width="234" height="26" rx="6" class="chip"/>
+    <text x="50" y="185" class="mono muted" font-size="10.5">TRD library (unmodified)</text>
+    <rect x="40" y="200" width="234" height="26" rx="6" class="chip"/>
+    <text x="50" y="217" class="mono muted" font-size="10.5">config/generator.cfg</text>
+    <path class="wire" d="M157.0,226 V240" marker-end="url(#arrow)"/>
+    <rect x="40" y="244" width="234" height="160" rx="8" class="card"/>
+    <rect x="40" y="244" width="5" height="160" rx="2" fill="#1D4ED8"/>
+    <text x="56" y="268" class="mono ink" font-size="13" font-weight="700">custom-generator.py</text>
+    <path d="M56,278 H262" stroke="#EEF0F3"/>
+    <circle cx="59" cy="292" r="2" fill="#1D4ED8"/>
+    <text x="67" y="296" class="ink" font-size="11.5">extends TRD's BaseExperiment class</text>
+    <circle cx="59" cy="311" r="2" fill="#1D4ED8"/>
+    <text x="67" y="315" class="ink" font-size="11.5">same random state per language</text>
+    <text x="67" y="330" class="ink" font-size="11.5">→ parallel en/hi questions</text>
+    <circle cx="59" cy="345" r="2" fill="#1D4ED8"/>
+    <text x="67" y="349" class="ink" font-size="11.5">adds similar &amp; dissimilar</text>
+    <text x="67" y="364" class="ink" font-size="11.5">distractor sentences</text>
+    <path class="wire" d="M157.0,404 V432" marker-end="url(#arrow)"/>
+    <rect x="40" y="436" width="234" height="84" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="54" y="459" class="mono" font-size="12.5" font-weight="700" fill="#1D4ED8">Dataset/</text>
+    <text x="54" y="479" class="ink" font-size="11.5">90 files · 13,500 questions</text>
+    <text x="54" y="494" class="ink" font-size="11.5">× 3 insertion variants</text>
+    <text x="40" y="542" class="mono faint" font-size="10">repo root</text>
+  </g>
+  <g class="sans">
+    <text x="291" y="152" font-size="11.5" font-weight="700" letter-spacing="1.2"><tspan fill="#6D28D9">02</tspan><tspan dx="6" class="muted">QUERY</tspan></text>
+    <rect x="291" y="168" width="234" height="26" rx="6" class="chip"/>
+    <text x="301" y="185" class="mono muted" font-size="10.5">config/prompt.yaml</text>
+    <rect x="291" y="200" width="234" height="26" rx="6" class="chip"/>
+    <text x="301" y="217" class="mono muted" font-size="10.5">config/sarvam.yaml</text>
+    <path class="wire" d="M408.0,226 V240" marker-end="url(#arrow)"/>
+    <rect x="291" y="244" width="234" height="160" rx="8" class="card"/>
+    <rect x="291" y="244" width="5" height="160" rx="2" fill="#6D28D9"/>
+    <text x="307" y="268" class="mono ink" font-size="13" font-weight="700">sarvam.py</text>
+    <path d="M307,278 H513" stroke="#EEF0F3"/>
+    <circle cx="310" cy="292" r="2" fill="#6D28D9"/>
+    <text x="318" y="296" class="ink" font-size="11.5">2 modes: direct · cot</text>
+    <circle cx="310" cy="311" r="2" fill="#6D28D9"/>
+    <text x="318" y="315" class="ink" font-size="11.5">answer in the target language,</text>
+    <text x="318" y="330" class="ink" font-size="11.5">end with "Answer: …"</text>
+    <circle cx="310" cy="345" r="2" fill="#6D28D9"/>
+    <text x="318" y="349" class="ink" font-size="11.5">sarvam-105b · temp 0</text>
+    <text x="318" y="364" class="ink" font-size="11.5">6 concurrent requests</text>
+    <circle cx="310" cy="379" r="2" fill="#6D28D9"/>
+    <text x="318" y="383" class="ink" font-size="11.5">retries; resumes on rerun</text>
+    <path class="wire" d="M408.0,404 V432" marker-end="url(#arrow)"/>
+    <rect x="291" y="436" width="234" height="84" rx="8" fill="#F5F3FF" stroke="#DDD6FE"/>
+    <text x="305" y="459" class="mono" font-size="12.5" font-weight="700" fill="#6D28D9">results.json ×4</text>
+    <text x="305" y="479" class="ink" font-size="11.5">40,244 of 81,000 responses</text>
+    <text x="305" y="494" class="ink" font-size="11.5">paused: API credits ran out</text>
+    <text x="291" y="542" class="mono faint" font-size="10">experiments/2026-09-29_run-*</text>
+    <text x="291" y="556" class="mono faint" font-size="10">experiments/2026-09-30_run-*</text>
+  </g>
+  <g class="sans">
+    <text x="542" y="152" font-size="11.5" font-weight="700" letter-spacing="1.2"><tspan fill="#0F766E">03</tspan><tspan dx="6" class="muted">MERGE</tspan></text>
+    <rect x="542" y="168" width="234" height="26" rx="6" class="chip"/>
+    <text x="552" y="185" class="mono muted" font-size="10.5">task filter per difficulty</text>
+    <path class="wire" d="M659.0,194 V240" marker-end="url(#arrow)"/>
+    <rect x="542" y="244" width="234" height="160" rx="8" class="card"/>
+    <rect x="542" y="244" width="5" height="160" rx="2" fill="#0F766E"/>
+    <text x="558" y="268" class="mono ink" font-size="13" font-weight="700">build_merged.py</text>
+    <path d="M558,278 H764" stroke="#EEF0F3"/>
+    <circle cx="561" cy="292" r="2" fill="#0F766E"/>
+    <text x="569" y="296" class="ink" font-size="11.5">keeps a question only if all</text>
+    <text x="569" y="311" class="ink" font-size="11.5">12 responses exist:</text>
+    <circle cx="561" cy="326" r="2" fill="#0F766E"/>
+    <text x="569" y="330" class="ink" font-size="11.5">2 languages × 3 insertions</text>
+    <text x="569" y="345" class="ink" font-size="11.5">× 2 modes</text>
+    <circle cx="561" cy="360" r="2" fill="#0F766E"/>
+    <text x="569" y="364" class="ink" font-size="11.5">→ every comparison is paired</text>
+    <text x="569" y="379" class="ink" font-size="11.5">on the same question</text>
+    <path class="wire" d="M659.0,404 V432" marker-end="url(#arrow)"/>
+    <rect x="542" y="436" width="234" height="84" rx="8" fill="#F0FDFA" stroke="#99F6E4"/>
+    <text x="556" y="459" class="mono" font-size="12.5" font-weight="700" fill="#0F766E">merged_results.json</text>
+    <text x="556" y="479" class="ink" font-size="11.5">37,068 responses</text>
+    <text x="556" y="494" class="ink" font-size="11.5">3,089 complete questions</text>
+    <text x="542" y="542" class="mono faint" font-size="10">experiments/2026-10-01_</text>
+    <text x="542" y="556" class="mono faint" font-size="10">analysis-rahul</text>
+  </g>
+  <g class="sans">
+    <text x="793" y="152" font-size="11.5" font-weight="700" letter-spacing="1.2"><tspan fill="#B45309">04</tspan><tspan dx="6" class="muted">SCORE</tspan></text>
+    <rect x="793" y="168" width="234" height="26" rx="6" class="chip"/>
+    <text x="803" y="185" class="mono muted" font-size="10.5">TRD weekday names</text>
+    <path class="wire" d="M910.0,194 V240" marker-end="url(#arrow)"/>
+    <rect x="793" y="244" width="234" height="160" rx="8" class="card"/>
+    <rect x="793" y="244" width="5" height="160" rx="2" fill="#B45309"/>
+    <text x="809" y="268" class="mono ink" font-size="13" font-weight="700">metrics.py</text>
+    <path d="M809,278 H1015" stroke="#EEF0F3"/>
+    <circle cx="812" cy="292" r="2" fill="#B45309"/>
+    <text x="820" y="296" class="ink" font-size="11.5">parse last "Answer:" line</text>
+    <text x="820" y="311" class="ink" font-size="11.5">(उत्तर, Devanagari digits ok)</text>
+    <circle cx="812" cy="326" r="2" fill="#B45309"/>
+    <text x="820" y="330" class="ink" font-size="11.5">exact match vs gold answer</text>
+    <circle cx="812" cy="345" r="2" fill="#B45309"/>
+    <text x="820" y="349" class="ink" font-size="11.5">CoT target-language ratio</text>
+    <text x="820" y="364" class="ink" font-size="11.5">(Hindi vs English words)</text>
+    <path class="wire" d="M910.0,404 V432" marker-end="url(#arrow)"/>
+    <rect x="793" y="436" width="234" height="84" rx="8" fill="#FFFBEB" stroke="#FDE68A"/>
+    <text x="807" y="459" class="mono" font-size="12.5" font-weight="700" fill="#B45309">by_*.csv</text>
+    <text x="807" y="479" class="ink" font-size="11.5">accuracy + CoT language ratio by</text>
+    <text x="807" y="494" class="ink" font-size="11.5">difficulty · lang · mode ·</text>
+    <text x="807" y="509" class="ink" font-size="11.5">insertion · task</text>
+    <text x="793" y="542" class="mono faint" font-size="10">experiments/2026-10-01_</text>
+    <text x="793" y="556" class="mono faint" font-size="10">metrics-breakdown-rahul</text>
+  </g>
+  <g class="sans">
+    <text x="1044" y="152" font-size="11.5" font-weight="700" letter-spacing="1.2"><tspan fill="#15803D">05</tspan><tspan dx="6" class="muted">ANALYSE</tspan></text>
+    <rect x="1044" y="168" width="234" height="26" rx="6" class="chip"/>
+    <text x="1054" y="185" class="mono muted" font-size="10.5">merged data → build_responses.py</text>
+    <rect x="1044" y="200" width="234" height="26" rx="6" class="chip"/>
+    <text x="1054" y="217" class="mono muted" font-size="10.5">metrics.py · temporal_answers.py</text>
+    <path class="wire" d="M1161.0,226 V240" marker-end="url(#arrow)"/>
+    <rect x="1044" y="244" width="234" height="160" rx="8" class="card"/>
+    <rect x="1044" y="244" width="5" height="160" rx="2" fill="#15803D"/>
+    <text x="1060" y="268" class="mono ink" font-size="13" font-weight="700">analysis.py</text>
+    <path d="M1060,278 H1266" stroke="#EEF0F3"/>
+    <circle cx="1063" cy="292" r="2" fill="#15803D"/>
+    <text x="1071" y="296" class="ink" font-size="11.5">cluster-bootstrap 95% CIs</text>
+    <text x="1071" y="311" class="ink" font-size="11.5">(2,000 question resamples)</text>
+    <circle cx="1063" cy="326" r="2" fill="#15803D"/>
+    <text x="1071" y="330" class="ink" font-size="11.5">McNemar + Holm correction</text>
+    <circle cx="1063" cy="345" r="2" fill="#15803D"/>
+    <text x="1071" y="349" class="ink" font-size="11.5">Mantel–Haenszel odds ratios</text>
+    <circle cx="1063" cy="364" r="2" fill="#15803D"/>
+    <text x="1071" y="368" class="ink" font-size="11.5">writes tables, figures, numbers</text>
+    <path class="wire" d="M1161.0,404 V432" marker-end="url(#arrow)"/>
+    <rect x="1044" y="436" width="234" height="84" rx="8" fill="#F0FDF4" stroke="#BBF7D0"/>
+    <text x="1058" y="459" class="mono" font-size="12.5" font-weight="700" fill="#15803D">outputs/</text>
+    <text x="1058" y="479" class="ink" font-size="11.5">5 LaTeX tables · 3 PDF figures</text>
+    <text x="1058" y="494" class="ink" font-size="11.5">249 numbers used in the text of</text>
+    <text x="1058" y="509" class="ink" font-size="11.5">the mid-report (report/main.tex)</text>
+    <text x="1044" y="542" class="mono faint" font-size="10">experiments/2026-10-02_</text>
+    <text x="1044" y="556" class="mono faint" font-size="10">mid-report-analysis</text>
+  </g>
+  <path class="wire" d="M274,478.0 H282.5 V324.0 H287" marker-end="url(#arrow)"/>
+  <path class="wire" d="M525,478.0 H533.5 V324.0 H538" marker-end="url(#arrow)"/>
+  <path class="wire" d="M776,478.0 H784.5 V324.0 H789" marker-end="url(#arrow)"/>
+  <path class="wire" d="M1027,324.0 H1040" marker-end="url(#arrow)"/>
+  <g class="sans" opacity="0.6">
+    <path d="M752,520 V584" class="wire" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+    <path d="M1027,380 H1035.5 V584" class="wire" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+    <rect x="542" y="588" width="736" height="72" rx="8" fill="#FFFFFF" stroke="#B6BCC6" stroke-dasharray="5 4"/>
+    <text x="558" y="610" font-size="12.5" font-weight="700" class="muted">Exploratory pass · Oct 1<tspan dx="8" font-weight="400" class="faint">not used by the report</tspan></text>
+    <text x="1264" y="610" text-anchor="end" class="mono faint" font-size="10">experiments/2026-10-01_analysis-rahul</text>
+    <text x="558" y="630" class="muted" font-size="11.5">7 scripts: a first look at CoT deltas, error types, distractor reuse, trace faithfulness and en/hi agreement.</text>
+    <text x="558" y="646" class="muted" font-size="11.5">No significance tests. Superseded by analysis.py, which reuses its temporal_answers.py and reproduces its counts.</text>
+  </g>
+  <path d="M40,682 H1280" stroke="#E5E7EB"/>
+  <g class="sans">
+    <rect x="40" y="700" width="34" height="18" rx="4" class="chip"/>
+    <text x="84" y="713" class="muted" font-size="12">config / dependency</text>
+    <rect x="230" y="700" width="34" height="18" rx="4" class="card"/><rect x="230" y="700" width="4" height="18" rx="2" fill="#6B7280"/>
+    <text x="274" y="713" class="muted" font-size="12">script</text>
+    <rect x="340" y="700" width="34" height="18" rx="4" fill="#F3F4F6" stroke="#D1D5DB"/>
+    <text x="384" y="713" class="muted" font-size="12">data it writes</text>
+    <rect x="500" y="700" width="34" height="18" rx="4" fill="#FFFFFF" stroke="#B6BCC6" stroke-dasharray="4 3" opacity="0.6"/>
+    <text x="544" y="713" class="muted" font-size="12">exploratory, superseded</text>
+    <text x="40" y="748" class="muted" font-size="12.5">Each run keeps copies of the scripts and configs it ran in its own <tspan class="mono" font-size="11.5">experiments/&lt;date&gt;_&lt;name&gt;/</tspan> folder.</text>
+    <text x="1280" y="713" text-anchor="end" class="muted" font-size="12">Still to run: <tspan class="ink" font-weight="600">very_very_long</tspan> and the remaining ~50% of short · medium · long</text>
+  </g>
+</svg>
