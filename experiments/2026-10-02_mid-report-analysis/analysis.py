@@ -536,11 +536,11 @@ for i, (lang, cond, color, hatch) in enumerate(series):
     ax.bar([o + (i - 1.5) * width for o in offsets], share, width, color=color, edgecolor="black", linewidth=0.5,
            hatch=hatch, label=f"{LANG[lang]} {'CoT' if cond == 'cot' else 'direct'}")
 ax.axhline(100 / 7, color="black", linestyle=":", linewidth=0.8)
-ax.text(3.45, 100 / 7 + 1.5, "chance", ha="right", fontsize=7)
+ax.text(3.45, 100 / 7 + 1.5, "chance", ha="right", fontsize=8)
 ax.set_xticks(offsets, [f"{o:+d}" if o else "0" for o in offsets])
 ax.set_xlabel("Predicted minus correct weekday (days)")
 ax.set_ylabel("Responses (%)")
-ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=7, handlelength=1.5, columnspacing=0.8)
+ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=8, handlelength=1.5, columnspacing=0.8)
 ax.set_ylim(0, 80)
 ax.grid(axis="y", color="0.85", linewidth=0.5)
 fig.tight_layout()
@@ -609,11 +609,11 @@ for j, k in enumerate(order):
     color, hatch = fill[k]
     ax.barh(ypos, 100 * data[:, j], left=left, color=color, hatch=hatch, edgecolor="black", linewidth=0.5, label=k)
     left += 100 * data[:, j]
-ax.set_yticks(ypos, labels, fontsize=7)
+ax.set_yticks(ypos, labels, fontsize=8)
 ax.tick_params(axis="y", length=0)
 ax.set_xlim(0, 100)
 ax.set_xlabel("Share of wrong CoT answers (%)")
-ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.35, 1.0), fontsize=7, handlelength=1.5)
+ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.35, 1.0), fontsize=8, handlelength=1.5)
 fig.tight_layout()
 fig.savefig(FIG / "error_types.pdf")
 plt.close(fig)
