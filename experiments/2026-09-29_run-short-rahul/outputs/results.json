@@ -657326,5 +657326,3071 @@
     },
     "latency_s": 4.272,
     "time": "2026-10-15T19:07:13.621202+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/62/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "62",
+      "insertion": "no_insertion",
+      "answer": "2025-07-07 to 2025-07-13"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-07-02 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "अगले सप्ताह की शुरुआत 2025-07-07 और अंत 2025-07-13 है।\nAnswer: 2025-07-07 to 2025-07-13",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 58,
+      "prompt_tokens": 179,
+      "total_tokens": 237,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.637,
+    "time": "2026-10-24T16:56:04.551730+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/100/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "100",
+      "insertion": "dissimilar_insertion",
+      "answer": "2025-08-04 to 2025-08-10"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमुद्री कछुए सांस रोक सकते हैं। यदि आज 2025-08-01 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "अगले सप्ताह की शुरुआत और अंत की तिथियां 2025-08-04 to 2025-08-10 हैं।\nAnswer: 2025-08-04 to 2025-08-10",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 62,
+      "prompt_tokens": 189,
+      "total_tokens": 251,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.636,
+    "time": "2026-10-24T16:56:04.552546+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/114/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "114",
+      "insertion": "no_insertion",
+      "answer": "2025-08-18 to 2025-08-24"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-08-11 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "अगला सप्ताह सोमवार, 11 अगस्त 2025 से शुरू होकर रविवार, 17 अगस्त 2025 को समाप्त होता है।\nAnswer: 2025-08-11 to 2025-08-17",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 179,
+      "total_tokens": 239,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.666,
+    "time": "2026-10-24T16:56:04.582276+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/24/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "24",
+      "insertion": "similar_insertion",
+      "answer": "2025-11-03 to 2025-11-09"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nमहीने के बीच की तारीखें भूल जाता हूं। यदि आज 2025-10-29 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, आज की तारीख 2025-10-29 है, जो कि बुधवार है।\n\nचूंकि सोमवार सप्ताह का पहला दिन है, इसलिए अगले सप्ताह की शुरुआत का दिन 2025-10-27 (सोमवार) होगा। \nअगले सप्ताह का अंत 2025-10-31 (शुक्रवार) को होगा।\n\nउत्तर: 2025-10-27 to 2025-10-31",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 202,
+      "total_tokens": 314,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.072,
+    "time": "2026-10-24T16:56:04.920001+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/138/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "138",
+      "insertion": "dissimilar_insertion",
+      "answer": "2025-03-17 to 2025-03-23"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nइलेक्ट्रिक कारें लोकप्रिय हैं। यदि आज 2025-03-16 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "उत्तर: 2025-03-17 to 2025-03-23\nAnswer: 2025-03-17 to 2025-03-23",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 187,
+      "total_tokens": 239,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.459,
+    "time": "2026-10-24T16:56:05.012600+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/87/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "87",
+      "insertion": "no_insertion",
+      "answer": "2025-11-03 to 2025-11-09"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-11-01 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "आइए इस प्रश्न को चरण दर चरण समझते हैं।\n\n1. सबसे पहले, हमें आज की तारीख दी गई है, जो 2025-11-01 है।\n2. प्रश्न में कहा गया है कि आज से अगले सप्ताह की शुरुआत और अंत की तिथियां क्या होंगी।\n3. हमें यह भी बताया गया है कि सोमवार सप्ताह का पहला दिन है।\n4. आज की तारीख 2025-11-01 है, जो कि एक शनिवार है।\n5. अगला सोमवार 2025-11-03 को आएगा। यह अगले सप्ताह की शुरुआत की तारीख होगी।\n6. सप्ताह में 7 दिन होते हैं, इसलिए यदि हम सोमवार से गिनती शुरू करें तो 7वां दिन रविवार होता है।\n7. 2025-11-03 से 6 दिन आगे गिनने पर 2025-11-09 आता है, जो कि रविवार है। यह अगले सप्ताह का अंतिम दिन होगा।\n\nइस प्रकार, अगले सप्ताह की शुरुआत और अंत की तिथियां 2025-11-03 से 2025-11-09 तक होंगी।\n\nAnswer: 2025-11-03 to 2025-11-09",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 274,
+      "prompt_tokens": 190,
+      "total_tokens": 464,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.671,
+    "time": "2026-10-24T16:56:05.586882+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/0/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "0",
+      "insertion": "no_insertion",
+      "answer": "12:34"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 08:34, what will the time be in 4 hours and 0 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it will be 4 hours after 08:34.\n\nStarting time: 08:34\nAdding: 4 hours and 0 minutes\n\nFirst, I'll add the hours: 08:34 + 4 hours = 12:34\n\nSince we're using a 24-hour clock, 08 + 4 = 12, so the hour becomes 12.\n\nThe minutes remain 34 since we're adding 0 minutes.\n\nSo the time will be 12:34.\n\nAnswer: 12:34",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 153,
+      "total_tokens": 292,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.024,
+    "time": "2026-10-24T16:56:05.944562+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/24/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "24",
+      "insertion": "dissimilar_insertion",
+      "answer": "05:33"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nMy grandmother's recipe uses vanilla. It is now 05:02, what will the time be in 0 hours and 31 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it will be 0 hours and 31 minutes from 05:02.\n\nStep 1: Start with the current time, which is 05:02.\n\nStep 2: Add 0 hours to 05:02. Adding 0 hours doesn't change the time, so it remains 05:02.\n\nStep 3: Add 31 minutes to 05:02.\n- 05:02 + 30 minutes = 05:32\n- 05:32 + 1 minute = 05:33\n\nStep 4: The final time is 05:33.\n\nAnswer: 05:33",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 166,
+      "prompt_tokens": 162,
+      "total_tokens": 328,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.065,
+    "time": "2026-10-24T16:56:06.652784+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/141/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "141",
+      "insertion": "no_insertion",
+      "answer": "2025-06-09 to 2025-06-15"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-06-08 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें यह पता लगाना होगा कि आज सप्ताह का कौन सा दिन है। \nदी गई तारीख 2025-06-08 है। \nअगर हम जून 2025 के कैलेंडर को देखें, तो 8 जून 2025 को रविवार आता है। \nहम जानते हैं कि सोमवार सप्ताह का पहला दिन होता है। \nइसलिए, रविवार से एक दिन पहले, यानी 2025-06-07 को शनिवार होगा।\n\nअब, अगले सप्ताह की शुरुआत सोमवार से होती है। \nचूंकि 2025-06-07 शनिवार है, तो अगला सोमवार 2025-06-09 को होगा। यह अगले सप्ताह की शुरुआत की तारीख है।\n\nअगले सप्ताह का अंत रविवार से होता है। \nशनिवार के बाद का दिन रविवार होता है। \nइसलिए, अगले सप्ताह का अंतिम दिन 2025-06-15 को आएगा।\n\nइस प्रकार, अगले सप्ताह की शुरुआत की तारीख 2025-06-09 है और अंत की तारीख 2025-06-15 है।\n\nAnswer: 2025-06-09 to 2025-06-15",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 272,
+      "prompt_tokens": 190,
+      "total_tokens": 462,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.071,
+    "time": "2026-10-24T16:56:06.653380+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/30/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "30",
+      "insertion": "similar_insertion",
+      "answer": "2025-07-21 to 2025-07-27"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसोमवार की सुबह कठिन होती है। यदि आज 2025-07-18 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "इस प्रश्न को हल करने के लिए हमें दी गई जानकारी के आधार पर तिथियों की गणना करनी होगी।\n\nसबसे पहले, हमें यह पता लगाना है कि 2025-07-18 को सप्ताह का कौन सा दिन है। \nहम जानते हैं कि सोमवार को 2025-07-07 है। \n2025-07-07 से 2025-07-18 तक 11 दिन होते हैं (18 - 7 = 11)। \n11 को 7 से भाग देने पर शेष 4 बचता है। \nइसका मतलब है कि 2025-07-18, सोमवार के 4 दिन बाद का दिन है, जो कि शुक्रवार है।\n\nअब, प्रश्न कहता है कि सोमवार सप्ताह का पहला दिन है। चूँकि आज शुक्रवार (2025-07-18) है, इसलिए हमें अगले सप्ताह की शुरुआत और अंत की तिथियां ज्ञात करनी हैं।\n\nअगले सप्ताह का पहला दिन अगला सोमवार होगा, जो 2025-07-21 है (क्योंकि 18 के बाद 19 शनिवार, 20 रविवार और 21 सोमवार है)।\nअगले सप्ताह का अंतिम दिन रविवार होगा, जो 2025-07-27 है (क्योंकि 21 से 7 दिन बाद 28 नहीं, बल्कि 7 दिन बाद 27 आता है, 21 सोमवार, 22 मंगलवार, 23 बुधवार, 24 गुरुवार, 25 शुक्रवार, 26 शनिवार, 27 रविवार)।\n\nइस प्रकार, अगले सप्ताह की शुरुआत 2025-07-21 से और अंत 2025-07-27 तक होगा।\n\nAnswer: 2025-07-21 to 2025-07-27",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 406,
+      "prompt_tokens": 199,
+      "total_tokens": 605,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.739,
+    "time": "2026-10-24T16:56:06.653685+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/24/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "24",
+      "insertion": "no_insertion",
+      "answer": "05:33"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 05:02, what will the time be in 0 hours and 31 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it will be in 0 hours and 31 minutes from 05:02.\n\nFirst, let me add the hours: 05:02 + 0 hours = 05:02\n\nThen, let me add the minutes: 05:02 + 31 minutes\n\nStarting from 05:02, I add 31 minutes:\n- 05:02 + 30 minutes = 05:32\n- 05:32 + 1 minute = 05:33\n\nSo the time will be 05:33.\n\nAnswer: 05:33",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 151,
+      "prompt_tokens": 154,
+      "total_tokens": 305,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.641,
+    "time": "2026-10-24T16:56:06.653951+00:00"
+  },
+  {
+    "id": "short/interval_date_hi_IN/123/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "123",
+      "insertion": "no_insertion",
+      "answer": "2025-03-10 to 2025-03-16"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-03-06 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "आइए इसे चरण दर चरण समझते हैं:\n\n1. आज की तारीख 2025-03-06 है।\n2. हमें अगले सप्ताह की शुरुआत और अंत की तारीखें ज्ञात करनी हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है।\n3. सबसे पहले, हमें यह पता लगाना है कि आज कौन सा दिन है। 2025-03-06 से एक दिन पीछे जाने पर 2025-03-05 आता है, जो सोमवार है। इसलिए, 2025-03-06 मंगलवार है।\n4. अगले सप्ताह का पहला दिन (सोमवार) 2025-03-06 में ठीक 6 दिन बाद आएगा। 6 दिन जोड़ने पर 2025-03-13 आता है।\n5. किसी भी सप्ताह में 7 दिन होते हैं। इसलिए, अगले सप्ताह का अंतिम दिन (रविवार) 2025-03-13 में 6 दिन बाद आएगा, जो 2025-03-19 है।\n6. इस प्रकार, अगले सप्ताह की शुरुआत 2025-03-13 से होगी और अंत 2025-03-19 को होगा।\n\nAnswer: 2025-03-13 to 2025-03-19",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 296,
+      "prompt_tokens": 190,
+      "total_tokens": 486,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.102,
+    "time": "2026-10-24T16:56:06.654228+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/51/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "51",
+      "insertion": "similar_insertion",
+      "answer": "23:00"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI always lose track of time in the morning. It is now 18:08, what will the time be in 4 hours and 52 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find the time 4 hours and 52 minutes from 18:08.\n\nFirst, let me add the hours: 18:08 + 4 hours = 22:08\n\nThen, let me add the minutes: 22:08 + 52 minutes = 22:60\n\nSince 60 minutes equals 1 hour, I need to convert this:\n- 22:60 = 23:00\n\nSo the time will be 23:00.\n\nAnswer: 23:00",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 164,
+      "total_tokens": 294,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.739,
+    "time": "2026-10-24T16:56:06.683922+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/149/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "149",
+      "insertion": "no_insertion",
+      "answer": "17:42"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 14:46, what will the time be in 2 hours and 56 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "17:42\nAnswer: 17:42",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 143,
+      "total_tokens": 158,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.287,
+    "time": "2026-10-24T16:56:06.970885+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/55/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "55",
+      "insertion": "similar_insertion",
+      "answer": "02:11"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI always lose track of time in the morning. It is now 23:56, what will the time be in 2 hours and 15 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "02:11\nAnswer: 02:11",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 153,
+      "total_tokens": 168,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.317,
+    "time": "2026-10-24T16:56:06.971745+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/108/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "108",
+      "insertion": "no_insertion",
+      "answer": "00:43"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 20:59, what will the time be in 3 hours and 44 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "24:43\nAnswer: 00:43",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 143,
+      "total_tokens": 158,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.32,
+    "time": "2026-10-24T16:56:06.975291+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/58/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "58",
+      "insertion": "no_insertion",
+      "answer": "12:10"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 12:02, what will the time be in 0 hours and 8 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find the time 8 minutes after 12:02.\n\nStarting time: 12:02\n\nI need to add 8 minutes to this time.\n\n12:02 + 8 minutes = 12:10\n\nLet me verify: 2 + 8 = 10 minutes, and the hour stays at 12.\n\nSo the time will be 12:10.\n\nAnswer: 12:10",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 153,
+      "total_tokens": 257,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.989,
+    "time": "2026-10-24T16:56:07.644378+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/22/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "22",
+      "insertion": "similar_insertion",
+      "answer": "16:08"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nशाम को मुझे समय का ध्यान नहीं रहता। अभी 12:25 बजे हैं, 3 घंटे और 43 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "शाम को मुझे समय का ध्यान नहीं रहता। अभी 12:25 बजे हैं, 3 घंटे और 43 मिनट बाद समय क्या होगा?\n16:08\n\nAnswer: 16:08",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 151,
+      "total_tokens": 200,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.671,
+    "time": "2026-10-24T16:56:07.645277+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/128/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "128",
+      "insertion": "similar_insertion",
+      "answer": "02:55"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI always lose track of time in the evening. It is now 23:25, what will the time be in 3 hours and 30 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "23:25 + 3 hours = 02:25 (next day)\n02:25 + 30 minutes = 02:55\n\nAnswer: 02:55",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 153,
+      "total_tokens": 201,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.991,
+    "time": "2026-10-24T16:56:07.648164+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/29/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "29",
+      "insertion": "no_insertion",
+      "answer": "16:40"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 12:43 बजे हैं, 3 घंटे और 57 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हम दिए गए समय को ध्यान में रखते हैं। अभी 12:43 बजे हैं। हमें इसमें 3 घंटे और 57 मिनट जोड़ने हैं।\n\nघंटों को जोड़ने पर: 12:43 + 3 घंटे = 15:43.\nअब मिनटों को जोड़ने पर: 15:43 + 57 मिनट.\n57 मिनट 1 घंटे और 57 मिनट के बराबर है।\nइसलिए, 15:43 में 1 घंटा जोड़ने पर 16:43 हो जाएगा और मिनट 57 ही रहेंगे।\n\nइस प्रकार, 3 घंटे और 57 मिनट बाद का समय 16:43 होगा।\n\nAnswer: 16:43",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 162,
+      "prompt_tokens": 152,
+      "total_tokens": 314,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.764,
+    "time": "2026-10-24T16:56:07.739821+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/59/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "59",
+      "insertion": "similar_insertion",
+      "answer": "02:34"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 23:53 बजे हैं, 2 घंटे और 41 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "समय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 23:53 बजे हैं, 2 घंटे और 41 मिनट बाद समय 02:34 होगा।\nउत्तर: 02:34",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 151,
+      "total_tokens": 199,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.337,
+    "time": "2026-10-24T16:56:07.985187+00:00"
+  },
+  {
+    "id": "short/time_addition_en_US/113/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "113",
+      "insertion": "dissimilar_insertion",
+      "answer": "23:46"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nBamboo grows quickly. It is now 23:06, what will the time be in 0 hours and 40 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it will be in 0 hours and 40 minutes from 23:06.\n\nStep 1: Start with the current time: 23:06\n\nStep 2: Add 0 hours. Since we're adding 0 hours, the hour remains 23:06.\n\nStep 3: Add 40 minutes to 23:06.\n- 06 + 40 = 46 minutes\n- The hour stays 23 since 46 < 60\n\nStep 4: The resulting time is 23:46.\n\nAnswer: 23:46",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 146,
+      "prompt_tokens": 158,
+      "total_tokens": 304,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.368,
+    "time": "2026-10-24T16:56:08.023865+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/94/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "94",
+      "insertion": "no_insertion",
+      "answer": "15:58"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 15:14 बजे हैं, 0 घंटे और 44 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हम 15:14 में 0 घंटे और 44 मिनट जोड़ेंगे। \n\n0 घंटे जोड़ने पर समय 15:14 ही रहेगा। \nअब 15:14 में 44 मिनट जोड़ते हैं। \n14 मिनट में 44 मिनट जोड़ने पर 58 मिनट हो जाएंगे (14 + 44 = 58)। \nघंटे 15 ही रहेंगे क्योंकि 58 मिनट 1 घंटे से कम है। \n\nइसलिए, 0 घंटे और 44 मिनट बाद समय 15:58 होगा।\n\nAnswer: 15:58",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 152,
+      "total_tokens": 291,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.739,
+    "time": "2026-10-24T16:56:08.724306+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/4/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "4",
+      "insertion": "no_insertion",
+      "answer": "13:38"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 10:36 बजे हैं, 3 घंटे और 2 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें वर्तमान समय 10:36 में 3 घंटे और 2 मिनट जोड़ने हैं।\n\nसबसे पहले, 10:36 में 3 घंटे जोड़ें। \n10:36 + 3:00 = 13:36\n\nअब, इस समय 10:36 में 2 मिनट जोड़ें।\n13:36 + 0:02 = 13:38\n\nचूंकि 13:38, 24 घंटे वाली घड़ी का समय है, इसलिए यह 1:38 PM के बराबर है। \n\nउत्तर: 13:38",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 151,
+      "total_tokens": 291,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.558,
+    "time": "2026-10-24T16:56:09.531307+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/52/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "52",
+      "insertion": "similar_insertion",
+      "answer": "04:38"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nशाम को मुझे समय का ध्यान नहीं रहता। अभी 01:24 बजे हैं, 3 घंटे और 14 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें वर्तमान समय को समझना होगा। वर्तमान समय 01:24 है। \n\nहमें इसमें 3 घंटे और 14 मिनट जोड़ने हैं। \n\nसबसे पहले घंटे जोड़ते हैं:\n01:24 में 3 घंटे जोड़ने पर समय 04:24 हो जाएगा (01 + 3 = 04)।\n\nअब इसमें 14 मिनट जोड़ते हैं:\n04:24 में 14 मिनट जोड़ने पर समय 04:38 हो जाएगा (24 + 14 = 38)।\n\nचूँकि 38 मिनट 60 से कम है, इसलिए घंटे में कोई बदलाव नहीं होगा।\n\nइस प्रकार, 3 घंटे और 14 मिनट बाद समय 04:38 होगा।\n\nAnswer: 04:38",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 176,
+      "prompt_tokens": 162,
+      "total_tokens": 338,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.884,
+    "time": "2026-10-24T16:56:09.531693+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/110/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "110",
+      "insertion": "no_insertion",
+      "answer": "19:00"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 15:36 बजे हैं, 3 घंटे और 24 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें दिए गए समय को समझना होगा। अभी का समय 15:36 है।\n\nहमें इस समय में 3 घंटे और 24 मिनट जोड़ने हैं।\n\nघंटों को जोड़ना:\n15:36 + 3 घंटे = 18:36\n\nअब मिनटों को जोड़ना:\n18:36 + 24 मिनट = 19:00\n\nइस प्रकार, 3 घंटे और 24 मिनट बाद का समय 19:00 होगा।\n\nAnswer: 19:00",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 122,
+      "prompt_tokens": 152,
+      "total_tokens": 274,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.512,
+    "time": "2026-10-24T16:56:09.536280+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/75/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "75",
+      "insertion": "similar_insertion",
+      "answer": "19:39"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 17:29 बजे हैं, 2 घंटे और 10 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें दिए गए समय को समझना होगा। अभी का समय 17:29 है, जो 24-घंटे की घड़ी में शाम के 5:29 बजे को दर्शाता है।\n\nहमें इसमें 2 घंटे और 10 मिनट जोड़ने हैं। \nसबसे पहले, 17:29 में 2 घंटे जोड़ें। \n17 + 2 = 19, तो समय 19:29 हो जाएगा।\n\nअब, 19:29 में 10 मिनट जोड़ें। \n29 + 10 = 39 मिनट।\n\nचूँकि 19:39, 24-घंटे की घड़ी के 24:00 (यानी आधी रात) से पहले है, इसलिए हमें दिन बदलने की चिंता करने की आवश्यकता नहीं है।\n\nअतः, 2 घंटे और 10 मिनट बाद का समय 19:39 होगा।\n\nAnswer: 19:39",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 211,
+      "prompt_tokens": 162,
+      "total_tokens": 373,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.797,
+    "time": "2026-10-24T16:56:09.536621+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/31/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "31",
+      "insertion": "no_insertion",
+      "answer": "34"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 15:02 and now it is 15:36, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "34\nAnswer: 34",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 156,
+      "total_tokens": 165,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.245,
+    "time": "2026-10-24T16:56:09.783463+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/39/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "39",
+      "insertion": "similar_insertion",
+      "answer": "17:20"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nमेरी घड़ी धीमी चलती है। अभी 12:56 बजे हैं, 4 घंटे और 24 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें यह समझना होगा कि \"मेरी घड़ी धीमी चलती है\" इस बात का क्या मतलब है। अगर घड़ी धीमी चल रही है, तो इसका मतलब है कि घड़ी का समय असली समय से पीछे है। लेकिन, सवाल में यह नहीं बताया गया है कि घड़ी कितनी धीमी है या कितनी देर से धीमी चल रही है। \n\nसवाल में एक बहुत ही महत्वपूर्ण जानकारी दी गई है: \"अभी 12:56 बजे हैं\"। यह समय हमें घड़ी का नहीं, बल्कि असली समय (असली दुनिया का समय) बता रहा है। \n\nअब हमें यह पता लगाना है कि 4 घंटे और 24 मिनट बाद असली समय क्या होगा। \n\n1. हम 12:56 से शुरू करते हैं।\n2. इसमें 4 घंटे जोड़ते हैं। 12:56 में 4 घंटे जोड़ने पर 16:56 (यानी 4:56 PM) होता है।\n3. अब इसमें 24 मिनट जोड़ते हैं। 16:56 में 24 मिनट जोड़ने पर 17:20 (यानी 5:20 PM) होता है।\n\nइसलिए, 4 घंटे और 24 मिनट बाद असली समय 17:20 होगा। चूंकि घड़ी धीमी चल रही है, तो असली समय के हिसाब से घड़ी का समय 17:20 से कम होगा। लेकिन, सवाल में यह नहीं पूछा गया है कि घड़ी का समय क्या होगा। सवाल सिर्फ इतना पूछ रहा है कि \"4 घंटे और 24 मिनट बाद समय क्या होगा?\"। यह सीधे तौर पर असली समय पूछ रहा है।\n\nउत्तर: 17:20",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 342,
+      "prompt_tokens": 158,
+      "total_tokens": 500,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.149,
+    "time": "2026-10-24T16:56:09.795660+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/15/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "15",
+      "insertion": "dissimilar_insertion",
+      "answer": "18"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nJapan has many islands. If I looked at the clock at 02:50 and now it is 03:08, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "18\nAnswer: 18",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 161,
+      "total_tokens": 170,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.268,
+    "time": "2026-10-24T16:56:09.805579+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/57/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "57",
+      "insertion": "dissimilar_insertion",
+      "answer": "37"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nMy cousin plays the violin. If I looked at the clock at 12:36 and now it is 13:13, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "37\nAnswer: 37",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 162,
+      "total_tokens": 171,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.206,
+    "time": "2026-10-24T16:56:10.011585+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/69/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "69",
+      "insertion": "similar_insertion",
+      "answer": "36"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI never know if my watch is running fast. If I looked at the clock at 15:18 and now it is 15:54, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "36\nAnswer: 36",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 166,
+      "total_tokens": 175,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.408,
+    "time": "2026-10-24T16:56:10.420241+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/134/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "134",
+      "insertion": "similar_insertion",
+      "answer": "11:29"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 07:31 बजे हैं, 3 घंटे और 58 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें 3 घंटे और 58 मिनट को मौजूदा समय 07:31 में जोड़ना है। \n\nसबसे पहले 3 घंटे जोड़ते हैं:\n07:31 + 3 घंटे = 10:31\n\nअब बचे हुए 58 मिनट को 10:31 में जोड़ते हैं:\n10:31 + 58 मिनट = 11:29\n\nइसलिए, 3 घंटे और 58 मिनट बाद समय 11:29 होगा।\n\nAnswer: 11:29",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 162,
+      "total_tokens": 285,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.896,
+    "time": "2026-10-24T16:56:10.429086+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/46/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "46",
+      "insertion": "similar_insertion",
+      "answer": "13"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nTime really flies during lunch break. If I looked at the clock at 04:20 and now it is 04:33, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have gone by from 04:20 to 04:33.\n\nFirst, let me look at the minutes:\n- Starting time: 04:20\n- Current time: 04:33\n\nThe hour stays the same (04), so I only need to find the difference in minutes.\n\nFrom 20 minutes to 33 minutes:\n33 - 20 = 13\n\nLet me verify: \n- 04:20 + 13 minutes = 04:33\n\nThis is correct.\n\nAnswer: 13",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 174,
+      "total_tokens": 313,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.981,
+    "time": "2026-10-24T16:56:10.777138+00:00"
+  },
+  {
+    "id": "short/time_addition_hi_IN/114/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "114",
+      "insertion": "dissimilar_insertion",
+      "answer": "16:21"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nदादी की रेसिपी में वनीला है। अभी 11:27 बजे हैं, 4 घंटे और 54 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें 11:27 में 4 घंटे जोड़ने होंगे। \n11:27 में 4 घंटे जोड़ने पर समय 15:27 हो जाएगा। \n\nइसके बाद, हमें 54 मिनट जोड़ने होंगे। \n15:27 में 54 मिनट जोड़ने पर, 54 मिनट का मतलब है 30 मिनट और 24 मिनट। \n15:27 में 30 मिनट जोड़ने पर 15:57 होगा। \nअब 15:57 में 24 मिनट जोड़ने पर 16:21 हो जाएगा। \n\nचूँकि 16:21, 24-घंटे वाली घड़ी में दोपहर 4:21 बजे के बराबर है, इसलिए 4 घंटे और 54 मिनट बाद समय 16:21 होगा।\n\nAnswer: 16:21",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 193,
+      "prompt_tokens": 162,
+      "total_tokens": 355,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.246,
+    "time": "2026-10-24T16:56:10.777899+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/6/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "6",
+      "insertion": "no_insertion",
+      "answer": "37"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 11:41 and now it is 12:18, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have passed between 11:41 and 12:18.\n\nFirst, let me figure out how many minutes remain in the hour from 11:41 to 12:00.\n- From 11:41 to 12:00 is 60 - 41 = 19 minutes.\n\nThen, I need to add the minutes from 12:00 to 12:18.\n- From 12:00 to 12:18 is 18 minutes.\n\nTotal minutes = 19 + 18 = 37 minutes.\n\nLet me verify: Starting at 11:41, if I add 19 minutes I reach 12:00. Then adding 18 more minutes reaches 12:18. So 19 + 18 = 37 minutes total.\n\nAnswer: 37",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 213,
+      "prompt_tokens": 167,
+      "total_tokens": 380,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.268,
+    "time": "2026-10-24T16:56:10.801321+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/104/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "104",
+      "insertion": "dissimilar_insertion",
+      "answer": "17"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nThe recipe uses basil. If I looked at the clock at 23:05 and now it is 23:22, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "17\nAnswer: 17",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 161,
+      "total_tokens": 170,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.203,
+    "time": "2026-10-24T16:56:10.980841+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/6/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "6",
+      "insertion": "similar_insertion",
+      "answer": "37"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nमुझे घड़ी की बैटरी बदलनी चाहिए। अगर मैंने 11:41 पर घड़ी देखी और अब 12:18 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "37\n\nAnswer: 37",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 158,
+      "total_tokens": 167,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.219,
+    "time": "2026-10-24T16:56:11.200602+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/46/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "46",
+      "insertion": "no_insertion",
+      "answer": "13"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 04:20 and now it is 04:33, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have passed between 04:20 and 04:33.\n\nFirst, let me identify the starting time and ending time:\n- Starting time: 04:20\n- Ending time: 04:33\n\nTo find the difference, I'll subtract the minutes. Since both times are in the same hour (04), I can simply subtract the minute values.\n\nFrom 04:20 to 04:33:\n- The minutes go from 20 to 33\n- 33 - 20 = 13\n\nLet me verify this: \n- From 04:20 to 04:30 is 10 minutes\n- From 04:30 to 04:33 is 3 minutes\n- Total: 10 + 3 = 13 minutes\n\nAnswer: 13",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 204,
+      "prompt_tokens": 167,
+      "total_tokens": 371,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.42,
+    "time": "2026-10-24T16:56:11.203767+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/31/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "31",
+      "insertion": "similar_insertion",
+      "answer": "34"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nमुझे नहीं पता कि मेरी घड़ी तेज़ है या नहीं। अगर मैंने 15:02 पर घड़ी देखी और अब 15:36 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "34\nAnswer: 34",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 161,
+      "total_tokens": 170,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.191,
+    "time": "2026-10-24T16:56:11.392117+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/85/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "85",
+      "insertion": "dissimilar_insertion",
+      "answer": "14"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nSunflowers grew tall this year. If I looked at the clock at 11:04 and now it is 11:18, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have gone by between 11:04 and 11:18.\n\nFirst, let me identify the starting time and ending time:\n- Starting time: 11:04\n- Ending time: 11:18\n\nTo find the number of minutes that have passed, I can calculate the difference between these two times.\n\nOne way to do this is to convert both times to minutes past midnight:\n- 11:04 = (11 × 60) + 4 = 660 + 4 = 664 minutes\n- 11:18 = (11 × 60) + 18 = 660 + 18 = 678 minutes\n\nThe difference is: 678 - 664 = 14 minutes\n\nAlternatively, I can calculate this directly by looking at the minutes:\n- From 11:04 to 11:18, I need to go from 4 minutes to 18 minutes\n- 18 - 4 = 14 minutes\n\nAnother way to verify:\n- From 11:04 to 11:10 is 6 minutes\n- From 11:10 to 11:18 is 8 minutes\n- 6 + 8 = 14 minutes\n\nAnswer: 14",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 308,
+      "prompt_tokens": 174,
+      "total_tokens": 482,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.692,
+    "time": "2026-10-24T16:56:12.121159+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/42/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "42",
+      "insertion": "similar_insertion",
+      "answer": "44"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nलंच में समय उड़ जाता है। अगर मैंने 05:51 पर घड़ी देखी और अब 06:35 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "इस प्रश्न को हल करने के लिए हमें 05:51 और 06:35 के बीच के समय का अंतर मिनटों में निकालना है।\n\nसबसे पहले हम घंटे देखते हैं। 06:35 में घंटे 6 हैं और 05:51 में घंटे 5 हैं। दोनों के बीच 1 घंटे का अंतर है। \nचूंकि 1 घंटा 60 मिनट के बराबर होता है, तो 1 घंटे का मतलब 60 मिनट होता है।\n\nअब हम मिनटों को देखते हैं। 06:35 में 35 मिनट हैं और 05:51 में 51 मिनट हैं। \n35 और 51 के बीच का अंतर 51 - 35 = 16 मिनट है।\n\nअब हम दोनों अंतरों को जोड़ देंगे:\n60 (घंटे के मिनट) + 16 (मिनटों का अंतर) = 76 मिनट।\n\nइस तरह कुल 76 मिनट बीत चुके हैं।\n\nAnswer: 76",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 220,
+      "prompt_tokens": 169,
+      "total_tokens": 389,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.139,
+    "time": "2026-10-24T16:56:12.342982+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/88/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "88",
+      "insertion": "no_insertion",
+      "answer": "24"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 14:42 पर घड़ी देखी और अब 15:06 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें शुरुआती समय और वर्तमान समय के बीच का अंतर निकालना होगा।\n\nशुरुआती समय 14:42 है।\nवर्तमान समय 15:06 है।\n\nघंटे के हिसाब से देखें तो, 14 घंटे से 15 घंटे तक 1 घंटा हुआ।\nअब मिनटों की बात करते हैं।\nशुरुआत के 42 मिनट और वर्तमान के 6 मिनट को जोड़ने पर 42 + 6 = 48 मिनट होते हैं।\n\nतो कुल समय 1 घंटा और 48 मिनट हुआ।\nचूँकि 1 घंटे में 60 मिनट होते हैं, इसलिए हम 60 और 48 को जोड़ेंगे।\n60 + 48 = 108।\n\nइस तरह 108 मिनट बीत चुके हैं।\n\nAnswer: 108",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 180,
+      "prompt_tokens": 161,
+      "total_tokens": 341,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.148,
+    "time": "2026-10-24T16:56:12.540366+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/121/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "121",
+      "insertion": "similar_insertion",
+      "answer": "18"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI never understood why we don't use decimal time. If I looked at the clock at 13:51 and now it is 14:09, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have passed between 13:51 and 14:09.\n\nFirst, let me convert both times to minutes past midnight.\n\n13:51 means 13 hours and 51 minutes.\n- 13 hours × 60 minutes/hour = 780 minutes\n- 780 + 51 = 831 minutes past midnight\n\n14:09 means 14 hours and 9 minutes.\n- 14 hours × 60 minutes/hour = 840 minutes\n- 840 + 9 = 849 minutes past midnight\n\nNow I subtract to find the difference:\n849 - 831 = 18 minutes\n\nLet me verify this another way. From 13:51 to 14:00 is 9 minutes (since 60 - 51 = 9).\nFrom 14:00 to 14:09 is 9 minutes.\nTotal: 9 + 9 = 18 minutes.\n\nAnswer: 18",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 246,
+      "prompt_tokens": 179,
+      "total_tokens": 425,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.916,
+    "time": "2026-10-24T16:56:12.694678+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/126/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "126",
+      "insertion": "no_insertion",
+      "answer": "8"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 08:42 पर घड़ी देखी और अब 08:50 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें यह जानना है कि शुरुआती समय क्या है और वर्तमान समय क्या है। \nशुरुआती समय 08:42 है और वर्तमान समय 08:50 है। \nअब, हमें दोनों समय के बीच के मिनटों का अंतर निकालना है। \nघंटे का हिस्सा दोनों में 08 है, इसलिए हमें सिर्फ मिनटों पर ध्यान देना है। \nवर्तमान समय के मिनट 50 हैं और शुरुआती समय के मिनट 42 हैं। \nइन दोनों को घटाने पर: 50 - 42 = 8 होता है। \nइसलिए, 8 मिनट बीत चुके हैं।\n\nAnswer: 8",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 141,
+      "prompt_tokens": 161,
+      "total_tokens": 302,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.007,
+    "time": "2026-10-24T16:56:13.128688+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/133/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "133",
+      "insertion": "similar_insertion",
+      "answer": "20"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nThe clock in my kitchen always shows different times. If I looked at the clock at 13:43 and now it is 14:03, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have gone by between 13:43 and 14:03.\n\nFirst, let me convert both times to minutes past midnight.\n\n13:43 means 13 hours and 43 minutes.\n14:03 means 14 hours and 3 minutes.\n\nConverting 13:43 to minutes:\n13 × 60 + 43 = 780 + 43 = 823 minutes\n\nConverting 14:03 to minutes:\n14 × 60 + 3 = 840 + 3 = 843 minutes\n\nNow I subtract to find the difference:\n843 - 823 = 20 minutes\n\nLet me verify this another way. From 13:43 to 14:03:\n- From 13:43 to 14:03 is 20 minutes (going from 43 minutes to 3 minutes, we pass through 14:00, so that's 17 minutes to reach 14:00, plus 3 minutes to reach 14:03, giving 20 minutes total)\n\nWait, let me recheck: 14:00 minus 13:43 = 17 minutes. Then 14:03 minus 14:00 = 3 minutes. Total: 17 + 3 = 20 minutes.\n\nAnswer: 20",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 336,
+      "prompt_tokens": 177,
+      "total_tokens": 513,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.342,
+    "time": "2026-10-24T16:56:13.143635+00:00"
+  },
+  {
+    "id": "short/time_duration_en_US/75/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "75",
+      "insertion": "no_insertion",
+      "answer": "19"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 08:49 and now it is 09:08, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find how many minutes have passed between 08:49 and 09:08.\n\nFirst, let me calculate the time difference.\n\nFrom 08:49 to 09:08:\n- From 08:49 to 09:00 is 11 minutes (since 60 - 49 = 11)\n- From 09:00 to 09:08 is 8 minutes\n\nTotal: 11 + 8 = 19 minutes\n\nAlternatively, I can calculate directly:\n- From 08:49 to 09:08\n- Hours: 09 - 08 = 1 hour\n- Minutes: 08 - 49 = -41 minutes\n\nSo 1 hour - 41 minutes = 60 - 41 = 19 minutes\n\nOr using total minutes:\n- 08:49 = 8 × 60 + 49 = 480 + 49 = 529 minutes\n- 09:08 = 9 × 60 + 8 = 540 + 8 = 548 minutes\n- Difference: 548 - 529 = 19 minutes\n\nAnswer: 19",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 294,
+      "prompt_tokens": 167,
+      "total_tokens": 461,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.959,
+    "time": "2026-10-24T16:56:13.379224+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/136/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "136",
+      "insertion": "dissimilar_insertion",
+      "answer": "53"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nजापान में कई द्वीप हैं। अगर मैंने 06:17 पर घड़ी देखी और अब 07:10 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें समय का अंतर निकालना होगा।\n\nशुरू का समय 06:17 है और अब का समय 07:10 है।\n\nघंटे का अंतर: 07 - 06 = 1 घंटा।\nमिनट का अंतर: 10 - 17 = -7 मिनट (यानी 17 मिनट कम हैं)।\n\nइसलिए, कुल समय 1 घंटा और 53 मिनट है, क्योंकि 60 मिनट में से 7 मिनट घटाने पर 53 मिनट बचते हैं।\n\nअब इसे सिर्फ मिनटों में बदलते हैं:\n1 घंटा = 60 मिनट।\nकुल मिनट = 60 + 53 = 113 मिनट।\n\nउत्तर: 113",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 160,
+      "prompt_tokens": 168,
+      "total_tokens": 328,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.839,
+    "time": "2026-10-24T16:56:13.380058+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/8/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "8",
+      "insertion": "dissimilar_insertion",
+      "answer": "21:54"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nSpace telescopes capture images. It is now 01:15, what was the time 3 hours and 21 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Answer: 21:54",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 147,
+      "total_tokens": 156,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.283,
+    "time": "2026-10-24T16:56:13.412132+00:00"
+  },
+  {
+    "id": "short/time_duration_hi_IN/130/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "130",
+      "insertion": "similar_insertion",
+      "answer": "12"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nलंच में समय उड़ जाता है। अगर मैंने 21:56 पर घड़ी देखी और अब 22:08 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें यह देखना होगा कि दोनों समय के बीच कितने मिनट बीते हैं। \n\nशुरुआती समय 21:56 है और अंतिम समय 22:08 है। \n\nचूँकि 56 मिनट 60 मिनट से कम है, इसलिए 56 से 60 तक पहुँचने में 4 मिनट लगेंगे। \n21 घंटे से 22 घंटे तक पहुँचने में 60 मिनट लगेंगे। \n22:00 से 22:08 तक पहुँचने में 8 मिनट और लगेंगे। \n\nअब, अगर हम इन सबको एक साथ जोड़ दें: \n60 मिनट (21 से 22 तक) + 4 मिनट (56 से 60 तक) + 8 मिनट (22:00 से 22:08 तक) = 72 मिनट। \n\nइसलिए, कुल 72 मिनट बीत चुके हैं। \n\nAnswer: 72",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 205,
+      "prompt_tokens": 169,
+      "total_tokens": 374,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.825,
+    "time": "2026-10-24T16:56:14.168488+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/12/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "12",
+      "insertion": "no_insertion",
+      "answer": "16:30"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 18:47, what was the time 2 hours and 17 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "16:30\nAnswer: 16:30",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 142,
+      "total_tokens": 157,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.789,
+    "time": "2026-10-24T16:56:14.169257+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/2/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "2",
+      "insertion": "no_insertion",
+      "answer": "05:52"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 10:32, what was the time 4 hours and 40 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find the time 4 hours and 40 minutes before 10:32.\n\nFirst, let me convert 4 hours and 40 minutes to minutes: 4 × 60 + 40 = 240 + 40 = 280 minutes.\n\nNow I'll subtract this from 10:32.\n\nStarting with the hours: 10:32 minus 4 hours = 6:32.\n\nThen I need to subtract 40 more minutes from 6:32.\n\n6:32 minus 40 minutes:\n- 32 minutes minus 40 minutes requires borrowing 1 hour\n- 6:32 becomes 5:92 (borrowing 1 hour = 60 minutes)\n- 92 minutes minus 40 minutes = 52 minutes\n- 5 hours remains\n\nSo the time is 5:52.\n\nLet me verify: 5:52 plus 4 hours = 9:52. 9:52 plus 40 minutes = 10:32. ✓\n\nAnswer: 05:52",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 153,
+      "total_tokens": 409,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.621,
+    "time": "2026-10-24T16:56:14.315965+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/30/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "30",
+      "insertion": "no_insertion",
+      "answer": "07:44"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 11:45, what was the time 4 hours and 1 minute ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it was 4 hours and 1 minute ago from 11:45.\n\nFirst, let me subtract 4 hours from 11:45.\n11:45 minus 4 hours = 7:45\n\nNow I need to subtract 1 more minute from 7:45.\n7:45 minus 1 minute = 7:44\n\nSo 4 hours and 1 minute ago, the time was 7:44.\n\nAnswer: 07:44",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 152,
+      "total_tokens": 271,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.904,
+    "time": "2026-10-24T16:56:14.316704+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/32/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "32",
+      "insertion": "similar_insertion",
+      "answer": "16:39"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nTime zones can be really confusing sometimes. It is now 21:22, what was the time 4 hours and 43 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "16:39\nAnswer: 16:39",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 150,
+      "total_tokens": 165,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.157,
+    "time": "2026-10-24T16:56:14.327315+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/30/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "30",
+      "insertion": "similar_insertion",
+      "answer": "07:44"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI always lose track of time in the evening. It is now 11:45, what was the time 4 hours and 1 minute ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "07:44\nAnswer: 07:44",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 151,
+      "total_tokens": 166,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.231,
+    "time": "2026-10-24T16:56:14.400623+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/102/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "102",
+      "insertion": "similar_insertion",
+      "answer": "14:15"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nMy watch always runs a bit slow. It is now 15:01, what was the time 0 hours and 46 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "14:15\nAnswer: 14:15",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 150,
+      "total_tokens": 165,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.338,
+    "time": "2026-10-24T16:56:14.738524+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/42/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "42",
+      "insertion": "dissimilar_insertion",
+      "answer": "10:02"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nTennis needs coordination. It is now 14:01, what was the time 3 hours and 59 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "09:02\nAnswer: 09:02",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 146,
+      "total_tokens": 161,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.44,
+    "time": "2026-10-24T16:56:14.756792+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/139/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "139",
+      "insertion": "dissimilar_insertion",
+      "answer": "09:23"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nFresh bread smells wonderful. It is now 10:34, what was the time 1 hour and 11 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "09:23\nAnswer: 09:23",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 147,
+      "total_tokens": 162,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.243,
+    "time": "2026-10-24T16:56:15.000179+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/11/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "11",
+      "insertion": "dissimilar_insertion",
+      "answer": "10:02"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nFresh bread smells wonderful. It is now 13:14, what was the time 3 hours and 12 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it was 3 hours and 12 minutes ago from 13:14.\n\nFirst, let me convert everything to minutes to make the calculation easier.\n\nCurrent time: 13:14\n3 hours = 180 minutes\n12 minutes = 12 minutes\nTotal to subtract: 180 + 12 = 192 minutes\n\nNow I'll subtract 192 minutes from 13:14.\n\n13:14 in minutes from midnight = 13 × 60 + 14 = 780 + 14 = 794 minutes\n\n794 - 192 = 602 minutes\n\nNow convert 602 minutes back to hours and minutes:\n602 ÷ 60 = 10 remainder 2\nSo 602 minutes = 10 hours and 2 minutes = 10:02\n\nLet me verify: From 10:02, if I add 3 hours, I get 13:02. Then adding 12 minutes gives 13:14. ✓\n\nAnswer: 10:02",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 264,
+      "prompt_tokens": 158,
+      "total_tokens": 422,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.918,
+    "time": "2026-10-24T16:56:15.061572+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/57/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "57",
+      "insertion": "similar_insertion",
+      "answer": "15:29"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 19:15 बजे हैं, 3 घंटे और 46 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "15:29\n\nAnswer: 15:29",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 151,
+      "total_tokens": 166,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.158,
+    "time": "2026-10-24T16:56:15.219912+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/83/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "83",
+      "insertion": "dissimilar_insertion",
+      "answer": "10:25"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nDolphins communicate with clicks. It is now 13:26, what was the time 3 hours and 1 minute ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find the time 3 hours and 1 minute ago from 13:26.\n\nFirst, let me subtract the 1 minute from 13:26.\n13:26 minus 1 minute = 13:25\n\nNext, let me subtract the 3 hours from 13:25.\n13:25 minus 3 hours = 10:25\n\nLet me verify: 10:25 plus 3 hours = 13:25, and 13:25 plus 1 minute = 13:26. That checks out.\n\nAnswer: 10:25",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 148,
+      "prompt_tokens": 159,
+      "total_tokens": 307,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.106,
+    "time": "2026-10-24T16:56:15.433550+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/29/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "29",
+      "insertion": "dissimilar_insertion",
+      "answer": "23:44"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nSpace telescopes capture images. It is now 00:42, what was the time 0 hours and 58 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it was 0 hours and 58 minutes ago from 00:42.\n\nFirst, let me understand the current time: 00:42 (which is 0 hours and 42 minutes, or 12:42 AM in 12-hour format).\n\nI need to subtract 0 hours and 58 minutes from 00:42.\n\nSince 58 minutes is more than 42 minutes, I need to borrow 1 hour (60 minutes) from the hours.\n\nSo 00:42 minus 00:58:\n- The minutes: 42 - 58, which is negative, so I borrow 60 minutes from the hour\n- The hours: 0 - 1 = -1 (but I'll handle this carefully)\n\nActually, let me think of this as:\n- 00:42 = 0 hours and 42 minutes\n- Subtract 0 hours and 58 minutes\n\nSince 42 < 58, I borrow 1 hour:\n- 0 hours becomes -1 hour, and 42 minutes becomes 42 + 60 = 102 minutes\n- Now: 102 - 58 = 44 minutes\n- And: -1 - 0 = -1 hour\n\nSo I get -1 hour and 44 minutes.\n\nIn 24-hour format, -1 hour and 44 minutes is the same as 23 hours and 44 minutes (since going back 1 hour from midnight gives us 23:00).\n\nLet me verify: 23:44 + 0:58 = 23:44 + 58 minutes = 00:42 (since 44 + 58 = 102, which is 1 hour and 42 minutes; so 23 + 1 = 00, and 42 minutes). ✓\n\nAnswer: 23:44",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 450,
+      "prompt_tokens": 158,
+      "total_tokens": 608,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 3.001,
+    "time": "2026-10-24T16:56:16.381688+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/104/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "104",
+      "insertion": "dissimilar_insertion",
+      "answer": "02:42"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nFresh bread smells wonderful. It is now 05:27, what was the time 2 hours and 45 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find what time it was 2 hours and 45 minutes ago from 05:27.\n\nFirst, let me convert everything to minutes to make the calculation easier.\n\nCurrent time: 05:27\nIn minutes from midnight: 5 × 60 + 27 = 300 + 27 = 327 minutes\n\nTime to subtract: 2 hours and 45 minutes\nIn minutes: 2 × 60 + 45 = 120 + 45 = 165 minutes\n\nSubtracting: 327 - 165 = 162 minutes\n\nConverting back to hours and minutes: 162 ÷ 60 = 2 remainder 42\nSo that's 2 hours and 42 minutes, or 02:42.\n\nLet me verify: Starting from 02:42, if I add 2 hours, I get 04:42. Then adding 45 minutes: 04:42 + 45 minutes = 05:27. ✓\n\nAnswer: 02:42",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 254,
+      "prompt_tokens": 158,
+      "total_tokens": 412,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.643,
+    "time": "2026-10-24T16:56:16.382292+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/9/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "9",
+      "insertion": "similar_insertion",
+      "answer": "11:37"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 16:18 बजे हैं, 4 घंटे और 41 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "समय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 16:18 बजे हैं, 4 घंटे और 41 मिनट पहले क्या समय था?\n\nसबसे पहले, हमें 16:18 में से 4 घंटे घटाने हैं। \n16:18 में से 4 घंटे घटाने पर 12:18 होता है।\n\nइसके बाद, हमें 12:18 में से 41 मिनट घटाने हैं। \n12:18 में से 41 मिनट घटाने के लिए, हमें 12:18 को 11 घंटे और 78 मिनट के रूप में लेना होगा। \n11 घंटे और 78 मिनट में से 41 मिनट घटाने पर 11 घंटे और 37 मिनट बचते हैं।\n\nइसलिए, 4 घंटे और 41 मिनट पहले का समय 11:37 था।\n\nAnswer: 11:37",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 203,
+      "prompt_tokens": 162,
+      "total_tokens": 365,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.382,
+    "time": "2026-10-24T16:56:16.382582+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/75/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "75",
+      "insertion": "dissimilar_insertion",
+      "answer": "07:53"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nडॉल्फिन क्लिक से संवाद करती हैं। अभी 12:31 बजे हैं, 4 घंटे और 38 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "07:53\nAnswer: 07:53",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 150,
+      "total_tokens": 165,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.949,
+    "time": "2026-10-24T16:56:16.382838+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/75/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "75",
+      "insertion": "no_insertion",
+      "answer": "07:53"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 12:31 बजे हैं, 4 घंटे और 38 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "हम जानते हैं कि अभी 12:31 बजे हैं। \nहमें 4 घंटे और 38 मिनट पहले का समय निकालना है। \n\nसबसे पहले, 12:31 में से 4 घंटे घटाते हैं। \n12:31 में से 4 घंटे घटाने पर 8:31 बचता है। \n\nअब 8:31 में से 38 मिनट घटाने हैं। \n8:31 में से 38 मिनट घटाने पर 7:53 बचता है। \n\nइसलिए, 4 घंटे और 38 मिनट पहले का समय 7:53 था।\n\nAnswer: 07:53",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 149,
+      "prompt_tokens": 152,
+      "total_tokens": 301,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.163,
+    "time": "2026-10-24T16:56:16.383106+00:00"
+  },
+  {
+    "id": "short/time_subtraction_en_US/66/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "en_US",
+      "question_id": "66",
+      "insertion": "no_insertion",
+      "answer": "09:54"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 10:27, what was the time 0 hours and 33 minutes ago?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "I need to find the time 33 minutes ago from 10:27.\n\nFirst, let me subtract 33 minutes from 10:27.\n\n27 minutes minus 33 minutes would give me a negative number, so I need to borrow 1 hour (60 minutes) from the 10 hours.\n\nThis gives me:\n- 9 hours (since I borrowed 1 hour from 10)\n- 27 + 60 = 87 minutes\n\nNow I subtract 33 minutes from 87 minutes:\n87 - 33 = 54 minutes\n\nSo the result is 9 hours and 54 minutes, which is 09:54.\n\nLet me verify: 09:54 + 33 minutes = 09:54 + 30 minutes = 10:24, then + 3 more minutes = 10:27. ✓\n\nAnswer: 09:54",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 219,
+      "prompt_tokens": 153,
+      "total_tokens": 372,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 2.066,
+    "time": "2026-10-24T16:56:16.383366+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/121/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "121",
+      "insertion": "similar_insertion",
+      "answer": "22:33"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nशाम को मुझे समय का ध्यान नहीं रहता। अभी 23:14 बजे हैं, 0 घंटे और 41 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "22:33\n\nAnswer: 22:33",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 151,
+      "total_tokens": 166,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.161,
+    "time": "2026-10-24T16:56:16.547188+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/97/dissimilar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "97",
+      "insertion": "dissimilar_insertion",
+      "answer": "11:18"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nताजी रोटी अच्छी महकती है। अभी 11:46 बजे हैं, 0 घंटे और 28 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "11:18\nAnswer: 11:18",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 150,
+      "total_tokens": 165,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.24,
+    "time": "2026-10-24T16:56:16.624080+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/129/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "129",
+      "insertion": "similar_insertion",
+      "answer": "20:34"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nसमय क्षेत्र भ्रमित करने वाले हो सकते हैं। अभी 22:56 बजे हैं, 2 घंटे और 22 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "20:34\nAnswer: 20:34",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 151,
+      "total_tokens": 166,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.246,
+    "time": "2026-10-24T16:56:16.631897+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/113/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "113",
+      "insertion": "no_insertion",
+      "answer": "14:33"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 18:57 बजे हैं, 4 घंटे और 24 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "14:33\nAnswer: 14:33",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 141,
+      "total_tokens": 156,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 0.261,
+    "time": "2026-10-24T16:56:16.646538+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/101/dissimilar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "101",
+      "insertion": "dissimilar_insertion",
+      "answer": "01:56"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nमेपल के पेड़ पतझड़ में रंग बदलते हैं। अभी 04:34 बजे हैं, 2 घंटे और 38 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "इस प्रश्न को हल करने के लिए, हमें वर्तमान समय में से 2 घंटे और 38 मिनट घटाने होंगे।\n\nवर्तमान समय: 04:34\nघटाने वाला समय: 2 घंटे 38 मिनट\n\nहम इसे दो चरणों में करते हैं:\n1. सबसे पहले, 34 मिनट में से 38 मिनट घटाते हैं। चूँकि 34, 38 से छोटा है, इसलिए हम 1 घंटा (यानी 60 मिनट) उधार लेते हैं।\n2. 1 घंटा उधार लेने के बाद, घंटे का मान 04 - 1 = 03 हो जाता है, और मिनट का मान 34 + 60 = 94 हो जाता है।\n3. अब हम मिनटों को घटाते हैं: 94 - 38 = 56 मिनट।\n4. अब हम घंटों को घटाते हैं: 03 - 02 = 01 घंटा।\n\nतो, 2 घंटे और 38 मिनट पहले का समय 01:56 था।\n\nAnswer: 01:56",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 237,
+      "prompt_tokens": 164,
+      "total_tokens": 401,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.133,
+    "time": "2026-10-24T16:56:17.517573+00:00"
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/80/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "short",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "80",
+      "insertion": "similar_insertion",
+      "answer": "02:53"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nशाम को मुझे समय का ध्यान नहीं रहता। अभी 07:17 बजे हैं, 4 घंटे और 24 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें 4 घंटे और 24 मिनट को 07:17 से घटाना होगा।\n\n07:17 में से 4 घंटे घटाने पर, 07:17 - 4 घंटे = 03:17 हो जाता है।\n\nअब 03:17 में से 24 मिनट घटाना है। \nचूंकि 17 मिनट में से 24 मिनट सीधे नहीं घटाए जा सकते, इसलिए हमें 1 घंटे (यानी 60 मिनट) को 03:17 से लेना होगा।\n03:17 से 1 घंटा घटाने पर 02:17 हो जाएगा। \nअब 17 मिनट में 60 मिनट जोड़ लें, तो 17 + 60 = 77 मिनट हो गए। \n77 मिनट में से 24 मिनट घटाने पर 53 मिनट बचते हैं।\n\nइसलिए, 02:17 में 53 मिनट जोड़ने पर समय 03:10 हो जाता है।\n\nAnswer: 03:10",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 235,
+      "prompt_tokens": 162,
+      "total_tokens": 397,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": null
+    },
+    "latency_s": 1.705,
+    "time": "2026-10-24T16:56:18.088460+00:00"
   }
 ]
