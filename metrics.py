@@ -11,7 +11,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "tools" / "temporal-rea
 from trd.config.timeframes import DIFFICULTY_LEVELS
 from trd.utils.locale import DAY_NAMES
 
-ANSWER = re.compile(r"(?:Answer|उत्तर)\s*\**\s*[:：]\s*(.*)")
+ANSWER = re.compile(r"(?:Answer|उत्तर(?:\s*है)?|जवाब)\s*\**\s*[:：]\s*(.*)")
+HINDI_TO = re.compile(r"\s+से\s+")
 DIGITS = str.maketrans("०१२३४५६७८९٠١٢٣٤٥٦٧٨٩", "0123456789" * 2)
 WEEKDAYS = {name.casefold(): day for names in DAY_NAMES.values() for day, name in names.items()}
 HINDI_WORD = re.compile(r"[\u0900-\u0963\u0971-\u097F]+")
@@ -21,7 +22,7 @@ DIFFICULTY_ORDER = {d: i for i, d in enumerate(DIFFICULTY_LEVELS)}
 
 def extract_answer(content):
     matches = ANSWER.findall(content or "")
-    return matches[-1].strip().strip("*`.। ").translate(DIGITS) if matches else None
+    return HINDI_TO.sub(" to ", matches[-1].strip().strip("*`.। ").translate(DIGITS)) if matches else None
 
 
 def is_correct(record):
