@@ -53,21 +53,47 @@ def load(input_path, prompts_path, problems_per_task):
     return reqs
 
 
+async def request(client, cfg, payload, headers):
+    # returns: (status_code, error_text, data shaped like a non-streaming response)
+    if not payload.get("stream"):
+        r = await client.post(cfg["api_url"], json=payload, headers=headers, timeout=cfg["timeout"])
+        return r.status_code, r.text, r.json() if r.status_code == 200 else None
+
+    async with client.stream("POST", cfg["api_url"], json=payload, headers=headers, timeout=cfg["timeout"]) as r:
+        if r.status_code != 200:
+            return r.status_code, (await r.aread()).decode(errors="replace"), None
+        content, reasoning, finish_reason, usage = "", "", None, {}
+        async for line in r.aiter_lines():
+            if not line.startswith("data: ") or line == "data: [DONE]":
+                continue
+            chunk = json.loads(line[6:])
+            if "error" in chunk:
+                raise RuntimeError(f"stream error: {json.dumps(chunk['error'], ensure_ascii=False)[:300]}")
+            usage = chunk.get("usage") or usage
+            for c in chunk.get("choices") or []:
+                delta = c.get("delta") or {}
+                content += delta.get("content") or ""
+                reasoning += delta.get("reasoning") or delta.get("reasoning_content") or ""
+                finish_reason = c.get("finish_reason") or finish_reason
+    message = {"content": content, "reasoning_content": reasoning or None}
+    return 200, "", {"choices": [{"message": message, "finish_reason": finish_reason}], "usage": usage}
+
+
 async def call_api(client, cfg, payload):
     headers = {"api-subscription-key": cfg["api_key"], "Content-Type": "application/json"}
     last_err = None
 
     for attempt in range(cfg["max_retries"]):
         try:
-            r = await client.post(cfg["api_url"], json=payload, headers=headers, timeout=cfg["timeout"])
+            status, text, data = await request(client, cfg, payload, headers)
         except (httpx.TimeoutException, httpx.TransportError) as e:
             last_err = repr(e)
         else:
-            if r.status_code == 200:
-                return r.json()
-            if r.status_code not in cfg["retry_status"]:
-                raise RuntimeError(f"HTTP {r.status_code}: {r.text[:300]}")
-            last_err = f"HTTP {r.status_code}"
+            if status == 200:
+                return data
+            if status not in cfg["retry_status"]:
+                raise RuntimeError(f"HTTP {status}: {text[:300]}")
+            last_err = f"HTTP {status}"
 
         await asyncio.sleep(min(cfg["backoff_cap"], 2 ** attempt) + random.uniform(0, 1))
 
@@ -90,6 +116,9 @@ async def worker(req, client, cfg, sem, results, errors, save, pbar):
         "temperature": cfg["temperature"],
         "top_p": cfg["top_p"],
     }
+    if cfg["reasoning_effort"] is not None:
+        payload["stream"] = True
+        payload["stream_options"] = {"include_usage": True}
 
     async with sem:
         t0 = time.perf_counter()
