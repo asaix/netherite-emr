@@ -1,0 +1,2 @@
+# How many problems to load from each <difficulty>/<task>_<lang>.json file (null = all).
+problems_per_task: 10

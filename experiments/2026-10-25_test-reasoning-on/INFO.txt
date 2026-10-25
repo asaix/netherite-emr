@@ -1,0 +1,9 @@
+this exp runs both direct and cot questions with reasoning_effort: low
+
+the goal is to check whether or not turning on reasoning_effort has a meaningful change and also to understand why
+it's just an exploratory thing so only 10 problems per task are run (this uses about 100x the tokens for each response :|)
+
+max_tokens raised to 16k to prevent responses from cutting off
+only running on reasoning_effort low as it should be a good enough indicator of what effect turning on reasoning has (we dont really need to compare the different levels of reasoning)
+
+total 1080 requests per difficulty

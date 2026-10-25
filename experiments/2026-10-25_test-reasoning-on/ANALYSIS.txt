@@ -1,0 +1,39 @@
+
+I went through the 14 cut-off responses in long's Hindi interval_date. Here is a typical question:
+
+▎ यदि आज 2026-12-22 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?
+▎ ("If today is 2026-12-22, what are the start and end dates of next week, assuming Monday is the first day of the week?")
+
+That's simple once you know which weekday today is. Most of the 16k tokens go on four things:
+
+1. It can't settle which weekday a date falls on
+
+It works out the weekday, gets a result, doubts it, and switches to another method: Zeller's formula, the "doomsday" rule, or counting from
+a reference date. The methods disagree, so it starts over. Each trace contains "Wait" 25–49 times and "Monday" 66–263 times. Here's an
+excerpt from 3/no_insertion/cot:
+
+▎ "Today is Wednesday (2027-03-07)… next week starts on 2027-03-15" → "…So next week starts on 2027-03-12" → "Hmm, I'm still confused because I've been counting days multiple times" → "Actually, I'm going to use a Python script to verify this" → "Actually, now I'm really confused. Let's try a different approach…"
+
+2027-03-07 is actually a Sunday, so its starting point was wrong, and its answers kept changing. It even "writes" Python code it can't run.
+
+2. It often found the right answer early and didn't tru
+
+In 12 of the 14 traces, the correct start date appears In 5 of them it shows up in the first 15% of the trace;
+in one it's mentioned 51 times. The model keeps re-chec
+
+3. It argues with the prompt's formatting rules, mostly
+
+The Hindi direct prompt asks for all of these at once: ng", "Write your entire response in Hindi", "Keep
+'Answer:' in English", and "use Western digits". The moctory and spends thousands of tokens on it. "Hindi"
+appears 37–74 times in the direct traces. Some quotes:
+
+▎ "This is a classic issue with conflicting instruction dates in Devanagari numerals?" / "But then not in
+▎ Hindi…"
+
+This happens because of how the prompt is worded, and ifix. It also explains why Hindi is cut off more often
+than English across the board.
+
+4. The hidden reasoning isn't in Hindi
+
+Only 0–11% of each trace is in Devanagari script, even t says "Your reasoning must be written entirely in
+Hindi". The hidden reasoning ignores that instruction, y follows it in the visible answer.
