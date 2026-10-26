@@ -1,5 +1,5 @@
 api_url: https://api.sarvam.ai/v1/chat/completions
-api_key: "sk_jc1rudq4_aSoK6sM9ofGeb8nBUMUdAbNY"
+api_key: "sk_ibretzf5_m1rLenkNrXLFn2fznqKIVAG6"
 model: sarvam-105b
 reasoning_effort: null
 temperature: 0.0
