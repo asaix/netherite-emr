@@ -1,0 +1,109 @@
+{
+  "checks": {
+    "true continuation: 'The capital of France is Par' is not restarted": true,
+    "fresh answers with the empty <think></think> pre-filled end with an Answer line and contain no <think>": false,
+    "continuations run to an Answer line and stop normally (at least 5 of 6)": false,
+    "continuations do not restart the reasoning (at most 1 of 6)": true
+  },
+  "info": {
+    "one at a time, same request twice: identical text": "8/8",
+    "one at a time, same request twice: same answer": "8/8",
+    "one at a time: seconds per request": 30.16,
+    "one at a time: projected minutes for the main + repeat runs": 470,
+    "recommended mode": "sequential"
+  },
+  "mode": "sequential",
+  "log": {
+    "split_word": "us.",
+    "fresh_without_prefill": [
+      {
+        "content": "<think>",
+        "finish_reason": "length",
+        "completion_tokens": 4096
+      },
+      {
+        "content": "<think>",
+        "finish_reason": "length",
+        "completion_tokens": 4096
+      }
+    ],
+    "fresh_with_empty_think": [
+      {
+        "content": "\n",
+        "finish_reason": "length"
+      },
+      {
+        "content": "\n",
+        "finish_reason": "length"
+      }
+    ],
+    "full_continuations": [
+      {
+        "id": "medium/date_addition_hi_IN/41/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2026-08-03",
+        "gold": "2026-09-03",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.134,
+        "restarted": false,
+        "start": " "
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/44/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2033-06-27",
+        "gold": "2033-06-14",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.142,
+        "restarted": false,
+        "start": "\n"
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/101/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2025-03-09",
+        "gold": "2025-03-12",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.142,
+        "restarted": false,
+        "start": "\n"
+      },
+      {
+        "id": "very_long/date_recurrence_en_US/120/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2025-11-05",
+        "gold": "2026-05-06",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.146,
+        "restarted": false,
+        "start": " The"
+      },
+      {
+        "id": "very_very_long/date_subtraction_en_US/22/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2030-11-14",
+        "gold": "2030-11-13",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.163,
+        "restarted": false,
+        "start": "\n\n"
+      },
+      {
+        "id": "medium/interval_date_en_US/60/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2025-04-06 to 2025-04-12",
+        "gold": "2025-03-31 to 2025-04-06",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 30.117,
+        "restarted": false,
+        "start": "\n"
+      }
+    ]
+  }
+}

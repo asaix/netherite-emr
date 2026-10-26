@@ -1,0 +1,22 @@
+{
+  "en_US | 0 unscored or cut off": 303,
+  "en_US | 1 right": 5667,
+  "en_US | 1 wrong": 780,
+  "en_US | 2 mentions distractor": 42,
+  "en_US | 3 mention before answer": 37,
+  "en_US | 3x mention at or after answer": 5,
+  "en_US | 4 eligible": 12,
+  "en_US | 4x length mismatch": 18,
+  "en_US | 4x no neutral sentence": 2,
+  "en_US | 4x too few neutral sentences": 5,
+  "hi_IN | 0 unscored or cut off": 60,
+  "hi_IN | 1 right": 3894,
+  "hi_IN | 1 wrong": 2793,
+  "hi_IN | 2 mentions distractor": 731,
+  "hi_IN | 3 mention before answer": 526,
+  "hi_IN | 3x mention at or after answer": 205,
+  "hi_IN | 4 eligible": 222,
+  "hi_IN | 4x length mismatch": 25,
+  "hi_IN | 4x no neutral sentence": 243,
+  "hi_IN | 4x too few neutral sentences": 36
+}

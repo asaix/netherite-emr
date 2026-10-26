@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "true continuation: 'The capital of France is Par' is not restarted": true,
+    "fresh answers have no <think> block and end with an Answer line": false,
+    "English A continuations do not restart (at most 1 of 4)": true
+  },
+  "info": {
+    "same request twice gives identical text (informational; measured fully by the repeat run)": "0/8"
+  },
+  "log": {
+    "split_word": "us.",
+    "fresh": [
+      "<think>",
+      "<think>"
+    ],
+    "english_continuations": [
+      {
+        "id": "medium/date_duration_en_US/149/similar_insertion/cot/A",
+        "continuation_start": "\n",
+        "restarted": false
+      },
+      {
+        "id": "very_long/date_recurrence_en_US/120/similar_insertion/cot/A",
+        "continuation_start": " The",
+        "restarted": false
+      },
+      {
+        "id": "very_very_long/date_subtraction_en_US/22/similar_insertion/cot/A",
+        "continuation_start": "\n\n",
+        "restarted": false
+      },
+      {
+        "id": "medium/interval_date_en_US/60/similar_insertion/cot/A",
+        "continuation_start": "\n",
+        "restarted": false
+      }
+    ],
+    "determinism_identical": "0/8"
+  }
+}

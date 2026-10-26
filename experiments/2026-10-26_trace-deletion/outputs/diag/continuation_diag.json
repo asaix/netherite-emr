@@ -1,0 +1,112 @@
+[
+  {
+    "test": "1 split-word prefill, plain",
+    "note": "true continuation starts with 'is'; a new turn restarts the sentence",
+    "content": "The capital of France is Paris, a vibrant city renowned for its art, culture, and iconic landmarks like the Eiffel Tower.",
+    "finish_reason": "stop"
+  },
+  {
+    "test": "2 split-word prefill, flags",
+    "note": "",
+    "content": "The capital of France is Paris, a global center of art, fashion, and culture.",
+    "finish_reason": "stop"
+  },
+  {
+    "test": "3 English A prefix, plain",
+    "note": "restart if it begins 'I need to find'",
+    "content": "- Today (Sunday 2028-01-23) is in the middle of this week\n\nSo \"next week\" would be:\n- Monday 2028-01-29 to Sunday 2028-01-35\n\nWait, let me check: January 28 is Sunday, so January 29 is Monday.\n\nLet me verify: \n- 2028-01-22 = Monday\n- 2028-01-23 = Tuesday? \n\nWait, I need to recheck. Let me recalculate January 1, 2028.\n\nActually, let me recheck. I said January 1, 2028 was Saturday.\n\nIf January 1, 2028 is Saturday:\n- January 1 = Saturday\n- January 2 = Sunday\n- January 3 = Monday\n\nSo January 23 = 22 days after January 1.\n22 mod 7 = 1, so January 23 = Saturday + 1 = Sunday? \n\nWait: 22 = 3*7 + 1, so 22 days after Saturday is Saturday + 22 days = Saturday + 1 = Sunday.\n\nHmm, but let me recount: \n- Jan 1 = Saturday\n- Jan 2 = Sunday\n",
+    "finish_reason": "length"
+  },
+  {
+    "test": "4 English A prefix, flags",
+    "note": "",
+    "content": "I need to find the start and end dates of next week, assuming Monday is the first day of the week, given that today is 2028-01-23.\n\nFirst, let me determine what day of the week today is. I'll calculate the day of the week for January 1, 2028, and then work forward.\n\nUsing known reference points and counting:\n- 2024-01-01 was a Monday\n- 2024 was a leap year (366 days), so 2025-01-01 = Monday + 2 = Wednesday\n- 2025 was not a leap year (365 days), so 2026-01-01 = Wednesday + 1 = Thursday\n- 2026 was not a leap year, so 2027-01-01 = Thursday + 1 = Friday\n- 2027 was not a leap year, so 2028-01-01 = Friday + 1 = Saturday\n\nSo January 1, 2028 was a Saturday.\n\nNow I'll count to January 23, 2028:\n- January 1 = Saturday\n- January 2 = Sunday\n- January 3 = Monday\n- January 4 = Tuesday",
+    "finish_reason": "length"
+  },
+  {
+    "test": "5 Hindi A prefix, flags",
+    "note": "compare with the pilot A continuation",
+    "content": "वर्तमान समय 03:57 है।\nअब हमें इसमें 1 घंटे और 50 मिनट जोड़ना होगा।\nसबसे पहले 03:57 में 1 घंटा जोड़ते हैं, तो समय 04:57 हो जाएगा।\nअब 04:57 में 50 मिनट जोड़ते हैं।\n57 मिनट और 50 मिनट मिलाकर 107 मिनट हो जाते हैं।\n107 मिनट का मतलब है 1 घंटा और 47 मिनट।\nतो 04:57 में 1 घंटा और 47 मिनट जोड़ने पर, समय 06:44 हो जाएगा।\nउत्तर: 06:44",
+    "finish_reason": "stop"
+  },
+  {
+    "test": "6 repeat original request 1",
+    "note": "short/time_addition_hi_IN/103/similar_insertion/cot",
+    "content": "इस सवाल को हल करने के लिए, हमें दिए गए समय में 1 घंटा और 50 मिनट जोड़ने होंगे। \n\nसबसे पहले, हम घंटों को जोड़ते हैं:\n03:57 + 1 घंटा = 04:57\n\nअब, हम बचे हुए 50 मिनट को जोड़ते हैं:\n04:57 + 50 मिनट = 05:47\n\nइसलिए, 1 घंटा और 50 मिनट बाद समय 05:47 होगा।\n\nAnswer: 05:47",
+    "finish_reason": "stop",
+    "source_id": "short/time_addition_hi_IN/103/similar_insertion/cot",
+    "answer": "05:47",
+    "original_answer": "04:47",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 2",
+    "note": "short/time_addition_hi_IN/103/similar_insertion/cot",
+    "content": "सबसे पहले, हमें दिए गए समय में 1 घंटा और 50 मिनट जोड़ना है।\nदिए गए समय के अनुसार, अभी 03:57 बजे हैं।\nसबसे पहले, हम 1 घंटा आगे बढ़ेंगे:\n03:57 + 1 घंटा = 04:57\n\nइसके बाद, हम इसमें 50 मिनट जोड़ेंगे:\n04:57 + 50 मिनट = 05:47\n\nइस तरह, 1 घंटे और 50 मिनट बाद समय 05:47 होगा।\n\nAnswer: 05:47",
+    "finish_reason": "stop",
+    "source_id": "short/time_addition_hi_IN/103/similar_insertion/cot",
+    "answer": "05:47",
+    "original_answer": "04:47",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 1",
+    "note": "long/day_of_week_hi_IN/37/similar_insertion/cot",
+    "content": "सबसे पहले, हमें 2029-10-23 के लिए सप्ताह का दिन खोजना है। \n\nहम एक ज्ञात संदर्भ बिंदु से शुरू करते हैं। 2025-01-01 शुक्रवार है। \n2025 एक सामान्य वर्ष है, इसलिए इसमें 365 दिन हैं। \n365 को 7 से भाग देने पर 52 सप्ताह और 1 दिन शेष बचता है। \nइसलिए, 2026-01-01 शनिवार है।\n\n2026 एक सामान्य वर्ष है। \n365 को 7 से भाग देने पर 1 दिन शेष बचता है। \nइसलिए, 2027-01-01 रविवार है।\n\n2027 एक सामान्य वर्ष है। \n365 को 7 से भाग देने पर 1 दिन शेष बचता है। \nइसलिए, 2028-01-01 सोमवार है।\n\n2028 एक लीप वर्ष है, इसलिए इसमें 366 दिन हैं। \n366 को 7 से भाग देने पर 2 दिन शेष बचता है। \nइसलिए, 2029-01-01 बुधवार है।\n\nअब हम 2029-01-01 (बुधवार) से 2029-10-23 तक के दिन गिनते हैं।\nजनवरी में 31 दिन हैं। \nफरवरी में 28 दिन हैं (2029 लीप वर्ष नहीं है)। \nमार्च में 31 दिन हैं। \nअप्रैल में 30 दिन हैं। \nमई में 31 दिन हैं। \nजून में 30 दिन हैं। \nजुलाई में 31 दिन हैं। \nअगस्त में 31 दिन हैं। \nसितंबर में 30 दिन हैं। \nअक्टूबर 23 तक 23 दिन हैं।\n\nकुल दिन = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 23 = 287 दिन।\n\nअब 287 को 7 से भाग देते हैं: \n287 / 7 = 41 सप्ताह और 0 दिन शेष बचता है।\n\nचूंकि 287 दिन ठीक 41 सप्ताह हैं, इसलिए 2029-10-23 का दिन भी 2029-01-01 (बुधवार) के समान ही होगा।\n\nइसलिए, 2029-10-23 बुधवार है।\n\nAnswer: बुधवार",
+    "finish_reason": "stop",
+    "source_id": "long/day_of_week_hi_IN/37/similar_insertion/cot",
+    "answer": "बुधवार",
+    "original_answer": "शुक्रवार",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 2",
+    "note": "long/day_of_week_hi_IN/37/similar_insertion/cot",
+    "content": "सबसे पहले, हमें यह पता लगाना है कि 22 तारीख हर महीने जल्दी आती है। इसका मतलब है कि हमें 2029 के हर महीने की 22 तारीख का दिन खोजना है।\n\n2029 में 365 दिन हैं, जो कि 52 हफ्ते और 1 दिन के बराबर होता है। \n1 जनवरी 2029 को शुक्रवार है।\n\nचूंकि 2029 एक सामान्य वर्ष है, इसलिए हर महीने की 22 तारीख का दिन पिछले महीने की 22 तारीख से 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, या 3 दिन आगे खिसक जाएगा, क्योंकि महीनों में क्रमशः 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 और 31 दिन होते हैं।\n\nहम 1 जनवरी से शुरू करके हर महीने की 22 तारीख का दिन निकालते हैं:\n- 1 जनवरी (शुक्रवार) + 21 दिन = 22 जनवरी (शुक्रवार)\n- 22 जनवरी (शुक्रवार) + 31 दिन = 22 फरवरी (सोमवार)\n- 22 फरवरी (सोमवार) + 28 दिन = 22 मार्च (सोमवार)\n- 22 मार्च (सोमवार) + 31 दिन = 22 अप्रैल (गुरुवार)\n- 22 अप्रैल (गुरुवार) + 30 दिन = 22 मई (शनिवार)\n- 22 मई (शनिवार) + 31 दिन = 22 जून (मंगलवार)\n- 22 जून (मंगलवार) + 30 दिन = 22 जुलाई (गुरुवार)\n- 22 जुलाई (गुरुवार) + 31 दिन = 22 अगस्त (रविवार)\n- 22 अगस्त (रविवार) + 31 दिन = 22 सितंबर (बुधवार)\n- 22 सितंबर (बुधवार) + 30 दिन = 22 अक्टूबर (शुक्रवार)\n\nइस तरह, 22 अक्टूबर 2029 को शुक्रवार आता है।\n\nअब हमें 2029-10-23 का दिन खोजना है। \nचूंकि 22 तारीख शुक्रवार है, इसलिए 23 तारीख शनिवार होगी।\n\nAnswer: शनिवार",
+    "finish_reason": "stop",
+    "source_id": "long/day_of_week_hi_IN/37/similar_insertion/cot",
+    "answer": "शनिवार",
+    "original_answer": "शुक्रवार",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 1",
+    "note": "medium/interval_date_en_US/60/similar_insertion/cot",
+    "content": "I need to find the start and end dates of next week, assuming Monday is the first day of the week.\n\nFirst, let me identify what day of the week 2025-03-29 is.\n\n2025-03-29 is a Monday.\n\nSince today is Monday, March 29, 2025, I need to determine what \"next week\" means.\n\nIf today is Monday, March 29, 2025, then:\n- This week is Monday, March 29 to Sunday, April 5\n- Next week would be Monday, April 6 to Sunday, April 12\n\nLet me verify this by checking the days:\n- March 29, 2025 is Monday\n- March 30 is Tuesday\n- March 31 is Wednesday\n- April 1 is Thursday\n- April 2 is Friday\n- April 3 is Saturday\n- April 4 is Sunday\n\nSo this week (the current week) is March 29 to April 4.\n\nNext week starts the following Monday, which is April 6, 2025.\n\nNext week ends on Sunday, April 12, 2025.\n\nLet me verify April 12, 2025 is a Sunday:\n- April 6 is Monday\n- April 7 is Tuesday\n- April 8 is Wednesday\n- April 9 is Thursday\n- April 10 is Friday\n- April 11 is Saturday\n- April 12 is Sunday\n\nSo next week runs from Monday, April 6 to Sunday, April 12.\n\nAnswer: 2025-04-06 to 2025-04-12",
+    "finish_reason": "stop",
+    "source_id": "medium/interval_date_en_US/60/similar_insertion/cot",
+    "answer": "2025-04-06 to 2025-04-12",
+    "original_answer": "2025-04-06 to 2025-04-12",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 2",
+    "note": "medium/interval_date_en_US/60/similar_insertion/cot",
+    "content": "I need to find the start and end dates of next week, given that today is Monday, March 29, 2025, and Monday is the first day of the week.\n\nFirst, let me verify what day of the week March 29, 2025 is. The problem states that today is Monday, March 29, 2025, so I'll work with that.\n\nSince today is Monday, March 29, 2025, this means:\n- Today is the first day of the current week\n- \"Next week\" would be the week after the current week\n\nIf today is Monday, March 29, 2025, then:\n- The current week runs from Monday, March 29, 2025 to Sunday, April 4, 2025\n- \"Next week\" would start on Monday, April 5, 2025 and end on Sunday, April 11, 2025\n\nLet me verify the dates:\n- March 29, 2025 (Monday)\n- March 30, 2025 (Tuesday)\n- March 31, 2025 (Wednesday)\n- April 1, 2025 (Thursday)\n- April 2, 2025 (Friday)\n- April 3, 2025 (Saturday)\n- April 4, 2025 (Sunday)\n\nSo the current week is March 29 to April 4.\n\nNext week would be:\n- Monday, April 5, 2025\n- Tuesday, April 6, 2025\n- Wednesday, April 7, 2025\n- Thursday, April 8, 2025\n- Friday, April 9, 2025\n- Saturday, April 10, 2025\n- Sunday, April 11, 2025\n\nTherefore, the start date of next week is April 5, 2025, and the end date is April 11, 2025.\n\nAnswer: 2025-04-05 to 2025-04-11",
+    "finish_reason": "stop",
+    "source_id": "medium/interval_date_en_US/60/similar_insertion/cot",
+    "answer": "2025-04-05 to 2025-04-11",
+    "original_answer": "2025-04-06 to 2025-04-12",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 1",
+    "note": "short/interval_date_en_US/76/similar_insertion/cot",
+    "content": "I need to find the dates for the start and end of next week, given that today is 2025-08-27 (which is a Friday) and Monday is the first day of the week.\n\nStep 1: Determine what day of the week 2025-08-27 is.\n- 2025-08-27 is a Friday (I can verify this: January 1, 2025 is a Wednesday, and counting through the months gives us Friday for August 27, 2025).\n\nStep 2: Find the start of next week.\n- Since Monday is the first day of the week, the start of next week is the Monday after today.\n- Today is Friday, August 27, 2025.\n- Saturday, August 28, 2025\n- Sunday, August 29, 2025\n- Monday, August 30, 2025\n\nSo the start of next week is 2025-08-30.\n\nStep 3: Find the end of next week.\n- Next week runs from Monday to Sunday.\n- Monday, August 30, 2025\n- Tuesday, August 31, 2025\n- Wednesday, September 1, 2025\n- Thursday, September 2, 2025\n- Friday, September 3, 2025\n- Saturday, September 4, 2025\n- Sunday, September 5, 2025\n\nSo the end of next week is 2025-09-05.\n\nAnswer: 2025-08-30 to 2025-09-05",
+    "finish_reason": "stop",
+    "source_id": "short/interval_date_en_US/76/similar_insertion/cot",
+    "answer": "2025-08-30 to 2025-09-05",
+    "original_answer": "2025-09-03 to 2025-09-09",
+    "identical_to_original": false
+  },
+  {
+    "test": "6 repeat original request 2",
+    "note": "short/interval_date_en_US/76/similar_insertion/cot",
+    "content": "I need to find the start and end dates of next week, given that today is 2025-08-27, and Monday is the first day of the week.\n\nFirst, let me determine what day of the week 2025-08-27 is.\n\n2025 is not a leap year (2024 was a leap year, and 2025 is not divisible by 4).\n\nLet me calculate the day of the week for August 27, 2025.\n\nI'll use the fact that I need to find what day of the week August 27, 2025 falls on.\n\nLet me count from a known date. January 1, 2025:\n- 2025 = 400 + 80 + 5, so 2025 = 5 * 400 + 80 + 5\n- Actually, let me use a different approach.\n\nI know that January 1, 2024 was a Monday (2024 is a leap year).\n\nFrom January 1, 2024 to January 1, 2025: 366 days (2024 is a leap year)\n366 mod 7 = 2, so January 1, 2025 is Wednesday.\n\nNow I need to find the day of the week for August 27, 2025.\n\nDays from January 1 to August 27, 2025:\n- January: 31\n- February: 28 (2025 is not a leap year)\n- March: 31\n- April: 30\n- May: 31\n- June: 30\n- July: 31\n- August: 27\n\nTotal: 31 + 28 + 31 + 30 + 31 + 30 + 31 + 27 = 239 days\n\n239 mod 7 = 239 - 238 = 1\n\nSo August 27, 2025 is Wednesday (January 1 was Wednesday, plus 1 day = Thursday? Let me recheck).\n\nWait, let me be more careful. January 1, 2025 is Wednesday.\n\nIf January 1 is Wednesday (day 2 if Sunday=0, Monday=1, etc.), then:\n- Day 0: Wednesday (Jan 1)\n- Day 1: Thursday (Jan 2)\n- ...\n- Day 239: what day?\n\n239 mod 7 = 1, so day 239 is Thursday.\n\nSo August 27, 2025 is Thursday.\n\nNow, if today is Thursday, August 27, 2025, then \"next week\" starts on the Monday after this week.\n\nSince today is Thursday, the current week (Monday to Sunday) would be:\n- Monday: August 25\n- Tuesday: August 26\n- Wednesday: August 27\n- Thursday: August 28\n- Friday: August 29\n- Saturday: August 30\n- Sunday: August 31\n\nSo next week starts on Monday, September 1, 2025.\n\nNext week runs from Monday, September 1, 2025 to Sunday, September 7, 2025.\n\nLet me verify: September 1, 2025 to September 7, 2025.\n- September 1: Monday\n- September 2: Tuesday\n- September 3: Wednesday\n- September 4: Thursday\n- September 5: Friday\n- September 6: Saturday\n- September 7: Sunday\n\nSo the start date is 2025-09-01 and the end date is 2025-09-07.\n\nAnswer: 2025-09-01 to 2025-09-07",
+    "finish_reason": "stop",
+    "source_id": "short/interval_date_en_US/76/similar_insertion/cot",
+    "answer": "2025-09-01 to 2025-09-07",
+    "original_answer": "2025-09-03 to 2025-09-09",
+    "identical_to_original": false
+  }
+]
