@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1530" viewBox="0 0 1800 1530">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6478"/>
+    </marker>
+    <style>
+      text { font-family: Inter, "Segoe UI", "Noto Sans", "Noto Sans Devanagari", Helvetica, Arial, sans-serif; fill: #1F2A44; }
+      .title { font-size: 30px; font-weight: 700; }
+      .section { font-size: 19px; font-weight: 700; }
+      .sub { font-size: 13px; fill: #6B7487; }
+      .h { font-size: 15px; font-weight: 700; }
+      .t { font-size: 13.5px; }
+      .s { font-size: 12px; fill: #4A5266; }
+      .m { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Noto Sans Mono", "Noto Sans Devanagari", monospace; font-size: 13px; }
+      .ms { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Noto Sans Mono", monospace; font-size: 11.5px; }
+      .w { fill: #FFFFFF; }
+      .edge { font-size: 12px; font-weight: 700; fill: #5B6478; }
+      .state { fill: #EEF2FB; stroke: #5B6FA8; stroke-width: 1.5; }
+      .decision { fill: #FFF3DC; stroke: #D39B2A; stroke-width: 1.5; }
+      .terminal { fill: #1F2A44; stroke: #1F2A44; }
+      .drop { fill: #FBE9E9; stroke: #C25B5B; stroke-width: 1.5; }
+      .keep { fill: #E7F5EC; stroke: #3F8F5E; stroke-width: 1.5; }
+      .flow { fill: none; stroke: #5B6478; stroke-width: 1.6; marker-end: url(#arrow); }
+      .join { fill: none; stroke: #5B6478; stroke-width: 1.6; }
+      .rule { stroke: #DCE1EA; stroke-width: 1.5; }
+      .thead { fill: #1F2A44; }
+      .row0 { fill: #F7F8FB; }
+      .row1 { fill: #FFFFFF; }
+      .grid { fill: none; stroke: #DCE1EA; stroke-width: 1; }
+      .out { fill: #2F5FA8; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1530" fill="#FFFFFF"/>
+  <text x="40" y="54" class="title">parser.py</text>
+
+  <!-- CLI -->
+  <text x="40" y="102" class="section">Command line</text>
+
+  <rect x="40" y="120" width="230" height="120" rx="10" class="state"/>
+  <text x="155" y="158" text-anchor="middle" class="m">--input results.json</text>
+  <text x="155" y="182" text-anchor="middle" class="m">--output parsed.json</text>
+  <text x="155" y="214" text-anchor="middle" class="s">both required</text>
+  <path d="M270,180 H298" class="flow"/>
+
+  <rect x="300" y="150" width="150" height="60" rx="10" class="state"/>
+  <text x="375" y="185" text-anchor="middle" class="h">read records</text>
+  <path d="M450,180 H478" class="flow"/>
+
+  <rect x="480" y="120" width="330" height="120" rx="10" class="state"/>
+  <text x="645" y="150" text-anchor="middle" class="h">find the distractor</text>
+  <text x="645" y="177" text-anchor="middle" class="t">which TRD distractor sentence</text>
+  <text x="645" y="200" text-anchor="middle" class="t">appears in the prompt</text>
+  <text x="645" y="224" text-anchor="middle" class="s">none if the question had no distractor</text>
+  <path d="M810,180 H838" class="flow"/>
+
+  <rect x="840" y="145" width="215" height="70" rx="10" class="state"/>
+  <text x="947" y="172" text-anchor="middle" class="h">for each of</text>
+  <text x="947" y="196" text-anchor="middle" class="ms">content · reasoning_content</text>
+  <path d="M1055,180 H1073" class="flow"/>
+
+  <polygon points="1075,180 1135,140 1195,180 1135,220" class="decision"/>
+  <text x="1135" y="185" text-anchor="middle" class="h">empty?</text>
+  <path d="M1135,140 V117 H1238" class="flow"/>
+  <text x="1145" y="132" class="edge">yes</text>
+  <path d="M1135,220 V243 H1238" class="flow"/>
+  <text x="1145" y="236" class="edge">no</text>
+
+  <rect x="1240" y="95" width="320" height="44" rx="10" class="state"/>
+  <text x="1400" y="122" text-anchor="middle" class="m">{original: null, parsed: null}</text>
+  <rect x="1240" y="221" width="320" height="44" rx="10" class="state"/>
+  <text x="1400" y="248" text-anchor="middle" class="m">{original: text, parsed: tokens}</text>
+  <path d="M1560,117 H1576 V165 H1598" class="flow"/>
+  <path d="M1560,243 H1576 V195 H1598" class="flow"/>
+
+  <rect x="1600" y="135" width="160" height="90" rx="10" class="terminal"/>
+  <text x="1680" y="162" text-anchor="middle" class="h w">save parsed.json</text>
+  <text x="1680" y="184" text-anchor="middle" class="ms w">{stats, records}</text>
+  <text x="1680" y="208" text-anchor="middle" class="s w">print stats</text>
+
+  <line x1="40" y1="292" x2="1760" y2="292" class="rule"/>
+
+  <!-- parse -->
+  <text x="40" y="335" class="section">parse: whole response</text>
+
+  <polygon points="160,385 250,347 340,385 250,423" class="decision"/>
+  <text x="250" y="390" text-anchor="middle" class="h">no text?</text>
+  <path d="M340,385 H368" class="flow"/>
+  <text x="344" y="377" class="edge">yes</text>
+  <rect x="370" y="363" width="90" height="44" rx="10" class="terminal"/>
+  <text x="415" y="390" text-anchor="middle" class="h w">None</text>
+  <path d="M250,423 V443" class="flow"/>
+  <text x="258" y="438" class="edge">no</text>
+
+  <rect x="40" y="445" width="420" height="96" rx="10" class="state"/>
+  <text x="250" y="472" text-anchor="middle" class="h">find the final answer</text>
+  <text x="250" y="498" text-anchor="middle" class="t">from the last "Answer:" line</text>
+  <text x="250" y="524" text-anchor="middle" class="t">a date range becomes <tspan class="m">A..B</tspan></text>
+  <path d="M250,541 V563" class="flow"/>
+
+  <rect x="40" y="565" width="420" height="150" rx="10" class="state"/>
+  <text x="250" y="592" text-anchor="middle" class="h">clean up the text</text>
+  <text x="250" y="620" text-anchor="middle" class="t">Hindi digits → 0-9</text>
+  <text x="250" y="645" text-anchor="middle" class="t">ज़ → ज · पाँच → पांच</text>
+  <text x="250" y="670" text-anchor="middle" class="t">invisible joiner characters removed</text>
+  <text x="250" y="695" text-anchor="middle" class="t">every dash and colon variant → - and :</text>
+  <path d="M250,715 V738" class="flow"/>
+
+  <rect x="40" y="740" width="420" height="176" rx="10" class="state"/>
+  <text x="250" y="767" text-anchor="middle" class="h">split into sentences</text>
+  <text x="250" y="794" text-anchor="middle" class="t">line by line</text>
+  <text x="250" y="818" text-anchor="middle" class="t">bullets, bold and backticks removed</text>
+  <text x="250" y="842" text-anchor="middle" class="t">break at . ! ? and ।, never inside 2.5</text>
+  <text x="250" y="866" text-anchor="middle" class="t">list numbers like 1. or Step 3: removed</text>
+  <text x="250" y="890" text-anchor="middle" class="t">pieces with no letters or digits skipped</text>
+  <path d="M250,916 V938" class="flow"/>
+
+  <rect x="40" y="940" width="420" height="58" rx="10" class="state"/>
+  <text x="250" y="964" text-anchor="middle" class="h">each sentence</text>
+  <text x="250" y="986" text-anchor="middle" class="ms">parse_segment(sentence, final answer, distractor)</text>
+  <path d="M460,969 H500 V390 H643" class="flow"/>
+
+  <rect x="40" y="1100" width="420" height="50" rx="10" class="state"/>
+  <text x="250" y="1130" text-anchor="middle" class="h">join every sentence's tokens in order</text>
+  <path d="M250,1150 V1173" class="flow"/>
+  <rect x="150" y="1175" width="200" height="46" rx="10" class="terminal"/>
+  <text x="250" y="1203" text-anchor="middle" class="h w">return tokens</text>
+
+  <!-- parse_segment -->
+  <text x="540" y="335" class="section">parse_segment: one sentence</text>
+
+  <polygon points="645,390 760,350 875,390 760,430" class="decision"/>
+  <text x="760" y="395" text-anchor="middle" class="h">"Answer:" line?</text>
+  <path d="M875,390 H903" class="flow"/>
+  <text x="878" y="382" class="edge">yes</text>
+  <rect x="905" y="364" width="245" height="52" rx="10" class="terminal"/>
+  <text x="1027" y="386" text-anchor="middle" class="m w" font-weight="700">ANSWER value</text>
+  <text x="1027" y="405" text-anchor="middle" class="s w">value on this line or the next</text>
+  <path d="M760,430 V450" class="flow"/>
+  <text x="768" y="445" class="edge">no</text>
+
+  <rect x="540" y="452" width="440" height="50" rx="10" class="state"/>
+  <text x="760" y="482" text-anchor="middle" class="h">pull out dates, times, weekdays and numbers</text>
+  <path d="M760,502 V523" class="flow"/>
+
+  <rect x="540" y="525" width="440" height="112" rx="10" class="state"/>
+  <text x="760" y="550" text-anchor="middle" class="h">read written math</text>
+  <text x="760" y="575" text-anchor="middle" class="t">one token per symbol: <tspan class="m">26 + 3</tspan> → <tspan class="m">ADD 26 3</tspan></text>
+  <text x="760" y="598" text-anchor="middle" class="t">a bracket with math inside becomes <tspan class="m">()</tspan></text>
+  <text x="760" y="621" text-anchor="middle" class="t">the math inside the bracket gets its own tokens</text>
+  <path d="M760,637 V658" class="flow"/>
+
+  <rect x="540" y="660" width="440" height="112" rx="10" class="state"/>
+  <text x="760" y="685" text-anchor="middle" class="h">match trigger phrases</text>
+  <text x="760" y="710" text-anchor="middle" class="t">each op's phrases are in config/parser.yaml</text>
+  <text x="760" y="733" text-anchor="middle" class="t">a label's phrases also trigger PLAN and RULE</text>
+  <text x="760" y="756" text-anchor="middle" class="t">IGNORE also fires when the distractor is repeated</text>
+  <path d="M760,772 V793" class="flow"/>
+
+  <polygon points="590,845 760,795 930,845 760,895" class="decision"/>
+  <text x="760" y="840" text-anchor="middle" class="h">says "so" or "इसलिए" and</text>
+  <text x="760" y="860" text-anchor="middle" class="h">has the final answer?</text>
+  <path d="M930,845 H963" class="flow"/>
+  <text x="936" y="837" class="edge">no</text>
+  <rect x="965" y="823" width="185" height="44" rx="10" class="drop"/>
+  <text x="1057" y="850" text-anchor="middle" class="h">no ANSWER</text>
+  <path d="M1057,867 V905 H760" class="join"/>
+  <path d="M760,895 V918" class="flow"/>
+  <text x="752" y="916" text-anchor="end" class="edge">yes</text>
+
+  <polygon points="590,975 760,920 930,975 760,1030" class="decision"/>
+  <text x="760" y="968" text-anchor="middle" class="h">written math, or</text>
+  <text x="760" y="990" text-anchor="middle" class="ms" font-weight="700">GOAL · STEP · ANSWER · MONTHLEN?</text>
+  <path d="M930,975 H963" class="flow"/>
+  <text x="936" y="967" class="edge">yes</text>
+  <rect x="965" y="947" width="185" height="56" rx="10" class="drop"/>
+  <text x="1057" y="970" text-anchor="middle" class="h">skip math in words</text>
+  <text x="1057" y="990" text-anchor="middle" class="s">"add", "before", "बाद"…</text>
+  <path d="M1057,1003 V1100 H760" class="join"/>
+  <path d="M760,1030 V1048" class="flow"/>
+  <text x="752" y="1044" text-anchor="end" class="edge">no</text>
+
+  <rect x="540" y="1050" width="440" height="40" rx="10" class="keep"/>
+  <text x="760" y="1075" text-anchor="middle" class="t">keep only the first math-in-words op</text>
+  <path d="M760,1090 V1108" class="flow"/>
+
+  <rect x="540" y="1110" width="440" height="46" rx="10" class="state"/>
+  <text x="760" y="1138" text-anchor="middle" class="h">fill in arguments, up to the first missing one</text>
+  <path d="M760,1156 V1174" class="flow"/>
+
+  <rect x="540" y="1176" width="440" height="46" rx="10" class="state"/>
+  <text x="760" y="1204" text-anchor="middle" class="t">tokens in sentence order: <tspan class="m">OP arg arg</tspan></text>
+  <path d="M540,1199 H500 V1125 H462" class="flow"/>
+
+  <!-- Values -->
+  <text x="1190" y="335" class="section">Values</text>
+  <rect x="1190" y="348" width="570" height="30" class="thead"/>
+  <text x="1202" y="368" class="h w">type</text>
+  <text x="1282" y="368" class="h w">in the text</text>
+  <text x="1582" y="368" class="h w">becomes</text>
+  <rect x="1190" y="378" width="570" height="30" class="row0"/>
+  <text x="1202" y="398" class="t">date</text>
+  <text x="1282" y="398" class="m">2025-3-7 · Mar 7, 2025 · 7 मार्च</text>
+  <text x="1582" y="398" class="m out">2025-03-07 · 03-07</text>
+  <rect x="1190" y="408" width="570" height="30" class="row1"/>
+  <text x="1202" y="428" class="t">time</text>
+  <text x="1282" y="428" class="m">9:05 · 1:23 PM</text>
+  <text x="1582" y="428" class="m out">09:05 · 13:23</text>
+  <rect x="1190" y="438" width="570" height="30" class="row0"/>
+  <text x="1202" y="458" class="t">weekday</text>
+  <text x="1282" y="458" class="m">Thu · गुरुवार · वीरवार</text>
+  <text x="1582" y="458" class="m out">Thursday</text>
+  <rect x="1190" y="468" width="570" height="30" class="row1"/>
+  <text x="1202" y="488" class="t">month</text>
+  <text x="1282" y="488" class="m">March 2031 · मार्च</text>
+  <text x="1582" y="488" class="m out">2031-03 · 03</text>
+  <rect x="1190" y="498" width="570" height="30" class="row0"/>
+  <text x="1202" y="518" class="t">number</text>
+  <text x="1282" y="518" class="m">42 · twenty-one · दो हज़ार पच्चीस</text>
+  <text x="1582" y="518" class="m out">42 · 21 · 2025</text>
+  <rect x="1190" y="528" width="570" height="26" class="row1"/>
+  <text x="1202" y="546" class="s">"one" / "एक" only counts before a unit · 3rd, 3वीं and parts of dates are skipped</text>
+  <rect x="1190" y="348" width="570" height="206" class="grid"/>
+
+  <!-- Written math -->
+  <text x="1190" y="595" class="section">Written math</text>
+  <rect x="1190" y="608" width="570" height="28" class="row0"/>
+  <text x="1202" y="627" class="m" font-weight="700">ADD</text>
+  <text x="1300" y="627" class="m">+</text>
+  <rect x="1190" y="636" width="570" height="28" class="row1"/>
+  <text x="1202" y="655" class="m" font-weight="700">SUB</text>
+  <text x="1300" y="655" class="m">-  −  –</text>
+  <rect x="1190" y="664" width="570" height="28" class="row0"/>
+  <text x="1202" y="683" class="m" font-weight="700">MUL</text>
+  <text x="1300" y="683" class="m">×  *  x  ·</text>
+  <rect x="1190" y="692" width="570" height="28" class="row1"/>
+  <text x="1202" y="711" class="m" font-weight="700">DIV</text>
+  <text x="1300" y="711" class="m">÷  /  %  mod</text>
+  <rect x="1190" y="720" width="570" height="28" class="row0"/>
+  <text x="1202" y="739" class="m" font-weight="700">CMP</text>
+  <text x="1300" y="739" class="m">&lt;  &gt;  ≤  ≥  &lt;=  &gt;=</text>
+  <rect x="1190" y="748" width="570" height="28" class="row1"/>
+  <text x="1202" y="767" class="m" font-weight="700">()</text>
+  <text x="1300" y="767" class="m">(…) · floor(…) · ⌊…⌋ · […]</text>
+  <rect x="1190" y="608" width="570" height="168" class="grid"/>
+
+  <!-- Arguments -->
+  <text x="1190" y="817" class="section">Arguments</text>
+  <rect x="1190" y="830" width="570" height="30" class="thead"/>
+  <text x="1202" y="850" class="h w">op</text>
+  <text x="1412" y="850" class="h w">arguments</text>
+  <rect x="1190" y="860" width="570" height="27" class="row0"/>
+  <text x="1202" y="878" class="ms" font-weight="700">GIVEN</text>
+  <text x="1412" y="878" class="t">first value in the sentence</text>
+  <rect x="1190" y="887" width="570" height="27" class="row1"/>
+  <text x="1202" y="905" class="ms" font-weight="700">GOAL · PLAN · RULE · ROLL</text>
+  <text x="1412" y="905" class="t">one label, from Labels</text>
+  <rect x="1190" y="914" width="570" height="27" class="row0"/>
+  <text x="1202" y="932" class="ms" font-weight="700">LEAP</text>
+  <text x="1412" y="932" class="t">year</text>
+  <rect x="1190" y="941" width="570" height="27" class="row1"/>
+  <text x="1202" y="959" class="ms" font-weight="700">MONTHLEN</text>
+  <text x="1412" y="959" class="t">month</text>
+  <rect x="1190" y="968" width="570" height="27" class="row0"/>
+  <text x="1202" y="986" class="ms" font-weight="700">ANCHOR</text>
+  <text x="1412" y="986" class="t">date, weekday</text>
+  <rect x="1190" y="995" width="570" height="27" class="row1"/>
+  <text x="1202" y="1013" class="ms" font-weight="700">CONVERT</text>
+  <text x="1412" y="1013" class="t">value, what it became</text>
+  <rect x="1190" y="1022" width="570" height="46" class="row0"/>
+  <text x="1202" y="1049" class="ms" font-weight="700">ADD · SUB · MUL · DIV · CMP</text>
+  <text x="1412" y="1040" class="t">written math: both sides as written</text>
+  <text x="1412" y="1060" class="t">in words: "X to Y" → X, Y; else date, amount</text>
+  <rect x="1190" y="1068" width="570" height="27" class="row1"/>
+  <text x="1202" y="1086" class="ms" font-weight="700">STEP</text>
+  <text x="1412" y="1086" class="t">date, -1 back or +1 forward</text>
+  <rect x="1190" y="1095" width="570" height="27" class="row0"/>
+  <text x="1202" y="1113" class="ms" font-weight="700">ANSWER</text>
+  <text x="1412" y="1113" class="t">final answer</text>
+  <rect x="1190" y="1122" width="570" height="44" class="row1"/>
+  <text x="1202" y="1140" class="ms" font-weight="700">CHECK · REVISE</text>
+  <text x="1202" y="1158" class="ms" font-weight="700">FORMAT · IGNORE</text>
+  <text x="1412" y="1149" class="t">none</text>
+  <rect x="1190" y="830" width="570" height="336" class="grid"/>
+  <line x1="1400" y1="830" x2="1400" y2="1166" class="grid"/>
+
+  <!-- Labels -->
+  <text x="1190" y="1209" class="section">Labels</text>
+  <text x="1262" y="1209" class="sub">if several fit, the earlier one wins</text>
+  <rect x="1190" y="1222" width="570" height="27" class="row0"/>
+  <text x="1202" y="1240" class="ms" font-weight="700">GOAL</text>
+  <text x="1290" y="1240" class="ms">WEEKDAY INTERVAL COUNT TIME DATE</text>
+  <rect x="1190" y="1249" width="570" height="27" class="row1"/>
+  <text x="1202" y="1267" class="ms" font-weight="700">PLAN</text>
+  <text x="1290" y="1267" class="ms">ZELLER ANCHOR_COUNT DAY_OF_YEAR STEPWISE SPLIT</text>
+  <rect x="1190" y="1276" width="570" height="46" class="row0"/>
+  <text x="1202" y="1303" class="ms" font-weight="700">RULE</text>
+  <text x="1290" y="1294" class="ms">EXCLUDE_TODAY MONDAY_FIRST NEXT_WEEK</text>
+  <text x="1290" y="1313" class="ms">INCLUSIVE EXCLUSIVE CLOCK_24H</text>
+  <rect x="1190" y="1322" width="570" height="27" class="row1"/>
+  <text x="1202" y="1340" class="ms" font-weight="700">ROLL</text>
+  <text x="1290" y="1340" class="ms">HOUR DAY YEAR MONTH</text>
+  <rect x="1190" y="1349" width="570" height="27" class="row0"/>
+  <text x="1202" y="1367" class="ms" font-weight="700">CONVERT</text>
+  <text x="1290" y="1367" class="ms">WEEKDAY DAY_OF_YEAR HOURS MINUTES WEEKS</text>
+  <rect x="1190" y="1376" width="570" height="27" class="row1"/>
+  <text x="1202" y="1394" class="ms" font-weight="700">STEP</text>
+  <text x="1290" y="1394" class="ms">-1 +1</text>
+  <rect x="1190" y="1222" width="570" height="181" class="grid"/>
+  <line x1="1280" y1="1222" x2="1280" y2="1403" class="grid"/>
+
+  <!-- Examples -->
+  <text x="40" y="1272" class="section">Examples</text>
+  <rect x="40" y="1286" width="1110" height="32" class="row0"/>
+  <rect x="40" y="1350" width="1110" height="32" class="row0"/>
+  <rect x="40" y="1414" width="1110" height="32" class="row0"/>
+  <line x1="625" y1="1286" x2="625" y2="1478" class="grid"/>
+
+  <text x="52" y="1307" class="m">1 day before: 2025-05-25</text>
+  <text x="360" y="1307" class="m out">STEP 2025-05-25 -1</text>
+  <text x="52" y="1339" class="m">26 में से 4 घटाने पर 22 आता है।</text>
+  <text x="360" y="1339" class="m out">SUB 26 4</text>
+  <text x="52" y="1371" class="m">I'll subtract 29 days from May 2.</text>
+  <text x="360" y="1371" class="m out">SUB 05-02 29</text>
+  <text x="52" y="1403" class="m">From 07:34 to 09:07:</text>
+  <text x="360" y="1403" class="m out">SUB 07:34 09:07</text>
+  <text x="52" y="1435" class="m">h = (31 + 10 - 40) mod 7</text>
+  <text x="360" y="1435" class="m out">ADD 31 10 · SUB 10 40 · DIV () 7</text>
+  <text x="52" y="1467" class="m">1 मार्च = बुधवार।</text>
+  <text x="360" y="1467" class="m out">ANCHOR 03-01 Wednesday</text>
+
+  <text x="640" y="1307" class="m">Without counting today, …</text>
+  <text x="965" y="1307" class="m out">RULE EXCLUDE_TODAY</text>
+  <text x="640" y="1339" class="m">तो, 10:62 का मतलब 11:02 हो जाता है।</text>
+  <text x="965" y="1339" class="m out">ROLL HOUR</text>
+  <text x="640" y="1371" class="m">इस जानकारी का कोई संबंध नहीं है।</text>
+  <text x="965" y="1371" class="m out">IGNORE</text>
+  <text x="640" y="1403" class="m">So 4 days before … is 2025-05-22.</text>
+  <text x="965" y="1403" class="m out">ANSWER 2025-05-22</text>
+  <text x="640" y="1435" class="m">Answer: सोमवार</text>
+  <text x="965" y="1435" class="m out">ANSWER Monday</text>
+  <text x="640" y="1467" class="m">Thursday.</text>
+  <text x="965" y="1467" class="m out">(no tokens)</text>
+</svg>
