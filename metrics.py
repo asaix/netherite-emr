@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "tools" / "temporal-rea
 from trd.config.timeframes import DIFFICULTY_LEVELS
 from trd.utils.locale import DAY_NAMES
 
-ANSWER = re.compile(r"(?:Answer|उत्तर(?:\s*है)?|जवाब)\s*\**\s*[:：]\s*(.*)")
+ANSWER = re.compile(r"(?:Answer|उत्तर(?:\s*है)?|जवाब)\s*\**\s*[:：]\s*(?!Answer|उत्तर|जवाब)(.*)")
 HINDI_TO = re.compile(r"\s+से\s+")
 DIGITS = str.maketrans("०१२३४५६७८९٠١٢٣٤٥٦٧٨٩", "0123456789" * 2)
 WEEKDAYS = {name.casefold(): day for names in DAY_NAMES.values() for day, name in names.items()}
