@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{English} & \multicolumn{3}{c}{Hindi} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Task & $Q$ & Direct & CoT & $\Delta$ & Direct & CoT & $\Delta$ \\
+\midrule
+Date addition & 600 & 93.7 & 98.5 & +4.8$^{*}$ & 89.5 & 88.3 & $-$1.2\phantom{$^{*}$} \\
+Date subtraction & 450 & 93.6 & 95.9 & +2.3$^{*}$ & 92.2 & 78.2 & \textbf{$-$14.0$^{*}$} \\
+Date duration & 585 & 88.9 & 99.1 & +10.2$^{*}$ & 85.1 & 87.5 & +2.5\phantom{$^{*}$} \\
+Date recurrence & 450 & 24.5 & 92.4 & +67.9$^{*}$ & 4.8 & 26.0 & +21.2$^{*}$ \\
+Day of week & 445 & 14.1 & 70.5 & +56.4$^{*}$ & 15.7 & 21.8 & +6.1$^{*}$ \\
+Interval date & 150 & 29.8 & 43.1 & +13.3$^{*}$ & 35.1 & 17.9 & \textbf{$-$17.2$^{*}$} \\
+Time addition & 149 & 57.7 & 97.1 & +39.3$^{*}$ & 60.2 & 73.5 & +13.4$^{*}$ \\
+Time subtraction & 111 & 48.9 & 98.5 & +49.5$^{*}$ & 51.7 & 74.2 & +22.5$^{*}$ \\
+Time duration & 149 & 58.8 & 99.8 & +40.9$^{*}$ & 28.9 & 72.6 & +43.8$^{*}$ \\
+\midrule
+All tasks & 3,089 & 63.2 & 91.1 & +27.9$^{*}$ & 57.7 & 62.9 & +5.1$^{*}$ \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) with direct answers and chain-of-thought (CoT), pooled over difficulty levels and distractor conditions. $Q$ is the number of questions; each question contributes three responses per language and condition. $\Delta$ is CoT minus direct in percentage points; $^{*}$ marks $p<0.05$ in an exact McNemar test on paired responses, Holm-corrected over the 18 task--language tests (uncorrected for the pooled row). Significant negative deltas are in bold. Chance for day of week is 14.3\%.}
+\label{tab:cot-delta}
+\end{table*}

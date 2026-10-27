@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+ & \multicolumn{3}{c}{Accuracy} & \multicolumn{2}{c}{Drop} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+ & None & Sim. & Dis. & Sim. & Dis. \\
+\midrule
+\multicolumn{6}{l}{\textit{English}} \\
+\quad Direct & 60.1 & 58.8 & 58.1 & +1.2 & +1.9 \\
+\quad CoT & 88.8 & 87.9 & 88.8 & +0.9 & $-$0.0 \\
+\quad CoT $-$ direct &  &  &  & $-$0.3 & \textbf{$-$1.9} \\
+\midrule
+\multicolumn{6}{l}{\textit{Hindi}} \\
+\quad Direct & 55.2 & 54.9 & 54.2 & +0.4 & +1.0 \\
+\quad CoT & 60.8 & 58.2 & 59.1 & +2.6 & +1.7 \\
+\quad CoT $-$ direct &  &  &  & \textbf{+2.2} & +0.7 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) with no distractor (None), a time-related (Sim.) or an unrelated (Dis.) distractor. Drop is accuracy without the distractor minus accuracy with it (points; positive means the distractor hurt). CoT $-$ direct is the CoT drop minus the direct drop (the CoT distraction penalty); bold marks a 95\% cluster-bootstrap interval that excludes zero.}
+\label{tab:distractor}
+\end{table}

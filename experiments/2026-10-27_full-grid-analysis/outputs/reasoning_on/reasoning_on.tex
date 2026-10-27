@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}llrrl@{}}
+\toprule
+Language & Prompt & Off & On & On $-$ off [95\% CI] \\
+\midrule
+English & Direct & 64.2 & 97.9 & \textbf{+33.6 [+30.1, +37.3]} \\
+ & CoT & 91.4 & 98.9 & \textbf{+7.5 [+5.7, +9.5]} \\
+Hindi & Direct & 59.1 & 94.9 & \textbf{+35.7 [+32.0, +39.6]} \\
+ & CoT & 64.1 & 97.9 & \textbf{+33.8 [+30.4, +37.2]} \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) with Sarvam's thinking mode off (main runs) and on (\texttt{reasoning\_effort: low}) on the same 450 questions (10 per task and level), paired by response. Bold: 95\% cluster-bootstrap interval excludes zero. Thinking-on runs allowed 16k output tokens, thinking-off runs 4k.}
+\label{tab:reasoning-on}
+\end{table}

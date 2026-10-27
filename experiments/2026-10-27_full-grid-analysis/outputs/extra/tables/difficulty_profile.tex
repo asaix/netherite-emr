@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+ & Short & Medium & Long & Very long & V.\,v. long \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{English}} \\
+\quad Direct & 77.5 & 67.9 & 60.7 & 52.7 & 36.1 \\
+\quad CoT & 92.9 & 91.1 & 89.2 & 86.4 & 82.7 \\
+\quad $\Delta$ & \textbf{+15.4} & \textbf{+23.2} & \textbf{+28.5} & \textbf{+33.7} & \textbf{+46.6} \\
+\multicolumn{6}{@{}l}{\textit{Hindi}} \\
+\quad Direct & 73.2 & 65.3 & 57.9 & 46.9 & 30.5 \\
+\quad CoT & 68.9 & 66.7 & 60.8 & 52.6 & 47.7 \\
+\quad $\Delta$ & \textbf{$-$4.3} & +1.5 & \textbf{+2.9} & \textbf{+5.8} & \textbf{+17.3} \\
+\midrule
+Gap, Direct & 4.3 & 2.7 & 2.7 & 5.8 & 5.7 \\
+Gap, CoT & 24.0 & 24.4 & 28.3 & 33.7 & 35.0 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) on all nine tasks by difficulty level. $\Delta$ is CoT minus direct (points), bold where the 95\% cluster-bootstrap interval excludes zero. Gap is English minus Hindi accuracy.}
+\label{tab:difficulty-profile}
+\end{table}

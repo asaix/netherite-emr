@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrr}
+\toprule
+ & English & Hindi \\
+\midrule
+Cut off before answering & 3.0\% & 0.7\% \\
+Median length (words) & 103 & 79 \\
+Median completion tokens & 327 & 198 \\
+Target-language ratio & 1.000 & 0.986 \\
+Ratio below 0.9 & 0.0\% & 2.4\% \\
+Has a verification step & 79.1\% & 1.5\% \\
+Answer value in trace & 99.9\% & 99.0\% \\
+Mentions sim.\ distractor & 15.1\% (10.4) & 31.8\% (8.3) \\
+Mentions dis.\ distractor & 18.7\% (8.5) & 35.9\% (1.4) \\
+\bottomrule
+\end{tabular}
+\caption{Properties of CoT responses. All rows except the first are computed over graded responses. The target-language ratio is the number of target-language words divided by the number of Hindi plus English words, with both counts summed over all responses before dividing, so longer traces weigh more. Distractor mention rates are for traces whose prompt contained that distractor; the value in parentheses is the placebo rate for the same questions without it.}
+\label{tab:trace}
+\end{table}
