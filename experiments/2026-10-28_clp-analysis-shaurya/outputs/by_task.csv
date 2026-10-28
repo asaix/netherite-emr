@@ -1,0 +1,10 @@
+task,en/direct,en/cot,hi/direct,hi/cot,hi/clp
+date_addition,85.6,98.0,82.8,85.1,95.7
+date_duration,84.0,99.2,78.9,88.1,97.5
+date_recurrence,21.9,84.7,2.8,20.0,65.5
+date_subtraction,86.0,95.1,84.8,65.9,93.6
+day_of_week,14.9,58.4,15.2,20.3,46.1
+interval_date,43.2,48.7,46.8,23.7,43.2
+time_addition,70.5,94.3,75.6,73.5,92.0
+time_duration,65.7,98.8,44.7,79.9,98.0
+time_subtraction,64.8,96.7,65.0,74.9,95.2
