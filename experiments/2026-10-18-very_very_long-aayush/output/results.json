@@ -680188,5 +680188,240 @@
     },
     "latency_s": 4.197,
     "time": "2026-10-25T12:11:10.433734+00:00"
+  },
+  {
+    "id": "very_very_long/time_duration_hi_IN/73/similar_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "73",
+      "insertion": "similar_insertion",
+      "answer": "949"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nलंच में समय उड़ जाता है। अगर मैंने 12:36 पर घड़ी देखी और अब 04:25 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "529\nAnswer: 529",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 11,
+      "prompt_tokens": 158,
+      "total_tokens": 169,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 128,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 0.622,
+    "time": "2026-10-29T07:01:08.900853+00:00"
+  },
+  {
+    "id": "very_very_long/time_subtraction_hi_IN/2/no_insertion/direct",
+    "condition": "direct",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "2",
+      "insertion": "no_insertion",
+      "answer": "17:36"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 18:41 बजे हैं, 25 घंटे और 5 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "17:36\nAnswer: 17:36",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 141,
+      "total_tokens": 156,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 128,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 0.869,
+    "time": "2026-10-29T07:01:09.148812+00:00"
+  },
+  {
+    "id": "very_very_long/time_addition_hi_IN/84/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "84",
+      "insertion": "no_insertion",
+      "answer": "23:53"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 20:14 बजे हैं, 27 घंटे और 39 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हम 24 घंटे का समय जोड़ते हैं। 20:14 में 24 घंटे जोड़ने पर समय वही रहेगा, यानी 20:14।\n\nअब हमें बचे हुए 3 घंटे और 39 मिनट जोड़ने हैं।\n20:14 में 3 घंटे जोड़ने पर समय 23:14 हो जाएगा।\n23:14 में 39 मिनट जोड़ने पर 23:53 हो जाएगा।\n\nइसलिए, 27 घंटे और 39 मिनट बाद समय 23:53 होगा।\n\nAnswer: 23:53",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 153,
+      "total_tokens": 284,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 128,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 1.64,
+    "time": "2026-10-29T07:01:09.877343+00:00"
+  },
+  {
+    "id": "very_very_long/time_duration_hi_IN/149/similar_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "149",
+      "insertion": "similar_insertion",
+      "answer": "563"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nहम दशमलव समय क्यों नहीं उपयोग करते? अगर मैंने 08:14 पर घड़ी देखी और अब 17:37 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हम दशमलव समय का उपयोग क्यों नहीं करते, इसके पीछे का कारण समझना जरूरी है। हमारा समय मापने का तरीका 12 घंटे या 24 घंटे पर आधारित है, जो प्राचीन मिस्र और बेबीलोन की सभ्यता से आया है। उन्होंने 60 (जो 12 और 5 का गुणा है) को एक आधार माना था। दशमलव समय (जैसे 10 घंटे का दिन और 100 मिनट का घंटा) तार्किक लगता है, लेकिन यह हमारी रोजमर्रा की जिंदगी और पुरानी परंपराओं के बिल्कुल खिलाफ है। इसके अलावा, पूरी दुनिया में समय के सिस्टम को बदलना एक बहुत बड़ा और महंगा काम है, और लोगों को अपनी पुरानी घड़ियों और समय के साथ काम करने की आदत है।\n\nअब, आपके सवाल पर आते हैं कि अगर मैंने 08:14 पर घड़ी देखी और अब 17:37 है, तो कितने मिनट बीत चुके हैं।\n\nसबसे पहले, हम घंटे और मिनट का अंतर निकालते हैं। \nघंटे: 17 - 08 = 9 घंटे।\nमिनट: 37 - 14 = 23 मिनट।\n\nअब, हमें कुल मिनट निकालने हैं। हम जानते हैं कि 1 घंटे में 60 मिनट होते हैं।\nतो, 9 घंटे में कुल मिनट होंगे: 9 x 60 = 540 मिनट।\n\nइसमें हमें 23 मिनट और जोड़ने होंगे।\n540 + 23 = 563 मिनट।\n\nइसलिए, कुल 563 मिनट बीत चुके हैं।\n\nAnswer: 563",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 329,
+      "prompt_tokens": 169,
+      "total_tokens": 498,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 160,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 2.087,
+    "time": "2026-10-29T07:01:10.366473+00:00"
+  },
+  {
+    "id": "very_very_long/time_subtraction_hi_IN/27/no_insertion/cot",
+    "condition": "cot",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_subtraction",
+      "language": "hi_IN",
+      "question_id": "27",
+      "insertion": "no_insertion",
+      "answer": "23:02"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 14:47 बजे हैं, 63 घंटे और 45 मिनट पहले क्या समय था?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "सबसे पहले, हमें 63 घंटे और 45 मिनट को एक आसान समय में बदलना होगा। 63 घंटे का मतलब है 2 दिन (48 घंटे) और 15 घंटे। \n\nअब हमें 2 दिन और 15 घंटे पहले का समय निकालना है। \n2 दिन पहले का समय वही होगा जो अभी है, यानी 14:47।\nअब हमें 15 घंटे पहले का समय निकालना है। \n14:47 में से 15 घंटे घटाने पर:\nसबसे पहले 14 घंटे घटाते हैं: 14:47 - 14:00 = 00:47 (अगले दिन का)।\nअब 1 घंटा और घटाना है: 00:47 - 1:00 = 23:47 (पिछले दिन का)।\n\nअब हमें 45 मिनट घटाने हैं।\n23:47 में से 45 मिनट घटाने पर:\n47 मिनट - 45 मिनट = 2 मिनट।\nघंटे 23 ही रहेंगे।\nतो 45 मिनट पहले का समय 23:02 था।\n\nइसलिए, 63 घंटे और 45 मिनट पहले का समय 23:02 था।\n\nAnswer: 23:02",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 282,
+      "prompt_tokens": 153,
+      "total_tokens": 435,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 128,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 1.986,
+    "time": "2026-10-29T07:01:10.887217+00:00"
   }
 ]
