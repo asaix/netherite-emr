@@ -1,14 +1,41 @@
 import argparse
 import json
+import re
 from itertools import combinations
+from pathlib import Path
 
 import pandas as pd
+import yaml
 
 from metrics import DIFFICULTY_ORDER, extract_answer, is_correct
 
+CONFIG = yaml.safe_load(open(Path(__file__).resolve().parent / "config" / "ed.yaml", encoding="utf-8"))
 FIELDS = ["content", "reasoning_content"]
 KEYS = ["difficulty", "task", "insertion"]
 STATS = ["count", "mean", "median", "std"]
+DATED = re.compile(r"\d{4}-\d{2}(?:-\d{2})?")
+UNDATED = re.compile(r"\d{1,2}(?:-\d{2})?")
+
+
+def partial(short, full):
+    if not (UNDATED.fullmatch(short) and DATED.fullmatch(full)):
+        return False
+    parts = [int(p) for p in short.split("-")]
+    return [int(p) for p in full.split("-")][-len(parts):] == parts
+
+
+def same_value(a, b):
+    x, y = a.split(".."), b.split("..")
+    return len(x) == len(y) and all(p == q or partial(p, q) or partial(q, p) for p, q in zip(x, y))
+
+
+def substitution(a, b):
+    if a == b:
+        return 0
+    x, y = a.split(" "), b.split(" ")
+    if len(x) == len(y) and x[0] == y[0] and all(map(same_value, x[1:], y[1:])):
+        return CONFIG["partial_date_cost"]
+    return 1
 
 
 def edit_distance(parsed_list1, parsed_list2):
@@ -16,7 +43,7 @@ def edit_distance(parsed_list1, parsed_list2):
     for i, a in enumerate(parsed_list1, 1):
         current = [i]
         for j, b in enumerate(parsed_list2, 1):
-            current.append(min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + (a != b)))
+            current.append(min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + substitution(a, b)))
         previous = current
     return previous[-1]
 
