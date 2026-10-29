@@ -43,6 +43,13 @@ WD, MON = word(WEEKDAYS), word(MONTHS)
 NUMWORD = word(NUMBER_WORDS, case=False)
 UNIT = re.compile(rf"\s*(?:{'|'.join(map(fold, CONFIG['number_word_units']))})", re.I)
 
+CLOCK = CONFIG["word_time"]
+HOUR = rf"(?:{NUMWORD}|(?<![\d:])\d{{1,2}})"
+WORD_TIME = re.compile(
+    rf"(?:(?P<part>{'|'.join(CLOCK['pm'] + CLOCK['night'])})(?:\s+के)?\s+)?(?P<h>{HOUR})\s*(?:{'|'.join(CLOCK['hour'])})(?:\s*(?P<m>{HOUR})\s*(?:{'|'.join(CLOCK['minute'])}))?"
+)
+RUNNING = re.compile(CONFIG["running_line"])
+YEAR = re.compile(CONFIG["year"])
 ISO = r"(?<![\d-])\d{4}-\d{1,2}-\d{1,2}(?![\d-])"
 DMY = rf"(?<!\d)\d{{1,2}}(?:st|nd|rd|th)?\s+(?:of\s+)?{MON}(?:,?\s+\d{{4}}(?!\d))?"
 MDY = rf"{MON}\.?\s+\d{{1,2}}(?:st|nd|rd|th)?(?!\d)(?:,?\s+\d{{4}}(?!\d))?"
@@ -50,6 +57,7 @@ DATE = f"(?:{ISO}|{DMY}|{MDY})"
 VALUE_PATTERNS = {
     "iso": ISO,
     "time": r"(?<!\d)(?<!\d:)\d{1,2}:\d{2}(?!\d|:\d)(?:\s*[AaPp]\.?[Mm]\.?(?![A-Za-z]))?",
+    "wtime": re.sub(r"\(\?P<\w+>", "(?:", WORD_TIME.pattern),
     "dmy": DMY,
     "mdy": MDY,
     "wd": WD,
@@ -57,7 +65,7 @@ VALUE_PATTERNS = {
     "numw": rf"{NUMWORD}(?:[\s-]+(?:(?:and|और)\s+)?{NUMWORD})*",
     "num": r"(?<![\d.:])(?:-?\d{3,}|(?<!\d{4}-)(?<!\d{4}-\d-)(?<!\d{4}-\d\d-)-?\d{1,2})(?:\.\d+)?(?!\d|st\b|nd\b|rd\b|th\b|वीं|वां|वें|वाँ|वा\b)",
 }
-KIND = {"iso": "date", "time": "time", "dmy": "date", "mdy": "date", "wd": "weekday", "mon": "month", "numw": "number", "num": "number"}
+KIND = {"iso": "date", "time": "time", "wtime": "time", "dmy": "date", "mdy": "date", "wd": "weekday", "mon": "month", "numw": "number", "num": "number"}
 VALUE = re.compile("|".join(f"(?P<{k}>{p})" for k, p in VALUE_PATTERNS.items()))
 
 OPERATORS = {fold(symbol): op for op, symbols in CONFIG["notation"].items() for symbol in symbols}
@@ -76,7 +84,7 @@ BRACKET_EXPRESSIONS = [
 def compile_cues(cues):
     if not cues:
         return None
-    patterns = (fold(c).replace("{WD}", WD).replace("{MON}", MON).replace("{DATE}", DATE) for c in cues)
+    patterns = (fold(c).replace("{WD}", WD).replace("{MON}", MON).replace("{DATE}", DATE).replace("{WTIME}", VALUE_PATTERNS["wtime"]) for c in cues)
     return re.compile("|".join(f"(?:{p})" for p in patterns), re.I | re.M)
 
 
@@ -109,6 +117,20 @@ def words_to_number(run):
     return total + current
 
 
+def number(text):
+    return int(text) if text.isdigit() else words_to_number(text)
+
+
+def clock(text):
+    m = WORD_TIME.fullmatch(text)
+    hour, minute = number(m["h"]), number(m["m"]) if m["m"] else 0
+    if m["part"] in CLOCK["pm"] and hour < 12:
+        hour += 12
+    if m["part"] in CLOCK["night"]:
+        hour = 0 if hour == 12 else hour + 12 if 6 <= hour < 12 else hour
+    return f"{hour:02d}:{minute:02d}"
+
+
 def normalize(kind, text):
     if kind == "iso":
         year, month, day = map(int, text.split("-"))
@@ -129,6 +151,8 @@ def normalize(kind, text):
         if meridiem and meridiem.group().lower() == "a" and hour == 12:
             hour = 0
         return f"{hour:02d}:{minute:02d}"
+    if kind == "wtime":
+        return clock(text)
     if kind == "wd":
         return WEEKDAYS[text]
     if kind == "numw":
@@ -158,13 +182,23 @@ def first(vals, *kinds):
     return next((v for _, k, v in vals if k in kinds), None)
 
 
+def prefer(vals, *kinds):
+    return next((v for kind in kinds for _, k, v in vals if k == kind), None)
+
+
 def year(vals):
     for _, kind, v in vals:
-        if kind == "number" and re.fullmatch(r"\d{4}", v):
+        if kind == "number" and YEAR.fullmatch(v):
             return v
         if kind in ("date", "month") and re.match(r"\d{4}-", v):
             return v[:4]
     return None
+
+
+def anchor_year(vals):
+    weekday = next((pos for pos, kind, _ in vals if kind == "weekday"), None)
+    years = [v for pos, kind, v in vals if kind == "number" and YEAR.fullmatch(v) and (weekday is None or pos < weekday)]
+    return years[-1] if years else year(vals)
 
 
 def month(vals):
@@ -197,13 +231,13 @@ def arguments(op, segment, vals, final):
     if op in ("GOAL", "PLAN", "RULE", "ROLL"):
         raw = [label(op, segment)]
     elif op == "GIVEN":
-        raw = [first(vals, "date", "time", "weekday", "number")]
+        raw = [prefer(vals, "date", "time", "weekday", "number")]
     elif op == "LEAP":
         raw = [year(vals)]
     elif op == "MONTHLEN":
         raw = [month(vals)]
     elif op == "ANCHOR":
-        raw = [first(vals, "date"), first(vals, "weekday")]
+        raw = [first(vals, "date") or anchor_year(vals), first(vals, "weekday")]
     elif op == "CONVERT":
         raw = [first(vals, "date", "number", "time"), label(op, segment)]
     elif op in ARITHMETIC:
@@ -223,7 +257,7 @@ def arguments(op, segment, vals, final):
 def parse_segment(segment, final=None, distractor=None):
     if ANSWER_LINE.search(segment):
         # "उत्तर:" can have its value on the next line, which only the whole-text answer captures
-        return [" ".join(["ANSWER", *filter(None, [normalize_answer(extract_answer(segment)) or final])])]
+        return [" ".join(["SPITANSWER", *filter(None, [normalize_answer(extract_answer(segment)) or final])])]
     vals = values(segment)
     found = {op: m.start() for op, rx in TRIGGERS.items() if rx and (m := rx.search(segment))}
     if distractor and mentions(segment, distractor):
@@ -233,6 +267,8 @@ def parse_segment(segment, final=None, distractor=None):
     present = {v for _, _, v in vals}
     if "ANSWER" in found and not (final and all(part in present for part in final.split(".."))):
         del found["ANSWER"]
+    if (running := RUNNING.match(segment)) and "STEP" not in found:
+        tokens.append((-1, "CUMADD" if running[1] == "+" else "CUMSUB", [str(int(running[2]))]))
     suppress = bool(tokens) or any(op in found for op in CONFIG["suppress_keyword_arithmetic_with"])
     for op, pos in sorted(found.items(), key=lambda kv: kv[1]):
         if op in ARITHMETIC:
