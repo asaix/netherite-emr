@@ -90,7 +90,7 @@
   <rect x="40" y="605" width="520" height="82" rx="10" class="state"/>
   <text x="300" y="632" text-anchor="middle" class="h">edit distance</text>
   <text x="300" y="656" text-anchor="middle" class="t">fewest insertions, deletions and substitutions</text>
-  <text x="300" y="677" text-anchor="middle" class="t">each costs 1 · tokens match only if identical</text>
+  <text x="300" y="677" text-anchor="middle" class="t">each costs 1 · only a missing year/month costs 0.5</text>
   <path d="M300,687 V708" class="flow"/>
 
   <rect x="40" y="710" width="520" height="62" rx="10" class="state"/>

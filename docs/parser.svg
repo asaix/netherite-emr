@@ -134,7 +134,7 @@
   <path d="M875,390 H903" class="flow"/>
   <text x="878" y="382" class="edge">yes</text>
   <rect x="905" y="364" width="245" height="52" rx="10" class="terminal"/>
-  <text x="1027" y="386" text-anchor="middle" class="m w" font-weight="700">ANSWER value</text>
+  <text x="1027" y="386" text-anchor="middle" class="m w" font-weight="700">SPITANSWER value</text>
   <text x="1027" y="405" text-anchor="middle" class="s w">value on this line or the next</text>
   <path d="M760,430 V450" class="flow"/>
   <text x="768" y="445" class="edge">no</text>
@@ -338,7 +338,7 @@
   <text x="640" y="1403" class="m">So 4 days before … is 2025-05-22.</text>
   <text x="965" y="1403" class="m out">ANSWER 2025-05-22</text>
   <text x="640" y="1435" class="m">Answer: सोमवार</text>
-  <text x="965" y="1435" class="m out">ANSWER Monday</text>
+  <text x="965" y="1435" class="m out">SPITANSWER Monday</text>
   <text x="640" y="1467" class="m">Thursday.</text>
   <text x="965" y="1467" class="m out">(no tokens)</text>
 </svg>
