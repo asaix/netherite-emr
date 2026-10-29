@@ -14,3 +14,5 @@ max_tokens:
   direct: 4096
   cot: 4096
   en-cot: 4096
+  clp-stage1: 4096
+  clp-stage2: 4096
