@@ -1,0 +1,2430 @@
+[
+  {
+    "id": "long/date_addition_en_US/126/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2028-04-24, what is the date going to be in 11 days?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_addition_en_US/126/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_addition",
+      "difficulty": "long",
+      "gold": "2028-05-05",
+      "accept": [
+        "2028-05-05"
+      ],
+      "api_answer": "2028-05-05",
+      "api_correct": true,
+      "api_completion_tokens": 349
+    }
+  },
+  {
+    "id": "medium/date_addition_en_US/22/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2028-03-24, what is the date going to be in 4 days?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_addition_en_US/22/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_addition",
+      "difficulty": "medium",
+      "gold": "2028-03-28",
+      "accept": [
+        "2028-03-28"
+      ],
+      "api_answer": "2028-03-28",
+      "api_correct": true,
+      "api_completion_tokens": 149
+    }
+  },
+  {
+    "id": "short/date_addition_en_US/19/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2025-03-30, what is the date going to be in 1 day?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_addition_en_US/19/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_addition",
+      "difficulty": "short",
+      "gold": "2025-03-31",
+      "accept": [
+        "2025-03-31"
+      ],
+      "api_answer": "2025-03-31",
+      "api_correct": true,
+      "api_completion_tokens": 169
+    }
+  },
+  {
+    "id": "very_long/date_addition_en_US/115/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2030-02-01, what is the date going to be in 20 days?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_addition_en_US/115/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_addition",
+      "difficulty": "very_long",
+      "gold": "2030-02-21",
+      "accept": [
+        "2030-02-21"
+      ],
+      "api_answer": "2030-02-21",
+      "api_correct": true,
+      "api_completion_tokens": 327
+    }
+  },
+  {
+    "id": "very_very_long/date_addition_en_US/80/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2035-03-24, what is the date going to be in 60 days?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_addition_en_US/80/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_addition",
+      "difficulty": "very_very_long",
+      "gold": "2035-05-23",
+      "accept": [
+        "2035-05-23"
+      ],
+      "api_answer": "2035-05-23",
+      "api_correct": true,
+      "api_completion_tokens": 489
+    }
+  },
+  {
+    "id": "long/date_duration_en_US/41/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nHow many day(s) (e.g., 5, 9) have passed between 2026-06-29 and 2026-07-12?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_duration_en_US/41/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_duration",
+      "difficulty": "long",
+      "gold": "13",
+      "accept": [
+        "13"
+      ],
+      "api_answer": "13",
+      "api_correct": true,
+      "api_completion_tokens": 453
+    }
+  },
+  {
+    "id": "medium/date_duration_en_US/81/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nHow many day(s) (e.g., 5, 9) have passed between 2025-11-18 and 2025-11-24?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_duration_en_US/81/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_duration",
+      "difficulty": "medium",
+      "gold": "6",
+      "accept": [
+        "6"
+      ],
+      "api_answer": "6",
+      "api_correct": true,
+      "api_completion_tokens": 355
+    }
+  },
+  {
+    "id": "short/date_duration_en_US/142/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nHow many day(s) (e.g., 5, 9) have passed between 2025-10-25 and 2025-10-29?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_duration_en_US/142/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_duration",
+      "difficulty": "short",
+      "gold": "4",
+      "accept": [
+        "4"
+      ],
+      "api_answer": "4",
+      "api_correct": true,
+      "api_completion_tokens": 242
+    }
+  },
+  {
+    "id": "very_long/date_duration_en_US/70/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nHow many day(s) (e.g., 5, 9) have passed between 2032-03-03 and 2032-03-30?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_duration_en_US/70/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_duration",
+      "difficulty": "very_long",
+      "gold": "27",
+      "accept": [
+        "27"
+      ],
+      "api_answer": "27",
+      "api_correct": true,
+      "api_completion_tokens": 365
+    }
+  },
+  {
+    "id": "very_very_long/date_duration_en_US/115/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nHow many day(s) (e.g., 5, 9) have passed between 2033-08-13 and 2033-09-15?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_duration_en_US/115/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_duration",
+      "difficulty": "very_very_long",
+      "gold": "33",
+      "accept": [
+        "33"
+      ],
+      "api_answer": "33",
+      "api_correct": true,
+      "api_completion_tokens": 935
+    }
+  },
+  {
+    "id": "long/date_recurrence_en_US/11/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2030-07-14, and I have a recurrence every 8 days. Without counting today, what is the date of the 7 occurrence?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_recurrence_en_US/11/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_recurrence",
+      "difficulty": "long",
+      "gold": "2030-09-08",
+      "accept": [
+        "2030-09-08"
+      ],
+      "api_answer": "2030-09-08",
+      "api_correct": true,
+      "api_completion_tokens": 588
+    }
+  },
+  {
+    "id": "medium/date_recurrence_en_US/128/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2028-08-13, and I have a recurrence every 7 days. Without counting today, what is the date of the 2 occurrence?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_recurrence_en_US/128/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_recurrence",
+      "difficulty": "medium",
+      "gold": "2028-08-27",
+      "accept": [
+        "2028-08-27"
+      ],
+      "api_answer": "2028-08-27",
+      "api_correct": true,
+      "api_completion_tokens": 336
+    }
+  },
+  {
+    "id": "short/date_recurrence_en_US/88/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2025-02-06, and I have a recurrence every 2 days. Without counting today, what is the date of the 1 occurrence?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_recurrence_en_US/88/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_recurrence",
+      "difficulty": "short",
+      "gold": "2025-02-08",
+      "accept": [
+        "2025-02-08"
+      ],
+      "api_answer": "2025-02-08",
+      "api_correct": true,
+      "api_completion_tokens": 323
+    }
+  },
+  {
+    "id": "very_long/date_recurrence_en_US/140/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2031-12-19, and I have a recurrence every 29 days. Without counting today, what is the date of the 15 occurrence?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_recurrence_en_US/140/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_recurrence",
+      "difficulty": "very_long",
+      "gold": "2033-02-26",
+      "accept": [
+        "2033-02-26"
+      ],
+      "api_answer": "2033-02-26",
+      "api_correct": true,
+      "api_completion_tokens": 3528
+    }
+  },
+  {
+    "id": "very_very_long/date_recurrence_en_US/149/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2026-01-17, and I have a recurrence every 50 days. Without counting today, what is the date of the 28 occurrence?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_recurrence_en_US/149/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_recurrence",
+      "difficulty": "very_very_long",
+      "gold": "2029-11-17",
+      "accept": [
+        "2029-11-17"
+      ],
+      "api_answer": "2029-03-19",
+      "api_correct": false,
+      "api_completion_tokens": 3009
+    }
+  },
+  {
+    "id": "long/date_subtraction_en_US/41/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2025-10-22, what was the date 14 days ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_subtraction_en_US/41/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_subtraction",
+      "difficulty": "long",
+      "gold": "2025-10-08",
+      "accept": [
+        "2025-10-08"
+      ],
+      "api_answer": "2025-10-08",
+      "api_correct": true,
+      "api_completion_tokens": 180
+    }
+  },
+  {
+    "id": "medium/date_subtraction_en_US/112/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2028-07-08, what was the date 7 days ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_subtraction_en_US/112/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_subtraction",
+      "difficulty": "medium",
+      "gold": "2028-07-01",
+      "accept": [
+        "2028-07-01"
+      ],
+      "api_answer": "2028-07-01",
+      "api_correct": true,
+      "api_completion_tokens": 210
+    }
+  },
+  {
+    "id": "short/date_subtraction_en_US/57/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2025-06-13, what was the date 1 day ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_subtraction_en_US/57/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_subtraction",
+      "difficulty": "short",
+      "gold": "2025-06-12",
+      "accept": [
+        "2025-06-12"
+      ],
+      "api_answer": "2025-06-12",
+      "api_correct": true,
+      "api_completion_tokens": 156
+    }
+  },
+  {
+    "id": "very_long/date_subtraction_en_US/22/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2026-10-29, what was the date 20 days ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_subtraction_en_US/22/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_subtraction",
+      "difficulty": "very_long",
+      "gold": "2026-10-09",
+      "accept": [
+        "2026-10-09"
+      ],
+      "api_answer": "2026-10-09",
+      "api_correct": true,
+      "api_completion_tokens": 268
+    }
+  },
+  {
+    "id": "very_very_long/date_subtraction_en_US/141/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nToday is 2036-02-10, what was the date 59 days ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_subtraction_en_US/141/no_insertion/cot",
+      "language": "en_US",
+      "task": "date_subtraction",
+      "difficulty": "very_very_long",
+      "gold": "2035-12-13",
+      "accept": [
+        "2035-12-13"
+      ],
+      "api_answer": "2035-12-13",
+      "api_correct": true,
+      "api_completion_tokens": 755
+    }
+  },
+  {
+    "id": "long/day_of_week_en_US/24/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in English, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nWhat day of the week (e.g., Monday, Tuesday, ...) is 2025-04-17?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/day_of_week_en_US/24/no_insertion/cot",
+      "language": "en_US",
+      "task": "day_of_week",
+      "difficulty": "long",
+      "gold": "Thursday",
+      "accept": [
+        "donderdag",
+        "donnerstag",
+        "giovedì",
+        "jeudi",
+        "jueves",
+        "quinta-feira",
+        "thursday",
+        "الخميس",
+        "गुरुवार",
+        "木曜日"
+      ],
+      "api_answer": "Thursday",
+      "api_correct": true,
+      "api_completion_tokens": 482
+    }
+  },
+  {
+    "id": "medium/day_of_week_en_US/62/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in English, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nWhat day of the week (e.g., Monday, Tuesday, ...) is 2027-08-04?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/day_of_week_en_US/62/no_insertion/cot",
+      "language": "en_US",
+      "task": "day_of_week",
+      "difficulty": "medium",
+      "gold": "Wednesday",
+      "accept": [
+        "mercoledì",
+        "mercredi",
+        "mittwoch",
+        "miércoles",
+        "quarta-feira",
+        "wednesday",
+        "woensdag",
+        "الأربعاء",
+        "बुधवार",
+        "水曜日"
+      ],
+      "api_answer": "Wednesday",
+      "api_correct": true,
+      "api_completion_tokens": 1120
+    }
+  },
+  {
+    "id": "short/day_of_week_en_US/65/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in English, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nWhat day of the week (e.g., Monday, Tuesday, ...) is 2025-03-24?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/day_of_week_en_US/65/no_insertion/cot",
+      "language": "en_US",
+      "task": "day_of_week",
+      "difficulty": "short",
+      "gold": "Monday",
+      "accept": [
+        "lundi",
+        "lunedì",
+        "lunes",
+        "maandag",
+        "monday",
+        "montag",
+        "segunda-feira",
+        "الاثنين",
+        "सोमवार",
+        "月曜日"
+      ],
+      "api_answer": "Sunday",
+      "api_correct": false,
+      "api_completion_tokens": 359
+    }
+  },
+  {
+    "id": "very_long/day_of_week_en_US/81/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in English, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nWhat day of the week (e.g., Monday, Tuesday, ...) is 2026-02-25?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/day_of_week_en_US/81/no_insertion/cot",
+      "language": "en_US",
+      "task": "day_of_week",
+      "difficulty": "very_long",
+      "gold": "Wednesday",
+      "accept": [
+        "mercoledì",
+        "mercredi",
+        "mittwoch",
+        "miércoles",
+        "quarta-feira",
+        "wednesday",
+        "woensdag",
+        "الأربعاء",
+        "बुधवार",
+        "水曜日"
+      ],
+      "api_answer": "Wednesday",
+      "api_correct": true,
+      "api_completion_tokens": 2123
+    }
+  },
+  {
+    "id": "very_very_long/day_of_week_en_US/26/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in English, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nWhat day of the week (e.g., Monday, Tuesday, ...) is 2033-09-30?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/day_of_week_en_US/26/no_insertion/cot",
+      "language": "en_US",
+      "task": "day_of_week",
+      "difficulty": "very_very_long",
+      "gold": "Friday",
+      "accept": [
+        "freitag",
+        "friday",
+        "sexta-feira",
+        "vendredi",
+        "venerdì",
+        "viernes",
+        "vrijdag",
+        "الجمعة",
+        "शुक्रवार",
+        "金曜日"
+      ],
+      "api_answer": "Thursday",
+      "api_correct": false,
+      "api_completion_tokens": 1602
+    }
+  },
+  {
+    "id": "long/interval_date_en_US/139/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf today is 2025-02-02, what are the dates for the start and end of next week, assuming Monday is the first day of the week?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/interval_date_en_US/139/no_insertion/cot",
+      "language": "en_US",
+      "task": "interval_date",
+      "difficulty": "long",
+      "gold": "2025-02-03 to 2025-02-09",
+      "accept": [
+        "2025-02-03 to 2025-02-09"
+      ],
+      "api_answer": "2025-02-10 to 2025-02-16",
+      "api_correct": false,
+      "api_completion_tokens": 617
+    }
+  },
+  {
+    "id": "medium/interval_date_en_US/93/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf today is 2026-04-23, what are the dates for the start and end of next week, assuming Monday is the first day of the week?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/interval_date_en_US/93/no_insertion/cot",
+      "language": "en_US",
+      "task": "interval_date",
+      "difficulty": "medium",
+      "gold": "2026-04-27 to 2026-05-03",
+      "accept": [
+        "2026-04-27 to 2026-05-03"
+      ],
+      "api_answer": "2026-04-27 to 2026-05-03",
+      "api_correct": true,
+      "api_completion_tokens": 1013
+    }
+  },
+  {
+    "id": "short/interval_date_en_US/122/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf today is 2025-10-28, what are the dates for the start and end of next week, assuming Monday is the first day of the week?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/interval_date_en_US/122/no_insertion/cot",
+      "language": "en_US",
+      "task": "interval_date",
+      "difficulty": "short",
+      "gold": "2025-11-03 to 2025-11-09",
+      "accept": [
+        "2025-11-03 to 2025-11-09"
+      ],
+      "api_answer": "2025-11-02 to 2025-11-08",
+      "api_correct": false,
+      "api_completion_tokens": 666
+    }
+  },
+  {
+    "id": "very_long/interval_date_en_US/57/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf today is 2026-08-10, what are the dates for the start and end of next week, assuming Monday is the first day of the week?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/interval_date_en_US/57/no_insertion/cot",
+      "language": "en_US",
+      "task": "interval_date",
+      "difficulty": "very_long",
+      "gold": "2026-08-17 to 2026-08-23",
+      "accept": [
+        "2026-08-17 to 2026-08-23"
+      ],
+      "api_answer": "2026-08-16 to 2026-08-22",
+      "api_correct": false,
+      "api_completion_tokens": 2042
+    }
+  },
+  {
+    "id": "very_very_long/interval_date_en_US/70/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf today is 2034-07-05, what are the dates for the start and end of next week, assuming Monday is the first day of the week?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/interval_date_en_US/70/no_insertion/cot",
+      "language": "en_US",
+      "task": "interval_date",
+      "difficulty": "very_very_long",
+      "gold": "2034-07-10 to 2034-07-16",
+      "accept": [
+        "2034-07-10 to 2034-07-16"
+      ],
+      "api_answer": "2034-07-10 to 2034-07-16",
+      "api_correct": true,
+      "api_completion_tokens": 1476
+    }
+  },
+  {
+    "id": "long/time_addition_en_US/121/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 14:03, what will the time be in 12 hours and 28 minutes?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_addition_en_US/121/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_addition",
+      "difficulty": "long",
+      "gold": "02:31",
+      "accept": [
+        "02:31"
+      ],
+      "api_answer": "02:31",
+      "api_correct": true,
+      "api_completion_tokens": 173
+    }
+  },
+  {
+    "id": "medium/time_addition_en_US/113/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 03:19, what will the time be in 8 hours and 0 minutes?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_addition_en_US/113/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_addition",
+      "difficulty": "medium",
+      "gold": "11:19",
+      "accept": [
+        "11:19"
+      ],
+      "api_answer": "11:19",
+      "api_correct": true,
+      "api_completion_tokens": 98
+    }
+  },
+  {
+    "id": "short/time_addition_en_US/118/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 10:21, what will the time be in 2 hours and 13 minutes?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_addition_en_US/118/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_addition",
+      "difficulty": "short",
+      "gold": "12:34",
+      "accept": [
+        "12:34"
+      ],
+      "api_answer": "12:34",
+      "api_correct": true,
+      "api_completion_tokens": 169
+    }
+  },
+  {
+    "id": "very_long/time_addition_en_US/103/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 17:39, what will the time be in 10 hours and 58 minutes?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_addition_en_US/103/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_addition",
+      "difficulty": "very_long",
+      "gold": "04:37",
+      "accept": [
+        "04:37"
+      ],
+      "api_answer": "04:37",
+      "api_correct": true,
+      "api_completion_tokens": 219
+    }
+  },
+  {
+    "id": "very_very_long/time_addition_en_US/141/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 00:44, what will the time be in 24 hours and 32 minutes?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_addition_en_US/141/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_addition",
+      "difficulty": "very_very_long",
+      "gold": "01:16",
+      "accept": [
+        "01:16"
+      ],
+      "api_answer": "01:16",
+      "api_correct": true,
+      "api_completion_tokens": 199
+    }
+  },
+  {
+    "id": "long/time_duration_en_US/31/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 20:17 and now it is 22:51, how many minutes (e.g., 15, 23) have gone by?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_duration_en_US/31/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_duration",
+      "difficulty": "long",
+      "gold": "154",
+      "accept": [
+        "154"
+      ],
+      "api_answer": "154",
+      "api_correct": true,
+      "api_completion_tokens": 244
+    }
+  },
+  {
+    "id": "medium/time_duration_en_US/29/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 09:39 and now it is 11:26, how many minutes (e.g., 15, 23) have gone by?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_duration_en_US/29/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_duration",
+      "difficulty": "medium",
+      "gold": "107",
+      "accept": [
+        "107"
+      ],
+      "api_answer": "107",
+      "api_correct": true,
+      "api_completion_tokens": 298
+    }
+  },
+  {
+    "id": "short/time_duration_en_US/63/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 17:13 and now it is 17:58, how many minutes (e.g., 15, 23) have gone by?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_duration_en_US/63/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_duration",
+      "difficulty": "short",
+      "gold": "45",
+      "accept": [
+        "45"
+      ],
+      "api_answer": "45",
+      "api_correct": true,
+      "api_completion_tokens": 211
+    }
+  },
+  {
+    "id": "very_long/time_duration_en_US/25/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 19:26 and now it is 23:44, how many minutes (e.g., 15, 23) have gone by?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_duration_en_US/25/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_duration",
+      "difficulty": "very_long",
+      "gold": "258",
+      "accept": [
+        "258"
+      ],
+      "api_answer": "258",
+      "api_correct": true,
+      "api_completion_tokens": 253
+    }
+  },
+  {
+    "id": "very_very_long/time_duration_en_US/64/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIf I looked at the clock at 18:25 and now it is 08:46, how many minutes (e.g., 15, 23) have gone by?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_duration_en_US/64/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_duration",
+      "difficulty": "very_very_long",
+      "gold": "861",
+      "accept": [
+        "861"
+      ],
+      "api_answer": "861",
+      "api_correct": true,
+      "api_completion_tokens": 722
+    }
+  },
+  {
+    "id": "long/time_subtraction_en_US/30/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 14:47, what was the time 15 hours and 45 minutes ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_subtraction_en_US/30/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_subtraction",
+      "difficulty": "long",
+      "gold": "23:02",
+      "accept": [
+        "23:02"
+      ],
+      "api_answer": "23:02",
+      "api_correct": true,
+      "api_completion_tokens": 396
+    }
+  },
+  {
+    "id": "medium/time_subtraction_en_US/79/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 17:27, what was the time 2 hours and 8 minutes ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_subtraction_en_US/79/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_subtraction",
+      "difficulty": "medium",
+      "gold": "15:19",
+      "accept": [
+        "15:19"
+      ],
+      "api_answer": "15:19",
+      "api_correct": true,
+      "api_completion_tokens": 167
+    }
+  },
+  {
+    "id": "short/time_subtraction_en_US/68/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 13:23, what was the time 1 hour and 39 minutes ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_subtraction_en_US/68/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_subtraction",
+      "difficulty": "short",
+      "gold": "11:44",
+      "accept": [
+        "11:44"
+      ],
+      "api_answer": "11:44",
+      "api_correct": true,
+      "api_completion_tokens": 264
+    }
+  },
+  {
+    "id": "very_long/time_subtraction_en_US/63/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 18:16, what was the time 7 hours and 47 minutes ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_subtraction_en_US/63/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_subtraction",
+      "difficulty": "very_long",
+      "gold": "10:29",
+      "accept": [
+        "10:29"
+      ],
+      "api_answer": "10:29",
+      "api_correct": true,
+      "api_completion_tokens": 327
+    }
+  },
+  {
+    "id": "very_very_long/time_subtraction_en_US/134/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in English; do not switch to another language at any point. Write your entire response in English. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 00:27, what was the time 42 hours and 11 minutes ago?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_subtraction_en_US/134/no_insertion/cot",
+      "language": "en_US",
+      "task": "time_subtraction",
+      "difficulty": "very_very_long",
+      "gold": "06:16",
+      "accept": [
+        "06:16"
+      ],
+      "api_answer": "05:16",
+      "api_correct": false,
+      "api_completion_tokens": 520
+    }
+  },
+  {
+    "id": "long/date_addition_hi_IN/33/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2026-07-24 है, 12 दिनों में तिथि क्या होगी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_addition_hi_IN/33/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_addition",
+      "difficulty": "long",
+      "gold": "2026-08-05",
+      "accept": [
+        "2026-08-05"
+      ],
+      "api_answer": "2026-08-04",
+      "api_correct": false,
+      "api_completion_tokens": 190
+    }
+  },
+  {
+    "id": "medium/date_addition_hi_IN/86/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2028-02-28 है, 6 दिनों में तिथि क्या होगी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_addition_hi_IN/86/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_addition",
+      "difficulty": "medium",
+      "gold": "2028-03-05",
+      "accept": [
+        "2028-03-05"
+      ],
+      "api_answer": "2028-03-05",
+      "api_correct": true,
+      "api_completion_tokens": 145
+    }
+  },
+  {
+    "id": "short/date_addition_hi_IN/0/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2025-08-26 है, 3 दिनों में तिथि क्या होगी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_addition_hi_IN/0/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_addition",
+      "difficulty": "short",
+      "gold": "2025-08-29",
+      "accept": [
+        "2025-08-29"
+      ],
+      "api_answer": "2025-08-29",
+      "api_correct": true,
+      "api_completion_tokens": 118
+    }
+  },
+  {
+    "id": "very_long/date_addition_hi_IN/42/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2025-03-02 है, 27 दिनों में तिथि क्या होगी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_addition_hi_IN/42/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_addition",
+      "difficulty": "very_long",
+      "gold": "2025-03-29",
+      "accept": [
+        "2025-03-29"
+      ],
+      "api_answer": "2025-03-29",
+      "api_correct": true,
+      "api_completion_tokens": 100
+    }
+  },
+  {
+    "id": "very_very_long/date_addition_hi_IN/110/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2035-07-14 है, 43 दिनों में तिथि क्या होगी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_addition_hi_IN/110/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_addition",
+      "difficulty": "very_very_long",
+      "gold": "2035-08-26",
+      "accept": [
+        "2035-08-26"
+      ],
+      "api_answer": "2035-08-26",
+      "api_correct": true,
+      "api_completion_tokens": 201
+    }
+  },
+  {
+    "id": "long/date_duration_hi_IN/64/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2030-06-22 और 2030-07-06 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_duration_hi_IN/64/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_duration",
+      "difficulty": "long",
+      "gold": "14",
+      "accept": [
+        "14"
+      ],
+      "api_answer": "14",
+      "api_correct": true,
+      "api_completion_tokens": 319
+    }
+  },
+  {
+    "id": "medium/date_duration_hi_IN/76/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2027-04-03 और 2027-04-08 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_duration_hi_IN/76/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_duration",
+      "difficulty": "medium",
+      "gold": "5",
+      "accept": [
+        "5"
+      ],
+      "api_answer": "5",
+      "api_correct": true,
+      "api_completion_tokens": 151
+    }
+  },
+  {
+    "id": "short/date_duration_hi_IN/37/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2025-08-10 और 2025-08-11 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_duration_hi_IN/37/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_duration",
+      "difficulty": "short",
+      "gold": "1",
+      "accept": [
+        "1"
+      ],
+      "api_answer": "1",
+      "api_correct": true,
+      "api_completion_tokens": 169
+    }
+  },
+  {
+    "id": "very_long/date_duration_hi_IN/56/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2032-02-12 और 2032-02-29 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_duration_hi_IN/56/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_duration",
+      "difficulty": "very_long",
+      "gold": "17",
+      "accept": [
+        "17"
+      ],
+      "api_answer": "17",
+      "api_correct": true,
+      "api_completion_tokens": 299
+    }
+  },
+  {
+    "id": "very_very_long/date_duration_hi_IN/42/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of days as a whole number, digits only, without units (e.g., 12). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2025-10-25 और 2025-12-20 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_duration_hi_IN/42/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_duration",
+      "difficulty": "very_very_long",
+      "gold": "56",
+      "accept": [
+        "56"
+      ],
+      "api_answer": "56",
+      "api_correct": true,
+      "api_completion_tokens": 226
+    }
+  },
+  {
+    "id": "long/date_recurrence_hi_IN/147/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2027-09-14 है, और मेरे पास हर 8 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 6वीं आवृत्ति की तिथि क्या है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_recurrence_hi_IN/147/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_recurrence",
+      "difficulty": "long",
+      "gold": "2027-11-01",
+      "accept": [
+        "2027-11-01"
+      ],
+      "api_answer": "2027-11-01",
+      "api_correct": true,
+      "api_completion_tokens": 332
+    }
+  },
+  {
+    "id": "medium/date_recurrence_hi_IN/18/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2027-06-07 है, और मेरे पास हर 6 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 4वीं आवृत्ति की तिथि क्या है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_recurrence_hi_IN/18/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_recurrence",
+      "difficulty": "medium",
+      "gold": "2027-07-01",
+      "accept": [
+        "2027-07-01"
+      ],
+      "api_answer": "2027-07-01",
+      "api_correct": true,
+      "api_completion_tokens": 337
+    }
+  },
+  {
+    "id": "short/date_recurrence_hi_IN/7/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2025-11-03 है, और मेरे पास हर 2 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_recurrence_hi_IN/7/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_recurrence",
+      "difficulty": "short",
+      "gold": "2025-11-05",
+      "accept": [
+        "2025-11-05"
+      ],
+      "api_answer": "2025-10-31",
+      "api_correct": false,
+      "api_completion_tokens": 206
+    }
+  },
+  {
+    "id": "very_long/date_recurrence_hi_IN/87/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2031-01-11 है, और मेरे पास हर 27 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 11वीं आवृत्ति की तिथि क्या है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_recurrence_hi_IN/87/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_recurrence",
+      "difficulty": "very_long",
+      "gold": "2031-11-04",
+      "accept": [
+        "2031-11-04"
+      ],
+      "api_answer": "2030-12-15",
+      "api_correct": false,
+      "api_completion_tokens": 190
+    }
+  },
+  {
+    "id": "very_very_long/date_recurrence_hi_IN/79/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2029-06-29 है, और मेरे पास हर 33 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 16वीं आवृत्ति की तिथि क्या है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_recurrence_hi_IN/79/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_recurrence",
+      "difficulty": "very_very_long",
+      "gold": "2030-12-09",
+      "accept": [
+        "2030-12-09"
+      ],
+      "api_answer": "2030-05-10",
+      "api_correct": false,
+      "api_completion_tokens": 444
+    }
+  },
+  {
+    "id": "long/date_subtraction_hi_IN/25/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2029-03-05 है, 12 दिन पहले क्या तारीख थी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/date_subtraction_hi_IN/25/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_subtraction",
+      "difficulty": "long",
+      "gold": "2029-02-21",
+      "accept": [
+        "2029-02-21"
+      ],
+      "api_answer": "2029-02-21",
+      "api_correct": true,
+      "api_completion_tokens": 197
+    }
+  },
+  {
+    "id": "medium/date_subtraction_hi_IN/97/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2028-08-05 है, 7 दिन पहले क्या तारीख थी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/date_subtraction_hi_IN/97/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_subtraction",
+      "difficulty": "medium",
+      "gold": "2028-07-29",
+      "accept": [
+        "2028-07-29"
+      ],
+      "api_answer": "2028-07-28",
+      "api_correct": false,
+      "api_completion_tokens": 150
+    }
+  },
+  {
+    "id": "short/date_subtraction_hi_IN/69/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2025-07-11 है, 2 दिन पहले क्या तारीख थी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/date_subtraction_hi_IN/69/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_subtraction",
+      "difficulty": "short",
+      "gold": "2025-07-09",
+      "accept": [
+        "2025-07-09"
+      ],
+      "api_answer": "2025-07-09",
+      "api_correct": true,
+      "api_completion_tokens": 156
+    }
+  },
+  {
+    "id": "very_long/date_subtraction_hi_IN/81/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2031-07-01 है, 17 दिन पहले क्या तारीख थी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/date_subtraction_hi_IN/81/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_subtraction",
+      "difficulty": "very_long",
+      "gold": "2031-06-14",
+      "accept": [
+        "2031-06-14"
+      ],
+      "api_answer": "2031-06-14",
+      "api_correct": true,
+      "api_completion_tokens": 120
+    }
+  },
+  {
+    "id": "very_very_long/date_subtraction_hi_IN/45/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a date in YYYY-MM-DD format (e.g., 2025-03-07). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nआज 2035-10-11 है, 42 दिन पहले क्या तारीख थी?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/date_subtraction_hi_IN/45/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "date_subtraction",
+      "difficulty": "very_very_long",
+      "gold": "2035-08-30",
+      "accept": [
+        "2035-08-30"
+      ],
+      "api_answer": "2035-09-10",
+      "api_correct": false,
+      "api_completion_tokens": 342
+    }
+  },
+  {
+    "id": "long/day_of_week_hi_IN/91/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in Hindi, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2025-05-24 सप्ताह का कौन सा दिन (जैसे सोमवार, मंगलवार, ...) है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/day_of_week_hi_IN/91/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "day_of_week",
+      "difficulty": "long",
+      "gold": "शनिवार",
+      "accept": [
+        "sabato",
+        "samedi",
+        "samstag",
+        "saturday",
+        "sábado",
+        "zaterdag",
+        "السبت",
+        "शनिवार",
+        "土曜日"
+      ],
+      "api_answer": "शुक्रवार",
+      "api_correct": false,
+      "api_completion_tokens": 187
+    }
+  },
+  {
+    "id": "medium/day_of_week_hi_IN/25/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in Hindi, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2028-07-24 सप्ताह का कौन सा दिन (जैसे सोमवार, मंगलवार, ...) है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/day_of_week_hi_IN/25/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "day_of_week",
+      "difficulty": "medium",
+      "gold": "सोमवार",
+      "accept": [
+        "lundi",
+        "lunedì",
+        "lunes",
+        "maandag",
+        "monday",
+        "montag",
+        "segunda-feira",
+        "الاثنين",
+        "सोमवार",
+        "月曜日"
+      ],
+      "api_answer": "रविवार",
+      "api_correct": false,
+      "api_completion_tokens": 492
+    }
+  },
+  {
+    "id": "short/day_of_week_hi_IN/115/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in Hindi, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2025-01-27 सप्ताह का कौन सा दिन (जैसे सोमवार, मंगलवार, ...) है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/day_of_week_hi_IN/115/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "day_of_week",
+      "difficulty": "short",
+      "gold": "सोमवार",
+      "accept": [
+        "lundi",
+        "lunedì",
+        "lunes",
+        "maandag",
+        "monday",
+        "montag",
+        "segunda-feira",
+        "الاثنين",
+        "सोमवार",
+        "月曜日"
+      ],
+      "api_answer": "मंगलवार",
+      "api_correct": false,
+      "api_completion_tokens": 515
+    }
+  },
+  {
+    "id": "very_long/day_of_week_hi_IN/110/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in Hindi, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2033-01-27 सप्ताह का कौन सा दिन (जैसे सोमवार, मंगलवार, ...) है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/day_of_week_hi_IN/110/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "day_of_week",
+      "difficulty": "very_long",
+      "gold": "गुरुवार",
+      "accept": [
+        "donderdag",
+        "donnerstag",
+        "giovedì",
+        "jeudi",
+        "jueves",
+        "quinta-feira",
+        "thursday",
+        "الخميس",
+        "गुरुवार",
+        "木曜日"
+      ],
+      "api_answer": "गुरुवार",
+      "api_correct": true,
+      "api_completion_tokens": 539
+    }
+  },
+  {
+    "id": "very_very_long/day_of_week_hi_IN/137/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the full name of the day of the week in Hindi, spelled exactly like the examples in the question. Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\n2027-09-19 सप्ताह का कौन सा दिन (जैसे सोमवार, मंगलवार, ...) है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/day_of_week_hi_IN/137/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "day_of_week",
+      "difficulty": "very_very_long",
+      "gold": "रविवार",
+      "accept": [
+        "dimanche",
+        "domenica",
+        "domingo",
+        "sonntag",
+        "sunday",
+        "zondag",
+        "الأحد",
+        "रविवार",
+        "日曜日"
+      ],
+      "api_answer": "रविवार",
+      "api_correct": true,
+      "api_completion_tokens": 441
+    }
+  },
+  {
+    "id": "long/interval_date_hi_IN/144/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2027-03-18 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/interval_date_hi_IN/144/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "interval_date",
+      "difficulty": "long",
+      "gold": "2027-03-22 to 2027-03-28",
+      "accept": [
+        "2027-03-22 to 2027-03-28"
+      ],
+      "api_answer": "2027-03-17 to 2027-03-23",
+      "api_correct": false,
+      "api_completion_tokens": 272
+    }
+  },
+  {
+    "id": "medium/interval_date_hi_IN/55/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2026-11-08 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/interval_date_hi_IN/55/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "interval_date",
+      "difficulty": "medium",
+      "gold": "2026-11-09 to 2026-11-15",
+      "accept": [
+        "2026-11-09 to 2026-11-15"
+      ],
+      "api_answer": "2026-11-09 to 2026-11-15",
+      "api_correct": true,
+      "api_completion_tokens": 186
+    }
+  },
+  {
+    "id": "short/interval_date_hi_IN/14/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-11-05 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/interval_date_hi_IN/14/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "interval_date",
+      "difficulty": "short",
+      "gold": "2025-11-10 to 2025-11-16",
+      "accept": [
+        "2025-11-10 to 2025-11-16"
+      ],
+      "api_answer": "2025-11-10 to 2025-11-16",
+      "api_correct": true,
+      "api_completion_tokens": 184
+    }
+  },
+  {
+    "id": "very_long/interval_date_hi_IN/78/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2032-09-11 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/interval_date_hi_IN/78/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "interval_date",
+      "difficulty": "very_long",
+      "gold": "2032-09-13 to 2032-09-19",
+      "accept": [
+        "2032-09-13 to 2032-09-19"
+      ],
+      "api_answer": "2032-09-13 to 2032-09-18",
+      "api_correct": false,
+      "api_completion_tokens": 327
+    }
+  },
+  {
+    "id": "very_very_long/interval_date_hi_IN/40/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2025-07-08 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/interval_date_hi_IN/40/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "interval_date",
+      "difficulty": "very_very_long",
+      "gold": "2025-07-14 to 2025-07-20",
+      "accept": [
+        "2025-07-14 to 2025-07-20"
+      ],
+      "api_answer": "2025-07-13 to 2025-07-19",
+      "api_correct": false,
+      "api_completion_tokens": 259
+    }
+  },
+  {
+    "id": "long/time_addition_hi_IN/4/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 14:02 बजे हैं, 1 घंटे और 44 मिनट बाद समय क्या होगा?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_addition_hi_IN/4/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_addition",
+      "difficulty": "long",
+      "gold": "15:46",
+      "accept": [
+        "15:46"
+      ],
+      "api_answer": "14:46",
+      "api_correct": false,
+      "api_completion_tokens": 124
+    }
+  },
+  {
+    "id": "medium/time_addition_hi_IN/64/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 11:47 बजे हैं, 8 घंटे और 56 मिनट बाद समय क्या होगा?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_addition_hi_IN/64/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_addition",
+      "difficulty": "medium",
+      "gold": "20:43",
+      "accept": [
+        "20:43"
+      ],
+      "api_answer": "08:43",
+      "api_correct": false,
+      "api_completion_tokens": 271
+    }
+  },
+  {
+    "id": "short/time_addition_hi_IN/33/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 17:33 बजे हैं, 4 घंटे और 12 मिनट बाद समय क्या होगा?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_addition_hi_IN/33/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_addition",
+      "difficulty": "short",
+      "gold": "21:45",
+      "accept": [
+        "21:45"
+      ],
+      "api_answer": "21:45",
+      "api_correct": true,
+      "api_completion_tokens": 155
+    }
+  },
+  {
+    "id": "very_long/time_addition_hi_IN/122/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 21:55 बजे हैं, 10 घंटे और 19 मिनट बाद समय क्या होगा?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_addition_hi_IN/122/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_addition",
+      "difficulty": "very_long",
+      "gold": "08:14",
+      "accept": [
+        "08:14"
+      ],
+      "api_answer": "08:14",
+      "api_correct": true,
+      "api_completion_tokens": 191
+    }
+  },
+  {
+    "id": "very_very_long/time_addition_hi_IN/101/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 05:27 बजे हैं, 45 घंटे और 12 मिनट बाद समय क्या होगा?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_addition_hi_IN/101/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_addition",
+      "difficulty": "very_very_long",
+      "gold": "02:39",
+      "accept": [
+        "02:39"
+      ],
+      "api_answer": "14:39",
+      "api_correct": false,
+      "api_completion_tokens": 277
+    }
+  },
+  {
+    "id": "long/time_duration_hi_IN/18/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 10:40 पर घड़ी देखी और अब 12:41 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_duration_hi_IN/18/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_duration",
+      "difficulty": "long",
+      "gold": "121",
+      "accept": [
+        "121"
+      ],
+      "api_answer": "121",
+      "api_correct": true,
+      "api_completion_tokens": 202
+    }
+  },
+  {
+    "id": "medium/time_duration_hi_IN/36/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 09:26 पर घड़ी देखी और अब 10:57 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_duration_hi_IN/36/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_duration",
+      "difficulty": "medium",
+      "gold": "91",
+      "accept": [
+        "91"
+      ],
+      "api_answer": "91",
+      "api_correct": true,
+      "api_completion_tokens": 157
+    }
+  },
+  {
+    "id": "short/time_duration_hi_IN/32/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 21:02 पर घड़ी देखी और अब 21:17 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_duration_hi_IN/32/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_duration",
+      "difficulty": "short",
+      "gold": "15",
+      "accept": [
+        "15"
+      ],
+      "api_answer": "15",
+      "api_correct": true,
+      "api_completion_tokens": 158
+    }
+  },
+  {
+    "id": "very_long/time_duration_hi_IN/95/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 06:24 पर घड़ी देखी और अब 12:49 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_duration_hi_IN/95/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_duration",
+      "difficulty": "very_long",
+      "gold": "385",
+      "accept": [
+        "385"
+      ],
+      "api_answer": "385",
+      "api_correct": true,
+      "api_completion_tokens": 163
+    }
+  },
+  {
+    "id": "very_very_long/time_duration_hi_IN/106/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 03:48 पर घड़ी देखी और अब 17:55 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_duration_hi_IN/106/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_duration",
+      "difficulty": "very_very_long",
+      "gold": "847",
+      "accept": [
+        "847"
+      ],
+      "api_answer": "847",
+      "api_correct": true,
+      "api_completion_tokens": 201
+    }
+  },
+  {
+    "id": "long/time_subtraction_hi_IN/22/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 09:03 बजे हैं, 9 घंटे और 28 मिनट पहले क्या समय था?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "long/time_subtraction_hi_IN/22/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_subtraction",
+      "difficulty": "long",
+      "gold": "23:35",
+      "accept": [
+        "23:35"
+      ],
+      "api_answer": "23:35",
+      "api_correct": true,
+      "api_completion_tokens": 252
+    }
+  },
+  {
+    "id": "medium/time_subtraction_hi_IN/57/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 01:23 बजे हैं, 8 घंटे और 14 मिनट पहले क्या समय था?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "medium/time_subtraction_hi_IN/57/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_subtraction",
+      "difficulty": "medium",
+      "gold": "17:09",
+      "accept": [
+        "17:09"
+      ],
+      "api_answer": "01:09",
+      "api_correct": false,
+      "api_completion_tokens": 191
+    }
+  },
+  {
+    "id": "short/time_subtraction_hi_IN/60/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 05:57 बजे हैं, 2 घंटे और 46 मिनट पहले क्या समय था?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "short/time_subtraction_hi_IN/60/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_subtraction",
+      "difficulty": "short",
+      "gold": "03:11",
+      "accept": [
+        "03:11"
+      ],
+      "api_answer": "03:11",
+      "api_correct": true,
+      "api_completion_tokens": 123
+    }
+  },
+  {
+    "id": "very_long/time_subtraction_hi_IN/9/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 13:24 बजे हैं, 24 घंटे और 24 मिनट पहले क्या समय था?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_long/time_subtraction_hi_IN/9/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_subtraction",
+      "difficulty": "very_long",
+      "gold": "13:00",
+      "accept": [
+        "13:00"
+      ],
+      "api_answer": "13:00",
+      "api_correct": true,
+      "api_completion_tokens": 147
+    }
+  },
+  {
+    "id": "very_very_long/time_subtraction_hi_IN/129/no_insertion/cot/calibration",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in Hindi; do not switch to another language at any point. Write your entire response in Hindi. End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअभी 06:47 बजे हैं, 8 घंटे और 56 मिनट पहले क्या समय था?\n"
+      },
+      {
+        "role": "assistant",
+        "content": "<think></think>"
+      }
+    ],
+    "meta": {
+      "source_id": "very_very_long/time_subtraction_hi_IN/129/no_insertion/cot",
+      "language": "hi_IN",
+      "task": "time_subtraction",
+      "difficulty": "very_very_long",
+      "gold": "21:51",
+      "accept": [
+        "21:51"
+      ],
+      "api_answer": "20:51",
+      "api_correct": false,
+      "api_completion_tokens": 294
+    }
+  }
+]

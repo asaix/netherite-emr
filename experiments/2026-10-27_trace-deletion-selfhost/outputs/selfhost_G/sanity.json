@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "true continuation: 'The capital of France is Par' is not restarted": true,
+    "continuations run to an Answer line and stop normally (at least 4 of 6)": true,
+    "continuations do not restart the reasoning (at most 1 of 6)": true,
+    "no continuation is empty": true
+  },
+  "info": {
+    "continuations that ran to the token limit without an answer (counted as no answer in the main run)": 1,
+    "one at a time: seconds per trace continuation": 13.88,
+    "decoding": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 12288,
+      "seed": 0
+    },
+    "fresh answers with <think></think> pre-filled have an Answer line (not used by the experiment)": "2/2"
+  },
+  "mode": "concurrency 16",
+  "log": {
+    "split_word": "ist.",
+    "full_continuations": [
+      {
+        "id": "medium/date_addition_hi_IN/41/similar_insertion/cot/A",
+        "answer": "2026-09-03",
+        "original_api_answer": "2026-08-03",
+        "gold": "2026-09-03",
+        "finish_reason": "stop",
+        "completion_tokens": 50,
+        "latency_s": 0.289,
+        "restarted": false,
+        "start": " \n\nतो, 2026-08-26 के 8 दिन बाद की तारीख 2026-09-03 होगी।\n\nAnswer: 2026-09-03"
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/44/similar_insertion/cot/A",
+        "answer": "2033-06-14",
+        "original_api_answer": "2033-06-27",
+        "gold": "2033-06-14",
+        "finish_reason": "stop",
+        "completion_tokens": 283,
+        "latency_s": 1.487,
+        "restarted": false,
+        "start": "\n- जनवरी: 31 दिन\n- फरवरी: 28 दिन (या लीप वर्ष में 29 दिन)\n- मार्च: 31 दिन\n- अप्रैल: 30 दिन\n- मई: 31 दिन\n- जून: 30 दिन\n- जुलाई: 31 दिन\n- अगस्त: 31 दिन\n- सितंबर: 30 दिन\n- अक्टूबर: 31 दिन\n- नवंबर: 30 दिन"
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/101/similar_insertion/cot/A",
+        "answer": "2025-03-12",
+        "original_api_answer": "2025-03-09",
+        "gold": "2025-03-12",
+        "finish_reason": "stop",
+        "completion_tokens": 490,
+        "latency_s": 2.562,
+        "restarted": false,
+        "start": "\nआज की तारीख 2025-02-14 है।\nहमें 26 दिन बाद की तारीख पता करनी है।\n\nसबसे पहले, हम फरवरी 2025 के महीने को देखते हैं।\nफरवरी 2025 में कुल कितने दिन हैं?\n2025 एक लीप वर्ष (leap year) नहीं है क्योंकि यह 4 स"
+      },
+      {
+        "id": "very_long/date_recurrence_en_US/120/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2025-11-05",
+        "gold": "2026-05-06",
+        "finish_reason": "length",
+        "completion_tokens": 12288,
+        "latency_s": 71.517,
+        "restarted": true,
+        "start": " The problem states that the last time the person had a weekly commitment was in January 2025. Since today is June 10, 2025, and the person is asking about a recurrence that happens every 22 days, I n"
+      },
+      {
+        "id": "very_very_long/date_subtraction_en_US/22/similar_insertion/cot/A",
+        "answer": "2030-11-13",
+        "original_api_answer": "2030-11-14",
+        "gold": "2030-11-13",
+        "finish_reason": "stop",
+        "completion_tokens": 1208,
+        "latency_s": 6.647,
+        "restarted": false,
+        "start": "\n\nLet me use a different approach. The number of days between two dates is the difference in their ordinal values.\n\nDecember 21, 2030 is the (31 - 21) + 30 + 12 = 10 + 30 + 12 = 52nd day of the year? "
+      },
+      {
+        "id": "medium/interval_date_en_US/60/similar_insertion/cot/A",
+        "answer": "2025-04-05 to 2025-04-11",
+        "original_api_answer": "2025-04-06 to 2025-04-12",
+        "gold": "2025-03-31 to 2025-04-06",
+        "finish_reason": "stop",
+        "completion_tokens": 145,
+        "latency_s": 0.78,
+        "restarted": false,
+        "start": "\n- The current week runs from Monday, March 29, 2025 to Sunday, April 4, 2025\n- Therefore, next week would start on Monday, April 5, 2025\n\nThe end of next week would be the following Sunday, which is "
+      }
+    ],
+    "fresh_without_prefill": [
+      {
+        "content": "<think>The user wants me to solve a date calculation problem in Hindi. Let me break it down:\n\n1. Today's date is 2026-07-24\n2. I need to find the date 8 days from now\n3. I need to provide the answer in Hindi\n4. I need to end with \"Answer: <date>\" in the format YYYY-MM-DD\n\nLet me calculate:\n- Today: ",
+        "finish_reason": "stop",
+        "completion_tokens": 454
+      },
+      {
+        "content": "<think>The user wants me to solve a date calculation problem.\n\n**1. Identify the core question:**\nThe user wants to know the number of days that have passed *between* two specific dates:\n- Start date: 2027-03-24\n- End date: 2027-03-30\n\n**2. Clarify the \"between\" ambiguity:**\nThe phrase \"how many day",
+        "finish_reason": "stop",
+        "completion_tokens": 1783
+      }
+    ],
+    "fresh_with_empty_think": [
+      {
+        "content": "\nअगस्त मेरा पसंदीदा महीना है। आज 2026-07-24 है, 8 दिनों में तिथि क्या होगी?\n\nआज की तिथि 2026-07-24 है। हमें 8 दिन बाद की तिथि ज्ञात करनी है।\n\nजुलाई में कुल 31 दिन होते हैं।\nआज की तिथि 24 जुलाई है।\n8 दिन बाद की तिथि = 24 + 8 = 32\n\n32 जुलाई को नहीं होता है, क्योंकि जुलाई में केवल 31 दिन होते हैं।\nइसलिए हम अगले महीने अगस्त में जाएंगे।\nअगस्त का पहला दिन 32 - 31 = 1 अगस्त होगा।\n\nअतः, 8 दिनों में तिथि 2026-08-01 होगी।\n\nAnswer: 2026-08-01",
+        "finish_reason": "stop"
+      },
+      {
+        "content": "\nTo find the number of days that have passed between March 24, 2027, and March 30, 2027, I will count the days in the interval.\n\nThe start date is March 24, 2027.\nThe end date is March 30, 2027.\n\nThe number of days that have passed is the difference between the end date and the start date.\nThe days are March 25, March 26, March 27, March 28, and March 29.\nThis is a total of 5 days.\n\nAlternatively, I can calculate the difference in the day numbers of the month.\nThe end day is the 30th.\nThe start day is the 24th.\nThe difference is 30 - 24 = 6.\nThis calculation (30 - 24) gives the number of days ",
+        "finish_reason": "stop"
+      }
+    ]
+  }
+}
