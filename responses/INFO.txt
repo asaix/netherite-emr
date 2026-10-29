@@ -1,0 +1,2 @@
+standard: complete 16200/difficulty response set on the standard prompt for all tasks
+ron: respones from reasoning on mode (10 problems per task ie 1080/difficulty)
