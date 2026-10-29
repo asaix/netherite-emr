@@ -13,3 +13,4 @@ retry_status: [429, 500, 502, 503, 504]
 max_tokens:
   direct: 4096
   cot: 4096
+  en-cot: 4096

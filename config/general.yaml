@@ -1,2 +1,6 @@
 # How many problems to load from each <difficulty>/<task>_<lang>.json file (null = all).
 problems_per_task: null
+# Which <lang> files to load (null = all).
+languages: null
+# Which prompting conditions to run: direct, cot, en-cot.
+conditions: [direct, cot]

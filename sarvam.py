@@ -12,10 +12,12 @@ import yaml
 from tqdm import tqdm
 
 
-def load(input_path, prompts_path, problems_per_task):
+def load(input_path, prompts_path, problems_per_task, languages, conditions):
     # input_path: str, dataset dir or one <difficulty>/<task>_<lang>.json file
     # prompts_path: str
     # problems_per_task: int, first N question ids taken from each file
+    # languages: list[str] | None, <lang> files to keep (None = all)
+    # conditions: list[str], prompt modes to build
     # returns: list[dict], each shaped as
     #   {"id": str, "condition": str,
     #    "messages": [{"role": "user", "content": str}], "meta": dict}
@@ -27,6 +29,8 @@ def load(input_path, prompts_path, problems_per_task):
     for path in sorted(root.rglob("*.json")) if root.is_dir() else [root]:
         difficulty = path.parent.name
         task, lang, region = path.stem.rsplit("_", 2)
+        if languages and f"{lang}_{region}" not in languages:
+            continue
         language = prompts["languages"][f"{lang}_{region}"]
         answer_format = prompts["formats"][task].format(language=language)
         with open(path, encoding="utf-8") as f:
@@ -34,9 +38,10 @@ def load(input_path, prompts_path, problems_per_task):
 
         for qid, q in list(questions.items())[:problems_per_task]:
             for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
-                for mode, instruction in prompts["modes"].items():
+                for mode in conditions:
+                    reasoning = prompts["languages"][prompts["en_cot_language"]] if mode == "en-cot" else language
                     content = prompts["template"].format(
-                        mode=instruction.format(language=language), language=language, format=answer_format, question=q[insertion])
+                        mode=prompts["modes"][mode].format(language=reasoning, source=language), language=reasoning, format=answer_format, question=q[insertion])
                     reqs.append({
                         "id": f"{difficulty}/{path.stem}/{qid}/{insertion}/{mode}",
                         "condition": mode,
@@ -161,7 +166,7 @@ async def main(args):
     with open(args.general, encoding="utf-8") as f:
         general = yaml.safe_load(f)
 
-    reqs = load(args.input, args.prompts, general["problems_per_task"])
+    reqs = load(args.input, args.prompts, general["problems_per_task"], general["languages"], general["conditions"])
 
     ids = [r["id"] for r in reqs]
     if len(ids) != len(set(ids)):
