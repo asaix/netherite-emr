@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="950" viewBox="0 0 1800 950">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6478"/>
+    </marker>
+    <style>
+      text { font-family: Inter, "Segoe UI", "Noto Sans", "Noto Sans Devanagari", Helvetica, Arial, sans-serif; fill: #1F2A44; }
+      .title { font-size: 30px; font-weight: 700; }
+      .section { font-size: 19px; font-weight: 700; }
+      .sub { font-size: 13px; fill: #6B7487; }
+      .h { font-size: 15px; font-weight: 700; }
+      .t { font-size: 13.5px; }
+      .s { font-size: 12px; fill: #4A5266; }
+      .m { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Noto Sans Mono", monospace; font-size: 13px; }
+      .ms { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Noto Sans Mono", monospace; font-size: 11.5px; }
+      .mt { font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "Noto Sans Mono", monospace; font-size: 10.5px; }
+      .w { fill: #FFFFFF; }
+      .edge { font-size: 12px; font-weight: 700; fill: #5B6478; }
+      .state { fill: #EEF2FB; stroke: #5B6FA8; stroke-width: 1.5; }
+      .decision { fill: #FFF3DC; stroke: #D39B2A; stroke-width: 1.5; }
+      .terminal { fill: #1F2A44; stroke: #1F2A44; }
+      .drop { fill: #FBE9E9; stroke: #C25B5B; stroke-width: 1.5; }
+      .flow { fill: none; stroke: #5B6478; stroke-width: 1.6; marker-end: url(#arrow); }
+      .join { fill: none; stroke: #5B6478; stroke-width: 1.6; }
+      .rule { stroke: #DCE1EA; stroke-width: 1.5; }
+      .thead { fill: #1F2A44; }
+      .row0 { fill: #F7F8FB; }
+      .row1 { fill: #FFFFFF; }
+      .path { fill: #DCE7FB; }
+      .grid { fill: none; stroke: #DCE1EA; stroke-width: 1; }
+      .out { fill: #2F5FA8; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="950" fill="#FFFFFF"/>
+  <text x="40" y="54" class="title">ed.py</text>
+
+  <!-- Command line -->
+  <text x="40" y="102" class="section">Command line</text>
+
+  <rect x="40" y="120" width="290" height="120" rx="10" class="state"/>
+  <text x="60" y="155" class="m">--input parsed.json</text>
+  <text x="310" y="155" text-anchor="end" class="s">required</text>
+  <text x="60" y="185" class="m">--output ed.csv</text>
+  <text x="310" y="185" text-anchor="end" class="s">optional</text>
+  <text x="60" y="215" class="m">--nodrop</text>
+  <text x="310" y="215" text-anchor="end" class="s">optional</text>
+  <path d="M330,180 H358" class="flow"/>
+
+  <rect x="360" y="150" width="150" height="60" rx="10" class="state"/>
+  <text x="435" y="185" text-anchor="middle" class="h">read records</text>
+  <path d="M510,180 H538" class="flow"/>
+
+  <rect x="540" y="140" width="220" height="80" rx="10" class="state"/>
+  <text x="650" y="174" text-anchor="middle" class="h">keep CoT only</text>
+  <text x="650" y="198" text-anchor="middle" class="s">direct responses skipped</text>
+  <path d="M760,180 H788" class="flow"/>
+
+  <rect x="790" y="120" width="360" height="120" rx="10" class="state"/>
+  <text x="970" y="150" text-anchor="middle" class="h">pair English with Hindi</text>
+  <text x="970" y="176" text-anchor="middle" class="t">same difficulty, task,</text>
+  <text x="970" y="198" text-anchor="middle" class="t">question ID and insertion</text>
+  <text x="970" y="223" text-anchor="middle" class="s">questions missing a language skipped</text>
+  <path d="M970,240 V275 H300 V343" class="flow"/>
+
+  <line x1="40" y1="292" x2="1760" y2="292" class="rule"/>
+
+  <!-- Each pair -->
+  <text x="40" y="330" class="section">Each pair</text>
+
+  <rect x="40" y="345" width="520" height="62" rx="10" class="state"/>
+  <text x="300" y="372" text-anchor="middle" class="h">mark each answer right or wrong</text>
+  <text x="300" y="395" text-anchor="middle" class="ms">en_correct · hi_correct</text>
+  <path d="M300,407 V428" class="flow"/>
+
+  <rect x="40" y="430" width="520" height="46" rx="10" class="state"/>
+  <text x="300" y="458" text-anchor="middle" class="t">for <tspan class="m">content</tspan> and <tspan class="m">reasoning_content</tspan></text>
+  <path d="M300,476 V496" class="flow"/>
+
+  <polygon points="170,540 300,498 430,540 300,582" class="decision"/>
+  <text x="300" y="537" text-anchor="middle" class="h">both token</text>
+  <text x="300" y="556" text-anchor="middle" class="h">lists exist?</text>
+  <path d="M430,540 H448" class="flow"/>
+  <text x="434" y="532" class="edge">no</text>
+  <rect x="450" y="518" width="110" height="44" rx="10" class="drop"/>
+  <text x="505" y="545" text-anchor="middle" class="t">left empty</text>
+  <path d="M300,582 V603" class="flow"/>
+  <text x="292" y="598" text-anchor="end" class="edge">yes</text>
+
+  <rect x="40" y="605" width="520" height="82" rx="10" class="state"/>
+  <text x="300" y="632" text-anchor="middle" class="h">edit distance</text>
+  <text x="300" y="656" text-anchor="middle" class="t">fewest insertions, deletions and substitutions</text>
+  <text x="300" y="677" text-anchor="middle" class="t">each costs 1 · tokens match only if identical</text>
+  <path d="M300,687 V708" class="flow"/>
+
+  <rect x="40" y="710" width="520" height="62" rx="10" class="state"/>
+  <text x="300" y="737" text-anchor="middle" class="h">distance ÷ longer list</text>
+  <text x="300" y="759" text-anchor="middle" class="s">both lists empty → 0</text>
+  <path d="M300,772 V793" class="flow"/>
+
+  <rect x="200" y="795" width="200" height="46" rx="10" class="terminal"/>
+  <text x="300" y="823" text-anchor="middle" class="h w">one row per pair</text>
+  <path d="M400,818 H590 V380 H618" class="flow"/>
+
+  <!-- Aggregates and output -->
+  <text x="620" y="330" class="section">Aggregates and output</text>
+
+  <rect x="620" y="345" width="520" height="70" rx="10" class="state"/>
+  <text x="880" y="372" text-anchor="middle" class="h">group the rows every possible way</text>
+  <text x="880" y="396" text-anchor="middle" class="t">difficulty × task × insertion, unused ones read <tspan class="m">ALL</tspan></text>
+  <path d="M880,415 V436" class="flow"/>
+
+  <rect x="620" y="438" width="520" height="62" rx="10" class="state"/>
+  <text x="880" y="465" text-anchor="middle" class="h">count · mean · median · std</text>
+  <text x="880" y="487" text-anchor="middle" class="s">of the normalized distance, per field</text>
+  <path d="M880,500 V521" class="flow"/>
+
+  <rect x="780" y="523" width="200" height="46" rx="10" class="terminal"/>
+  <text x="880" y="551" text-anchor="middle" class="h w">print aggregates</text>
+  <path d="M880,569 V588" class="flow"/>
+
+  <polygon points="770,628 880,590 990,628 880,666" class="decision"/>
+  <text x="880" y="633" text-anchor="middle" class="m" font-weight="700">--output?</text>
+  <path d="M990,628 H1018" class="flow"/>
+  <text x="994" y="620" class="edge">no</text>
+  <rect x="1020" y="606" width="120" height="44" rx="10" class="terminal"/>
+  <text x="1080" y="633" text-anchor="middle" class="h w">done</text>
+  <path d="M880,666 V686" class="flow"/>
+  <text x="872" y="681" text-anchor="end" class="edge">yes</text>
+
+  <polygon points="780,726 880,690 980,726 880,762" class="decision"/>
+  <text x="880" y="731" text-anchor="middle" class="m" font-weight="700">--nodrop?</text>
+  <path d="M980,726 H1003" class="flow"/>
+  <text x="983" y="718" class="edge">no</text>
+  <rect x="1005" y="700" width="160" height="56" rx="10" class="drop"/>
+  <text x="1085" y="724" text-anchor="middle" class="t">drop columns</text>
+  <text x="1085" y="742" text-anchor="middle" class="t">empty in every row</text>
+  <path d="M1085,756 V780 H880" class="join"/>
+  <path d="M880,762 V790" class="flow"/>
+  <text x="872" y="779" text-anchor="end" class="edge">yes</text>
+
+  <rect x="740" y="792" width="280" height="118" rx="10" class="state"/>
+  <text x="880" y="815" text-anchor="middle" class="m" font-weight="700">ed.csv</text>
+  <rect x="760" y="826" width="240" height="26" rx="4" class="thead"/>
+  <text x="880" y="844" text-anchor="middle" class="t w">aggregates</text>
+  <line x1="770" y1="860" x2="990" y2="860" stroke="#9AA3B5" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="880" y="872" text-anchor="middle" class="s">blank line</text>
+  <rect x="760" y="878" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#5B6FA8" stroke-width="1.2"/>
+  <text x="880" y="895" text-anchor="middle" class="t">one row per pair</text>
+
+  <!-- Edit distance worked example -->
+  <text x="1190" y="330" class="section">Edit distance, step by step</text>
+  <text x="1190" y="358" class="t">each cell: cheapest of above + 1 · left + 1 · diagonal + 0 if equal, else + 1</text>
+
+  <rect x="1190" y="372" width="570" height="32" class="thead"/>
+  <text x="1355" y="393" text-anchor="middle" class="mt w">start</text>
+  <text x="1443" y="393" text-anchor="middle" class="mt w">GIVEN 2025-05-26</text>
+  <text x="1559" y="393" text-anchor="middle" class="mt w">SUB 26 4</text>
+  <text x="1688" y="393" text-anchor="middle" class="mt w">ANSWER 2025-05-22</text>
+
+  <rect x="1190" y="404" width="570" height="32" class="row1"/>
+  <text x="1202" y="425" class="mt">start</text>
+  <text x="1355" y="425" text-anchor="middle" class="m">0</text>
+  <text x="1443" y="425" text-anchor="middle" class="m">1</text>
+  <text x="1559" y="425" text-anchor="middle" class="m">2</text>
+  <text x="1688" y="425" text-anchor="middle" class="m">3</text>
+
+  <rect x="1190" y="436" width="570" height="32" class="row0"/>
+  <rect x="1385" y="436" width="116" height="32" class="path"/>
+  <text x="1202" y="457" class="mt">GIVEN 2025-05-26</text>
+  <text x="1355" y="457" text-anchor="middle" class="m">1</text>
+  <text x="1443" y="457" text-anchor="middle" class="m" font-weight="700">0</text>
+  <text x="1559" y="457" text-anchor="middle" class="m">1</text>
+  <text x="1688" y="457" text-anchor="middle" class="m">2</text>
+
+  <rect x="1190" y="468" width="570" height="32" class="row1"/>
+  <rect x="1501" y="468" width="116" height="32" class="path"/>
+  <text x="1202" y="489" class="mt">STEP 2025-05-25 -1</text>
+  <text x="1355" y="489" text-anchor="middle" class="m">2</text>
+  <text x="1443" y="489" text-anchor="middle" class="m">1</text>
+  <text x="1559" y="489" text-anchor="middle" class="m" font-weight="700">1</text>
+  <text x="1688" y="489" text-anchor="middle" class="m">2</text>
+
+  <rect x="1190" y="500" width="570" height="32" class="row0"/>
+  <rect x="1501" y="500" width="116" height="32" class="path"/>
+  <text x="1202" y="521" class="mt">STEP 2025-05-24 -1</text>
+  <text x="1355" y="521" text-anchor="middle" class="m">3</text>
+  <text x="1443" y="521" text-anchor="middle" class="m">2</text>
+  <text x="1559" y="521" text-anchor="middle" class="m" font-weight="700">2</text>
+  <text x="1688" y="521" text-anchor="middle" class="m">2</text>
+
+  <rect x="1190" y="532" width="570" height="32" class="row1"/>
+  <rect x="1617" y="532" width="143" height="32" class="path"/>
+  <text x="1202" y="553" class="mt">ANSWER 2025-05-22</text>
+  <text x="1355" y="553" text-anchor="middle" class="m">4</text>
+  <text x="1443" y="553" text-anchor="middle" class="m">3</text>
+  <text x="1559" y="553" text-anchor="middle" class="m">3</text>
+  <text x="1688" y="553" text-anchor="middle" class="m" font-weight="700">2</text>
+  <rect x="1190" y="372" width="570" height="192" class="grid"/>
+  <line x1="1325" y1="372" x2="1325" y2="564" class="grid"/>
+  <line x1="1385" y1="372" x2="1385" y2="564" class="grid"/>
+
+  <text x="1190" y="590" class="s">rows: English · columns: Hindi · shaded: cheapest path</text>
+  <text x="1190" y="618" class="t">match · substitute STEP → SUB · delete STEP · match</text>
+  <text x="1190" y="646" class="m">distance 2 · 2 ÷ max(4, 3) = <tspan class="out" font-weight="700">0.5</tspan></text>
+
+  <rect x="1190" y="676" width="570" height="132" rx="10" class="state"/>
+  <text x="1210" y="704" class="t">English</text>
+  <text x="1290" y="704" class="m">ADD 1 2 · SUB 3 2</text>
+  <text x="1210" y="730" class="t">Hindi</text>
+  <text x="1290" y="730" class="m">ADD 2 3 · ANSWER 5</text>
+  <text x="1210" y="758" class="t">no token is identical, both ADDs included</text>
+  <text x="1210" y="786" class="m">distance 2 · 2 ÷ max(2, 2) = <tspan class="out" font-weight="700">1.0</tspan></text>
+
+</svg>
