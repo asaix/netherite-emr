@@ -1,2 +1,3 @@
 standard: complete 16200/difficulty response set on the standard prompt for all tasks
-ron: respones from reasoning on mode (10 problems per task ie 1080/difficulty)
+ron: respones from reasoning on mode (10 problems per task lang pair ie 1080/difficulty)
+en-cot: responses from the en-cot prompting method (50 problems per task lang pair), from Shi et al. (2023)
