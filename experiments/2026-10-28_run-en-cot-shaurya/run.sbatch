@@ -4,7 +4,7 @@
 #SBATCH --qos=medium
 #SBATCH -c 4
 #SBATCH -t 12:00:00
-#SBATCH -J clp-hindi-n50
+#SBATCH -J en-cot-hindi-n50
 #SBATCH -o logs/slurm-%j.out
 #SBATCH --mail-type=END,FAIL
 

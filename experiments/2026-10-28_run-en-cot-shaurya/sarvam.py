@@ -39,7 +39,7 @@ def load(input_path, prompts_path, problems_per_task, languages, conditions):
         for qid, q in list(questions.items())[:problems_per_task]:
             for insertion in ("no_insertion", "similar_insertion", "dissimilar_insertion"):
                 for mode in conditions:
-                    reasoning = prompts["languages"][prompts["clp_language"]] if mode == "clp" else language
+                    reasoning = prompts["languages"][prompts["en_cot_language"]] if mode == "en-cot" else language
                     content = prompts["template"].format(
                         mode=prompts["modes"][mode].format(language=reasoning, source=language), language=reasoning, format=answer_format, question=q[insertion])
                     reqs.append({

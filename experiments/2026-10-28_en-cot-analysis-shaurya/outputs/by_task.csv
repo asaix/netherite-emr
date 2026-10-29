@@ -1,4 +1,4 @@
-task,en/direct,en/cot,hi/direct,hi/cot,hi/clp
+task,en/direct,en/cot,hi/direct,hi/cot,hi/en-cot
 date_addition,85.6,98.0,82.8,85.1,95.7
 date_duration,84.0,99.2,78.9,88.1,97.5
 date_recurrence,21.9,84.7,2.8,20.0,65.5

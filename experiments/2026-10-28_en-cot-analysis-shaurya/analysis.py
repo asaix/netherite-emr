@@ -18,7 +18,7 @@ BASELINES = [ROOT / "experiments" / p / "results.json" for p in [
     "2026-10-18_run-very-long-leftover-aayush/output",
     "2026-10-18-very_very_long-aayush/output",
 ]]
-CLP = ROOT / "experiments" / "2026-10-28_run-clp-shaurya" / "outputs"
+EN_COT = ROOT / "experiments" / "2026-10-28_run-en-cot-shaurya" / "outputs"
 DIFFS = ["short", "medium", "long", "very_long", "very_very_long"]
 N = 50
 OUT = HERE / "outputs"
@@ -32,7 +32,7 @@ for d in DIFFS:
 
 records = [r for p in BASELINES for r in json.load(open(p, encoding="utf-8"))]
 for d in DIFFS:
-    records += json.load(open(CLP / d / "results.json", encoding="utf-8"))
+    records += json.load(open(EN_COT / d / "results.json", encoding="utf-8"))
 
 rows = []
 for r in records:
@@ -56,7 +56,7 @@ for r in records:
     })
 df = pd.DataFrame(rows)
 df.to_csv(OUT / "responses.csv", index=False)
-CELLS = ["en/direct", "en/cot", "hi/direct", "hi/cot", "hi/clp"]
+CELLS = ["en/direct", "en/cot", "hi/direct", "hi/cot", "hi/en-cot"]
 
 
 matched = df.groupby(["qid", "insertion"])["cell"].transform("nunique") == len(CELLS)
@@ -81,7 +81,7 @@ summary = {
     "unscored_pct": ((1 - df.groupby("cell")["scored"].mean()[CELLS]) * 100).round(2).to_dict(),
     "completion_tokens_mean": df.groupby("cell")["completion_tokens"].mean()[CELLS].round(0).to_dict(),
     "english_ratio_mean": df.groupby("cell")["english_ratio"].mean()[CELLS].round(3).to_dict(),
-    "mcnemar": [mcnemar(a, b) for a, b in [("hi/clp", "hi/cot"), ("hi/clp", "hi/direct"), ("hi/clp", "en/cot")]],
+    "mcnemar": [mcnemar(a, b) for a, b in [("hi/en-cot", "hi/cot"), ("hi/en-cot", "hi/direct"), ("hi/en-cot", "en/cot")]],
 }
 with open(OUT / "summary.json", "w", encoding="utf-8") as f:
     json.dump(summary, f, indent=2, ensure_ascii=False)

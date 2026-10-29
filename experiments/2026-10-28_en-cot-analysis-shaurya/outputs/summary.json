@@ -4,46 +4,46 @@
     "en/cot": 6750,
     "hi/direct": 6749,
     "hi/cot": 6749,
-    "hi/clp": 6750
+    "hi/en-cot": 6750
   },
   "accuracy_strict": {
     "en/direct": 59.6,
     "en/cot": 86.0,
     "hi/direct": 55.2,
     "hi/cot": 59.0,
-    "hi/clp": 80.8
+    "hi/en-cot": 80.8
   },
   "accuracy_scored": {
     "en/direct": 59.7,
     "en/cot": 88.9,
     "hi/direct": 55.2,
     "hi/cot": 59.4,
-    "hi/clp": 82.9
+    "hi/en-cot": 82.9
   },
   "unscored_pct": {
     "en/direct": 0.1,
     "en/cot": 3.27,
     "hi/direct": 0.0,
     "hi/cot": 0.64,
-    "hi/clp": 2.58
+    "hi/en-cot": 2.58
   },
   "completion_tokens_mean": {
     "en/direct": 43.0,
     "en/cot": 720.0,
     "hi/direct": 27.0,
     "hi/cot": 277.0,
-    "hi/clp": 591.0
+    "hi/en-cot": 591.0
   },
   "english_ratio_mean": {
     "en/direct": 1.0,
     "en/cot": 1.0,
     "hi/direct": 0.054,
     "hi/cot": 0.008,
-    "hi/clp": 0.999
+    "hi/en-cot": 0.999
   },
   "mcnemar": [
     {
-      "pair": "hi/clp vs hi/cot",
+      "pair": "hi/en-cot vs hi/cot",
       "n": 6749,
       "acc_a": 80.8,
       "acc_b": 59.0,
@@ -52,7 +52,7 @@
       "p": 1.1222762791316808e-252
     },
     {
-      "pair": "hi/clp vs hi/direct",
+      "pair": "hi/en-cot vs hi/direct",
       "n": 6749,
       "acc_a": 80.8,
       "acc_b": 55.2,
@@ -61,7 +61,7 @@
       "p": 7.659833572441411e-297
     },
     {
-      "pair": "hi/clp vs en/cot",
+      "pair": "hi/en-cot vs en/cot",
       "n": 6750,
       "acc_a": 80.8,
       "acc_b": 86.0,

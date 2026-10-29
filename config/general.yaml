@@ -2,5 +2,5 @@
 problems_per_task: 50
 # Which <lang> files to load (null = all).
 languages: null
-# Which prompting conditions to run: direct, cot, clp.
+# Which prompting conditions to run: direct, cot, en-cot.
 conditions: [direct, cot]

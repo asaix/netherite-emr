@@ -6,10 +6,10 @@ template: |
 modes:
   direct: Answer the following question directly. Do not provide any reasoning or explanation. Give only the final answer.
   cot: Solve the following question by reasoning through it step by step. Your reasoning must be written entirely in {language}; do not switch to another language at any point.
-  clp: The following question is written in {source}. Solve it by reasoning through it step by step in {language}. Your reasoning must be written entirely in {language}; do not switch to another language at any point.
+  en-cot: The following question is written in {source}. Solve it by reasoning through it step by step in {language}. Your reasoning must be written entirely in {language}; do not switch to another language at any point.
 
-# Language the clp mode reasons in, whatever the question's language.
-clp_language: en_US
+# Language the en-cot mode reasons in, whatever the question's language.
+en_cot_language: en_US
 
 formats:
   date_addition: a date in YYYY-MM-DD format (e.g., 2025-03-07)
