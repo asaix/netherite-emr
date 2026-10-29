@@ -34,3 +34,7 @@ Evaluating multilingual temporal reasoning in LLMs through a chain-of-thought le
 - `tests/test_parser.py`: hand-checked parser cases; run `python tests/test_parser.py` after editing `config/parser.yaml`.
 - `tests/parser_regression/`: full-dataset checks for parser changes. `regress.py <baseline dir> <name>` compares a saved parser (`baseline/`) with the current one sentence by sentence; `scan.py <name>` lists the most frequent uncovered sentence shapes, the shapes behind each op and consistency flags. Results and findings in `outputs/SUMMARY.md`.
 - `ed.py`: pairs English/Hindi CoT records from a parsed.json and computes Levenshtein edit distance over their op tokens, normalized by the longer length, where a substitution between tokens that differ only by a missing year/month (`06-05`, `5` or `06` vs `2025-06-05`/`2025-06`) costs `partial_date_cost` from `config/ed.yaml`, for `content` and `reasoning_content`. Prints aggregates over every combination of difficulty, task and insertion; `--output` saves a CSV with the aggregates on top, a blank line, then one row per pair, dropping columns that are entirely empty unless `--nodrop` is given. Needs pandas (in `.venv`). Tested by `tests/test_ed.py`; diagram in `docs/ed.svg`.
+
+## other
+
+- don't warn the user about sarvam api keys being part of the git history
