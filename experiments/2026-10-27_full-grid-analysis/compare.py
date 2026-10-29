@@ -1,3 +1,4 @@
+import argparse
 import json
 from pathlib import Path
 
@@ -6,7 +7,13 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "outputs"
-SCOPES = {"mid-midparser": "Mid report", "new": "New questions only", "full4": "Full grid, 4 levels", "full": "Full grid, 5 levels"}
+ap = argparse.ArgumentParser()
+ap.add_argument("--pair", choices=["full", "reasoning"], default="full")
+args = ap.parse_args()
+if args.pair == "full":
+    SCOPES = {"mid-midparser": "Mid report", "new": "New questions only", "full4": "Full grid, 4 levels", "full": "Full grid, 5 levels"}
+else:
+    SCOPES = {"ron-off": "Thinking off", "ron": "Thinking on"}
 N = {s: json.load(open(OUT / s / "numbers.json", encoding="utf-8")) for s in SCOPES}
 
 
@@ -55,6 +62,10 @@ def find(path):
     return f
 
 
+def pattern(key, name):
+    return share(lambda n: (lambda v: v and v.get(name, 0.0))(find(f"recurrence|{key}")(n)))
+
+
 def cot(lang, task):
     return diff(lambda n: (lambda v: v and (v["delta"], v["ci"]))(find(f"cot_delta|{lang}/{task}")(n)))
 
@@ -98,10 +109,10 @@ ROWS = [
     ("2 Day of week", "Hindi CoT +1 day minus correct (share)", share(lambda n: (lambda v: v and (v["1"] - v["0"]) / 100)(find("day_of_week|offsets|hi_IN/cot")(n)))),
     ("2 Day of week", "English direct modal weekday share", share(find("day_of_week|direct_mode|en_US|share"))),
     ("2 Day of week", "Hindi direct modal weekday share", share(find("day_of_week|direct_mode|hi_IN|share"))),
-    ("3 Recurrence", "Hindi CoT first-step shortcut", share(find("recurrence|hi_IN/cot|first_step"))),
-    ("3 Recurrence", "Hindi CoT mirror (backwards)", share(find("recurrence|hi_IN/cot|mirror"))),
-    ("3 Recurrence", "Hindi direct mirror (backwards)", share(find("recurrence|hi_IN/direct|mirror"))),
-    ("3 Recurrence", "English direct first-step shortcut", share(find("recurrence|en_US/direct|first_step"))),
+    ("3 Recurrence", "Hindi CoT first-step shortcut", pattern("hi_IN/cot", "first_step")),
+    ("3 Recurrence", "Hindi CoT mirror (backwards)", pattern("hi_IN/cot", "mirror")),
+    ("3 Recurrence", "Hindi direct mirror (backwards)", pattern("hi_IN/direct", "mirror")),
+    ("3 Recurrence", "English direct first-step shortcut", pattern("en_US/direct", "first_step")),
     ("4 EN-HI gap", "Five date tasks, short, CoT", gap("b", "short", "cot")),
     ("4 EN-HI gap", "Five date tasks, very long, CoT", gap("b", "very_long", "cot")),
     ("4 EN-HI gap", "Five date tasks, short, direct", gap("b", "short", "direct")),
@@ -150,7 +161,7 @@ def effect(kind, v):
 
 
 def verdict(old, new):
-    if old is None or new is None:
+    if old is None or new is None or not all(np.isfinite(x) for x in (old[1], new[1])):
         return "not computable"
     kind, v0, lo0, hi0 = old
     _, v1, lo1, hi1 = new
@@ -206,16 +217,27 @@ def fmt(x):
 records = []
 for section, name, get in ROWS:
     vals = {s: get(N[s]) for s in SCOPES}
-    records.append({"section": section, "finding": name, **{SCOPES[s]: fmt(v) for s, v in vals.items()},
-                    "verdict (full vs mid)": verdict(vals["mid-midparser"], vals["full"]),
-                    "replicates on new questions": replicates(vals["mid-midparser"], vals["new"])})
+    row = {"section": section, "finding": name, **{SCOPES[s]: fmt(v) for s, v in vals.items()}}
+    if args.pair == "full":
+        row["verdict (full vs mid)"] = verdict(vals["mid-midparser"], vals["full"])
+        row["replicates on new questions"] = replicates(vals["mid-midparser"], vals["new"])
+    else:
+        row["verdict (on vs off)"] = verdict(vals["ron-off"], vals["ron"])
+    records.append(row)
 table = pd.DataFrame(records)
-table.to_csv(OUT / "comparison.csv", index=False)
+name = "comparison" if args.pair == "full" else "comparison_reasoning"
+table.to_csv(OUT / f"{name}.csv", index=False)
 lines = ["| " + " | ".join(table.columns) + " |", "|" + "---|" * len(table.columns)]
 lines += ["| " + " | ".join(str(v) for v in row) + " |" for row in table.itertuples(index=False)]
 note = ("Differences are percentage points with 95% cluster-bootstrap intervals; OR = Mantel-Haenszel odds ratio within task x "
         "difficulty; reuse and agreement rows give the difference in points with Fisher / sign-test p; plain numbers are shares "
         "(%), and trace lengths are medians. Mid report = the mid-report pipeline and parser on its 3,089 questions "
         "(reproduces the submitted tables exactly).")
-(OUT / "comparison.md").write_text("# Mid report vs full grid\n\n" + note + "\n\n" + "\n".join(lines) + "\n")
-print(table[["finding", "Mid report", "Full grid, 5 levels", "verdict (full vs mid)", "replicates on new questions"]].to_string(index=False))
+if args.pair == "reasoning":
+    note = ("Same pipeline on the 449 questions answered with thinking on (reasoning_effort: low, 16k tokens) and with thinking "
+            "off (main runs, 4k tokens). Differences are percentage points with 95% cluster-bootstrap intervals; OR = "
+            "Mantel-Haenszel odds ratio within task x difficulty; reuse and agreement rows give the difference in points with "
+            "Fisher / sign-test p; plain numbers are shares (%), and trace lengths are medians of the visible CoT.")
+title = "Mid report vs full grid" if args.pair == "full" else "Thinking off vs thinking on (same questions)"
+(OUT / f"{name}.md").write_text(f"# {title}\n\n" + note + "\n\n" + "\n".join(lines) + "\n")
+print(table.drop(columns=["section"]).to_string(index=False))

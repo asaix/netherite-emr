@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.stats import binomtest
+from statsmodels.stats.contingency_tables import StratifiedTable
 
 import temporal_answers as T
 
@@ -209,6 +210,57 @@ lines += [r"\bottomrule", r"\end{tabular}",
           r"Thinking-on runs allowed 16k output tokens, thinking-off runs 4k.}",
           r"\label{tab:reasoning-on}", r"\end{table}"]
 (OUT / "reasoning_on.tex").write_text("\n".join(lines) + "\n")
+
+
+
+def mantel_haenszel(sub, exposure):
+    tables = []
+    for _, g in sub.groupby(["task", "difficulty"]):
+        e, c = g[exposure].astype(bool), g["correct"] == 1
+        t = np.array([[(e & c).sum(), (e & ~c).sum()], [(~e & c).sum(), (~e & ~c).sum()]], dtype=float)
+        if t[0].sum() and t[1].sum() and t[:, 1].sum():
+            tables.append(t)
+    if not tables:
+        return {"odds_ratio": None, "or_ci": None, "p": None, "strata": 0}
+    st = StratifiedTable(tables)
+    lo, hi = st.oddsratio_pooled_confint()
+    return {"odds_ratio": float(st.oddsratio_pooled), "or_ci": [float(lo), float(hi)],
+            "p": float(st.test_null_odds().pvalue), "strata": len(tables)}
+
+
+resp = pd.read_pickle(HERE / "outputs" / "data" / "responses_on_current.pkl")
+resp = resp[resp["scored"]].copy()
+resp["correct"] = resp["correct"].astype(float)
+resp["hidden_ratio"] = resp["hidden_target_words"] / resp["hidden_words"].where(resp["hidden_words"] > 0)
+resp["long_hidden"] = resp["hidden_words"] > resp.groupby(["task", "difficulty", "language", "condition"])["hidden_words"].transform("median")
+hidden = {}
+for lang in LANGS:
+    for cond in ("direct", "cot"):
+        g = resp[(resp["language"] == lang) & (resp["condition"] == cond)]
+        entry = {
+            "n": int(len(g)), "accuracy": float(g["correct"].mean()),
+            "median_hidden_words": float(g["hidden_words"].median()),
+            "median_hidden_words_correct": float(g.loc[g["correct"] == 1, "hidden_words"].median()),
+            "median_hidden_words_wrong": float(g.loc[g["correct"] == 0, "hidden_words"].median()),
+            "long_hidden_or": mantel_haenszel(g, "long_hidden"),
+            "hidden_target_ratio_mean": float(g["hidden_ratio"].mean()),
+            "hidden_target_ratio_median": float(g["hidden_ratio"].median()),
+            "hidden_verification": float(g["hidden_verification"].mean()),
+            "hidden_verification_or": mantel_haenszel(g, "hidden_verification"),
+        }
+        if lang == "hi_IN":
+            g = g.assign(mostly_hindi=g["hidden_ratio"] >= 0.5)
+            entry["share_hidden_mostly_hindi"] = float(g["mostly_hindi"].mean())
+            entry["mostly_hindi_or"] = mantel_haenszel(g, "mostly_hindi")
+        for kind in ("similar", "dissimilar"):
+            col = f"hidden_mentions_{kind}"
+            ins = g[(g["insertion"] == f"{kind}_insertion") & g[col].notna()]
+            plc = g[(g["insertion"] == "no_insertion") & g[col].notna()]
+            entry[f"mention_{kind}"] = float(ins[col].mean())
+            entry[f"mention_{kind}_placebo"] = float(plc[col].mean())
+            entry[f"mention_{kind}_or"] = mantel_haenszel(ins.assign(mention=ins[col].astype(bool)), "mention")
+        hidden[f"{lang}/{cond}"] = entry
+numbers["hidden_traces"] = hidden
 
 with open(OUT / "numbers.json", "w", encoding="utf-8") as f:
     json.dump(numbers, f, ensure_ascii=False, indent=2, default=float)

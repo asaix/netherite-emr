@@ -13,7 +13,7 @@ from scipy.stats import binomtest, fisher_exact
 from statsmodels.stats.multitest import multipletests
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--scope", choices=["mid", "new", "full4", "full"], required=True)
+ap.add_argument("--scope", choices=["mid", "new", "full4", "full", "ron-off", "ron"], required=True)
 ap.add_argument("--parser", choices=["current", "mid"], default="current")
 args = ap.parse_args()
 
@@ -44,7 +44,12 @@ plt.rcParams.update({
 })
 
 df = pd.read_pickle(DATA / f"responses_{args.parser}.pkl")
-if args.scope == "mid":
+if args.scope in ("ron-off", "ron"):
+    on = pd.read_pickle(DATA / f"responses_on_{args.parser}.pkl")
+    shared = set(on["qid"]) & set(df["qid"])
+    df = on if args.scope == "ron" else df
+    df = df[df["qid"].isin(shared)]
+elif args.scope == "mid":
     df = df[df["in_mid"]]
 elif args.scope == "new":
     df = df[~df["in_mid"]]
@@ -69,7 +74,7 @@ def pval(p):
 
 
 def pct(x):
-    return f"{100 * x:.1f}"
+    return "--" if x is None or x != x else f"{100 * x:.1f}"
 
 
 def signed(x):
@@ -112,6 +117,8 @@ def mantel_haenszel(sub, exposure):
         t = np.array([[(e & c).sum(), (e & ~c).sum()], [(~e & c).sum(), (~e & ~c).sum()]], dtype=float)
         if t[0].sum() and t[1].sum():
             tables.append(t)
+    if not tables:
+        return {"odds_ratio": float("nan"), "or_ci": [float("nan"), float("nan")], "p": float("nan"), "strata": 0}
     st = StratifiedTable(tables)
     lo, hi = st.oddsratio_pooled_confint()
     return {"odds_ratio": float(st.oddsratio_pooled), "or_ci": [float(lo), float(hi)],
@@ -606,7 +613,8 @@ for lang, p in (("en_US", "En"), ("hi_IN", "Hi")):
 GROUPS = {"off_by_one": "Off by one", "wrong_direction": "Wrong direction", "month_slip": "Month slip"}
 errs = df[(df["condition"] == "cot") & df["error_type"].notna()].copy()
 errs["group"] = errs["error_type"].map(lambda e: GROUPS.get(e, "Other"))
-show = [t for t in TASKS if all(((errs["task"] == t) & (errs["language"] == l)).sum() >= 25 for l in LANGS)]
+min_errors = 10 if args.scope in ("ron-off", "ron") else 25
+show = [t for t in TASKS if all(((errs["task"] == t) & (errs["language"] == l)).sum() >= min_errors for l in LANGS)]
 order = ["Off by one", "Wrong direction", "Month slip", "Other"]
 fill = {"Off by one": ("0.2", ""), "Wrong direction": ("white", "xxxx"), "Month slip": ("0.75", ""), "Other": ("white", "")}
 labels, data = [], []
@@ -623,23 +631,24 @@ for l in LANGS:
     comp[f"{l}/all"]["n"] = int((errs["language"] == l).sum())
 numbers["error_composition_cot"] = comp
 numbers["error_tasks_shown"] = show
-data = np.array(data)
-fig, ax = plt.subplots(figsize=(3.03, 0.2 * len(labels) + 0.8))
-left = np.zeros(len(labels))
-ypos = np.arange(len(labels))[::-1]
-for j, k in enumerate(order):
-    color, hatch = fill[k]
-    ax.barh(ypos, 100 * data[:, j], left=left, color=color, hatch=hatch, edgecolor="black", linewidth=0.5, label=k)
-    left += 100 * data[:, j]
-ax.set_yticks(ypos, labels, fontsize=8)
-ax.tick_params(axis="y", length=0)
-ax.set_xlim(0, 100)
-ax.set_xlabel("Share of wrong CoT answers (%)")
-ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.35, 1.0), fontsize=8, handlelength=1.5)
-fig.tight_layout()
-fig.savefig(FIG / "error_types.pdf")
-fig.savefig(FIG / "error_types.png", dpi=200)
-plt.close(fig)
+if show:
+    data = np.array(data)
+    fig, ax = plt.subplots(figsize=(3.03, 0.2 * len(labels) + 0.8))
+    left = np.zeros(len(labels))
+    ypos = np.arange(len(labels))[::-1]
+    for j, k in enumerate(order):
+        color, hatch = fill[k]
+        ax.barh(ypos, 100 * data[:, j], left=left, color=color, hatch=hatch, edgecolor="black", linewidth=0.5, label=k)
+        left += 100 * data[:, j]
+    ax.set_yticks(ypos, labels, fontsize=8)
+    ax.tick_params(axis="y", length=0)
+    ax.set_xlim(0, 100)
+    ax.set_xlabel("Share of wrong CoT answers (%)")
+    ax.legend(frameon=False, ncol=2, loc="lower center", bbox_to_anchor=(0.35, 1.0), fontsize=8, handlelength=1.5)
+    fig.tight_layout()
+    fig.savefig(FIG / "error_types.pdf")
+    fig.savefig(FIG / "error_types.png", dpi=200)
+    plt.close(fig)
 for t, tp in (("date_addition", "Add"), ("date_subtraction", "Sub"), ("day_of_week", "Dow")):
     for l, p in (("en_US", "En"), ("hi_IN", "Hi")):
         if f"{l}/{t}" in comp:

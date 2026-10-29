@@ -106,10 +106,11 @@ def recurrence_pattern(question, answer):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--parser", choices=["current", "mid"], default="current")
+ap.add_argument("--source", choices=["standard", "reasoning_on"], default="standard")
 args = ap.parse_args()
 M = T.use_parser(args.parser)
 
-records, incomplete = load_records()
+records, incomplete = load_records(args.source)
 mid = mid_report_qids()
 distractors = distractor_texts(records)
 judgement = {r["id"]: (kind, answer, gold) for r, kind, answer, gold in judged(records)}
@@ -122,7 +123,8 @@ for r in records:
     correct = scored and M.is_correct(r)
     question = tail(r)
     body = reasoning_body(r)
-    target, total = M.target_words(r)
+    target, total = M.target_words({**r, "reasoning_content": None})
+    hidden = r.get("reasoning_content")
     key = question_key(r)
     base = question if m["insertion"] == "no_insertion" else question[len(distractors[key, m["insertion"]]):].strip()
     row = {
@@ -153,7 +155,23 @@ for r in records:
         "mentions_dissimilar": None,
         "answer_in_reasoning": None,
         "reasoning_ends_at_gold": None,
+        "hidden_words": None,
+        "hidden_target_words": None,
+        "hidden_verification": None,
+        "hidden_mentions_similar": None,
+        "hidden_mentions_dissimilar": None,
+        "reasoning_tokens": ((r.get("usage") or {}).get("completion_tokens_details") or {}).get("reasoning_tokens"),
     }
+    if hidden:
+        row["hidden_target_words"], row["hidden_words"] = M.target_words({**r, "content": hidden, "reasoning_content": None})
+        row["hidden_verification"] = bool(VERIFICATION.search(hidden))
+        for insertion in ("similar_insertion", "dissimilar_insertion"):
+            if m["insertion"] not in ("no_insertion", insertion):
+                continue
+            words = content_words(distractors[key, insertion]) - content_words(base)
+            if words:
+                stripped = normalise(hidden).replace(normalise(distractors[key, insertion]), " ")
+                row[f"hidden_mentions_{insertion.split('_')[0]}"] = bool(words & set(TOKEN.findall(stripped.casefold())))
     if scored and not correct:
         row["error_type"] = classify(kind, answer, gold, pivot(kind, question))
     if m["task"] == "day_of_week" and scored:
@@ -190,8 +208,9 @@ for r in records:
 out = HERE / "outputs" / "data"
 out.mkdir(parents=True, exist_ok=True)
 frame = pd.DataFrame(rows).drop(columns=["reuses_distractor", "reuse_source"])
-frame.to_pickle(out / f"responses_{args.parser}.pkl")
-with open(out / f"responses_{args.parser}.json", "w", encoding="utf-8") as f:
+name = f"responses_{args.parser}" if args.source == "standard" else f"responses_on_{args.parser}"
+frame.to_pickle(out / f"{name}.pkl")
+with open(out / f"{name}.json", "w", encoding="utf-8") as f:
     json.dump({"responses": len(frame), "scored": int(frame["scored"].sum()), "in_mid": int(frame["in_mid"].sum()),
                "incomplete_questions_dropped": incomplete}, f, ensure_ascii=False, indent=2)
 print(len(frame), "responses", frame["scored"].sum(), "scored", frame["in_mid"].sum(), "in mid-report set", len(incomplete), "incomplete questions dropped")

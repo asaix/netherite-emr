@@ -14,7 +14,8 @@ Working notes for the team (not paper text). This folder reruns every mid-report
 
 - Each completed run contains the original mid-report records unchanged (checked record by record), with the same prompts and settings (temperature 0, thinking off, 4,096 tokens). So the mid-report data is an exact subset of this data.
 - 5 very-very-long time questions lack all 12 responses (API errors) and are dropped: 6,745 questions, 80,940 responses (of 6,750 / 81,000 planned).
-- Thinking-on runs: `2026-10-25_test-reasoning-on` (questions 0-9 of every task and level, `reasoning_effort: low`, 16k tokens), 5,400 responses.
+- Thinking-on runs: `2026-10-25_test-reasoning-on` (questions 0-9 of every task and level, `reasoning_effort: low`, 16k tokens), 5,400 responses (byte-identical to `responses/ron/` on main).
+- On main, `d7e7bfe` (29 Oct) has since filled in the 5 missing very-very-long questions (`responses/standard/`). This folder still uses the 6,745-question grid; adding 5 questions out of 6,750 does not change any conclusion here.
 - Trace deletion (`2026-10-26_trace-deletion`) is still running and is not analysed here.
 
 ## How to rebuild
@@ -23,17 +24,20 @@ Working notes for the team (not paper text). This folder reruns every mid-report
 PY=../../../.venv/bin/python   # needs pandas scipy statsmodels matplotlib numpy pyyaml
 $PY build_responses.py --parser mid       # one row per response -> outputs/data/responses_mid.pkl
 $PY build_responses.py --parser current
+$PY build_responses.py --source reasoning_on   # thinking-on responses -> outputs/data/responses_on_current.pkl
 $PY analysis.py --scope mid --parser mid  # = the mid report, reproduced exactly
-for s in mid new full4 full; do $PY analysis.py --scope $s; done
+for s in mid new full4 full ron-off ron; do $PY analysis.py --scope $s; done
 $PY extra.py          # new full-grid analyses -> outputs/extra
 $PY reasoning_on.py   # thinking on vs off -> outputs/reasoning_on
 $PY rds.py            # exploratory edit distance (about 5 min) -> outputs/rds
 $PY compare.py        # mid report vs full grid -> outputs/comparison.{md,csv}
+$PY compare.py --pair reasoning   # thinking off vs on -> outputs/comparison_reasoning.{md,csv}
 ```
 
 Run from this folder; the whole pipeline takes about 7 minutes. Files:
 - `analysis.py` and `build_responses.py` are the mid-report scripts with only these changes: a `--scope` / `--parser` switch; all five levels; a third difficulty panel (all nine tasks); outputs go to `outputs/<scope>/` (`plots/` instead of the git-ignored `figures/`); `recurrence_k` and the extracted answer are kept per response.
-- `temporal_answers.py` reads the five run folders directly instead of a merged copy.
+- `temporal_answers.py` reads the five run folders directly instead of a merged copy (`load_records("reasoning_on")` reads the thinking-on runs).
+- For thinking-on responses, the mid-report trace measures (words, target-language ratio, verification, distractor mention, answer in trace) use the visible response only, as in the mid report. The hidden trace (`reasoning_content`) gets its own `hidden_*` columns. `metrics.target_words` concatenates both fields, so `build_responses.py` passes them separately.
 - `metrics.py` is the root `metrics.py` with the parser fix below; `metrics_mid.py` is the mid report's copy.
 - `rds/` holds unchanged copies of `parser.py`, `ed.py` and `config/parser.yaml` from branch `metrics/ed-lr` at `32ac1bd`.
 
@@ -46,6 +50,8 @@ Scopes (`outputs/<scope>/`, each with `numbers.json`, `tables/*.tex` (incl. `mac
 | `new` | 3,656 | Only questions not in the mid report: an out-of-sample check of the mid-report findings. Different cells (time and interval tasks at short to long, all of very-very-long), so not a like-for-like replication. |
 | `full4` | 5,400 | Full grid, four levels (what the full grid looked like before very-very-long). |
 | `full` | 6,745 | Full grid, five levels. **Use this for the paper.** |
+| `ron-off` | 449 | Thinking off (main runs) on the questions that were also run with thinking on: questions 0-9 of every task and level, minus `very_very_long/time_subtraction/2`, which is missing from the thinking-off grid. |
+| `ron` | 449 | The same questions with thinking on. |
 
 ## Bug found and fixed in the root parser
 
@@ -127,6 +133,8 @@ Same 450 questions, paired by response (5,388 pairs):
 - Distractor penalties under thinking-on: none significant (small sample, CIs about ±4 points).
 - Caveats: 10 questions per cell; thinking-on had a 16k budget vs 4k; cut-offs rise to 3-8%. This suggests the Hindi CoT deficit comes from forcing the *visible* reasoning into Hindi with thinking off, which is worth stating as a limitation or discussion point.
 
+Full mid-report analysis with thinking on: see the section "Mid-report analysis with thinking on" below.
+
 ### 5. Edit distance between English and Hindi traces (exploratory, `rds/`)
 Aditya's parser (unchanged copy of `metrics/ed-lr` at `32ac1bd`) on all 20,235 English-Hindi CoT pairs.
 - Mean normalized edit distance 0.86 (full tokens) and 0.71 (operation types only); both grow with difficulty (ops: 0.67 short to 0.75 very-very-long) and are lowest when both languages are right (ops 0.67 vs 0.74-0.80).
@@ -138,6 +146,66 @@ Aditya's parser (unchanged copy of `metrics/ed-lr` at `32ac1bd`) on all 20,235 E
 - Median CoT length: English 107 words / 356 tokens, Hindi 83 words / 213 tokens.
 - Mention rates (time-related, with placebo): English 17.4% (9.9%), Hindi 33.8% (10.1%); unrelated: English 11.5% (5.9%), Hindi 30.4% (1.9%).
 - Error types under CoT: off-by-one is 54% of English and 21% of Hindi errors (was 67% / 27%; the time and interval tasks add "other" errors).
+
+## Mid-report analysis with thinking on (`outputs/ron`, `outputs/ron-off`, `outputs/comparison_reasoning.md`, `outputs/reasoning_on/numbers.json` → `hidden_traces`)
+
+The mid-report pipeline was run unchanged on the thinking-on responses (`ron`) and on the same 449 questions with thinking off (`ron-off`), so each number has a paired baseline. With thinking on, both prompts get a hidden reasoning trace: "direct" means the visible answer has no reasoning, "CoT" means the visible answer also reasons step by step. `ron-off` is a small subset (about 150 questions per task-language cell, 50 per task-level cell), so treat thinking-off numbers here as a check on the subset, not as replacements for the full-grid numbers.
+
+**1. CoT delta: the visible CoT prompt barely matters once the model thinks**
+
+| | Thinking off: direct → CoT | Thinking on: direct → CoT |
+|---|---|---|
+| English | 63 → 90, +26.4 [+23.0, +30.0] | 98 → 99, +0.9 [+0.0, +1.9] |
+| Hindi | 58 → 60, +2.5 [-1.1, +6.3] | 95 → 98, +3.0 [+1.6, +4.4] |
+
+- With thinking on, Hindi gains slightly more from the visible CoT prompt than English does: the reverse of the thinking-off pattern.
+- The Hindi tasks where visible CoT hurts with thinking off flip: date subtraction -26.7 → +1.4, interval date -21.6 → +14.8 [+6.4, +23.0]. With thinking on, no single task's CoT delta is significant after Holm correction in either language (about 50 questions per task-language cell). Uncorrected, the bootstrap intervals exclude zero only for Hindi interval date (+14.8) and English date duration (-2.7 [-5.4, -0.6]); English time addition (-0.7) and Hindi time addition (-2.0) are slightly negative.
+- Time duration, the biggest thinking-off CoT gain, goes to +2.0 (Hindi) and 0.0 (English) because direct answers are already near 100%.
+- Strict scoring reverses the sign: counting cut-off responses as wrong, CoT minus direct is -2.6 (English) and -1.0 (Hindi) with thinking on. Visible CoT on top of thinking makes cut-offs at 16k tokens more common (CoT 6.2% English, 8.2% Hindi; direct 2.7%, 4.2%), which costs more than CoT gains.
+
+**2. Day of week: the guessing disappears**
+- Direct answers go from guessing (17.3% English, 20.7% Hindi right; each offset 9-21%) to 97.9% and 95.0% right. The fixed default answer is gone: the most common weekday in direct answers drops from 34.7% (English, Friday) and 64.0% (Hindi, Sunday) to about 19-21%, close to the spread of the correct answers.
+- Hindi CoT's off-by-one-late bias (23.1% one day late vs 18.9% right on this subset) becomes 1.8% vs 98.2%.
+
+**3. Date recurrence: the shortcut goes, the Hindi template problem stays**
+- First-step shortcuts disappear (English direct 14.8% → 0; Hindi CoT 2.7% → 0).
+- Hindi mirror answers (right distance, wrong direction) fall from 14.7% to 4.1% (CoT) and 11.3% to 3.0% (direct), but do not vanish, and English has none. **8 of the 9 remaining Hindi mirror answers are at k = 1 ("1वीं आवृत्ति")**: 15% of Hindi k = 1 answers, against 0 of 54 in English. The wording problem survives thinking mode, which supports reading it as a template effect rather than a reasoning failure. These are also why "wrong direction" is 19% of the 26 remaining Hindi CoT errors.
+
+**4. English-Hindi gap vs difficulty: it closes**
+- All nine tasks, CoT gap by level: thinking off 24.7, 25.2, 28.9, 35.0, 32.3 points (short to very-very-long); thinking on 3.1, 0.4, 0.0, 0.0, 1.0. Direct gap: 4.1-6.0 off, 1.5-4.9 on.
+- Five date tasks, CoT gap: short +27.8 → +6.1, very long +44.7 → -1.4 (n.s.).
+- Accuracy is flat across difficulty with thinking on (`ron/plots/difficulty.pdf`; note the y-axis runs from 90 to 100). The thinking-off pattern of CoT pulling away at hard levels disappears because every condition is near ceiling.
+
+**5. Distraction penalty: not testable on this subset**
+- Every penalty estimate is near zero with intervals of about ±3-7 points, with thinking on and off: Hindi time-related -3.4 [-9.4, +2.6] off and -2.9 [-6.7, +0.8] on; English -1.9 off and -0.7 on.
+- The thinking-off subset does not show the full-grid Hindi penalty (+2.2) either, so these 449 questions have too little power to say whether thinking removes it. Per-task penalties have intervals of ±10-20 points.
+- What can be said: with thinking on, the distractor costs at most a few points in any condition (largest drop 2.9 points, Hindi direct, time-related).
+
+**6. Distractor mention**
+- Visible CoT traces mention the distractor above placebo about as often as without thinking (Hindi time-related +21.8 points above placebo, was +24.9; English +12.8, was +7.3).
+- Hidden traces (after removing verbatim quotes of the distractor): English time-related 55% (CoT) and 47% (direct) vs placebo 27% and 28%; Hindi 59% and 33% vs placebo 14% and 2%. **Do not compare these across languages:** Hindi hidden traces are mostly English, so a Hindi distractor's words are only found when the model writes them in Hindi, and the long hidden traces raise the placebo rates.
+- No odds ratio between mention and correctness is significant, visible or hidden, because almost every answer is right (most strata have no wrong answers).
+
+**7. Distractor reuse in wrong answers:** too few wrong answers with thinking on (all p ≥ 0.6) to test.
+
+**8-9. Language drift and verification**
+- Visible Hindi CoT stays in Hindi: target-language ratio 0.999, 3 drifting traces (28 with thinking off). The drift odds ratio cannot be computed.
+- The hidden Hindi trace is the opposite: 4% Devanagari (direct) and 27% (CoT), with no trace mostly in Hindi (0% and 1%). With thinking on, the model reasons in English and writes the visible answer in Hindi.
+- Verification moves into the hidden trace. Visible CoT verification: English 86% → 22%, Hindi 1.0% → 8.2%. Hidden traces contain a verification cue 90% (English) and 98% (Hindi) of the time. So the mid report's "Hindi traces rarely check their work" (1.5%) is a property of thinking-off visible CoT, not of the model.
+
+**10. Trace length**
+- Visible CoT: English 109 → 94 median words, Hindi 80 → 90; completion tokens (including hidden reasoning) 357 → 1,883 (English) and 208 → 4,268 (Hindi).
+- Hidden traces are 2.5-3x longer for Hindi (median 2,261 words direct, 1,657 CoT) than English (755, 621).
+- Wrong answers have much longer hidden traces: English CoT 1,458 vs 614 median words, Hindi CoT 3,126 vs 1,636, Hindi direct 2,530 vs 2,243. Within task x level, "longer than the cell median" is not significantly related to correctness (ORs 0.48-2.20, all p ≥ 0.05), because there are few errors; the pooled difference is consistent with the overthinking notes in `2026-10-25_test-reasoning-on/ANALYSIS.txt`.
+
+**11. Cross-lingual agreement: the English-only advantage disappears**
+- CoT pairs where only English is right vs only Hindi: 392 vs 18 with thinking off → 20 vs 11 with thinking on (p = 0.15). Direct: 197 vs 125 → 55 vs 22 (p < 0.001, a small English edge remains).
+- Both wrong: 114 → 1 (CoT), 371 → 3 (direct).
+
+**What this means for the paper**
+- The thinking-off findings (Hindi CoT deficit, CoT hurting Hindi date subtraction and intervals, the weekday and recurrence error patterns, the widening gap) describe Sarvam-105B with its thinking mode off, where the visible trace is the only reasoning. With thinking on, almost all of them disappear on these 449 questions; the exception is the Hindi k = 1 recurrence template.
+- The most plausible reading: with thinking on, the model reasons in English in the hidden trace and only translates the answer, so the language of the visible trace no longer constrains the reasoning. This links directly to the drift finding (Hindi traces that drift into English are more accurate).
+- This belongs in the limitations or discussion ("thinking mode off throughout" is already a planned limitation); it is a 10-questions-per-cell pilot with a larger token budget, so present it as exploratory.
 
 ## Caveats
 - One model, one seed, temperature 0, thinking off for all main runs.

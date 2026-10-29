@@ -20,6 +20,7 @@ RUNS = {
     "very_long": EXPERIMENTS / "2026-10-18_run-very-long-leftover-aayush" / "output" / "results.json",
     "very_very_long": EXPERIMENTS / "2026-10-18-very_very_long-aayush" / "output" / "results.json",
 }
+RUNS_ON = {d: EXPERIMENTS / "2026-10-25_test-reasoning-on" / "outputs" / d / "results.json" for d in RUNS}
 MID_MERGED = EXPERIMENTS / "2026-10-01_analysis-rahul" / "merged_results.json"
 RECORDS_PER_QUESTION = 12
 
@@ -81,8 +82,9 @@ def qid(record):
     return f"{m['difficulty']}/{m['task']}/{m['question_id']}"
 
 
-def load_records():
-    records = [r for path in RUNS.values() for r in json.load(open(path, encoding="utf-8"))]
+def load_records(source="standard"):
+    runs = RUNS if source == "standard" else RUNS_ON
+    records = [r for path in runs.values() for r in json.load(open(path, encoding="utf-8"))]
     counts = Counter(map(qid, records))
     return [r for r in records if counts[qid(r)] == RECORDS_PER_QUESTION], sorted(q for q, n in counts.items() if n != RECORDS_PER_QUESTION)
 

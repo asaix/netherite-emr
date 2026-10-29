@@ -13,7 +13,7 @@ section,finding,Mid report,New questions only,"Full grid, 4 levels","Full grid, 
 2 Day of week,Hindi direct modal weekday share,63.4,51.7,60.6,58.7,down 4.8 pts,-
 3 Recurrence,Hindi CoT first-step shortcut,16.6,0.6,12.6,10.2,down 6.4 pts,-
 3 Recurrence,Hindi CoT mirror (backwards),11.8,0.7,9.2,7.4,down 4.4 pts,-
-3 Recurrence,Hindi direct mirror (backwards),10.8,-,8.1,6.5,down 4.3 pts,-
+3 Recurrence,Hindi direct mirror (backwards),10.8,0.0,8.1,6.5,down 4.3 pts,-
 3 Recurrence,English direct first-step shortcut,31.3,7.2,26.7,21.7,down 9.6 pts,-
 4 EN-HI gap,"Five date tasks, short, CoT","+27.0 [+24.5, +29.5]",-,"+27.2 [+24.7, +29.8]","+27.2 [+24.7, +29.7]","holds, inside old CI",-
 4 EN-HI gap,"Five date tasks, very long, CoT","+40.4 [+37.6, +43.2]",-,"+40.4 [+37.5, +43.2]","+40.4 [+37.5, +43.2]","holds, inside old CI",-
