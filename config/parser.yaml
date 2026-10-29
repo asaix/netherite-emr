@@ -8,13 +8,19 @@ suppress_keyword_arithmetic_with: [GOAL, STEP, ANSWER, MONTHLEN]
 
 answer_line: '^\s*(?:Answer|उत्तर(?:\s*है)?|जवाब)\s*\**\s*[:：]'
 
-span: '(?:{DATE}|{WTIME}|\d{1,2}:\d{2}|\d{4})\s*(?:to|through|until|से|-|–)\s*(?:{DATE}|{WTIME}|\d{1,2}:\d{2}|\d{4})'
+span: '(?:{DATE}|{WTIME}|\d{1,2}:\d{2}|\d{4})\s*(?:to|through|until|से|-|–)\s*(?:{DATE}|{WTIME}|\d{1,2}:\d{2}|\d{4})|between\s+(?:{DATE}|\d{1,2}:\d{2})\s+and\s+(?:{DATE}|\d{1,2}:\d{2})|(?:{DATE}|\d{1,2}:\d{2})\s+और\s+(?:{DATE}|\d{1,2}:\d{2})\s+के\s+बीच'
 
 bracket_placeholder: '()'
 
 running_line: '^([+−–-])\s*(\d+)(?![\d:.])\s*(?:[A-Za-zऀ-ॿ]+\s*)?(?:\([^)]*\)\s*)?(?:(?:=>|->|→|=|:)(?!\s*[−–-]\s*\d)|from\b|$)'
 
 year: '1[6-9]\d\d|2[0-2]\d\d'
+
+monthlen_assert: '\b(?:has|have|had|contains)\b|होते|होता|होती'
+
+anchor_weekday_skip:
+  before: '(?:\bafter|\bbefore|\bfrom|\bthan|\bsince)\s+(?:a\s+|the\s+)?$'
+  after: '^\s*(?:[+−–-]\s*\d|(?:is|as|was)\s+(?:the\s+)?first\b|(?:को\s+)?सप्ताह\s+(?:का|के)\s+पहल|से\s+(?:\S+\s+){0,3}?(?:बाद|पहले|आगे|पीछे))'
 
 word_time:
   hour: [बजकर, बजे]
@@ -164,15 +170,15 @@ ops:
   GIVEN:
     args: [value]
     description: Read a value from question
-    cues: ['(?:पहली|दूसरी) तिथि', 'today is', 'current (?:date|time)', 'it is now', 'the time is now', 'start(?:ing)? (?:date|time|point)', 'end(?:ing)? (?:date|time)', 'later date', 'earlier date', 'given', 'looked at the clock', '^start\s*:', '^today\s*:', 'recur(?:s|rence)(?: happens)? every', 'आज (?:की (?:तारीख|तिथि) )?(?:\d|{DATE})', 'अभी', 'दिया', 'दी गई', 'दिए गए', 'वर्तमान', 'शुरुआती', 'प्रारंभिक', 'आरंभिक', 'शुरुआत की तारीख', 'अंतिम (?:तिथि|तारीख|समय)', 'पहली तारीख', 'दूसरी तारीख', 'बड़ी तारीख', 'छोटी तारीख', 'हर \d+ दिन', 'starting from', 'घड़ी (?:पर|में|देखी)', 'अब (?:का समय )?\d{1,2}:\d{2}', 'शुरु?ू?आती (?:समय|तारीख)', 'शुरु?ू?आत का समय', '(?:पहला|दूसरा|अंतिम) समय']
+    cues: ['आज\s*[:(]\s*(?:\d|{DATE})', 'आज की (?:तारीख|तिथि)[^।]*?(?:\d{4}-\d{1,2}-\d{1,2}|{DATE})', 'today''s date(?:\s*(?:is|was|:|=)|,\s*which is)', 'starting at \d', '(?:पहली|दूसरी) तिथि', 'today is', 'current (?:date|time)', 'it is now', 'the time is now', 'start(?:ing)? (?:date|time|point)', 'end(?:ing)? (?:date|time)', 'later date', 'earlier date', 'given', 'looked at the clock', '^start\s*:', '^today\s*:', 'recur(?:s|rence)(?: happens)? every', 'आज (?:की (?:तारीख|तिथि)\s*:?\s*)?(?:\d|{DATE})', 'अभी', 'दिया', 'दी गई', 'दिए गए', 'वर्तमान', 'शुरुआती', 'प्रारंभिक', 'आरंभिक', 'शुरुआत की तारीख', 'अंतिम (?:तिथि|तारीख|समय)', 'पहली तारीख', 'दूसरी तारीख', 'बड़ी तारीख', 'छोटी तारीख', 'हर \d+ दिन', 'starting from', 'घड़ी (?:पर|में|देखी)', 'अब (?:का समय )?\d{1,2}:\d{2}(?:\s*बजे)?\s*(?:है|हैं)', 'शुरु?ू?आती (?:समय|तारीख)', 'शुरु?ू?आत का समय', '(?:पहला|दूसरा|अंतिम) समय']
   GOAL:
     args: [target]
     description: Restate what must be found
-    cues: ['need to (?:find|determine|figure|compute|calculate|know)', '\bto (?:find|determine)\b', 'find (?:the|how|what|out)', 'asks? (?:for|us)', 'asked', 'we want', 'the question (?:is|asks)', 'how many', 'what (?:day|date|time)', 'निकाल(?:नी|ना)(?:\s|$|।)', 'निकालने के लिए', 'ज्ञात कर(?:ना|नी)(?:\s|$|।)', 'ज्ञात करने के लिए', 'पता (?:लगा|कर)(?:ना|नी)', 'जानना', 'पूछा', 'गणना करनी', 'कौन सा दिन', 'किस (?:दिन|बार)', 'खोज(?:ना|नी)', 'लक्ष्य', 'पूछ', 'क्या (?:होगी|होगा|था|थी)(?:\s|$|।|\?)']
+    cues: ['पता लगात', 'need to (?:find|determine|figure|compute|calculate|know)', '\bto (?:find|determine)\b', 'find (?:the|how|what|out)', 'asks? (?:for|us)', 'asked', 'we want', 'the question (?:is|asks)', 'how many', 'what (?:day|date|time)', 'निकाल(?:नी|ना)(?:\s|$|।)', 'निकालने के लिए', 'ज्ञात कर(?:ना|नी)(?:\s|$|।)', 'ज्ञात करने के लिए', 'पता (?:लगा|कर)(?:ना|नी)', 'जानना', 'पूछा', 'गणना करनी', 'कौन सा दिन', 'किस (?:दिन|बार)', 'खोज(?:ना|नी)', 'लक्ष्य', 'पूछ', 'क्या (?:होगी|होगा|था|थी)(?:\s|$|।|\?)']
     labels:
       WEEKDAY:
         description: Asks for a weekday
-        cues: ['day of (?:the )?week', 'weekday', 'which day', 'what day', 'कौन सा दिन', 'किस दिन', 'किस बार', 'सप्ताह का', 'का दिन (?:ज्ञात|पता|निकाल)', 'दिन ज्ञात']
+        cues: ['दिन का पता', 'day of (?:the )?week', 'weekday', 'which day', 'what day', 'कौन सा दिन', 'किस दिन', 'किस बार', 'सप्ताह का', 'का दिन (?:ज्ञात|पता|निकाल)', 'दिन ज्ञात']
       INTERVAL:
         description: Asks for week start/end
         cues: ['start and end', 'beginning and end', 'next week', 'शुरुआत और अंत', 'आरंभ और अंत', 'अगले सप्ताह']
@@ -217,10 +223,10 @@ ops:
         cues: ['without counting today', 'not count(?:ing)? today', '(?:excluding|exclude|don''t count|do not count) today', 'today(?: \([^)]*\))? (?:is not|isn''t) (?:counted|an occurrence|the first)', 'आज को (?:छोड़|नहीं गिन|शामिल नहीं)', 'आज की तारीख को (?:इसमें )?नहीं गिन']
       MONDAY_FIRST:
         description: Week starts on Monday
-        cues: ['monday (?:is|as) the first', 'first day of the week', 'weeks? (?:start|begin)s? (?:on )?monday', 'सोमवार .*पहला दिन', 'सप्ताह का पहला दिन', 'सोमवार से शुरू', 'monday as (?:the )?first']
+        cues: ['monday (?:is|as) the first', 'first day of the week', 'weeks? (?:start|begin)s? (?:on )?monday(?!,?\s*(?:\d|{MON}))', 'सोमवार .*पहला दिन', 'सप्ताह का पहला दिन', 'सोमवार से शुरू', 'monday as (?:the )?first']
       NEXT_WEEK:
         description: Next week follows this week
-        cues: ['next week (?:is|starts|begins|would|will)', 'following week', 'अगला सप्ताह', 'अगले सप्ताह (?:की शुरुआत|का)', 'next week["”]? (?:is|starts|begins|would|will)']
+        cues: ['next week (?:is|starts|begins|would|will)(?!\s+(?:be\s+)?(?:on\s+|from\s+)?(?:{WD},?\s+)?(?:\d|{MON}))', 'following week', 'अगला सप्ताह(?![^।]*(?:\d{4}-\d{1,2}-\d{1,2}|{DATE}|ज्ञात|निकाल|पता))', 'अगले सप्ताह (?:की शुरुआत|का)(?![^।]*(?:\d{4}-\d{1,2}-\d{1,2}|{DATE}|ज्ञात|निकाल|पता))', 'next week["”]? (?:is|starts|begins|would|will)(?!\s+(?:be\s+)?(?:on\s+|from\s+)?(?:{WD},?\s+)?(?:\d|{MON}))']
       INCLUSIVE:
         description: Both endpoints are counted
         cues: ['inclusive', 'including both', 'both (?:dates|days|endpoints) (?:are )?(?:included|counted)', 'count(?:ing)? both', 'दोनों (?:तारीखों|दिनों) को (?:शामिल|गिन)']
@@ -237,39 +243,39 @@ ops:
   MONTHLEN:
     args: [month]
     description: Look up days in month
-    cues: ['(?:has|have|had|contains|with|में(?: कुल)?)\s*(?:28|29|30|31)\s*(?:days|दिन)', '{MON}\s*(?:\d{4}\s*)?(?:\(\d+\)\s*)?(?:has|had|:|=|में(?: कुल)?|-|–)\s*(?:28|29|30|31)\b', 'days in (?:the month|each month|{MON})', '(?:इकतीस|तीस|अट्ठाईस|उनतीस)\s*दिन', 'end of (?:the )?month', 'महीने के (?:आखिरी|अंतिम)', '{MON}\s*(?:28|29|30|31),\s*{MON}\s*(?:28|29|30|31)']
+    cues: ['^{MON}\s*(?:के दिन|में दिन)\s*:\s*(?:28|29|30|31)\b', '{MON}\s*\(\s*(?:28|29|30|31)(?:\s*दिन|\s*days?)?\s*\)', '(?:has|have|had|contains|with|में(?: कुल)?)\s*(?:28|29|30|31)\s*(?:days|दिन)', '{MON}\s*(?:\d{4}\s*)?(?:\(\d+\)\s*)?(?:has|had|:|=|में(?: कुल)?|-|–)\s*(?:28|29|30|31)\b', 'days in (?:the month|each month|{MON})', '(?:इकतीस|तीस|अट्ठाईस|उनतीस)\s*दिन', 'end of (?:the )?month', 'महीने के (?:आखिरी|अंतिम)', '{MON}\s*(?:28|29|30|31),\s*{MON}\s*(?:28|29|30|31)']
   ANCHOR:
     args: [date, weekday]
     description: Recall a known date's weekday
-    cues: ['(?:विशेष|संदर्भ|आधार) दिन(?![ऀ-ॿ])', 'डूम्स ?डे', '\d{4}\s*(?:का|की|के)\s*(?:पहला दिन|शुरुआत|आखिरी दिन|अंतिम दिन)[^.।]*{WD}', '(?:was|is|falls on|would be|will be) (?:a )?{WD}', '{WD}\s*(?:था|थी|को था|पड़)', 'reference', 'known (?:date|day)', 'doomsday', 'anchor', '{DATE}[^.।]*{WD}', '{WD}[^.।]*{DATE}', '^\s*(?:[7-9]|[12]\d|3[01])\s*[=:]\s*{WD}']
+    cues: ['(?<!\d)(?:[1-9]|[12]\d|3[01])\s*तारीख\s*(?:=|:|को)?\s*{WD}', '^\s*(?:1[6-9]|2[0-2])\d\d(?:s)?\s*:\s*(?:[+−–-]\s*\d+\s*=\s*)?{WD}', '(?:विशेष|संदर्भ|आधार) दिन(?![ऀ-ॿ])', 'डूम्स ?डे', '\d{4}\s*(?:का|की|के)\s*(?:पहला दिन|शुरुआत|आखिरी दिन|अंतिम दिन)[^.।]*{WD}', '(?:was|is|falls on|would be|will be) (?:a )?{WD}', '{WD}\s*(?:था|थी|को था|पड़)', 'reference', 'known (?:date|day)', 'doomsday', 'anchor', '{DATE}[^.।]*{WD}', '{WD}[^.।]*{DATE}', '^\s*(?:[7-9]|[12]\d|3[01])\s*[=:]\s*{WD}']
   CONVERT:
     args: [value, unit]
     description: Change units or value representation
-    cues: ['(?:दिन\S*|सप्ताह\S*|हफ्त\S*|घंट\S*|मिनट\S*|वर्ष\S*|साल\S*|महीन\S*|{MON})\s+के बराबर', '{MON}\.?\s*\d{1,2}\s*(?:->|=>)\s*\d{1,3}(?!\d)', '^{MON}\.?\s+\d{3}(?!\d)', 'convert', '(?:in|into|to) minutes', '(?:hours?|घंटे|घंटा)\s*(?:=|is|equals|×|\*|x)\s*\d+\s*(?:minutes|मिनट)', '\d+\s*(?:minutes|mins?|मिनट)\s*=\s*\d+\s*(?:hours?|h|घंटा|घंटे)', '[×*]\s*60\b', 'day of the year', 'day number', '\bday \d+', 'ordinal', 'corresponds to', 'का अर्थ', 'मिनट(?:ों)? में(?! से)', 'में बदल', '\b[AP]M\b', '{MON}\s*\d+\s*=\s*(?:day\s*)?\d+(?!\d)(?!\s*(?:days?|दिन|more|[-+−–×*/]))', '^\s*[a-zA-Z]\s*=\s*\d+\s*(?:\([^)]*\))?\s*$', 'वा[ंँ] दिन', '(?<![-+−–×*/A-Za-z\u0900-\u097F]\s)(?<![-+−–×*/])\b[0-6]\s*(?:=|means|का अर्थ)\s*{WD}', '(?:^|[\s(,:])(?:[a-zA-Z]|month|year|day|century|महीना|वर्ष|दिन|शताब्दी)\s*(?:\([^)]*\)\s*)?=\s*\d+\s*(?:,|$|।|\.|\))', '\d+\s*मिनट का मतलब', '(?:1|एक) घंटे में 60 मिनट', '60 minutes in an hour', '\d{1,2}:\d{2}\s*(?:=|का मतलब(?: है)?|means)\s*\d+\s*(?:घंट|hours?)', '{DATE}\s*\((?:day|दिन)\s*\d+\)', '\([a-zA-Z]\)\s*[=:]\s*\d+']
+    cues: ['\d+\s*(?:hours?|घंटे|घंटों)\s*=\s*\d+\s*(?:days?|दिन)', '(?<!to )(?<!and )(?<!through )(?<!से ){MON}\.?\s*\d{1,2}(?!\d)\s+is\s+(?:day\s+\d{1,3}|(?:3[2-9]|[4-9]\d|[1-3]\d\d))(?!\d)(?!\s*(?:more|days?|दिन|[-+−–×*/=]))', '^\s*[0-6]\s*:\s*{WD}', '(?<![\d+−–-])(?<![+−–-] )[0-6]\s*(?:=>|->|→)\s*{WD}', '^\s*{WD}\s*=\s*[0-6]\s*$', '^end of {MON}\.?\s*[:=]\s*\d{2,3}', '(?:दिन\S*|सप्ताह\S*|हफ्त\S*|घंट\S*|मिनट\S*|वर्ष\S*|साल\S*|महीन\S*|{MON})\s+के बराबर', '{MON}\.?\s*\d{1,2}\s*(?:->|=>)\s*\d{1,3}(?!\d)', '^{MON}\.?\s+\d{3}(?!\d)', 'convert', '(?:in|into|to) minutes', '(?:hours?|घंटे|घंटा)\s*(?:=|is|equals|×|\*|x)\s*\d+\s*(?:minutes|मिनट)', '\d+\s*(?:minutes|mins?|मिनट)\s*=\s*\d+\s*(?:hours?|h|घंटा|घंटे)', '[×*]\s*60\b', 'day of the year', 'day number', '\bday \d+(?!\d)(?!\s*(?:hours?|minutes?|mins?|h\b))(?!\s*[:)]\s*(?:{DATE}|{WD}|\d{4}-))', 'ordinal', 'corresponds to', 'का अर्थ', 'मिनट(?:ों)? में(?! से)(?!\s*\d)', 'में बदल', '\b[AP]M\b', '{MON}\s*\d{1,2}(?!\d)\s*=\s*(?:day\s*)?\d+(?!\d)(?!\s*(?:days?|दिन|more|[-+−–×*/]))', '^\s*[a-zA-Z]\s*=\s*\d+\s*(?:\([^)]*\))?\s*$', 'वा[ंँ] दिन', '(?<![-+−–×*/A-Za-z\u0900-\u097F]\s)(?<![-+−–×*/])\b[0-6]\s*(?:=|means|का अर्थ)\s*{WD}', '(?:^|[\s(,:])(?:[a-zA-Z]|month|year|day|century|महीना|वर्ष|दिन|शताब्दी)\s*(?:\([^)]*\)\s*)?=\s*\d+\s*(?:,|$|।|\.|\))', '\d+\s*मिनट का मतलब', '(?:1|एक) घंटे में 60 मिनट', '60 minutes in an hour', '\d{1,2}:\d{2}\s*(?:=|का मतलब(?: है)?|means)\s*\d+\s*(?:घंट|hours?)', '{DATE}\s*\((?:day|दिन)\s*\d+\)', '\([a-zA-Z]\)\s*[=:]\s*\d+']
     labels:
       WEEKDAY:
         description: Number converted to weekday name
-        cues: ['(?<![-+−–×*/A-Za-z\u0900-\u097F]\s)(?<![-+−–×*/])\b[0-6]\s*(?:=|means|corresponds to|का अर्थ)\s*{WD}', '(?:means|corresponds to)\s*{WD}']
+        cues: ['^\s*[0-6]\s*:\s*{WD}', '(?<![\d+−–-])(?<![+−–-] )[0-6]\s*(?:=>|->|→)\s*{WD}', '^\s*{WD}\s*=\s*[0-6]\s*$', '(?<![-+−–×*/A-Za-z\u0900-\u097F]\s)(?<![-+−–×*/])\b[0-6]\s*(?:=|means|corresponds to|का अर्थ)\s*{WD}', '(?:means|corresponds to)\s*{WD}']
       DAY_OF_YEAR:
         description: Date converted to day number
-        cues: ['{MON}\.?\s*\d{1,2}\s*(?:->|=>)\s*\d{1,3}(?!\d)', '^{MON}\.?\s+\d{3}(?!\d)', 'day of the year', 'day number', '\bday \d+', 'ordinal', 'वा[ंँ] दिन', '{MON}\s*\d+\s*=\s*(?:day\s*)?\d+(?!\d)(?!\s*(?:days?|दिन|more|[-+−–×*/]))', '{DATE}\s*\((?:day|दिन)\s*\d+\)']
+        cues: ['(?<!to )(?<!and )(?<!through )(?<!से ){MON}\.?\s*\d{1,2}(?!\d)\s+is\s+(?:day\s+\d{1,3}|(?:3[2-9]|[4-9]\d|[1-3]\d\d))(?!\d)(?!\s*(?:more|days?|दिन|[-+−–×*/=]))', '^end of {MON}\.?\s*[:=]\s*\d{2,3}', '{MON}\.?\s*\d{1,2}\s*(?:->|=>)\s*\d{1,3}(?!\d)', '^{MON}\.?\s+\d{3}(?!\d)', 'day of the year', 'day number', '\bday \d+(?!\d)(?!\s*(?:hours?|minutes?|mins?|h\b))(?!\s*[:)]\s*(?:{DATE}|{WD}|\d{4}-))', 'ordinal', 'वा[ंँ] दिन', '{MON}\s*\d{1,2}(?!\d)\s*=\s*(?:day\s*)?\d+(?!\d)(?!\s*(?:days?|दिन|more|[-+−–×*/]))', '{DATE}\s*\((?:day|दिन)\s*\d+\)']
       HOURS:
         description: Converted into hours and minutes
-        cues: ['=\s*\d+\s*(?:hours?|h\b|घंट)', '(?:to|into|in) hours', 'घंटों में', 'का मतलब \d+ घंट', '(?:का मतलब(?: है)?|means)\s*\d+\s*(?:घंट|hours?)']
+        cues: ['\d+\s*(?:hours?|घंटे|घंटों)\s*=\s*\d+\s*(?:days?|दिन)', '=\s*\d+\s*(?:hours?|h\b|घंट)', '(?:to|into|in) hours', 'घंटों में', 'का मतलब \d+ घंट', '(?:का मतलब(?: है)?|means)\s*\d+\s*(?:घंट|hours?)']
       MINUTES:
         description: Converted into total minutes
-        cues: ['=\s*\d+\s*(?:minutes?|मिनट)', '(?:to|into|in) minutes', 'मिनट(?:ों)? में(?! से)', '[×*]\s*60\b']
+        cues: ['=\s*\d+\s*(?:minutes?|मिनट)', '(?:to|into|in) minutes', 'मिनट(?:ों)? में(?! से)(?!\s*\d)', '[×*]\s*60\b']
       WEEKS:
         description: Days converted into weeks
         cues: ['=\s*\d+\s*(?:weeks?|सप्ताह|हफ्त)', 'weeks? and \d+ days?']
   ADD:
     args: [x, y]
     description: Add two values together
-    cues: ['\badd', 'plus\b', '\bsum\b', 'total', '\bafter\b', 'later', 'from now', 'forward', 'in \d+ (?:days?|hours?|minutes?)', '^{MON}\s*(?:\d{4})?\s*[:=]\s*\d+', 'जोड़', 'आगे', 'बाद', 'कुल', 'योग', 'मिलाकर', '\d+ more\b', '\d+ (?:days?|hours?|minutes?) from', '^{DATE}\s*:\s*\d+\s*days?', '^{MON} में \d+ दिन', '{MON} में \d+ तारीख तक', '^{DATE}\s*:\s*\d+$']
+    cues: ['^{MON}\s*(?:के दिन|में दिन)\s*:\s*\d+', '\badd', 'plus\b', '\bsum\b', 'total', '\bafter\b', 'later', 'from now', 'forward', 'in \d+ (?:days?|hours?|minutes?)', '^{MON}\s*(?:\d{4})?\s*[:=]\s*\d+', 'जोड़', 'आगे', 'बाद', 'कुल', 'योग', 'मिलाकर', '\d+ more\b', '\d+ (?:days?|hours?|minutes?) from', '^{DATE}\s*:\s*\d+\s*days?', '^{MON} में \d+ दिन', '{MON} में \d+ तारीख तक', '^{DATE}\s*:\s*\d+$']
   SUB:
     args: [x, y]
     description: Subtract one value from another
-    cues: ['व्यतीत', 'subtract', 'minus', 'difference', 'counting back', 'backwards?', 'go(?:ing)? back', '\bbefore\b', '\bago\b', 'earlier', 'elapsed', 'passed', 'remain(?!der)', '\bleft\b', '\bfrom\b.+\bto\b', 'between .+ and', '{MON}\s*\d+\s*(?:to|-|–)\s*(?:{MON}\s*)?\d+\s*[:=]', 'घटा', 'अंतर', 'पीछे', '(?<!सबसे )पहले', 'पूर्व', 'बीत', 'बच', 'बाकी', 'से .+ तक', 'के बीच', 'में से', 'कम कर', '^from {DATE}\s*[:,]', '{DATE}\s*(?:to|-|–|से)\s*{DATE}', '\d{1,2}:\d{2}\s*(?:to|-|–|से)\s*\d{1,2}:\d{2}', '\d{4}\s*(?:to|-|–)\s*\d{4}']
+    cues: ['व्यतीत', 'subtract', 'minus', 'difference', 'counting back', 'backwards?', 'go(?:ing)? back', '\bbefore\b', '\bago\b', 'earlier', 'elapsed', 'passed', 'remain(?!der)', '\bleft\b', '\bfrom\b.+\bto\b', 'between .+ and', '{MON}\s*\d+\s*(?:to|-|–)\s*(?:{MON}\s*)?\d+\s*[:=]', 'घटा', 'अंतर', 'पीछे', '(?<!सबसे )पहले', 'पूर्व', 'बीत', 'बच', 'बाकी', 'से .+ तक', 'के बीच', 'में से', 'कम कर', '^from {DATE}\s*[:,]', '{DATE}\s*(?:to|through|-|–|से)\s*{DATE}', '\d{1,2}:\d{2}\s*(?:to|-|–|से)\s*\d{1,2}:\d{2}', '\d{4}\s*(?:to|-|–)\s*\d{4}']
   MUL:
     args: [x, y]
     description: Multiply two values together
@@ -285,14 +291,14 @@ ops:
   ROLL:
     args: [unit]
     description: Carry across day/month/year boundary
-    cues: ['next month', 'next year', 'following month', 'previous month', 'previous year', 'move (?:to|into|back)', 'carry', 'roll', 'wrap', '(?:past|cross(?:es|ing)?|over) midnight', 'crosses', 'previous day', 'next day', 'into (?:the )?(?:next|previous)', 'borrow', 'अगले महीने', 'अगले वर्ष', 'अगले साल', 'पिछले महीने', 'पिछले वर्ष', 'पिछले साल', 'आधी रात', 'मध्यरात्रि', 'अगला महीना', 'अगले दिन', 'पिछले दिन', 'उधार', '\d{1,2}:[6-9]\d', 'becomes \d{1,2}:\d{2}', 'घंटा (?:\(60 मिनट\) )?(?:लेते|लेना|लेंगे)']
+    cues: ['next month', 'next year', 'following month', 'previous month', 'previous year', 'move (?:to|into|back)', 'carry', 'roll', 'wrap', '(?<!minutes )(?<!hours )(?<!mins )(?:past|cross(?:es|ing)?|over) midnight', 'crosses', 'previous day', 'next day', 'into (?:the )?(?:next|previous)', 'borrow', 'अगले महीने', 'अगले वर्ष', 'अगले साल', 'पिछले महीने', 'पिछले वर्ष', 'पिछले साल', 'आधी रात', 'मध्यरात्रि', 'अगला महीना', 'अगले दिन', 'पिछले दिन', 'उधार', '\d{1,2}:[6-9]\d', 'becomes \d{1,2}:\d{2}', 'घंटा (?:\(60 मिनट\) )?(?:लेते|लेना|लेंगे)']
     labels:
       HOUR:
         description: Borrow or carry an hour
         cues: ['borrow', 'उधार', 'next hour', 'previous hour', 'अगले घंटे', 'पिछले घंटे', '\d{1,2}:[6-9]\d', 'becomes \d{1,2}:\d{2}', 'घंटा (?:\(60 मिनट\) )?(?:लेते|लेना|लेंगे)']
       DAY:
         description: Cross midnight into another day
-        cues: ['(?:past|cross(?:es|ing)?|over) midnight', 'next day', 'previous day', 'आधी रात', 'मध्यरात्रि', 'अगले दिन', 'पिछले दिन']
+        cues: ['(?<!minutes )(?<!hours )(?<!mins )(?:past|cross(?:es|ing)?|over) midnight', 'next day', 'previous day', 'आधी रात', 'मध्यरात्रि', 'अगले दिन', 'पिछले दिन']
       YEAR:
         description: Cross into another year
         cues: ['year', 'वर्ष', 'साल']
@@ -302,11 +308,11 @@ ops:
   STEP:
     args: [value, delta]
     description: Move one unit at once
-    cues: ['^\s*(?:day|occurrence|week|step)?\s*\d+\s*(?:days?|weeks?)?\s*(?:after|before|later|ago)\s*[:)\-–]', '\b\d+\s+days? (?:after|before|later|ago)\s*[:\-–]', '\d+(?:\s*,\s*\d+){3,}', 'occurrence \d+\s*[:=→]', '\d+(?:st|nd|rd|th)? occurrence\s*[:=→]', '\d+(?:वीं|वां|वा|री|रा|था|ठी) (?:आवृत्ति|पुनरावृत्ति|घटना)\s*[:=→]', 'दिन (?:बाद|पहले)\s*[:→]', 'day by day', 'one by one', 'एक-एक', '{WD}\s*(?:→|->|,)\s*{WD}', '→', '^(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|\d+(?:st|nd|rd|th)) (?:occurrence|recurrence)\s*:', '^(?:पहली|दूसरी|तीसरी|चौथी|पांचवीं|छठी|सातवीं|आठवीं|नौवीं|दसवीं)\s*(?:आवृत्ति|पुनरावृत्ति|घटना)?\s*[:=]', '{DATE}\s*\(\s*\d+\s*(?:days?|दिन)?', 'occurrence (?:is|falls|would be|will be)(?: on)? {DATE}', '^\+\d+ days?', '^(?:पहला|दूसरा|तीसरा|चौथा|पांचवां|छठा|सातवां|आठवां|नौवां|दसवां) दिन\s*:', '^दिन \d+\s*:', '^\d+(?:st|nd|rd|th)\s*:\s*{DATE}', '^{DATE}\s*:\s*\d+(?:st|nd|rd|th)', '(?:आवृत्ति|पुनरावृत्ति)[^.।,]{0,25}{DATE}']
+    cues: ['^\s*(?:[1-9]|[12]\d|3[01])\s+{WD}\s*[.,]?$', '^\s*{WD}\s+(?:[1-9]|[12]\d|3[01])\s*[.,]?$', '^\s*{DATE}\s*(?:=|is)\s*[+−–-]\s*\d+', '^\s*[+−–-]\d+\s*:\s*(?:{DATE}|{WD})', '^\s*{DATE}\s*\(\s*[+−–-]\d+\s*\)', '^\s*day \d+\s*[:)]\s*(?:{DATE}|{WD}|\d{4}-)', '^\s*\d{1,3}\s*[:=]\s*{DATE}\s*\.?$', '^\s*{DATE}\s*=\s*\d+\s*days?\b', '^\s*\d+\s*days?\s*=\s*{DATE}', '^\s*{WD}\s*\(\d+\)', '^\s*(?:day|occurrence|week|step)?\s*\d+\s*(?:days?|weeks?)?\s*(?:after|before|later|ago)\s*[:)\-–]', '\b\d+\s+days? (?:after|before|later|ago)\s*[:\-–]', '\d+(?:\s*,\s*\d+){3,}', 'occurrence \d+\s*[:=→]', '\d+(?:st|nd|rd|th)? occurrence\s*[:=→]', '\d+(?:वीं|वां|वा|री|रा|था|ठी) (?:आवृत्ति|पुनरावृत्ति|घटना)\s*[:=→]', 'दिन (?:बाद|पहले)\s*[:→]', 'day by day', 'one by one', 'एक-एक(?! (?:कदम|करके कदम))', '{WD}\s*(?:→|->|,)\s*{WD}', '→', '^(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|\d+(?:st|nd|rd|th)) (?:occurrence|recurrence)\s*:', '^(?:पहली|दूसरी|तीसरी|चौथी|पांचवीं|छठी|सातवीं|आठवीं|नौवीं|दसवीं)\s*(?:आवृत्ति|पुनरावृत्ति|घटना)?\s*[:=]', '{DATE}\s*\(\s*\d+\s*(?:days?|दिन)?', 'occurrence (?:is|falls|would be|will be)(?: on)? {DATE}', '^\+\d+ days?', '^(?:पहला|दूसरा|तीसरा|चौथा|पांचवां|छठा|सातवां|आठवां|नौवां|दसवां) दिन\s*:', '^दिन \d+\s*:', '^\d+(?:st|nd|rd|th)\s*:\s*{DATE}', '^{DATE}\s*:\s*\d+(?:st|nd|rd|th)', '(?:आवृत्ति|पुनरावृत्ति)[^.।,]{0,25}{DATE}']
     labels:
       '-1':
         description: Step backward one unit
-        cues: ['before', 'ago', 'back', 'earlier', 'previous', 'पहले', 'पीछे', 'पूर्व']
+        cues: ['\(\s*[−–-]\s*\d', '^\s*[−–-]\s*\d', '(?:=|is)\s*[−–-]\s*\d', 'before', 'ago', 'back', 'earlier', 'previous', 'पहले', 'पीछे', 'पूर्व']
       '+1':
         description: Step forward one unit
         cues: ['']
@@ -325,7 +331,7 @@ ops:
   FORMAT:
     args: []
     description: Deliberate over output format/language
-    cues: ['"answer:?"', 'format', 'final line', 'output', 'response', 'english', 'hindi', 'devanagari', 'digits?\b', 'numerals', 'period', 'punctuation', 'spaces?\b', '\bline\b', 'the user', 'instruction', '\bwrite\b', 'respond', 'language', 'script', 'code block', 'markdown', 'bold', 'yyyy', 'hh:mm', 'reasoning or explanation', 'answer directly', 'हिंदी', 'हिन्दी', 'अंग्रेजी', 'प्रारूप']
+    cues: ['give only the final answer', 'only (?:the )?final answer', 'answer the following question', '"answer:?"', 'format', 'final line', 'output', 'response', 'english', 'hindi', 'devanagari', 'digits?\b', 'numerals', '(?:a|the|no|final|trailing|with a) period\b(?!\s+(?:of|from|between|in))', 'punctuation', 'spaces?\b', '\bline\b', 'the user', 'instruction', '\bwrite\b', 'respond', 'language', 'script', 'code block', 'markdown', 'bold', 'yyyy', 'hh:mm', 'reasoning or explanation', 'answer directly', 'हिंदी', 'हिन्दी', 'अंग्रेजी', 'प्रारूप']
   CUMADD:
     args: [amount]
     description: Add to a running total

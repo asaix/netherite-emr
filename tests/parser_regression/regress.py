@@ -21,7 +21,9 @@ def load(name, path):
     return module
 
 
-old = load("old_parser", DATA / "parser.py")
+BASELINE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else DATA
+OUT = HERE / "outputs" / (sys.argv[2] if len(sys.argv) > 2 else "")
+old = load("old_parser", BASELINE / "parser.py")
 SETS = ["standard", "ron"]
 DIFFICULTIES = ["short", "medium", "long", "very_long", "very_very_long"]
 FIELDS = ["content", "reasoning_content"]
@@ -52,7 +54,7 @@ def run(job):
             if text is None:
                 continue
             o = old.parse_sentences(text, old.find_distractor(record))
-            n = new.parse_sentences(text, new.find_distractor(record))
+            n = new.parse_sentences(text, new.find_distractor(record), record["request"]["messages"][-1]["content"])
             segs = list(new.segments(text))
             key = (s, field, lang)
             counts[key + ("texts",)] += 1
@@ -100,8 +102,8 @@ if __name__ == "__main__":
             "tokens_per_text_new": round(c["tokens_new"] / c["texts"], 2),
             "changes": dict(changes.most_common()),
         }
-    out = HERE / "outputs"
-    out.mkdir(exist_ok=True)
+    out = OUT
+    out.mkdir(parents=True, exist_ok=True)
     json.dump(summary, open(out / "summary.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     json.dump({f"{f} | {k}": random.sample(v, min(SAMPLES * 2, len(v))) for (f, k), v in sorted(examples.items())}, open(out / "examples.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
