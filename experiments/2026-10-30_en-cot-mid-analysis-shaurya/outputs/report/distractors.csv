@@ -1,0 +1,7 @@
+cond,no_insertion,similar_insertion,dissimilar_insertion,drop similar_insertion,drop similar_insertion CI,drop dissimilar_insertion,drop dissimilar_insertion CI
+English direct,60.6,59.9,58.6,0.7,"[np.float64(-1.0), np.float64(2.6)]",2.0,"[np.float64(0.3), np.float64(3.8)]"
+English CoT,89.3,88.1,89.2,1.2,"[np.float64(-0.4), np.float64(2.7)]",0.1,"[np.float64(-1.4), np.float64(1.7)]"
+Hindi direct,56.0,54.9,54.6,1.1,"[np.float64(-0.5), np.float64(2.9)]",1.4,"[np.float64(-0.3), np.float64(3.2)]"
+Hindi CoT,60.2,58.9,59.1,1.3,"[np.float64(-0.9), np.float64(3.5)]",1.1,"[np.float64(-0.9), np.float64(3.3)]"
+Hindi CLP,69.3,69.3,72.3,0.0,"[np.float64(-2.2), np.float64(2.0)]",-3.0,"[np.float64(-5.1), np.float64(-1.2)]"
+Hindi en-cot,84.1,81.0,83.6,3.1,"[np.float64(1.3), np.float64(4.9)]",0.5,"[np.float64(-1.2), np.float64(2.3)]"

@@ -10,6 +10,7 @@ from temporal_answers import (
     TOKEN,
     VERIFICATION,
     candidate_matches,
+    content_words,
     distractor_texts,
     judged,
     last_candidate,
@@ -24,16 +25,6 @@ from temporal_answers import (
     distractor_features,
     tail,
 )
-
-STOP = set(
-    """the a an and of to in on at is was for with my i he she it they his her their this that be by as from or are
-    have has had will would not but you your we our me always many each every how what which there some very just
-    day days month months year years time times date dates week weeks today hour hours minute minutes
-    है हैं में की के का को से ने पर और भी यह वह इस उस मैं मुझे मेरा मेरी मेरे हम हमें हमारा था थी थे हूं हूँ हो होता होती
-    होते जाता जाती जाते रहता रहती रहते करता करती करते कि कितने कैसे हर नहीं चाहिए गया गई लिए साथ बहुत सबसे वाले वाली
-    रही रहा दिन दिनों महीना महीने महीनों साल वर्ष समय तारीख तारीखें तिथि सप्ताह हफ्ते आज घंटे मिनट""".split()
-)
-
 
 def classify(kind, answer, gold, today):
     if answer is None:
@@ -71,10 +62,6 @@ def classify(kind, answer, gold, today):
     if kind == "minutes" and abs(answer - gold) == 60:
         return "off_by_one_hour"
     return "other"
-
-
-def content_words(text):
-    return {t for t in TOKEN.findall(normalise(text).casefold()) if len(t) >= 3 and t not in STOP and not t.isdigit()}
 
 
 def weekday_offset(answer, gold):
