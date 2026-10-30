@@ -1,0 +1,66 @@
+model: primary
+formula: disagree ~ RDS + C(difficulty) + C(task) + C(insertion) + C(reasoning_mode)
+sample: pooled
+n = 20662, events = 6483, clusters (uid) = 6739, parameters (excl. intercept) = 16, events per parameter = 405.2
+reference levels: {'difficulty': 'short', 'task': 'date_addition', 'insertion': 'no_insertion', 'reasoning_mode': 'off'}
+converged: True
+reliable: True
+issues: none
+warnings: none
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               disagree   No. Observations:                20662
+Model:                          Logit   Df Residuals:                    20645
+Method:                           MLE   Df Model:                           16
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.2982
+Time:                        16:29:20   Log-Likelihood:                -9020.4
+converged:                       True   LL-Null:                       -12853.
+Covariance Type:              cluster   LLR p-value:                     0.000
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                              -14.5344      0.316    -46.015      0.000     -15.153     -13.915
+C(difficulty)[T.medium]                 -0.3326      0.063     -5.257      0.000      -0.457      -0.209
+C(difficulty)[T.long]                   -0.3901      0.063     -6.184      0.000      -0.514      -0.266
+C(difficulty)[T.very_long]              -0.1525      0.064     -2.399      0.016      -0.277      -0.028
+C(difficulty)[T.very_very_long]         -0.2237      0.065     -3.467      0.001      -0.350      -0.097
+C(task)[T.date_duration]                -0.9261      0.093     -9.942      0.000      -1.109      -0.744
+C(task)[T.date_recurrence]               1.9435      0.090     21.651      0.000       1.768       2.119
+C(task)[T.date_subtraction]              0.3328      0.087      3.828      0.000       0.162       0.503
+C(task)[T.day_of_week]                   0.2054      0.095      2.168      0.030       0.020       0.391
+C(task)[T.interval_date]                -0.5031      0.092     -5.455      0.000      -0.684      -0.322
+C(task)[T.time_addition]                 0.2540      0.090      2.807      0.005       0.077       0.431
+C(task)[T.time_duration]                -0.7814      0.090     -8.648      0.000      -0.958      -0.604
+C(task)[T.time_subtraction]             -0.2357      0.089     -2.645      0.008      -0.410      -0.061
+C(insertion)[T.dissimilar_insertion]     0.0352      0.043      0.826      0.409      -0.048       0.119
+C(insertion)[T.similar_insertion]       -0.0333      0.043     -0.769      0.442      -0.118       0.052
+C(reasoning_mode)[T.on]                 -2.3244      0.198    -11.741      0.000      -2.712      -1.936
+RDS                                     15.9424      0.372     42.836      0.000      15.213      16.672
+========================================================================================================
+
+        Logit Marginal Effects       
+=====================================
+Dep. Variable:               disagree
+Method:                          dydx
+At:                           overall
+========================================================================================================
+                                          dy/dx    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+C(difficulty)[T.medium]                 -0.0479      0.009     -5.284      0.000      -0.066      -0.030
+C(difficulty)[T.long]                   -0.0561      0.009     -6.231      0.000      -0.074      -0.038
+C(difficulty)[T.very_long]              -0.0219      0.009     -2.404      0.016      -0.040      -0.004
+C(difficulty)[T.very_very_long]         -0.0322      0.009     -3.475      0.001      -0.050      -0.014
+C(task)[T.date_duration]                -0.1332      0.013    -10.044      0.000      -0.159      -0.107
+C(task)[T.date_recurrence]               0.2796      0.012     22.880      0.000       0.256       0.304
+C(task)[T.date_subtraction]              0.0479      0.012      3.831      0.000       0.023       0.072
+C(task)[T.day_of_week]                   0.0296      0.014      2.166      0.030       0.003       0.056
+C(task)[T.interval_date]                -0.0724      0.013     -5.496      0.000      -0.098      -0.047
+C(task)[T.time_addition]                 0.0365      0.013      2.803      0.005       0.011       0.062
+C(task)[T.time_duration]                -0.1124      0.013     -8.751      0.000      -0.138      -0.087
+C(task)[T.time_subtraction]             -0.0339      0.013     -2.651      0.008      -0.059      -0.009
+C(insertion)[T.dissimilar_insertion]     0.0051      0.006      0.826      0.409      -0.007       0.017
+C(insertion)[T.similar_insertion]       -0.0048      0.006     -0.769      0.442      -0.017       0.007
+C(reasoning_mode)[T.on]                 -0.3344      0.028    -11.872      0.000      -0.390      -0.279
+RDS                                      2.2935      0.040     57.207      0.000       2.215       2.372
+========================================================================================================

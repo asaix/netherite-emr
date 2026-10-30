@@ -1,0 +1,40 @@
+model: per_mode_on_rds_only
+formula: disagree ~ RDS
+sample: on
+n = 1191, events = 31, clusters (uid) = 430, parameters (excl. intercept) = 1, events per parameter = 31.0
+reference levels: {'difficulty': 'short', 'task': 'date_addition', 'insertion': 'no_insertion', 'reasoning_mode': 'off'}
+converged: True
+reliable: True
+issues: none
+warnings: none
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               disagree   No. Observations:                 1191
+Model:                          Logit   Df Residuals:                     1189
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.2553
+Time:                        16:29:23   Log-Likelihood:                -107.02
+converged:                       True   LL-Null:                       -143.70
+Covariance Type:              cluster   LLR p-value:                 1.078e-17
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -20.9784      3.720     -5.639      0.000     -28.270     -13.687
+RDS           20.4625      4.069      5.029      0.000      12.487      28.438
+==============================================================================
+
+Possibly complete quasi-separation: A fraction 0.11 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.
+
+        Logit Marginal Effects       
+=====================================
+Dep. Variable:               disagree
+Method:                          dydx
+At:                           overall
+==============================================================================
+                dy/dx    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+RDS            0.4637      0.088      5.260      0.000       0.291       0.636
+==============================================================================
