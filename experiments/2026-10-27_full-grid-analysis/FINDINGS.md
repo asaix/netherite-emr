@@ -29,7 +29,6 @@ $PY analysis.py --scope mid --parser mid  # = the mid report, reproduced exactly
 for s in mid new full4 full ron-off ron; do $PY analysis.py --scope $s; done
 $PY extra.py          # new full-grid analyses -> outputs/extra
 $PY reasoning_on.py   # thinking on vs off -> outputs/reasoning_on
-$PY rds.py            # exploratory edit distance (about 5 min) -> outputs/rds
 $PY compare.py        # mid report vs full grid -> outputs/comparison.{md,csv}
 $PY compare.py --pair reasoning   # thinking off vs on -> outputs/comparison_reasoning.{md,csv}
 ```
@@ -39,7 +38,6 @@ Run from this folder; the whole pipeline takes about 7 minutes. Files:
 - `temporal_answers.py` reads the five run folders directly instead of a merged copy (`load_records("reasoning_on")` reads the thinking-on runs).
 - For thinking-on responses, the mid-report trace measures (words, target-language ratio, verification, distractor mention, answer in trace) use the visible response only, as in the mid report. The hidden trace (`reasoning_content`) gets its own `hidden_*` columns. `metrics.target_words` concatenates both fields, so `build_responses.py` passes them separately.
 - `metrics.py` is the root `metrics.py` with the parser fix below; `metrics_mid.py` is the mid report's copy.
-- `rds/` holds unchanged copies of `parser.py`, `ed.py` and `config/parser.yaml` from branch `metrics/ed-lr` at `32ac1bd`.
 
 Scopes (`outputs/<scope>/`, each with `numbers.json`, `tables/*.tex` (incl. `macros.tex`), `plots/`):
 
@@ -135,12 +133,6 @@ Same 450 questions, paired by response (5,388 pairs):
 
 Full mid-report analysis with thinking on: see the section "Mid-report analysis with thinking on" below.
 
-### 5. Edit distance between English and Hindi traces (exploratory, `rds/`)
-Aditya's parser (unchanged copy of `metrics/ed-lr` at `32ac1bd`) on all 20,235 English-Hindi CoT pairs.
-- Mean normalized edit distance 0.86 (full tokens) and 0.71 (operation types only); both grow with difficulty (ops: 0.67 short to 0.75 very-very-long) and are lowest when both languages are right (ops 0.67 vs 0.74-0.80).
-- **Caution: full-token RDS leaks correctness.** Tokens carry their values (`ANSWER 2025-08-29`), so any wrong answer raises the distance mechanically; that is why it "predicts" errors so well (AUROC 0.82 -> 0.89 in Hindi). Do not use full-token RDS as a predictor of errors.
-- Operation-type RDS (no values) does predict Hindi errors (OR 1.13 per 0.1, p < 0.001) but adds almost nothing: AUROC 0.818 -> 0.820, while log trace length alone gives 0.834. In English it has no effect (p = 0.58). This matches the handoff's warning that text-only trace features carry weak signal.
-
 ## Other numbers that moved (full grid)
 - Cut off before answering: English CoT 3.2%, Hindi CoT 0.7% (1.0% of all responses). Strict scoring (cut-off = wrong) gives CoT deltas +26.7 (English) and +4.2 (Hindi); the distraction-penalty conclusions are unchanged.
 - Median CoT length: English 107 words / 356 tokens, Hindi 83 words / 213 tokens.
@@ -211,4 +203,4 @@ The mid-report pipeline was run unchanged on the thinking-on responses (`ron`) a
 - One model, one seed, temperature 0, thinking off for all main runs.
 - The `new` scope is a different set of cells, so a failed replication there can reflect task and level, not chance alone. The full-grid estimates with cluster bootstrap and clustered regressions are the ones to report.
 - Accuracy drops cut-off responses unless stated; strict scoring is in `extra/numbers.json` (`strict`).
-- Heuristic measures (mention, reuse, drift, verification, RDS parser) were not hand-validated in this pass.
+- Heuristic measures (mention, reuse, drift, verification) were not hand-validated in this pass.
