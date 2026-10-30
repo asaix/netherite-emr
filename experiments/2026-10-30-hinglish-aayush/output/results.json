@@ -634169,5 +634169,334 @@
     },
     "latency_s": 18.817,
     "time": "2026-10-29T23:34:08.422012+00:00"
+  },
+  {
+    "id": "very_very_long/time_addition_en_US/12/similar_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "12",
+      "insertion": "similar_insertion",
+      "answer": "19:45"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nThe sunset is beautiful at this hour. It is now 08:36, what will the time be in 11 hours and 9 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Okay, let's solve this step by step.\n\nPehle, humein starting time dekhna hai: 08:36.\nHumein isme 11 hours aur 9 minutes add karne hain.\n\nStep 1: 11 hours add karte hain.\n08:36 + 11 hours = 19:36 (yaani 7:36 PM).\n\nStep 2: Ab is 19:36 mein 9 minutes add karte hain.\n19:36 + 9 minutes = 19:45.\n\nToh, 11 hours aur 9 minutes ke baad time 19:45 hoga.\n\nAnswer: 19:45",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 161,
+      "prompt_tokens": 180,
+      "total_tokens": 341,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 160,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 2.149,
+    "time": "2026-10-30T07:36:27.416383+00:00"
+  },
+  {
+    "id": "very_very_long/time_addition_en_US/46/no_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_addition",
+      "language": "en_US",
+      "question_id": "46",
+      "insertion": "no_insertion",
+      "answer": "14:32"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nIt is now 23:17, what will the time be in 39 hours and 15 minutes?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Chalo isko step by step solve karte hain. \n\nPehle humein starting time dekhte hain: 23:17. \n\nHumein total 39 hours aur 15 minutes add karne hain. \n\nSabse pehle, 24 hours ka ek poora din ban jata hai. Toh 23:17 mein 24 hours add karne se next day ka time 23:17 ho jayega. \nAb 39 hours mein se 24 hours nikal diye, toh bacha 15 hours. \nAb 15 hours aur 15 minutes add karne hain starting time 23:17 mein.\n\nPehle 15 hours add karte hain:\n23:17 + 15 hours = next day 14:17 (kyunki 23 + 15 = 38, aur 38 - 24 = 14).\n\nAb bache hue 15 minutes add karte hain:\n14:17 + 15 minutes = 14:32.\n\nToh final time 14:32 hoga.\n\nAnswer: 14:32",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 262,
+      "prompt_tokens": 173,
+      "total_tokens": 435,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 128,
+        "created_cache_tokens": 32,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 3.09,
+    "time": "2026-10-30T07:36:28.358388+00:00"
+  },
+  {
+    "id": "very_very_long/time_duration_en_US/7/similar_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_duration",
+      "language": "en_US",
+      "question_id": "7",
+      "insertion": "similar_insertion",
+      "answer": "958"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nI never understood why we don't use decimal time. If I looked at the clock at 22:02 and now it is 14:00, how many minutes (e.g., 15, 23) have gone by?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Dekho, sabse pehle humko yeh samajhna hai ki yeh time 22:02 aur 14:00 kis format mein hai. Yeh clearly 24-hour format mein hai. Ab, agar 22:02 ke baad agla din 14:00 hota hai, toh yeh midnight cross kar ke agle din ka 14:00 baje ka time hai.\n\nTotal time calculate karne ke liye humko do hisson mein todna hoga. Pehla hissa raat ke 22:02 se subah 00:00 tak ka hai. 22:02 se 22:59 tak 57 minutes hote hain, aur phir 22:59 se 23:59 tak 60 minutes hote hain. Toh raat ke hisse mein total 57 + 60 = 117 minutes hue.\n\nDoosra hissa agle din subah 00:00 se 14:00 tak ka hai. 14 ghante ko minutes mein convert karne ke liye hum 14 ko 60 se multiply karenge. 14 x 60 = 840 minutes.\n\nAb dono hisson ko add kar dete hain: 117 + 840 = 957.\n\nToh 22:02 se agle din 14:00 tak exactly 957 minutes nikal gaye hain.\n\nAnswer: 957",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 329,
+      "prompt_tokens": 197,
+      "total_tokens": 526,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 192,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 3.475,
+    "time": "2026-10-30T07:36:28.743343+00:00"
+  },
+  {
+    "id": "very_very_long/time_addition_hi_IN/31/dissimilar_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_addition",
+      "language": "hi_IN",
+      "question_id": "31",
+      "insertion": "dissimilar_insertion",
+      "answer": "13:04"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is a 24-hour clock time in HH:MM format, without a date (e.g., 09:05). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nपहाड़ बर्फ से ढका था। अभी 17:43 बजे हैं, 43 घंटे और 21 मिनट बाद समय क्या होगा?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Step 1: Sabse pehle, humein total time calculate karna hai jo 17:43 mein add karna hai.\nTotal time = 43 hours and 21 minutes.\n\nStep 2: 24-hour clock format mein, 17:43 PM (5:43 PM) hota hai.\n\nStep 3: 43 hours ko 24-hour format mein convert karte hain. 43 hours ka matlab hai 1 full day (24 hours) aur 19 hours.\n\nStep 4: 17:43 mein 1 day (24 hours) add karne se time same hi rehta hai, 17:43.\n\nStep 5: Ab bacha hua 19 hours aur 21 minutes ko 17:43 mein add karna hai.\n17:43 + 19 hours = 12:43 (kyunki 17 + 19 = 36, aur 36 - 24 = 12).\nAb 12:43 mein 21 minutes add karo: 43 + 21 = 64 minutes.\n64 minutes = 1 hour and 4 minutes.\nToh 12:43 + 1 hour = 13:43, aur 4 minutes add karne se final time 13:47 ho jayega.\n\nAnswer: 13:47",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 321,
+      "prompt_tokens": 180,
+      "total_tokens": 501,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 160,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 3.728,
+    "time": "2026-10-30T07:36:28.995998+00:00"
+  },
+  {
+    "id": "very_very_long/time_duration_hi_IN/3/no_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "3",
+      "insertion": "no_insertion",
+      "answer": "590"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nअगर मैंने 12:49 पर घड़ी देखी और अब 22:39 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Chalo isko step by step solve karte hain.\n\nPehle dekhte hain ki 12:49 AM se 12:00 PM (noon) tak kitna time lagta hai. 12:49 se 12:00 tak 11 minute hote hain, aur 12:00 PM tak 12:00 PM - 12:49 = 11 minute. Phir 12:00 PM se 12:00 AM (midnight) tak 12 ghante hote hain. Toh 12:49 AM se 12:00 AM tak total 12 ghante aur 11 minute ho gaye.\n\nAb 12:00 AM (midnight) se 22:39 PM tak ka time calculate karte hain. \n12:00 AM se 22:00 PM tak exactly 10 ghante hote hain.\nUske baad 22:00 PM se 22:39 PM tak 39 minute hote hain.\n\nToh total time = 12 ghante, 11 minute, aur 10 ghante, 39 minute.\nInko add karne par:\nGhante = 12 + 10 = 22 ghante.\nMinute = 11 + 39 = 50 minute.\n\nAb total minutes nikalne ke liye, 22 ghante ko minutes mein convert karte hain:\n22 ghante = 22 × 60 = 1320 minute.\n\nTotal minutes = 1320 + 50 = 1370 minute.\n\nAnswer: 1370",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 377,
+      "prompt_tokens": 179,
+      "total_tokens": 556,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 160,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 4.049,
+    "time": "2026-10-30T07:36:29.318282+00:00"
+  },
+  {
+    "id": "very_very_long/interval_date_hi_IN/25/no_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "interval_date",
+      "language": "hi_IN",
+      "question_id": "25",
+      "insertion": "no_insertion",
+      "answer": "2035-07-23 to 2035-07-29"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is the start and end dates in YYYY-MM-DD format joined by the English word \"to\" (e.g., 2025-03-10 to 2025-03-16). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nयदि आज 2035-07-21 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं, यह मानते हुए कि सोमवार सप्ताह का पहला दिन है?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "Step 1: सबसे पहले हमें आज की date को देखना है, जो 2035-07-21 है। \n\nStep 2: हमें पता करना है कि इस date को कौन सा दिन है। 2035 एक leap year नहीं है, इसलिए हम 1st January से लेकर 21st July तक के total days calculate कर सकते हैं। \nJanuary (31) + February (28) + March (31) + April (30) + May (31) + June (30) + July (21) = 202 days. \nचूँकि 202 days को 7 से divide करने पर remainder 6 बचता है, इसका मतलब है कि 21st July 2035 को Saturday है।\n\nStep 3: सवाल में कहा गया है कि सोमवार (Monday) सप्ताह का पहला दिन है। चूँकि आज Saturday है, तो अगला सोमवार आज के 2 दिन बाद आएगा। \nआज 21st July है, तो अगला सोमवार 23rd July 2035 होगा।\n\nStep 4: अब हमें अगले सप्ताह (Monday to Sunday) की end date ढूँढनी है। अगर सोमवार 23rd July है, तो रविवार उसके 6 दिन बाद आएगा। \n23 + 6 = 29. तो अगला सप्ताह 23rd July से शुरू होकर 29th July 2035 को खत्म होगा।\n\nAnswer: 2035-07-23 to 2035-07-29",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 341,
+      "prompt_tokens": 208,
+      "total_tokens": 549,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 64,
+        "created_cache_tokens": 128,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 4.07,
+    "time": "2026-10-30T07:36:29.319234+00:00"
+  },
+  {
+    "id": "very_very_long/time_duration_hi_IN/45/similar_insertion/hinglish",
+    "condition": "hinglish",
+    "meta": {
+      "difficulty": "very_very_long",
+      "task": "time_duration",
+      "language": "hi_IN",
+      "question_id": "45",
+      "insertion": "similar_insertion",
+      "answer": "834"
+    },
+    "request": {
+      "model": "sarvam-105b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve the following question by reasoning through it step by step. Your reasoning must be written in Hinglish, naturally mixing Hindi and English using only the Roman (Latin) script. Do not write in Devanagari script (the final \"Answer:\" line is the only exception). End your response with a final line of the form \"Answer: <answer>\", where <answer> is the number of minutes as a whole number, digits only, without units (e.g., 95). Keep the word \"Answer:\" in English, use Western digits (0-9), and put nothing else on that line.\n\nहम दशमलव समय क्यों नहीं उपयोग करते? अगर मैंने 17:13 पर घड़ी देखी और अब 07:07 है, तो कितने मिनट (जैसे 15, 23) बीत चुके हैं?\n"
+        }
+      ],
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "content": "हम decimal time का use इसलिए नहीं करते क्योंकि हमारी current time system (24-hour format) बहुत deeply historical roots और mathematical convenience पर based है। 60 seconds in a minute और 60 minutes in an hour का concept ancient Babylonians के sexagesimal (base-60) system से आया है, जो highly divisible है। Decimal time (10 hours in a day) theoretically simple लग सकता है, लेकिन existing clocks, digital systems, global coordination और time zones को change करना एक massive global headache बन जाएगा। \n\nअब आपके question का answer निकालते हैं। \n\nअगर आपने 17:13 पर clock देखी और अब 07:07 है, तो यह 12-hour format में है। \n17:13 का मतलब 12-hour format में 5:13 PM होता है।\n07:07 का मतलब 12-hour format में 7:07 AM होता है।\n\nतो 5:13 PM से 12:00 AM (midnight) तक 6 hours और 47 minutes होते हैं। \n12:00 AM से 7:07 AM तक 7 hours और 7 minutes होते हैं।\n\nTotal time = 6h47m + 7h7m = 13 hours और 54 minutes.\n13 hours को minutes में convert करें: 13 * 60 = 780 minutes.\nTotal minutes = 780 + 54 = 834 minutes.\n\nAnswer: 834",
+    "reasoning_content": null,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 337,
+      "prompt_tokens": 187,
+      "total_tokens": 524,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 64,
+        "created_cache_tokens": 96,
+        "multimodal_tokens": null
+      }
+    },
+    "latency_s": 3.329,
+    "time": "2026-10-30T07:36:30.746609+00:00"
   }
 ]
