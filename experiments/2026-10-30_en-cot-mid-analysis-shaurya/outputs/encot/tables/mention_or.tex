@@ -1,0 +1,17 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{llrr}
+\toprule
+Distractor & Language & Traces & OR [95\% CI] \\
+\midrule
+Time-related & English & 2,143 & 0.61 [0.39, 0.93] \\
+ & Hindi & 2,174 & 1.14 [0.56, 2.32] \\
+\midrule
+Unrelated & English & 2,204 & 1.63 [0.90, 2.96] \\
+ & Hindi & 2,203 & inf [nan, nan] \\
+\bottomrule
+\end{tabular}
+\caption{Odds ratio (OR) of a correct answer for CoT traces that mention the distractor versus traces that do not, stratified by task and difficulty (Mantel--Haenszel). Traces is the number of CoT responses whose prompt contained that distractor.}
+\label{tab:mention-or}
+\end{table}
