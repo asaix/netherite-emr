@@ -1,3 +1,4 @@
+import argparse
 import json
 import warnings
 from pathlib import Path
@@ -12,8 +13,12 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from scipy.stats import binomtest
 
+ap = argparse.ArgumentParser()
+ap.add_argument("--source", choices=["standard", "reasoning_on"], default="standard")
+args = ap.parse_args()
+
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "outputs" / "extra"
+OUT = HERE / "outputs" / ("extra" if args.source == "standard" else "extra-ron")
 TAB, FIG = OUT / "tables", OUT / "plots"
 for d in (TAB, FIG):
     d.mkdir(parents=True, exist_ok=True)
@@ -37,7 +42,7 @@ plt.rcParams.update({
     "pdf.fonttype": 42, "ps.fonttype": 42, "axes.spines.top": False, "axes.spines.right": False,
 })
 
-df = pd.read_pickle(HERE / "outputs" / "data" / "responses_current.pkl").reset_index(drop=True)
+df = pd.read_pickle(HERE / "outputs" / "data" / ("responses_current.pkl" if args.source == "standard" else "responses_on_current.pkl")).reset_index(drop=True)
 df["correct"] = df["correct"].astype(float)
 df["strict"] = df["correct"].where(df["scored"], 0.0)
 qids = df["qid"].unique()

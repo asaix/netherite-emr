@@ -19,7 +19,8 @@ args = ap.parse_args()
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "outputs" / "data"
-OUT = HERE / "outputs" / (args.scope + ("-midparser" if args.parser == "mid" else ""))
+NAME = args.scope + ("-midparser" if args.parser == "mid" else "")
+OUT = HERE / "outputs" / ("validation" if args.scope in ("mid", "new", "full4") else "") / NAME
 TAB, FIG = OUT / "tables", OUT / "plots"
 for d in (TAB, FIG):
     d.mkdir(parents=True, exist_ok=True)

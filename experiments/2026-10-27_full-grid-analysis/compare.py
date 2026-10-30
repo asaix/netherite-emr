@@ -14,7 +14,7 @@ if args.pair == "full":
     SCOPES = {"mid-midparser": "Mid report", "new": "New questions only", "full4": "Full grid, 4 levels", "full": "Full grid, 5 levels"}
 else:
     SCOPES = {"ron-off": "Thinking off", "ron": "Thinking on"}
-N = {s: json.load(open(OUT / s / "numbers.json", encoding="utf-8")) for s in SCOPES}
+N = {s: json.load(open(OUT / ("validation" if s in ("mid-midparser", "new", "full4") else "") / s / "numbers.json", encoding="utf-8")) for s in SCOPES}
 
 
 def diff(get):
