@@ -101,7 +101,7 @@ for task in TASKS + ["all"]:
     row = {"task": task, **{c: round(100 * acc(base & sel(cond=c)), 1) for c in CONDS}}
     for ref in ("Hindi CoT", "Hindi direct", "Hindi CLP"):
         x, y, p = mcnemar("Hindi en-cot", ref, base)
-        row[f"vs {ref}"] = round(row["Hindi en-cot"] - row[ref], 1)
+        row[f"vs {ref}"] = round(100 * (acc(base & sel(cond="Hindi en-cot")) - acc(base & sel(cond=ref))), 1)
         tests.setdefault(ref, []).append(p)
         row[f"only en-cot / only {ref}"] = f"{x} / {y}"
     rows.append(row)
@@ -124,7 +124,7 @@ for d in DIFFS:
     row = {"difficulty": d, **{c: round(100 * acc(base & sel(cond=c)), 1) for c in CONDS}}
     for c in ("Hindi CoT", "Hindi en-cot"):
         gap = boot(base & sel(cond="English CoT")) - boot(base & sel(cond=c))
-        row[f"En CoT - {c}"] = round(row["English CoT"] - row[c], 1)
+        row[f"En CoT - {c}"] = round(100 * (acc(base & sel(cond="English CoT")) - acc(base & sel(cond=c))), 1)
         row[f"En CoT - {c} CI"] = ci(gap)
     row["ci"] = {c: ci(boot(base & sel(cond=c))) for c in CONDS}
     rows.append(row)
@@ -140,7 +140,7 @@ for c in CONDS:
         row[ins] = round(100 * acc(base & sel(insertion=ins)), 1)
     for ins in ("similar_insertion", "dissimilar_insertion"):
         drop = boot(base & sel(insertion="no_insertion")) - boot(base & sel(insertion=ins))
-        row[f"drop {ins}"] = round(row["no_insertion"] - row[ins], 1)
+        row[f"drop {ins}"] = round(100 * (acc(base & sel(insertion="no_insertion")) - acc(base & sel(insertion=ins))), 1)
         row[f"drop {ins} CI"] = ci(drop)
     rows.append(row)
 distractors = pd.DataFrame(rows)

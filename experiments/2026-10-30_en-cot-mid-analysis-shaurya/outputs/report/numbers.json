@@ -75,11 +75,11 @@
       "Hindi CoT": 85.1,
       "Hindi CLP": 92.7,
       "Hindi en-cot": 95.7,
-      "vs Hindi CoT": 10.6,
+      "vs Hindi CoT": 10.7,
       "only en-cot / only Hindi CoT": "102 / 22",
       "vs Hindi direct": 12.9,
       "only en-cot / only Hindi direct": "118 / 21",
-      "vs Hindi CLP": 3.0,
+      "vs Hindi CLP": 3.1,
       "only en-cot / only Hindi CLP": "50 / 27",
       "p vs Hindi CoT": 1.6601952366746198e-13,
       "p vs Hindi direct": 5.586517426314882e-17,
@@ -111,11 +111,11 @@
       "Hindi CoT": 88.3,
       "Hindi CLP": 92.7,
       "Hindi en-cot": 97.7,
-      "vs Hindi CoT": 9.4,
+      "vs Hindi CoT": 9.5,
       "only en-cot / only Hindi CoT": "84 / 13",
       "vs Hindi direct": 18.8,
       "only en-cot / only Hindi direct": "153 / 12",
-      "vs Hindi CLP": 5.0,
+      "vs Hindi CLP": 5.1,
       "only en-cot / only Hindi CLP": "52 / 14",
       "p vs Hindi CoT": 1.3852344083006553e-13,
       "p vs Hindi direct": 1.3079201598085289e-31,
@@ -133,7 +133,7 @@
       "only en-cot / only Hindi CoT": "381 / 40",
       "vs Hindi direct": 67.5,
       "only en-cot / only Hindi direct": "480 / 9",
-      "vs Hindi CLP": 43.3,
+      "vs Hindi CLP": 43.4,
       "only en-cot / only Hindi CLP": "341 / 48",
       "p vs Hindi CoT": 6.282189533189752e-70,
       "p vs Hindi direct": 4.695125129240007e-128,
@@ -165,7 +165,7 @@
       "Hindi CoT": 23.9,
       "Hindi CLP": 35.3,
       "Hindi en-cot": 44.1,
-      "vs Hindi CoT": 20.2,
+      "vs Hindi CoT": 20.3,
       "only en-cot / only Hindi CoT": "212 / 65",
       "vs Hindi direct": -2.7,
       "only en-cot / only Hindi direct": "124 / 148",
@@ -183,7 +183,7 @@
       "Hindi CoT": 73.5,
       "Hindi CLP": 88.2,
       "Hindi en-cot": 92.6,
-      "vs Hindi CoT": 19.1,
+      "vs Hindi CoT": 19.2,
       "only en-cot / only Hindi CoT": "174 / 33",
       "vs Hindi direct": 17.0,
       "only en-cot / only Hindi direct": "170 / 47",
@@ -219,11 +219,11 @@
       "Hindi CoT": 80.1,
       "Hindi CLP": 86.7,
       "Hindi en-cot": 98.1,
-      "vs Hindi CoT": 18.0,
+      "vs Hindi CoT": 18.1,
       "only en-cot / only Hindi CoT": "140 / 5",
-      "vs Hindi direct": 53.4,
+      "vs Hindi direct": 53.5,
       "only en-cot / only Hindi direct": "404 / 4",
-      "vs Hindi CLP": 11.4,
+      "vs Hindi CLP": 11.5,
       "only en-cot / only Hindi CLP": "95 / 9",
       "p vs Hindi CoT": 1.6208126310676643e-34,
       "p vs Hindi direct": 2.781031845403888e-113,
@@ -257,7 +257,7 @@
       "Hindi CoT": 69.5,
       "Hindi CLP": 77.2,
       "Hindi en-cot": 83.0,
-      "En CoT - Hindi CoT": 23.7,
+      "En CoT - Hindi CoT": 23.6,
       "En CoT - Hindi CoT CI": [
         20.6,
         26.7
@@ -397,7 +397,7 @@
         30.1,
         37.0
       ],
-      "En CoT - Hindi en-cot": 3.7,
+      "En CoT - Hindi en-cot": 3.6,
       "En CoT - Hindi en-cot CI": [
         1.5,
         6.1
@@ -442,7 +442,7 @@
         31.5,
         38.4
       ],
-      "En CoT - Hindi en-cot": 4.4,
+      "En CoT - Hindi en-cot": 4.3,
       "En CoT - Hindi en-cot CI": [
         1.9,
         6.6
@@ -502,7 +502,7 @@
         -0.4,
         2.7
       ],
-      "drop dissimilar_insertion": 0.1,
+      "drop dissimilar_insertion": 0.2,
       "drop dissimilar_insertion CI": [
         -1.4,
         1.7
@@ -513,12 +513,12 @@
       "no_insertion": 56.0,
       "similar_insertion": 54.9,
       "dissimilar_insertion": 54.6,
-      "drop similar_insertion": 1.1,
+      "drop similar_insertion": 1.2,
       "drop similar_insertion CI": [
         -0.5,
         2.9
       ],
-      "drop dissimilar_insertion": 1.4,
+      "drop dissimilar_insertion": 1.5,
       "drop dissimilar_insertion CI": [
         -0.3,
         3.2
@@ -534,7 +534,7 @@
         -0.9,
         3.5
       ],
-      "drop dissimilar_insertion": 1.1,
+      "drop dissimilar_insertion": 1.2,
       "drop dissimilar_insertion CI": [
         -0.9,
         3.3
@@ -545,12 +545,12 @@
       "no_insertion": 69.3,
       "similar_insertion": 69.3,
       "dissimilar_insertion": 72.3,
-      "drop similar_insertion": 0.0,
+      "drop similar_insertion": -0.1,
       "drop similar_insertion CI": [
         -2.2,
         2.0
       ],
-      "drop dissimilar_insertion": -3.0,
+      "drop dissimilar_insertion": -3.1,
       "drop dissimilar_insertion CI": [
         -5.1,
         -1.2
@@ -561,12 +561,12 @@
       "no_insertion": 84.1,
       "similar_insertion": 81.0,
       "dissimilar_insertion": 83.6,
-      "drop similar_insertion": 3.1,
+      "drop similar_insertion": 3.2,
       "drop similar_insertion CI": [
         1.3,
         4.9
       ],
-      "drop dissimilar_insertion": 0.5,
+      "drop dissimilar_insertion": 0.6,
       "drop dissimilar_insertion CI": [
         -1.2,
         2.3
