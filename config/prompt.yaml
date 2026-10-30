@@ -11,6 +11,19 @@ modes:
 # Language the en-cot mode reasons in, whatever the question's language.
 en_cot_language: en_US
 
+clp:
+  source: hi_IN
+  target: en_US
+  task: temporal reasoning
+  # Qin et al. (2023): Please act as an expert in multi-lingual understanding in [Source Language Ls]. Request: [Given sentence X] Let's understand the task in [Target Language Lt] step-by-step!
+  stage1: |-
+    Please act as an expert in multi-lingual understanding in {source}. Write your entire response in {target}.
+    Request: {question}
+    Let's understand the task in {target} step-by-step!
+  # Qin et al. (2023): After understanding, you should act as an expert in [Target Task T] in [Target Language Lt]. Let's resolve the task you understand above step-by-step! Finally, you should format your answer as 'Answer: [num]'.
+  stage2: |-
+    After understanding, you should act as an expert in {task} in {target}. Let's resolve the task you understand above step-by-step! Your reasoning must be written entirely in {target}; do not switch to another language at any point. End your response with a final line of the form "Answer: <answer>", where <answer> is {format}. Keep the word "Answer:" in English, use Western digits (0-9), and put nothing else on that line.
+
 formats:
   date_addition: a date in YYYY-MM-DD format (e.g., 2025-03-07)
   date_subtraction: a date in YYYY-MM-DD format (e.g., 2025-03-07)
