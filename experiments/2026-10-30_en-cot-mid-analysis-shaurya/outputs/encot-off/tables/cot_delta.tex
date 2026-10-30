@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{English} & \multicolumn{3}{c}{Hindi} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Task & $Q$ & Direct & CoT & $\Delta$ & Direct & CoT & $\Delta$ \\
+\midrule
+Date addition & 250 & 85.6 & 98.0 & +12.4$^{*}$ & 82.8 & 85.1 & +2.3\phantom{$^{*}$} \\
+Date subtraction & 250 & 86.0 & 95.2 & +9.2$^{*}$ & 84.8 & 66.0 & \textbf{$-$18.8$^{*}$} \\
+Date duration & 250 & 84.0 & 99.3 & +15.3$^{*}$ & 78.9 & 88.3 & +9.3$^{*}$ \\
+Date recurrence & 250 & 22.1 & 90.3 & +68.3$^{*}$ & 2.8 & 20.1 & +17.3$^{*}$ \\
+Day of week & 250 & 14.9 & 69.5 & +54.6$^{*}$ & 15.2 & 21.0 & +5.8$^{*}$ \\
+Interval date & 250 & 43.2 & 50.7 & +7.5$^{*}$ & 46.8 & 23.9 & \textbf{$-$22.9$^{*}$} \\
+Time addition & 250 & 70.5 & 95.9 & +25.4$^{*}$ & 75.6 & 73.5 & $-$2.1\phantom{$^{*}$} \\
+Time subtraction & 250 & 64.7 & 97.7 & +33.0$^{*}$ & 64.9 & 75.2 & +10.3$^{*}$ \\
+Time duration & 250 & 65.7 & 98.9 & +33.2$^{*}$ & 44.7 & 80.1 & +35.4$^{*}$ \\
+\midrule
+All tasks & 2,250 & 59.7 & 88.9 & +29.2$^{*}$ & 55.2 & 59.4 & +4.2$^{*}$ \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) with direct answers and chain-of-thought (CoT), pooled over difficulty levels and distractor conditions. $Q$ is the number of questions; each question contributes three responses per language and condition. $\Delta$ is CoT minus direct in percentage points; $^{*}$ marks $p<0.05$ in an exact McNemar test on paired responses, Holm-corrected over the 18 task--language tests (uncorrected for the pooled row). Significant negative deltas are in bold. Chance for day of week is 14.3\%.}
+\label{tab:cot-delta}
+\end{table*}

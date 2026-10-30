@@ -1,0 +1,52 @@
+# Hindi CoT vs en-cot (same questions)
+
+Same pipeline on the 2,250 questions answered with en-cot (Hindi question, English reasoning). Hindi CoT = the standard Hindi CoT responses; en-cot = the same questions with Hindi CoT replaced by en-cot. Direct answers and English are identical in both columns. Differences are percentage points with 95% cluster-bootstrap intervals; OR = Mantel-Haenszel odds ratio within task x difficulty; plain numbers are shares (%).
+
+| section | finding | Hindi CoT | en-cot | verdict (en-cot vs Hindi CoT) |
+|---|---|---|---|---|
+| 1 CoT delta | English, all tasks | +29.2 [+27.5, +30.9] | +29.2 [+27.5, +30.9] | holds, inside old CI |
+| 1 CoT delta | Hindi, all tasks | +4.2 [+2.6, +5.9] | +27.7 [+26.0, +29.4] | stronger |
+| 1 CoT delta | Hindi, date subtraction | -18.8 [-23.4, -14.7] | +9.2 [+5.6, +12.9] | reversed |
+| 1 CoT delta | Hindi, interval date | -22.9 [-27.5, -18.5] | -2.7 [-7.7, +2.3] | no longer significant |
+| 1 CoT delta | Hindi, day of week | +5.8 [+1.6, +10.2] | +37.3 [+32.3, +42.3] | stronger |
+| 1 CoT delta | Hindi, date recurrence | +17.3 [+14.0, +20.5] | +67.5 [+63.2, +71.8] | stronger |
+| 1 CoT delta | Hindi, time duration | +35.4 [+30.7, +40.1] | +53.5 [+48.9, +58.5] | stronger |
+| 1 CoT delta | English, time duration | +33.2 [+28.7, +37.7] | +33.2 [+28.7, +37.7] | holds, inside old CI |
+| 1 CoT delta | English, interval date | +7.5 [+2.2, +12.6] | +7.5 [+2.2, +12.6] | holds, inside old CI |
+| 2 Day of week | Hindi CoT +1 day minus correct (share) | 4.3 | -28.5 | down 32.8 pts |
+| 2 Day of week | English direct modal weekday share | 34.4 | 34.4 | about the same |
+| 2 Day of week | Hindi direct modal weekday share | 59.7 | 59.7 | about the same |
+| 3 Recurrence | Hindi CoT first-step shortcut | 8.7 | 5.9 | down 2.8 pts |
+| 3 Recurrence | Hindi CoT mirror (backwards) | 9.0 | 8.3 | about the same |
+| 3 Recurrence | Hindi direct mirror (backwards) | 7.5 | 7.5 | about the same |
+| 3 Recurrence | English direct first-step shortcut | 21.3 | 21.3 | about the same |
+| 4 EN-HI gap | Five date tasks, short, CoT | +28.2 [+23.9, +32.8] | +15.0 [+11.5, +18.7] | weaker, still significant |
+| 4 EN-HI gap | Five date tasks, very long, CoT | +40.6 [+35.7, +45.3] | +5.5 [+2.1, +8.8] | weaker, still significant |
+| 4 EN-HI gap | Five date tasks, short, direct | +8.5 [+4.6, +12.4] | +8.5 [+4.6, +12.4] | holds, inside old CI |
+| 4 EN-HI gap | Five date tasks, very long, direct | +6.3 [+2.7, +10.1] | +6.3 [+2.7, +10.1] | holds, inside old CI |
+| 5 Distraction penalty | English, time-related | +0.4 [-1.9, +2.7] | +0.4 [-1.9, +2.7] | null in both |
+| 5 Distraction penalty | English, unrelated | -1.9 [-4.2, +0.4] | -1.9 [-4.2, +0.4] | null in both |
+| 5 Distraction penalty | Hindi, time-related | +0.2 [-2.6, +2.9] | +2.0 [-0.6, +4.4] | null in both |
+| 5 Distraction penalty | Hindi, unrelated | -0.3 [-3.0, +2.4] | -0.9 [-3.4, +1.5] | null in both |
+| 5 Distraction penalty | Hindi time-related, date duration | +8.1 [+0.8, +16.2] | +0.4 [-5.0, +6.1] | no longer significant |
+| 5 Distraction penalty | Hindi time-related, day of week | -4.1 [-13.1, +5.0] | +12.5 [+2.3, +22.8] | newly significant |
+| 5 Distraction penalty | Hindi time-related, time duration | +7.3 [-2.2, +16.9] | +3.6 [-3.4, +10.6] | null in both |
+| 5 Distraction penalty | Hindi time-related, date recurrence | +2.0 [-5.7, +9.3] | +7.7 [-0.8, +15.9] | null in both |
+| 6 Distractor mention | English time-related: mention rate minus placebo | 8.4 | 8.4 | about the same |
+| 6 Distractor mention | Hindi time-related: mention rate minus placebo | 23.8 | 3.6 | down 20.2 pts |
+| 6 Distractor mention | Hindi unrelated: mention rate minus placebo | 26.8 | 0.4 | down 26.4 pts |
+| 6 Distractor mention | OR correct | mention, English time-related | 0.61 [0.39, 0.93] | 0.61 [0.39, 0.93] | holds, inside old CI |
+| 6 Distractor mention | OR correct | mention, Hindi time-related | 0.85 [0.68, 1.07] | 1.14 [0.56, 2.32] | null in both |
+| 6 Distractor mention | OR correct | mention, English unrelated | 1.63 [0.90, 2.96] | 1.63 [0.90, 2.96] | null in both |
+| 6 Distractor mention | OR correct | mention, Hindi unrelated | 1.30 [1.00, 1.70] | inf [nan, nan] | not computable |
+| 7 Distractor reuse | Hindi direct: reuse minus placebo | +8.8 (p=8e-06) | +8.8 (p=8e-06) | weaker, still significant |
+| 7 Distractor reuse | Hindi CoT: reuse minus placebo | +0.4 (p=0.84) | +0.6 (p=1) | null in both |
+| 7 Distractor reuse | English direct: reuse minus placebo | +1.0 (p=0.58) | +1.0 (p=0.58) | null in both |
+| 8 Language drift | OR correct | Hindi trace drifts (TLR < 0.9) | 2.03 [1.33, 3.08] | nan [nan, nan] | not computable |
+| 9 Verification | OR correct | English trace verifies | 1.32 [0.89, 1.97] | 1.32 [0.89, 1.97] | null in both |
+| 10 Trace length | English median words | 107 | 107 | about the same |
+| 10 Trace length | Hindi median words | 83 | 96 | up 16% |
+| 10 Trace length | English median completion tokens | 353 | 353 | about the same |
+| 10 Trace length | Hindi median completion tokens | 212 | 311 | up 47% |
+| 11 Agreement | CoT: English-only minus Hindi-only right (share of pairs) | +28.4 (p=0) | +5.5 (p=2e-29) | weaker, still significant |
+| 11 Agreement | Direct: English-only minus Hindi-only right (share of pairs) | +4.4 (p=4.3e-15) | +4.4 (p=4.3e-15) | weaker, still significant |
