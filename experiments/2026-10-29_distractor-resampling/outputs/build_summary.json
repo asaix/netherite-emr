@@ -1,0 +1,25 @@
+{
+  "traces": {
+    "hi_IN": 526,
+    "en_US": 37
+  },
+  "traces_opening_mention": {
+    "hi_IN | opening False": 248,
+    "hi_IN | opening True": 278,
+    "en_US | opening True": 22,
+    "en_US | opening False": 15
+  },
+  "traces_in_trace_deletion": 234,
+  "requests_per_round": 1952,
+  "requests_by_arm": {
+    "Q": 563,
+    "P": 563,
+    "M": 563,
+    "P1": 263
+  },
+  "empty_prefix_by_arm": {
+    "Q": 300,
+    "P": 300,
+    "P1": 104
+  }
+}
