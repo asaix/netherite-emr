@@ -1,0 +1,52 @@
+# Mid report vs full grid
+
+Differences are percentage points with 95% cluster-bootstrap intervals; OR = Mantel-Haenszel odds ratio within task x difficulty; reuse and agreement rows give the difference in points with Fisher / sign-test p; plain numbers are shares (%), and trace lengths are medians. Mid report = the mid-report pipeline and parser on its 3,089 questions (reproduces the submitted tables exactly).
+
+| section | finding | Mid report | New questions only | Full grid, 4 levels | Full grid, 5 levels | verdict (full vs mid) | replicates on new questions |
+|---|---|---|---|---|---|---|---|
+| 1 CoT delta | English, all tasks | +27.9 [+26.6, +29.3] | +30.8 [+29.4, +32.3] | +25.2 [+24.1, +26.2] | +29.5 [+28.5, +30.5] | stronger | yes |
+| 1 CoT delta | Hindi, all tasks | +5.1 [+3.8, +6.4] | +4.3 [+2.9, +5.7] | +1.5 [+0.4, +2.5] | +4.7 [+3.7, +5.6] | holds, inside old CI | yes |
+| 1 CoT delta | Hindi, date subtraction | -14.0 [-17.0, -11.1] | -22.9 [-27.3, -18.6] | -14.1 [-16.7, -11.6] | -17.6 [-19.9, -15.1] | stronger | yes |
+| 1 CoT delta | Hindi, interval date | -17.2 [-22.8, -11.7] | -23.0 [-26.0, -19.8] | -25.3 [-28.4, -22.3] | -21.8 [-24.7, -19.0] | holds, inside old CI | yes |
+| 1 CoT delta | Hindi, day of week | +6.1 [+2.7, +9.4] | +6.8 [+3.0, +10.9] | +5.4 [+2.6, +8.3] | +6.4 [+3.8, +9.0] | holds, inside old CI | yes |
+| 1 CoT delta | Hindi, date recurrence | +21.2 [+18.5, +24.0] | +13.0 [+10.6, +15.8] | +21.7 [+19.3, +24.1] | +18.0 [+16.0, +20.0] | weaker, still significant | yes |
+| 1 CoT delta | Hindi, time duration | +43.8 [+37.4, +50.1] | +30.3 [+27.2, +33.5] | +29.0 [+25.8, +32.3] | +33.0 [+30.3, +35.9] | weaker, still significant | yes |
+| 1 CoT delta | English, time duration | +40.9 [+35.4, +46.3] | +33.9 [+30.8, +37.0] | +28.8 [+26.0, +31.7] | +35.3 [+32.8, +37.9] | weaker, still significant | yes |
+| 1 CoT delta | English, interval date | +13.3 [+7.3, +19.5] | +8.4 [+5.0, +11.8] | +7.5 [+4.2, +10.9] | +9.4 [+6.5, +12.3] | holds, inside old CI | yes |
+| 2 Day of week | Hindi CoT +1 day minus correct (share) | 3.9 | 0.5 | 2.9 | 2.5 | about the same | - |
+| 2 Day of week | English direct modal weekday share | 35.4 | 33.1 | 35.3 | 34.4 | about the same | - |
+| 2 Day of week | Hindi direct modal weekday share | 63.4 | 51.7 | 60.6 | 58.7 | down 4.8 pts | - |
+| 3 Recurrence | Hindi CoT first-step shortcut | 16.6 | 0.6 | 12.6 | 10.2 | down 6.4 pts | - |
+| 3 Recurrence | Hindi CoT mirror (backwards) | 11.8 | 0.7 | 9.2 | 7.4 | down 4.4 pts | - |
+| 3 Recurrence | Hindi direct mirror (backwards) | 10.8 | 0.0 | 8.1 | 6.5 | down 4.3 pts | - |
+| 3 Recurrence | English direct first-step shortcut | 31.3 | 7.2 | 26.7 | 21.7 | down 9.6 pts | - |
+| 4 EN-HI gap | Five date tasks, short, CoT | +27.0 [+24.5, +29.5] | - | +27.2 [+24.7, +29.8] | +27.2 [+24.7, +29.8] | holds, inside old CI | - |
+| 4 EN-HI gap | Five date tasks, very long, CoT | +40.4 [+37.6, +43.2] | - | +40.4 [+37.5, +43.2] | +40.4 [+37.7, +43.3] | holds, inside old CI | - |
+| 4 EN-HI gap | Five date tasks, short, direct | +8.6 [+6.5, +10.7] | - | +8.4 [+6.3, +10.5] | +8.4 [+6.4, +10.6] | holds, inside old CI | - |
+| 4 EN-HI gap | Five date tasks, very long, direct | +6.6 [+4.4, +8.7] | - | +6.6 [+4.5, +8.6] | +6.6 [+4.4, +8.8] | holds, inside old CI | - |
+| 5 Distraction penalty | English, time-related | +0.0 [-1.7, +1.8] | -0.6 [-2.6, +1.4] | -0.7 [-2.2, +0.7] | -0.3 [-1.7, +1.0] | null in both | yes (null) |
+| 5 Distraction penalty | English, unrelated | -0.8 [-2.7, +0.9] | -2.9 [-4.8, -0.8] | -1.8 [-3.3, -0.4] | -1.9 [-3.3, -0.6] | newly significant | no (now an effect) |
+| 5 Distraction penalty | Hindi, time-related | +5.2 [+2.9, +7.3] | -0.3 [-2.7, +2.0] | +3.5 [+1.7, +5.3] | +2.2 [+0.6, +3.8] | weaker, still significant | no |
+| 5 Distraction penalty | Hindi, unrelated | +2.8 [+0.7, +4.9] | -1.2 [-3.4, +1.0] | +1.3 [-0.4, +3.1] | +0.7 [-1.0, +2.3] | no longer significant | no |
+| 5 Distraction penalty | Hindi time-related, date duration | +10.3 [+5.3, +15.1] | +3.6 [-7.6, +14.8] | +10.5 [+5.5, +15.4] | +8.8 [+4.3, +13.4] | holds, inside old CI | no |
+| 5 Distraction penalty | Hindi time-related, day of week | +8.0 [+1.3, +14.2] | -6.0 [-13.9, +2.8] | +3.5 [-1.9, +9.4] | +2.4 [-2.9, +7.4] | no longer significant | no |
+| 5 Distraction penalty | Hindi time-related, time duration | +22.1 [+8.3, +35.5] | +8.9 [+2.2, +14.9] | +11.9 [+5.6, +18.2] | +11.5 [+6.0, +17.1] | holds, inside old CI | yes |
+| 5 Distraction penalty | Hindi time-related, date recurrence | +5.8 [-0.0, +11.5] | +2.5 [-2.7, +7.6] | +5.5 [+0.6, +10.5] | +4.5 [+0.5, +8.3] | newly significant | yes (null) |
+| 6 Distractor mention | English time-related: mention rate minus placebo | 4.7 | 10.0 | 8.3 | 7.6 | up 2.9 pts | - |
+| 6 Distractor mention | Hindi time-related: mention rate minus placebo | 23.4 | 24.0 | 24.4 | 23.7 | about the same | - |
+| 6 Distractor mention | Hindi unrelated: mention rate minus placebo | 34.5 | 23.4 | 30.6 | 28.4 | down 6.0 pts | - |
+| 6 Distractor mention | OR correct | mention, English time-related | 0.64 [0.44, 0.93] | 1.18 [0.86, 1.63] | 0.81 [0.61, 1.08] | 0.92 [0.72, 1.17] | no longer significant | no |
+| 6 Distractor mention | OR correct | mention, Hindi time-related | 0.77 [0.63, 0.95] | 0.88 [0.75, 1.04] | 0.85 [0.73, 0.98] | 0.84 [0.74, 0.95] | holds, inside old CI | no |
+| 6 Distractor mention | OR correct | mention, English unrelated | 1.33 [0.82, 2.15] | 0.94 [0.58, 1.53] | 1.29 [0.86, 1.93] | 1.12 [0.79, 1.57] | null in both | yes (null) |
+| 6 Distractor mention | OR correct | mention, Hindi unrelated | 1.11 [0.90, 1.36] | 1.15 [0.94, 1.39] | 1.17 [1.00, 1.37] | 1.13 [0.98, 1.30] | null in both | yes (null) |
+| 7 Distractor reuse | Hindi direct: reuse minus placebo | +9.4 (p=8e-11) | +4.9 (p=0.0025) | +9.5 (p=1.6e-13) | +7.2 (p=2.3e-11) | weaker, still significant | yes |
+| 7 Distractor reuse | Hindi CoT: reuse minus placebo | +2.3 (p=0.044) | +1.2 (p=0.31) | +2.5 (p=0.0038) | +1.7 (p=0.034) | weaker, still significant | no |
+| 7 Distractor reuse | English direct: reuse minus placebo | +1.0 (p=0.45) | +4.4 (p=0.0013) | +1.8 (p=0.1) | +2.7 (p=0.0039) | newly significant | no (now an effect) |
+| 8 Language drift | OR correct | Hindi trace drifts (TLR < 0.9) | 1.94 [1.43, 2.64] | 2.24 [1.61, 3.13] | 2.01 [1.56, 2.59] | 2.08 [1.66, 2.60] | holds, inside old CI | yes |
+| 9 Verification | OR correct | English trace verifies | 1.33 [0.90, 1.95] | 1.26 [0.93, 1.70] | 1.40 [1.09, 1.80] | 1.28 [1.01, 1.62] | newly significant | yes (null) |
+| 10 Trace length | English median words | 103 | 112 | 94 | 107 | about the same | - |
+| 10 Trace length | Hindi median words | 79 | 87 | 79 | 83 | about the same | - |
+| 10 Trace length | English median completion tokens | 327 | 391 | 317 | 356 | about the same | - |
+| 10 Trace length | Hindi median completion tokens | 198 | 225 | 202 | 213 | about the same | - |
+| 11 Agreement | CoT: English-only minus Hindi-only right (share of pairs) | +27.0 (p=0) | +28.7 (p=0) | +26.5 (p=0) | +27.9 (p=0) | stronger | yes |
+| 11 Agreement | Direct: English-only minus Hindi-only right (share of pairs) | +5.3 (p=1.4e-32) | +3.2 (p=8e-12) | +3.8 (p=6.5e-27) | +4.2 (p=1.8e-37) | weaker, still significant | yes |

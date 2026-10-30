@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Interaction & Task + level FE & Cell FE \\
+\midrule
+CoT $\times$ time-related, English & 1.20 [0.24, 5.88] & 1.29 [0.24, 7.07] \\
+CoT $\times$ time-related, Hindi & 1.96 [0.62, 6.16] & 2.04 [0.58, 7.09] \\
+\quad Hindi $/$ English ratio & 1.63 [0.22, 11.97] & 1.57 [0.19, 13.30] \\
+CoT $\times$ unrelated, English & 1.22 [0.22, 6.69] & 1.27 [0.21, 7.68] \\
+CoT $\times$ unrelated, Hindi & 2.04 [0.54, 7.71] & 2.17 [0.52, 8.99] \\
+\quad Hindi $/$ English ratio & 1.66 [0.17, 15.97] & 1.71 [0.16, 18.70] \\
+\bottomrule
+\end{tabular}
+\caption{Odds ratios for the CoT $\times$ distractor interaction from logistic regressions of correctness, with standard errors clustered by question. Below 1 means the distractor costs more odds of a correct answer under CoT than under direct answering. Task + level FE adds task and difficulty fixed effects; cell FE adds a fixed effect for every task $\times$ level $\times$ language $\times$ condition cell. Bold: $p<0.05$.}
+\label{tab:logit}
+\end{table}
