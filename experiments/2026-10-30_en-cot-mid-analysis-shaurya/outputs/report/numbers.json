@@ -1,0 +1,676 @@
+{
+  "questions": 2250,
+  "responses": {
+    "English CoT": 6750,
+    "English direct": 6750,
+    "Hindi CLP": 6750,
+    "Hindi CoT": 6750,
+    "Hindi direct": 6750,
+    "Hindi en-cot": 6750
+  },
+  "overall_ci": {
+    "en-cot - Hindi CoT": [
+      22.1,
+      24.9
+    ],
+    "en-cot - Hindi direct": [
+      25.8,
+      29.5
+    ],
+    "en-cot - Hindi CLP": [
+      11.2,
+      13.8
+    ],
+    "en-cot - English CoT": [
+      -7.0,
+      -5.0
+    ]
+  },
+  "unanswered": {
+    "English direct": 7,
+    "English CoT": 221,
+    "Hindi direct": 0,
+    "Hindi CoT": 43,
+    "Hindi CLP": 39,
+    "Hindi en-cot": 174
+  },
+  "strict_accuracy": {
+    "English direct": 59.6,
+    "English CoT": 86.0,
+    "Hindi direct": 55.2,
+    "Hindi CoT": 59.0,
+    "Hindi CLP": 69.9,
+    "Hindi en-cot": 80.8
+  },
+  "profile": {
+    "English CoT": {
+      "off_by_one_share_of_wrong": 52.3,
+      "dow_one_day_late": 16.2,
+      "recurrence_backwards": 0.4,
+      "median_completion_tokens": 353.0,
+      "verification": 86.1
+    },
+    "Hindi CoT": {
+      "off_by_one_share_of_wrong": 21.2,
+      "dow_one_day_late": 25.3,
+      "recurrence_backwards": 9.0,
+      "median_completion_tokens": 212.0,
+      "verification": 1.3
+    },
+    "Hindi en-cot": {
+      "off_by_one_share_of_wrong": 42.3,
+      "dow_one_day_late": 24.0,
+      "recurrence_backwards": 8.3,
+      "median_completion_tokens": 311.0,
+      "verification": 74.2,
+      "english_word_share": 0.999
+    }
+  },
+  "by_task": [
+    {
+      "task": "date_addition",
+      "English direct": 85.6,
+      "English CoT": 98.0,
+      "Hindi direct": 82.8,
+      "Hindi CoT": 85.1,
+      "Hindi CLP": 92.7,
+      "Hindi en-cot": 95.7,
+      "vs Hindi CoT": 10.7,
+      "only en-cot / only Hindi CoT": "102 / 22",
+      "vs Hindi direct": 12.9,
+      "only en-cot / only Hindi direct": "118 / 21",
+      "vs Hindi CLP": 3.1,
+      "only en-cot / only Hindi CLP": "50 / 27",
+      "p vs Hindi CoT": 1.6601952366746198e-13,
+      "p vs Hindi direct": 5.586517426314882e-17,
+      "p vs Hindi CLP": 0.016762268075333552
+    },
+    {
+      "task": "date_subtraction",
+      "English direct": 86.0,
+      "English CoT": 95.2,
+      "Hindi direct": 84.8,
+      "Hindi CoT": 66.0,
+      "Hindi CLP": 86.9,
+      "Hindi en-cot": 94.0,
+      "vs Hindi CoT": 28.0,
+      "only en-cot / only Hindi CoT": "219 / 12",
+      "vs Hindi direct": 9.2,
+      "only en-cot / only Hindi direct": "99 / 32",
+      "vs Hindi CLP": 7.1,
+      "only en-cot / only Hindi CLP": "83 / 32",
+      "p vs Hindi CoT": 1.7669981095453293e-49,
+      "p vs Hindi direct": 7.391423664464341e-09,
+      "p vs Hindi CLP": 1.2956587681353613e-05
+    },
+    {
+      "task": "date_duration",
+      "English direct": 84.0,
+      "English CoT": 99.3,
+      "Hindi direct": 78.9,
+      "Hindi CoT": 88.3,
+      "Hindi CLP": 92.7,
+      "Hindi en-cot": 97.7,
+      "vs Hindi CoT": 9.5,
+      "only en-cot / only Hindi CoT": "84 / 13",
+      "vs Hindi direct": 18.8,
+      "only en-cot / only Hindi direct": "153 / 12",
+      "vs Hindi CLP": 5.1,
+      "only en-cot / only Hindi CLP": "52 / 14",
+      "p vs Hindi CoT": 1.3852344083006553e-13,
+      "p vs Hindi direct": 1.3079201598085289e-31,
+      "p vs Hindi CLP": 1.4110091156811278e-05
+    },
+    {
+      "task": "date_recurrence",
+      "English direct": 22.1,
+      "English CoT": 90.3,
+      "Hindi direct": 2.8,
+      "Hindi CoT": 20.1,
+      "Hindi CLP": 27.0,
+      "Hindi en-cot": 70.3,
+      "vs Hindi CoT": 50.2,
+      "only en-cot / only Hindi CoT": "381 / 40",
+      "vs Hindi direct": 67.5,
+      "only en-cot / only Hindi direct": "480 / 9",
+      "vs Hindi CLP": 43.4,
+      "only en-cot / only Hindi CLP": "341 / 48",
+      "p vs Hindi CoT": 6.282189533189752e-70,
+      "p vs Hindi direct": 4.695125129240007e-128,
+      "p vs Hindi CLP": 1.3480431116831508e-54
+    },
+    {
+      "task": "day_of_week",
+      "English direct": 14.9,
+      "English CoT": 69.5,
+      "Hindi direct": 15.2,
+      "Hindi CoT": 21.0,
+      "Hindi CLP": 31.8,
+      "Hindi en-cot": 52.5,
+      "vs Hindi CoT": 31.5,
+      "only en-cot / only Hindi CoT": "257 / 60",
+      "vs Hindi direct": 37.3,
+      "only en-cot / only Hindi direct": "292 / 42",
+      "vs Hindi CLP": 20.7,
+      "only en-cot / only Hindi CLP": "219 / 87",
+      "p vs Hindi CoT": 1.73105631111767e-29,
+      "p vs Hindi direct": 1.9172451941530004e-46,
+      "p vs Hindi CLP": 1.9289471073617678e-13
+    },
+    {
+      "task": "interval_date",
+      "English direct": 43.2,
+      "English CoT": 50.7,
+      "Hindi direct": 46.8,
+      "Hindi CoT": 23.9,
+      "Hindi CLP": 35.3,
+      "Hindi en-cot": 44.1,
+      "vs Hindi CoT": 20.3,
+      "only en-cot / only Hindi CoT": "212 / 65",
+      "vs Hindi direct": -2.7,
+      "only en-cot / only Hindi direct": "124 / 148",
+      "vs Hindi CLP": 8.8,
+      "only en-cot / only Hindi CLP": "173 / 110",
+      "p vs Hindi CoT": 7.007926166218238e-19,
+      "p vs Hindi direct": 0.1630210529565591,
+      "p vs Hindi CLP": 0.000648290980993237
+    },
+    {
+      "task": "time_addition",
+      "English direct": 70.5,
+      "English CoT": 95.9,
+      "Hindi direct": 75.6,
+      "Hindi CoT": 73.5,
+      "Hindi CLP": 88.2,
+      "Hindi en-cot": 92.6,
+      "vs Hindi CoT": 19.2,
+      "only en-cot / only Hindi CoT": "174 / 33",
+      "vs Hindi direct": 17.0,
+      "only en-cot / only Hindi direct": "170 / 47",
+      "vs Hindi CLP": 4.4,
+      "only en-cot / only Hindi CLP": "76 / 46",
+      "p vs Hindi CoT": 9.939764448756809e-24,
+      "p vs Hindi direct": 5.586517426314882e-17,
+      "p vs Hindi CLP": 0.016762268075333552
+    },
+    {
+      "task": "time_subtraction",
+      "English direct": 64.7,
+      "English CoT": 97.7,
+      "Hindi direct": 64.9,
+      "Hindi CoT": 75.2,
+      "Hindi CLP": 90.1,
+      "Hindi en-cot": 95.7,
+      "vs Hindi CoT": 20.5,
+      "only en-cot / only Hindi CoT": "173 / 22",
+      "vs Hindi direct": 30.8,
+      "only en-cot / only Hindi direct": "240 / 11",
+      "vs Hindi CLP": 5.6,
+      "only en-cot / only Hindi CLP": "69 / 27",
+      "p vs Hindi CoT": 1.7064042866260802e-29,
+      "p vs Hindi direct": 2.0254937465204926e-56,
+      "p vs Hindi CLP": 8.593741015196964e-05
+    },
+    {
+      "task": "time_duration",
+      "English direct": 65.7,
+      "English CoT": 98.9,
+      "Hindi direct": 44.7,
+      "Hindi CoT": 80.1,
+      "Hindi CLP": 86.7,
+      "Hindi en-cot": 98.1,
+      "vs Hindi CoT": 18.1,
+      "only en-cot / only Hindi CoT": "140 / 5",
+      "vs Hindi direct": 53.5,
+      "only en-cot / only Hindi direct": "404 / 4",
+      "vs Hindi CLP": 11.5,
+      "only en-cot / only Hindi CLP": "95 / 9",
+      "p vs Hindi CoT": 1.6208126310676643e-34,
+      "p vs Hindi direct": 2.781031845403888e-113,
+      "p vs Hindi CLP": 2.3885960706292823e-18
+    },
+    {
+      "task": "all",
+      "English direct": 59.7,
+      "English CoT": 88.9,
+      "Hindi direct": 55.2,
+      "Hindi CoT": 59.4,
+      "Hindi CLP": 70.3,
+      "Hindi en-cot": 82.9,
+      "vs Hindi CoT": 23.5,
+      "only en-cot / only Hindi CoT": "1742 / 272",
+      "vs Hindi direct": 27.7,
+      "only en-cot / only Hindi direct": "2080 / 326",
+      "vs Hindi CLP": 12.6,
+      "only en-cot / only Hindi CLP": "1158 / 400",
+      "p vs Hindi CoT": 6.058714771552066e-262,
+      "p vs Hindi direct": 9.75440939664e-312,
+      "p vs Hindi CLP": 1.8430234402249577e-85
+    }
+  ],
+  "by_difficulty": [
+    {
+      "difficulty": "short",
+      "English direct": 77.8,
+      "English CoT": 93.2,
+      "Hindi direct": 73.9,
+      "Hindi CoT": 69.5,
+      "Hindi CLP": 77.2,
+      "Hindi en-cot": 83.0,
+      "En CoT - Hindi CoT": 23.6,
+      "En CoT - Hindi CoT CI": [
+        20.6,
+        26.7
+      ],
+      "En CoT - Hindi en-cot": 10.2,
+      "En CoT - Hindi en-cot CI": [
+        7.8,
+        12.7
+      ],
+      "ci": {
+        "English direct": [
+          74.5,
+          81.1
+        ],
+        "English CoT": [
+          91.7,
+          94.6
+        ],
+        "Hindi direct": [
+          70.5,
+          77.3
+        ],
+        "Hindi CoT": [
+          66.3,
+          72.8
+        ],
+        "Hindi CLP": [
+          74.2,
+          80.2
+        ],
+        "Hindi en-cot": [
+          80.3,
+          85.4
+        ]
+      }
+    },
+    {
+      "difficulty": "medium",
+      "English direct": 69.6,
+      "English CoT": 91.6,
+      "Hindi direct": 65.3,
+      "Hindi CoT": 65.4,
+      "Hindi CLP": 75.7,
+      "Hindi en-cot": 84.9,
+      "En CoT - Hindi CoT": 26.2,
+      "En CoT - Hindi CoT CI": [
+        23.3,
+        29.0
+      ],
+      "En CoT - Hindi en-cot": 6.7,
+      "En CoT - Hindi en-cot CI": [
+        4.6,
+        8.7
+      ],
+      "ci": {
+        "English direct": [
+          65.8,
+          73.2
+        ],
+        "English CoT": [
+          89.7,
+          93.4
+        ],
+        "Hindi direct": [
+          61.3,
+          69.0
+        ],
+        "Hindi CoT": [
+          62.1,
+          68.7
+        ],
+        "Hindi CLP": [
+          72.6,
+          78.8
+        ],
+        "Hindi en-cot": [
+          82.4,
+          87.5
+        ]
+      }
+    },
+    {
+      "difficulty": "long",
+      "English direct": 61.2,
+      "English CoT": 89.3,
+      "Hindi direct": 57.9,
+      "Hindi CoT": 60.4,
+      "Hindi CLP": 71.3,
+      "Hindi en-cot": 84.4,
+      "En CoT - Hindi CoT": 28.9,
+      "En CoT - Hindi CoT CI": [
+        25.7,
+        32.2
+      ],
+      "En CoT - Hindi en-cot": 4.9,
+      "En CoT - Hindi en-cot CI": [
+        3.1,
+        6.8
+      ],
+      "ci": {
+        "English direct": [
+          57.3,
+          64.9
+        ],
+        "English CoT": [
+          87.1,
+          91.4
+        ],
+        "Hindi direct": [
+          54.1,
+          61.7
+        ],
+        "Hindi CoT": [
+          56.6,
+          63.9
+        ],
+        "Hindi CLP": [
+          68.1,
+          74.5
+        ],
+        "Hindi en-cot": [
+          81.9,
+          86.9
+        ]
+      }
+    },
+    {
+      "difficulty": "very_long",
+      "English direct": 54.3,
+      "English CoT": 87.2,
+      "Hindi direct": 48.4,
+      "Hindi CoT": 53.7,
+      "Hindi CLP": 65.8,
+      "Hindi en-cot": 83.5,
+      "En CoT - Hindi CoT": 33.5,
+      "En CoT - Hindi CoT CI": [
+        30.1,
+        37.0
+      ],
+      "En CoT - Hindi en-cot": 3.6,
+      "En CoT - Hindi en-cot CI": [
+        1.5,
+        6.1
+      ],
+      "ci": {
+        "English direct": [
+          50.3,
+          57.9
+        ],
+        "English CoT": [
+          84.8,
+          89.5
+        ],
+        "Hindi direct": [
+          44.6,
+          52.3
+        ],
+        "Hindi CoT": [
+          50.1,
+          57.2
+        ],
+        "Hindi CLP": [
+          62.1,
+          69.1
+        ],
+        "Hindi en-cot": [
+          81.0,
+          86.1
+        ]
+      }
+    },
+    {
+      "difficulty": "very_very_long",
+      "English direct": 35.5,
+      "English CoT": 82.9,
+      "Hindi direct": 30.3,
+      "Hindi CoT": 47.9,
+      "Hindi CLP": 61.5,
+      "Hindi en-cot": 78.5,
+      "En CoT - Hindi CoT": 35.0,
+      "En CoT - Hindi CoT CI": [
+        31.5,
+        38.4
+      ],
+      "En CoT - Hindi en-cot": 4.3,
+      "En CoT - Hindi en-cot CI": [
+        1.9,
+        6.6
+      ],
+      "ci": {
+        "English direct": [
+          32.0,
+          39.4
+        ],
+        "English CoT": [
+          80.2,
+          85.3
+        ],
+        "Hindi direct": [
+          26.9,
+          33.7
+        ],
+        "Hindi CoT": [
+          44.2,
+          51.3
+        ],
+        "Hindi CLP": [
+          58.2,
+          65.1
+        ],
+        "Hindi en-cot": [
+          75.5,
+          81.4
+        ]
+      }
+    }
+  ],
+  "distractors": [
+    {
+      "cond": "English direct",
+      "no_insertion": 60.6,
+      "similar_insertion": 59.9,
+      "dissimilar_insertion": 58.6,
+      "drop similar_insertion": 0.7,
+      "drop similar_insertion CI": [
+        -1.0,
+        2.6
+      ],
+      "drop dissimilar_insertion": 2.0,
+      "drop dissimilar_insertion CI": [
+        0.3,
+        3.8
+      ]
+    },
+    {
+      "cond": "English CoT",
+      "no_insertion": 89.3,
+      "similar_insertion": 88.1,
+      "dissimilar_insertion": 89.2,
+      "drop similar_insertion": 1.2,
+      "drop similar_insertion CI": [
+        -0.4,
+        2.7
+      ],
+      "drop dissimilar_insertion": 0.2,
+      "drop dissimilar_insertion CI": [
+        -1.4,
+        1.7
+      ]
+    },
+    {
+      "cond": "Hindi direct",
+      "no_insertion": 56.0,
+      "similar_insertion": 54.9,
+      "dissimilar_insertion": 54.6,
+      "drop similar_insertion": 1.2,
+      "drop similar_insertion CI": [
+        -0.5,
+        2.9
+      ],
+      "drop dissimilar_insertion": 1.5,
+      "drop dissimilar_insertion CI": [
+        -0.3,
+        3.2
+      ]
+    },
+    {
+      "cond": "Hindi CoT",
+      "no_insertion": 60.2,
+      "similar_insertion": 58.9,
+      "dissimilar_insertion": 59.1,
+      "drop similar_insertion": 1.3,
+      "drop similar_insertion CI": [
+        -0.9,
+        3.5
+      ],
+      "drop dissimilar_insertion": 1.2,
+      "drop dissimilar_insertion CI": [
+        -0.9,
+        3.3
+      ]
+    },
+    {
+      "cond": "Hindi CLP",
+      "no_insertion": 69.3,
+      "similar_insertion": 69.3,
+      "dissimilar_insertion": 72.3,
+      "drop similar_insertion": -0.1,
+      "drop similar_insertion CI": [
+        -2.2,
+        2.0
+      ],
+      "drop dissimilar_insertion": -3.1,
+      "drop dissimilar_insertion CI": [
+        -5.1,
+        -1.2
+      ]
+    },
+    {
+      "cond": "Hindi en-cot",
+      "no_insertion": 84.1,
+      "similar_insertion": 81.0,
+      "dissimilar_insertion": 83.6,
+      "drop similar_insertion": 3.2,
+      "drop similar_insertion CI": [
+        1.3,
+        4.9
+      ],
+      "drop dissimilar_insertion": 0.6,
+      "drop dissimilar_insertion CI": [
+        -1.2,
+        2.3
+      ]
+    }
+  ],
+  "mentions": [
+    {
+      "cond": "English CoT",
+      "mention similar": 17.3,
+      "placebo similar": 8.9,
+      "OR similar": [
+        0.61,
+        0.39,
+        0.93
+      ],
+      "mention dissimilar": 11.0,
+      "placebo dissimilar": 6.3,
+      "OR dissimilar": [
+        1.63,
+        0.9,
+        2.96
+      ]
+    },
+    {
+      "cond": "Hindi CoT",
+      "mention similar": 34.0,
+      "placebo similar": 10.3,
+      "OR similar": [
+        0.85,
+        0.68,
+        1.07
+      ],
+      "mention dissimilar": 28.7,
+      "placebo dissimilar": 1.9,
+      "OR dissimilar": [
+        1.3,
+        1.0,
+        1.7
+      ]
+    },
+    {
+      "cond": "Hindi en-cot",
+      "mention similar": 22.0,
+      "placebo similar": 9.3,
+      "OR similar": [
+        0.82,
+        0.59,
+        1.13
+      ],
+      "mention dissimilar": 17.0,
+      "placebo dissimilar": 5.5,
+      "OR dissimilar": [
+        0.91,
+        0.58,
+        1.43
+      ]
+    }
+  ],
+  "agreement": [
+    {
+      "cond": "Hindi direct",
+      "vs": "English direct",
+      "pairs": 6743,
+      "both right": 3143,
+      "both wrong": 2138,
+      "only English": 881,
+      "only Hindi": 581,
+      "median phi": 0.28,
+      "IQR": [
+        0.14,
+        0.42
+      ],
+      "cells": 43
+    },
+    {
+      "cond": "Hindi CoT",
+      "vs": "English CoT",
+      "pairs": 6490,
+      "both right": 3778,
+      "both wrong": 557,
+      "only English": 2000,
+      "only Hindi": 155,
+      "median phi": 0.07,
+      "IQR": [
+        -0.01,
+        0.12
+      ],
+      "cells": 35
+    },
+    {
+      "cond": "Hindi en-cot",
+      "vs": "English CoT",
+      "pairs": 6395,
+      "both right": 5033,
+      "both wrong": 370,
+      "only English": 672,
+      "only Hindi": 320,
+      "median phi": 0.02,
+      "IQR": [
+        -0.03,
+        0.19
+      ],
+      "cells": 34
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+cond,vs,pairs,both right,both wrong,only English,only Hindi,median phi,IQR,cells
+Hindi direct,English direct,6743,3143,2138,881,581,0.28,"[0.14, 0.42]",43
+Hindi CoT,English CoT,6490,3778,557,2000,155,0.07,"[-0.01, 0.12]",35
+Hindi en-cot,English CoT,6395,5033,370,672,320,0.02,"[-0.03, 0.19]",34

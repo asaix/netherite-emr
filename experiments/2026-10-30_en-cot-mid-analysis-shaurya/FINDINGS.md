@@ -54,3 +54,7 @@ $PY compare.py --pair encot
 ```
 
 What I changed in Rahul's scripts: `temporal_answers.load_records("en_cot")` loads the normal responses for the en-cot questions and swaps Hindi CoT for en-cot, `build_responses.py` takes `--source en_cot`, `analysis.py` has the `encot-off` and `encot` scopes, and `compare.py` takes `--pair encot`.
+
+## Report section
+
+`report.py` makes the tables and figures for the final report in `outputs/report/` (same questions and methods as Rahul's CLP section: accuracy of answered responses, exact McNemar tests with Holm correction over tasks, 2,000-sample bootstrap over questions). It also puts en-cot next to CLP, which was run on the same 2,250 questions. Run it after the steps above.
