@@ -1,0 +1,68 @@
+model: per_mode_on_adjusted
+formula: disagree ~ RDS + C(difficulty) + C(task) + C(insertion)
+sample: on
+n = 1191, events = 31, clusters (uid) = 430, parameters (excl. intercept) = 15, events per parameter = 2.1
+reference levels: {'difficulty': 'short', 'task': 'date_addition', 'insertion': 'no_insertion', 'reasoning_mode': 'off'}
+converged: False
+reliable: False
+issues: ['optimizer did not converge', 'ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals', 'very large coefficient C(task)[T.time_duration] = -22.61 (scaled -22.61)', 'zero cell (quasi-separation) for task = time_duration', 'events per parameter 2.1 < 10']
+warnings: ['ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals']
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               disagree   No. Observations:                 1191
+Model:                          Logit   Df Residuals:                     1175
+Method:                           MLE   Df Model:                           15
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.4094
+Time:                        16:29:22   Log-Likelihood:                -84.872
+converged:                      False   LL-Null:                       -143.70
+Covariance Type:              cluster   LLR p-value:                 5.397e-18
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                              -23.5698      3.716     -6.342      0.000     -30.854     -16.286
+C(difficulty)[T.medium]                 -0.9248      0.783     -1.181      0.238      -2.460       0.610
+C(difficulty)[T.long]                   -1.6291      0.647     -2.519      0.012      -2.897      -0.362
+C(difficulty)[T.very_long]              -0.9917      0.564     -1.758      0.079      -2.097       0.114
+C(difficulty)[T.very_very_long]         -1.6818      0.666     -2.524      0.012      -2.987      -0.376
+C(task)[T.date_duration]                 0.9838      1.236      0.796      0.426      -1.439       3.407
+C(task)[T.date_recurrence]               1.5937      1.047      1.522      0.128      -0.459       3.646
+C(task)[T.date_subtraction]             -0.0674      1.402     -0.048      0.962      -2.815       2.680
+C(task)[T.day_of_week]                  -1.5929      1.229     -1.296      0.195      -4.002       0.817
+C(task)[T.interval_date]                -0.3919      1.122     -0.349      0.727      -2.591       1.807
+C(task)[T.time_addition]                 0.7940      1.294      0.614      0.540      -1.742       3.331
+C(task)[T.time_duration]               -22.6144      1.072    -21.092      0.000     -24.716     -20.513
+C(task)[T.time_subtraction]              0.6016      1.304      0.461      0.645      -1.954       3.157
+C(insertion)[T.dissimilar_insertion]    -0.4458      0.482     -0.925      0.355      -1.390       0.499
+C(insertion)[T.similar_insertion]       -0.3856      0.502     -0.768      0.443      -1.370       0.599
+RDS                                     24.6680      4.481      5.504      0.000      15.885      33.451
+========================================================================================================
+
+Possibly complete quasi-separation: A fraction 0.27 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.
+
+        Logit Marginal Effects       
+=====================================
+Dep. Variable:               disagree
+Method:                          dydx
+At:                           overall
+========================================================================================================
+                                          dy/dx    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+C(difficulty)[T.medium]                 -0.0173      0.014     -1.251      0.211      -0.044       0.010
+C(difficulty)[T.long]                   -0.0304      0.012     -2.543      0.011      -0.054      -0.007
+C(difficulty)[T.very_long]              -0.0185      0.010     -1.854      0.064      -0.038       0.001
+C(difficulty)[T.very_very_long]         -0.0314      0.013     -2.429      0.015      -0.057      -0.006
+C(task)[T.date_duration]                 0.0184      0.024      0.770      0.441      -0.028       0.065
+C(task)[T.date_recurrence]               0.0297      0.020      1.488      0.137      -0.009       0.069
+C(task)[T.date_subtraction]             -0.0013      0.026     -0.048      0.962      -0.052       0.050
+C(task)[T.day_of_week]                  -0.0297      0.023     -1.297      0.194      -0.075       0.015
+C(task)[T.interval_date]                -0.0073      0.021     -0.351      0.726      -0.048       0.034
+C(task)[T.time_addition]                 0.0148      0.025      0.598      0.550      -0.034       0.063
+C(task)[T.time_duration]                -0.4218      0.079     -5.361      0.000      -0.576      -0.268
+C(task)[T.time_subtraction]              0.0112      0.025      0.457      0.648      -0.037       0.059
+C(insertion)[T.dissimilar_insertion]    -0.0083      0.009     -0.936      0.349      -0.026       0.009
+C(insertion)[T.similar_insertion]       -0.0072      0.010     -0.749      0.454      -0.026       0.012
+RDS                                      0.4601      0.072      6.368      0.000       0.319       0.602
+========================================================================================================

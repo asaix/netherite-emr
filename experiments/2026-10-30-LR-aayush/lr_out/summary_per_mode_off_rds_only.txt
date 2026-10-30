@@ -1,0 +1,36 @@
+model: per_mode_off_rds_only
+formula: disagree ~ RDS
+sample: off
+n = 19471, events = 6452, clusters (uid) = 6739, parameters (excl. intercept) = 1, events per parameter = 6452.0
+reference levels: {'difficulty': 'short', 'task': 'date_addition', 'insertion': 'no_insertion', 'reasoning_mode': 'off'}
+converged: True
+reliable: True
+issues: none
+warnings: none
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:               disagree   No. Observations:                19471
+Model:                          Logit   Df Residuals:                    19469
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 30 Oct 2026   Pseudo R-squ.:                  0.1962
+Time:                        16:29:23   Log-Likelihood:                -9940.8
+converged:                       True   LL-Null:                       -12367.
+Covariance Type:              cluster   LLR p-value:                     0.000
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -12.9066      0.255    -50.613      0.000     -13.406     -12.407
+RDS           13.9184      0.282     49.391      0.000      13.366      14.471
+==============================================================================
+
+        Logit Marginal Effects       
+=====================================
+Dep. Variable:               disagree
+Method:                          dydx
+At:                           overall
+==============================================================================
+                dy/dx    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+RDS            2.4018      0.033     73.803      0.000       2.338       2.466
+==============================================================================
