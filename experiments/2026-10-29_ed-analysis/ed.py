@@ -58,10 +58,10 @@ def compare(en, hi):
     row = {"question_id": meta["question_id"], **{k: meta[k] for k in KEYS}, "en_correct": correct(en), "hi_correct": correct(hi)}
     for field in FIELDS:
         a, b = en[field]["parsed"], hi[field]["parsed"]
-        distance = edit_distance(a, b) if a is not None and b is not None else None
+        distance = edit_distance(a, b) if a and b else None
         row |= {
             f"{field}_edit_distance": distance,
-            f"{field}_norm_edit_distance": None if distance is None else distance / max(len(a), len(b)) if a or b else 0.0,
+            f"{field}_norm_edit_distance": None if distance is None else distance / max(len(a), len(b)),
             f"{field}_en_len": None if a is None else len(a),
             f"{field}_hi_len": None if b is None else len(b),
             f"{field}_en_seq": None if a is None else json.dumps(a, ensure_ascii=False),
