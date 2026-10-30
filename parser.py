@@ -350,7 +350,7 @@ def parse_sentences(text, distractor=None, question=None):
 
 
 def parse(text, distractor=None, question=None):
-    if text is None:
+    if text is None or not text.strip():
         return None
     return [token for sentence in parse_sentences(text, distractor, question) for token in sentence]
 
@@ -386,10 +386,11 @@ if __name__ == "__main__":
         distractor = find_distractor(record)
         for field in CONFIG["fields"]:
             text = record.get(field)
+            missing = text is None or not text.strip()
             for c in (counts[field]["all"], counts[field][record["meta"]["language"]]):
-                c["null" if text is None else "texts"] += 1
-            if text is None:
-                record[field] = {"original": None, "parsed": None}
+                c["null" if missing else "texts"] += 1
+            if missing:
+                record[field] = {"original": text, "parsed": None}
                 continue
             sentences = parse_sentences(text, distractor, record["request"]["messages"][-1]["content"])
             for c in (counts[field]["all"], counts[field][record["meta"]["language"]]):
