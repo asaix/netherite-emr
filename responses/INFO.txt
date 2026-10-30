@@ -2,3 +2,4 @@ standard: complete 16200/difficulty response set on the standard prompt for all 
 ron: respones from reasoning on mode (10 problems per task lang pair ie 1080/difficulty)
 en-cot: responses from the en-cot prompting method (50 problems per task lang pair), from Shi et al. (2023)
 clp: two-stage cross-lingual prompting responses, hi_IN questions understood and solved in en_US (50 problems per task, 1350/difficulty), from Qin et al. (2023); copied from experiments/2026-10-29_clp/outputs
+hinglish: ask the model to reason in hinglish (50 problems per task lang pair)
