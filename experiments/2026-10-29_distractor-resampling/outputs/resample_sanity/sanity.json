@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "true continuation: 'The capital of France is Par' is not restarted": true,
+    "continuations run to an Answer line and stop normally (at least 4 of 6)": true,
+    "continuations do not restart the reasoning (at most 1 of 6)": true,
+    "no continuation is empty": true
+  },
+  "info": {
+    "continuations that ran to the token limit without an answer (counted as no answer in the main run)": 1,
+    "one at a time: seconds per trace continuation": 6.09,
+    "decoding": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_tokens": 4096,
+      "seed": 0
+    },
+    "fresh answers with <think></think> pre-filled have an Answer line (not used by the experiment)": "2/2"
+  },
+  "mode": "concurrency 16",
+  "log": {
+    "split_word": "u.",
+    "full_continuations": [
+      {
+        "id": "medium/date_addition_hi_IN/41/similar_insertion/cot/A",
+        "answer": "2026-08-03",
+        "original_api_answer": "2026-08-03",
+        "gold": "2026-09-03",
+        "finish_reason": "stop",
+        "completion_tokens": 49,
+        "latency_s": 0.288,
+        "restarted": false,
+        "start": " \n\nइसलिए, 2026-08-26 के 8 दिन बाद 2026-08-03 होगा। \n\nAnswer: 2026-08-03"
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/44/similar_insertion/cot/A",
+        "answer": "2033-06-14",
+        "original_api_answer": "2033-06-27",
+        "gold": "2033-06-14",
+        "finish_reason": "stop",
+        "completion_tokens": 271,
+        "latency_s": 1.451,
+        "restarted": false,
+        "start": " 30 दिन (अप्रैल, जून, सितंबर, नवंबर) या 31 दिन (जनवरी, मार्च, मई, जुलाई, अगस्त, अक्टूबर, दिसंबर) या फरवरी (28 दिन सामान्य वर्ष में, 29 दिन लीप वर्ष में)।\n\nआज 2033-05-20 है। मई में 31 दिन होते हैं, इसल"
+      },
+      {
+        "id": "very_long/date_addition_hi_IN/101/similar_insertion/cot/A",
+        "answer": "2025-03-12",
+        "original_api_answer": "2025-03-09",
+        "gold": "2025-03-12",
+        "finish_reason": "stop",
+        "completion_tokens": 208,
+        "latency_s": 1.122,
+        "restarted": false,
+        "start": "\n\n1. आज की तारीख 2025-02-14 है।\n2. हमें 26 दिन आगे जाना है।\n3. फरवरी 2025 में कुल 28 दिन होते हैं क्योंकि यह लीप साल नहीं है (2025, 4 से विभाजित नहीं होता)।\n4. फरवरी 14 से 28 तक के दिनों की संख्या है:"
+      },
+      {
+        "id": "very_long/date_recurrence_en_US/120/similar_insertion/cot/A",
+        "answer": null,
+        "original_api_answer": "2025-11-05",
+        "gold": "2026-05-06",
+        "finish_reason": "length",
+        "completion_tokens": 4096,
+        "latency_s": 22.398,
+        "restarted": false,
+        "start": " The last time the person had a weekly commitment was in January 2025. Since today is June 10, 2025, and they're asking about the 15th occurrence, I need to determine when the first occurrence was.\n\nI"
+      },
+      {
+        "id": "very_very_long/date_subtraction_en_US/22/similar_insertion/cot/A",
+        "answer": "2030-11-13",
+        "original_api_answer": "2030-11-14",
+        "gold": "2030-11-13",
+        "finish_reason": "stop",
+        "completion_tokens": 1368,
+        "latency_s": 7.658,
+        "restarted": false,
+        "start": " Let me be more precise.\n\nThe difference between November 14 and December 21:\nIf I count November 14 as day 0, then:\nNovember 15 = 1 day\n...\nNovember 30 = 16 days\nDecember 1 = 17 days\n...\nDecember 21 "
+      },
+      {
+        "id": "medium/interval_date_en_US/60/similar_insertion/cot/A",
+        "answer": "2025-04-05 to 2025-04-11",
+        "original_api_answer": "2025-04-06 to 2025-04-12",
+        "gold": "2025-03-31 to 2025-04-06",
+        "finish_reason": "stop",
+        "completion_tokens": 677,
+        "latency_s": 3.599,
+        "restarted": false,
+        "start": " So next week starts on Monday, April 5, 2025.\n\n\"Next week\" would end on Sunday, April 11, 2025 (since Sunday is the last day of the week).\n\nSo the start date of next week is 2025-03-29 and the end da"
+      }
+    ],
+    "fresh_without_prefill": [
+      {
+        "content": "<think>I need to determine the date 8 days after July 24, 2026. Let me solve this step by step.\n\nCurrently, the date is July 24, 2026. I need to add 8 days to this date.\n\nStarting from July 24, 2026:\n- July 24 + 1 day = July 25, 2026\n- July 24 + 2 days = July 26, 2026\n- July 24 + 3 days = July 27, 2",
+        "finish_reason": "stop",
+        "completion_tokens": 1017
+      },
+      {
+        "content": "<think>The user wants me to solve a date calculation problem. I need to count the number of days that passed between 2027-03-24 and 2027-03-30.\n\nLet's break this down step by step:\n- Start date: 2027-03-24\n- End date: 2027-03-30\n- We need to count how many days passed between these two dates.\n\nThe q",
+        "finish_reason": "stop",
+        "completion_tokens": 1216
+      }
+    ],
+    "fresh_with_empty_think": [
+      {
+        "content": "\nअगस्त मेरा पसंदीदा महीना है। आज 2026-07-24 है, 8 दिनों में तिथि क्या होगी?\n\nआज की तिथि 2026-07-24 है। 8 दिन बाद की तिथि जानने के लिए, हमें जुलाई के दिनों को गिनना होगा।\n\n1. जुलाई में कुल 31 दिन होते हैं।\n2. आज का दिन 24 तारीख है।\n3. 8 दिन बाद की तिथि होगी: 24 + 8 = 32।\n4. लेकिन जुलाई में केवल 31 दिन होते हैं, इसलिए 32 तारीख संभव नहीं है।\n5. इसलिए, हम अगले महीने (अगस्त) की तिथि देखेंगे।\n6. जुलाई की 31 तारीख के बाद 1 तारीख अगस्त आती है।\n7. इसलिए, 24 जुलाई + 8 दिन = 1 अगस्त 2026।\n\nअतः, 8 दिनों में तिथि 2026-08-01 होगी।\n\nAnswer: 2026-08-01",
+        "finish_reason": "stop"
+      },
+      {
+        "content": "\nTo solve this, I will calculate the number of days between the two given dates. The question asks for the number of days that have passed between March 24, 2027, and March 30, 2027.\n\n1.  **Identify the start and end dates:**\n    *   Start date: 2027-03-24\n    *   End date: 2027-03-30\n\n2.  **Determine if the dates are in the same month and year:**\n    *   Yes, both dates are in March 2027. This simplifies the calculation.\n\n3.  **Calculate the difference in days:**\n    *   I need to count the number of days from the start date to the end date. The phrasing \"how many day(s) have passed between\" ",
+        "finish_reason": "stop"
+      }
+    ]
+  }
+}

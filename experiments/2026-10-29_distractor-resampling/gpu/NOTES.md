@@ -1,0 +1,9 @@
+## Session 7 (distractor resampling rounds)
+- Pre-boot: SYNTAX_OK, 1,952 unique requests, TEMPLATE CHECK: PASS (/tmp/tc venv). Mock end-to-end test of rounds.py + continue.py + analyze_resample.py + status.py passed locally. Credits 2,800.38 -> budget H = 4.0 h (about INR 2,644).
+- Resumed VM 550501 on 2xH100 (IN2) at 2026-10-29T13:41:56Z -> new machine id 553367, ip 217.18.55.54. previous_hours 4.28. Deadline = resume + 4.0 h = 17:41:56Z.
+- First boot of 553367 (13:41:56Z) never opened SSH port 22 (VM answered ping; jl exec/ssh timed out). Paused 14:03:07Z (0.35 h, about INR 234 lost), resumed 14:03:33Z -> machine id 553385, same ip 217.18.55.54; SSH opened 14:09:06Z.
+- Finding: jl on the VM has no API key ("No API key found"), so the on-VM deadline guard cannot pause (also true in session 6). Guard NOT started; Mac-side monitor.py is the working safety net (--max-hours 3.7 from 14:03:12Z = 17:45Z). Budget from credits 2,556.46: (2556.46-150)/661 = 3.6 h; STOP_AT 17:40:00Z.
+- Server up in 215 s (redhat_v031_triton_mla, no smoke). Uploads MD5-matched. Sanity PASS 14:15-14:16Z (5/6 reach Answer, 1 runaway). Rounds started 14:16:23Z.
+- Rounds 1-7 complete (1,952 results each, unique ids, seeds 1-7): 25.2, 23.8, 26.2, 25.0, 25.3, 24.3, 25.1 min. Runaways without Answer line per round: 176, 168, 211, 183, 189, 179, 184. Driver: ROUNDS DONE: 7 rounds (round 8 would need ~28 min, 14 min left), EXIT=0.
+- Shutdown: vllm stopped with SIGTERM (GPUs 0 MiB) before the final serve.log copy; all results and logs downloaded and MD5-verified against the VM; VM 553385 paused 17:14:45-17:15:09Z (not destroyed). Credits 2,800.38 -> 431.89 (about INR 2,369 incl. the lost first boot).
+- Hours: 553367 13:41:56-14:03:07Z = 0.353 h (SSH never opened, about INR 234 lost); 553385 14:03:12-17:15:09Z = 3.199 h. Session 7 total 3.55 h. Sessions 1-7 about 7.83 h.
