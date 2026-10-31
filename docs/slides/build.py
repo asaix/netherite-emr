@@ -8,7 +8,7 @@ PDF = HERE / "ANLP Final Slides.pdf"
 TEAM = "ANLP Final | Team Netherite"
 
 def sv(title, svg, ref, note=None):
-    d = dict(title=title, svg=svg, ref=f"Report: {ref}")
+    d = dict(title=title, svg=svg, ref=ref if ref.startswith("Error") else f"Report: {ref}")
     if note:
         d["note"] = note
     return d
@@ -77,6 +77,11 @@ SECTIONS = {
         sv("Errors: Hindi CoT examples", "examples_hindi", "Chain-of-Thought; Appendix A"),
         sv("Errors: en-CoT keeps the errors from reading Hindi", "recurrence_k", "en-CoT Set; Appendix C"),
         sv("Errors: Other examples", "examples_shared", "Appendix A"),
+        sv("Errors: Next-week answers go wrong differently by condition", "week_errors", "Chain-of-Thought; error trends PDF"),
+        sv("Errors: Time answers get the minutes right and the hours wrong", "time_errors", "Direct Answers; error trends PDF"),
+        sv("Errors: Crossing a boundary raises the error rate", "boundary_errors", "Chain-of-Thought; error trends PDF"),
+        sv("Errors: English CoT's cut-offs average 42 re-checking steps", "loop_errors", "Chain-of-Thought; error trends PDF"),
+        sv("Errors: Distractors can steer the answer or the reasoning", "steer_errors", "Error trends PDF"),
         sv("RQ5: More divergent traces go with disagreement", "lr_result", "English and Hindi Traces Compared", "Chart is unadjusted; bins under 20 pairs hidden. In-sample association. 88% of pairs above RDS 0.7."),
         sv("RQ5: Removing answer tokens takes the OR from 4.92 to 1.68", "lr_views", "English and Hindi Traces Compared"),
         sv("RQ5: By outcome and task", "lr_outcomes", "English and Hindi Traces Compared"),
@@ -100,8 +105,9 @@ CSS = """
 html, body { margin: 0; padding: 0; background: #fff; color: #222; font-family: 'Liberation Sans', Arial, 'Noto Sans Devanagari', sans-serif; }
 .s { width: 1280px; height: 720px; padding: 28px 44px 0; position: relative; page-break-after: always; overflow: hidden; }
 h1 { margin: 0; height: 58px; font-size: 32px; letter-spacing: -0.3px; }
-.body { width: 1192px; height: 582px; display: flex; flex-direction: column; justify-content: center; }
-.body img { display: block; width: 100%; max-height: 500px; object-fit: contain; }
+.body { width: 1192px; padding-top: 6px; }
+.body img { display: block; width: 100%; max-height: 580px; object-fit: contain; object-position: left top; }
+.body.noted img { max-height: 515px; }
 .note { margin-top: 14px; font-size: 18px; color: #595959; line-height: 1.32; }
 .foot { position: absolute; left: 44px; right: 44px; bottom: 18px; display: grid; grid-template-columns: 1fr 1.4fr 1fr; font-size: 13px; color: #595959; border-top: 1px solid #E3E3E3; padding-top: 8px; }
 .foot div:nth-child(2) { text-align: center; color: #8C8C8C; }
@@ -139,7 +145,8 @@ def page(i, s):
         body = "<table>" + "".join(f'<tr><td class="k" style="color:#0072B2">{a}</td><td>{escape(b)}</td><td class="n">{escape(c)}</td></tr>' for a, b, c in s["answers"]) + "</table>"
     if "table" in s:
         body = "<table>" + "".join(f'<tr><td class="k">{a}</td><td>{escape(b)}</td></tr>' for a, b in s["table"]) + "</table>"
-    return f'<section class="s"><h1>{escape(s["title"])}</h1><div class="body">{body}</div>{foot(i, s)}</section>'
+    cls = "body noted" if "note" in s else "body"
+    return f'<section class="s"><h1>{escape(s["title"])}</h1><div class="{cls}">{body}</div>{foot(i, s)}</section>'
 
 
 html = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ANLP Final Slides</title><style>{CSS}</style></head><body>' + "".join(page(i, s) for i, s in enumerate(SLIDES, 1)) + "</body></html>"

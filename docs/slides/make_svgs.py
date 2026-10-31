@@ -62,13 +62,19 @@ def axis(x0, x1, y, lo, hi, ticks, top=None, fmt="{}", size=15):
     return "".join(out), sx
 
 
+def spread(cols, to=1110):
+    k = to / max(cx for _, cx, _ in cols)
+    return [(n, cx * k, a) for n, cx, a in cols]
+
+
 def tbl(x, y, cols, data, size=17, rowh=30, fill=None, boldrows=()):
     out = []
+    rule = any(name for name, _, _ in cols)
     for name, cx, anc in cols:
         out.append(t(x + cx, y + size, name, size, "bold", anc, MUTED))
     width = max(cx for _, cx, _ in cols) + 8
     y += size + 10
-    out.append(l(x, y, x + width, y, MUTED))
+    out.append(l(x, y, x + width, y, MUTED) if rule else "")
     for i, row in enumerate(data):
         if row is None:
             y += rowh * 0.3
@@ -76,7 +82,7 @@ def tbl(x, y, cols, data, size=17, rowh=30, fill=None, boldrows=()):
             continue
         for j, (cell, (name, cx, anc)) in enumerate(zip(row, cols)):
             if fill and j and fill(i, j, cell):
-                w0 = cols[j + 1][1] - cx if j + 1 < len(cols) else cx - cols[j - 1][1]
+                w0 = min(cx - cols[j - 1][1] if j > 1 else cols[j + 1][1] - cx, 110)
                 out.append(r(x + cx - w0 + 6, y + 2, w0 - 2, rowh - 3, fill(i, j, cell), rx=2))
             for k, part in enumerate(str(cell).split("\n")):
                 out.append(t(x + cx, y + rowh * 0.68 + k * size * 1.2, part, size, "bold" if i in boldrows else "normal", anc))
@@ -496,7 +502,7 @@ def hinglish():
             a, z = float(row["std"]), float(row["hing"])
             y = 46 + i * h
             b.append(l(sx(a), y, sx(z), y, col, 3) + c(sx(a), y, 6.5, col) + c(sx(z), y, 6.5, HING))
-            b.append(t(x1 + 12, y + 5, f"{a:.1f} → {z:.1f}", 14))
+            b.append(t(x1 + 12, y + 5, f"{a + 1e-9:.1f} → {z + 1e-9:.1f}", 14))
         a, z = (88.9, 70.9) if lang == "en_US" else (59.4, 59.4)
         y = 46 + 9 * h
         b.append(l(x0, y - h / 2, x1, y - h / 2, GRID, 1) + l(sx(a), y, sx(z), y, col, 3) + c(sx(a), y, 7.5, col) + c(sx(z), y, 7.5, HING) + t(x1 + 12, y + 5, f"{a} → {z}", 14, "bold"))
@@ -811,7 +817,7 @@ def clp_prompts():
 
 def sets():
     data = [["Standard", "Direct, CoT", "both", "6,750", "81,000", "off", "4,096"], ["Thinking-on", "Direct, CoT", "both", "450", "5,400", "low", "16,000"], ["en-CoT", "English CoT", "Hindi", "2,250", "6,750", "off", "4,096"], ["CLP", "two turns", "Hindi", "2,250", "6,750", "off", "4,096 each"], ["Hinglish", "mixed CoT", "both", "2,250", "13,500", "off", "4,096"], ["Interventions", "continuations", "both", "", "13,664", "off", ""]]
-    a = tbl(0, 0, [("Set", 0, "start"), ("Prompt", 190, "start"), ("Q. language", 370, "start"), ("Questions", 590, "end"), ("Responses", 730, "end"), ("Thinking", 860, "end"), ("Max tokens", 1020, "end")], data, 18, 36)
+    a = tbl(0, 0, spread([("Set", 0, "start"), ("Prompt", 190, "start"), ("Q. language", 370, "start"), ("Questions", 590, "end"), ("Responses", 730, "end"), ("Thinking", 860, "end"), ("Max tokens", 1020, "end")]), data, 18, 36)
     data2 = [["Model", "sarvam-105b"], ["Temperature, top_p", "0.0, 1.0 (resampling 0.8)"], ["Retries", "6, on 429, 500, 502, 503, 504"], ["Concurrency, timeout", "6, 180 s"]]
     save("sets", 1120, 420, a, tbl(0, 268, [("Setting", 0, "start"), ("", 270, "start")], data2, 18, 30))
 
@@ -822,14 +828,14 @@ def one_question():
     b.append(t(0, 50, "Hindi", 16.5, "bold") + t(84, 50, "आज 2027-05-16 है, और मेरे पास हर 13 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 7वीं आवृत्ति की तिथि क्या है?", 16))
     b.append(t(0, 80, "Distractor", 16.5, "bold") + t(84, 80, "The last time I had a weekly commitment was in January. / आखिरी साप्ताहिक प्रतिबद्धता जनवरी में थी।", 15.5))
     b.append(t(0, 110, "Gold", 16.5, "bold") + t(84, 110, "2027-08-15", 16.5) + t(250, 110, "Long, date recurrence, ID 12. 2027-08-02 adds six intervals, not seven.", 15.5, fill=MUTED))
-    b.append(tbl(0, 124, [("Condition", 0, "start"), ("Reasons in", 280, "start"), ("No distractor", 520, "start"), ("Time-related", 760, "start")], data, 17, 31))
+    b.append(tbl(0, 124, spread([("Condition", 0, "start"), ("Reasons in", 280, "start"), ("No distractor", 520, "start"), ("Time-related", 760, "start")], 980), data, 17, 31))
     save("one_question", 1120, 400, *b)
 
 
 def parser_flow():
     steps = [("Clean", "Hindi digits to 0-9; dash and colon variants unified"), ("Split", "lines, then . ! ? ।; list markers removed"), ("Extract values", "dates, times, weekdays, months, numbers"), ("Written math", "26 + 3 becomes ADD 26 3"), ("Trigger phrases", "per-op cues in config/parser.yaml"), ("Arguments", "fill op args in order")]
     b = []
-    w, gap = 170, 20
+    w, gap = 168, 20
     for i, (a, s) in enumerate(steps):
         x = i * (w + gap)
         b.append(r(x, 0, w, 124, PALE, "#CFCFCF") + t(x + w / 2, 30, a, 16.5, "bold", "middle") + para(x + 10, 58, s, 14, 20, 19))
@@ -851,7 +857,7 @@ def ops():
     save("ops", 1120, 412, a, z)
 
 
-ACC = {"Date addition": [85.6, 98.0, 82.8, 85.1, 92.7, 95.7, 87.3, 85.9], "Date subtraction": [86.0, 95.2, 84.8, 66.0, 86.9, 94.0, 70.7, 71.0], "Date duration": [84.0, 99.3, 78.9, 88.2, 92.7, 97.7, 92.9, 82.8], "Date recurrence": [22.1, 90.3, 2.8, 20.1, 26.9, 70.3, 53.8, 18.9], "Day of week": [14.9, 69.5, 15.2, 21.0, 31.8, 52.5, 34.7, 23.5], "Interval date": [43.2, 50.7, 46.8, 23.9, 35.3, 44.1, 38.5, 23.6], "Time addition": [70.5, 95.9, 75.6, 73.5, 88.2, 92.6, 82.9, 72.3], "Time subtraction": [64.7, 97.7, 64.9, 75.2, 90.1, 95.7, 85.2, 74.2], "Time duration": [65.7, 98.9, 44.7, 80.1, 86.7, 98.1, 90.0, 80.9], None: None, "Short": [77.8, 93.2, 73.9, 69.5, 77.2, 83.0, 82.9, 66.5], "Medium": [69.6, 91.6, 65.3, 65.4, 75.7, 84.9, 78.8, 67.4], "Long": [61.2, 89.3, 57.9, 60.4, 71.3, 84.4, 70.4, 60.9], "Very long": [54.3, 87.2, 48.4, 53.7, 65.8, 83.5, 64.0, 53.7], "Very very long": [35.5, 82.9, 30.3, 47.9, 61.5, 78.5, 58.2, 48.3], 0: None, "No distractor": [60.6, 89.3, 56.0, 60.2, 69.3, 84.1, 70.6, 61.0], "Time-related": [59.9, 88.2, 54.9, 58.9, 69.3, 81.0, 69.7, 59.1], "Unrelated": [58.6, 89.2, 54.6, 59.1, 72.3, 83.6, 72.3, 58.0], 1: None, "All, answered": [59.7, 88.9, 55.2, 59.4, 70.3, 82.9, 70.9, 59.4], "All, strict": [59.6, 86.0, 55.2, 59.0, 69.9, 80.8, 70.3, 59.1]}
+ACC = {"Date addition": [85.6, 98.0, 82.8, 85.1, 92.7, 95.7, 87.3, 85.9], "Date subtraction": [86.0, 95.2, 84.8, 66.0, 86.9, 94.0, 70.7, 71.0], "Date duration": [84.0, 99.3, 78.9, 88.2, 92.7, 97.7, 92.9, 82.8], "Date recurrence": [22.1, 90.3, 2.8, 20.1, 26.9, 70.3, 53.8, 18.9], "Day of week": [14.9, 69.5, 15.2, 21.0, 31.8, 52.5, 34.7, 23.5], "Interval date": [43.2, 50.7, 46.8, 23.9, 35.3, 44.1, 38.5, 23.6], "Time addition": [70.5, 95.9, 75.6, 73.5, 88.2, 92.6, 82.9, 72.3], "Time subtraction": [64.7, 97.7, 64.9, 75.2, 90.1, 95.7, 85.3, 74.2], "Time duration": [65.7, 98.9, 44.7, 80.1, 86.7, 98.1, 90.0, 80.9], None: None, "Short": [77.8, 93.2, 73.9, 69.5, 77.2, 83.0, 82.9, 66.5], "Medium": [69.6, 91.6, 65.3, 65.4, 75.7, 84.9, 78.8, 67.4], "Long": [61.2, 89.3, 57.9, 60.4, 71.3, 84.4, 70.4, 60.9], "Very long": [54.3, 87.2, 48.4, 53.7, 65.8, 83.5, 64.0, 53.7], "Very very long": [35.5, 82.9, 30.3, 47.9, 61.5, 78.5, 58.2, 48.3], 0: None, "No distractor": [60.6, 89.3, 56.0, 60.2, 69.3, 84.1, 70.6, 61.0], "Time-related": [59.9, 88.2, 54.9, 58.9, 69.3, 81.0, 69.7, 59.1], "Unrelated": [58.6, 89.2, 54.6, 59.1, 72.3, 83.6, 72.3, 58.0], 1: None, "All, answered": [59.7, 88.9, 55.2, 59.4, 70.3, 82.9, 70.9, 59.4], "All, strict": [59.6, 86.0, 55.2, 59.0, 69.9, 80.8, 70.3, 59.1]}
 
 
 def accuracy():
@@ -880,7 +886,7 @@ def gain_tasks():
     def fill(i, j, cell):
         v = float(cell.replace("−", "-"))
         return blend("#FFFFFF", "#5DA5D1", min(v, 60) / 60) if v >= 0 else blend("#FFFFFF", "#E08A50", min(-v, 30) / 30)
-    b = [t(170, 18, "English", 18, "bold"), t(640, 18, "Hindi", 18, "bold"), tbl(0, 28, cols, data, 17, 40, fill)]
+    b = [t(200, 18, "English", 18, "bold"), t(745, 18, "Hindi", 18, "bold"), tbl(0, 28, spread(cols), data, 17, 40, fill)]
     save("gain_tasks", 1120, 440, *b)
 
 
@@ -1048,7 +1054,7 @@ def lr_outcomes():
         x = next(q for q in t17 if q["by"] == "task" and q["level"] == k and q["view"] == "full")
         vals.insert(1, f"{100 * float(x['rate']):.1f}%")
         rowsd.append(vals)
-    z = tbl(0, 176, [("By task", 0, "start"), ("Disagree", 340, "end"), ("OR/0.1 all", 520, "end"), ("No answers", 700, "end"), ("Op types", 860, "end")], rowsd, 15.5, 25)
+    z = tbl(0, 176, spread([("By task", 0, "start"), ("Disagree", 340, "end"), ("OR/0.1 all", 520, "end"), ("No answers", 700, "end"), ("Op types", 860, "end")], 1100), rowsd, 15.5, 25)
     save("lr_outcomes", 1120, 440, a, z)
 
 
@@ -1092,7 +1098,7 @@ def clp_results():
         else:
             key = {"No distractor": "no_insertion", "Time-related": "similar_insertion", "Unrelated": "dissimilar_insertion", "All, answered": "all", "All, strict": "all strict"}.get(k) or next(a for a, b_ in TASK.items() if b_ == k)
             data.append([k, f"{v[2]:.1f}", f"{v[3]:.1f}", f"{v[4]:.1f}", f"{v[5]:.1f}", pm(diffs[key]["clp-cot"]), pm(diffs[key]["clp-en"])])
-    a = tbl(0, 0, [("2,250 Hindi questions", 0, "start"), ("Direct", 300, "end"), ("Hindi CoT", 420, "end"), ("CLP", 520, "end"), ("en-CoT", 630, "end"), ("CLP − CoT", 770, "end"), ("CLP − en-CoT", 920, "end")], data, 15.5, 24.5)
+    a = tbl(0, 0, spread([("2,250 Hindi questions", 0, "start"), ("Direct", 300, "end"), ("Hindi CoT", 420, "end"), ("CLP", 520, "end"), ("en-CoT", 630, "end"), ("CLP − CoT", 770, "end"), ("CLP − en-CoT", 920, "end")]), data, 15.5, 24.5)
     b = t(0, 456, "CLP − Hindi direct: +15.1 [13.5, 16.7]. en-CoT − CLP: +12.6 [11.4, 13.9]. Qin et al. on MGSM: CLP 70.6, En-CoT 57.8.", 16.5)
     save("clp_results", 1120, 466, a, b)
 
@@ -1166,12 +1172,109 @@ def one_trace():
     b.append(t(14, 104, "s2 The question asks what the date will be 8 days from today.   s3 (k) The question also says that August is my favourite month.", 15))
     b.append(t(14, 130, "Later: \"One day past 31 July is 1 August, and the remaining 7 days give 8 August.\" Answer 2026-08-08.", 15.5))
     data = [["A as written", "with", "s0 to s3", "1 of 1"], ["B mention deleted", "with", "s0 to s2", "1 of 1"], ["C neutral deleted", "with", "s1 to s3", "1 of 1"], None, ["P before the mention", "with", "s0 to s2", "6 of 7"], ["Q distractor removed", "without", "s0 to s2", "7 of 7"], ["M after the mention", "with", "s0 to s3", "7 of 7"], ["P1 a sentence earlier", "with", "s0 to s1", "6 of 7"]]
-    b.append(tbl(0, 158, [("Variant", 0, "start"), ("Distractor", 420, "start"), ("Prefix", 620, "start"), ("Correct", 880, "end")], data, 17, 29))
+    b.append(tbl(0, 158, spread([("Variant", 0, "start"), ("Distractor", 420, "start"), ("Prefix", 620, "start"), ("Correct", 880, "end")]), data, 17, 29))
     save("one_trace", 1120, 420, *b)
+
+
+def week_errors():
+    v = json.loads((HERE / "verify" / "recomputed_errors.json").read_text())
+    parts = [("this", "This week", "#56B4E9"), ("one", "One day off", EN), ("satfri", "Saturday to Friday", CLP), ("not7", "Not 7 days", HI), ("other", "Other", "#CFCFCF")]
+    b = []
+    x = 210
+    for _, name, col in parts:
+        b.append(r(x, 2, 16, 14, col, rx=2) + t(x + 22, 15, name, 15))
+        x += 40 + len(name) * 8.2
+    b.append(t(0, 15, "% of two-date answers", 15, "bold", fill=MUTED))
+    sc = 9.0
+    for i, cond in enumerate(["English direct", "English CoT", "Hindi direct", "Hindi CoT", "en-CoT"]):
+        k = v[cond]
+        y = 30 + i * 38
+        wrong = 100 * k["week|wrong"] / k["week|n"]
+        b.append(t(0, y + 21, f"{cond}, {wrong:.0f}% wrong", 15.5))
+        x = 210
+        rest = 100.0
+        for key, _, col in parts:
+            share = 100 * k.get(f"week|{key}", 0) / k["week|given"] if key != "other" else rest
+            rest -= share if key != "other" else 0
+            b.append(r(x, y, share * sc - 2, 30, col, rx=2))
+            if share >= 6:
+                b.append(t(x + share * sc / 2, y + 21, f"{share:.0f}", 14.5, "bold", "middle", WHITE if col in (EN, HI) else INK))
+            x += share * sc
+    y = 232
+    b.append(card(0, y, 550, 170, "Skips a month end (en-CoT, today 2027-05-27)", [("Trace", "This week ends on Sunday, 2027-05-30. ... Next week starts on Monday, 2027-06-01."), ("Answer", "2027-06-01 to 06-07, gold 05-31 to 06-06")]))
+    b.append(card(570, y, 550, 170, "Gives this week (English direct, today 2026-09-13)", [("Why", "13 September 2026 is a Sunday, so the answer is the week ending today."), ("Answer", "2026-09-07 to 09-13, gold 09-14 to 09-20")]))
+    save("week_errors", 1120, y + 174, *b)
+
+
+def time_errors():
+    rowsd = [("English direct", 34, 65, 3), ("English CoT", 3, 51, 15), ("Hindi direct", 38, 57, 3), ("Hindi CoT", 24, 41, 4), ("en-CoT", 5, 57, 9)]
+    b = [t(0, 16, "Time tasks", 16, "bold", fill=MUTED), t(150, 16, "Wrong", 16, "bold", fill=MUTED), t(440, 16, "Off by whole hours", 16, "bold", fill=MUTED), t(800, 16, "Off by exactly 12 hours", 16, "bold", fill=MUTED)]
+    col = {"English direct": "#56B4E9", "English CoT": EN, "Hindi direct": DIRECT, "Hindi CoT": HI, "en-CoT": ENCOT}
+    for i, (name, w, h, tw) in enumerate(rowsd):
+        y = 30 + i * 38
+        b.append(t(0, y + 20, name, 16) + r(150, y, w * 5.4, 28, col[name], rx=3) + t(156 + w * 5.4, y + 20, f"{w}%", 15, "bold"))
+        b.append(r(440, y, h * 4.2, 28, col[name], rx=3) + t(446 + h * 4.2, y + 20, f"{h}%", 15, "bold"))
+        b.append(r(800, y, tw * 12, 28, col[name], rx=3) + t(806 + tw * 12, y + 20, f"{tw}%", 15, "bold"))
+    y = 232
+    b.append(card(0, y, 550, 170, "12-hour clock (English CoT): 07:22, 15 h 31 min ago", [("Trace", "6 - 15 = -9 hours. Since I have -9 hours, I need to go back 12 hours to get into the previous day: -9 + 12 = 3 hours."), ("Answer", "03:51, gold 15:51")]))
+    b.append(card(570, y, 550, 170, '"0 hours" misread (en-CoT): 12:11, 0 h 4 min ago', [("Trace", "I need to find what time it was 4 hours and 4 minutes before 12:11."), ("Answer", "08:07, gold 12:07")]))
+    save("time_errors", 1120, y + 174, *b)
+
+
+def boundary_errors():
+    v = json.loads((HERE / "verify" / "recomputed_errors.json").read_text())
+    conds = ["English direct", "English CoT", "Hindi direct", "Hindi CoT", "en-CoT"]
+    col = {"English direct": "#56B4E9", "English CoT": EN, "Hindi direct": DIRECT, "Hindi CoT": HI, "en-CoT": ENCOT}
+    b = []
+    for j, (key, title) in enumerate([("feb29", "29 February in the span"), ("month", "Crosses a month end"), ("mid", "Crosses midnight")]):
+        x0 = 150 + j * 325
+        ax, sx = axis(x0, x0 + 270, 216, 0, 100, [0, 50, 100], 26, "{}%")
+        b.append(t(x0, 16, title, 17, "bold") + ax)
+        for i, cond in enumerate(conds):
+            k = v[cond]
+            a = 100 * k[f"{key}|without|wrong"] / k[f"{key}|without|n"]
+            z = 100 * k[f"{key}|with|wrong"] / k[f"{key}|with|n"]
+            y = 44 + i * 36
+            b.append(l(sx(a), y, sx(z), y, col[cond], 3) + c(sx(a), y, 6.5, WHITE, col[cond], 2.5) + c(sx(z), y, 7, col[cond]) + t(sx(z) + 11, y + 5, f"{z:.0f}", 13.5, "bold"))
+    for i, cond in enumerate(conds):
+        b.append(t(0, 49 + i * 36, cond, 16))
+    b.append(c(156, 258, 6.5, WHITE, MUTED, 2.5) + t(170, 264, "Without", 15, fill=MUTED) + c(250, 258, 7, MUTED) + t(264, 264, "With. % wrong, all levels; date tasks, then time tasks", 15, fill=MUTED))
+    y = 282
+    b.append(card(0, y, 550, 124, "Knows the leap year, skips the day anyway (Hindi CoT)", [("Trace", "6 दिन बाद: 6 मार्च 2028 ... चूंकि 2028 एक लीप वर्ष है"), ("Answer", "2028-03-06, gold 2028-03-05")]))
+    b.append(card(570, y, 550, 124, "Check repeats the mistake (English CoT)", [("Trace", "From 2028-02-27 to 2028-03-05: 28 - 27 = 1 day in February"), ("Answer", "2028-03-11, gold 2028-03-10")]))
+    save("boundary_errors", 1120, y + 128, *b)
+
+
+def loop_errors():
+    b = [t(0, 18, "Wrong answers that are cut-offs", 17, "bold")]
+    for i, (name, v, col) in enumerate([("Hindi CoT", 2, HI), ("en-CoT", 13, ENCOT), ("English CoT", 22, EN), ("Thinking, Hindi CoT", 81, "#E9A97F"), ("Thinking, English CoT", 85, "#7FB6D6")]):
+        y = 32 + i * 34
+        b.append(t(0, y + 19, name, 15.5) + r(170, y, v * 2.8, 26, col, rx=3) + t(176 + v * 2.8, y + 19, f"{v}%", 15, "bold"))
+    b.append(t(0, 226, "English CoT's 651 cut-offs", 17, "bold"))
+    x = 0
+    for name, n, col in [("Day of week", 358, EN), ("Recurrence", 156, "#56B4E9"), ("Next week", 89, ENCOT), ("Other", 48, "#CFCFCF")]:
+        w = n / 651 * 450
+        b.append(r(x, 240, w - 2, 34, col, rx=3) + t(x + 6, 262, str(n), 14.5, "bold", fill=WHITE if col in (EN, ENCOT) else INK))
+        x += w
+    b.append(t(0, 296, "Day of week, recurrence, next week, other", 14.5, fill=MUTED))
+    data = [["Day of week", "23.0", "13.4"], ["Date recurrence", "19.3", "5.0"], ["Time addition", "13.1", "3.5"], ["Date duration", "12.6", "2.8"], ["Time duration", "12.4", "2.0"], ["Time subtraction", "11.7", "3.3"], ["Interval date", "11.2", "7.7"], ["Date subtraction", "6.0", "2.5"], ["Date addition", "2.4", "1.1"]]
+    b.append(tbl(540, 0, [("CHECK + REVISE steps, English CoT", 0, "start"), ("Wrong", 450, "end"), ("Right", 570, "end")], data, 16, 28))
+    b.append(t(540, 306, "Wrong traces with 20 or more: 869 of 2,903", 15.5, fill=MUTED))
+    b.append(r(0, 318, 1120, 96, PALE) + t(14, 344, "English CoT, day of week of 2025-08-21, gold Thursday, no answer", 16.5, "bold"))
+    b.append(t(14, 372, "Day 233: (233-1) mod 7 = 1. Wednesday + 1 = Thursday. But month-by-month gave Friday.", 16, style="italic") + t(14, 396, "There's a 1-day discrepancy. Let me recheck July 31 ...", 16, style="italic"))
+    save("loop_errors", 1120, 420, *b)
+
+
+def steer_errors():
+    b = [card(0, 0, 550, 194, "Answer lands on the month end (English direct)", [("Question", "I always get confused with months that have 31 days. Today is 2026-12-24, what is the date going to be in 8 days?"), ("Answer", "2026-12-31, gold 2027-01-01")])]
+    b.append(card(570, 0, 550, 194, "Pulled into the named month (Hindi direct)", [("Question", "अगस्त मेरा पसंदीदा महीना है। आज 2025-07-29 है, 1 दिनों में तिथि क्या होगी?"), ("English", "August is my favourite month. Today is 2025-07-29. What is the date in 1 day?"), ("Answer", "2025-08-01, gold 2025-07-30")]))
+    b.append(card(0, 206, 550, 194, "Changes a fact (Hindi CoT, 2026-09-02, 12 days ago)", [("Trace", "31 दिनों वाले महीने अप्रैल, जून, सितंबर और नवंबर होते हैं।"), ("English", "The months with 31 days are April, June, September and November."), ("Answer", "2026-08-31, gold 2026-08-21")]))
+    b.append(card(570, 206, 550, 194, "Argues until the token limit (English CoT)", [("Question", "My watch always runs a bit slow. It is now 13:44, what was the time 59 hours and 37 minutes ago?"), ("Trace", "Could 'it is now 13:44' refer to the watch?"), ("Answer", "none, gold 02:07")]))
+    save("steer_errors", 1120, 404, *b)
 
 
 OUT.mkdir(exist_ok=True)
 for old in OUT.glob("*.svg"):
     old.unlink()
-for fn in [project, metric_accuracy, metric_diffs, metric_trace, metric_rds, metric_rq6, metric_tests, prior_work, dataset, tasks, distractors, conditions, prompts, clp_prompts, sets, pipeline, one_question, parser_flow, ops, rds_example, lr_setup, rq6_design, accuracy, direct_results, cot_gain, gain_tasks, delta_heat, hindi_tasks, by_level, distractor_penalty, penalties, january, sentences, mentions, traces_standard, error_share, error_patterns, examples_hindi, examples_shared, lr_result, lr_views, lr_outcomes, thinking, thinking_format, decomposition, breakdown, distance, recurrence_k, clp_results, clp_stages, hinglish, hinglish_detail, deletion, resampling, arms, one_trace, findings, future]:
+for fn in [project, metric_accuracy, metric_diffs, metric_trace, metric_rds, metric_rq6, metric_tests, prior_work, dataset, tasks, distractors, conditions, prompts, clp_prompts, sets, pipeline, one_question, parser_flow, ops, rds_example, lr_setup, rq6_design, accuracy, direct_results, cot_gain, gain_tasks, delta_heat, hindi_tasks, by_level, distractor_penalty, penalties, january, sentences, mentions, traces_standard, error_share, error_patterns, examples_hindi, examples_shared, week_errors, time_errors, boundary_errors, loop_errors, steer_errors, lr_result, lr_views, lr_outcomes, thinking, thinking_format, decomposition, breakdown, distance, recurrence_k, clp_results, clp_stages, hinglish, hinglish_detail, deletion, resampling, arms, one_trace, findings, future]:
     fn()

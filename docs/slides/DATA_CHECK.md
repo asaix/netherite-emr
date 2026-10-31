@@ -26,6 +26,18 @@ Checked against raw `responses/`, the audit tables and the report as it stood at
 - **English date subtraction across a month under Hinglish** is 42.3 on 362 pairs and 42.15 on all 363. The slides use the paired 42.3, as the report does.
 - **January cut-offs.** 92 traces have finish reason `length`. 91 of them have no answer line, so one cut-off trace still has one.
 
+## Open in `docs/error-trends.pdf`
+
+Slides 54 to 58 use this PDF, recomputed with `verify/recompute_errors.py`.
+
+- **Day-of-week direct wrong answers:** the PDF says 3,869. The data gives 3,839 of 4,500.
+- **The 5,170-word trace:** the PDF says 630 steps. The parsed trace has 636.
+- **Hindi CoT answering 00:00:** the PDF says 19 times with a similar distractor and 5 with none. `audit/error_trends/verified.json` has 2 and 2. Not used.
+- **130 wrong time answers discussing the distractor (105 Hindi CoT):** not found in the verify scripts. Not used.
+- **Next-week categories:** the slide uses mutually exclusive ones, so shares differ from the PDF. Saturday to Friday is 34% against 25% for English direct. One day off is 18% against 23% for Hindi CoT. "This week" is 22% for English direct, matching the report; the PDF has 23%. Not 7 days matches.
+- **Hindi direct dates off by 10, 20 or 30 days:** 380 of 1,246 is 30%. The PDF prints 31%.
+- **Small scorer differences:** month-end and midnight counts differ by up to 7 between my scorer and the PDF. The slide's boundary chart uses mine. Whole-hour time shares use the PDF, which matches the report.
+
 ## Reproduced from raw responses
 
 `verify/recompute.py` uses its own answer scorer and matches the report at the printed precision:
