@@ -1,0 +1,38 @@
+{
+  "selfhost_G": {
+    "continuations": 702,
+    "unanswered": 102,
+    "cut_off": 102,
+    "cut_off_exact_loop": 80,
+    "A_repeat_flips": {
+      "hi_IN": {
+        "traces": 222,
+        "right_then_wrong": 22,
+        "wrong_then_right": 16
+      },
+      "en_US": {
+        "traces": 12,
+        "right_then_wrong": 1,
+        "wrong_then_right": 0
+      }
+    }
+  },
+  "selfhost_S": {
+    "continuations": 702,
+    "unanswered": 40,
+    "cut_off": 40,
+    "cut_off_exact_loop": 34,
+    "A_repeat_flips": {
+      "hi_IN": {
+        "traces": 222,
+        "right_then_wrong": 23,
+        "wrong_then_right": 30
+      },
+      "en_US": {
+        "traces": 12,
+        "right_then_wrong": 0,
+        "wrong_then_right": 1
+      }
+    }
+  }
+}
