@@ -6,7 +6,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 ROOT = HERE.parents[1]
 SOURCES = [HERE / "audit" / n / "analysis.md" for n in ["baseline", "hinglish", "lr", "part_a_clp", "part_b_interventions", "part_c_encot"]]
-SOURCES += [ROOT / "tests/ed_audit/outputs/final_report_audit/analysis.md", HERE / "CONSOLIDATED_ANALYSIS.md", ROOT / "docs/final/ANALYSIS.md", HERE / "audit/lr/corrected_regression_table.csv"]
+SOURCES += [ROOT / "tests/ed_audit/outputs/final_report_audit/analysis.md", HERE / "CONSOLIDATED_ANALYSIS.md", ROOT / "docs/final/ANALYSIS.md", HERE / "audit/lr/corrected_regression_table.csv", HERE / "audit/error_trends/error-trends.txt"]
 NUM = re.compile(r"(?<![\w.\-])\d[\d,]*(?:\.\d+)?(?![\w])")
 
 

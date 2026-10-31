@@ -1,0 +1,1039 @@
+Error trends: standard, ron and en-cot
+
+
+
+
+Error trends: standard, ron and en-cot
+  ​Oct 30, 2026         · ​@Shaurya Kochar
+
+64% of wrong answers (19,583 of 30,421) come from three tasks: day of week, next week's
+dates, and recurrences. A few mistakes show up at every difficulty: counting one day too
+many, stopping one step short, and forgetting Feb 29.
+
+
+Data
+All 93,150 responses in responses/ , across all five difficulties and both languages. 30,421
+of them are wrong.
+
+
+   Set                  What it is                                     Responses per    Wrong
+                                                                       difficulty
+
+   standard             direct + CoT, English + Hindi, 150 questions   16,200           28,700
+                        per file
+
+   ron                  same, with reasoning_effort: low , 10          1,080            422
+                        questions per file
+
+   en-cot               Hindi question, English reasoning, 50          1,350            1,299
+                        questions per file
+
+
+A script labels every wrong answer with three things:
+
+     how far off it is, in days, minutes or weekdays;
+     the kind of mistake: off by one, wrong direction, whole hours off, 12-hour clock, cut off,
+     and so on;
+     what the question involves: crossing midnight, a month end or Feb 29.
+
+Comparisons between sets use only the questions they share: the first 10 per file for ron,
+the first 50 for en-cot.
+
+
+Where the errors are
+Key finding: 64% of wrong answers (19,583 / 30,421) are on three calendar tasks, and
+Hindi CoT is barely better than Hindi direct (41.0% vs 45.3% wrong).
+
+When the model reasons in English (English CoT, en-cot or ron), 78–88% of its wrong
+answers are on day of week, next week and recurrences. The arithmetic tasks rarely go
+wrong once it reasons. Direct answers get them wrong too, more so at higher difficulties.
+
+
+
+                                                                                         Page 1 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+  Condition                     Wrong overall    Errors on the 3       Day of week      Next week      Recurrence
+                                                 calendar tasks        wrong            wrong          wrong
+
+  standard, English,            41.1% (8,322 /   61% (5,039 / 8,322)   86% (1,934 /     58% (1,306 /   80% (1,799 /
+  direct                        20,250)                                2,250)           2,250)         2,250)
+
+  standard, English,            14.3% (2,903 /   85% (2,473 / 2,903)   42% (942 /       51% (1,140 /   17% (391 /
+  CoT                           20,250)                                2,250)           2,250)         2,250)
+
+  standard, Hindi,              45.3% (9,167 /   58% (5,332 / 9,167)   85% (1,905 /     55% (1,247 /   97% (2,180 /
+  direct                        20,250)                                2,250)           2,250)         2,250)
+
+  standard, Hindi,              41.0% (8,308 /   64% (5,299 / 8,308)   79% (1,778 /     77% (1,741 /   79% (1,780 /
+  CoT                           20,250)                                2,250)           2,250)         2,250)
+
+  ron, English,                 4.7% (64 /       88% (56 / 64)         9% (13 / 150)    17% (26 /      11% (17 / 150)
+  direct                        1,350)                                                  150)
+
+  ron, English, CoT             7.3% (99 /       84% (83 / 99)         15% (22 /        20% (30 /      21% (31 / 150)
+                                1,350)                                 150)             150)
+
+  ron, Hindi, direct            9.1% (123 /      78% (96 / 123)        11% (17 / 150)   31% (46 /      22% (33 / 150)
+                                1,350)                                                  150)
+
+  ron, Hindi, CoT               10.1% (136 /     85% (116 / 136)       26% (39 /        27% (40 /      25% (37 / 150)
+                                1,350)                                 150)             150)
+
+  en-cot                        19.2% (1,299 /   84% (1,089 / 1,299)   54% (404 /       57% (426 /     35% (259 / 750)
+                                6,750)                                 750)             750)
+
+
+
+
+Day of week
+Key finding: direct answers on day of week are guesses (3,869 wrong answers, 12.7% of
+all), and with reasoning most errors are exactly one day late.
+
+Direct answers are random guesses: wrong 85% of the time (3,839 / 4,500), which is
+chance level (85.7%), and spread evenly over the other six days. With English reasoning
+the errors stop being random: more than half are exactly one day late.
+
+
+
+
+                                                                                                                Page 2 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+responses/ · wrong day-of-week answers that name a weekday, all difficulties
+
+     Why one day late: to count the days from Jan 1, the model adds up the month lengths
+     plus the day of the month. That counts Jan 1 itself, so the total is one too high.
+     Hindi CoT is still mostly guessing: wrong 79% of the time (1,778 / 2,250), with only a
+     weak one-day-late peak. en-cot, on the same Hindi questions, gets 54% wrong (404 /
+     750) and shows the clear peak.
+     Dates further out are harder. English CoT is wrong 30% of the time on short (136 / 450,
+     all 2025 dates) and 50% on very long (223 / 450, dates up to 2033).
+     ron is wrong only 15% of the time (91 / 600), and many of those responses are cut off at
+     16k tokens.
+
+Example (English CoT, very_very_long)
+
+     What day of the week is 2029-07-02? Correct: Monday. Model: Tuesday.
+
+     "Jan 1, 2024 = Monday … 2029: Jan 1 to July 2 = 31+28+31+30+31+30+2 = 183 … 2010 ÷
+     7 = 287 remainder 1. Monday + 1 = Tuesday."
+
+Jan 1 to Jul 2 is 182 days. In another response the model makes the same slip twice, once in
+its working and once in its check, and takes the matching results as proof it was right.
+
+Example: the same slip in Hindi (Hindi CoT, short)
+
+     2025-12-12 सप्ताह का कौन सा दिन है? Correct: शुक्रवार (Friday). Model: शनिवार (Saturday).
+
+     "346 को 7 से भाग देने पर 49 पूर्ण सप्ताह और 3 दिन शेष … 1 जनवरी 2025, बुधवार था।" (346 ÷ 7 = 49
+     weeks and 3 days … Jan 1, 2025 was a Wednesday.)
+
+Jan 1 to Dec 12 is 345 days, not 346.
+
+Example: the same slip in en-cot (en-cot, short)
+
+
+                                                                                                   Page 3 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     2025-03-25 सप्ताह का कौन सा दिन है? Correct: मंगलवार (Tuesday). Model: बुधवार
+     (Wednesday).
+
+     "450 days is 64 weeks and 2 days. Starting from Monday, adding 2 days gives
+     Wednesday."
+
+
+Jan 1, 2024 to Mar 25, 2025 is 449 days.
+
+
+Recurrences
+Key finding: recurrences stop one interval short in 1,698 wrong answers (5.6% of all).
+Counting backwards is a smaller, Hindi-only pattern (396).
+
+The question asks for the k-th occurrence after today, "without counting today". Two
+mistakes explain most of the errors we can identify: stopping one interval early, and, on
+Hindi questions, counting backwards from today.
+
+
+   Condition                             Recurrence wrong      One interval short   Counted backwards
+
+   standard, English, direct             80% (1,799 / 2,250)   30% (526 / 1,765)    1% (14 / 1,765)
+
+   standard, English, CoT                17% (391 / 2,250)     21% (50 / 234)       3% (6 / 234)
+
+   standard, Hindi, direct               97% (2,180 / 2,250)   19% (410 / 2,176)    7% (145 / 2,176)
+
+   standard, Hindi, CoT                  79% (1,780 / 2,250)   35% (612 / 1,758)    9% (164 / 1,758)
+
+   en-cot                                35% (259 / 750)       48% (99 / 207)       28% (58 / 207)
+
+
+The last two columns are shares of wrong answers that give a date.
+
+     One interval short is the same counting error as in day of week. The model counts
+     today as the first occurrence, so it adds k−1 intervals instead of k.
+     Counting backwards comes from reading Hindi. en-cot does it in 28% of its errors (58
+     / 207) even though it reasons in English, against 3% for English CoT (6 / 234). It reads
+     "आज को छोड़कर" (excluding today) as "the occurrence before today".
+     The question wording is ungrammatical: "the 10 occurrence" in English, "1वीं आवृत्ति" and
+     "हर 1 दिनों" in Hindi. This hurts most on short questions, where k is 1 or 2: en-cot gets 57%
+     of short recurrences wrong (85 / 150) against 25% on medium (38 / 150).
+
+Example: one interval short (Hindi CoT, very_long)
+
+
+     आज 2031-10-13 है, और मेरे पास हर 25 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 10वीं आवृत्ति की तिथि क्या
+     है? Correct: 2032-06-19. Model: 2032-05-25.
+
+
+
+                                                                                                       Page 4 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+The model moves forward 225 days, which is 9 × 25 rather than 10 × 25.
+
+Example: counting backwards (en-cot, short)
+
+     आज 2025-04-10 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या
+     है? Correct: 2025-04-14. Model: 2025-04-06.
+
+     "Or going forward: 2025-04-14 (4 days after today, first occurrence after today).
+     Given the phrasing 'excluding today,' this suggests we need to find what comes
+     before."
+
+The model finds the right date and then talks itself out of it because of how it reads the
+Hindi phrase.
+
+Example: one interval short, said outright (English CoT, very_long)
+
+
+     Today is 2028-10-20, and I have a recurrence every 17 days. Without counting today,
+     what is the date of the 9 occurrence? Correct: 2029-03-22. Model: 2029-03-05.
+
+     "If first occurrence is 17 days after today: 9th occurrence = 8 × 17 = 136 days after
+     today."
+
+
+If the first occurrence is 17 days out, the 9th is 9 × 17 = 153 days out.
+
+Example: counting backwards in Hindi (Hindi CoT, short)
+
+
+     आज 2025-10-28 है, और मेरे पास हर 2 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या
+     है? Correct: 2025-10-30. Model: 2025-10-26.
+
+     "पुनरावृत्ति हर 2 दिनों पर होती है। इसका मतलब है कि पहली बार 2 दिन पहले हुआ था।" (It recurs every 2
+     days, which means the first time was 2 days ago.)
+
+
+
+Feb 29 and other boundaries
+Key finding: Feb 29 in the span is behind 1,947 wrong answers (6.4% of all) and
+multiplies the error rate in every condition, ron included.
+
+If the span includes Feb 29, errors go up sharply in every condition, ron included.
+
+
+
+
+                                                                                                       Page 5 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+responses/ · date tasks (addition, subtraction, duration, recurrence), all difficulties pooled · ron has 42
+questions with Feb 29 in the span
+
+     It isn't just a difficulty effect. Within very_very_long alone, English CoT is wrong 36%
+     of the time with Feb 29 (149 / 411) and 9% without it (124 / 1,389).
+     Month ends and midnight matter much less once the model reasons:
+
+
+  Trigger                            English direct    English CoT     Hindi direct      Hindi CoT         en-cot
+
+  Crosses a month                    11% → 47%         1% → 11% (555   17% → 56%         15% → 51%         8% → 15%
+  end (date tasks)                   (2,341 / 4,941)   / 4,941)        (2,772 / 4,941)   (2,523 / 4,941)   (255 / 1,662)
+
+  Crosses midnight                   20% → 59%         2% → 6% (139    26% → 61%         19% → 34%         4% → 7% (52
+  (time tasks)                       (1,408 / 2,370)   / 2,370)        (1,445 / 2,370)   (805 / 2,370)     / 768)
+
+
+% wrong without → with the trigger; counts are for the "with" side.
+
+Example (English CoT, medium)
+
+
+     Today is 2028-02-15, and I have a recurrence every 6 days. Without counting today,
+     what is the date of the 4 occurrence? Correct: 2028-03-10. Model: 2028-03-11.
+
+     "From 2028-02-27 to 2028-03-05: 28 − 27 = 1 day in February, plus 5 days in March = 6
+     days ✓"
+
+
+2028 is a leap year, so that gap is 7 days, and the check just repeats the mistake.
+
+Example: knows it's a leap year, skips Feb 29 anyway (Hindi CoT, medium)
+
+
+
+
+                                                                                                                    Page 6 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     आज 2028-02-28 है, 6 दिनों में तिथि क्या होगी? Correct: 2028-03-05. Model: 2028-03-06.
+
+     "1 दिन बाद: 1 मार्च 2028 … 6 दिन बाद: 6 मार्च 2028 … चूंकि 2028 एक लीप वर्ष है … 28 फरवरी के बाद 29
+     फरवरी आता है।" (1 day later: March 1 … 6 days later: March 6 … since 2028 is a leap year,
+     Feb 29 comes after Feb 28.)
+
+
+Example: en-cot (en-cot, medium)
+
+
+     आज 2028-02-27 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 3वीं आवृत्ति की तिथि क्या
+     है? Correct: 2028-03-10. Model: 2028-03-11.
+
+     "2028-02-27 + 4 days = 2028-03-03"
+
+
+It should be 2028-03-02. Every later step carries the extra day.
+
+Example: reasoning on (ron, English direct, very_very_long, from the hidden reasoning)
+
+
+     Today is 2035-10-23, and I have a recurrence every 44 days. Without counting today,
+     what is the date of the 20 occurrence? Correct: 2038-03-21. Model: 2038-03-22.
+
+     "Check for possible issues: The date includes February? Wait we didn't cross
+     February 29 or any ambiguous date."
+
+The span does include 2036-02-29. The model even notes earlier that 2036 is a leap year.
+
+
+
+Next week's dates
+Key finding: with reasoning, next-week answers are mostly one day off. Together with
+day of week that's 2,461 wrong answers (8.1% of all). Non-week spans are a smaller
+pattern (548).
+
+The question gives today's date and asks for next week's Monday and Sunday. Each
+condition goes wrong in its own way.
+
+
+  Condition                          Next week      Gave this    Off by one day   Saturday to       Not 7 days
+                                     wrong          week                          Friday            long
+
+  standard, English,                 58% (1,306 /   23% (302 /   17% (227 /       25% (321 /        3% (44 /
+  direct                             2,250)         1,304)       1,304)           1,304)            1,304)
+
+  standard, English,                 51% (1,140 /   3% (29 /     47% (487 /       9% (89 / 1,046)   6% (63 /
+  CoT                                2,250)         1,046)       1,046)                             1,046)
+
+  standard, Hindi,                   55% (1,247 /   12% (149 /   26% (319 /       20% (247 /        5% (56 /
+  direct                             2,250)         1,243)       1,243)           1,243)            1,243)
+
+
+
+
+                                                                                                           Page 7 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+  Condition                          Next week         Gave this      Off by one day   Saturday to     Not 7 days
+                                     wrong             week                            Friday          long
+
+  standard, Hindi, CoT               77% (1,741 /      5% (86 / 1,720) 23% (392 /      10% (166 /      21% (357 /
+                                     2,250)                            1,720)          1,720)          1,720)
+
+  en-cot                             57% (426 / 750)   2% (7 / 410)   39% (160 /       8% (34 / 410)   6% (24 / 410)
+                                                                      410)
+
+
+All columns after the first are shares of wrong answers that give two dates.
+
+     Direct answers often give this week instead of next.
+     Reasoning is usually off by one day, for the same reasons as in day of week: it gets
+     today's weekday wrong by one, or skips a day at a month end.
+     Hindi CoT often returns spans that are not a week at all, such as Jul 28 to Jul 31. It
+     starts from the wrong weekday and never checks that the span is 7 days long.
+
+Example: not a week (Hindi CoT, long)
+
+
+     यदि आज 2030-05-15 है, तो अगले सप्ताह की शुरुआत और अंत की तिथियां क्या हैं …? Correct: 2030-05-
+     20 to 2030-05-26. Model: 2030-05-18 to 2030-05-19.
+
+     "… 15 मई 2030 शनिवार आता है … अगला सोमवार 18 मई 2030 को होगा … रविवार 19 मई 2030 को होगा
+     (सोमवार से 6 दिन बाद)।"
+
+
+May 15, 2030 is a Wednesday, not a Saturday. The model also calls May 19 "6 days after
+Monday", even though it is the day after May 18.
+
+Example: a month end skipped (en-cot, medium)
+
+     यदि आज 2027-05-27 है … Correct: 2027-05-31 to 2027-06-06. Model: 2027-06-01 to
+     2027-06-07.
+
+     "This week ends on Sunday, 2027-05-30. … Next week starts on Monday, 2027-06-01."
+
+
+Everything is right until the step after May 30, which skips May 31.
+
+Example: this week instead of next (English direct, long)
+
+
+     If today is 2026-09-13, what are the dates for the start and end of next week,
+     assuming Monday is the first day of the week? Correct: 2026-09-14 to 2026-09-20.
+     Model: 2026-09-07 to 2026-09-13.
+
+
+Sep 13 is a Sunday, so the model gives the week that ends today.
+
+Example: a 4-day "week" (Hindi CoT, very_long)
+
+
+
+
+                                                                                                              Page 8 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     यदि आज 2029-07-24 है … Correct: 2029-07-30 to 2029-08-05. Model: 2029-07-28 to
+     2029-07-31.
+
+     "वर्तमान सप्ताह का रविवार 2029-07-27 होगा। अगला सोमवार … 2029-07-28 होगा। अगला रविवार …
+     2029-07-31 होगा।" (This week's Sunday is 2029-07-27. Next Monday is 2029-07-28.
+     Next Sunday is 2029-07-31.)
+
+
+It calls today a Wednesday (it's a Tuesday), then puts "next Sunday" three days after "next
+Monday".
+
+
+Time arithmetic
+Key finding: 3,760 wrong time answers (12.4% of all) have the minutes right and the
+hours wrong.
+
+In the time tasks the minutes are usually right and the hours are wrong: 41–65% of wrong
+time answers are off by a whole number of hours.
+
+
+   Condition                             Time tasks wrong      Off by whole        Off by exactly 12
+                                                               hours               hours
+
+   standard, English,                    34% (2,284 /          65% (1,488 /        3% (65 / 2,284)
+   direct                                6,750)                2,284)
+
+   standard, English, CoT                3% (211 / 6,750)      51% (86 / 169)      15% (25 / 169)
+
+   standard, Hindi, direct               38% (2,571 / 6,750)   57% (1,455 /        3% (81 / 2,570)
+                                                               2,570)
+
+   standard, Hindi, CoT                  24% (1,644 /          41% (659 / 1,622)   4% (69 / 1,622)
+                                         6,750)
+
+   en-cot                                5% (111 / 2,250)      57% (58 / 101)      9% (9 / 101)
+
+
+The last two columns are shares of wrong answers that give a time.
+
+     Almost all of these come from direct answers and Hindi CoT (3,602 of the 3,760). With
+     English reasoning the time tasks are rarely wrong.
+     Hindi CoT gets wrapping around midnight wrong, for example "24 − 19 = 5, so add 5
+     hours". Its error rate on time addition stays at 24–27% at every difficulty, so the cause
+     is a fixed method, not bigger numbers.
+     English CoT sometimes switches to the 12-hour clock (25 / 169 of its time errors) and
+     doesn't convert back.
+
+
+
+
+                                                                                                       Page 9 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     "0 hours" only confuses en-cot (a small pattern). On questions like "0 घंटे और 4 मिनट" (0
+     hours and 4 minutes) it is wrong 19% of the time (25 / 129), against 5% on other
+     questions (71 / 1,371). Standard CoT doesn't have this problem.
+
+Example: wrapping around midnight (Hindi CoT, very_very_long)
+
+
+     अभी 10:46 बजे हैं, 19 घंटे और 41 मिनट बाद समय क्या होगा? Correct: 06:27. Model: 16:27.
+
+     "24 - 19 = 5 घंटे। तो, 19 घंटे और 41 मिनट का मतलब है कि हमें 5 घंटे और 41 मिनट जोड़ने हैं।" (24 − 19 = 5
+     hours, so we add 5 hours 41 minutes.)
+
+
+Example: 12-hour clock (English CoT, long)
+
+
+     It is now 07:22, what was the time 15 hours and 31 minutes ago? Correct: 15:51. Model:
+     03:51.
+
+     "6 - 15 = -9 hours. Since I have -9 hours, I need to go back 12 hours to get into the
+     previous day: -9 + 12 = 3 hours."
+
+
+Example: "0 hours" read as 4 hours (en-cot, short)
+
+
+     अभी 12:11 बजे हैं, 0 घंटे और 4 मिनट पहले क्या समय था? Correct: 12:07. Model: 08:07.
+
+     "I need to find what time it was 4 hours and 4 minutes before 12:11."
+
+
+
+Smaller pattern: tens digits and copied numbers in direct answers
+Covers 854 tens-digit slips (2.8% of all wrong answers) and 273 answers that reuse a
+distractor number.
+
+Without reasoning, about a third of wrong date answers are off by exactly 10, 20 or 30
+days, and wrong answers reuse a number from the distractor more often than chance.
+Both mostly disappear once the model reasons in English.
+
+
+   Condition                             Date errors of exactly 10, 20   Reuses a distractor    Chance level
+                                         or 30 days                      number
+
+   standard, English,                    35% (338 / 963)                 6.2% (66 / 1,065)      3.5% (38 /
+   direct                                                                                       1,076)
+
+   standard, Hindi,                      31% (380 / 1,246)               11.2% (141 / 1,255)    4.0% (47 /
+   direct                                                                                       1,168)
+
+
+
+
+                                                                                                         Page 10 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+   Condition                             Date errors of exactly 10, 20   Reuses a distractor   Chance level
+                                         or 30 days                      number
+
+   standard, English,                    3% (6 / 213)                    0.5% (2 / 364)        0.6% (2 /
+   CoT                                                                                         325)
+
+   standard, Hindi,                      9% (126 / 1,347)                4.6% (60 / 1,292)     3.1% (37 /
+   CoT                                                                                         1,196)
+
+   en-cot                                4% (4 / 94)                     2.0% (4 / 204)        1.3% (2 / 150)
+
+
+Shares of wrong answers that give a value. Chance level is how often a wrong answer to a
+question with no distractor happens to share a number with that question's distractor
+sentences.
+
+     Tens-digit slips: the last digit is right and the tens digit is off, as if the answer were
+     written digit by digit without carrying.
+     Copying is worst in Hindi direct, at 2.8 times chance. The answer tends to land on
+     whatever the distractor mentions: a month end, a named month, a year.
+
+Example: tens digit (English direct, very_very_long)
+
+
+     Today is 2029-03-06, what is the date going to be in 36 days? Correct: 2029-04-11.
+     Model: 2029-04-01.
+
+
+Example: the distractor names the answer (English direct, medium)
+
+
+     I always get confused with months that have 31 days. Today is 2026-12-24, what is the
+     date going to be in 8 days? Correct: 2027-01-01. Model: 2026-12-31.
+
+
+Example: pulled into the named month (Hindi direct, short)
+
+
+     अगस्त मेरा पसंदीदा महीना है। आज 2025-07-29 है, 1 दिनों में तिथि क्या होगी? (August is my favourite
+     month. Today is 2025-07-29. What is the date in 1 day?) Correct: 2025-07-30. Model:
+     2025-08-01.
+
+Example: tens digit again (English direct, very_very_long)
+
+
+     The garden needs new flowers. Today is 2036-04-08, what is the date going to be in 38
+     days? Correct: 2036-05-16. Model: 2036-05-06.
+
+
+
+
+                                                                                                      Page 11 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+Smaller pattern: Hindi CoT subtracts by walking forward
+Covers 212 wrong answers directly (0.7% of all), but explains why Hindi CoT does worse
+than Hindi direct on subtraction.
+
+On date subtraction, Hindi CoT gets worse much faster than any other condition. The
+reason is one habit: it subtracts using the method for adding. It counts forward to the end
+of the current month, then steps through the next month instead of the previous one.
+
+
+
+
+responses/ · date-subtraction questions, 450 per difficulty for standard (150 for en-cot)
+
+
+
+   Condition                             Answer on or after today   One or two months off
+
+   standard, Hindi, CoT                  13% (98 / 738)             22% (165 / 738)
+
+   standard, Hindi, direct               5% (16 / 346)              16% (57 / 346)
+
+   standard, English, CoT                0% (0 / 129)               4% (5 / 129)
+
+   en-cot                                0% (0 / 45)                4% (2 / 45)
+
+
+Shares of wrong subtraction answers. "One or two months off" means 27–32 or 58–62 days
+off.
+
+en-cot reads the same Hindi questions and doesn't do this, so it comes from reasoning in
+Hindi, not from reading it. All five very_very_long errors we sampled used this method.
+
+Example (Hindi CoT, very_very_long)
+
+
+
+
+                                                                                            Page 12 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     आज 2031-02-26 है, 54 दिन पहले क्या तारीख थी? (Today is 2031-02-26. What was the date 54
+     days ago?) Correct: 2031-01-03. Model: 2031-03-08.
+
+     "26 फरवरी से 28 फरवरी तक कु ल 3 दिन … मार्च में 31 दिन होते हैं … 28 मार्च से 20 दिन पीछे जाने पर 8 मार्च
+     आता है।" (Feb 26 to Feb 28 is 3 days … March has 31 days … 20 days back from March
+     28 is March 8.)
+
+
+The answer is ten days after today.
+
+Example: counts to the month end, then back (Hindi CoT, very_very_long)
+
+
+     आज 2027-05-09 है, 52 दिन पहले क्या तारीख थी? Correct: 2027-03-18. Model: 2027-05-01.
+
+     "9 मई से 31 मई तक कु ल 22 दिन होते हैं … 52 में से 22 दिन कम हो जाएंगे … 30 अप्रैल से ठीक 30 दिन पहले की
+     तारीख 1 मई होती है।" (May 9 to May 31 is 22 days … take 22 from 52 … exactly 30 days
+     before April 30 is May 1.)
+
+
+Example: takes off the whole month (Hindi CoT, very_very_long)
+
+
+     आज 2036-07-14 है, 52 दिन पहले क्या तारीख थी? Correct: 2036-05-23. Model: 2036-06-09.
+
+     "जुलाई महीने में 31 दिन होते हैं … 52 में से 31 दिन कम हो जाते हैं, जिससे 21 दिन बचते हैं … जून में 21 दिन पीछे
+     … 9 दिन पर पहुंच जाते हैं।" (July has 31 days … 52 − 31 leaves 21 … go back 21 days in June
+     … we reach the 9th.)
+
+Today is July 14, so only 14 days of July come off, not 31.
+
+Example: goes back a month but keeps the month (Hindi CoT, very_very_long)
+
+
+     आज 2027-10-01 है, 38 दिन पहले क्या तारीख थी? Correct: 2027-08-24. Model: 2027-09-24.
+
+     "पहले अक्टूबर के 31 दिन पीछे जाएंगे, जिससे हम … 2027-09-01 पर पहुंच जाएंगे … 7 दिन और पीछे जाने पर
+     हम 24 तारीख पर पहुंच जाएंगे।" (First go back October's 31 days, which brings us to 2027-09-
+     01 … going 7 more days back we reach the 24th.)
+
+
+31 days before Oct 1 is Aug 31, and the model also never moves the answer out of
+September.
+
+
+Distractors and cut-off responses
+Key finding: 1,289 wrong answers (4.2% of all) are responses cut off before answering,
+including 287 of ron's 422 (68%). The distractor effect itself is small.
+
+
+
+
+                                                                                                                Page 13 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+A similar distractor (one about dates or times) adds 2–4 points of error when the model
+reasons, and almost none for direct answers. Many errors with reasoning aren't wrong
+answers at all: the response runs out of tokens while the model is still re-checking.
+
+
+   Condition                         No distractor     Dissimilar        Similar          Wrong answers
+                                                                                          that were cut off
+
+   standard,                         40.0% (2,698 /    41.9% (2,830 /    41.4% (2,794     0% (29 / 8,322)
+   English, direct                   6,750)            6,750)            / 6,750)
+
+   standard,                         13.7% (928 /      13.3% (896 /      16.0% (1,079 /   22% (651 / 2,903)
+   English, CoT                      6,750)            6,750)            6,750)
+
+   standard, Hindi,                  39.7% (2,678 /    41.1% (2,777 /    42.3% (2,853     2% (146 / 8,308)
+   CoT                               6,750)            6,750)            / 6,750)
+
+   ron, English, CoT                 5.3% (24 / 450)   7.8% (35 /        8.9% (40 /       85% (84 / 99)
+                                                       450)              450)
+
+   ron, Hindi, CoT                   10.7% (48 /       9.1% (41 / 450)   10.4% (47 /      81% (110 / 136)
+                                     450)                                450)
+
+   en-cot                            17.8% (400 /      18.2% (409 /      21.8% (490 /     13% (174 / 1,299)
+                                     2,250)            2,250)            2,250)
+
+
+The first three columns are % wrong.
+
+     A similar distractor can steer the reasoning. The model starts discussing the
+     distractor's topic and sometimes gets that topic wrong too. 130 wrong time answers
+     with reasoning discuss the distractor, 105 of them from Hindi CoT.
+     Cut-offs are mostly on the calendar tasks. Of English CoT's 651 cut-off responses, 358
+     are day of week, 156 recurrences and 89 next week. Most are loops of re-checking that
+     start after the model notices its own one-day error.
+     ron's errors are mostly cut-offs, not wrong answers. Aditya's notes in
+      experiments/2026-10-25_test-reasoning-on/ANALYSIS.txt show the same loops in
+     the hidden reasoning.
+
+Example: the distractor changes a fact (Hindi CoT, long)
+
+
+     मुझे 31 दिनों वाले महीनों में भ्रम होता है। आज 2026-09-02 है, 12 दिन पहले क्या तारीख थी? Correct: 2026-
+     08-21. Model: 2026-08-31.
+
+     "31 दिनों वाले महीने अप्रैल, जून, सितंबर और नवंबर होते हैं।" (The months with 31 days are April,
+     June, September and November.)
+
+
+
+
+                                                                                                          Page 14 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+Those are the 30-day months, and the answer lands on the month end the distractor talks
+about.
+
+Example: a re-checking loop (English CoT, short; cut off at 4,096 tokens)
+
+     What day of the week is 2025-08-21? Correct: Thursday. No answer.
+
+     "Day 233: (233-1) mod 7 = 1. Wednesday + 1 = Thursday. But month-by-month gave
+     Friday. There's a 1-day discrepancy. Let me recheck July 31 …"
+
+
+The model had the right answer and lost it while hunting for its own off-by-one error.
+
+Example: the distractor taken literally (Hindi CoT, short)
+
+
+     मेरी घड़ी धीमी चलती है। अभी 21:25 बजे हैं, 2 घंटे और 3 मिनट बाद समय क्या होगा? (My watch runs slow.
+     It is 21:25. What time will it be in 2 hours 3 minutes?) Correct: 23:28. Model: 00:00.
+
+     "… 23:25 + 3 मिनट = 23:28 … लेकिन … हम 23:28 नहीं निकाल सकते क्योंकि मेरी घड़ी धीमी है।" (…
+     23:28 … but we can't say 23:28 because my watch is slow.)
+
+
+It works out the right answer, then throws it away because of the distractor. Hindi CoT
+answers "00:00" 19 times with a similar distractor, against 5 times with none.
+
+Example: the distractor leads to a cut-off (English CoT, very_very_long)
+
+
+     My watch always runs a bit slow. It is now 13:44, what was the time 59 hours and 37
+     minutes ago? Correct: 02:07. No answer.
+
+     "Could 'it is now 13:44' refer to the watch? If so, and the watch is slow, then actual
+     time is later. But then we can't find the actual time 59 hours and 37 minutes ago
+     without knowing how slow."
+
+
+It mentions 02:07 but keeps arguing about the watch until it runs out of tokens. 130 wrong
+time answers with reasoning bring up the distractor's topic like this, 105 of them from
+Hindi CoT.
+
+
+What the parsed reasoning shows
+Aditya's parser ( parser.py ) turns each reasoning trace into a sequence of labelled steps:
+ PLAN , ADD , SUB , LEAP , CHECK , REVISE ("wait, actually…"), IGNORE (talking about the
+distractor), FORMAT (arguing about output format or language), and so on. We parsed
+every response that has reasoning: standard CoT, en-cot, and ron's hidden reasoning,
+55,167 traces in all. The parser labels 96–97% of sentences in standard CoT and en-cot,
+and 82–89% in ron.
+
+
+
+                                                                                                  Page 15 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+Key finding: format deliberation fills a third of ron's Hindi direct reasoning (207,097 of
+627,487 steps), but it doesn't make answers wrong.
+
+
+
+
+parsed_traces.csv · 55,167 parsed traces (standard CoT, en-cot, ron hidden reasoning) · steps labelled by
+parser.py
+
+     It comes from the prompt's rules. The Hindi direct prompt asks for "only the final
+     answer", the whole response in Hindi, the word "Answer:" in English and Western digits,
+     all at once. ron's hidden reasoning argues about these instead of the arithmetic. Visible
+     CoT almost never does (0.2–0.7% of steps).
+     It's worst where the maths is easiest: 39% of ron's steps on date addition and 34–38%
+     on the time tasks, against 9–10% on day of week and next week. It falls from 27% of
+     steps on short to 15% on very_very_long.
+     It doesn't predict errors. Right ron Hindi direct traces have more FORMAT steps than
+     wrong ones (157 vs 118 on average). It wastes tokens rather than changing answers.
+
+Key finding: long re-checking loops mark wrong and cut-off answers.
+
+     On every task, English CoT's wrong traces have 1.5–6 times more CHECK and REVISE
+     steps than its right ones. For example, time durations average 12.4 against 2.0, and
+     recurrences 19.3 against 5.0.
+     Cut-off English CoT traces average 42 re-checking steps against 8 for wrong traces
+     that did finish. 869 of English CoT's 2,903 wrong traces (30%) have 20 or more.
+
+Key finding: Hindi CoT almost never checks its work. Only 744 of 20,250 Hindi CoT traces
+(3.7%) contain a CHECK or REVISE step, against 17,820 / 20,250 (88%) for English CoT and
+5,132 / 6,750 (76%) for en-cot. Hindi CoT traces are also much shorter (median 13 steps
+against 25 for English CoT). This fits it being barely better than answering directly.
+
+     Feb 29 errors aren't from forgetting leap years. 185 of 190 wrong English CoT answers
+     on Feb 29 questions mention the leap year ( LEAP ), as do 78 / 83 for en-cot and 416 /
+     508 for Hindi CoT. The model knows it's a leap year and still counts wrong.
+
+
+
+                                                                                                       Page 16 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     Talking about the distractor doesn't predict errors. Hindi CoT discusses the
+     distractor ( IGNORE ) in 4,079 of 20,250 traces (20%), English CoT in 1,428 (7%). With a
+     similar distractor, it happens equally often in right and wrong Hindi CoT traces (30% vs
+     30%).
+     What the parser can't show: Hindi CoT's forward-walking subtraction. Counting
+     forward to the month end is written as a subtraction ("31 − 9 = 22"), so it gets labelled
+      SUB like a correct step.
+
+Example: 5,170 words to add one day (ron, Hindi direct, short; answered correctly)
+
+     संग्रहालय नौ बजे खुलता है। आज 2025-04-06 है, 1 दिनों में तिथि क्या होगी? (The museum opens at
+     nine. Today is 2025-04-06. What is the date in 1 day?) Correct: 2025-04-07. Model:
+     2025-04-07.
+
+     "Entire response in Hindi. … Keep the word 'Answer:' in English, use Western digits,
+     and put nothing else on that line. … That's not in Hindi. … But if I have no text outside
+     the last line, then there's no Hindi text."
+
+
+361 of the trace's 630 parsed steps are FORMAT . Other ron Hindi direct traces go the same
+way: "Is '31 जुलाई 2025' entirely in Hindi?", "Give only the final answer. This is absolute."
+
+
+By difficulty
+Each level pushes dates further out (only 2025 on short, up to 2036 on very_very_long)
+and doubles the offsets, intervals and durations. Direct answers and Hindi CoT get
+steadily worse. English CoT and en-cot stay fairly flat until very_very_long.
+
+
+
+
+responses/ · 93,150 responses · reasoning on = mean of its four language × condition cells
+
+
+
+
+                                                                                                Page 17 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+Short
+2025 dates, offsets of 1–4, durations up to 60 minutes, 1st or 2nd occurrence.
+
+     The arithmetic is almost always right. The errors are on day of week, next week and
+     recurrences.
+     Recurrences are harder than on medium: en-cot gets 57% wrong (85 / 150) against 25%
+     (38 / 150), and Hindi CoT 72% (323 / 450) against 57% (256 / 450). With k = 1 or 2,
+     misreading "excluding today" decides the answer: 55 of en-cot's 80 wrong dates here
+     count backwards.
+     Next week has the biggest language gap: Hindi CoT is wrong 60% of the time (268 /
+     450), English CoT 28% (126 / 450).
+
+
+Medium
+2025–2028, offsets of 4–8, durations of 1–2 hours, 2nd–4th occurrence.
+
+     Direct answers on time durations jump from 5% (24 / 450) to 25% wrong (114 / 450) in
+     English and from 10% (47 / 450) to 44% (198 / 450) in Hindi, because durations now
+     cross hours and need borrowing.
+
+
+Long
+2025–2030, offsets of 8–16, durations of 2–4 hours, 4th–8th occurrence.
+
+     Hindi CoT starts walking forward on subtraction: 24% wrong (110 / 450) against 4% for
+     English CoT (17 / 450).
+     Next week is wrong more than half the time in every standard condition, from 54% for
+     English CoT (244 / 450) to 83% for Hindi CoT (375 / 450).
+
+
+Very long
+2025–2033, offsets of 16–32, durations of 4–8 hours, 8th–16th occurrence.
+
+     Direct time answers are wrong 40–71% of the time, from 180 / 450 (Hindi, addition) to
+     321 / 450 (Hindi, durations), mostly off by whole hours.
+     English CoT on day of week peaks at 50% wrong (223 / 450).
+
+
+Very very long
+2025–2036, offsets of 32–64, durations of 8–16 hours, 16th–32nd occurrence.
+
+     Direct answers are wrong 64% (2,593 / 4,050) in English and 70% (2,818 / 4,050) in
+     Hindi.
+
+
+
+
+                                                                                           Page 18 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     Recurrences go wrong even with reasoning: English CoT 38% (169 / 450), en-cot 45%
+     (67 / 150), ron 62% (75 / 120, mostly cut off).
+
+
+Standard vs ron vs en-cot on the same questions
+On the first 10 questions per file, which all three sets share, Hindi errors fall from 40%
+(Hindi CoT) to 18% with en-cot and 10% with ron. Each set leaves a different kind of error
+behind.
+
+
+   Condition                             Wrong          Wrong answers that   What the remaining errors
+                                                        were cut off         mostly are
+
+   standard, Hindi,                      42.1% (569 /   0% (0 / 569)         Day-of-week guesses, copied
+   direct                                1,350)                              distractor numbers, tens-digit
+                                                                             slips
+
+   standard, Hindi,                      40.1% (542 /   2% (11 / 542)        Subtracting by walking forward,
+   CoT                                   1,350)                              "weeks" that aren't 7 days,
+                                                                             midnight wrap-around mistakes
+
+   en-cot                                18.1% (245 /   13% (32 / 245)       Recurrences counted
+                                         1,350)                              backwards, one day late, "0
+                                                                             hours" misread
+
+   ron, Hindi, direct                    9.1% (123 /    46% (57 / 123)       Cut off at 16k tokens, Feb 29
+                                         1,350)
+
+   ron, Hindi, CoT                       10.1% (136 /   81% (110 / 136)      Cut off at 16k tokens
+                                         1,350)
+
+   standard,                             36.9% (498 /   0% (0 / 498)         Day-of-week guesses, this week
+   English, direct                       1,350)                              instead of next, tens-digit slips
+
+   standard,                             12.7% (172 /   20% (35 / 172)       One day late, 12-hour clock, re-
+   English, CoT                          1,350)                              checking loops
+
+   ron, English,                         4.7% (64 /     56% (36 / 64)        Cut off at 16k tokens, Feb 29
+   direct                                1,350)
+
+   ron, English, CoT                     7.3% (99 /     85% (84 / 99)        Cut off at 16k tokens
+                                         1,350)
+
+
+     en-cot fixes the errors that come from reasoning in Hindi (walking forward, non-week
+     spans) but keeps the ones that come from reading Hindi (counting backwards, "0
+     hours").
+
+
+
+
+                                                                                                         Page 19 of 20
+Error trends: standard, ron and en-cot
+
+
+
+
+     ron fixes most reasoning mistakes. What's left is mostly running out of tokens, plus
+     Feb 29.
+     The one-day-late error is the top day-of-week error for both English CoT (341 / 584)
+     and en-cot (158 / 313), so it looks like a habit of the model, not a language effect.
+
+
+Caveats
+     ron and en-cot are small: once split by task and difficulty, their cells hold 30–150
+     responses, so ignore differences of a few points there.
+     The labels come from a script. "Other" is still 66% of standard errors, so the labels
+     don't explain every error. The examples were checked by hand; the percentages
+     weren't.
+     Cut-off responses count as wrong, which matters most for ron.
+     Scoring uses metrics.py on main . Rahul's newer parser fix may shift the Hindi
+     numbers slightly.
+
+Code and tables: experiments/2026-10-30_error-trends-shaurya/ . build_table.py
+labels every response, patterns.py makes the numbers, and examples.py saves every
+quoted example in full.
+
+ counts.py produces every n / N count in this doc and the Key findings ranking
+( outputs/counts.json ). 3,711 wrong recurrence answers (12.2% of all) don't fit any of our
+labels, so recurrences have more going on than the two causes above.
+
+ parse_traces.py runs parser.py over every trace ( outputs/parsed_traces.csv ; it
+needs Python 3.11+), and parsed_patterns.py makes the parsed-reasoning numbers
+( outputs/parsed_numbers.json ).
+
+
+
+
+                                                                                             Page 20 of 20
+
