@@ -1,0 +1,71 @@
+{
+  "answered": {
+    "hi_cot_drop": {
+      "value": 2.57,
+      "ci": [
+        1.31,
+        3.82
+      ]
+    },
+    "hi_direct_drop": {
+      "value": 0.36,
+      "ci": [
+        -0.65,
+        1.38
+      ]
+    },
+    "penalty_cot_minus_direct": {
+      "value": 2.21,
+      "ci": [
+        0.48,
+        3.84
+      ]
+    }
+  },
+  "strict": {
+    "hi_cot_drop": {
+      "value": 2.59,
+      "ci": [
+        1.38,
+        3.81
+      ]
+    },
+    "hi_direct_drop": {
+      "value": 0.36,
+      "ci": [
+        -0.65,
+        1.38
+      ]
+    },
+    "penalty_cot_minus_direct": {
+      "value": 2.24,
+      "ci": [
+        0.52,
+        3.85
+      ]
+    }
+  },
+  "both_answered": {
+    "hi_cot_drop": {
+      "value": 2.47,
+      "ci": [
+        1.24,
+        3.7
+      ]
+    },
+    "hi_direct_drop": {
+      "value": 0.36,
+      "ci": [
+        -0.65,
+        1.38
+      ]
+    },
+    "penalty_cot_minus_direct": {
+      "value": 2.12,
+      "ci": [
+        0.39,
+        3.72
+      ]
+    }
+  }
+}

@@ -1,0 +1,1787 @@
+{
+  "bootstrap": {
+    "B": 2000,
+    "seed": 20261031,
+    "unit": "question"
+  },
+  "full": {
+    "questions": 6750,
+    "acc": {
+      "en_direct": {
+        "answered": 58.99,
+        "strict": 58.9
+      },
+      "en_cot": {
+        "answered": 88.51,
+        "strict": 85.66
+      },
+      "hi_direct": {
+        "answered": 54.74,
+        "strict": 54.73
+      },
+      "hi_cot": {
+        "answered": 59.4,
+        "strict": 58.97
+      }
+    },
+    "cot_delta": {
+      "en": {
+        "pooled": {
+          "answered": [
+            29.52,
+            28.53,
+            30.55
+          ],
+          "strict": [
+            26.76,
+            25.81,
+            27.77
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            28.76,
+            27.48,
+            29.97
+          ],
+          "strict": [
+            26.22,
+            24.93,
+            27.44
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            29.1,
+            27.76,
+            30.4
+          ],
+          "strict": [
+            25.41,
+            24.1,
+            26.65
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            30.7,
+            29.4,
+            31.99
+          ],
+          "strict": [
+            28.65,
+            27.36,
+            29.91
+          ]
+        }
+      },
+      "hi": {
+        "pooled": {
+          "answered": [
+            4.66,
+            3.64,
+            5.67
+          ],
+          "strict": [
+            4.24,
+            3.21,
+            5.26
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            5.62,
+            4.23,
+            6.98
+          ],
+          "strict": [
+            5.13,
+            3.72,
+            6.49
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            3.41,
+            2.07,
+            4.74
+          ],
+          "strict": [
+            2.89,
+            1.58,
+            4.22
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            4.97,
+            3.56,
+            6.37
+          ],
+          "strict": [
+            4.71,
+            3.32,
+            6.1
+          ]
+        }
+      }
+    },
+    "gap_cot": {
+      "pooled": {
+        "answered": [
+          29.11,
+          28.29,
+          29.94
+        ],
+        "strict": [
+          26.69,
+          25.89,
+          27.51
+        ]
+      },
+      "no_insertion": {
+        "answered": [
+          27.98,
+          26.75,
+          29.13
+        ],
+        "strict": [
+          25.93,
+          24.68,
+          27.05
+        ]
+      },
+      "similar_insertion": {
+        "answered": [
+          29.66,
+          28.42,
+          30.84
+        ],
+        "strict": [
+          26.28,
+          25.04,
+          27.51
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          29.67,
+          28.44,
+          30.92
+        ],
+        "strict": [
+          27.87,
+          26.61,
+          29.13
+        ]
+      }
+    },
+    "gap_direct": {
+      "pooled": {
+        "answered": [
+          4.25,
+          3.45,
+          4.99
+        ],
+        "strict": [
+          4.17,
+          3.37,
+          4.9
+        ]
+      },
+      "no_insertion": {
+        "answered": [
+          4.85,
+          3.72,
+          5.93
+        ],
+        "strict": [
+          4.83,
+          3.7,
+          5.91
+        ]
+      },
+      "similar_insertion": {
+        "answered": [
+          3.96,
+          2.84,
+          5.08
+        ],
+        "strict": [
+          3.76,
+          2.65,
+          4.87
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          3.94,
+          2.85,
+          5.04
+        ],
+        "strict": [
+          3.93,
+          2.83,
+          5.04
+        ]
+      }
+    },
+    "drop": {
+      "en": {
+        "similar_insertion": {
+          "answered": [
+            0.9,
+            0.01,
+            1.86
+          ],
+          "strict": [
+            2.24,
+            1.3,
+            3.17
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -0.0,
+            -0.95,
+            0.9
+          ],
+          "strict": [
+            -0.47,
+            -1.36,
+            0.47
+          ]
+        }
+      },
+      "hi": {
+        "similar_insertion": {
+          "answered": [
+            2.57,
+            1.29,
+            3.85
+          ],
+          "strict": [
+            2.59,
+            1.33,
+            3.84
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            1.69,
+            0.34,
+            2.95
+          ],
+          "strict": [
+            1.47,
+            0.15,
+            2.74
+          ]
+        }
+      }
+    },
+    "penalty": {
+      "en": {
+        "similar_insertion": {
+          "answered": [
+            -0.34,
+            -1.7,
+            1.04
+          ],
+          "strict": [
+            0.81,
+            -0.59,
+            2.21
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -1.94,
+            -3.29,
+            -0.56
+          ],
+          "strict": [
+            -2.43,
+            -3.78,
+            -1.07
+          ]
+        }
+      },
+      "hi": {
+        "similar_insertion": {
+          "answered": [
+            2.21,
+            0.64,
+            3.83
+          ],
+          "strict": [
+            2.24,
+            0.65,
+            3.84
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            0.65,
+            -1.02,
+            2.3
+          ],
+          "strict": [
+            0.41,
+            -1.22,
+            2.04
+          ]
+        }
+      }
+    },
+    "gap_cot_by_level": {
+      "short": {
+        "answered": [
+          24.04,
+          22.28,
+          25.85
+        ],
+        "strict": [
+          22.99,
+          21.24,
+          24.76
+        ]
+      },
+      "medium": {
+        "answered": [
+          24.37,
+          22.68,
+          25.99
+        ],
+        "strict": [
+          22.52,
+          20.84,
+          24.15
+        ]
+      },
+      "long": {
+        "answered": [
+          28.32,
+          26.53,
+          30.11
+        ],
+        "strict": [
+          26.0,
+          24.29,
+          27.76
+        ]
+      },
+      "very_long": {
+        "answered": [
+          33.74,
+          31.76,
+          35.7
+        ],
+        "strict": [
+          30.89,
+          28.95,
+          32.8
+        ]
+      },
+      "very_very_long": {
+        "answered": [
+          34.93,
+          33.0,
+          36.92
+        ],
+        "strict": [
+          31.06,
+          29.16,
+          33.0
+        ]
+      }
+    },
+    "hi_delta_by_task": {
+      "date_subtraction": {
+        "no_insertion": {
+          "answered": [
+            -19.91,
+            -23.45,
+            -16.45
+          ],
+          "strict": [
+            -20.0,
+            -23.54,
+            -16.5
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -15.38,
+            -19.18,
+            -11.83
+          ],
+          "strict": [
+            -15.47,
+            -19.2,
+            -11.93
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -17.38,
+            -20.75,
+            -13.88
+          ],
+          "strict": [
+            -17.47,
+            -20.86,
+            -13.95
+          ]
+        }
+      },
+      "interval_date": {
+        "no_insertion": {
+          "answered": [
+            -23.32,
+            -27.66,
+            -18.99
+          ],
+          "strict": [
+            -23.47,
+            -27.76,
+            -19.14
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -23.23,
+            -27.26,
+            -19.17
+          ],
+          "strict": [
+            -23.47,
+            -27.42,
+            -19.33
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -18.9,
+            -23.06,
+            -14.65
+          ],
+          "strict": [
+            -18.93,
+            -23.06,
+            -14.68
+          ]
+        }
+      }
+    },
+    "hi_delta_by_level": {
+      "short": {
+        "no_insertion": {
+          "answered": [
+            -1.91,
+            -4.47,
+            0.74
+          ],
+          "strict": [
+            -2.22,
+            -4.74,
+            0.43
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -6.24,
+            -8.85,
+            -3.54
+          ],
+          "strict": [
+            -6.74,
+            -9.35,
+            -4.1
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -4.66,
+            -7.29,
+            -2.01
+          ],
+          "strict": [
+            -4.81,
+            -7.45,
+            -2.19
+          ]
+        }
+      }
+    },
+    "penalty_hi_minus_en": {
+      "similar_insertion": {
+        "answered": [
+          2.56,
+          0.41,
+          4.67
+        ],
+        "strict": [
+          1.42,
+          -0.71,
+          3.51
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          2.59,
+          0.53,
+          4.64
+        ],
+        "strict": [
+          2.84,
+          0.84,
+          4.82
+        ]
+      }
+    }
+  },
+  "subset": {
+    "questions": 2250,
+    "acc": {
+      "en_direct": {
+        "answered": 59.68,
+        "strict": 59.61,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 60.6,
+            "strict": 60.58
+          },
+          "similar_insertion": {
+            "answered": 59.87,
+            "strict": 59.73
+          },
+          "dissimilar_insertion": {
+            "answered": 58.56,
+            "strict": 58.53
+          }
+        }
+      },
+      "en_cot": {
+        "answered": 88.88,
+        "strict": 85.97,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 89.32,
+            "strict": 86.62
+          },
+          "similar_insertion": {
+            "answered": 88.15,
+            "strict": 83.96
+          },
+          "dissimilar_insertion": {
+            "answered": 89.16,
+            "strict": 87.33
+          }
+        }
+      },
+      "hi_direct": {
+        "answered": 55.17,
+        "strict": 55.17,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 56.04,
+            "strict": 56.04
+          },
+          "similar_insertion": {
+            "answered": 54.89,
+            "strict": 54.89
+          },
+          "dissimilar_insertion": {
+            "answered": 54.58,
+            "strict": 54.58
+          }
+        }
+      },
+      "hi_cot": {
+        "answered": 59.4,
+        "strict": 59.02,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 60.23,
+            "strict": 59.78
+          },
+          "similar_insertion": {
+            "answered": 58.91,
+            "strict": 58.49
+          },
+          "dissimilar_insertion": {
+            "answered": 59.06,
+            "strict": 58.8
+          }
+        }
+      },
+      "clp": {
+        "answered": 70.3,
+        "strict": 69.9,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 69.26,
+            "strict": 68.89
+          },
+          "similar_insertion": {
+            "answered": 69.33,
+            "strict": 68.71
+          },
+          "dissimilar_insertion": {
+            "answered": 72.31,
+            "strict": 72.09
+          }
+        }
+      },
+      "encot": {
+        "answered": 82.89,
+        "strict": 80.76,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 84.13,
+            "strict": 82.22
+          },
+          "similar_insertion": {
+            "answered": 80.96,
+            "strict": 78.22
+          },
+          "dissimilar_insertion": {
+            "answered": 83.57,
+            "strict": 81.82
+          }
+        }
+      },
+      "en_hing": {
+        "answered": 70.89,
+        "strict": 70.3,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 70.6,
+            "strict": 70.22
+          },
+          "similar_insertion": {
+            "answered": 69.74,
+            "strict": 69.02
+          },
+          "dissimilar_insertion": {
+            "answered": 72.35,
+            "strict": 71.64
+          }
+        }
+      },
+      "hi_hing": {
+        "answered": 59.37,
+        "strict": 59.11,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 61.04,
+            "strict": 60.71
+          },
+          "similar_insertion": {
+            "answered": 59.06,
+            "strict": 58.8
+          },
+          "dissimilar_insertion": {
+            "answered": 58.0,
+            "strict": 57.82
+          }
+        }
+      }
+    },
+    "contrast": {
+      "clp-hi_cot": {
+        "pooled": {
+          "answered": [
+            10.9,
+            9.59,
+            12.21
+          ],
+          "strict": [
+            10.87,
+            9.6,
+            12.16
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            9.03,
+            6.89,
+            11.28
+          ],
+          "strict": [
+            9.11,
+            6.98,
+            11.38
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            10.42,
+            8.25,
+            12.53
+          ],
+          "strict": [
+            10.22,
+            8.04,
+            12.31
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            13.25,
+            11.16,
+            15.31
+          ],
+          "strict": [
+            13.29,
+            11.24,
+            15.33
+          ]
+        }
+      },
+      "clp-hi_direct": {
+        "pooled": {
+          "answered": [
+            15.13,
+            13.51,
+            16.66
+          ],
+          "strict": [
+            14.73,
+            13.11,
+            16.25
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            13.21,
+            10.85,
+            15.48
+          ],
+          "strict": [
+            12.84,
+            10.49,
+            15.11
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            14.44,
+            12.25,
+            16.69
+          ],
+          "strict": [
+            13.82,
+            11.64,
+            16.04
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            17.74,
+            15.48,
+            19.89
+          ],
+          "strict": [
+            17.51,
+            15.33,
+            19.69
+          ]
+        }
+      },
+      "encot-hi_cot": {
+        "pooled": {
+          "answered": [
+            23.49,
+            22.15,
+            24.89
+          ],
+          "strict": [
+            21.73,
+            20.43,
+            23.08
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            23.9,
+            21.81,
+            26.13
+          ],
+          "strict": [
+            22.44,
+            20.31,
+            24.67
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            22.05,
+            20.04,
+            24.15
+          ],
+          "strict": [
+            19.73,
+            17.73,
+            21.82
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            24.51,
+            22.42,
+            26.64
+          ],
+          "strict": [
+            23.02,
+            20.89,
+            25.11
+          ]
+        }
+      },
+      "encot-hi_direct": {
+        "pooled": {
+          "answered": [
+            27.72,
+            26.01,
+            29.4
+          ],
+          "strict": [
+            25.59,
+            23.9,
+            27.26
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            28.08,
+            25.72,
+            30.27
+          ],
+          "strict": [
+            26.18,
+            23.87,
+            28.4
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            26.07,
+            23.88,
+            28.3
+          ],
+          "strict": [
+            23.33,
+            21.16,
+            25.56
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            28.99,
+            26.82,
+            31.24
+          ],
+          "strict": [
+            27.24,
+            25.02,
+            29.47
+          ]
+        }
+      },
+      "encot-clp": {
+        "pooled": {
+          "answered": [
+            12.59,
+            11.45,
+            13.93
+          ],
+          "strict": [
+            10.86,
+            9.7,
+            12.1
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            14.87,
+            12.91,
+            16.88
+          ],
+          "strict": [
+            13.33,
+            11.42,
+            15.29
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            11.63,
+            9.68,
+            13.6
+          ],
+          "strict": [
+            9.51,
+            7.56,
+            11.38
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            11.25,
+            9.28,
+            13.41
+          ],
+          "strict": [
+            9.73,
+            7.78,
+            11.78
+          ]
+        }
+      },
+      "en_cot-encot": {
+        "pooled": {
+          "answered": [
+            5.99,
+            4.96,
+            7.06
+          ],
+          "strict": [
+            5.21,
+            4.21,
+            6.3
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            5.19,
+            3.51,
+            6.85
+          ],
+          "strict": [
+            4.4,
+            2.67,
+            6.13
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            7.19,
+            5.41,
+            8.9
+          ],
+          "strict": [
+            5.73,
+            3.91,
+            7.47
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            5.59,
+            4.01,
+            7.29
+          ],
+          "strict": [
+            5.51,
+            3.87,
+            7.16
+          ]
+        }
+      },
+      "en_cot-hi_cot": {
+        "pooled": {
+          "answered": [
+            29.48,
+            28.1,
+            30.95
+          ],
+          "strict": [
+            26.95,
+            25.53,
+            28.39
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            29.09,
+            27.01,
+            31.32
+          ],
+          "strict": [
+            26.84,
+            24.76,
+            29.02
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            29.24,
+            27.26,
+            31.38
+          ],
+          "strict": [
+            25.47,
+            23.42,
+            27.56
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            30.09,
+            27.97,
+            32.15
+          ],
+          "strict": [
+            28.53,
+            26.49,
+            30.58
+          ]
+        }
+      },
+      "en_cot-clp": {
+        "pooled": {
+          "answered": [
+            18.58,
+            17.27,
+            19.97
+          ],
+          "strict": [
+            16.07,
+            14.83,
+            17.47
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            20.06,
+            18.07,
+            22.03
+          ],
+          "strict": [
+            17.73,
+            15.69,
+            19.73
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            18.82,
+            16.92,
+            20.86
+          ],
+          "strict": [
+            15.24,
+            13.33,
+            17.2
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            16.84,
+            14.87,
+            18.92
+          ],
+          "strict": [
+            15.24,
+            13.29,
+            17.29
+          ]
+        }
+      },
+      "en_hing-en_cot": {
+        "pooled": {
+          "answered": [
+            -17.99,
+            -19.25,
+            -16.81
+          ],
+          "strict": [
+            -15.67,
+            -16.93,
+            -14.5
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            -18.72,
+            -20.77,
+            -16.75
+          ],
+          "strict": [
+            -16.4,
+            -18.4,
+            -14.4
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -18.41,
+            -20.46,
+            -16.45
+          ],
+          "strict": [
+            -14.93,
+            -17.02,
+            -13.02
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -16.8,
+            -18.84,
+            -14.89
+          ],
+          "strict": [
+            -15.69,
+            -17.73,
+            -13.78
+          ]
+        }
+      },
+      "hi_hing-hi_cot": {
+        "pooled": {
+          "answered": [
+            -0.03,
+            -1.26,
+            1.19
+          ],
+          "strict": [
+            0.09,
+            -1.14,
+            1.32
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            0.8,
+            -1.34,
+            3.08
+          ],
+          "strict": [
+            0.93,
+            -1.2,
+            3.2
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            0.15,
+            -2.09,
+            2.43
+          ],
+          "strict": [
+            0.31,
+            -1.96,
+            2.49
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -1.06,
+            -3.25,
+            1.18
+          ],
+          "strict": [
+            -0.98,
+            -3.11,
+            1.24
+          ]
+        }
+      },
+      "encot-en_hing": {
+        "pooled": {
+          "answered": [
+            12.0,
+            10.76,
+            13.28
+          ],
+          "strict": [
+            10.46,
+            9.19,
+            11.76
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            13.53,
+            11.52,
+            15.56
+          ],
+          "strict": [
+            12.0,
+            10.04,
+            13.96
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            11.22,
+            9.14,
+            13.42
+          ],
+          "strict": [
+            9.2,
+            7.16,
+            11.33
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            11.22,
+            9.27,
+            13.23
+          ],
+          "strict": [
+            10.18,
+            8.27,
+            12.13
+          ]
+        }
+      },
+      "en_direct-hi_direct": {
+        "pooled": {
+          "answered": [
+            4.51,
+            3.26,
+            5.8
+          ],
+          "strict": [
+            4.44,
+            3.2,
+            5.73
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            4.56,
+            2.67,
+            6.53
+          ],
+          "strict": [
+            4.53,
+            2.67,
+            6.49
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            4.98,
+            3.08,
+            6.96
+          ],
+          "strict": [
+            4.84,
+            2.93,
+            6.85
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            3.98,
+            2.03,
+            5.87
+          ],
+          "strict": [
+            3.96,
+            2.0,
+            5.82
+          ]
+        }
+      }
+    },
+    "by_level": {
+      "short": {
+        "en_direct": {
+          "answered": 77.78,
+          "strict": 77.78
+        },
+        "en_cot": {
+          "answered": 93.18,
+          "strict": 92.07
+        },
+        "hi_direct": {
+          "answered": 73.93,
+          "strict": 73.93
+        },
+        "hi_cot": {
+          "answered": 69.54,
+          "strict": 69.33
+        },
+        "clp": {
+          "answered": 77.21,
+          "strict": 77.04
+        },
+        "encot": {
+          "answered": 82.96,
+          "strict": 81.85
+        },
+        "en_hing": {
+          "answered": 82.93,
+          "strict": 82.74
+        },
+        "hi_hing": {
+          "answered": 66.49,
+          "strict": 66.3
+        }
+      },
+      "medium": {
+        "en_direct": {
+          "answered": 69.56,
+          "strict": 69.56
+        },
+        "en_cot": {
+          "answered": 91.59,
+          "strict": 89.56
+        },
+        "hi_direct": {
+          "answered": 65.26,
+          "strict": 65.26
+        },
+        "hi_cot": {
+          "answered": 65.38,
+          "strict": 65.19
+        },
+        "clp": {
+          "answered": 75.65,
+          "strict": 75.26
+        },
+        "encot": {
+          "answered": 84.94,
+          "strict": 83.11
+        },
+        "en_hing": {
+          "answered": 78.77,
+          "strict": 78.07
+        },
+        "hi_hing": {
+          "answered": 67.43,
+          "strict": 67.19
+        }
+      },
+      "long": {
+        "en_direct": {
+          "answered": 61.19,
+          "strict": 61.19
+        },
+        "en_cot": {
+          "answered": 89.3,
+          "strict": 85.93
+        },
+        "hi_direct": {
+          "answered": 57.93,
+          "strict": 57.93
+        },
+        "hi_cot": {
+          "answered": 60.43,
+          "strict": 59.85
+        },
+        "clp": {
+          "answered": 71.32,
+          "strict": 71.11
+        },
+        "encot": {
+          "answered": 84.42,
+          "strict": 82.67
+        },
+        "en_hing": {
+          "answered": 70.43,
+          "strict": 69.85
+        },
+        "hi_hing": {
+          "answered": 60.91,
+          "strict": 60.59
+        }
+      },
+      "very_long": {
+        "en_direct": {
+          "answered": 54.3,
+          "strict": 54.22
+        },
+        "en_cot": {
+          "answered": 87.17,
+          "strict": 84.07
+        },
+        "hi_direct": {
+          "answered": 48.44,
+          "strict": 48.44
+        },
+        "hi_cot": {
+          "answered": 53.7,
+          "strict": 53.19
+        },
+        "clp": {
+          "answered": 65.77,
+          "strict": 65.04
+        },
+        "encot": {
+          "answered": 83.52,
+          "strict": 80.74
+        },
+        "en_hing": {
+          "answered": 63.98,
+          "strict": 63.41
+        },
+        "hi_hing": {
+          "answered": 53.69,
+          "strict": 53.41
+        }
+      },
+      "very_very_long": {
+        "en_direct": {
+          "answered": 35.46,
+          "strict": 35.33
+        },
+        "en_cot": {
+          "answered": 82.89,
+          "strict": 78.22
+        },
+        "hi_direct": {
+          "answered": 30.3,
+          "strict": 30.3
+        },
+        "hi_cot": {
+          "answered": 47.87,
+          "strict": 47.56
+        },
+        "clp": {
+          "answered": 61.49,
+          "strict": 61.04
+        },
+        "encot": {
+          "answered": 78.55,
+          "strict": 75.41
+        },
+        "en_hing": {
+          "answered": 58.23,
+          "strict": 57.41
+        },
+        "hi_hing": {
+          "answered": 48.29,
+          "strict": 48.07
+        }
+      }
+    },
+    "by_task": {
+      "date_addition": {
+        "en_direct": {
+          "answered": 85.6,
+          "strict": 85.6
+        },
+        "en_cot": {
+          "answered": 98.0,
+          "strict": 98.0
+        },
+        "hi_direct": {
+          "answered": 82.8,
+          "strict": 82.8
+        },
+        "hi_cot": {
+          "answered": 85.07,
+          "strict": 85.07
+        },
+        "clp": {
+          "answered": 92.67,
+          "strict": 92.67
+        },
+        "encot": {
+          "answered": 95.73,
+          "strict": 95.73
+        },
+        "en_hing": {
+          "answered": 87.33,
+          "strict": 87.33
+        },
+        "hi_hing": {
+          "answered": 85.87,
+          "strict": 85.87
+        }
+      },
+      "date_subtraction": {
+        "en_direct": {
+          "answered": 86.0,
+          "strict": 86.0
+        },
+        "en_cot": {
+          "answered": 95.19,
+          "strict": 95.07
+        },
+        "hi_direct": {
+          "answered": 84.8,
+          "strict": 84.8
+        },
+        "hi_cot": {
+          "answered": 65.95,
+          "strict": 65.87
+        },
+        "clp": {
+          "answered": 86.9,
+          "strict": 86.67
+        },
+        "encot": {
+          "answered": 93.98,
+          "strict": 93.6
+        },
+        "en_hing": {
+          "answered": 70.67,
+          "strict": 70.67
+        },
+        "hi_hing": {
+          "answered": 71.03,
+          "strict": 70.93
+        }
+      },
+      "date_duration": {
+        "en_direct": {
+          "answered": 84.0,
+          "strict": 84.0
+        },
+        "en_cot": {
+          "answered": 99.33,
+          "strict": 99.2
+        },
+        "hi_direct": {
+          "answered": 78.93,
+          "strict": 78.93
+        },
+        "hi_cot": {
+          "answered": 88.25,
+          "strict": 88.13
+        },
+        "clp": {
+          "answered": 92.67,
+          "strict": 92.67
+        },
+        "encot": {
+          "answered": 97.73,
+          "strict": 97.47
+        },
+        "en_hing": {
+          "answered": 92.93,
+          "strict": 92.93
+        },
+        "hi_hing": {
+          "answered": 82.78,
+          "strict": 82.67
+        }
+      },
+      "date_recurrence": {
+        "en_direct": {
+          "answered": 22.07,
+          "strict": 21.87
+        },
+        "en_cot": {
+          "answered": 90.33,
+          "strict": 84.67
+        },
+        "hi_direct": {
+          "answered": 2.8,
+          "strict": 2.8
+        },
+        "hi_cot": {
+          "answered": 20.11,
+          "strict": 20.0
+        },
+        "clp": {
+          "answered": 26.95,
+          "strict": 26.67
+        },
+        "encot": {
+          "answered": 70.34,
+          "strict": 65.47
+        },
+        "en_hing": {
+          "answered": 53.81,
+          "strict": 52.67
+        },
+        "hi_hing": {
+          "answered": 18.87,
+          "strict": 18.67
+        }
+      },
+      "day_of_week": {
+        "en_direct": {
+          "answered": 14.93,
+          "strict": 14.93
+        },
+        "en_cot": {
+          "answered": 69.52,
+          "strict": 58.4
+        },
+        "hi_direct": {
+          "answered": 15.2,
+          "strict": 15.2
+        },
+        "hi_cot": {
+          "answered": 21.02,
+          "strict": 20.27
+        },
+        "clp": {
+          "answered": 31.82,
+          "strict": 30.93
+        },
+        "encot": {
+          "answered": 52.5,
+          "strict": 46.13
+        },
+        "en_hing": {
+          "answered": 34.73,
+          "strict": 33.2
+        },
+        "hi_hing": {
+          "answered": 23.47,
+          "strict": 22.93
+        }
+      },
+      "interval_date": {
+        "en_direct": {
+          "answered": 43.2,
+          "strict": 43.2
+        },
+        "en_cot": {
+          "answered": 50.69,
+          "strict": 48.67
+        },
+        "hi_direct": {
+          "answered": 46.8,
+          "strict": 46.8
+        },
+        "hi_cot": {
+          "answered": 23.86,
+          "strict": 23.73
+        },
+        "clp": {
+          "answered": 35.29,
+          "strict": 35.2
+        },
+        "encot": {
+          "answered": 44.14,
+          "strict": 43.2
+        },
+        "en_hing": {
+          "answered": 38.5,
+          "strict": 38.4
+        },
+        "hi_hing": {
+          "answered": 23.63,
+          "strict": 23.6
+        }
+      },
+      "time_addition": {
+        "en_direct": {
+          "answered": 70.53,
+          "strict": 70.53
+        },
+        "en_cot": {
+          "answered": 95.93,
+          "strict": 94.27
+        },
+        "hi_direct": {
+          "answered": 75.6,
+          "strict": 75.6
+        },
+        "hi_cot": {
+          "answered": 73.47,
+          "strict": 73.47
+        },
+        "clp": {
+          "answered": 88.17,
+          "strict": 87.47
+        },
+        "encot": {
+          "answered": 92.62,
+          "strict": 92.0
+        },
+        "en_hing": {
+          "answered": 82.89,
+          "strict": 82.67
+        },
+        "hi_hing": {
+          "answered": 72.27,
+          "strict": 72.27
+        }
+      },
+      "time_subtraction": {
+        "en_direct": {
+          "answered": 64.67,
+          "strict": 64.67
+        },
+        "en_cot": {
+          "answered": 97.71,
+          "strict": 96.67
+        },
+        "hi_direct": {
+          "answered": 64.93,
+          "strict": 64.93
+        },
+        "hi_cot": {
+          "answered": 75.2,
+          "strict": 74.8
+        },
+        "clp": {
+          "answered": 90.13,
+          "strict": 90.13
+        },
+        "encot": {
+          "answered": 95.71,
+          "strict": 95.2
+        },
+        "en_hing": {
+          "answered": 85.25,
+          "strict": 84.8
+        },
+        "hi_hing": {
+          "answered": 74.23,
+          "strict": 74.13
+        }
+      },
+      "time_duration": {
+        "en_direct": {
+          "answered": 65.73,
+          "strict": 65.73
+        },
+        "en_cot": {
+          "answered": 98.93,
+          "strict": 98.8
+        },
+        "hi_direct": {
+          "answered": 44.67,
+          "strict": 44.67
+        },
+        "hi_cot": {
+          "answered": 80.08,
+          "strict": 79.87
+        },
+        "clp": {
+          "answered": 86.67,
+          "strict": 86.67
+        },
+        "encot": {
+          "answered": 98.13,
+          "strict": 98.0
+        },
+        "en_hing": {
+          "answered": 90.0,
+          "strict": 90.0
+        },
+        "hi_hing": {
+          "answered": 80.93,
+          "strict": 80.93
+        }
+      }
+    },
+    "decomposition": {
+      "answered_share": [
+        79.69,
+        76.4,
+        82.9
+      ],
+      "strict_share": [
+        80.65,
+        76.94,
+        84.15
+      ]
+    }
+  }
+}

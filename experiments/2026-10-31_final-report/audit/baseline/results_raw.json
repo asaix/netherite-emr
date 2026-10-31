@@ -1,0 +1,181 @@
+{
+  "direct_first_vs_answer": {
+    "en_US": {
+      "n_with_two_values": 18044,
+      "disagree": 322,
+      "prev_right_answer_wrong": 10,
+      "prev_wrong_answer_right": 149,
+      "acc_answer": 58.45,
+      "acc_prev": 57.68
+    },
+    "hi_IN": {
+      "n_with_two_values": 14551,
+      "disagree": 342,
+      "prev_right_answer_wrong": 15,
+      "prev_wrong_answer_right": 175,
+      "acc_answer": 54.2,
+      "acc_prev": 53.1
+    }
+  },
+  "examples": [],
+  "direct_first_vs_answer_task": {
+    "en_US/date_addition": {
+      "n": 2195,
+      "disagree": 1,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 1
+    },
+    "en_US/date_duration": {
+      "n": 2061,
+      "disagree": 40,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 36
+    },
+    "en_US/date_recurrence": {
+      "n": 1671,
+      "disagree": 8,
+      "prev_right_answer_wrong": 1,
+      "prev_wrong_answer_right": 0
+    },
+    "en_US/date_subtraction": {
+      "n": 2204,
+      "disagree": 5,
+      "prev_right_answer_wrong": 2,
+      "prev_wrong_answer_right": 0
+    },
+    "en_US/day_of_week": {
+      "n": 2232,
+      "disagree": 0,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 0
+    },
+    "en_US/interval_date": {
+      "n": 2194,
+      "disagree": 53,
+      "prev_right_answer_wrong": 1,
+      "prev_wrong_answer_right": 20
+    },
+    "en_US/time_addition": {
+      "n": 1816,
+      "disagree": 143,
+      "prev_right_answer_wrong": 3,
+      "prev_wrong_answer_right": 69
+    },
+    "en_US/time_duration": {
+      "n": 1696,
+      "disagree": 15,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 7
+    },
+    "en_US/time_subtraction": {
+      "n": 1975,
+      "disagree": 57,
+      "prev_right_answer_wrong": 3,
+      "prev_wrong_answer_right": 16
+    },
+    "hi_IN/date_addition": {
+      "n": 1672,
+      "disagree": 7,
+      "prev_right_answer_wrong": 1,
+      "prev_wrong_answer_right": 3
+    },
+    "hi_IN/date_duration": {
+      "n": 2041,
+      "disagree": 136,
+      "prev_right_answer_wrong": 6,
+      "prev_wrong_answer_right": 105
+    },
+    "hi_IN/date_recurrence": {
+      "n": 1481,
+      "disagree": 31,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 0
+    },
+    "hi_IN/date_subtraction": {
+      "n": 1736,
+      "disagree": 14,
+      "prev_right_answer_wrong": 3,
+      "prev_wrong_answer_right": 2
+    },
+    "hi_IN/day_of_week": {
+      "n": 2226,
+      "disagree": 0,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 0
+    },
+    "hi_IN/interval_date": {
+      "n": 568,
+      "disagree": 12,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 4
+    },
+    "hi_IN/time_addition": {
+      "n": 1208,
+      "disagree": 47,
+      "prev_right_answer_wrong": 4,
+      "prev_wrong_answer_right": 13
+    },
+    "hi_IN/time_duration": {
+      "n": 1902,
+      "disagree": 48,
+      "prev_right_answer_wrong": 0,
+      "prev_wrong_answer_right": 36
+    },
+    "hi_IN/time_subtraction": {
+      "n": 1717,
+      "disagree": 47,
+      "prev_right_answer_wrong": 1,
+      "prev_wrong_answer_right": 12
+    }
+  },
+  "jan_sentence_cutoff_samples": [
+    {
+      "id": "short/date_recurrence_en_US/17/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a commitment that recurs every 3 days, where the last time I had this weekly commitment was in January, and today is 2025-06-27.\n\nFirst, let me understand what \"weekly commitment\" means. A weekly commitment would typically mean it happens once per week (every 7 days). But the problem says I have a recurrence every 3 days, which seems contradictory. Let me re-read carefully.\n\nActually, I think \"weekly commitment\" refers to the type of commitment (something I do weekly), but now I'm being asked about a recurrence every 3 days. Or perhaps \"weekly commitment\" is describing the pattern, and I need to find when the 1st occurrence was.\n\nWait - let m",
+      "mid": "ly until January, and now every 3 days, and today is an occurrence... \n\nWait - maybe \"weekly commitment\" is just descriptive of what the commitment is, not the frequency. And the frequency is every 3 days. The last time I had it was in January (when it was weekly, i.e., every 7 days). But now it's every 3 days, and I need to find the 1st occurrence of this new pattern.\n\nBut I still don't know when the new pattern started.\n\nLet me try yet another interpretation: The commitment occurs every 3 days",
+      "tail": "(56)\n- 2025-01-07 (57)\n- 2025-01-04 (58)\n- 2025-01-01 (59)\n- 2024-12-29 (60)\n- ...\n\nSo if we go back by 3-day intervals from June 27, 2025, we hit January 1, 2025 as the 59th occurrence (not counting today as occurrence 0, but as the current one).\n\nWait, let me recount. If today is 2025-06-27 and we don't count it, then:\n- 2025-06-24 is the 1st occurrence (going backwards)\n- 2025-06-21 is the 2nd\n"
+    },
+    {
+      "id": "short/date_recurrence_en_US/22/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a weekly commitment, given that the last time was in January, today is 2025-07-01, and there's a recurrence every 4 days.\n\nWait, let me re-read this. \"The last time I had a weekly commitment was in January.\" This seems to mean the last occurrence was in January 2025 (since today is July 2025).\n\nBut then it says \"I have a recurrence every 4 days.\" This is a bit confusing because \"weekly\" usually means 7 days, but the recurrence is every 4 days.\n\nLet me re-interpret: The commitment has a recurrence every 4 days, and the last time it occurred was in January 2025. Today is 2025-07-01.\n\nSo I need to find when the next occurrence was after January,",
+      "mid": "rrence or a recent one). What is the date of the 1st occurrence?\n\nIf January 26 was the last occurrence before today, and it recurs every 4 days, then the first occurrence would be earlier in January or before.\n\nFrom January 26, going back by 4-day intervals to find the first occurrence in 2025:\n- January 26, 2025\n- January 22, 2025\n- January 18, 2025\n- etc.\n\nBut when was the first occurrence? If we assume it started in January 2025, we need to know when.\n\nActually, let me re-read once more. \"Th",
+      "tail": "26, 2025, then the first 4-day recurrence would be... but we don't know when it started.\n\nUnless the 4-day recurrence started on January 27, 2025? Then the first occurrence would be January 27, 2025?\n\nBut that's arbitrary.\n\nLet me try a completely different interpretation. Maybe \"weekly commitment\" means the commitment happens once a week (every 7 days), and \"recurrence every 4 days\" is a separate"
+    },
+    {
+      "id": "short/date_recurrence_en_US/50/similar_insertion/cot",
+      "head": "\nI need to find the date of the 2nd occurrence of a weekly commitment, given that the last time I had one was in January, today is 2025-10-19, and I have a recurrence every 2 days.\n\nWait - let me re-read this. The problem says \"weekly commitment\" but then says \"recurrence every 2 days.\" This seems contradictory. Let me re-interpret: perhaps \"weekly\" refers to the type of commitment, but the recurrence pattern is every 2 days.\n\nActually, re-reading more carefully: \"I have a recurrence every 2 days.\" This means the commitment repeats every 2 days.\n\nThe last time I had a weekly commitment was in January. Today is 2025-10-19.\n\nI need to find when the 2nd occurrence is, without counting today.\n\nF",
+      "mid": "currence is every 2 days, then there have been many occurrences between January and October.\n\nUnless \"The last time I had a weekly commitment was in January\" means that the last time I had a commitment that was weekly (i.e., every week) was in January, and now I'm tracking a new commitment that recurs every 2 days?\n\nI think the most sensible interpretation for a math problem is:\n- There is a commitment with recurrence every 2 days\n- The last occurrence was on some date in January 2025\n- Today is",
+      "tail": " \"the 2 occurrence\" without counting today:\n- If today is occurrence 1, then not counting today, the next is occurrence 2, which is 2 days later = Oct 21\n- If today is not an occurrence, then the next is occurrence 1, and the one after is occurrence 2\n\nHmm, \"the 2 occurrence\" is ambiguous. Does it mean:\n- The 2nd occurrence in the sequence?\n- An occurrence that happens 2 times?\n\nI think it means \""
+    },
+    {
+      "id": "short/date_recurrence_en_US/51/similar_insertion/cot",
+      "head": "\nI need to find the date of the first occurrence of a recurring commitment, given that the last weekly commitment was in January, and today is 2025-12-03.\n\nFirst, let me understand the problem:\n- The commitment recurs every 3 days\n- The last weekly commitment was in January (2025, since today is December 2025)\n- Today is 2025-12-03\n- I need to find the date of the 1st occurrence (the first one)\n- \"Without counting today\" means today is not counted as an occurrence\n\nWait, let me re-read. \"The last time I had a weekly commitment was in January.\" This seems to refer to a weekly commitment, but then it says \"I have a recurrence every 3 days.\" \n\nActually, re-reading more carefully: The person is ",
+      "mid": "ays, and we don't count today...\n\nIf the recurrence is ongoing and today is an occurrence date but we don't count it, then the first occurrence would be the previous one: 2025-11-30.\n\nBut wait - \"Without counting today\" might mean that today is not an occurrence at all, so we need to find the first occurrence from the start.\n\nLet me think about this more carefully. If a recurrence is every 3 days, and today is 2025-12-03, then:\n- If the recurrence started on 2025-12-03, then the first occurrence",
+      "tail": "ng myself.\n\nLet me try: The recurrence is every 3 days. Today is 2025-12-03. If today were counted, it would be some occurrence number. But we don't count today. We need to find the date of the first occurrence.\n\nIf the recurrence started on some date and today is within the sequence but not counted, then the first occurrence is simply the start date.\n\nBut we need to figure out the start date from"
+    },
+    {
+      "id": "short/date_recurrence_en_US/54/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a weekly commitment that started in January.\n\nFirst, let me understand the problem:\n- Today is 2025-11-06\n- There's a recurrence every 3 days\n- The last time I had a weekly commitment was in January\n- I need to find the date of the 1st occurrence, without counting today\n\nWait, let me re-read. \"The last time I had a weekly commitment was in January.\" This seems to indicate that the commitment started in January.\n\nBut there's a recurrence every 3 days. Let me think about this more carefully.\n\nIf the commitment happens every 3 days, and I need to find when it started, I need to work backwards from today.\n\nToday is 2025-11-06.\n\nIf I have a recurr",
+      "mid": "there's a new recurrence pattern.\n\nLet me try: The commitment used to be weekly (every 7 days), last occurrence was in January. Now it's every 3 days. When did the 3-day recurrence start?\n\nPerhaps it started from today? Or from some point?\n\nActually, I think the key might be in \"Without counting today, what is the date of the 1 occurrence?\"\n\nIf today is 2025-11-06, and I have a recurrence every 3 days, and I'm not counting today...\n\nMaybe the occurrences are: today (2025-11-06), yesterday (2025-",
+      "tail": "y.\n\nUnless... \"January\" implies January 1?\n\nOr perhaps the problem is designed so that the answer is simply in January, and we need to figure out which date.\n\nLet me try working with the information given. Today is 2025-11-06. The recurrence is every 3 days.\n\nIf we work backwards from today, and today is an occurrence (or not), we can find previous occurrences.\n\n\"Without counting today\" - so today"
+    },
+    {
+      "id": "short/date_recurrence_en_US/60/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a weekly commitment, given that today is 2025-09-06 and the last time I had this commitment was in January.\n\nFirst, let me understand the problem:\n- Today is 2025-09-06\n- I have a recurrence every 4 days\n- The last time I had this commitment was in January (2025)\n- I need to find the date of the 1st occurrence, without counting today\n\nWait, let me re-read. \"The last time I had a weekly commitment was in January.\" But then it says \"I have a recurrence every 4 days.\" This seems contradictory - a weekly commitment would recur every 7 days, but the recurrence given is every 4 days.\n\nLet me re-interpret: The \"weekly commitment\" refers to some comm",
+      "mid": "fore today. But if today is 2025-09-06 and it's every 4 days, there would have been many occurrences between January and September.\n\nUnless... \"weekly commitment\" means it was weekly, and \"every 4 days\" is the new recurrence. But the last time was in January.\n\nHmm, let me try yet another interpretation: The commitment was last held in January 2025. Now, starting from some point, it recurs every 4 days. Today is 2025-09-06. \n\nIf today is an occurrence and we're not counting it, and the last time ",
+      "tail": "ommitment was weekly, last in January 2025. Then it stopped. Now it's recurring every 4 days. Today is 2025-09-06. \n\nIf today is an occurrence, and we need to find the 1st occurrence of the 4-day recurrence... but we need to know when it started.\n\nHmm, but the problem seems to imply we can determine the answer from the given information.\n\nLet me try yet another interpretation: \"The last time I had"
+    },
+    {
+      "id": "short/date_recurrence_en_US/72/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a weekly commitment, given that the last time I had one was in January, and today is 2025-12-08.\n\nLet me parse the information:\n- The last time I had a weekly commitment was in January (2025, presumably)\n- Today is 2025-12-08\n- I have a recurrence every 4 days\n- I need to find the date of the \"1 occurrence\" (which I interpret as the first occurrence, i.e., the most recent one before today)\n\nWait, let me re-read. \"The last time I had a weekly commitment was in January.\" This suggests that the last occurrence was in January 2025.\n\nBut then it says \"I have a recurrence every 4 days.\" This seems to be describing a pattern.\n\nLet me think about thi",
+      "mid": "k)\n- 2025-11-30 (2 occurrences back)\n- etc.\n\nBut when does it start? The problem says \"the last time I had a weekly commitment was in January.\" \n\nMaybe the 4-day pattern started in January? If the last weekly one was in January, and then the 4-day pattern began...\n\nIf January 2025 was the last monthly/weekly occurrence, and 4-day pattern started then, then going back from today (2025-12-08) by 4 days repeatedly:\n\nLet me calculate: 2025-12-08 minus 4 days = 2025-12-04\n2025-12-04 minus 4 days = 20",
+      "tail": "6, 20, 24, 28, Mar 3... wait that's not right.\n\nJan 3 + 4 = Jan 7\nJan 7 + 4 = Jan 11\n...\nJan 3 + 8*4 = Jan 3 + 32 = Feb 4\n\nLet me just calculate: from Jan 3 to Dec 8.\nJan 3 to Dec 3 is 335 days (Jan 3 to Jan 335 = Dec 3? No, Jan has 31 days).\n\nJan 3 to Feb 3 = 31 days\nFeb 3 to Mar 3 = 28 days (2025 is not a leap year, 2025/4 = 506.25, not divisible by 4)\nMar 3 to Apr 3 = 31 days\nApr 3 to May 3 = 3"
+    },
+    {
+      "id": "short/date_recurrence_en_US/83/similar_insertion/cot",
+      "head": "\nI need to find the date of the 1st occurrence of a weekly commitment, given that the last time I had a weekly commitment was in January, and I have a recurrence every 4 days.\n\nFirst, let me understand the timeline:\n- Today is 2025-10-17\n- The last weekly commitment was in January (2025-01-xx)\n- I have a recurrence every 4 days\n- I need to find the date of the 1st occurrence (without counting today)\n\nWait, let me re-read this. The problem says \"The last time I had a weekly commitment was in January\" and \"I have a recurrence every 4 days.\"\n\nActually, I think I need to interpret this differently. If I have a recurrence every 4 days, and the last time was in January, I need to find when the nex",
+      "mid": "uch that adding multiples of 4 days lands in October.\n\nLet me check: From January 1, 2025 to October 17, 2025:\n- January: 31 days\n- February: 28 days (2025 is not a leap year)\n- March: 31 days\n- April: 30 days\n- May: 31 days\n- June: 30 days\n- July: 31 days\n- August: 31 days\n- September: 30 days\n- October 1-17: 17 days\n\nTotal: 31+28+31+30+31+30+31+31+30+17 = 290 days\n\n290 / 4 = 72.5, so not exact.\n\nFrom January 2, 2025: 290 - 1 = 289, not divisible by 4.\nFrom January 3: 288, divisible by 4! 288/4",
+      "tail": "e old schedule, not this new 4-day recurrence.\n\nActually, that makes sense! The \"weekly commitment\" was last in January (old schedule, every 7 days). Now I have a new recurrence every 4 days. Without counting today, when is the first occurrence of this new recurrence?\n\nIf today is 2025-10-17 and it's a recurrence day (since 2025-10-13 + 4 = 2025-10-17), then without counting today, the most recent"
+    }
+  ]
+}

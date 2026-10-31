@@ -1,0 +1,51 @@
+{
+  "mode_or_primary": [
+    0.09783891691733829,
+    0.06637421587062027,
+    0.14421946139773456
+  ],
+  "gap_beta": [
+    -1.1898523245847203,
+    0.08882941628665661,
+    6.484991369925371e-41
+  ],
+  "share_rds_gt_0.7": 0.8762462491530345,
+  "share_off": 0.9423579517955667,
+  "en_share_of_disagree": 0.9204072188801481,
+  "hi_failures_share_off": 0.9217296962182269,
+  "views_complete_case_n": 20648,
+  "mechanical_corruption": {
+    "n_both_correct": 11309,
+    "rds_actual": 0.7976525910049111,
+    "rds_with_hindi_answer_token_values_replaced": 0.87926865971289,
+    "delta": 0.08161606870797887,
+    "observed_gap_disagree_vs_both_correct_off": 0.1198574794287649,
+    "observed_gap_disagree_vs_agree_off": 0.10316273370445828,
+    "auc_same_pairs_true_vs_corrupted": 0.7259133403367135
+  },
+  "answers_differ_rule": {
+    "recall": 1.0,
+    "precision": 0.8236564604243425,
+    "auc": 0.9510543761901403,
+    "n": 20662,
+    "note": "Comparing the two final answer strings is sufficient for this outcome: disagreement implies differing answers."
+  },
+  "on_rds_only": {
+    "beta": 20.46247617068426,
+    "ll": -107.01631089332545,
+    "sep_message": "Possibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified.",
+    "disagreeing_clusters": 29,
+    "events": 31,
+    "loo_beta_min": 19.447792524833904,
+    "loo_beta_max": 22.86716369053067,
+    "min_rds_event": 0.7333333333333333,
+    "share_nonevents_below_min_event": 0.4051724137931034
+  },
+  "exclusion_wald": {
+    "task_chi2": 818.9033220269979,
+    "task_p": 1.7339859090809093e-171,
+    "difficulty_chi2": 151.05759443843863,
+    "difficulty_p": 1.2080503363799197e-31,
+    "auc": 0.8869375690239429
+  }
+}

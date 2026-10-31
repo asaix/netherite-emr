@@ -1,0 +1,30 @@
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{English Q.} & \multicolumn{4}{c}{Hindi Q.} & \multicolumn{2}{c}{Hinglish prompt} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-7}\cmidrule(l){8-9}
+& Direct & CoT & Direct & CoT & CLP & en-CoT & English Q. & Hindi Q. \\
+\midrule
+Date addition & 85.6 & 98.0 & 82.8 & 85.1 & 92.7 & 95.7 & 87.3 & 85.9 \\
+Date subtraction & 86.0 & 95.2 & 84.8 & 66.0 & 86.9 & 94.0 & 70.7 & 71.0 \\
+Date duration & 84.0 & 99.3 & 78.9 & 88.2 & 92.7 & 97.7 & 92.9 & 82.8 \\
+Date recurrence & 22.1 & 90.3 & 2.8 & 20.1 & 26.9 & 70.3 & 53.8 & 18.9 \\
+Day of week & 14.9 & 69.5 & 15.2 & 21.0 & 31.8 & 52.5 & 34.7 & 23.5 \\
+Interval date & 43.2 & 50.7 & 46.8 & 23.9 & 35.3 & 44.1 & 38.5 & 23.6 \\
+Time addition & 70.5 & 95.9 & 75.6 & 73.5 & 88.2 & 92.6 & 82.9 & 72.3 \\
+Time subtraction & 64.7 & 97.7 & 64.9 & 75.2 & 90.1 & 95.7 & 85.2 & 74.2 \\
+Time duration & 65.7 & 98.9 & 44.7 & 80.1 & 86.7 & 98.1 & 90.0 & 80.9 \\
+\midrule
+Short & 77.8 & 93.2 & 73.9 & 69.5 & 77.2 & 83.0 & 82.9 & 66.5 \\
+Medium & 69.6 & 91.6 & 65.3 & 65.4 & 75.7 & 84.9 & 78.8 & 67.4 \\
+Long & 61.2 & 89.3 & 57.9 & 60.4 & 71.3 & 84.4 & 70.4 & 60.9 \\
+Very long & 54.3 & 87.2 & 48.4 & 53.7 & 65.8 & 83.5 & 64.0 & 53.7 \\
+Very very long & 35.5 & 82.9 & 30.3 & 47.9 & 61.5 & 78.5 & 58.2 & 48.3 \\
+\midrule
+No distractor & 60.6 & 89.3 & 56.0 & 60.2 & 69.3 & 84.1 & 70.6 & 61.0 \\
+Time-related & 59.9 & 88.2 & 54.9 & 58.9 & 69.3 & 81.0 & 69.7 & 59.1 \\
+Unrelated & 58.6 & 89.2 & 54.6 & 59.1 & 72.3 & 83.6 & 72.3 & 58.0 \\
+\midrule
+\textbf{All, answered} & 59.7 & 88.9 & 55.2 & 59.4 & 70.3 & 82.9 & 70.9 & 59.4 \\
+\textbf{All, strict} & 59.6 & 86.0 & 55.2 & 59.0 & 69.9 & 80.8 & 70.3 & 59.1 \\
+\bottomrule
+\end{tabular}

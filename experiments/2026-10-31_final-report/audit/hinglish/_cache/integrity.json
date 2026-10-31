@@ -1,0 +1,60 @@
+{
+  "prompt_tails_differ": 0,
+  "gold_differ": 0,
+  "settings": {
+    "hinglish": {
+      "model": "sarvam-105b",
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "standard": {
+      "model": "sarvam-105b",
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "encot": {
+      "model": "sarvam-105b",
+      "reasoning_effort": null,
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "top_p": 1.0
+    }
+  },
+  "missing_in_standard": 0,
+  "per_level": {
+    "short": {
+      "hinglish": 2700,
+      "standard_all": 16200,
+      "standard_kept": 5400,
+      "encot": 1350
+    },
+    "medium": {
+      "hinglish": 2700,
+      "standard_all": 16200,
+      "standard_kept": 5400,
+      "encot": 1350
+    },
+    "long": {
+      "hinglish": 2700,
+      "standard_all": 16200,
+      "standard_kept": 5400,
+      "encot": 1350
+    },
+    "very_long": {
+      "hinglish": 2700,
+      "standard_all": 16200,
+      "standard_kept": 5400,
+      "encot": 1350
+    },
+    "very_very_long": {
+      "hinglish": 2700,
+      "standard_all": 16200,
+      "standard_kept": 5400,
+      "encot": 1350
+    }
+  }
+}
