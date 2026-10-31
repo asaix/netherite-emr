@@ -1,0 +1,224 @@
+{
+  "levels": {
+    "short": {
+      "responses_standard": 16200,
+      "unique_ids": 16200,
+      "responses_run": 16200,
+      "identical_to_run": 16200,
+      "only_in_run": 0,
+      "only_in_standard": 0,
+      "questions": 1350,
+      "all_12": true,
+      "cut_off_finish_length": 85,
+      "tasks": 9
+    },
+    "medium": {
+      "responses_standard": 16200,
+      "unique_ids": 16200,
+      "responses_run": 16200,
+      "identical_to_run": 16200,
+      "only_in_run": 0,
+      "only_in_standard": 0,
+      "questions": 1350,
+      "all_12": true,
+      "cut_off_finish_length": 118,
+      "tasks": 9
+    },
+    "long": {
+      "responses_standard": 16200,
+      "unique_ids": 16200,
+      "responses_run": 16200,
+      "identical_to_run": 16200,
+      "only_in_run": 0,
+      "only_in_standard": 0,
+      "questions": 1350,
+      "all_12": true,
+      "cut_off_finish_length": 152,
+      "tasks": 9
+    },
+    "very_long": {
+      "responses_standard": 16200,
+      "unique_ids": 16200,
+      "responses_run": 16200,
+      "identical_to_run": 16200,
+      "only_in_run": 0,
+      "only_in_standard": 0,
+      "questions": 1350,
+      "all_12": true,
+      "cut_off_finish_length": 210,
+      "tasks": 9
+    },
+    "very_very_long": {
+      "responses_standard": 16200,
+      "unique_ids": 16200,
+      "responses_run": 16200,
+      "identical_to_run": 16200,
+      "only_in_run": 0,
+      "only_in_standard": 0,
+      "questions": 1350,
+      "all_12": true,
+      "cut_off_finish_length": 267,
+      "tasks": 9
+    }
+  },
+  "total_responses": 81000,
+  "total_questions": 6750,
+  "early_runs_subset": {
+    "experiments/2026-09-29_run-short-rahul/outputs/results.json": {
+      "records": 9895,
+      "identical_in_standard": 9895
+    },
+    "experiments/2026-09-29_run-medium-rahul/output/results.json": {
+      "records": 9475,
+      "identical_in_standard": 9475
+    },
+    "experiments/2026-09-29_run-long-adi/outputs/long/results.json": {
+      "records": 4885,
+      "identical_in_standard": 4885
+    },
+    "experiments/2026-09-30_run-very-long-aayush/output/results.json": {
+      "records": 15989,
+      "identical_in_standard": 15989
+    }
+  },
+  "mid_merged": {
+    "records": 37068,
+    "identical_in_standard": 37068,
+    "questions_any": 3089,
+    "questions_all_12": 3089,
+    "records_in_all_12": 37068
+  },
+  "ron": {
+    "short": {
+      "records": 1080,
+      "identical": 1080,
+      "questions": 90,
+      "qnums": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "medium": {
+      "records": 1080,
+      "identical": 1080,
+      "questions": 90,
+      "qnums": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "long": {
+      "records": 1080,
+      "identical": 1080,
+      "questions": 90,
+      "qnums": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "very_long": {
+      "records": 1080,
+      "identical": 1080,
+      "questions": 90,
+      "qnums": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "very_very_long": {
+      "records": 1080,
+      "identical": 1080,
+      "questions": 90,
+      "qnums": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "ron_total": 5400,
+  "filled_in": {
+    "responses_after_oct28": 5,
+    "questions": [
+      "very_very_long/time_addition/84",
+      "very_very_long/time_duration/149",
+      "very_very_long/time_duration/73",
+      "very_very_long/time_subtraction/2",
+      "very_very_long/time_subtraction/27"
+    ],
+    "dates": [
+      "2026-10-29"
+    ],
+    "errors_removed_by_d7e7bfe": 5,
+    "error_ids_sample": [
+      "very_very_long/time_addition_hi_IN/84/no_insertion/cot",
+      "very_very_long/time_duration_hi_IN/149/similar_insertion/cot",
+      "very_very_long/time_duration_hi_IN/73/similar_insertion/direct",
+      "very_very_long/time_subtraction_hi_IN/2/no_insertion/direct",
+      "very_very_long/time_subtraction_hi_IN/27/no_insertion/cot"
+    ],
+    "questions_from_errors": [
+      "very_very_long/time_addition/84",
+      "very_very_long/time_duration/149",
+      "very_very_long/time_duration/73",
+      "very_very_long/time_subtraction/2",
+      "very_very_long/time_subtraction/27"
+    ],
+    "records_in_questions": 60,
+    "time_range": [
+      "2026-10-25 11:20:32.403954+00:00",
+      "2026-10-29 07:01:10.887217+00:00"
+    ],
+    "n_records_on_oct29": 5,
+    "acc_answered": 0.4915
+  },
+  "dates": {
+    "2026-09-29": 31934,
+    "2026-09-30": 8310,
+    "2026-10-15": 17547,
+    "2026-10-17": 6709,
+    "2026-10-18": 8822,
+    "2026-10-24": 89,
+    "2026-10-25": 7584,
+    "2026-10-29": 5
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "within_phi_enCoT_minus_HiCoT": {
+    "ci": [
+      0.021,
+      0.106
+    ]
+  },
+  "en_word_share": {
+    "mean_of_ratios": 0.999,
+    "pooled": 0.9977
+  },
+  "quote_given_phrasing": {
+    "n": 22,
+    "exact": [
+      "short/date_recurrence_hi_IN/43/no_insertion/en-cot"
+    ]
+  },
+  "attrib_only_english_right": {
+    "pairs_only_en": 672,
+    "pairs_only_hi": 320,
+    "net": 352,
+    "mirror_in_only_en": 55,
+    "one_late_in_only_en": 84,
+    "by_task_only_en": {
+      "date_recurrence": 172,
+      "day_of_week": 165,
+      "interval_date": 154,
+      "time_addition": 51,
+      "date_subtraction": 42,
+      "date_addition": 31,
+      "time_subtraction": 29,
+      "date_duration": 17,
+      "time_duration": 11
+    },
+    "by_task_only_hi": {
+      "interval_date": 104,
+      "day_of_week": 80,
+      "date_recurrence": 38,
+      "date_subtraction": 33,
+      "time_addition": 27,
+      "time_subtraction": 14,
+      "date_addition": 14,
+      "date_duration": 5,
+      "time_duration": 5
+    }
+  },
+  "attrib_points": {
+    "date_addition": 0.25,
+    "date_subtraction": 0.14,
+    "date_duration": 0.18,
+    "date_recurrence": 2.22,
+    "day_of_week": 1.89,
+    "interval_date": 0.73,
+    "time_addition": 0.37,
+    "time_subtraction": 0.22,
+    "time_duration": 0.09
+  },
+  "encot_translation": {
+    "mention_translate%": 0.5,
+    "restate_in_first_400_chars%": 11.1,
+    "any_devanagari%": 12.8,
+    "acc_translate": 78.3,
+    "acc_no_translate": 82.9
+  },
+  "verif_gformula": {
+    "enCoT_cell_avg": 82.3,
+    "enCoT_if_verif_at_HindiCoT_rate": 82.1,
+    "HindiCoT_cell_avg": 59.2,
+    "total": 23.1,
+    "ci_total": [
+      21.9,
+      24.3
+    ],
+    "indirect_via_verif": 0.2,
+    "ci_indirect": [
+      -1.4,
+      2.1
+    ],
+    "direct_rest": 22.9,
+    "ci_direct": [
+      20.6,
+      24.9
+    ],
+    "share_mediated%": 1.0,
+    "ci_share": [
+      -6.3,
+      9.0
+    ]
+  },
+  "usage_details_present_by_date": {
+    "2026-09-29": 0.0,
+    "2026-09-30": 0.0,
+    "2026-10-15": 1.0,
+    "2026-10-17": 1.0,
+    "2026-10-18": 1.0,
+    "2026-10-24": 1.0,
+    "2026-10-25": 1.0,
+    "2026-10-29": 1.0
+  },
+  "encot_design": {
+    "n": 6750,
+    "questions": 2250,
+    "ins": {
+      "no_insertion": 2250,
+      "dissimilar_insertion": 2250,
+      "similar_insertion": 2250
+    },
+    "qn_max": 49,
+    "dates": {
+      "2026-10-28": 6750
+    }
+  },
+  "encot_request_params": {
+    "('sarvam-105b', 4096, 0.0, 1.0, None)": 6750
+  },
+  "cutoff_loops": {
+    "repeat_tail": {
+      "English CoT": 0.014,
+      "Hindi CoT": 0.581,
+      "Hindi en-CoT": 0.142
+    },
+    "repeat_line": {
+      "English CoT": 0.027,
+      "Hindi CoT": 0.581,
+      "Hindi en-CoT": 0.205
+    }
+  },
+  "cutoff_n": {
+    "English CoT": 221,
+    "Hindi CoT": 43,
+    "Hindi en-CoT": 176
+  },
+  "phi_cells": {
+    "cells": 45,
+    "En_wrong_le2": 17,
+    "En_wrong_le5": 23,
+    "En_wrong_median": 5.0,
+    "hi_wrong_median": 10.0,
+    "defined": 34
+  },
+  "subset_cells_excluding_zero": {
+    "n": 60,
+    "excl": 0,
+    "list": []
+  },
+  "distractor_pair_ok": {
+    "unique_pairs": 90,
+    "unique_hi": 78,
+    "unique_en": 78
+  },
+  "gap_no_k1": {
+    "gap": 5.3,
+    "ci": [
+      4.3,
+      6.3
+    ],
+    "enCoT_acc": 83.6,
+    "HiCoT_acc": 59.9
+  },
+  "gap_no_k12": {
+    "gap": 4.6,
+    "ci": [
+      3.7,
+      5.7
+    ],
+    "enCoT_acc": 84.0,
+    "HiCoT_acc": 60.3,
+    "En_acc": 88.6
+  },
+  "trend_only_task_holm": {
+    "only date_addition answered": 1.0,
+    "only date_subtraction answered": 1.0,
+    "only date_duration answered": 1.0,
+    "only date_recurrence answered": 0.0009000000000000001,
+    "only day_of_week answered": 0.5184,
+    "only interval_date answered": 1.0,
+    "only time_addition answered": 0.8134,
+    "only time_subtraction answered": 1.0,
+    "only time_duration answered": 1.0
+  },
+  "decline_short_to_vvl": {
+    "English CoT": {
+      "answered": 10.3,
+      "ci": [
+        7.3,
+        13.3
+      ],
+      "strict": 13.9,
+      "strict_ci": [
+        10.6,
+        17.1
+      ]
+    },
+    "Hindi en-CoT": {
+      "answered": 4.4,
+      "ci": [
+        0.5,
+        8.3
+      ],
+      "strict": 6.4,
+      "strict_ci": [
+        2.4,
+        10.5
+      ]
+    },
+    "Hindi CoT": {
+      "answered": 21.7,
+      "ci": [
+        16.9,
+        26.5
+      ],
+      "strict": 21.8,
+      "strict_ci": [
+        17.0,
+        26.6
+      ]
+    },
+    "Hindi CLP": {
+      "answered": 15.7,
+      "ci": [
+        11.1,
+        20.3
+      ],
+      "strict": 16.0,
+      "strict_ci": [
+        11.4,
+        20.6
+      ]
+    }
+  },
+  "gee_logit_en_x_level_task_fe": {
+    "coef": -0.22531817386941966,
+    "se": 0.04416590381139852,
+    "p": 3.3673761097245396e-07
+  },
+  "gee_logit_no_recurrence": {
+    "coef": -0.09805018829624136,
+    "se": 0.046599169684083355,
+    "p": 0.035368086612681406
+  },
+  "interval_vs_direct": {
+    "diff": -2.7,
+    "ci95": [
+      -7.6,
+      2.2
+    ],
+    "ci90": [
+      -6.8,
+      1.5
+    ],
+    "mcnemar": [
+      124,
+      148,
+      0.1630210529565591
+    ],
+    "strict": -3.6,
+    "strict_ci": [
+      -8.5,
+      1.2
+    ]
+  }
+}

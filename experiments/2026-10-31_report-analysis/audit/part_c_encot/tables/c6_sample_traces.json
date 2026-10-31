@@ -1,0 +1,121 @@
+[
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/2/dissimilar_insertion/en-cot",
+    "question": "आज आसमान नीला है। आज 2025-07-30 है, और मेरे पास हर 1 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-07-31",
+    "content": "I need to find the date of the 1st recurrence, excluding today.\n\nLet me break this down:\n- Today is 2025-07-30\n- The recurrence period is every 1 day\n- I need to find the 1st recurrence date, excluding today\n\nIf the recurrence is every 1 day, then:\n- Today (day 0): 2025-07-30\n- 1st recurrence (1 day after today): 2025-07-31\n\nSince we exclude today, the next occurrence is 1 day later.\n\nAnswer: 2025-07-31"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/5/similar_insertion/en-cot",
+    "question": "सात मेरा भाग्यशाली नंबर है। आज 2025-06-08 है, और मेरे पास हर 1 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-06-09",
+    "content": "I need to find the date of the 1st occurrence, excluding today's date.\n\nGiven information:\n- Today is 2025-06-08\n- The period is every 1 day\n- Today (2025-06-08) is excluded\n- 7 is my lucky number (this seems like extra information not needed for the calculation)\n\nSince the period is every 1 day, the occurrences happen daily.\n\nIf today (2025-06-08) is excluded, I need to find when the 1st occurrence happened before today.\n\nGoing backwards from 2025-06-08 by 1 day:\n- 2025-06-07 would be the 1st occurrence (the day before today)\n\nLet me verify: If we have occurrences every 1 day, and today is excluded, then the previous day is the most recent occurrence, which would be the 1st occurrence in th"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/3/similar_insertion/en-cot",
+    "question": "आखिरी साप्ताहिक प्रतिबद्धता जनवरी में थी। आज 2025-10-27 है, और मेरे पास हर 2 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-10-29",
+    "content": "I need to find the date of the 1st recurrence, given that the last weekly commitment was in January, today is 2025-10-27, and there is a recurrence every 2 days.\n\nLet me break this down:\n\n1. \"Last weekly commitment was in January\" - This tells me the most recent occurrence of this commitment was in January 2025.\n\n2. \"Today is 2025-10-27\" - This is the current date.\n\n3. \"I have a recurrence every 2 days\" - The commitment repeats every 2 days.\n\n4. \"Excluding today\" - I need to find the date before today, not today itself.\n\nSince the last commitment was in January 2025, and we're now in October 2025, there have been many recurrences between January and October.\n\nTo find the 1st recurrence date,"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/6/no_insertion/en-cot",
+    "question": "आज 2025-10-28 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-10-31",
+    "content": "I need to find the date of the 1st occurrence, given that today is 2025-10-28 and there is a recurrence every 3 days.\n\nLet me work through this step by step.\n\nFirst, I need to understand what \"1st occurrence\" means in this context. Since today is 2025-10-28 and we're looking for the first occurrence excluding today, this means we need to find the most recent occurrence before today.\n\nIf the recurrence happens every 3 days, then the occurrences happen on dates that are 3 days apart.\n\nTo find the previous occurrence before 2025-10-28, I need to subtract 3 days from today's date.\n\n2025-10-28 minus 3 days:\n- October has 31 days\n- 28 - 3 = 25\n\nSo the previous occurrence was on 2025-10-25.\n\nLet me"
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/17/no_insertion/en-cot",
+    "question": "आज 2025-06-27 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-06-30",
+    "content": "I need to find the date of the 1st occurrence, given that today is 2025-06-27 and there is a recurrence every 3 days.\n\nLet me work through this step by step.\n\nFirst, let me understand the problem:\n- Today is June 27, 2025\n- There is a recurrence every 3 days\n- I need to find the date of the 1st occurrence (excluding today)\n\nIf there is a recurrence every 3 days starting from today, then:\n- 1st occurrence would be 3 days from today\n- 2nd occurrence would be 6 days from today\n- And so on...\n\nSo the 1st occurrence (excluding today) would be 3 days after June 27, 2025.\n\nLet me calculate:\n- June 27 + 3 days = June 30, 2025\n\nWait, let me reconsider. The problem asks for \"1st frequency date\" (1वीं "
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/17/dissimilar_insertion/en-cot",
+    "question": "ताजी रोटी अच्छी महकती है। आज 2025-06-27 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-06-30",
+    "content": "I need to find the date of the 1st occurrence, given that today is 2025-06-27, there is a recurrence every 3 days, and today is excluded.\n\nLet me break this down:\n- Today is 2025-06-27\n- The recurrence happens every 3 days\n- Today is excluded from the count\n\nIf today is excluded, then:\n- The 1st occurrence would be 3 days before today (going backwards)\n- The 2nd occurrence would be 3 days before the 1st\n- And so on\n\nSo the 1st occurrence = 2025-06-27 minus 3 days = 2025-06-24\n\nLet me verify: \n- 1st occurrence: 2025-06-24\n- 2nd occurrence: 2025-06-27 (today)\n\nThis makes sense. Since today is excluded, the most recent occurrence before today was 3 days ago, which would be the 1st occurrence in"
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/20/similar_insertion/en-cot",
+    "question": "फरवरी एक अनोखा महीना है। आज 2025-09-03 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-09-07",
+    "content": "I need to find the date of the first recurrence, excluding today's date.\n\nLet me break this down:\n- Today is September 3, 2025\n- The recurrence happens every 4 days\n- I need to find the date of the 1st recurrence, excluding today\n\nSince today is September 3, 2025, and I need to exclude today, the first recurrence would be 4 days after today.\n\nLet me calculate:\n- September 3, 2025 + 4 days = September 7, 2025\n\nLet me verify:\n- September 3, 2025 (today - excluded)\n- September 4, 2025 (day 1 after today)\n- September 5, 2025 (day 2 after today)\n- September 6, 2025 (day 3 after today)\n- September 7, 2025 (day 4 after today = 1st recurrence)\n\nSo the 1st recurrence date is September 7, 2025.\n\nAnswe"
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/24/similar_insertion/en-cot",
+    "question": "मेरा शेड्यूलिंग ऐप क्रैश होता है। आज 2025-07-05 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-07-09",
+    "content": "I need to find the date of the 1st recurrence, given that today is 2025-07-05, the recurrence interval is every 4 days, and I need to exclude today itself.\n\nStep 1: Understand the recurrence pattern.\nSince the recurrence is every 4 days, I add 4 days to find the next occurrence.\n\nStep 2: Calculate the first recurrence date.\nToday is 2025-07-05.\nAdding 4 days: \n- 2025-07-05 + 4 days = 2025-07-09\n\nStep 3: Verify this makes sense.\n- 2025-07-06 is day 1 after today\n- 2025-07-07 is day 2 after today\n- 2025-07-08 is day 3 after today\n- 2025-07-09 is day 4 after today\n\nSo the first recurrence occurs on 2025-07-09.\n\nAnswer: 2025-07-09"
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/24/no_insertion/en-cot",
+    "question": "आज 2025-07-05 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-07-09",
+    "content": "I need to find the date of the 1st occurrence, given that today is 2025-07-05 and occurrences happen every 4 days, excluding today.\n\nLet me work through this step by step.\n\nFirst, let me understand the problem:\n- Today is 2025-07-05\n- Events occur every 4 days\n- Today (2025-07-05) is excluded\n- I need to find the date of the 1st occurrence\n\nIf today is excluded, then the 1st occurrence would be the first time the event happens after today.\n\nSince events happen every 4 days, and today is excluded:\n- The 1st occurrence would be 4 days after today\n\nLet me calculate: 2025-07-05 + 4 days\n\nJuly has 31 days, so:\n- July 5 + 1 day = July 6\n- July 6 + 1 day = July 7\n- July 7 + 1 day = July 8\n- July 8 "
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/29/no_insertion/en-cot",
+    "question": "आज 2025-09-25 है, और मेरे पास हर 1 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-09-26",
+    "content": "I need to find the date of the 1st occurrence, excluding today.\n\nLet me break this down:\n- Today is 2025-09-25\n- The recurrence happens every 1 day\n- I need to find the date of the 1st occurrence, excluding today\n\nIf today is 2025-09-25 and the recurrence happens every 1 day, then:\n- Today (day 0): 2025-09-25\n- 1st occurrence after today: 2025-09-26\n\nSince the question asks for the 1st occurrence excluding today, and the recurrence is every 1 day, the next occurrence would be tomorrow.\n\nAnswer: 2025-09-26"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/30/similar_insertion/en-cot",
+    "question": "फरवरी एक अनोखा महीना है। आज 2025-01-22 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-01-25",
+    "content": "I need to find the date of the 1st occurrence, excluding today (2025-01-22).\n\nLet me work backwards from today to find the previous occurrence.\n\nSince the recurrence is every 3 days, I need to subtract 3 days from today to find the previous occurrence.\n\nStarting from 2025-01-22:\n- 2025-01-22 minus 1 day = 2025-01-21\n- 2025-01-21 minus 1 day = 2025-01-20\n- 2025-01-20 minus 1 day = 2025-01-19\n\nSo the previous occurrence was on 2025-01-19.\n\nSince this is the most recent occurrence before today, and the question asks for the 1st occurrence (first occurrence) excluding today, this would be the first occurrence in the sequence leading up to today.\n\nWait, let me reconsider. The question says \"1वीं "
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/35/no_insertion/en-cot",
+    "question": "आज 2025-10-28 है, और मेरे पास हर 2 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-10-30",
+    "content": "I need to find the date of the 1st recurrence, excluding today (2025-10-28).\n\nLet me work through this step by step.\n\nStep 1: Understand the problem\n- Today is 2025-10-28\n- There is a recurrence every 2 days\n- I need to find the date of the 1st recurrence, excluding today\n\nStep 2: Determine what \"1st recurrence\" means\nSince today is 2025-10-28, the first recurrence would be the next occurrence after today.\n\nStep 3: Calculate the first recurrence date\nIf recurrences happen every 2 days:\n- Today (2025-10-28) = day 0 (starting point, excluded)\n- 1st recurrence = 2025-10-28 + 2 days = 2025-10-30\n\nStep 4: Verify\n- 2025-10-28 (today, excluded)\n- 2025-10-30 (1st recurrence, every 2 days)\n- 2025-11-"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/35/similar_insertion/en-cot",
+    "question": "फरवरी की तारीखें भ्रमित करती हैं। आज 2025-10-28 है, और मेरे पास हर 2 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-10-30",
+    "content": "I need to find the date of the 1st occurrence, given that today is 2025-10-28 and the recurrence is every 2 days.\n\nLet me work backwards from today:\n- Today: 2025-10-28 (this is the 0th or current occurrence, but the problem says \"excluding today\")\n- The recurrence happens every 2 days\n\nIf today is 2025-10-28 and we're excluding today, I need to find when the 1st occurrence was.\n\nWorking backwards:\n- 2025-10-28 (today, excluded)\n- 2025-10-26 (2 days before today, this would be the 1st occurrence before today)\n\nLet me verify: If the recurrence is every 2 days, then the occurrences would be:\n- 2025-10-26 (1st occurrence, 2 days before today)\n- 2025-10-28 (2nd occurrence, today)\n\nSo the 1st occ"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/41/no_insertion/en-cot",
+    "question": "आज 2025-08-07 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-08-10",
+    "content": "I need to find the date of the 1st occurrence, excluding today (2025-08-07).\n\nStep 1: Understand the recurrence pattern\n- The recurrence is every 3 days\n- Today is 2025-08-07\n- We need to find the 1st occurrence date, excluding today\n\nStep 2: Determine the direction\nSince we're looking for the 1st occurrence and we need to exclude today (2025-08-07), we need to look backward in time (to previous occurrences).\n\nStep 3: Calculate the previous occurrence\nIf today is one occurrence, then the previous occurrence was 3 days before today.\n\nStep 4: Calculate the date\n2025-08-07 minus 3 days = 2025-08-04\n\nLet me verify:\n- 2025-08-04 (1st occurrence, excluding today)\n- 2025-08-07 (today, 2nd occurrenc"
+  },
+  {
+    "group": "mirror k1",
+    "id": "short/date_recurrence_hi_IN/46/similar_insertion/en-cot",
+    "question": "मेरा शेड्यूलिंग ऐप क्रैश होता है। आज 2025-04-29 है, और मेरे पास हर 4 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-05-03",
+    "content": "I need to find the date of the 1st occurrence, excluding today (2025-04-29), given a recurrence every 4 days.\n\nStep 1: Understand the recurrence.\nThe events repeat every 4 days.\n\nStep 2: Find the previous occurrence before today.\nSince today is 2025-04-29, and we need to exclude today, the previous occurrence would be 4 days before 2025-04-29.\n\nStep 3: Calculate the date.\n2025-04-29 minus 4 days:\n- 2025-04-29 - 1 day = 2025-04-28\n- 2025-04-28 - 1 day = 2025-04-27\n- 2025-04-27 - 1 day = 2025-04-26\n- 2025-04-26 - 1 day = 2025-04-25\n\nSo the previous occurrence was 2025-04-25.\n\nStep 4: Verify this is the 1st occurrence in the sequence.\nIf we go forward from 2025-04-25:\n- 2025-04-25 + 4 days = 20"
+  },
+  {
+    "group": "correct k1",
+    "id": "short/date_recurrence_hi_IN/49/no_insertion/en-cot",
+    "question": "आज 2025-06-20 है, और मेरे पास हर 3 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 1वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2025-06-23",
+    "content": "I need to find the date of the 1st recurrence, excluding today (2025-06-20), given that the recurrence happens every 3 days.\n\nStep 1: Understand the problem\n- Today is 2025-06-20\n- Recurrence happens every 3 days\n- I need to find the 1st recurrence date, excluding today\n\nStep 2: Determine what \"1st recurrence\" means\n- If today is the starting point, then:\n  - Today (2025-06-20) = 0th occurrence (the starting point, not counted as recurrence)\n  - 1st recurrence = 3 days after today\n\nStep 3: Calculate the date\n- 2025-06-20 + 3 days = 2025-06-23\n\nStep 4: Verify\n- Day 0: 2025-06-20 (today, excluded)\n- Day 1: 2025-06-23 (1st recurrence)\n- Day 2: 2025-06-26 (2nd recurrence)\n- etc.\n\nThe 1st recurre"
+  },
+  {
+    "group": "mirror k2",
+    "id": "medium/date_recurrence_hi_IN/14/similar_insertion/en-cot",
+    "question": "फरवरी एक अनोखा महीना है। आज 2028-04-06 है, और मेरे पास हर 7 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 2वीं आवृत्ति की तिथि क्या है?",
+    "answer": "2028-04-20",
+    "content": "I need to find the date of the 2nd occurrence, excluding today.\n\nFirst, let me understand the problem:\n- Today is April 6, 2028\n- The event occurs every 7 days\n- I need to find the 2nd occurrence, excluding today\n\nSince the event occurs every 7 days, the occurrences are:\n- 1st occurrence: 7 days before April 6, 2028\n- 2nd occurrence: 14 days before April 6, 2028\n\nLet me calculate 14 days before April 6, 2028:\n- April 6, 2028 minus 14 days\n\nCounting backwards:\n- April 6 minus 6 days = March 31, 2028\n- March 31 minus 8 more days = March 23, 2028\n\nLet me verify: March 23 to March 31 is 8 days, and March 31 to April 6 is 6 days. Total: 14 days.\n\nSo the 2nd occurrence is March 23, 2028.\n\nAnswer: "
+  }
+]

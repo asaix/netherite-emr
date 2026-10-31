@@ -1,0 +1,137 @@
+{
+  "en_US/sim": {
+    "n": 6451,
+    "rate": 8.46,
+    "placebo": 0.24,
+    "excess": 8.22,
+    "share_of_mentions_with_dismissal_cue": 65.02,
+    "share_of_mentions_verbatim": 56.59,
+    "acc_no_mention": 87.49,
+    "acc_dismissed": 98.59,
+    "acc_engaged": 81.15,
+    "or_mention": {
+      "or": 0.571,
+      "lo": 0.385,
+      "hi": 0.848,
+      "p": 0.003908024299016821
+    },
+    "or_engaged_vs_no_mention": {
+      "or": 0.301,
+      "lo": 0.187,
+      "hi": 0.486,
+      "p": 6.833402457401274e-08
+    },
+    "or_dismissed_vs_no_mention": {
+      "or": 2.335,
+      "lo": 0.937,
+      "hi": 5.82,
+      "p": 0.0541721470820131
+    }
+  },
+  "en_US/dis": {
+    "n": 6592,
+    "rate": 5.69,
+    "placebo": 0.06,
+    "excess": 5.63,
+    "share_of_mentions_with_dismissal_cue": 98.4,
+    "share_of_mentions_verbatim": 7.73,
+    "acc_no_mention": 88.27,
+    "acc_dismissed": 97.56,
+    "acc_engaged": 100.0,
+    "or_mention": {
+      "or": 1.298,
+      "lo": 0.624,
+      "hi": 2.699,
+      "p": 0.4772430662009338
+    },
+    "or_engaged_vs_no_mention": null,
+    "or_dismissed_vs_no_mention": {
+      "or": 1.223,
+      "lo": 0.585,
+      "hi": 2.553,
+      "p": 0.5860897669815104
+    }
+  },
+  "hi_IN/sim": {
+    "n": 6551,
+    "rate": 25.0,
+    "placebo": 0.17,
+    "excess": 24.84,
+    "share_of_mentions_with_dismissal_cue": 11.05,
+    "share_of_mentions_verbatim": 31.81,
+    "acc_no_mention": 60.19,
+    "acc_dismissed": 67.96,
+    "acc_engaged": 53.74,
+    "or_mention": {
+      "or": 0.768,
+      "lo": 0.666,
+      "hi": 0.885,
+      "p": 0.00026502151890272905
+    },
+    "or_engaged_vs_no_mention": {
+      "or": 0.759,
+      "lo": 0.654,
+      "hi": 0.88,
+      "p": 0.0002676267730898373
+    },
+    "or_dismissed_vs_no_mention": {
+      "or": 0.903,
+      "lo": 0.614,
+      "hi": 1.328,
+      "p": 0.6078317094387489
+    }
+  },
+  "hi_IN/dis": {
+    "n": 6719,
+    "rate": 29.6,
+    "placebo": 0.0,
+    "excess": 29.6,
+    "share_of_mentions_with_dismissal_cue": 57.72,
+    "share_of_mentions_verbatim": 42.58,
+    "acc_no_mention": 58.14,
+    "acc_dismissed": 65.07,
+    "acc_engaged": 56.6,
+    "or_mention": {
+      "or": 1.15,
+      "lo": 0.996,
+      "hi": 1.328,
+      "p": 0.05878149013288191
+    },
+    "or_engaged_vs_no_mention": {
+      "or": 1.031,
+      "lo": 0.848,
+      "hi": 1.252,
+      "p": 0.7638955666717148
+    },
+    "or_dismissed_vs_no_mention": {
+      "or": 1.244,
+      "lo": 1.037,
+      "hi": 1.491,
+      "p": 0.020581414441144013
+    }
+  },
+  "broad_verification": {
+    "en_US": 87.44,
+    "hi_IN": 3.52
+  },
+  "broad_verification_task": {
+    "en_US/date_addition": 59.29,
+    "en_US/date_duration": 96.08,
+    "en_US/date_recurrence": 95.75,
+    "en_US/date_subtraction": 65.75,
+    "en_US/day_of_week": 98.41,
+    "en_US/interval_date": 95.79,
+    "en_US/time_addition": 86.07,
+    "en_US/time_duration": 97.06,
+    "en_US/time_subtraction": 95.44,
+    "hi_IN/date_addition": 0.62,
+    "hi_IN/date_duration": 0.62,
+    "hi_IN/date_recurrence": 3.63,
+    "hi_IN/date_subtraction": 1.02,
+    "hi_IN/day_of_week": 9.86,
+    "hi_IN/interval_date": 2.6,
+    "hi_IN/time_addition": 9.44,
+    "hi_IN/time_duration": 1.51,
+    "hi_IN/time_subtraction": 2.55
+  }
+}

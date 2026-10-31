@@ -1,0 +1,1787 @@
+{
+  "bootstrap": {
+    "B": 2000,
+    "seed": 20261031,
+    "unit": "question"
+  },
+  "full": {
+    "questions": 6750,
+    "acc": {
+      "en_direct": {
+        "answered": 58.9882,
+        "strict": 58.9037
+      },
+      "en_cot": {
+        "answered": 88.5096,
+        "strict": 85.6642
+      },
+      "hi_direct": {
+        "answered": 54.7363,
+        "strict": 54.7309
+      },
+      "hi_cot": {
+        "answered": 59.4011,
+        "strict": 58.9728
+      }
+    },
+    "cot_delta": {
+      "en": {
+        "pooled": {
+          "answered": [
+            29.5214,
+            28.5304,
+            30.551
+          ],
+          "strict": [
+            26.7605,
+            25.8074,
+            27.7679
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            28.7567,
+            27.4798,
+            29.9671
+          ],
+          "strict": [
+            26.2222,
+            24.933,
+            27.437
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            29.1011,
+            27.7574,
+            30.3953
+          ],
+          "strict": [
+            25.4074,
+            24.1037,
+            26.6519
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            30.6961,
+            29.4042,
+            31.9874
+          ],
+          "strict": [
+            28.6519,
+            27.3626,
+            29.9111
+          ]
+        }
+      },
+      "hi": {
+        "pooled": {
+          "answered": [
+            4.6648,
+            3.644,
+            5.6661
+          ],
+          "strict": [
+            4.242,
+            3.2098,
+            5.2595
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            5.6215,
+            4.232,
+            6.9756
+          ],
+          "strict": [
+            5.1259,
+            3.7185,
+            6.4889
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            3.4067,
+            2.0737,
+            4.7362
+          ],
+          "strict": [
+            2.8889,
+            1.5848,
+            4.2226
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            4.9666,
+            3.5601,
+            6.3704
+          ],
+          "strict": [
+            4.7111,
+            3.3181,
+            6.1044
+          ]
+        }
+      }
+    },
+    "gap_cot": {
+      "pooled": {
+        "answered": [
+          29.1085,
+          28.2913,
+          29.9397
+        ],
+        "strict": [
+          26.6914,
+          25.8863,
+          27.5062
+        ]
+      },
+      "no_insertion": {
+        "answered": [
+          27.9826,
+          26.7482,
+          29.1316
+        ],
+        "strict": [
+          25.9259,
+          24.6815,
+          27.0519
+        ]
+      },
+      "similar_insertion": {
+        "answered": [
+          29.6577,
+          28.4204,
+          30.8446
+        ],
+        "strict": [
+          26.2815,
+          25.037,
+          27.5115
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          29.6738,
+          28.4384,
+          30.9208
+        ],
+        "strict": [
+          27.8667,
+          26.6074,
+          29.1259
+        ]
+      }
+    },
+    "gap_direct": {
+      "pooled": {
+        "answered": [
+          4.2519,
+          3.4491,
+          4.9898
+        ],
+        "strict": [
+          4.1728,
+          3.3728,
+          4.9038
+        ]
+      },
+      "no_insertion": {
+        "answered": [
+          4.8474,
+          3.7214,
+          5.935
+        ],
+        "strict": [
+          4.8296,
+          3.7037,
+          5.9111
+        ]
+      },
+      "similar_insertion": {
+        "answered": [
+          3.9633,
+          2.836,
+          5.0813
+        ],
+        "strict": [
+          3.763,
+          2.6515,
+          4.8741
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          3.9443,
+          2.8455,
+          5.0447
+        ],
+        "strict": [
+          3.9259,
+          2.8296,
+          5.037
+        ]
+      }
+    },
+    "drop": {
+      "en": {
+        "similar_insertion": {
+          "answered": [
+            0.8953,
+            0.0123,
+            1.8601
+          ],
+          "strict": [
+            2.237,
+            1.3033,
+            3.1707
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -0.0005,
+            -0.9455,
+            0.9031
+          ],
+          "strict": [
+            -0.4741,
+            -1.363,
+            0.4741
+          ]
+        }
+      },
+      "hi": {
+        "similar_insertion": {
+          "answered": [
+            2.5704,
+            1.2933,
+            3.846
+          ],
+          "strict": [
+            2.5926,
+            1.3333,
+            3.8374
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            1.6907,
+            0.3388,
+            2.9478
+          ],
+          "strict": [
+            1.4667,
+            0.1481,
+            2.7407
+          ]
+        }
+      }
+    },
+    "penalty": {
+      "en": {
+        "similar_insertion": {
+          "answered": [
+            -0.3443,
+            -1.7022,
+            1.0411
+          ],
+          "strict": [
+            0.8148,
+            -0.5926,
+            2.2078
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -1.9394,
+            -3.2862,
+            -0.5572
+          ],
+          "strict": [
+            -2.4296,
+            -3.7778,
+            -1.0667
+          ]
+        }
+      },
+      "hi": {
+        "similar_insertion": {
+          "answered": [
+            2.2148,
+            0.6417,
+            3.826
+          ],
+          "strict": [
+            2.237,
+            0.6519,
+            3.8374
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            0.6549,
+            -1.0173,
+            2.3
+          ],
+          "strict": [
+            0.4148,
+            -1.2156,
+            2.0448
+          ]
+        }
+      }
+    },
+    "gap_cot_by_level": {
+      "short": {
+        "answered": [
+          24.0412,
+          22.285,
+          25.8541
+        ],
+        "strict": [
+          22.9877,
+          21.2401,
+          24.7648
+        ]
+      },
+      "medium": {
+        "answered": [
+          24.3708,
+          22.6839,
+          25.9938
+        ],
+        "strict": [
+          22.5185,
+          20.8392,
+          24.1529
+        ]
+      },
+      "long": {
+        "answered": [
+          28.317,
+          26.5299,
+          30.1065
+        ],
+        "strict": [
+          26.0,
+          24.2876,
+          27.7581
+        ]
+      },
+      "very_long": {
+        "answered": [
+          33.7389,
+          31.7616,
+          35.6994
+        ],
+        "strict": [
+          30.8889,
+          28.9465,
+          32.7987
+        ]
+      },
+      "very_very_long": {
+        "answered": [
+          34.9295,
+          32.9997,
+          36.9154
+        ],
+        "strict": [
+          31.0617,
+          29.1577,
+          32.9983
+        ]
+      }
+    },
+    "hi_delta_by_task": {
+      "date_subtraction": {
+        "no_insertion": {
+          "answered": [
+            -19.911,
+            -23.4503,
+            -16.452
+          ],
+          "strict": [
+            -20.0,
+            -23.5372,
+            -16.5026
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -15.3769,
+            -19.1799,
+            -11.8334
+          ],
+          "strict": [
+            -15.4667,
+            -19.1976,
+            -11.9341
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -17.3775,
+            -20.7537,
+            -13.8773
+          ],
+          "strict": [
+            -17.4667,
+            -20.8571,
+            -13.9468
+          ]
+        }
+      },
+      "interval_date": {
+        "no_insertion": {
+          "answered": [
+            -23.3163,
+            -27.6567,
+            -18.9869
+          ],
+          "strict": [
+            -23.4667,
+            -27.764,
+            -19.1361
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -23.2309,
+            -27.2633,
+            -19.1741
+          ],
+          "strict": [
+            -23.4667,
+            -27.4226,
+            -19.3256
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -18.8953,
+            -23.0606,
+            -14.6522
+          ],
+          "strict": [
+            -18.9333,
+            -23.0566,
+            -14.6788
+          ]
+        }
+      }
+    },
+    "hi_delta_by_level": {
+      "short": {
+        "no_insertion": {
+          "answered": [
+            -1.9094,
+            -4.4701,
+            0.7441
+          ],
+          "strict": [
+            -2.2222,
+            -4.7365,
+            0.428
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -6.2405,
+            -8.8546,
+            -3.5427
+          ],
+          "strict": [
+            -6.7407,
+            -9.3466,
+            -4.1021
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -4.662,
+            -7.2911,
+            -2.0127
+          ],
+          "strict": [
+            -4.8148,
+            -7.4472,
+            -2.1942
+          ]
+        }
+      }
+    },
+    "penalty_hi_minus_en": {
+      "similar_insertion": {
+        "answered": [
+          2.5592,
+          0.4093,
+          4.6725
+        ],
+        "strict": [
+          1.4222,
+          -0.7111,
+          3.5111
+        ]
+      },
+      "dissimilar_insertion": {
+        "answered": [
+          2.5943,
+          0.5253,
+          4.644
+        ],
+        "strict": [
+          2.8445,
+          0.8445,
+          4.8152
+        ]
+      }
+    }
+  },
+  "subset": {
+    "questions": 2250,
+    "acc": {
+      "en_direct": {
+        "answered": 59.6767,
+        "strict": 59.6148,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 60.6047,
+            "strict": 60.5778
+          },
+          "similar_insertion": {
+            "answered": 59.8664,
+            "strict": 59.7333
+          },
+          "dissimilar_insertion": {
+            "answered": 58.5594,
+            "strict": 58.5333
+          }
+        }
+      },
+      "en_cot": {
+        "answered": 88.8804,
+        "strict": 85.9704,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 89.3217,
+            "strict": 86.6222
+          },
+          "similar_insertion": {
+            "answered": 88.1475,
+            "strict": 83.9556
+          },
+          "dissimilar_insertion": {
+            "answered": 89.1561,
+            "strict": 87.3333
+          }
+        }
+      },
+      "hi_direct": {
+        "answered": 55.1704,
+        "strict": 55.1704,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 56.0444,
+            "strict": 56.0444
+          },
+          "similar_insertion": {
+            "answered": 54.8889,
+            "strict": 54.8889
+          },
+          "dissimilar_insertion": {
+            "answered": 54.5778,
+            "strict": 54.5778
+          }
+        }
+      },
+      "hi_cot": {
+        "answered": 59.4006,
+        "strict": 59.0222,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 60.2329,
+            "strict": 59.7778
+          },
+          "similar_insertion": {
+            "answered": 58.9078,
+            "strict": 58.4889
+          },
+          "dissimilar_insertion": {
+            "answered": 59.0625,
+            "strict": 58.8
+          }
+        }
+      },
+      "clp": {
+        "answered": 70.3025,
+        "strict": 69.8963,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 69.2583,
+            "strict": 68.8889
+          },
+          "similar_insertion": {
+            "answered": 69.3274,
+            "strict": 68.7111
+          },
+          "dissimilar_insertion": {
+            "answered": 72.3139,
+            "strict": 72.0889
+          }
+        }
+      },
+      "encot": {
+        "answered": 82.8923,
+        "strict": 80.7556,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 84.1291,
+            "strict": 82.2222
+          },
+          "similar_insertion": {
+            "answered": 80.9568,
+            "strict": 78.2222
+          },
+          "dissimilar_insertion": {
+            "answered": 83.5679,
+            "strict": 81.8222
+          }
+        }
+      },
+      "en_hing": {
+        "answered": 70.895,
+        "strict": 70.2963,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 70.5988,
+            "strict": 70.2222
+          },
+          "similar_insertion": {
+            "answered": 69.7351,
+            "strict": 69.0222
+          },
+          "dissimilar_insertion": {
+            "answered": 72.3519,
+            "strict": 71.6444
+          }
+        }
+      },
+      "hi_hing": {
+        "answered": 59.3662,
+        "strict": 59.1111,
+        "by_ins": {
+          "no_insertion": {
+            "answered": 61.0366,
+            "strict": 60.7111
+          },
+          "similar_insertion": {
+            "answered": 59.0625,
+            "strict": 58.8
+          },
+          "dissimilar_insertion": {
+            "answered": 58.0027,
+            "strict": 57.8222
+          }
+        }
+      }
+    },
+    "contrast": {
+      "clp-hi_cot": {
+        "pooled": {
+          "answered": [
+            10.9019,
+            9.5901,
+            12.2119
+          ],
+          "strict": [
+            10.8741,
+            9.6,
+            12.1633
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            9.0254,
+            6.8895,
+            11.2764
+          ],
+          "strict": [
+            9.1111,
+            6.9767,
+            11.3778
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            10.4196,
+            8.2544,
+            12.5297
+          ],
+          "strict": [
+            10.2222,
+            8.0444,
+            12.3122
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            13.2514,
+            11.1607,
+            15.3051
+          ],
+          "strict": [
+            13.2889,
+            11.2444,
+            15.3333
+          ]
+        }
+      },
+      "clp-hi_direct": {
+        "pooled": {
+          "answered": [
+            15.1321,
+            13.508,
+            16.6552
+          ],
+          "strict": [
+            14.7259,
+            13.1107,
+            16.2526
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            13.2138,
+            10.8495,
+            15.4845
+          ],
+          "strict": [
+            12.8444,
+            10.4889,
+            15.1111
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            14.4385,
+            12.2523,
+            16.6876
+          ],
+          "strict": [
+            13.8222,
+            11.6444,
+            16.0444
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            17.7361,
+            15.4801,
+            19.8856
+          ],
+          "strict": [
+            17.5111,
+            15.3322,
+            19.6889
+          ]
+        }
+      },
+      "encot-hi_cot": {
+        "pooled": {
+          "answered": [
+            23.4917,
+            22.1459,
+            24.8917
+          ],
+          "strict": [
+            21.7333,
+            20.4296,
+            23.0819
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            23.8963,
+            21.8095,
+            26.1252
+          ],
+          "strict": [
+            22.4444,
+            20.3111,
+            24.6667
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            22.049,
+            20.0418,
+            24.1519
+          ],
+          "strict": [
+            19.7333,
+            17.7333,
+            21.8233
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            24.5054,
+            22.4223,
+            26.6442
+          ],
+          "strict": [
+            23.0222,
+            20.8878,
+            25.1122
+          ]
+        }
+      },
+      "encot-hi_direct": {
+        "pooled": {
+          "answered": [
+            27.722,
+            26.0101,
+            29.3973
+          ],
+          "strict": [
+            25.5852,
+            23.8963,
+            27.2604
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            28.0847,
+            25.7188,
+            30.2658
+          ],
+          "strict": [
+            26.1778,
+            23.8667,
+            28.4011
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            26.0679,
+            23.8812,
+            28.3029
+          ],
+          "strict": [
+            23.3333,
+            21.1556,
+            25.5556
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            28.9901,
+            26.8166,
+            31.2427
+          ],
+          "strict": [
+            27.2444,
+            25.0222,
+            29.4667
+          ]
+        }
+      },
+      "encot-clp": {
+        "pooled": {
+          "answered": [
+            12.5898,
+            11.4493,
+            13.9302
+          ],
+          "strict": [
+            10.8593,
+            9.7037,
+            12.1037
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            14.8709,
+            12.9097,
+            16.8776
+          ],
+          "strict": [
+            13.3333,
+            11.4222,
+            15.2889
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            11.6294,
+            9.6808,
+            13.6018
+          ],
+          "strict": [
+            9.5111,
+            7.5556,
+            11.3789
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            11.254,
+            9.2791,
+            13.4065
+          ],
+          "strict": [
+            9.7333,
+            7.7778,
+            11.7778
+          ]
+        }
+      },
+      "en_cot-encot": {
+        "pooled": {
+          "answered": [
+            5.988,
+            4.9586,
+            7.0634
+          ],
+          "strict": [
+            5.2148,
+            4.2074,
+            6.2963
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            5.1926,
+            3.5107,
+            6.8539
+          ],
+          "strict": [
+            4.4,
+            2.6667,
+            6.1333
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            7.1907,
+            5.414,
+            8.895
+          ],
+          "strict": [
+            5.7333,
+            3.9111,
+            7.4667
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            5.5882,
+            4.0143,
+            7.2863
+          ],
+          "strict": [
+            5.5111,
+            3.8667,
+            7.1556
+          ]
+        }
+      },
+      "en_cot-hi_cot": {
+        "pooled": {
+          "answered": [
+            29.4798,
+            28.0994,
+            30.9508
+          ],
+          "strict": [
+            26.9481,
+            25.5259,
+            28.3852
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            29.0888,
+            27.0149,
+            31.3175
+          ],
+          "strict": [
+            26.8444,
+            24.7556,
+            29.0222
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            29.2397,
+            27.2595,
+            31.3751
+          ],
+          "strict": [
+            25.4667,
+            23.4211,
+            27.5567
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            30.0936,
+            27.9673,
+            32.1489
+          ],
+          "strict": [
+            28.5333,
+            26.4878,
+            30.5778
+          ]
+        }
+      },
+      "en_cot-clp": {
+        "pooled": {
+          "answered": [
+            18.5779,
+            17.2656,
+            19.9693
+          ],
+          "strict": [
+            16.0741,
+            14.8296,
+            17.467
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            20.0635,
+            18.0715,
+            22.032
+          ],
+          "strict": [
+            17.7333,
+            15.6889,
+            19.7333
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            18.8201,
+            16.9176,
+            20.8577
+          ],
+          "strict": [
+            15.2444,
+            13.3322,
+            17.2011
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            16.8422,
+            14.8657,
+            18.9218
+          ],
+          "strict": [
+            15.2444,
+            13.2889,
+            17.2889
+          ]
+        }
+      },
+      "en_hing-en_cot": {
+        "pooled": {
+          "answered": [
+            -17.9854,
+            -19.2463,
+            -16.8147
+          ],
+          "strict": [
+            -15.6741,
+            -16.9333,
+            -14.5037
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            -18.723,
+            -20.7666,
+            -16.754
+          ],
+          "strict": [
+            -16.4,
+            -18.4,
+            -14.4
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            -18.4124,
+            -20.4599,
+            -16.4533
+          ],
+          "strict": [
+            -14.9333,
+            -17.0222,
+            -13.0222
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -16.8042,
+            -18.8437,
+            -14.8868
+          ],
+          "strict": [
+            -15.6889,
+            -17.7333,
+            -13.7767
+          ]
+        }
+      },
+      "hi_hing-hi_cot": {
+        "pooled": {
+          "answered": [
+            -0.0345,
+            -1.2573,
+            1.1939
+          ],
+          "strict": [
+            0.0889,
+            -1.1407,
+            1.3185
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            0.8038,
+            -1.3428,
+            3.0754
+          ],
+          "strict": [
+            0.9333,
+            -1.2,
+            3.2
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            0.1547,
+            -2.0903,
+            2.4309
+          ],
+          "strict": [
+            0.3111,
+            -1.9556,
+            2.4889
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            -1.0598,
+            -3.2476,
+            1.1783
+          ],
+          "strict": [
+            -0.9778,
+            -3.1111,
+            1.2444
+          ]
+        }
+      },
+      "encot-en_hing": {
+        "pooled": {
+          "answered": [
+            11.9974,
+            10.7628,
+            13.2788
+          ],
+          "strict": [
+            10.4593,
+            9.1852,
+            11.763
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            13.5304,
+            11.5165,
+            15.5556
+          ],
+          "strict": [
+            12.0,
+            10.0433,
+            13.9556
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            11.2217,
+            9.1403,
+            13.4216
+          ],
+          "strict": [
+            9.2,
+            7.1556,
+            11.3333
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            11.216,
+            9.2689,
+            13.2313
+          ],
+          "strict": [
+            10.1778,
+            8.2667,
+            12.1333
+          ]
+        }
+      },
+      "en_direct-hi_direct": {
+        "pooled": {
+          "answered": [
+            4.5063,
+            3.2572,
+            5.7993
+          ],
+          "strict": [
+            4.4444,
+            3.2,
+            5.7341
+          ]
+        },
+        "no_insertion": {
+          "answered": [
+            4.5603,
+            2.6664,
+            6.5333
+          ],
+          "strict": [
+            4.5333,
+            2.6656,
+            6.4889
+          ]
+        },
+        "similar_insertion": {
+          "answered": [
+            4.9775,
+            3.0817,
+            6.9602
+          ],
+          "strict": [
+            4.8444,
+            2.9333,
+            6.8456
+          ]
+        },
+        "dissimilar_insertion": {
+          "answered": [
+            3.9816,
+            2.0259,
+            5.8669
+          ],
+          "strict": [
+            3.9556,
+            2.0,
+            5.8222
+          ]
+        }
+      }
+    },
+    "by_level": {
+      "short": {
+        "en_direct": {
+          "answered": 77.7778,
+          "strict": 77.7778
+        },
+        "en_cot": {
+          "answered": 93.1784,
+          "strict": 92.0741
+        },
+        "hi_direct": {
+          "answered": 73.9259,
+          "strict": 73.9259
+        },
+        "hi_cot": {
+          "answered": 69.5394,
+          "strict": 69.3333
+        },
+        "clp": {
+          "answered": 77.2086,
+          "strict": 77.037
+        },
+        "encot": {
+          "answered": 82.958,
+          "strict": 81.8519
+        },
+        "en_hing": {
+          "answered": 82.925,
+          "strict": 82.7407
+        },
+        "hi_hing": {
+          "answered": 66.4933,
+          "strict": 66.2963
+        }
+      },
+      "medium": {
+        "en_direct": {
+          "answered": 69.5556,
+          "strict": 69.5556
+        },
+        "en_cot": {
+          "answered": 91.5909,
+          "strict": 89.5556
+        },
+        "hi_direct": {
+          "answered": 65.2593,
+          "strict": 65.2593
+        },
+        "hi_cot": {
+          "answered": 65.3789,
+          "strict": 65.1852
+        },
+        "clp": {
+          "answered": 75.6515,
+          "strict": 75.2593
+        },
+        "encot": {
+          "answered": 84.9357,
+          "strict": 83.1111
+        },
+        "en_hing": {
+          "answered": 78.7743,
+          "strict": 78.0741
+        },
+        "hi_hing": {
+          "answered": 67.4349,
+          "strict": 67.1852
+        }
+      },
+      "long": {
+        "en_direct": {
+          "answered": 61.1852,
+          "strict": 61.1852
+        },
+        "en_cot": {
+          "answered": 89.2995,
+          "strict": 85.9259
+        },
+        "hi_direct": {
+          "answered": 57.9259,
+          "strict": 57.9259
+        },
+        "hi_cot": {
+          "answered": 60.4338,
+          "strict": 59.8518
+        },
+        "clp": {
+          "answered": 71.3224,
+          "strict": 71.1111
+        },
+        "encot": {
+          "answered": 84.4176,
+          "strict": 82.6667
+        },
+        "en_hing": {
+          "answered": 70.4257,
+          "strict": 69.8519
+        },
+        "hi_hing": {
+          "answered": 60.9084,
+          "strict": 60.5926
+        }
+      },
+      "very_long": {
+        "en_direct": {
+          "answered": 54.3027,
+          "strict": 54.2222
+        },
+        "en_cot": {
+          "answered": 87.1736,
+          "strict": 84.0741
+        },
+        "hi_direct": {
+          "answered": 48.4444,
+          "strict": 48.4444
+        },
+        "hi_cot": {
+          "answered": 53.7023,
+          "strict": 53.1852
+        },
+        "clp": {
+          "answered": 65.7678,
+          "strict": 65.037
+        },
+        "encot": {
+          "answered": 83.5249,
+          "strict": 80.7407
+        },
+        "en_hing": {
+          "answered": 63.9761,
+          "strict": 63.4074
+        },
+        "hi_hing": {
+          "answered": 53.6858,
+          "strict": 53.4074
+        }
+      },
+      "very_very_long": {
+        "en_direct": {
+          "answered": 35.4647,
+          "strict": 35.3333
+        },
+        "en_cot": {
+          "answered": 82.8885,
+          "strict": 78.2222
+        },
+        "hi_direct": {
+          "answered": 30.2963,
+          "strict": 30.2963
+        },
+        "hi_cot": {
+          "answered": 47.8747,
+          "strict": 47.5556
+        },
+        "clp": {
+          "answered": 61.4925,
+          "strict": 61.037
+        },
+        "encot": {
+          "answered": 78.5494,
+          "strict": 75.4074
+        },
+        "en_hing": {
+          "answered": 58.2269,
+          "strict": 57.4074
+        },
+        "hi_hing": {
+          "answered": 48.2887,
+          "strict": 48.0741
+        }
+      }
+    },
+    "by_task": {
+      "date_addition": {
+        "en_direct": {
+          "answered": 85.6,
+          "strict": 85.6
+        },
+        "en_cot": {
+          "answered": 98.0,
+          "strict": 98.0
+        },
+        "hi_direct": {
+          "answered": 82.8,
+          "strict": 82.8
+        },
+        "hi_cot": {
+          "answered": 85.0667,
+          "strict": 85.0667
+        },
+        "clp": {
+          "answered": 92.6667,
+          "strict": 92.6667
+        },
+        "encot": {
+          "answered": 95.7333,
+          "strict": 95.7333
+        },
+        "en_hing": {
+          "answered": 87.3333,
+          "strict": 87.3333
+        },
+        "hi_hing": {
+          "answered": 85.8667,
+          "strict": 85.8667
+        }
+      },
+      "date_subtraction": {
+        "en_direct": {
+          "answered": 86.0,
+          "strict": 86.0
+        },
+        "en_cot": {
+          "answered": 95.1936,
+          "strict": 95.0667
+        },
+        "hi_direct": {
+          "answered": 84.8,
+          "strict": 84.8
+        },
+        "hi_cot": {
+          "answered": 65.9546,
+          "strict": 65.8667
+        },
+        "clp": {
+          "answered": 86.8984,
+          "strict": 86.6667
+        },
+        "encot": {
+          "answered": 93.9759,
+          "strict": 93.6
+        },
+        "en_hing": {
+          "answered": 70.6667,
+          "strict": 70.6667
+        },
+        "hi_hing": {
+          "answered": 71.028,
+          "strict": 70.9333
+        }
+      },
+      "date_duration": {
+        "en_direct": {
+          "answered": 84.0,
+          "strict": 84.0
+        },
+        "en_cot": {
+          "answered": 99.3324,
+          "strict": 99.2
+        },
+        "hi_direct": {
+          "answered": 78.9333,
+          "strict": 78.9333
+        },
+        "hi_cot": {
+          "answered": 88.251,
+          "strict": 88.1333
+        },
+        "clp": {
+          "answered": 92.6667,
+          "strict": 92.6667
+        },
+        "encot": {
+          "answered": 97.7273,
+          "strict": 97.4667
+        },
+        "en_hing": {
+          "answered": 92.9333,
+          "strict": 92.9333
+        },
+        "hi_hing": {
+          "answered": 82.777,
+          "strict": 82.6667
+        }
+      },
+      "date_recurrence": {
+        "en_direct": {
+          "answered": 22.0727,
+          "strict": 21.8667
+        },
+        "en_cot": {
+          "answered": 90.3272,
+          "strict": 84.6667
+        },
+        "hi_direct": {
+          "answered": 2.8,
+          "strict": 2.8
+        },
+        "hi_cot": {
+          "answered": 20.1072,
+          "strict": 20.0
+        },
+        "clp": {
+          "answered": 26.9542,
+          "strict": 26.6667
+        },
+        "encot": {
+          "answered": 70.3438,
+          "strict": 65.4667
+        },
+        "en_hing": {
+          "answered": 53.8147,
+          "strict": 52.6667
+        },
+        "hi_hing": {
+          "answered": 18.8679,
+          "strict": 18.6667
+        }
+      },
+      "day_of_week": {
+        "en_direct": {
+          "answered": 14.9333,
+          "strict": 14.9333
+        },
+        "en_cot": {
+          "answered": 69.5238,
+          "strict": 58.4
+        },
+        "hi_direct": {
+          "answered": 15.2,
+          "strict": 15.2
+        },
+        "hi_cot": {
+          "answered": 21.0235,
+          "strict": 20.2667
+        },
+        "clp": {
+          "answered": 31.8244,
+          "strict": 30.9333
+        },
+        "encot": {
+          "answered": 52.5038,
+          "strict": 46.1333
+        },
+        "en_hing": {
+          "answered": 34.728,
+          "strict": 33.2
+        },
+        "hi_hing": {
+          "answered": 23.4652,
+          "strict": 22.9333
+        }
+      },
+      "interval_date": {
+        "en_direct": {
+          "answered": 43.2,
+          "strict": 43.2
+        },
+        "en_cot": {
+          "answered": 50.6944,
+          "strict": 48.6667
+        },
+        "hi_direct": {
+          "answered": 46.8,
+          "strict": 46.8
+        },
+        "hi_cot": {
+          "answered": 23.8606,
+          "strict": 23.7333
+        },
+        "clp": {
+          "answered": 35.2941,
+          "strict": 35.2
+        },
+        "encot": {
+          "answered": 44.1417,
+          "strict": 43.2
+        },
+        "en_hing": {
+          "answered": 38.5027,
+          "strict": 38.4
+        },
+        "hi_hing": {
+          "answered": 23.6315,
+          "strict": 23.6
+        }
+      },
+      "time_addition": {
+        "en_direct": {
+          "answered": 70.5333,
+          "strict": 70.5333
+        },
+        "en_cot": {
+          "answered": 95.9294,
+          "strict": 94.2667
+        },
+        "hi_direct": {
+          "answered": 75.6,
+          "strict": 75.6
+        },
+        "hi_cot": {
+          "answered": 73.4667,
+          "strict": 73.4667
+        },
+        "clp": {
+          "answered": 88.172,
+          "strict": 87.4667
+        },
+        "encot": {
+          "answered": 92.6175,
+          "strict": 92.0
+        },
+        "en_hing": {
+          "answered": 82.8877,
+          "strict": 82.6667
+        },
+        "hi_hing": {
+          "answered": 72.2667,
+          "strict": 72.2667
+        }
+      },
+      "time_subtraction": {
+        "en_direct": {
+          "answered": 64.6667,
+          "strict": 64.6667
+        },
+        "en_cot": {
+          "answered": 97.7089,
+          "strict": 96.6667
+        },
+        "hi_direct": {
+          "answered": 64.9333,
+          "strict": 64.9333
+        },
+        "hi_cot": {
+          "answered": 75.2011,
+          "strict": 74.8
+        },
+        "clp": {
+          "answered": 90.1333,
+          "strict": 90.1333
+        },
+        "encot": {
+          "answered": 95.7105,
+          "strict": 95.2
+        },
+        "en_hing": {
+          "answered": 85.2547,
+          "strict": 84.8
+        },
+        "hi_hing": {
+          "answered": 74.2323,
+          "strict": 74.1333
+        }
+      },
+      "time_duration": {
+        "en_direct": {
+          "answered": 65.7333,
+          "strict": 65.7333
+        },
+        "en_cot": {
+          "answered": 98.9319,
+          "strict": 98.8
+        },
+        "hi_direct": {
+          "answered": 44.6667,
+          "strict": 44.6667
+        },
+        "hi_cot": {
+          "answered": 80.0802,
+          "strict": 79.8667
+        },
+        "clp": {
+          "answered": 86.6667,
+          "strict": 86.6667
+        },
+        "encot": {
+          "answered": 98.1308,
+          "strict": 98.0
+        },
+        "en_hing": {
+          "answered": 90.0,
+          "strict": 90.0
+        },
+        "hi_hing": {
+          "answered": 80.9333,
+          "strict": 80.9333
+        }
+      }
+    },
+    "decomposition": {
+      "answered_share": [
+        79.6876,
+        76.398,
+        82.9043
+      ],
+      "strict_share": [
+        80.6487,
+        76.9441,
+        84.1514
+      ]
+    }
+  }
+}

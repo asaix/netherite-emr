@@ -1,0 +1,423 @@
+{
+  "all_gold_match_python_datetime": true,
+  "n_checked": 13500,
+  "by_task": {
+    "date_addition": 1500,
+    "date_duration": 1500,
+    "date_recurrence": 1500,
+    "date_subtraction": 1500,
+    "day_of_week": 1500,
+    "interval_date": 1500,
+    "time_addition": 1500,
+    "time_duration": 1500,
+    "time_subtraction": 1500
+  },
+  "spotcheck_n": 270,
+  "spotcheck_match": 270,
+  "en_hi_same_computed_gold": 1.0,
+  "en_hi_same_params": 1.0,
+  "duplicate_questions_within_cell": 0,
+  "counts_per_cell": [
+    150
+  ],
+  "trd_comparison": [
+    {
+      "task": "date_addition",
+      "sarvam105b_en": 98.0,
+      "sarvam105b_hi": 95.3,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 100.0,
+      "claude-3-haiku_en": 99.0,
+      "claude-3-haiku_hi": 100.0,
+      "mistral-large-2402_en": 99.0,
+      "mistral-large-2402_hi": 99.0,
+      "command-r-plus_en": 95.0,
+      "command-r-plus_hi": 99.0
+    },
+    {
+      "task": "date_subtraction",
+      "sarvam105b_en": 96.7,
+      "sarvam105b_hi": 97.3,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 100.0,
+      "claude-3-haiku_en": 100.0,
+      "claude-3-haiku_hi": 99.0,
+      "mistral-large-2402_en": 100.0,
+      "mistral-large-2402_hi": 100.0,
+      "command-r-plus_en": 94.0,
+      "command-r-plus_hi": 97.0
+    },
+    {
+      "task": "date_duration",
+      "sarvam105b_en": 92.7,
+      "sarvam105b_hi": 86.7,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 100.0,
+      "claude-3-haiku_en": 99.0,
+      "claude-3-haiku_hi": 96.0,
+      "mistral-large-2402_en": 96.0,
+      "mistral-large-2402_hi": 77.0,
+      "command-r-plus_en": 97.0,
+      "command-r-plus_hi": 92.0
+    },
+    {
+      "task": "date_recurrence",
+      "sarvam105b_en": 11.3,
+      "sarvam105b_hi": 6.0,
+      "claude-3-5-sonnet_en": 82.0,
+      "claude-3-5-sonnet_hi": 36.0,
+      "claude-3-haiku_en": 9.0,
+      "claude-3-haiku_hi": 0.0,
+      "mistral-large-2402_en": 25.0,
+      "mistral-large-2402_hi": 0.0,
+      "command-r-plus_en": 3.0,
+      "command-r-plus_hi": 0.0
+    },
+    {
+      "task": "day_of_week",
+      "sarvam105b_en": 12.0,
+      "sarvam105b_hi": 16.7,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 94.0,
+      "claude-3-haiku_en": 100.0,
+      "claude-3-haiku_hi": 33.0,
+      "mistral-large-2402_en": 86.0,
+      "mistral-large-2402_hi": 25.0,
+      "command-r-plus_en": 75.0,
+      "command-r-plus_hi": 37.0
+    },
+    {
+      "task": "interval_date",
+      "sarvam105b_en": 57.3,
+      "sarvam105b_hi": 56.7,
+      "claude-3-5-sonnet_en": 98.0,
+      "claude-3-5-sonnet_hi": 97.0,
+      "claude-3-haiku_en": 60.0,
+      "claude-3-haiku_hi": 73.0,
+      "mistral-large-2402_en": 69.0,
+      "mistral-large-2402_hi": 31.0,
+      "command-r-plus_en": 1.0,
+      "command-r-plus_hi": 25.0
+    },
+    {
+      "task": "time_addition",
+      "sarvam105b_en": 84.7,
+      "sarvam105b_hi": 89.3,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 97.0,
+      "claude-3-haiku_en": 92.0,
+      "claude-3-haiku_hi": 94.0,
+      "mistral-large-2402_en": 94.0,
+      "mistral-large-2402_hi": 83.0,
+      "command-r-plus_en": 91.0,
+      "command-r-plus_hi": 92.0
+    },
+    {
+      "task": "time_subtraction",
+      "sarvam105b_en": 89.3,
+      "sarvam105b_hi": 88.0,
+      "claude-3-5-sonnet_en": 99.0,
+      "claude-3-5-sonnet_hi": 99.0,
+      "claude-3-haiku_en": 98.0,
+      "claude-3-haiku_hi": 93.0,
+      "mistral-large-2402_en": 95.0,
+      "mistral-large-2402_hi": 74.0,
+      "command-r-plus_en": 81.0,
+      "command-r-plus_hi": 79.0
+    },
+    {
+      "task": "time_duration",
+      "sarvam105b_en": 80.0,
+      "sarvam105b_hi": 56.7,
+      "claude-3-5-sonnet_en": 100.0,
+      "claude-3-5-sonnet_hi": 100.0,
+      "claude-3-haiku_en": 99.0,
+      "claude-3-haiku_hi": 97.0,
+      "mistral-large-2402_en": 68.0,
+      "mistral-large-2402_hi": 67.0,
+      "command-r-plus_en": 79.0,
+      "command-r-plus_hi": 69.0
+    }
+  ],
+  "trd_group_medium_direct": {
+    "en_US": {
+      "reasoning": 79.0,
+      "memorization": 34.7
+    },
+    "hi_IN": {
+      "reasoning": 74.2,
+      "memorization": 36.7
+    }
+  },
+  "trd_group_by_level": [
+    {
+      "level": "short",
+      "lang": "en_US",
+      "reasoning": 88.4,
+      "memorization": 44.3
+    },
+    {
+      "level": "short",
+      "lang": "hi_IN",
+      "reasoning": 80.0,
+      "memorization": 45.3
+    },
+    {
+      "level": "medium",
+      "lang": "en_US",
+      "reasoning": 79.0,
+      "memorization": 34.7
+    },
+    {
+      "level": "medium",
+      "lang": "hi_IN",
+      "reasoning": 74.2,
+      "memorization": 36.7
+    },
+    {
+      "level": "long",
+      "lang": "en_US",
+      "reasoning": 71.8,
+      "memorization": 25.0
+    },
+    {
+      "level": "long",
+      "lang": "hi_IN",
+      "reasoning": 66.2,
+      "memorization": 30.0
+    },
+    {
+      "level": "very_long",
+      "lang": "en_US",
+      "reasoning": 62.7,
+      "memorization": 24.3
+    },
+    {
+      "level": "very_long",
+      "lang": "hi_IN",
+      "reasoning": 53.0,
+      "memorization": 26.3
+    },
+    {
+      "level": "very_very_long",
+      "lang": "en_US",
+      "reasoning": 41.9,
+      "memorization": 19.3
+    },
+    {
+      "level": "very_very_long",
+      "lang": "hi_IN",
+      "reasoning": 36.5,
+      "memorization": 19.3
+    }
+  ],
+  "direct_drop_by_task": {
+    "en_US/date_addition": {
+      "similar_insertion": -1.2,
+      "dissimilar_insertion": -0.3
+    },
+    "en_US/date_subtraction": {
+      "similar_insertion": 2.7,
+      "dissimilar_insertion": 0.0
+    },
+    "en_US/date_duration": {
+      "similar_insertion": -2.0,
+      "dissimilar_insertion": -1.2
+    },
+    "en_US/date_recurrence": {
+      "similar_insertion": -1.9,
+      "dissimilar_insertion": -1.5
+    },
+    "en_US/day_of_week": {
+      "similar_insertion": 2.3,
+      "dissimilar_insertion": 0.4
+    },
+    "en_US/interval_date": {
+      "similar_insertion": -0.9,
+      "dissimilar_insertion": 7.5
+    },
+    "en_US/time_addition": {
+      "similar_insertion": 6.0,
+      "dissimilar_insertion": 8.1
+    },
+    "en_US/time_subtraction": {
+      "similar_insertion": 0.5,
+      "dissimilar_insertion": 4.1
+    },
+    "en_US/time_duration": {
+      "similar_insertion": 7.3,
+      "dissimilar_insertion": 0.4
+    },
+    "hi_IN/date_addition": {
+      "similar_insertion": 3.7,
+      "dissimilar_insertion": -0.3
+    },
+    "hi_IN/date_subtraction": {
+      "similar_insertion": 4.0,
+      "dissimilar_insertion": 2.4
+    },
+    "hi_IN/date_duration": {
+      "similar_insertion": -1.7,
+      "dissimilar_insertion": -3.2
+    },
+    "hi_IN/date_recurrence": {
+      "similar_insertion": -0.5,
+      "dissimilar_insertion": -0.4
+    },
+    "hi_IN/day_of_week": {
+      "similar_insertion": 2.3,
+      "dissimilar_insertion": 3.3
+    },
+    "hi_IN/interval_date": {
+      "similar_insertion": 0.5,
+      "dissimilar_insertion": 3.3
+    },
+    "hi_IN/time_addition": {
+      "similar_insertion": -0.9,
+      "dissimilar_insertion": 1.2
+    },
+    "hi_IN/time_subtraction": {
+      "similar_insertion": 3.2,
+      "dissimilar_insertion": 5.1
+    },
+    "hi_IN/time_duration": {
+      "similar_insertion": -7.3,
+      "dissimilar_insertion": -2.0
+    }
+  },
+  "dow_direct_by_year": {
+    "en_US/2025": 14.6,
+    "en_US/2026": 13.1,
+    "en_US/2027": 15.9,
+    "en_US/2028": 13.0,
+    "en_US/2029": 11.3,
+    "en_US/2030": 18.0,
+    "en_US/2031": 25.9,
+    "en_US/2032": 18.8,
+    "en_US/2033": 14.8,
+    "en_US/2034": 20.0,
+    "en_US/2035": 9.1,
+    "en_US/2036": 14.3,
+    "hi_IN/2025": 15.9,
+    "hi_IN/2026": 20.2,
+    "hi_IN/2027": 25.6,
+    "hi_IN/2028": 18.0,
+    "hi_IN/2029": 14.5,
+    "hi_IN/2030": 18.0,
+    "hi_IN/2031": 11.1,
+    "hi_IN/2032": 15.6,
+    "hi_IN/2033": 11.1,
+    "hi_IN/2034": 6.7,
+    "hi_IN/2035": 9.1,
+    "hi_IN/2036": 21.4
+  },
+  "dow_cot_by_year": {
+    "en_US/2025": 69.9,
+    "en_US/2026": 56.0,
+    "en_US/2027": 56.1,
+    "en_US/2028": 49.0,
+    "en_US/2029": 54.8,
+    "en_US/2030": 56.0,
+    "en_US/2031": 29.6,
+    "en_US/2032": 40.6,
+    "en_US/2033": 22.2,
+    "en_US/2034": 26.7,
+    "en_US/2035": 45.5,
+    "en_US/2036": 64.3,
+    "hi_IN/2025": 24.4,
+    "hi_IN/2026": 20.2,
+    "hi_IN/2027": 32.9,
+    "hi_IN/2028": 21.0,
+    "hi_IN/2029": 19.4,
+    "hi_IN/2030": 16.0,
+    "hi_IN/2031": 14.8,
+    "hi_IN/2032": 18.8,
+    "hi_IN/2033": 25.9,
+    "hi_IN/2034": 40.0,
+    "hi_IN/2035": 27.3,
+    "hi_IN/2036": 14.3
+  },
+  "feb29": {
+    "questions": 4,
+    "ids": [
+      "very_long/date_addition/142",
+      "very_long/date_duration/56",
+      "very_long/date_recurrence/8",
+      "very_very_long/day_of_week/72"
+    ],
+    "acc_by_cell": {
+      "en_US/cot": 83.3,
+      "en_US/direct": 25.0,
+      "hi_IN/cot": 50.0,
+      "hi_IN/direct": 25.0
+    }
+  },
+  "run_date_cells_ge20": [
+    {
+      "cell": "medium/interval_date/en_US/cot",
+      "early": 60.1,
+      "late": 50.5,
+      "diff": -9.6,
+      "n_early": 84,
+      "n_late": 66
+    },
+    {
+      "cell": "medium/interval_date/en_US/direct",
+      "early": 55.6,
+      "late": 53.0,
+      "diff": -2.6,
+      "n_early": 84,
+      "n_late": 66
+    },
+    {
+      "cell": "medium/interval_date/hi_IN/cot",
+      "early": 23.7,
+      "late": 24.4,
+      "diff": 0.7,
+      "n_early": 84,
+      "n_late": 66
+    },
+    {
+      "cell": "medium/interval_date/hi_IN/direct",
+      "early": 53.2,
+      "late": 50.5,
+      "diff": -2.7,
+      "n_early": 84,
+      "n_late": 66
+    },
+    {
+      "cell": "very_long/day_of_week/en_US/cot",
+      "early": 62.4,
+      "late": 66.4,
+      "diff": 4.0,
+      "n_early": 82,
+      "n_late": 68
+    },
+    {
+      "cell": "very_long/day_of_week/en_US/direct",
+      "early": 13.8,
+      "late": 20.1,
+      "diff": 6.3,
+      "n_early": 82,
+      "n_late": 68
+    },
+    {
+      "cell": "very_long/day_of_week/hi_IN/cot",
+      "early": 19.9,
+      "late": 21.8,
+      "diff": 1.9,
+      "n_early": 82,
+      "n_late": 68
+    },
+    {
+      "cell": "very_long/day_of_week/hi_IN/direct",
+      "early": 17.5,
+      "late": 14.7,
+      "diff": -2.8,
+      "n_early": 82,
+      "n_late": 68
+    }
+  ],
+  "run_date_mean_abs_diff": 3.83,
+  "run_date_mean_diff": -0.6
+}
