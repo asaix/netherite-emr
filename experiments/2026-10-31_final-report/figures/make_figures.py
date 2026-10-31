@@ -48,7 +48,7 @@ def task_bars():
         st = S.condition(c)
         ax.bar(np.arange(9) + (i - 1.5) * w, d[c], w * 0.92, color=st["color"], hatch=st["hatch"], edgecolor="white",
                label=S.ALIASES.get(c, c))
-    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t].replace(" ", "\n", 1) for t in TASKS], fontsize=7)
+    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t].replace(" ", "\n", 1) for t in TASKS], fontsize=9)
     ax.set_ylabel("Accuracy (%)")
     ax.set_ylim(0, 100)
     ax.legend(ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1.0))
@@ -71,15 +71,15 @@ def decomposition():
     r = d.loc[cuts]
     a = r["reasoning part (en-CoT - Hi CoT)"].astype(float)
     b = r["question part (En CoT - en-CoT)"].astype(float)
-    fig, ax = plt.subplots(figsize=(S.COLUMN_IN, 3.0))
+    fig, ax = plt.subplots(figsize=(S.COLUMN_IN, 2.6))
     ax.barh(y, a, 0.78, color=S.CONDITIONS["en-CoT"]["color"], edgecolor="white", label="Reasoning language (en-CoT − Hindi CoT)")
     ax.barh(y, b, 0.78, left=a, color=S.CONDITIONS["English CoT"]["color"], hatch="///", edgecolor="white", label="Question language (English CoT − en-CoT)")
-    ax.set_yticks(y, [labels[c] for c in cuts], fontsize=7)
+    ax.set_yticks(y, [labels[c] for c in cuts], fontsize=7.5)
     ax.invert_yaxis()
     ax.set_xlabel("English−Hindi CoT gap (points)")
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
-    ax.legend(loc="lower center", bbox_to_anchor=(0.32, 1.0), fontsize=7, ncol=1)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.32, 1.0), fontsize=9, ncol=1)
     S.save(fig, OUT / "decomposition")
 
 
@@ -92,13 +92,13 @@ def lr_forest():
     for i, (v, l) in enumerate(views):
         r = d.loc[v]
         ax.errorbar(r.or_per_sd, i, xerr=[[r.or_per_sd - r.or_sd_lo], [r.or_sd_hi - r.or_per_sd]], color=S.INK, marker="o", capsize=1.5)
-        ax.annotate(f"{r.or_per_sd:.2f}", (r.or_sd_hi, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=7, color=S.MUTED)
+        ax.annotate(f"{r.or_per_sd:.2f}", (r.or_sd_hi, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=9, color=S.MUTED)
     ax.axvline(1, color=S.MUTED, lw=0.6, ls="--")
     ax.set_xscale("log")
     ax.set_xticks([1, 2, 4, 8], ["1", "2", "4", "8"])
     ax.minorticks_off()
     ax.set_xlim(0.9, 12)
-    ax.set_yticks(range(len(views)), [l for _, l in views], fontsize=7)
+    ax.set_yticks(range(len(views)), [l for _, l in views], fontsize=9)
     ax.invert_yaxis()
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
@@ -121,10 +121,10 @@ def distance():
         c = S.MUTED if ref else S.CONDITIONS["English CoT"]["color"]
         ax.errorbar(r.full, i, xerr=[[r.full - r.full_lo], [r.full_hi - r.full]], color=c, marker="o" if ref else "s",
                     mfc="white" if ref else c, ms=4, lw=0.9, capsize=1.5)
-        ax.annotate(f"{r.full:.3f}", (r.full_hi, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=7, color=S.INK)
-        ax.text(-0.03, i - 0.04, what, transform=tr, ha="right", va="bottom", fontsize=6.5, fontweight="bold", color=S.INK)
-        ax.text(-0.03, i + 0.04, pair, transform=tr, ha="right", va="top", fontsize=6, color=S.MUTED)
-    ax.text(-0.03, 1.01, "What differs between the two traces", transform=ax.transAxes, ha="right", va="bottom", fontsize=6,
+        ax.annotate(f"{r.full:.3f}", (r.full_hi, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=9, color=S.INK)
+        ax.text(-0.03, i - 0.04, what, transform=tr, ha="right", va="bottom", fontsize=9, fontweight="bold", color=S.INK)
+        ax.text(-0.03, i + 0.04, pair, transform=tr, ha="right", va="top", fontsize=9, color=S.MUTED)
+    ax.text(-0.03, 1.01, "What differs between the two traces", transform=ax.transAxes, ha="right", va="bottom", fontsize=9,
             fontstyle="italic", color=S.MUTED)
     ax.set_yticks([])
     ax.set_ylim(len(names) - 0.4, -0.6)
@@ -132,7 +132,7 @@ def distance():
     ax.set_xticks([0.7, 0.8, 0.9, 1.0])
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
-    ax.set_xlabel("Mean RDS\n(0 = same steps, 1 = no steps shared)", fontsize=7)
+    ax.set_xlabel("Mean RDS\n(0 = same steps, 1 = no steps shared)", fontsize=9)
     S.save(fig, OUT / "distance")
 
 
@@ -150,14 +150,14 @@ def interventions():
             st = S.LANGUAGE["Hindi" if g.startswith("Hindi") else "English"]
             ax.errorbar(r.mean_pts, i, xerr=[[r.mean_pts - r.ci_low], [r.ci_high - r.mean_pts]], color=st["color"], marker=st["marker"], capsize=1.2, ms=3.2, lw=0.9)
         ax.axvline(0, color=S.MUTED, lw=0.6, ls="--")
-        ax.set_title(labels[p], fontsize=7)
+        ax.set_title(labels[p], fontsize=7.5)
         ax.grid(axis="y", visible=False)
         ax.grid(axis="x", visible=True)
         ax.tick_params(axis="x", labelsize=6.5)
         ax.locator_params(axis="x", nbins=3)
-    axes[0].set_yticks(range(6), [g.replace(", ", ": ") for g in groups], fontsize=7)
+    axes[0].set_yticks(range(6), [g.replace(", ", ": ") for g in groups], fontsize=9)
     axes[0].invert_yaxis()
-    fig.supxlabel("Difference in accuracy (points)", fontsize=7.5, y=-0.1)
+    fig.supxlabel("Difference in accuracy (points)", fontsize=9, y=-0.1)
     fig.subplots_adjust(wspace=0.12)
     S.save(fig, OUT / "interventions")
 
@@ -166,9 +166,9 @@ def recurrence():
     d = pd.read_csv(PC / "new_recurrence_error_types_by_k.csv")
     sets = [s for s in ["En CoT", "Hi CoT", "CLP", "en-CoT"] if s in set(d["set"])]
     parts = [("correct%", "Correct", "#D9D9D9", ""), ("backwards%", "Backwards", S.CONDITIONS["Hindi CoT"]["color"], "///"),
-             ("k-1 steps%", "One step short", S.CONDITIONS["English CoT"]["color"], "..."), ("today%", "Today", S.CONDITIONS["CLP"]["color"], "xxx"),
+             ("k-1 steps%", "One step short", S.CONDITIONS["English CoT"]["color"], "\\\\\\"), ("today%", "Today", S.CONDITIONS["CLP"]["color"], "xxx"),
              ("other%", "Other", "#6F6F6F", "")]
-    fig, axes = plt.subplots(1, len(sets), figsize=(S.COLUMN_IN, 1.45), sharey=True)
+    fig, axes = plt.subplots(1, len(sets), figsize=(S.COLUMN_IN, 1.7), sharey=True)
     for ax, s in zip(np.atleast_1d(axes), sets):
         r = d[d["set"] == s]
         x = np.arange(len(r))
@@ -176,13 +176,13 @@ def recurrence():
         for col, lab, c, h in parts:
             ax.bar(x, r[col], 0.85, bottom=bottom, color=c, hatch=h, edgecolor="white", label=lab, lw=0.2)
             bottom += r[col].to_numpy()
-        ax.set_title({"En CoT": "English CoT", "Hi CoT": "Hindi CoT"}.get(s, s), fontsize=7)
-        ax.set_xticks(x, r["k"].astype(str), fontsize=5, rotation=90)
+        ax.set_title({"En CoT": "English CoT", "Hi CoT": "Hindi CoT"}.get(s, s), fontsize=7.5)
+        ax.set_xticks(x, r["k"].astype(str), fontsize=6, rotation=90)
         ax.grid(False)
-    np.atleast_1d(axes)[0].set_ylabel("Share of answers (%)", fontsize=7)
+    np.atleast_1d(axes)[0].set_ylabel("Share of answers (%)", fontsize=9)
     h, l = np.atleast_1d(axes)[0].get_legend_handles_labels()
-    fig.legend(h, l, ncol=5, loc="lower center", bbox_to_anchor=(0.5, 0.98), fontsize=6.2, columnspacing=0.7, handlelength=1.1)
-    fig.supxlabel("Occurrence number k", fontsize=7, y=-0.2)
+    fig.legend(h, l, ncol=5, loc="lower center", bbox_to_anchor=(0.5, 0.98), fontsize=8, columnspacing=0.7, handlelength=1.1)
+    fig.supxlabel("Occurrence number k", fontsize=9, y=-0.2)
     S.save(fig, OUT / "recurrence_k")
 
 
@@ -198,15 +198,15 @@ def hinglish_dumbbell():
         ax.scatter(r.direct, y, color=S.MUTED, marker="X", s=11, label="Direct", zorder=2, lw=0)
         ax.scatter(r["std"], y, color=S.CONDITIONS["English CoT"]["color"], marker="s", s=10, label="Standard CoT", zorder=2, lw=0)
         ax.scatter(r.hing, y, color=S.CONDITIONS["Hinglish CoT"]["color"], marker="v", s=13, label="Hinglish CoT", zorder=3, lw=0)
-        ax.set_title(title, fontsize=7.5)
+        ax.set_title(title, fontsize=9)
         ax.grid(axis="y", visible=False)
         ax.grid(axis="x", visible=True)
-    axes[0].set_yticks(np.arange(len(order)), [labs[o] for o in order], fontsize=6.8)
+    axes[0].set_yticks(np.arange(len(order)), [labs[o] for o in order], fontsize=9)
     axes[0].invert_yaxis()
     axes[0].set_xlim(0, 102)
     h, l = axes[0].get_legend_handles_labels()
-    fig.legend(h, l, ncol=3, loc="lower center", bbox_to_anchor=(0.55, -0.16), fontsize=7)
-    fig.supxlabel("Accuracy (%)", fontsize=7.5, y=-0.04, x=0.6)
+    fig.legend(h, l, ncol=3, loc="lower center", bbox_to_anchor=(0.55, -0.16), fontsize=9)
+    fig.supxlabel("Accuracy (%)", fontsize=9, y=-0.04, x=0.6)
     S.save(fig, OUT / "hinglish_tasks")
 
 
@@ -225,11 +225,11 @@ def hinglish_level():
             n, col, m, ls = name[c]
             ax.plot(x, r.accuracy, color=col, marker=m, ls=ls, ms=3, label=n)
             ax.fill_between(x, r.lo, r.hi, color=col, alpha=0.15, lw=0)
-        ax.set_title(title, fontsize=7.5)
-        ax.set_xticks(x, ["S", "M", "L", "VL", "VVL"], fontsize=6.5)
-    axes[0].set_ylabel("Accuracy (%)", fontsize=7.5)
+        ax.set_title(title, fontsize=9)
+        ax.set_xticks(x, ["S", "M", "L", "VL", "VVL"], fontsize=9)
+    axes[0].set_ylabel("Accuracy (%)", fontsize=9)
     h, l = axes[0].get_legend_handles_labels()
-    fig.legend(h, l, ncol=3, loc="lower center", bbox_to_anchor=(0.55, 0.96), fontsize=7)
+    fig.legend(h, l, ncol=3, loc="lower center", bbox_to_anchor=(0.55, 0.96), fontsize=9)
     S.save(fig, OUT / "hinglish_level")
 
 
@@ -246,16 +246,16 @@ def hinglish_style():
             v = d[(d.language == lang) & (d["style"] == k[0])].pct_of_traces.sum() if k else 0
             ax.barh(i, v, 0.7, left=left, color=c, hatch=h, edgecolor="white", label=lab if i == 0 else None)
             if v > 8:
-                ax.text(left + v / 2, i, f"{v:.0f}%", ha="center", va="center", fontsize=7, color="white", bbox={"fc": c, "ec": "none", "pad": 0.6})
+                ax.text(left + v / 2, i, f"{v:.0f}%", ha="center", va="center", fontsize=9, color="white", bbox={"fc": c, "ec": "none", "pad": 0.6})
             left += v
     ax.barh(0, 0, color=parts[2][2], hatch=parts[2][3], label=None)
-    ax.set_yticks([0, 1], ["English Q.", "Hindi Q."], fontsize=7)
+    ax.set_yticks([0, 1], ["English Q.", "Hindi Q."], fontsize=9)
     ax.invert_yaxis()
     ax.set_xlim(0, 100)
     ax.grid(False)
-    ax.set_xlabel("Share of Hinglish-prompted traces (%)", fontsize=7.5)
+    ax.set_xlabel("Share of Hinglish-prompted traces (%)", fontsize=9)
     from matplotlib.patches import Patch
-    ax.legend(handles=[Patch(fc=c, hatch=h, ec="white", label=l) for _, l, c, h in parts], ncol=3, loc="lower center", bbox_to_anchor=(0.45, 0.98), fontsize=6.8)
+    ax.legend(handles=[Patch(fc=c, hatch=h, ec="white", label=l) for _, l, c, h in parts], ncol=3, loc="lower center", bbox_to_anchor=(0.45, 0.98), fontsize=9)
     S.save(fig, OUT / "hinglish_style")
 
 
@@ -265,12 +265,12 @@ def hinglish_bytask():
     y = np.arange(9)
     ax.barh(y - 0.2, d.roman_diff, 0.38, color=S.CONDITIONS["Hinglish CoT"]["color"], edgecolor="white", label="Roman Hinglish")
     ax.barh(y + 0.2, d.plain_diff, 0.38, color=S.CONDITIONS["English CoT"]["color"], hatch="///", edgecolor="white", label="Plain English")
-    ax.set_yticks(y, [S.TASK_LABEL[t] for t in TASKS], fontsize=6.8)
+    ax.set_yticks(y, [S.TASK_LABEL[t] for t in TASKS], fontsize=9)
     ax.invert_yaxis()
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
-    ax.set_xlabel("Hinglish CoT minus standard CoT (points)", fontsize=7.5)
-    ax.legend(loc="lower left", fontsize=6.8)
+    ax.set_xlabel("Hinglish CoT minus standard CoT (points)", fontsize=9)
+    ax.legend(loc="lower left", fontsize=9)
     S.save(fig, OUT / "hinglish_bytask")
 
 
@@ -282,10 +282,10 @@ def lr_hist():
             r = d[(d["mode"] == mode) & (d.disagree == k)]
             ax.step(r.bin_lo, r.density, where="post", color=c, ls=ls, label=lab)
             ax.axvline(r["median"].iloc[0], color=c, lw=0.6, ls=":")
-        ax.set_title(title, fontsize=7.5)
-        ax.set_xlabel("RDS", fontsize=7.5)
-    axes[0].set_ylabel("Density", fontsize=7.5)
-    axes[0].legend(fontsize=6.8, loc="upper left")
+        ax.set_title(title, fontsize=9)
+        ax.set_xlabel("RDS", fontsize=9)
+    axes[0].set_ylabel("Density", fontsize=9)
+    axes[0].legend(fontsize=9, loc="upper left")
     S.save(fig, OUT / "lr_hist")
 
 
@@ -298,9 +298,9 @@ def lr_bins():
         lo = r.cluster_lo.fillna(r.wilson_lo)
         hi = r.cluster_hi.fillna(r.wilson_hi)
         ax.errorbar(r.mid, r.rate, yerr=[(r.rate - lo).clip(lower=0), (hi - r.rate).clip(lower=0)], color=S.BINARY[mode], marker=m, ls=ls, label=lab, capsize=1.5, ms=3.5)
-    ax.set_xlabel("RDS bin (width 0.1, midpoint)", fontsize=7.5)
-    ax.set_ylabel("Disagreement rate", fontsize=7.5)
-    ax.legend(fontsize=6.8, loc="upper left")
+    ax.set_xlabel("RDS bin (width 0.1, midpoint)", fontsize=9)
+    ax.set_ylabel("Disagreement rate", fontsize=9)
+    ax.legend(fontsize=9, loc="upper left")
     S.save(fig, OUT / "lr_bins")
 
 
@@ -312,10 +312,10 @@ def ed_task_difficulty():
         r = d[d.difficulty == l].set_index("task").loc[TASKS]
         ax.bar(np.arange(9) + (i - 2) * w, r["mean"], w * 0.92, color=S.DIFFICULTY[l], edgecolor="white", yerr=r.ci_cube,
                error_kw={"lw": 0.5, "ecolor": S.INK}, label=S.DIFFICULTY_LABEL[l])
-    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t].replace(" ", "\n", 1) for t in TASKS], fontsize=7)
-    ax.set_ylabel("Normalised edit distance", fontsize=7.5)
+    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t].replace(" ", "\n", 1) for t in TASKS], fontsize=9)
+    ax.set_ylabel("Normalised edit distance", fontsize=9)
     ax.set_ylim(0, 1)
-    ax.legend(ncol=5, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=7)
+    ax.legend(ncol=5, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=9)
     S.save(fig, OUT / "ed_task_difficulty")
 
 
@@ -329,10 +329,10 @@ def ed_outcome():
         r = d[d.insertion == k].set_index("outcome").loc[outs]
         ax.bar(np.arange(5) + (i - 1) * w, r["mean"], w * 0.92, color=st["color"], hatch=st["hatch"], edgecolor="white", yerr=r.ci_cube,
                error_kw={"lw": 0.5, "ecolor": S.INK}, label=st["label"])
-    ax.set_xticks(np.arange(5), ["Both\ncorrect", "English\nonly", "Hindi\nonly", "Both\nwrong", "Unanswered"], fontsize=6.8)
-    ax.set_ylabel("Normalised edit distance", fontsize=7.5)
+    ax.set_xticks(np.arange(5), ["Both\ncorrect", "English\nonly", "Hindi\nonly", "Both\nwrong", "Unanswered"], fontsize=9)
+    ax.set_ylabel("Normalised edit distance", fontsize=9)
     ax.set_ylim(0, 1.05)
-    ax.legend(ncol=3, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6.8)
+    ax.legend(ncol=3, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=9)
     S.save(fig, OUT / "ed_outcome")
 
 
@@ -344,10 +344,10 @@ def ed_task_set():
     for i, (k, lab, c, h) in enumerate([("standard", "Thinking off", S.BINARY["off"], ""), ("ron", "Thinking on, visible reply", S.BINARY["on"], "///")]):
         r = d[d[col] == k].set_index("task").loc[TASKS]
         ax.bar(np.arange(9) + (i - 0.5) * w, r["mean"], w * 0.92, color=c, hatch=h, edgecolor="white", yerr=r.ci_cube, error_kw={"lw": 0.5, "ecolor": S.INK}, label=lab)
-    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t] for t in TASKS], fontsize=6, rotation=35, ha="right", rotation_mode="anchor")
-    ax.set_ylabel("Normalised edit distance", fontsize=7.5)
+    ax.set_xticks(np.arange(9), [S.TASK_LABEL[t] for t in TASKS], fontsize=9, rotation=35, ha="right", rotation_mode="anchor")
+    ax.set_ylabel("Normalised edit distance", fontsize=9)
     ax.set_ylim(0, 1.05)
-    ax.legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6.8)
+    ax.legend(ncol=2, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=9)
     S.save(fig, OUT / "ed_task_set")
 
 
@@ -359,10 +359,10 @@ def ed_insertion_difficulty():
     for i, l in enumerate(LEVELS):
         r = d[d.difficulty == l].set_index("insertion").loc[keys]
         ax.bar(np.arange(3) + (i - 2) * w, r["mean"], w * 0.92, color=S.DIFFICULTY[l], edgecolor="white", yerr=r.ci_cube, error_kw={"lw": 0.5, "ecolor": S.INK}, label=S.DIFFICULTY_LABEL[l])
-    ax.set_xticks(np.arange(3), [S.INSERTION[INS[k]]["label"] for k in keys], fontsize=7)
+    ax.set_xticks(np.arange(3), [S.INSERTION[INS[k]]["label"] for k in keys], fontsize=9)
     ax.set_ylim(0, 1)
-    ax.set_ylabel("Normalised edit distance", fontsize=7.5)
-    ax.legend(ncol=5, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6.2, columnspacing=0.6, handlelength=1.0)
+    ax.set_ylabel("Normalised edit distance", fontsize=9)
+    ax.legend(ncol=5, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=9, columnspacing=0.6, handlelength=1.0)
     S.save(fig, OUT / "ed_insertion_difficulty")
 
 
@@ -382,11 +382,11 @@ def ed_set_box():
         p.set(facecolor=c["color"], hatch=c["hatch"], edgecolor=S.INK, linewidth=0.4)
     for m in b["medians"]:
         m.set(color="white", linewidth=0.9)
-    ax.set_xticks([0, 1.1], ["Thinking off", "Thinking on, visible reply"], fontsize=7)
-    ax.set_ylabel("Normalised edit distance", fontsize=7.5)
+    ax.set_xticks([0, 1.1], ["Thinking off", "Thinking on, visible reply"], fontsize=9)
+    ax.set_ylabel("Normalised edit distance", fontsize=9)
     from matplotlib.patches import Patch
     ax.legend(handles=[Patch(fc=S.INSERTION[v]["color"], hatch=S.INSERTION[v]["hatch"], ec="white", label=S.INSERTION[v]["label"]) for v in INS.values()], ncol=3,
-              loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6.8)
+              loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=9)
     S.save(fig, OUT / "ed_set_box")
 
 

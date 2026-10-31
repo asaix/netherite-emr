@@ -1,0 +1,201 @@
+{
+  "counts": [
+    [
+      "clp",
+      "hi_IN",
+      "clp",
+      "6750"
+    ],
+    [
+      "en-cot",
+      "hi_IN",
+      "en-cot",
+      "6750"
+    ],
+    [
+      "hinglish",
+      "en_US",
+      "hinglish",
+      "6750"
+    ],
+    [
+      "hinglish",
+      "hi_IN",
+      "hinglish",
+      "6750"
+    ],
+    [
+      "standard",
+      "en_US",
+      "cot",
+      "20250"
+    ],
+    [
+      "standard",
+      "en_US",
+      "direct",
+      "20250"
+    ],
+    [
+      "standard",
+      "hi_IN",
+      "cot",
+      "20250"
+    ],
+    [
+      "standard",
+      "hi_IN",
+      "direct",
+      "20250"
+    ]
+  ],
+  "full": {
+    "en_US direct": {
+      "answered": 58.99,
+      "strict": 58.9
+    },
+    "en_US cot": {
+      "answered": 88.51,
+      "strict": 85.67
+    },
+    "hi_IN direct": {
+      "answered": 54.74,
+      "strict": 54.73
+    },
+    "hi_IN cot": {
+      "answered": 59.4,
+      "strict": 58.97
+    }
+  },
+  "subset": {
+    "en_US direct": {
+      "answered": 59.68,
+      "strict": 59.61
+    },
+    "en_US cot": {
+      "answered": 88.88,
+      "strict": 85.99
+    },
+    "hi_IN direct": {
+      "answered": 55.17,
+      "strict": 55.17
+    },
+    "hi_IN cot": {
+      "answered": 59.4,
+      "strict": 59.02
+    },
+    "en-cot": {
+      "answered": 82.91,
+      "strict": 80.79
+    },
+    "clp": {
+      "answered": 70.32,
+      "strict": 69.91
+    },
+    "hinglish en_US": {
+      "answered": 70.91,
+      "strict": 70.31
+    },
+    "hinglish hi_IN": {
+      "answered": 59.37,
+      "strict": 59.11
+    }
+  },
+  "tasks_subset": {
+    "date_addition": {
+      "en_US direct": 85.6,
+      "en_US cot": 98.0,
+      "hi_IN direct": 82.8,
+      "hi_IN cot": 85.07
+    },
+    "date_duration": {
+      "en_US direct": 84.0,
+      "en_US cot": 99.33,
+      "hi_IN direct": 78.93,
+      "hi_IN cot": 88.25
+    },
+    "date_recurrence": {
+      "en_US direct": 22.07,
+      "en_US cot": 90.33,
+      "hi_IN direct": 2.8,
+      "hi_IN cot": 20.11
+    },
+    "date_subtraction": {
+      "en_US direct": 86.0,
+      "en_US cot": 95.19,
+      "hi_IN direct": 84.8,
+      "hi_IN cot": 65.95
+    },
+    "day_of_week": {
+      "en_US direct": 14.93,
+      "en_US cot": 69.52,
+      "hi_IN direct": 15.2,
+      "hi_IN cot": 21.02
+    },
+    "interval_date": {
+      "en_US direct": 43.2,
+      "en_US cot": 50.69,
+      "hi_IN direct": 46.8,
+      "hi_IN cot": 23.86
+    },
+    "time_duration": {
+      "en_US direct": 65.73,
+      "en_US cot": 98.93,
+      "hi_IN direct": 44.67,
+      "hi_IN cot": 80.08
+    },
+    "time_addition": {
+      "en_US direct": 70.53,
+      "en_US cot": 95.93,
+      "hi_IN direct": 75.6,
+      "hi_IN cot": 73.47
+    },
+    "time_subtraction": {
+      "en_US direct": 64.67,
+      "en_US cot": 97.71,
+      "hi_IN direct": 64.93,
+      "hi_IN cot": 75.2
+    }
+  },
+  "hindi_no_distractor_full": {
+    "date_subtraction": -19.91,
+    "interval_date": -23.32
+  },
+  "hindi_pooled_full": {
+    "date_subtraction": -17.55,
+    "interval_date": -21.82
+  },
+  "gap_by_level_full": {
+    "short": 24.04,
+    "medium": 24.38,
+    "long": 28.32,
+    "very_long": 33.72,
+    "very_very_long": 34.94
+  },
+  "time_distractor_drop_full": {
+    "hi cot": 2.57,
+    "hi direct": 0.36,
+    "en cot": 0.89,
+    "en direct": 1.24
+  },
+  "january": {
+    "questions_per_lang": {
+      "en_US": 134,
+      "hi_IN": 134
+    },
+    "en_US": {
+      "n": 134,
+      "strict_with": 19.4,
+      "strict_without": 88.81,
+      "cutoffs_with": 91,
+      "cutoffs_without": 4
+    },
+    "hi_IN": {
+      "n": 134,
+      "strict_with": 2.24,
+      "strict_without": 26.87,
+      "cutoffs_with": 0,
+      "cutoffs_without": 0
+    }
+  }
+}

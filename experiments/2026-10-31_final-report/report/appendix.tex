@@ -1,81 +1,107 @@
 \section*{Appendix A. Worked Examples}
 \addcontentsline{toc}{section}{Appendix A. Worked Examples}
 
-\footnotesize
-\noindent\textbf{Hinglish, English question, wrong.} Date subtraction, short. ``Today is 2025-05-01, what was the date 3 days ago?'' Gold 2025-04-28. Standard English CoT answered correctly. Excerpt: \emph{Step 4: 01 minus 3 karne par hum 31 April par aayenge. Step 5: Isliye, 3 days ago ki date 2025-04-30 thi.} Answer: 2025-04-30.
+\noindent\textbf{Hinglish, English question, wrong.} Date subtraction, short. ``Today is 2025-05-01, what was the date 3 days ago?'' Gold 2025-04-28. Excerpt: \emph{01 minus 3 karne par hum 31 April par aayenge} (`subtracting 3 from 01 brings us to 31 April'). Answer: 2025-04-30.
 
 \smallskip
-\noindent\textbf{en-CoT, $k=1$, backward answer.} Date recurrence, short, ID 5, time-related distractor, Hindi question with \hi{आज को छोड़कर, 1वीं आवृत्ति}. Excerpt: \emph{Given the phrasing ``excluding today,'' this suggests we need to find what comes before.} Answer: 2025-04-06. Gold 2025-04-14.
+\noindent\textbf{en-CoT, backward answer.} Date recurrence, short, ID 5, on \hi{आज को छोड़कर, 1वीं आवृत्ति} (\emph{āj ko choṛkar, 1vīṃ āvṛtti}, `excluding today, the 1st occurrence'). Excerpt: \emph{Given the phrasing ``excluding today,'' this suggests we need to find what comes before.} Answer: 2025-04-06. Gold 2025-04-14.
 
 \smallskip
-\noindent\textbf{CLP, stage 1 anchors stage 2.} Date recurrence, long, ID 12, no distractor. Stage 1 ends: \emph{Therefore, the date of the 7th occurrence is 2 August 2027.} Stage 2 ends: \emph{Adding 78 days to 16 May 2027 also results in 2 August 2027.} Answer: 2027-08-02. Gold 2027-08-15.
+\noindent\textbf{CLP, stage 1 anchors stage 2.} Date recurrence, long, ID 12. Stage 1 ends: \emph{the date of the 7th occurrence is 2 August 2027.} Stage 2 ends: \emph{Adding 78 days to 16 May 2027 also results in 2 August 2027.} Gold 2027-08-15.
 
 \smallskip
-\noindent\textbf{Resampling arms, a trace where the distractor matters.} Date recurrence, long, ID 12, Hindi, time-related distractor (Figure~\ref{fig:design}). The original trace answered 2027-04-20. Correct continuations out of seven: Q 5, P 2, M 0, P1 2. Unlike Table~\ref{tab:intervention}, removing the distractor helps here, but a single example cannot show an effect; Figure~\ref{fig:interventions} gives the aggregates.
+\noindent\textbf{Hindi CoT subtracts by walking forward.} Date subtraction, very very long, ID 79. Today is 2027-05-09; what was the date 52 days ago? Gold 2027-03-18. Excerpt, translated: \emph{From 9 May to 31 May is 22 days. \dots\ April has 30 days, so the date exactly 30 days before 30 April is 1 May.} Answer: 2027-05-01, after today.
 
 \smallskip
-\noindent\textbf{Hindi CoT subtracts by walking forward.} Date subtraction, very very long, ID 79, time-related distractor (``I get confused by months with 31 days''). Question: today is 2027-05-09; what was the date 52 days ago? Gold 2027-03-18. Excerpt, translated: \emph{From 9 May to 31 May is 22 days (31 $-$ 9 = 22). If we subtract May's 22 days, 30 of the 52 remain. \dots\ April has 30 days, so the date exactly 30 days before 30 April is 1 May.} Answer: 2027-05-01, after today.
+\noindent\textbf{Hindi CoT returns a ``week'' of two days.} Interval date, long, ID 95. Today is 2030-05-15. Gold 2030-05-20 to 2030-05-26. Excerpt, translated: \emph{15 May 2030 is a Saturday. \dots\ The next Monday will be 18 May 2030. \dots\ Sunday will be 19 May 2030 (6 days after Monday).} 15 May 2030 is a Wednesday.
 
 \smallskip
-\noindent\textbf{Hindi CoT returns a ``week'' of two days.} Interval date, long, ID 95, time-related distractor. Question: today is 2030-05-15; what are the start and end dates of next week, with Monday as the first day? Gold 2030-05-20 to 2030-05-26. Excerpt, translated: \emph{\dots\ adding 3 days, 15 May 2030 is a Saturday. \dots\ The next Monday will be 18 May 2030 (2 days from today). \dots\ Sunday will be 19 May 2030 (6 days after Monday).} Answer: 2030-05-18 to 2030-05-19. 15 May 2030 is a Wednesday.
+\noindent\textbf{English CoT is one day late.} Day of week, very very long, ID 20, 2029-07-02. Gold Monday. Excerpt: \emph{Total: 31 + 28 + 31 + 30 + 31 + 30 + 2 = 183 days.} Answer: Tuesday. 1 January to 2 July is 182 days.
 
 \smallskip
-\noindent\textbf{English CoT is one day late.} Day of week, very very long, ID 20, no distractor. ``What day of the week (e.g., Monday, Tuesday, ...) is 2029-07-02?'' Gold Monday. Excerpt: \emph{Total: 31 + 28 + 31 + 30 + 31 + 30 + 2 = 183 days \dots\ 2010 $\div$ 7 = 287 remainder 1. So July 2, 2029 is 1 day after Monday.} Answer: Tuesday. 1 January to 2 July is 182 days.
-
-\smallskip
-\noindent\textbf{English CoT skips 29 February.} Date recurrence, medium, ID 60, unrelated distractor. ``Today is 2028-02-15, and I have a recurrence every 6 days. Without counting today, what is the date of the 4 occurrence?'' Gold 2028-03-10. Excerpt: \emph{From 2028-02-27 to 2028-03-05: 28 - 27 = 1 day in February, plus 5 days in March = 6 days \ok} Answer: 2028-03-11. 2028 is a leap year, so that gap is 7 days, and the check repeats the mistake.
+\noindent\textbf{English CoT skips 29 February.} Date recurrence, medium, ID 60. Today is 2028-02-15, every 6 days, 4th occurrence. Gold 2028-03-10. Excerpt: \emph{From 2028-02-27 to 2028-03-05: 28 - 27 = 1 day in February, plus 5 days in March = 6 days \ok} Answer: 2028-03-11. That gap is 7 days, and the check repeats the mistake.
 
 \section*{Appendix B. Further Statistics}
 \addcontentsline{toc}{section}{Appendix B. Further Statistics}
 
-\noindent\textbf{Method details.} A substitution between a partial and a full date costs 0.5 in RDS, a rule whose effect we confirmed is negligible. On the 2,250-question subset the 29.5-point gap has interval [28.1, 30.9], the reasoning part 23.5 [22.1, 24.9], the question part 6.0 [5.0, 7.1], and the reasoning share 79.7\% [76.4, 82.9].
+\noindent\textbf{Standard set.} The Hindi direct-to-CoT penalty for time-related sentences has interval [0.6, 3.8], and removing any one sentence leaves it between 1.8 and 2.6. The Hindi-minus-English penalty is +2.6 [0.4, 4.7] answered but +1.4 [$-$0.7, 3.5] strict. Removing the January sentence takes the Hindi recurrence penalty from +4.5 to +0.3 [$-$4.6, 4.9]; English stays at +8.5. Of the 92 cut-off traces under that sentence, none is a verbatim loop. Under strict scoring the CoT gap grows from 23.0 to 31.1 with difficulty.
 
 \smallskip
-\noindent\textbf{RQ1.} The time duration gain gap (English gain minus Hindi gain), +2.3 pooled, is $-$5.2 with no distractor, +14.5 with a time-related one and $-$2.2 with an unrelated one; only +14.5 is significant. Hindi CoT's harm at the short level ($-$4.3 pooled) comes from the distractor conditions ($-$1.9 [$-$4.5, 0.7] without one, $-$6.2 and $-$4.7 with). Both Hindi task losses in RQ1 stay significantly negative with either distractor. In the thinking pilot, strict Hindi CoT cut at 4,096 tokens would score 43.8\%, below the 59.9\% with thinking off on the same questions, and within these traces a higher English share does not predict higher accuracy. Under strict scoring the gap under CoT grows from 23.0 to 31.1; the logistic trend has OR 0.97 per level.
+\noindent\textbf{RDS.} Of 21,600 loaded pairs, 938 (4.3\%) are dropped because an answer could not be parsed, leaving 20,662 on 6,739 questions. With thinking off, 11,309 pairs are both correct, 5,947 English only, 505 Hindi only and 1,710 both wrong. Disagreement rises from 26.7\% on short questions to 38.6\% on very very long ones. A substitution between a partial and a full date costs 0.5 in RDS. These are in-sample associations.
 
 \smallskip
-\noindent\textbf{RQ2.} The Hindi direct-to-CoT penalty for time-related sentences has interval [0.6, 3.8], and removing any single sentence leaves it between 1.8 and 2.6. Comparing languages, the Hindi-minus-English penalty is +2.6 [0.4, 4.7] answered but +1.4 [$-$0.7, 3.5] strict, as English CoT's drop grows from 0.9 to 2.2 [1.3, 3.2]; it is not significant on logit specifications unless recurrence is removed. With unrelated sentences it is +2.6 [0.5, 4.6] answered and +2.8 [0.8, 4.8] strict, but because English CoT resists a fall in English direct answers: the Hindi penalty itself is null (+0.7). Of the 92 cut-off traces under the January sentence, none is a verbatim loop, and in a systematic sample of 23, read from excerpts by one LLM annotator, 18 mainly search for a January start date. Removing that sentence takes the Hindi recurrence penalty from +4.5 to +0.3 [$-$4.6, 4.9]; English stays at +8.5 (strict +9.9). For mentions, the English OR on the stricter list is 0.57 [0.38, 0.85] (0.92 on the original list); unrelated sentences give 1.15 and 1.30.
+\noindent\textbf{en-CoT and CLP.} The 29.5-point gap has interval [28.1, 30.9], the reasoning part 23.5 [22.1, 24.9], the question part 6.0 [5.0, 7.1], and the reasoning share 79.7\% [76.4, 82.9]. The two parts are not distinguishable at the short level. CLP gains +9.0, +10.4 and +13.2 over Hindi CoT by distractor condition. en-CoT beats CLP by 12.6 [11.4, 13.9]; on MGSM \citeauthor{qin-etal-2023-cross} report CLP 70.6 and En-CoT 57.8.
 
 \smallskip
-\noindent\textbf{RQ3.} The reasoning part is 22.0 to 24.5 points in each distractor condition, and the two parts are not distinguishable at the short level. The direct-answer gap is 4.5 [3.3, 5.8]. Verification is associated with 63.6\% [39.8, 97.0] of en-CoT's day-of-week residual to English. CLP gains +9.0, +10.4 and +13.3 over Hindi CoT by distractor condition, and beats Hindi direct by 15.1 [13.5, 16.7], but is significantly worse on interval date (35.3\% vs 46.8\%). en-CoT beats CLP by 12.6 [11.4, 13.9]; on MGSM \citeauthor{qin-etal-2023-cross} report CLP 70.6 and En-CoT 57.8. Within the same question, the stage-1 split differs by +62.5 points [57.1, 68.0], against about 7 for the same split on en-CoT; \citeauthor{qin-etal-2023-cross} also note that stage 1 may give preliminary answers. For recurrence, non-standard ordinals at $k=2$ to 4 give backward answers on 2 of 229 en-CoT questions, and removing $k=1$ moves en-CoT's gap to English only from 6.0 to 5.3. en-CoT's gap to English narrows from 10.2 points at short to 4.3 at very very long, but without $k\le 2$ the change is +0.8 [$-$2.5, 4.1].
+\noindent\textbf{Hinglish.} On Hindi questions, Hinglish lowers date duration by 5.5 points and raises date subtraction by 5.1, which cancel in the mean. Roman traces do no better than Devanagari ones ($-$2.8 [$-$5.2, $-$0.5]).
 
 \smallskip
-\noindent\textbf{RQ4.} On Hindi questions, Hinglish lowers date duration by 5.5 points and raises date subtraction by 5.1, which cancel in the mean; 25.5\% of Hindi-question traces have no Devanagari. On English questions, traces with Hindi function words lose 11.3 points more [9.0, 13.6] within task, level and distractor (8.4 to 12.0 across 48 threshold pairs). On Hindi questions Roman traces do no better than Devanagari ones ($-$2.8 [$-$5.2, $-$0.5]; $-$2.3 [$-$5.0, 0.4] within question).
+\noindent\textbf{Interventions.} The net 8.8\% has interval [5.5, 12.1], and resampling the 29 sentences widens the Q$-$P interval to [$-$0.3, 9.4]. The mention test is (M$-$P)$-$(P$-$P1) $=-$4.6 [$-$9.6, 0.6]. Agreement with the API on 90 calibration questions is $-$2.2 points [$-$13.3, 7.8], which does not establish that the two are the same.
 
-\smallskip
-\noindent\textbf{RQ5.} Of 21,600 loaded pairs, 938 (4.3\%) are dropped because an answer could not be parsed, leaving 20,662 on 6,739 questions, 1,191 of them with thinking on. Disagreement is 33.1\% with thinking off and 2.6\% with it on, rises from 26.7\% on short questions to 38.6\% on very very long ones, is lowest on date duration (12.7\%) and date addition (14.9\%), and ranges from 30.7\% to 32.2\% across distractor conditions. Medians of RDS are 0.828 for agreeing and 0.933 for disagreeing pairs. Reference levels are short, date addition, no distractor and thinking off. Of the 20,662 pairs, 12,468 are both correct, 5,967 English only, 516 Hindi only and 1,711 both wrong; with thinking off the counts are 11,309, 5,947, 505 and 1,710, and with it on 1,159, 20, 11 and 1. The primary RDS coefficient is $\beta=15.94$ (17.20 with the length gap, whose own coefficient is $-$1.19). Fitted separately, the adjusted slope with thinking off is OR 4.87 [4.53, 5.24] per 0.1, and the RDS-only slope with thinking on is 7.74 [3.49, 17.18], from only 31 disagreements. Thinking on lowers the adjusted odds of disagreement by about 90\% (OR 0.10). With thinking off, the RDS-only model gives OR 4.02 [3.81, 4.25] per 0.1, and the average marginal effect is 24.0 points per 0.1 with thinking off and 4.6 with it on. The adjusted thinking-on model (OR 11.79 [4.90, 28.37]) did not converge because time duration had no disagreements, so we do not use it. All RDS coefficients have $p<0.001$. These are in-sample associations, not predictive accuracy on new questions.
-
-\smallskip
-\noindent\textbf{RQ6.} Agreement with the API on 90 calibration questions is $-$2.2 points [$-$13.3, 7.8], which does not establish that the two are the same; the Hindi difference on 278 questions is [0.5, 10.8]. Deletion with sampling gives +4.5 [$-$2.7, 11.7]. The net 8.8\% has interval [5.5, 12.1], and resampling the 29 sentences widens the Q$-$P interval to [$-$0.3, 9.4]. The mention test is (M$-$P)$-$(P$-$P1) $=-$4.6 [$-$9.6, 0.6], with P$-$P1 $-$0.7 [$-$3.5, 2.1]. In later-mention traces, rollouts with no mention match the no-distractor arm (+0.0 [$-$4.8, 4.7]) and those with a mention do not (+8.7 [3.7, 13.6]); these subgroups are post-treatment. On the API, Hindi non-completion barely moves with the distractor (0.81\% to 0.89\%).
-
-\normalsize
-\section*{Appendix C. Secondary Figures}
-\addcontentsline{toc}{section}{Appendix C. Secondary Figures}
+\section*{Appendix C. Secondary Figures and Tables}
+\addcontentsline{toc}{section}{Appendix C. Secondary Figures and Tables}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{hinglish_tasks}
-\caption{Accuracy by task under the Hinglish prompt, answered. Standard CoT is the CoT condition, reasoning in the question's language.}
+\caption{Accuracy by task under the Hinglish prompt, answered. Standard CoT reasons in the question's language.}
 \label{fig:hingtasks}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{recurrence_k}
-\caption{Date recurrence answers by occurrence number $k$, on 2,250 questions. Backward answers concentrate at $k=1$ under every prompt on Hindi questions; one-step-short answers run through every $k$.}
+\caption{Date recurrence answers by occurrence number $k$, on 2,250 questions. Backward answers concentrate at $k=1$ on Hindi questions; one-step-short answers run through every $k$.}
 \label{fig:recurrence}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
+\includegraphics[width=\columnwidth]{lr_forest}
+\caption{OR for disagreement per standard deviation of divergence, by what the score compares. Removing answer tokens takes most of the link away.}
+\label{fig:lrforest}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
 \includegraphics[width=\columnwidth]{lr_bins}
-\caption{Observed English-Hindi disagreement rate by RDS bin of width 0.1, unadjusted, with 95\% intervals; bins with fewer than 20 pairs are hidden.}
+\caption{Observed disagreement rate by RDS bin of width 0.1, unadjusted, with 95\% intervals; bins with fewer than 20 pairs are hidden.}
 \label{fig:lrbins}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{by_level}
-\caption{Answered accuracy by difficulty on 2,250 questions, with 95\% bootstrap intervals; Table~\ref{tab:accuracy} gives the values.}
-\label{fig:level}
+\includegraphics[width=\columnwidth]{distance}
+\caption{How different two traces are, as mean RDS with 95\% intervals on 2,250 questions. Each row compares two traces that differ only in the factor in bold. Hollow grey rows are reference points: adding a distractor, and traces of unrelated questions.}
+\label{fig:distance}
 \end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{interventions}
+\caption{Resampling contrasts with 95\% intervals. Q is the continuation without the distractor in the question, P with it, M after the mention, and P1 one sentence earlier. \emph{Opening} traces mention the distractor in their first sentence and \emph{later} traces after it. English is descriptive.}
+\label{fig:interventions}
+\end{figure}
+
+\begin{table}[!ht]
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X l r@{}}
+\toprule
+Variant & Prefix & Correct \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Deletion: one greedy continuation}} \\
+A\enspace as written & s0 to s3 & 1 of 1 \\
+B\enspace mention deleted & s0 to s2 & 1 of 1 \\
+C\enspace neutral deleted & s1 to s3 & 1 of 1 \\
+\addlinespace
+\multicolumn{3}{@{}l}{\emph{Resampling: seven at temperature 0.8}} \\
+P\enspace before the mention & s0 to s2 & 6 of 7 \\
+Q\enspace P, distractor removed & s0 to s2 & 7 of 7 \\
+M\enspace after the mention & s0 to s3 & 7 of 7 \\
+P1\enspace a sentence earlier & s0 to s1 & 6 of 7 \\
+\bottomrule
+\end{tabularx}
+\caption{Every variant on one real Hindi trace (long date addition, ID 11), where s3 is the mention.}
+\label{tab:intervention}
+\end{table}

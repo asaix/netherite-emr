@@ -28,181 +28,316 @@
 \author{
   Aayush Batra \quad Aditya Sai \quad Rahul Kannan \quad Shaurya Kochar \\[0.4em]
   Team Netherite \\
-  International Institute of Information Technology, Hyderabad, India
+  International Institute of Information Technology, Hyderabad \\
+  Gachibowli, Hyderabad, Telangana 500032, India
 }
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Chain-of-thought (CoT) prompting is often expected to help reasoning in any language. We test this on date and time arithmetic with Sarvam-105B, using 6,750 questions from the Temporal Reasoning Dataset in English and Hindi. CoT helps English a great deal (+29.5 points) and Hindi very little (+4.7), so the gap between the languages grows from about 4 points to about 29. Most of this gap follows the language the model reasons in, not the language of the question: asking for English reasoning on the same Hindi questions closes about four-fifths of it. A two-turn cross-lingual prompt closes about a third. Asking for Hinglish reasoning closes none of it on Hindi questions and costs English questions 18.0 points. An error analysis ties the Hindi losses to methods the model uses only when it reasons in Hindi, such as subtracting dates by counting forward. The more differently the model reasons in the two languages, the more likely the languages are to disagree on correctness (odds ratio 4.93 per 0.1 of divergence), even after controlling for trace length, though this is only an association. Editing or resampling traces that mention a distractor cannot show that the distractor caused the error. Everything comes from one model with one prompt per condition, so we report patterns and do not claim mechanisms.
+Does asking a language model to think step by step help it reason about dates and times, and does the answer change with language? We test Sarvam-105B on 6,750 questions from the Temporal Reasoning Dataset in English and Hindi, with and without distractor sentences. Chain-of-thought (CoT) raises English accuracy by 29.5 points and Hindi accuracy by 4.7, so the gap between the languages grows from about 4 points to about 29. Asking for English reasoning on the same Hindi questions closes about four-fifths of this gap. A two-turn cross-lingual prompt closes about a third, and Hinglish reasoning closes none of it on Hindi questions. Hidden thinking mode almost closes the gap, although a third of its steps on Hindi direct prompts argue about the output format. The Hindi losses appear to come from methods the model uses mainly when it writes Hindi, such as subtracting dates by counting forward. Traces that differ more go with answers that disagree, but much of this link seems to come from the answers themselves. Our trace experiments could not show that a distractor caused an error. All results come from one model and one prompt per condition.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
 
-Chain-of-thought (CoT) prompting asks a language model to write intermediate steps before answering, and it can improve multi-step reasoning \citep{wei-etal-2022-chain,kojima2022large}. Whether the benefit carries across languages is less settled. Work on MGSM found English intermediate steps as good as or better than steps in the question's language \citep{shi-etal-2023-mgsm}. If that holds, a model asked to reason in Hindi may do worse even when it reads the Hindi question well.
+Chain-of-thought (CoT) prompting asks a language model to write intermediate steps before it answers, which can improve multi-step reasoning \citep{wei-etal-2022-chain,kojima2022large}. We call this text a ``reasoning trace'', and we do not assume that it records the model's real computation \citep{turpin-etal-2023-unfaithful}. Language may matter too: the MGSM study found English steps as good as or better than steps in the question's language \citep{shi-etal-2023-mgsm}. So if we ask a model to reason in Hindi, does it reason as well as it does in English, and does it get there the same way?
 
-We test this on temporal reasoning using the Temporal Reasoning Dataset (TRD) of \citet{mazzia-etal-2026-benchmarking}, which turns CoT off and leaves its effect to future work. TRD can also prepend a distractor sentence to any question, which lets us ask whether reasoning out loud gives irrelevant text more room to do harm, as irrelevant sentences do on English arithmetic \citep{shi-etal-2023-distracted}.
+We study this with the Temporal Reasoning Dataset (TRD) of \citet{mazzia-etal-2026-benchmarking}, which turns CoT off and leaves its effect to future work. TRD can add a distractor sentence to any question. Some distractors concern time (``I always get confused with months that have 31 days''), and others do not (``My brother bought a motorcycle''). This gives a direct test:
+\begin{quote}
+If a model can ignore the motorcycle when it answers directly, does thinking step by step give the motorcycle more chances to enter its reasoning and change the answer?
+\end{quote}
+We use Sarvam-105B, whose developer reports a focus on the ten most-spoken Indian languages \citep{sarvam-2026-models}.
 
-We use Sarvam-105B, whose developer reports giving a substantial part of the training budget to the ten most-spoken Indian languages \citep{sarvam-2026-models}, and ask six questions:
+Our contributions are: (1) to our knowledge, the first CoT evaluation on TRD, split by distractor condition; (2) a split of the English-Hindi gap into reasoning and question language; (3) an error analysis of specific methods; (4) a regression of disagreement on trace divergence, with a check of how much comes from the answers; and (5) deletion and resampling experiments on distractor mentions. We recomputed the reported numbers from raw responses and corrected our mid report where it overclaimed.
+
+\section{Problem Statement}
+\label{sec:problem}
+
+We work with one model and with TRD problems whose answers have a fixed form, such as a date or a weekday, so responses can be scored automatically. We vary the question language, the distractor (none, time-related or unrelated), the prompt, and the language the model is asked to reason in. A \emph{direct} prompt asks only for the answer. A \emph{CoT} prompt asks for step-by-step reasoning.
+
+All differences are in percentage points. The CoT \emph{gain} is CoT accuracy minus direct accuracy. The \emph{gap} is English accuracy minus Hindi accuracy. A distractor's \emph{drop} is accuracy without it minus accuracy with it. The CoT \emph{penalty} is the drop under CoT minus the drop under direct answering; a positive value suggests that thinking out loud gives the distractor room to do harm. Square brackets give 95\% intervals. We ask six questions:
 \begin{description}\setlength{\itemsep}{0pt}\setlength{\parskip}{1pt}
 \item[RQ1] Does CoT help, and does that depend on language and difficulty?
 \item[RQ2] Does CoT make distractors more harmful?
 \item[RQ3] How much of the English-Hindi gap follows the language of reasoning rather than the language of the question?
 \item[RQ4] Does asking for Hinglish reasoning help?
 \item[RQ5] Does divergence between English and Hindi traces track whether the two languages disagree?
-\item[RQ6] Can we definitively say that the distractors in the CoT traces cause errors?
+\item[RQ6] Can we say that distractors in CoT traces cause errors?
 \end{description}
-
-In short, CoT helps English far more than Hindi, and switching only the reasoning language to English recovers most of the difference; the errors left over come mostly from reading the Hindi question. Hinglish does not help. The other answers are more cautious. Distractor harm is small and concentrated in one sentence, trace divergence goes with disagreement but only as a correlation, and our interventions cannot pin errors on the distractor. Table~\ref{tab:summary} lists each answer with its headline number.
-
-Our contributions are: (1) to our knowledge, the first CoT evaluation on TRD, split by distractor condition; (2) a decomposition of the gap into reasoning and question language, backed by trace structure and by the types of errors; (3) a question-clustered regression showing that divergence between English and Hindi traces is strongly associated with the two languages disagreeing, beyond trace length; and (4) trace-deletion and on-policy resampling experiments on distractor mentions, with their limits stated. We recomputed every reported number from raw responses and corrected our earlier drafts where they overclaimed.
 
 \section{Related Work}
 \label{sec:related}
 
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Work & Mul. & Tem. & CoT & Dis. & Tra. \\
+\midrule
+\citet{wei-etal-2022-chain} & -- & $\circ$ & \checkmark & -- & -- \\
+\citet{shi-etal-2023-distracted} & -- & -- & \checkmark & \checkmark & -- \\
+\citet{shi-etal-2023-mgsm} & \checkmark & -- & \checkmark & -- & -- \\
+\citet{qin-etal-2023-cross} & \checkmark & -- & \checkmark & -- & -- \\
+\citet{qi-etal-2025-models} & \checkmark & -- & \checkmark & -- & $\circ$ \\
+\citet{golovneva2023roscoe} & -- & -- & \checkmark & -- & \checkmark \\
+\citet{chu-etal-2024-timebench} & -- & \checkmark & \checkmark & -- & -- \\
+\citet{mazzia-etal-2026-benchmarking} & \checkmark & \checkmark & -- & \checkmark & -- \\
+\midrule
+Ours & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\caption{Prior work by multilinguality (Mul.), temporal focus (Tem.), CoT, distractors (Dis.) and trace analysis (Tra.); $\circ$ means partly covered.}
+\label{tab:prior}
+\end{table}
+
 \paragraph{CoT and when it stops helping.}
-\citet{wei-etal-2022-chain} introduced CoT with worked examples, and \citet{kojima2022large} showed a trigger phrase alone can work, which suits TRD because it has no worked solutions. \citet{sprague2025cot} find CoT helps mainly on math and symbolic problems, so date arithmetic should benefit. \citet{liu2025mind} show it can lower performance on some tasks, so a benefit on every task cannot be assumed.
+\citet{wei-etal-2022-chain} introduced CoT with worked examples, and \citet{kojima2022large} showed that a trigger phrase alone can work, which suits TRD because it has no worked solutions. \citet{sprague2025cot} find that CoT helps mainly on math and symbolic problems, so date arithmetic might be expected to benefit. It can also lower performance on some tasks \citep{liu2025mind}.
 
 \paragraph{Distractors.}
 GSM-IC adds one irrelevant sentence to GSM8K problems, and accuracy falls under several prompting methods \citep{shi-etal-2023-distracted}. GSM-Symbolic shows sensitivity to clauses that look relevant but are not \citep{mirzadeh2025gsmsymbolic}. Neither compares CoT on and off under the same distractor, and both work in English.
 
 \paragraph{Language of reasoning.}
-MGSM compares native and English CoT with few-shot examples on ten languages that do not include Hindi \citep{shi-etal-2023-mgsm}. Cross-lingual prompting (CLP) adds an understanding turn before the solving turn \citep{qin-etal-2023-cross}, and cross-lingual thought prompting reports over 10 points of average improvement on arithmetic reasoning and open-domain question answering \citep{huang-etal-2023-languages}. Thinking models often revert to English, and forcing the user's language can cost accuracy \citep{qi-etal-2025-models}; such models may also reason better in high-resource languages \citep{yong2025crosslingual}. Interpretability work suggests English-leaning intermediate processing in other models \citep{wendler-etal-2024-llamas,zhao2024handle}; none of this work covers Sarvam-105B. Hinglish is an established code-switching pair \citep{khanuja-etal-2020-gluecos,aguilar-etal-2020-lince}, and code-mixed examples can help on some tasks \citep{shankar-etal-2024-context}, though these studies use code-mixed input and do not test generated reasoning.
+MGSM compares native and English CoT on ten languages that do not include Hindi \citep{shi-etal-2023-mgsm}. Cross-lingual prompting (CLP) adds an understanding turn before the solving turn \citep{qin-etal-2023-cross}. Thinking models often revert to English, and forcing the user's language can cost accuracy \citep{qi-etal-2025-models,yong2025crosslingual}. Some models may process input in an English-leaning way \citep{wendler-etal-2024-llamas,zhao2024handle}. Hinglish is an established code-switching pair \citep{khanuja-etal-2020-gluecos,aguilar-etal-2020-lince}, and code-mixed examples can help on some tasks \citep{shankar-etal-2024-context}, though these studies use code-mixed input and do not test generated reasoning.
 
 \paragraph{Traces and faithfulness.}
-A trace need not record the model's computation \citep{turpin-etal-2023-unfaithful}, so faithfulness is tested by intervening on it \citep{lanham-etal-2023-measuring}. Thought Anchors resamples continuations to estimate each sentence's counterfactual impact \citep{bogdan-etal-2025-anchors}, and Thought Branches argues that hand edits are off-policy and, in decision tasks, have smaller and less stable effects than resampling \citep{macar-etal-2026-branches}. Models can also keep following an injected thought \citep{yang-etal-2025-unhelpful}. Step quality has been scored directly \citep{golovneva2023roscoe,prasad-etal-2023-receval}; our divergence score is structural and does not assess validity.
+Faithfulness can be tested by intervening on a trace \citep{lanham-etal-2023-measuring}. Thought Anchors resamples continuations to estimate the effect of each sentence \citep{bogdan-etal-2025-anchors}, and Thought Branches argues that hand edits are off-policy and may understate effects \citep{macar-etal-2026-branches}. Step quality has been scored directly \citep{golovneva2023roscoe,prasad-etal-2023-receval}; our divergence score is structural and does not assess validity.
 
-\paragraph{Temporal benchmarks.}
-TimeBench and related work evaluate temporal reasoning mostly in English \citep{chu-etal-2024-timebench,wang-zhao-2024-tram}. TRD adds ten languages and controlled distractors \citep{mazzia-etal-2026-benchmarking}. We did not find a study crossing CoT, distractors and reasoning language on the same problems, though our search was not systematic.
+\paragraph{The gap.}
+TimeBench and TRAM evaluate temporal reasoning mostly in English \citep{chu-etal-2024-timebench,wang-zhao-2024-tram}. As Table~\ref{tab:prior} shows, we did not find a study that crosses CoT, distractors and reasoning language on the same problems, though our search was not systematic.
 
 \begin{figure*}[t]
 \centering
 \begin{tikzpicture}[
-  box/.style={draw, rounded corners=2pt, align=center, font=\footnotesize, minimum height=0.85cm, text width=2.0cm, inner sep=2pt, fill=gray!8},
-  arr/.style={-{Stealth[length=1.6mm]}, semithick}, node distance=0.3cm]
-\node[box] (q) {TRD question\\and gold answer};
-\node[box, right=of q] (l) {Language\\English / Hindi};
-\node[box, right=of l] (d) {Distractor: none /\\time / unrelated};
-\node[box, right=of d] (p) {Direct, CoT, en-CoT,\\CLP, Hinglish};
-\node[box, right=of p] (m) {Sarvam-105B\\(API; self-hosted\\for RQ6)};
-\node[box, right=of m] (o) {Answer line;\\reasoning trace};
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=0.85cm, text width=2.2cm, inner sep=2pt, fill=gray!8},
+  arr/.style={-{Stealth[length=1.6mm]}, semithick}, node distance=0.28cm]
+\node[box] (q) {TRD question and gold answer};
+\node[box, right=of q] (l) {Language: English or Hindi};
+\node[box, right=of l] (d) {Distractor: none, time, unrelated};
+\node[box, right=of d] (p) {Prompt condition (Table~\ref{tab:sets})};
+\node[box, right=of p] (m) {Sarvam-105B};
+\node[box, right=of m] (o) {Answer line and trace};
 \draw[arr] (q) -- (l); \draw[arr] (l) -- (d); \draw[arr] (d) -- (p); \draw[arr] (p) -- (m); \draw[arr] (m) -- (o);
-\node[font=\footnotesize, align=center, text width=14.4cm, anchor=north east] at ([yshift=-0.12cm] o.east |- m.south) {Accuracy, drop and penalty; trace length, verification, distractor mention; op tokens and edit distance (RQ5); error labels; resampled continuations (RQ6)};
 \end{tikzpicture}
 
 \vspace{4pt}
-\footnotesize
 \begin{tabularx}{\textwidth}{@{}X@{}}
 \textbf{English:} Today is 2027-05-16, and I have a recurrence every 13 days. Without counting today, what is the date of the 7 occurrence? \textbf{Gold:} 2027-08-15.\\
-\textbf{Hindi:} \hi{आज 2027-05-16 है, और मेरे पास हर 13 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 7वीं आवृत्ति की तिथि क्या है?}\\
-\textbf{Time-related distractor, prepended:} The last time I had a weekly commitment was in January. / \hi{आखिरी साप्ताहिक प्रतिबद्धता जनवरी में थी।}\\
+\textbf{Hindi:} \hi{आज 2027-05-16 है, और मेरे पास हर 13 दिनों पर एक पुनरावृत्ति है। आज को छोड़कर, 7वीं आवृत्ति की तिथि क्या है?} (\emph{āj 2027-05-16 hai, aur mere pās har 13 dinoṃ par ek punarāvṛtti hai. āj ko choṛkar, 7vīṃ āvṛtti kī tithi kyā hai?}, the same question).\\
+\textbf{Time-related distractor:} The last time I had a weekly commitment was in January. / \hi{आखिरी साप्ताहिक प्रतिबद्धता जनवरी में थी।} (\emph{ākhirī sāptāhik pratibaddhatā janvarī meṃ thī}, `The last weekly commitment was in January.')\\
 \end{tabularx}
 
 \vspace{2pt}
-\scriptsize\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{@{}llll@{\hspace{1em}}llll@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lll@{\hspace{0.6em}}lll@{}}
 \toprule
-Condition & Reasons in & No distractor & Time-related & Condition & Reasons in & No distractor & Time-related \\
+Condition & No distractor & Time-related & Condition & No distractor & Time-related \\
 \midrule
-English direct & -- & 2027-06-05 \no & 2027-04-19 \no & en-CoT (Hindi Q.) & English & 2027-08-15 \ok & cut off at limit \\
-English CoT & English & 2027-08-15 \ok & cut off at limit & CLP (Hindi Q.) & English & 2027-08-02 \no & 2027-08-02 \no \\
-Hindi direct & -- & 2027-07-27 \no & 2027-03-06 \no & Hinglish (English Q.) & Roman mix & 2027-08-02 \no & 2027-08-01 \no \\
-Hindi CoT & Hindi & 2027-08-02 \no & 2027-04-20 \no & Hinglish (Hindi Q.) & Devanagari mix & 2027-08-02 \no & 2027-07-06 \no \\
+English direct & 2027-06-05 \no & 2027-04-19 \no & en-CoT (Hindi Q.) & 2027-08-15 \ok & cut off \\
+English CoT & 2027-08-15 \ok & cut off & CLP (Hindi Q.) & 2027-08-02 \no & 2027-08-02 \no \\
+Hindi direct & 2027-07-27 \no & 2027-03-06 \no & Hinglish (English Q.) & 2027-08-02 \no & 2027-08-01 \no \\
+Hindi CoT & 2027-08-02 \no & 2027-04-20 \no & Hinglish (Hindi Q.) & 2027-08-02 \no & 2027-07-06 \no \\
 \bottomrule
 \end{tabular}
-\caption{The pipeline, with real responses to one question (long, date recurrence, ID 12). This item was picked to illustrate the design, not as a typical case. The answer 2027-08-02 adds six intervals where seven are needed; the Hindi CoT and CLP traces do so by counting today as the first occurrence. With the distractor, Hindi CoT writes \hi{जनवरी 2027 की आखिरी तारीख (31 जनवरी 2027) ही हमारी शुरुआती तारीख है} (``the last date of January 2027 (31 January 2027) is our start date''), and English CoT and en-CoT keep trying to fit January into the question until the token limit. Cut-offs count as wrong only under strict scoring.}
+\caption{The pipeline, with real responses to one question (long, date recurrence, ID 12), picked to illustrate the design. The answer 2027-08-02 adds six intervals where seven are needed. With the January sentence, English CoT and en-CoT keep trying to fit January into the question until the token limit.}
 \label{fig:design}
 \end{figure*}
 
-\section{Experimental Design}
+\section{Experimental Setup}
 \label{sec:design}
 
 \paragraph{Data.}
-TRD has nine tasks: date addition, subtraction and duration, time addition, subtraction and duration, date recurrence, interval date (the start and end of next week) and day of week. We generated 150 questions per task at each of five difficulty levels, 6,750 in all, in English and Hindi with matching IDs. Each question appears three times: with no distractor, with a time-related one and with an unrelated one, drawn from pools of 35 and 43 sentence pairs. We recomputed all 13,500 gold answers with Python's \texttt{datetime} and all match.
+Figure~\ref{fig:design} shows the pipeline. TRD has nine tasks: date addition, subtraction and duration, time addition, subtraction and duration, date recurrence, interval date (the start and end of next week) and day of week. We generated 150 questions per task at each of five difficulty levels, 6,750 in all, in English and Hindi with matching IDs. Each question appears three times: with no distractor, with a time-related one and with an unrelated one, drawn from pools of 35 and 43 sentence pairs. We recomputed all 13,500 gold answers with Python's \texttt{datetime}, and all match.
 
-\paragraph{Prompting conditions.}
-All runs use temperature 0, thinking off, a 4,096-token limit and a fixed answer line so responses can be scored automatically. Figure~\ref{fig:design} shows one question going through every condition.
-\begin{description}\setlength{\itemsep}{0pt}\setlength{\parskip}{1pt}
-\item[Direct] asks only for the answer.
-\item[CoT] asks the model to reason step by step in the question's language (zero-shot, one stage).
-\item[en-CoT] keeps the Hindi question and asks for reasoning in English, a zero-shot version of \citet{shi-etal-2023-mgsm}.
-\item[CLP] uses the two turns of \citet{qin-etal-2023-cross}: first restate and understand the Hindi problem in English, then solve it. They tune temperature per stage where we fix it at 0, we add a rule to write in English, and we do not run their voting variant (CLSP).
-\item[Hinglish] asks for reasoning that mixes Hindi and English in Roman script, on both question languages.
-\end{description}
-Direct and CoT run on all 6,750 questions in both languages. The other three run on the first 50 questions of each task and level (2,250 questions). A small pilot with thinking mode on (10 questions per cell, \texttt{reasoning\_effort} low, 16,000 tokens) gives one more comparison.
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}Xrr@{}}
+\toprule
+Set & Prompts & Q. & Resp. \\
+\midrule
+Standard & Direct, CoT & 6,750 & 81,000 \\
+Thinking-on & Direct, CoT & 450 & 5,400 \\
+en-CoT & Hindi Q., English CoT & 2,250 & 6,750 \\
+CLP & Hindi Q., two turns & 2,250 & 6,750 \\
+Hinglish & Both Q., mixed CoT & 2,250 & 13,500 \\
+\bottomrule
+\end{tabularx}
+\caption{Response sets, in the order of the results (Q.\ is questions, Resp.\ is responses). Trace interventions add 13,664 resampled continuations.}
+\label{tab:sets}
+\end{table}
+
+\paragraph{Response sets.}
+Table~\ref{tab:sets} lists the sets. Unless stated, runs use temperature 0, thinking off, a 4,096-token limit and a fixed answer line. Thinking-on uses \texttt{reasoning\_effort} low and 16,000 tokens, on 10 questions per cell. en-CoT keeps the Hindi question and asks for English reasoning, a zero-shot version of \citet{shi-etal-2023-mgsm}. CLP first asks the model to understand the Hindi problem in English and then to solve it \citep{qin-etal-2023-cross}. We fix temperature at 0, add a rule to write in English, and skip their voting variant. Hinglish asks for reasoning that mixes Hindi and English in Roman script.
 
 \paragraph{Scoring.}
-A response with no answer line usually means the model hit the token limit. \emph{Answered} accuracy leaves such responses out, and our figures use it. \emph{Strict} accuracy counts them as wrong, which is closer to TRD's own scoring \citep{mazzia-etal-2026-benchmarking}. English CoT has the most cut-offs among thinking-off conditions, so answered accuracy flatters it; we give both for headline results and say when a conclusion changes. A distractor's \emph{drop} is accuracy without it minus accuracy with it, and the CoT \emph{penalty} is how much larger that drop is under CoT than under direct answering.
+A response with no answer line usually hit the token limit. \emph{Answered} accuracy leaves such responses out, and our figures use it. \emph{Strict} accuracy counts them as wrong, which is closer to TRD's own scoring. English CoT has the most cut-offs among thinking-off conditions, so answered accuracy flatters it, and we give both for headline results.
 
 \paragraph{Trace measures.}
-For each trace we record its length, whether it contains a verification phrase (found by regex), and whether it mentions the distractor, compared with a placebo rate on the same question without the distractor. For Hindi traces, the target-language ratio (TLR) is the share of Devanagari words among Devanagari and Latin-script words outside the answer line. A script also labels every wrong response, 30,421 of the 93,150 we collected, by how far off it is, the kind of mistake (such as one day off, wrong direction or whole hours off) and what the question involves (such as a month end or 29 February); cut-offs count as wrong there.
+We record each trace's length, whether it has a verification phrase (regex), and whether it mentions the distractor, compared with a placebo rate on the same question without the distractor. The target-language ratio (TLR) is the share of Devanagari words among Devanagari and Latin-script words. A script labels every wrong response by how far off it is and the kind of mistake. This covers 30,421 of the 93,150 responses in the first three sets, with cut-offs counted as wrong.
 
 \paragraph{Comparing traces.}
-For RQ5 a regex parser turns each trace into a sequence of operation tokens with their operands, such as \texttt{SUB 2025-05-26 4} for ``4 days before 26 May 2025''. The reasoning divergence score (RDS) between two traces is the Levenshtein distance \citep{levenshtein1966binary} between their sequences divided by the longer length, so 0 means the same steps in the same order and 1 means no step in common. The parser covers 95--96\% of CoT segments on standard replies and 86--88\% on thinking-mode reasoning. On 240 tokens read by one LLM annotator, not validated by a person, it gets the operation right 85\% of the time and the operation with its arguments 77\%.
+A regex parser turns each trace into a sequence of steps with operands, such as \texttt{SUB 2025-05-26 4} for ``4 days before 26 May 2025''. Labels include \texttt{CHECK}, \texttt{REVISE} and \texttt{FORMAT} (arguing about the output format or language). The reasoning divergence score (RDS) between two traces is the Levenshtein distance \citep{levenshtein1966binary} between their sequences divided by the longer length. A score of 0 means the same steps, and 1 means no step in common. The parser covers 95 to 96\% of CoT segments on standard replies and 86 to 88\% on thinking-mode reasoning. On 240 tokens read by one LLM annotator, it gets the operation right 85\% of the time and the operation with its arguments 77\%.
 
 \paragraph{Statistics.}
-Accuracy intervals are 95\% bootstrap intervals \citep{berg-kirkpatrick-etal-2012-empirical} that resample questions as clusters, since a question appears in three distractor conditions. RQ5 odds ratios use question-clustered standard errors, and task-by-level statements use uncorrected intervals. Task-level tests use exact McNemar with Holm correction over nine tasks \citep{mcnemar-1947-note,holm-1979-simple,dror-etal-2018-hitchhikers}, and mention associations use Mantel-Haenszel odds ratios \citep{mantel-haenszel-1959-statistical}. These intervals treat the distractor sentences and prompts as fixed, so they understate uncertainty about other wordings.
+Accuracy intervals are bootstrap intervals \citep{berg-kirkpatrick-etal-2012-empirical} that resample questions, since a question appears in three distractor conditions. Task-level tests use exact McNemar with Holm correction over nine tasks \citep{mcnemar-1947-note,holm-1979-simple,dror-etal-2018-hitchhikers}, and mention odds ratios (ORs) are Mantel-Haenszel \citep{mantel-haenszel-1959-statistical}.
 
 \section{Results}
 \label{sec:results}
 
+We report each response set in turn, with the main finding in bold. Table~\ref{tab:summary} answers each research question, and Table~\ref{tab:accuracy} compares the sets on the same 2,250 questions.
+
 \begin{table}[t]
 \centering
-\footnotesize
 \setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.05cm}@{}}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}Xr@{}}
 \toprule
-& Short answer & Key number \\
+& Short answer & Section \\
 \midrule
-RQ1 & CoT helps English much more than Hindi. & +29.5 vs +4.7 points \\
-RQ2 & Distractors cost Hindi CoT slightly more than direct answers, largely through one sentence. & Penalty 2.2 points \\
-RQ3 & The gap mostly follows the language of reasoning. & 23.5 of 29.5 points \\
-RQ4 & No. Hindi questions do not change, and English questions get worse. & $-$0.0 and $-$18.0 points \\
-RQ5 & Yes. More divergent traces go with disagreement, beyond the controls and trace length, as an association only. & OR 4.93 per 0.1 RDS \\
-RQ6 & No. Removing the distractor mid-trace helps a little, and the written mention cannot be isolated. & +5.3 points \\
+RQ1 & Yes for English (+29.5 points); little for Hindi (+4.7). & \ref{sec:cot} \\
+RQ2 & Slightly in Hindi, largely through one sentence (penalty 2.2). & \ref{sec:cot} \\
+RQ3 & Most of it, descriptively: 23.5 of the 29.5-point gap. & \ref{sec:encot} \\
+RQ4 & No: $-$0.0 on Hindi questions, $-$18.0 on English ones. & \ref{sec:hinglish} \\
+RQ5 & Yes as an association (OR 4.93), though much of it seems to come from the answers. & \ref{sec:rds} \\
+RQ6 & No. Removing the distractor helps a little (+5.3). & \ref{sec:interventions} \\
 \bottomrule
 \end{tabularx}
-\caption{Short answers to the six research questions. Each is explained in its subsection below.}
+\caption{Short answers to the research questions.}
 \label{tab:summary}
 \end{table}
 
 \begin{table*}[t]
 \centering
-\small
 \input{tables/accuracy}
-\caption{Answered accuracy (\%) on the same 2,250 questions, by task, level and distractor condition. The last row counts unanswered responses as wrong. Differences quoted in the text are computed before rounding, so they can differ from these cells by 0.1.}
+\caption{Answered accuracy (\%) on the same 2,250 questions, by task, level and distractor condition. The last row counts unanswered responses as wrong. Differences in the text are computed before rounding, so they can differ from these cells by 0.1.}
 \label{tab:accuracy}
 \end{table*}
 
-\subsection{RQ1: CoT helps English far more than Hindi}
-
-\textbf{CoT helps English by about 30 points and Hindi by about 5.} Over all 6,750 questions, CoT raises English accuracy by 29.5 points and Hindi by 4.7 (Table~\ref{tab:baseline}). The gap between the languages is 4.2 points when the model answers directly and 29.1 with CoT (strict 4.2 and 26.7). It is the same with and without distractors, so pooling does not create it. Without CoT, day-of-week answers are guesses: 85\% of direct answers are wrong (3,839 of 4,500), the rate expected by chance (85.7\%).
-
-\textbf{For Hindi, CoT can make things worse.} Even with no distractor, Hindi CoT lowers accuracy on date subtraction by 19.9 points [16.4, 23.4] and on interval date by 23.3 [19.0, 27.7]. Section~\ref{sec:errors} traces both losses to specific methods. English CoT is never significantly below direct answering on any task, or on any task at any level.
+\subsection{Standard Set}
+\label{sec:standard}
 
 \begin{table}[t]
 \centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{4pt}
 \input{tables/baseline}
-\caption{CoT gain on all 6,750 questions, in points. All values are answered except the Strict column, which counts unanswered as wrong. By-distractor English and Hindi rows are gains. Gains and gaps are computed before rounding.}
+\caption{CoT gain on all 6,750 questions, in points. Values are answered except the Strict column. Intervals on the gains are English [28.5, 30.6] and Hindi [3.6, 5.7]. Gains and gaps are computed before rounding.}
 \label{tab:baseline}
 \end{table}
 
-On all 6,750 questions, the gap under CoT grows with difficulty, from 24.0 points on the shortest questions to 34.9 on the longest, but a logistic trend test is not significant ($p=0.21$), so we describe the widening only in points.
+\subsubsection{Direct Answers}
+\label{sec:direct}
 
-\subsection{RQ2: Distractors do little harm, mostly through one sentence}
+\textbf{Without reasoning, both languages score low and close together: 59.0\% in English and 54.7\% in Hindi, a gap of 4.3 points.}
 
-\textbf{On average the CoT penalty is small.} A time-related distractor lowers Hindi CoT accuracy by 2.6 points [1.3, 3.8], which is 2.2 more than it lowers Hindi direct answers. When the 45 task-sentence units are treated as the sample, however, the interval reaches zero (+2.3 [$-$0.1, 4.6]), so the penalty may not extend to new sentences. Whether Hindi is penalised more than English depends on how unanswered responses are scored (Appendix~B). We therefore withdraw our mid-report claim that distractors make CoT fragile only in Hindi.
+\paragraph{Accuracy.}
+Day-of-week answers look like guesses. They are wrong 85\% of the time (3,839 of 4,500), close to the rate expected by chance (85.7\%). They also favour one weekday whatever the date: Friday for 34.4\% of English answers and Sunday for 58.7\% of Hindi answers. Hindi direct is also wrong on 97\% of recurrences (2,180 of 2,250), against 80\% in English.
 
-\textbf{One sentence does most of the damage.} The largest effect, found post hoc among 90 sentences, comes from the sentence in Figure~\ref{fig:design}: ``The last time I had a weekly commitment was in January.'' On date recurrence it makes the model try to fit January into the question. English CoT runs to the token limit on 92 of 134 questions (4 of 134 without it), and strict English accuracy on those questions falls from 88.8\% to 19.4\%. Hindi has no cut-offs but falls from 26.9\% to 2.2\%. This sentence competes with the start date in the question, so it is not irrelevant in the GSM-IC sense.
+\paragraph{Errors.}
+Of wrong date answers, 35\% in English and 30\% in Hindi are off by exactly 10, 20 or 30 days. Asked for 36 days after 2029-03-06, the model says 2029-04-01 (gold 2029-04-11). This falls to 3\% under English CoT. In time tasks the minutes are usually right and the hours wrong: 65\% of wrong English and 57\% of wrong Hindi time answers are off by whole hours. On interval date, 22\% of wrong English answers give this week instead of next.
 
-\textbf{Hindi traces mention distractors more often.} For time-related sentences, 25.0\% of Hindi traces mention the distractor against 8.5\% of English traces, with a near-zero placebo rate on a word list chosen after seeing the data. Traces that mention a time-related distractor are less often correct (Hindi OR 0.77 [0.67, 0.89]), while unrelated sentences show no such link. RQ6 tests whether the mention is a cause.
+\paragraph{Distractors.}
+Distractors appear to change which wrong answer the model gives. Wrong Hindi answers reuse a number, month or weekday from a time-related distractor 11.3\% of the time, against a placebo of 4.1\% ($p<0.001$). Wrong English answers do so 6.1\% of the time, against 3.4\% ($p=0.004$). Three recurrence sentences naming February or January supply 78\% of the Hindi reuse.
 
-\subsection{RQ3: The gap follows the language of reasoning}
+\subsubsection{Chain-of-Thought}
+\label{sec:cot}
 
-\textbf{Switching only the reasoning language to English closes most of the gap.} On the same 2,250 questions, English questions with English CoT score 88.9\%, Hindi questions with English reasoning (en-CoT) 82.9\%, and Hindi questions with Hindi CoT 59.4\% (Table~\ref{tab:accuracy}). Of the 29.5-point gap, 23.5 points lie between en-CoT and Hindi CoT, where only the reasoning language changes. That is 79.7\% of the gap, or 80.7\% under strict scoring. The remaining 6.0 points lie between the question languages, close to the 4.5-point gap under direct answering, where no reasoning is written (Figure~\ref{fig:decomposition}). The reasoning part is larger on every task and in every distractor condition.
+\textbf{CoT adds 29.5 points in English and 4.7 in Hindi, so the gap grows from 4.3 points to 29.1} (strict 26.7). The gap is similar with and without distractors (Table~\ref{tab:baseline}), so pooling does not appear to create it.
+
+\paragraph{Accuracy.}
+English CoT is never significantly below direct answering on any task at any level. Hindi CoT can be: even with no distractor, it lowers date subtraction by 19.9 points [16.4, 23.4] and interval date by 23.3 [19.0, 27.7]. The gap widens with difficulty, from 24.0 points on the shortest questions to 34.9 on the longest, but a logistic trend test is not significant ($p=0.21$).
+
+\paragraph{Distractors.}
+On average the CoT penalty is small. A time-related distractor lowers Hindi CoT accuracy by 2.6 points [1.3, 3.8], which is 2.2 more than it lowers Hindi direct answers. With the 45 task-sentence units as the sample, the interval reaches zero (+2.3 [$-$0.1, 4.6]), so the penalty may not extend to new sentences. Whether Hindi is penalised more than English depends on how unanswered responses are scored (Appendix~B), so we withdraw our mid-report claim of fragility only in Hindi.
+
+The largest effect among 90 sentences, found post hoc, comes from ``The last time I had a weekly commitment was in January'' (Figure~\ref{fig:design}). On date recurrence, English CoT runs to the token limit on 92 of 134 questions (4 of 134 without it). Strict English accuracy falls from 88.8\% to 19.4\%. Hindi has no cut-offs but falls from 26.9\% to 2.2\%. This sentence competes with the question's start date, so it may not count as irrelevant in the GSM-IC sense.
+
+Hindi traces mention distractors more: 25.0\% against 8.5\% for time-related sentences, with a near-zero placebo on a post hoc word list. Traces that mention a time-related distractor are less often correct (Hindi OR 0.77 [0.67, 0.89]). Some traces take the distractor literally. After ``My watch runs slow'', one Hindi trace reaches the right time, 23:28. It then writes (translated) ``we cannot get 23:28 because my watch is slow'' and answers 00:00.
+
+\paragraph{Traces.}
+Hindi CoT stays in Hindi: its TLR is 0.988, and only 2.14\% of traces fall below 0.9. Those traces are more often correct within task and level (OR 2.08 [1.66, 2.60]), an observational link. Hindi traces are shorter (median 13 steps against 25), and 3.7\% contain a \texttt{CHECK} or \texttt{REVISE} step, against 88\% of English traces.
+
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X l r@{}}
+\toprule
+Error pattern & Condition & Share \\
+\midrule
+Answer on or after & Hindi CoT & 13\% of 738 \\
+today & English CoT & 0\% of 129 \\
+(date subtraction) & en-CoT & 0\% of 45 \\
+\addlinespace
+Span not seven days & Hindi CoT & 21\% of 1,720 \\
+(interval date) & English CoT & 6\% of 1,046 \\
+& en-CoT & 6\% of 410 \\
+\addlinespace
+Counts backwards & en-CoT & 28\% of 207 \\
+(date recurrence) & Hindi CoT & 9\% of 1,758 \\
+& English CoT & 3\% of 234 \\
+\addlinespace
+One interval short & Hindi CoT & 35\% of 1,758 \\
+(date recurrence) & English CoT & 21\% of 234 \\
+\addlinespace
+One day late & English CoT & 58\% of 584 \\
+(day of week) & en-CoT & 50\% of 313 \\
+\bottomrule
+\end{tabularx}
+\caption{Main CoT error patterns, as shares of wrong answers of the expected form on that task, over all levels and distractor conditions. Labels come from a script. Appendix~A has examples.}
+\label{tab:errors}
+\end{table}
+
+\paragraph{Errors.}
+Day of week, interval date and date recurrence hold 64\% of all wrong answers (19,583 of 30,421). They hold 78 to 88\% when the model reasons in English, since it rarely gets plain arithmetic wrong (Table~\ref{tab:errors}).
+
+Hindi CoT's losses appear to come from methods seen mainly in Hindi traces. On date subtraction it often counts forward to the month end and then steps into the next month, so 13\% of its wrong answers land on or after today. On interval date, a fifth of its wrong answers are ``weeks'' that are not seven days long. On time tasks it can wrap around midnight wrongly. For 19 hours 41 minutes after 10:46, one trace writes:
+\begin{quote}
+\begin{minipage}{\linewidth}
+\hi{24 - 19 = 5 घंटे। तो, 19 घंटे और 41 मिनट का मतलब है कि हमें 5 घंटे और 41 मिनट जोड़ने हैं।}\\
+\emph{24 - 19 = 5 ghaṇṭe. to, 19 ghaṇṭe aur 41 minaṭ kā matlab hai ki hameṃ 5 ghaṇṭe aur 41 minaṭ joṛne haiṃ.}\\
+`24 - 19 = 5 hours. So 19 hours and 41 minutes means we have to add 5 hours and 41 minutes.'
+\end{minipage}
+\end{quote}
+Its answer is 16:27 (gold 06:27). The error rate on time addition stays at 24 to 27\% at every level, which suggests a fixed method more than a problem with larger numbers.
+
+Other errors appear in both languages. On day of week, the most common error under English reasoning is exactly one day late, and the traces we read often count 1 January itself when adding up days. Recurrences often stop one interval short, apparently because the model counts today as the first occurrence. With 29 February in the span, English CoT on the longest questions is wrong 36\% of the time against 9\% without it. Yet 181 of its 186 wrong answers on such questions mention the leap year. Long re-checking loops go with failure: cut-off English CoT traces average 42 check or revise steps, against 8 for wrong traces that finish.
+
+\subsubsection{English and Hindi Traces Compared}
+\label{sec:rds}
+
+\textbf{More divergent traces go with disagreement, but much of this link seems to come from the final answers inside the score.}
+
+\paragraph{Regression.}
+We call an English-Hindi pair of CoT traces \emph{disagreeing} when exactly one language is right. A logistic regression predicts disagreement from RDS, controlling for task, difficulty, distractor and thinking mode, with standard errors clustered by question (20,662 pairs, 19,471 with thinking off). The languages disagree on 31.4\% [30.7, 32.0] of pairs, and in 92\% of these English is right and Hindi wrong. Mean RDS is 0.917 for disagreeing and 0.809 for agreeing pairs. Each 0.1 of RDS multiplies the odds of disagreement by 4.93 [4.58, 5.30], with predicted disagreement near zero below RDS 0.7 and climbing above 0.8 (Appendix Figure~\ref{fig:lrbins}). Adding the gap in trace length raises the OR to 5.58 [5.18, 6.03], so length differences alone do not appear to explain the link. RDS and correctness come from the same generations, so this is only an association.
+
+\paragraph{The answers inside the score.}
+RDS includes the final-answer tokens, so two traces that reach different answers already differ. In pairs where both languages are right, replacing only Hindi's answer values accounts for 68\% of the RDS difference between agreeing and disagreeing pairs. Removing answer tokens lowers the OR per standard deviation from 6.47 to 1.65, and comparing only step types (\texttt{ADD} against \texttt{SUB}, without operands) gives 1.14 (Appendix Figure~\ref{fig:lrforest}). Out of fold, step types add 0.0007 AUC [$-$0.0004, 0.0018] to a model that knows task, difficulty and distractor. Comparing the two final answers alone gives AUC 0.951. RDS may therefore say little about reasoning routes beyond the answers. The step-type view is coarse, however, and within a question a slope survives on date recurrence (OR per 0.1, 1.42 [1.25, 1.61]) and day of week (1.26 [1.11, 1.43]).
+
+\subsection{Thinking-On Set}
+\label{sec:ron}
+
+\textbf{With hidden thinking on, the gap almost disappears, though thinking and token budget change together.} On the same 450 questions, the CoT gap falls from 27.3 points to 1.0 (answered), or from 27.4 to 2.7 (strict).
+
+\paragraph{Accuracy.}
+Hindi CoT rises from 64.1\% to 97.9\% (strict 59.9\% to 89.9\%), and English CoT from 91.4\% to 98.9\%. Direct answers also rise: English from 64.2\% to 97.9\%, and Hindi from 59.2\% to 94.9\%.
+
+\paragraph{Language.}
+The hidden reasoning on Hindi CoT is 79\% English words while the visible answer stays in Hindi. This fits the en-CoT result without confirming it. Cut at 4,096 tokens, strict Hindi CoT would score 43.8\%, below the 59.9\% with thinking off, so the extra budget may matter as much as the language.
+
+\paragraph{Format arguments.}
+On Hindi direct prompts, a third of hidden steps (207,097 of 627,487) argue about the output format, against 0.2\% of visible CoT steps. This may follow from the prompt, which asks for only the final answer, the whole response in Hindi, the word \texttt{Answer:} in English and Western digits, all at once. One trace spends 5,170 words on adding one day, and 361 of its 636 steps are \texttt{FORMAT}:
+\begin{quote}
+``If I write: 2025-04-07. That's not in Hindi. \dots\ But if I have no text outside the last line, then there's no Hindi text.''
+\end{quote}
+The share is highest where the math is easiest: 49.8\% of steps on date and time addition, against 15.3\% on interval date. These arguments use up tokens but do not appear to make answers wrong: right traces have more \texttt{FORMAT} steps than wrong ones (157 against 120 on average).
+
+\paragraph{Errors.}
+Most errors in this set are unanswered responses: 287 of the 422 wrong ones have no answer line, mostly because they hit the 16,000-token limit. On matched questions with unanswered responses counted as wrong, disagreement falls from 31.7\% to 10.9\% (OR 0.23 [0.18, 0.30]).
+
+\subsection{en-CoT Set}
+\label{sec:encot}
+
+\textbf{Switching only the reasoning language to English accounts for most of the gap.} On the same 2,250 questions, English CoT scores 88.9\%, en-CoT 82.9\% and Hindi CoT 59.4\%. Of the 29.5-point gap, 23.5 points lie between en-CoT and Hindi CoT, where only the requested reasoning language changes. That is 79.7\% of the gap, or 80.7\% under strict scoring.
 
 \begin{figure}[t]
 \centering
@@ -211,170 +346,77 @@ On all 6,750 questions, the gap under CoT grows with difficulty, from 24.0 point
 \label{fig:decomposition}
 \end{figure}
 
-\textbf{The traces split the same way.} English CoT and en-CoT traces, which share a reasoning language, are about as far apart (RDS 0.730) as two English traces of one question with and without a distractor (0.713). en-CoT and Hindi CoT traces on identical Hindi questions are as far apart (0.837) as English and Hindi CoT (0.852), and traces of unrelated questions sit at 0.959 (Figure~\ref{fig:distance}). Self-checking follows the reasoning language too: a verification phrase appears in 86.1\% of English CoT traces, 74.2\% of en-CoT traces and 1.3\% of Hindi CoT traces. Verification does not explain the en-CoT gain: an observational estimate within task and level attributes only 1.0\% [$-$6.3, 9.0] of it to verification.
+\paragraph{Accuracy.}
+The remaining 6.0 points lie between the question languages, close to the 4.5-point gap under direct answering on these questions. The reasoning part is larger on every task and in every distractor condition (Figure~\ref{fig:decomposition}).
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{distance}
-\caption{How different two reasoning traces are, as mean RDS with 95\% intervals on 2,250 questions. Each row compares two traces that differ in only the factor named in bold; en-CoT is a Hindi question with English reasoning. The middle rows compare traces of the same question. The hollow grey rows are reference points: the smallest change we make (adding a distractor) and traces of unrelated questions.}
-\label{fig:distance}
-\end{figure}
+\paragraph{Traces.}
+English CoT and en-CoT traces, which share a reasoning language, are about as far apart (RDS 0.730) as two English traces of one question with and without a distractor (0.713). en-CoT and Hindi CoT traces on identical Hindi questions are about as far apart (0.837) as English and Hindi CoT (0.852), and traces of unrelated questions sit at 0.959 (Appendix Figure~\ref{fig:distance}). A verification phrase appears in 86.1\% of English CoT, 74.2\% of en-CoT and 1.3\% of Hindi CoT traces. An observational estimate attributes only 1.0\% [$-$6.3, 9.0] of the gain to it.
 
-\textbf{Hindi CoT does reason in Hindi.} Its TLR is 0.988, and only 2.14\% of Hindi CoT traces fall below 0.9. Those drifting traces are more often correct within task and level (OR 2.08 [1.66, 2.60]), an observational link that points the same way as en-CoT.
+\paragraph{Errors.}
+The switch appears to remove errors tied to writing Hindi and to leave errors tied to reading it. en-CoT never walks forward and gives broken weeks about as often as English CoT (Table~\ref{tab:errors}). It still counts backwards on recurrence in 28\% of wrong answers, apparently reading \hi{आज को छोड़कर} (\emph{āj ko choṛkar}, `excluding today') as `the occurrence before today'. These answers cluster at $k=1$. About two-thirds of answers to Hindi $k=1$ questions go backwards under en-CoT (67.1\%), Hindi CoT (67.8\%) and CLP (69.0\%), against 3.5\% for English CoT (Appendix Figure~\ref{fig:recurrence}). The template's non-standard \hi{1वीं} (\emph{1vīṃ}, `1st') is a candidate cause. We did not rerun a corrected template, and equally non-standard ordinals at $k=2$ to 4 rarely do this. en-CoT is also wrong on 19\% of ``0 hours'' questions, against 5\% of others.
 
-\paragraph{CLP helps less than one English turn.}
-CLP scores 70.3\%, 10.9 points above Hindi CoT but 12.6 below en-CoT. This reverses the order \citet{qin-etal-2023-cross} report for GPT-3.5 on MGSM, although model, task and settings all differ. One candidate reason is that the understanding turn often solves the problem already and the solving turn copies it. On the three date-answer tasks, the second turn is right in 97.5\% of responses when the first ends at the gold date and in 20.1\% when it does not. The first turn was not randomised, so this is not proof, and our temperature of 0 and added language rule may also contribute.
+\subsection{CLP Set}
+\label{sec:clp}
 
-\paragraph{Thinking mode.}
-With thinking on, Hindi CoT reaches 97.9\% answered (89.9\% strict), and its hidden reasoning is 79\% English words. This fits the account above without confirming it, since thinking mode also had four times the token budget (Appendix~B).
+\textbf{CLP helps, but less than one English turn.} CLP scores 70.3\%, 10.9 points above Hindi CoT and 12.6 below en-CoT. This reverses the order \citet{qin-etal-2023-cross} report for GPT-3.5 on MGSM, although model, task and settings all differ.
 
-\subsection{RQ4: Hinglish reasoning does not help}
+\paragraph{Stage analysis.}
+One candidate reason is that the understanding turn often solves the problem already and the solving turn copies it. On the three date-answer tasks, the second turn is right in 97.5\% of responses when the first ends at the gold date, and in 20.1\% when it does not. The first turn was not randomised, so this is not proof, and our temperature and language rule may also contribute.
 
-\textbf{It leaves Hindi questions unchanged and makes English ones worse.} Asking for Hinglish reasoning costs English questions 18.0 points [16.8, 19.2] (strict 15.7), on all nine tasks and in each distractor condition (Appendix Figure~\ref{fig:hingtasks}). Hindi questions do not change on average ($-$0.0 [$-$1.3, 1.2]), so the gap narrows only because English gets worse.
+\subsection{Hinglish Set}
+\label{sec:hinglish}
 
-\textbf{The model mostly ignores the script instruction.} On Hindi questions, 68.5\% of Hinglish traces are mostly Devanagari, so this arm mostly tests code-mixed Devanagari, and the traces that do use Roman script score no better.
+\textbf{Hinglish leaves Hindi questions unchanged on average and makes English ones worse.} It costs English questions 18.0 points [16.8, 19.2] (strict 15.7), on all nine tasks and in each distractor condition (Appendix Figure~\ref{fig:hingtasks}). Hindi questions do not change on average ($-$0.0 [$-$1.3, 1.2]), so the gap narrows only because English falls.
 
-\textbf{The English loss goes beyond the cost of writing Hindi.} English-question traces with no Hindi function words still lose 10.3 points [8.3, 12.3], and the share that verify falls from 86.5\% to 18.6\%. One failure matches Hindi CoT: on date subtraction across a month boundary, English questions fall from 90.1\% to 42.3\%, near Hindi CoT's 36.2\%, while same-month questions stay at 97.4\% (Appendix~A has an example).
+\paragraph{Script.}
+On Hindi questions, 68.5\% of Hinglish traces are mostly Devanagari despite the Roman-script instruction, so this arm mostly tests code-mixed Devanagari. Traces that do use Roman script score no better.
 
-\subsection{Where the errors come from}
-\label{sec:errors}
+\paragraph{Errors.}
+The English loss seems to go beyond the cost of writing Hindi. English-question traces with no Hindi function words still lose 10.3 points [8.3, 12.3], and the share that verify falls from 86.5\% to 18.6\%. On date subtraction across a month boundary, English questions fall from 90.1\% to 42.3\%, near Hindi CoT's 36.2\%, while same-month questions stay at 97.4\%.
 
-\begin{table}[t]
-\centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X l r@{}}
-\toprule
-Error pattern (task) & Condition & Share \\
-\midrule
-Answer on or after today & Hindi CoT & 13\% of 738 \\
-(date subtraction) & English CoT & 0\% of 129 \\
-& en-CoT & 0\% of 45 \\
-\addlinespace
-Span not seven days long & Hindi CoT & 21\% of 1,720 \\
-(interval date) & English CoT & 6\% of 1,046 \\
-& en-CoT & 6\% of 410 \\
-\addlinespace
-Counts backwards from today & en-CoT & 28\% of 207 \\
-(date recurrence) & Hindi CoT & 9\% of 1,758 \\
-& English CoT & 3\% of 234 \\
-\addlinespace
-One interval short & Hindi CoT & 35\% of 1,758 \\
-(date recurrence) & English CoT & 21\% of 234 \\
-\addlinespace
-Exactly one day late & English CoT & 58\% of 584 \\
-(day of week) & en-CoT & 50\% of 313 \\
-\bottomrule
-\end{tabularx}
-\caption{Main error patterns, as shares of each condition's wrong answers on that task that give an answer of the expected form, over all levels and distractor conditions. Labels come from a script and were not checked by hand. Appendix~A has examples.}
-\label{tab:errors}
-\end{table}
+\subsection{Trace Interventions}
+\label{sec:interventions}
 
-Errors are concentrated. Day of week, interval date and date recurrence hold 64\% of all wrong answers (19,583 of 30,421), and 78--88\% whenever the model reasons in English, which rarely gets the plain arithmetic wrong. Table~\ref{tab:errors} lists the main patterns.
+\textbf{Removing the distractor helps a little, and we could not isolate the written mention.} A mention may lead the model astray, or traces already going wrong may tend to talk about it.
 
-\textbf{Hindi CoT fails through methods it uses only in Hindi.} Both tasks where Hindi CoT does worse than direct answering (RQ1) have a matching error. On date subtraction it often counts forward to the end of the month and then steps into the next month instead of the previous one, so 13\% of its wrong answers land on or after today. On interval date, a fifth of its wrong answers are ``weeks'' that are not seven days long. en-CoT, which reads the same questions, never walks forward and gives broken weeks only as often as English CoT. Hindi CoT also rarely checks its work: 3.7\% of its traces contain a check or revise step, against 88\% for English CoT and 76\% for en-CoT.
+\paragraph{Setup.}
+We take wrong CoT responses to questions with a time-related distractor that mention it before answering: 526 Hindi and 37 English. Each experiment cuts the trace at or before the first mention, changes one thing, and lets the model continue (Appendix Table~\ref{tab:intervention}). The API always starts a new reply, so we served an FP8 build with vLLM. It scored 5.7 points above the API on 278 Hindi questions and 24.7 below on 22 English ones, so English results are descriptive only.
 
-\textbf{en-CoT keeps the errors that come from reading Hindi.} On recurrence, en-CoT counts backwards from today in 28\% of its wrong answers, against 3\% for English CoT, reading \hi{आज को छोड़कर} (`excluding today') as `the occurrence before today'. These answers cluster at $k=1$: about two-thirds of answers to Hindi $k=1$ questions go backwards under en-CoT (67.1\%), Hindi CoT (67.8\%) and CLP (69.0\%), against 3.5\% for English CoT (Appendix Figure~\ref{fig:recurrence}). The template's non-standard \hi{1वीं} is a candidate cause, but equally non-standard ordinals at $k=2$ to 4 rarely do this, and we did not rerun a corrected template. en-CoT also reads ``0 hours'' as a number of hours and is wrong on 19\% of such questions, against 5\% on others. So changing the reasoning language fixes what the model writes but not what it reads, the same split as in RQ3.
+\paragraph{Deletion.}
+On 222 Hindi traces, deleting the mention helps no more than deleting a neutral sentence (+0.0 [$-$6.8, 7.2]). With one continuation per version this test had about 24\% power for a 5-point effect, so it does not show the effect is zero.
 
-\textbf{Some errors belong to the model in either language.} On day of week, the most common error under both English CoT and en-CoT is exactly one day late, from counting 1 January itself when adding up the days. Recurrences often stop one interval short because the model counts today as the first occurrence. With 29 February in the span, English CoT on the longest questions is wrong 36\% of the time against 9\% without it, even though 185 of its 190 wrong answers on such questions mention the leap year. Long re-checking loops mark failures: cut-off English CoT traces average 42 check or revise steps, against 8 for wrong traces that finish.
+\paragraph{Resampling.}
+Hand edits may understate effects \citep{macar-etal-2026-branches}, so, following \citet{bogdan-etal-2025-anchors}, we also regenerate seven continuations per trace from four starting points. In Hindi, continuing without the distractor in the question (Q) reaches 45.2\% and with it (P) 40.0\%, a difference of +5.3 points [3.2, 7.4] (Appendix Figure~\ref{fig:interventions}). This suggests the distractor was necessary for at least 8.8\% of the errors made from that point \citep{tian-pearl-2000-probabilities}. Most continuations that go wrong with it also go wrong without it. The January sentence supplies 58\% of the effect (without it, +2.8 [0.4, 5.0]), and the interval reaches zero once the 29 sentences are treated as a sample.
 
-\subsection{RQ5: More divergent traces go with disagreement}
-
-\textbf{Setup.} We pair the English and Hindi CoT traces of each question, distractor condition and thinking mode, and call a pair \emph{disagreeing} when exactly one language is right. A logistic regression predicts disagreement from RDS, controlling for task, difficulty, distractor and thinking mode, with standard errors clustered by question. A second model adds the length gap $|\ell_{en}-\ell_{hi}|/\max(\ell_{en},\ell_{hi})$, since edit distance grows when one trace is longer. The sample is 20,662 pairs, 19,471 with thinking off (Appendix~B).
-
-\textbf{Results.} The languages disagree on 31.4\% [30.7, 32.0] of pairs, and in 92\% of these English is right and Hindi wrong. Disagreeing pairs have more divergent traces: mean RDS is 0.917 against 0.809 for agreeing pairs, and a random disagreeing pair has the higher RDS 80\% of the time (Mann-Whitney $p<0.001$). Under the controls, each 0.1 of RDS multiplies the odds of disagreement by 4.93 [4.58, 5.30], about 23 percentage points on average, with predicted disagreement near zero below RDS 0.7 and climbing steeply above 0.8 (Appendix Figure~\ref{fig:lrbins}). Adding the length gap raises the odds ratio to 5.58 [5.18, 6.03], and the gap's own coefficient is negative, so length differences do not explain the link. This is an association, not a cause: RDS and correctness come from the same generations, the outcome mostly tracks Hindi errors, and 88\% of pairs have RDS above 0.7, so the slope rests on the upper range.
-
-\subsection{RQ6: Can we definitively say that the distractors in the CoT traces cause errors?}
-
-RQ2 found that Hindi traces that mention a time-related distractor are less often correct. That could mean the mention leads the model astray, or only that traces already going wrong tend to talk about it. To tell these apart we intervene on the traces.
-
-\paragraph{Which traces.}
-We take CoT responses to questions with a time-related distractor that ended in a wrong answer and mention the distractor before answering: 526 Hindi and 37 English. We split each trace into sentences and call the first sentence that mentions the distractor $k$. Each experiment cuts the trace at or before $k$, changes one thing, and lets the model continue writing from there. The Sarvam API always starts a new reply, so we served an FP8 build of the model with vLLM. It scored 5.7 points above the API on 278 Hindi questions and 24.7 below on 22 English ones, so English results are descriptive only.
-
-\paragraph{Experiment 1: deleting the mention.}
-On 234 of these traces (222 Hindi), we cut the trace after sentence $k$, or after a matched neutral sentence if that comes later, and build three versions. \emph{A} keeps the text as written, \emph{B} deletes the mention, and \emph{C} deletes a neutral sentence of similar length instead. The model continues each version once with greedy decoding. If the mention causes errors, B should end correct more often than C.
-
-\paragraph{Experiment 2: resampling.}
-Deleting text leaves a trace the model would not have written itself, and such off-policy edits can understate effects \citep{macar-etal-2026-branches}. So, following \citet{bogdan-etal-2025-anchors}, we also let the model regenerate seven continuations per trace at temperature 0.8 from four starting points. \emph{P} keeps the question and the sentences before $k$. \emph{Q} keeps the same sentences but removes the distractor from the question. \emph{M} also keeps sentence $k$, and \emph{P1} stops one sentence earlier than P. Q$-$P measures the distractor in the question, M$-$P the written mention, and (M$-$P)$-$(P$-$P1) whether the mention matters more than an ordinary sentence. Table~\ref{tab:intervention} shows every variant on one real trace.
-
-\begin{table}[t]
-\centering
-\footnotesize
-\begin{tabularx}{\columnwidth}{@{}X@{}}
-\toprule
-\textbf{Question} (Hindi, translated): August is my favourite month. Today is 2026-07-24; what will the date be in 8 days? \textbf{Gold:} 2026-08-01. \textbf{Original trace}, first four sentences:\\
-\quad s0\enspace First, we have to understand the given information carefully.\\
-\quad s1\enspace Today's date is 2026-07-24.\\
-\quad s2\enspace The question asks what the date will be 8 days from today.\\
-\quad s3 ($k$)\enspace The question also says that August is my favourite month.\\
-It goes on: ``This information is only context and has no effect on the calculation,'' and later: ``One day past 31 July is 1 August, and the remaining 7 days give 8 August.'' \textbf{Answer:} 2026-08-08.\\
-\midrule
-\end{tabularx}
-\setlength{\tabcolsep}{3pt}
-\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X l l r@{}}
-Variant & Question & Prefix & Correct \\
-\midrule
-\multicolumn{4}{@{}l}{\emph{Experiment 1: one greedy continuation}} \\
-A\enspace as written & with distractor & s0--s3 & 1 of 1 \\
-B\enspace mention deleted & with distractor & s0--s2 & 1 of 1 \\
-C\enspace neutral deleted & with distractor & s1--s3 & 1 of 1 \\
-\addlinespace
-\multicolumn{4}{@{}l}{\emph{Experiment 2: seven samples at temperature 0.8}} \\
-P\enspace before the mention & with distractor & s0--s2 & 6 of 7 \\
-Q\enspace distractor removed & without & s0--s2 & 7 of 7 \\
-M\enspace after the mention & with distractor & s0--s3 & 7 of 7 \\
-P1\enspace a sentence earlier & with distractor & s0--s1 & 6 of 7 \\
-\bottomrule
-\end{tabularx}
-\caption{Every trace variant in the two experiments, on one real Hindi trace (long date addition, ID 11). The trace dismisses the distractor and then double-counts at the month boundary. Almost every continuation is right whichever variant it starts from, so neither the distractor nor its mention locked in this error. Figure~\ref{fig:interventions} gives the results over all traces.}
-\label{tab:intervention}
-\end{table}
-
-\paragraph{Results of experiment 1.}
-Deleting the mention helps no more than deleting a neutral sentence (+0.0 [$-$6.8, 7.2] on the 222 Hindi traces). With one continuation per version this test had about 24\% power for a 5-point effect, so it does not show the effect is zero.
-
-\paragraph{Results of experiment 2.}
-\textbf{Removing the distractor helps a little.} In Hindi, Q reaches 45.2\% and P 40.0\%, a difference of +5.3 points [3.2, 7.4] (Figure~\ref{fig:interventions}). So the distractor was necessary for at least 8.8\% of the errors made from that point \citep{tian-pearl-2000-probabilities}; most continuations that go wrong with it also go wrong without it. The effect leans on one sentence, again the one from Figure~\ref{fig:design}, which supplies 58\% of it (without it, +2.8 [0.4, 5.0]), and the interval reaches zero once the 29 sentences are treated as a sample.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{interventions}
-\caption{Resampling contrasts with 95\% intervals. Traces were selected for being wrong, the distractor is time-related, and unanswered continuations count as wrong. \emph{Opening} traces mention the distractor in their first sentence ($k=0$) and \emph{later} traces after it ($k\ge1$); P$-$P1 uses only later traces. English is descriptive.}
-\label{fig:interventions}
-\end{figure}
-
-\textbf{The mention itself looks like an ordinary step.} Keeping the sentence with the first mention lowers accuracy by 3.3 points [1.2, 5.4], but not detectably more than keeping the sentence before it ($p=0.09$ on 248 traces with $k\ge1$). It cannot be told apart from one more step along a trace that was heading for a wrong answer.
-
-\textbf{The distractor and the act of writing about it stay entangled.} Free continuations mention the distractor in 57.8\% of rollouts, so the Q-versus-P contrast changes both at once. Unanswered Hindi rollouts also rise from 5.7\% to 10.0\%, which the API data does not show, so part of this may belong to the self-hosted setting.
-
-\textbf{So the answer is no.} The distractor makes some errors more likely, but most recur without it, the effect depends on one sentence, and neither experiment isolates the written mention.
+\paragraph{The mention.}
+Keeping the sentence with the first mention lowers accuracy by 3.3 points [1.2, 5.4], but not detectably more than keeping the sentence before it ($p=0.09$ on 248 traces). We cannot tell it apart from one more step along a failing trace. Free continuations also mention the distractor in 57.8\% of rollouts, so Q against P changes the question and the writing at once.
 
 \section{Discussion}
 \label{sec:discussion}
 
-Across accuracy, trace distance, verification and error types, the instructed language of reasoning accounts for more of the gap than the language of the question, as prior work on English reasoning would predict \citep{shi-etal-2023-mgsm,yong2025crosslingual,qi-etal-2025-models}. Method rankings did not transfer: one English turn beat CLP's two, and a Hinglish instruction hurt English questions. Trace evidence needs care too: divergence goes with disagreement without showing cause, and a wrong trace that mentions a distractor needs a baseline.
+Across accuracy, trace distance, verification and error types, the requested language of reasoning seems to account for more of the gap than the language of the question, in line with prior work on English reasoning \citep{shi-etal-2023-mgsm,yong2025crosslingual,qi-etal-2025-models}. Method rankings did not transfer: one English turn beat CLP's two, and Hinglish lowered accuracy on English questions. Trace evidence also needs care, since an edit-distance score can pick up its signal from the answers.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-On Sarvam-105B and TRD, CoT widens the English-Hindi gap from about 4 points to about 29. Reasoning in English on the same Hindi questions closes most of it, CLP a third and Hinglish none. The Hindi losses come from methods used only when writing Hindi; errors from reading Hindi survive the switch. Trace divergence tracks disagreement only as a correlation, and we cannot show that distractors in traces cause errors.
+On Sarvam-105B and TRD, CoT widens the English-Hindi gap from about 4 points to about 29. On the same Hindi questions, English reasoning closes most of it, CLP about a third, and Hinglish none. Hidden thinking nearly closes it at four times the token budget. The Hindi losses appear tied to methods seen mainly when writing Hindi. Trace divergence goes with disagreement, much of it through the answers, and we could not show that distractors in traces cause errors.
 
-\section{Limitations and Future Work}
+\section*{Limitations}
 \label{sec:limitations}
 
-\paragraph{Scope.} Everything here concerns one model, greedy decoding except in the resampling arms, one prompt per condition, one dataset seed and two languages. Intervals cover question sampling only, so they say nothing about other wordings, and with temperature 0 there is no sampling noise estimate for the main runs.
+\paragraph{Scope.} Everything here concerns one model, greedy decoding except in the resampling arms, one prompt per condition, one dataset seed and two languages. Intervals cover question sampling only, so they say nothing about other wordings.
 
-\paragraph{Identification.} Language and prompt wording are confounded in every comparison across prompting conditions, including our decomposition. No condition pairs English questions with Hindi reasoning, so the split is one path and depends on its order. Trace style, mentions and verification are chosen by the model or measured after it responds, so they support association only. Runs span about a month, the provider changed its API responses in that time, and condition and run date are partly confounded.
+\paragraph{Causal claims.} Language and prompt wording are confounded in every comparison across prompting conditions. No condition pairs English questions with Hindi reasoning, so our split is one path and depends on its order. Trace style, mentions and verification are chosen by the model or measured after it responds, so they support association only. Runs span about a month, the provider changed its API responses in that time, and condition and run date are partly confounded.
 
-\paragraph{Data.} The added conditions use the first 50 of 150 questions per cell. This subset is too small for distractor contrasts of a few points. Hindi distractors are not literal translations, and some Hindi carriers are awkward, so English-Hindi distractor comparisons are not strictly parallel. Distractor sentences are a fixed pool assigned unevenly across tasks, and the generator's seed reset makes levels share sentence mixes. TRD's time-task offsets in the code differ from the difficulty ranges its paper lists.
+\paragraph{Data.} The added conditions use the first 50 of 150 questions per cell, too few for distractor contrasts of a few points. Hindi distractors are not literal translations, and some Hindi question templates are awkward. Distractor sentences are a fixed pool assigned unevenly across tasks. TRD's time-task offsets in the code differ from the ranges its paper lists.
 
-\paragraph{Measurement.} The parser is regex-based and imperfect, RDS depends on it and on the edit-distance costs, and RQ5 drops pairs with unparseable answers. Mention and verification rules are lexical. The error labels come from a script, leave about two-thirds of wrong standard responses unlabelled, and their percentages were not checked by hand. All our hand-labelled samples were read by a single LLM annotator without blinding or human validation, including parser precision and our review of the Hindi templates; they should be checked by people.
+\paragraph{Measurement.} The parser is regex-based and imperfect, RDS depends on it and on the edit-distance costs, and RQ5 drops pairs with unparseable answers. \texttt{FORMAT} cues are broad and can catch ordinary uses of words such as ``English''. Mention and verification rules are lexical. The error labels come from a script, leave about two-thirds of wrong standard responses unlabelled, and their percentages were not checked by hand. All hand-labelled samples were read by a single LLM annotator without human validation, including parser precision and our review of the Hindi templates.
 
-\paragraph{Interventions.} Both experiments cover only originally wrong traces and time-related distractors, on a quantised self-hosted model, and resampling uses a different temperature from the source traces. The resampling design was written down before the run according to our notes, but it was first committed afterwards, followed the deletion experiment on many of the same traces, and was not publicly registered. We did not test whether mentions harm traces that would otherwise be correct.
+\paragraph{Interventions.} Both experiments cover only originally wrong traces and time-related distractors, on a quantised self-hosted model, and resampling uses a different temperature from the source traces. Unanswered Hindi rollouts rise from 5.7\% to 10.0\% with the distractor there, which the API data does not show, so part of the effect may belong to this setting. The resampling design was first committed after the run and was not publicly registered. We did not test whether mentions harm traces that would otherwise be correct.
 
-\paragraph{Thinking mode.} This pilot has 10 questions per cell and a fourfold budget, and it changes thinking and budget together.
+\paragraph{Thinking mode.} This set has 10 questions per cell and changes thinking and token budget together.
 
-\paragraph{Future work.} The most informative next steps are: rerunning recurrence with corrected Hindi carriers; adding English questions with Hindi reasoning to complete the design; an English CoT prompt without the language lock and several paraphrases of each prompt; CLP with solving forbidden in stage 1; thinking on and off at equal budgets; a question-by-mention factorial on both correct and wrong traces; and human annotation of the labelled samples and error labels.
+\paragraph{Future work.} The next steps are: rerunning recurrence with corrected Hindi templates; adding English questions with Hindi reasoning; several paraphrases of each prompt, including a Hindi direct prompt with fewer format rules; CLP with solving forbidden in stage 1; thinking on and off at equal budgets; a question-by-mention factorial on correct and wrong traces; and human annotation of the labelled samples.
 
 \bibliography{references}
 

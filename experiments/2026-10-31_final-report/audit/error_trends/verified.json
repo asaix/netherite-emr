@@ -1,0 +1,344 @@
+{
+  "counts": {
+    "standard_en_direct": {
+      "n": 20250,
+      "wrong": 8322,
+      "date_valued": 963,
+      "cut": 29,
+      "time_n": 6750,
+      "time_wrong": 2284,
+      "time_valued": 2269,
+      "whole_hours": 1487,
+      "twelve": 65,
+      "feb_n": 576,
+      "feb_wrong": 516,
+      "tens": 338
+    },
+    "all": {
+      "n": 93150,
+      "wrong": 30409,
+      "tens": 854,
+      "cut": 1285,
+      "whole_hours": 3757,
+      "feb_wrong": 1922
+    },
+    "set_standard": {
+      "n": 81000,
+      "wrong": 28698,
+      "cut": 825
+    },
+    "standard_en_cot": {
+      "n": 20250,
+      "wrong": 2901,
+      "date_valued": 213,
+      "cut": 648,
+      "time_n": 6750,
+      "time_wrong": 210,
+      "time_valued": 169,
+      "whole_hours": 86,
+      "feb_n": 576,
+      "feb_wrong": 186,
+      "twelve": 25,
+      "tens": 6
+    },
+    "standard_hi_direct": {
+      "n": 20250,
+      "wrong": 9167,
+      "date_valued": 1246,
+      "tens": 380,
+      "time_n": 6750,
+      "time_wrong": 2571,
+      "time_valued": 2542,
+      "whole_hours": 1453,
+      "twelve": 81,
+      "feb_n": 576,
+      "feb_wrong": 563,
+      "cut": 2
+    },
+    "standard_hi_cot": {
+      "n": 20250,
+      "wrong": 8308,
+      "date_valued": 1347,
+      "cut": 146,
+      "tens": 126,
+      "time_n": 6750,
+      "time_wrong": 1644,
+      "time_valued": 1622,
+      "whole_hours": 659,
+      "twelve": 69,
+      "feb_n": 576,
+      "feb_wrong": 502
+    },
+    "ron_en_cot": {
+      "n": 1350,
+      "wrong": 99,
+      "date_valued": 7,
+      "cut": 84,
+      "time_n": 450,
+      "time_wrong": 9,
+      "time_valued": 2,
+      "whole_hours": 1,
+      "twelve": 1,
+      "feb_n": 42,
+      "feb_wrong": 22
+    },
+    "set_ron": {
+      "n": 5400,
+      "wrong": 414,
+      "cut": 287
+    },
+    "ron_en_direct": {
+      "n": 1350,
+      "wrong": 64,
+      "date_valued": 6,
+      "cut": 36,
+      "time_n": 450,
+      "time_wrong": 2,
+      "feb_n": 42,
+      "feb_wrong": 13,
+      "time_valued": 1,
+      "whole_hours": 1
+    },
+    "ron_hi_cot": {
+      "n": 1350,
+      "wrong": 136,
+      "date_valued": 5,
+      "cut": 110,
+      "time_n": 450,
+      "time_wrong": 13,
+      "time_valued": 5,
+      "whole_hours": 4,
+      "feb_n": 42,
+      "feb_wrong": 23,
+      "twelve": 3
+    },
+    "ron_hi_direct": {
+      "n": 1350,
+      "wrong": 115,
+      "cut": 57,
+      "date_valued": 8,
+      "time_n": 450,
+      "time_wrong": 14,
+      "time_valued": 9,
+      "whole_hours": 8,
+      "twelve": 3,
+      "feb_n": 42,
+      "feb_wrong": 17
+    },
+    "en-cot": {
+      "n": 6750,
+      "wrong": 1297,
+      "date_valued": 93,
+      "cut": 173,
+      "time_n": 2250,
+      "time_wrong": 111,
+      "time_valued": 101,
+      "whole_hours": 58,
+      "twelve": 9,
+      "feb_n": 213,
+      "feb_wrong": 80,
+      "tens": 4
+    },
+    "set_en-cot": {
+      "n": 6750,
+      "wrong": 1297,
+      "cut": 173
+    }
+  },
+  "same_questions_strict": {
+    "standard_en_US": {
+      "n": 1350,
+      "strict_pct": 87.3
+    },
+    "standard_hi_IN": {
+      "n": 1350,
+      "strict_pct": 59.9
+    },
+    "standard_gap": 27.4,
+    "ron_en_US": {
+      "n": 1350,
+      "strict_pct": 92.7
+    },
+    "ron_hi_IN": {
+      "n": 1350,
+      "strict_pct": 89.9
+    },
+    "ron_gap": 2.8
+  },
+  "format": {
+    "ron_en_cot_reasoning_content": {
+      "format": 32688,
+      "tokens": 408455,
+      "traces": 1350,
+      "share_pct": 8.0
+    },
+    "ron_en_direct_reasoning_content": {
+      "format": 63795,
+      "tokens": 342564,
+      "traces": 1350,
+      "share_pct": 18.6
+    },
+    "ron_hi_cot_reasoning_content": {
+      "format": 95589,
+      "tokens": 614469,
+      "traces": 1350,
+      "share_pct": 15.6
+    },
+    "ron_hi_direct_reasoning_content": {
+      "format": 207097,
+      "tokens": 627487,
+      "traces": 1350,
+      "share_pct": 33.0
+    },
+    "ron_en_cot_content": {
+      "format": 263,
+      "tokens": 22473,
+      "traces": 1350,
+      "share_pct": 1.2
+    },
+    "ron_en_direct_content": {
+      "format": 0,
+      "tokens": 1318,
+      "traces": 1350,
+      "share_pct": 0.0
+    },
+    "ron_hi_cot_content": {
+      "format": 27,
+      "tokens": 18843,
+      "traces": 1350,
+      "share_pct": 0.1
+    },
+    "ron_hi_direct_content": {
+      "format": 126,
+      "tokens": 2249,
+      "traces": 1350,
+      "share_pct": 5.6
+    },
+    "standard_en_direct_content": {
+      "format": 43,
+      "tokens": 59900,
+      "traces": 20250,
+      "share_pct": 0.1
+    },
+    "standard_en_cot_content": {
+      "format": 2771,
+      "tokens": 1152345,
+      "traces": 20250,
+      "share_pct": 0.2
+    },
+    "standard_hi_direct_content": {
+      "format": 3,
+      "tokens": 32231,
+      "traces": 20250,
+      "share_pct": 0.0
+    },
+    "standard_hi_cot_content": {
+      "format": 679,
+      "tokens": 359696,
+      "traces": 20250,
+      "share_pct": 0.2
+    }
+  },
+  "format_hi_direct_mean_per_trace": {
+    "right": 156.5,
+    "wrong": 119.8
+  },
+  "format_hi_direct_by_task_pct": {
+    "date_addition": 49.8,
+    "date_duration": 41.1,
+    "date_recurrence": 24.2,
+    "date_subtraction": 44.2,
+    "day_of_week": 17.0,
+    "interval_date": 15.3,
+    "time_addition": 49.8,
+    "time_duration": 49.4,
+    "time_subtraction": 46.5
+  },
+  "format_all_ron_by_level_pct": {
+    "short": 26.6,
+    "medium": 22.0,
+    "long": 21.8,
+    "very_long": 18.4,
+    "very_very_long": 14.9
+  },
+  "longest_right_short_hi_direct": {
+    "id": "short/date_duration_hi_IN/9/similar_insertion/direct",
+    "words": 8208,
+    "steps": 936,
+    "format": 384,
+    "question": "वसंत में समय अलग चलता है। 2025-01-27 और 2025-01-30 के बीच कितने दिन (जैसे 5, 9) बीत चुके हैं?"
+  },
+  "median_cot_tokens": {
+    "standard_en_cot_content_lens": 25.0,
+    "standard_hi_cot_content_lens": 13.0
+  },
+  "cutoff_by_task_en_cot": {
+    "date_recurrence": 156,
+    "day_of_week": 358,
+    "interval_date": 88,
+    "time_addition": 25,
+    "time_subtraction": 13,
+    "date_duration": 3,
+    "date_subtraction": 2,
+    "time_duration": 3
+  },
+  "hi_cot_time_addition_wrong_pct_by_level": {
+    "short": 24.0,
+    "medium": 24.2,
+    "long": 27.1,
+    "very_long": 26.7,
+    "very_very_long": 26.7
+  },
+  "hi_cot_answers_0000_by_insertion": {
+    "no_insertion": 2,
+    "similar_insertion": 2,
+    "dissimilar_insertion": 1
+  },
+  "distractor_reuse_similar": {
+    "ron_en_direct": {
+      "dist_n": 5,
+      "dist_checked": 0,
+      "dist_hit": 0
+    },
+    "standard_en_cot": {
+      "dist_n": 199,
+      "dist_checked": 35,
+      "dist_hit": 0
+    },
+    "ron_en_cot": {
+      "dist_n": 3,
+      "dist_checked": 0,
+      "dist_hit": 0
+    },
+    "en-cot": {
+      "dist_n": 125,
+      "dist_checked": 38,
+      "dist_hit": 3
+    },
+    "standard_en_direct": {
+      "dist_n": 1261,
+      "dist_checked": 944,
+      "dist_hit": 60
+    },
+    "ron_hi_cot": {
+      "dist_n": 5,
+      "dist_checked": 0,
+      "dist_hit": 0
+    },
+    "ron_hi_direct": {
+      "dist_n": 14,
+      "dist_checked": 0,
+      "dist_hit": 0
+    },
+    "standard_hi_cot": {
+      "dist_n": 1324,
+      "dist_checked": 793,
+      "dist_hit": 49
+    },
+    "standard_hi_direct": {
+      "dist_n": 1432,
+      "dist_checked": 1135,
+      "dist_hit": 145
+    }
+  }
+}

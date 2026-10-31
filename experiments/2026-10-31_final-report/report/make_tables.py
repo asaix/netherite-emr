@@ -44,16 +44,16 @@ def ci(v):
     return f"{v[0]:+.1f} [{v[1]:.1f}, {v[2]:.1f}]".replace("-", "$-$")
 
 
-lines = [r"\begin{tabular}{@{}lrrrr@{}}", r"\toprule", r"& Direct & CoT & Gain [95\% CI] & Strict \\", r"\midrule"]
+lines = [r"\begin{tabular}{@{}lrrrr@{}}", r"\toprule", r"& Direct & CoT & Gain & Strict \\", r"\midrule"]
 for lang, name, cot, dire in [("en", "English", "en_cot", "en_direct"), ("hi", "Hindi", "hi_cot", "hi_direct")]:
     d = f["cot_delta"][lang]
-    lines.append(f"{name} & {f['acc'][dire]['answered']:.1f} & {f['acc'][cot]['answered']:.1f} & {ci(d['pooled']['answered'])} & {p(d['pooled']['strict'])} \\\\")
-lines += [r"\midrule", r"By distractor & \multicolumn{2}{c}{None} & Time-related & Unrelated \\"]
+    lines.append(f"{name} & {f['acc'][dire]['answered']:.1f} & {f['acc'][cot]['answered']:.1f} & {p(d['pooled']['answered'])} & {p(d['pooled']['strict'])} \\\\")
+lines += [r"\midrule", r"Distractor & \multicolumn{2}{c}{None} & Time & Unrelated \\"]
 for lang, name in [("en", "English"), ("hi", "Hindi")]:
     d = f["cot_delta"][lang]
     lines.append(f"{name} & \\multicolumn{{2}}{{c}}{{{p(d['no_insertion']['answered'])}}} & {p(d['similar_insertion']['answered'])} & {p(d['dissimilar_insertion']['answered'])} \\\\")
 g = f["gap_cot"]
-lines.append(f"Gap under CoT & \\multicolumn{{2}}{{c}}{{{p(g['no_insertion']['answered'])}}} & {p(g['similar_insertion']['answered'])} & {p(g['dissimilar_insertion']['answered'])} \\\\")
+lines.append(f"Gap, CoT & \\multicolumn{{2}}{{c}}{{{p(g['no_insertion']['answered'])}}} & {p(g['similar_insertion']['answered'])} & {p(g['dissimilar_insertion']['answered'])} \\\\")
 g = f["gap_direct"]
 lines.append(f"Gap, direct & \\multicolumn{{2}}{{c}}{{{p(g['no_insertion']['answered'])}}} & {p(g['similar_insertion']['answered'])} & {p(g['dissimilar_insertion']['answered'])} \\\\")
 lines += [r"\bottomrule", r"\end{tabular}"]

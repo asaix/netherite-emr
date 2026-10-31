@@ -1,6 +1,8 @@
 from pathlib import Path
 
 import matplotlib as mpl
+
+mpl.use("pgf")
 import matplotlib.pyplot as plt
 
 COLUMN_IN = 3.03
@@ -78,16 +80,18 @@ def condition(name):
 def apply():
     mpl.rcParams.update({
         "font.family": "serif",
-        "font.serif": ["Liberation Serif", "Times New Roman", "DejaVu Serif"],
-        "mathtext.fontset": "stix",
+        "font.serif": ["TeX Gyre Termes"],
+        "pgf.texsystem": "lualatex",
+        "pgf.rcfonts": False,
+        "pgf.preamble": "\\usepackage{fontspec}\\setmainfont{TeX Gyre Termes}",
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
-        "font.size": 8.5,
-        "axes.labelsize": 8.5,
-        "axes.titlesize": 8.5,
-        "xtick.labelsize": 7.5,
-        "ytick.labelsize": 7.5,
-        "legend.fontsize": 7.5,
+        "font.size": 10,
+        "axes.labelsize": 10,
+        "axes.titlesize": 10,
+        "xtick.labelsize": 9,
+        "ytick.labelsize": 9,
+        "legend.fontsize": 9,
         "legend.frameon": False,
         "legend.handlelength": 1.8,
         "figure.facecolor": "white",

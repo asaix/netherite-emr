@@ -1,0 +1,37 @@
+{
+  "pairs": 20662,
+  "off": 19471,
+  "disagree_pct": 31.38,
+  "rds_disagree": 0.917,
+  "rds_agree": 0.809,
+  "outcomes": {
+    "both": 12468,
+    "en_only": 5967,
+    "hi_only": 516,
+    "neither": 1711
+  },
+  "full": {
+    "n": 20662,
+    "or_per_0.1": 4.925,
+    "lo": 4.578,
+    "hi": 5.297
+  },
+  "full + length gap": {
+    "n": 20662,
+    "or_per_0.1": 5.584,
+    "lo": 5.176,
+    "hi": 6.025
+  },
+  "no answer tokens": {
+    "n": 20661,
+    "or_per_0.1": 1.678,
+    "lo": 1.601,
+    "hi": 1.76
+  },
+  "op types, no answers": {
+    "n": 20661,
+    "or_per_0.1": 1.1,
+    "lo": 1.069,
+    "hi": 1.133
+  }
+}
