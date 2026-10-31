@@ -76,7 +76,7 @@ def decomposition():
     ax.barh(y, b, 0.78, left=a, color=S.CONDITIONS["English CoT"]["color"], hatch="///", edgecolor="white", label="Question language (English CoT − en-CoT)")
     ax.set_yticks(y, [labels[c] for c in cuts], fontsize=7.5)
     ax.invert_yaxis()
-    ax.set_xlabel("English−Hindi CoT gap (points)")
+    ax.set_xlabel("English−Hindi CoT gap (percentage points)")
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
     ax.legend(loc="lower center", bbox_to_anchor=(0.32, 1.0), fontsize=9, ncol=1)
@@ -157,7 +157,7 @@ def interventions():
         ax.locator_params(axis="x", nbins=3)
     axes[0].set_yticks(range(6), [g.replace(", ", ": ") for g in groups], fontsize=9)
     axes[0].invert_yaxis()
-    fig.supxlabel("Difference in accuracy (points)", fontsize=9, y=-0.1)
+    fig.supxlabel("Difference in accuracy (percentage points)", fontsize=9, y=-0.1)
     fig.subplots_adjust(wspace=0.12)
     S.save(fig, OUT / "interventions")
 
