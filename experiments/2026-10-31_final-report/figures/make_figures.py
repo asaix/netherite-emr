@@ -107,24 +107,32 @@ def lr_forest():
 
 
 def distance():
-    d = pd.read_csv(ED / "decomposition_distance.csv")
-    d = d[d["scope"] == "all"].set_index("kind")
-    names = [("E_self", "English vs English\n(+ distractor)"), ("E_M", "English CoT vs en-CoT\n(question language)"),
-             ("M_H", "en-CoT vs Hindi CoT\n(reasoning language)"), ("E_H", "English vs Hindi CoT\n(both)"),
-             ("E_H_otherq", "English vs Hindi CoT\n(different question)")]
-    fig, ax = plt.subplots(figsize=(S.COLUMN_IN, 1.75))
-    y = np.arange(len(names))
-    r = d.loc[[k for k, _ in names]]
-    ax.barh(y, r["full"], 0.62, color="#9ECAE1", edgecolor="white", xerr=[r["full"] - r["full_lo"], r["full_hi"] - r["full"]],
-            error_kw={"lw": 0.7, "capsize": 1.5, "ecolor": S.INK})
-    for i, v in enumerate(r["full"]):
-        ax.annotate(f"{v:.3f}", (v, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=7, color=S.INK)
-    ax.set_yticks(y, [n for _, n in names], fontsize=7)
-    ax.invert_yaxis()
-    ax.set_xlim(0.5, 1.02)
+    d = pd.read_csv(HERE / "data" / "distance.csv").set_index("kind")
+    names = [("E_self", "Only a distractor added", "English CoT, with vs without", True),
+             ("E_M", "Only the question language", "English CoT vs en-CoT", False),
+             ("M_H", "Only the reasoning language", "en-CoT vs Hindi CoT", False),
+             ("E_H", "Question + reasoning language", "English CoT vs Hindi CoT", False),
+             ("E_H_otherq", "Different questions", "English CoT vs Hindi CoT", True)]
+    fig, ax = plt.subplots(figsize=(S.COLUMN_IN, 2.0))
+    fig.subplots_adjust(left=0.47, right=0.9, top=0.9, bottom=0.2)
+    tr = ax.get_yaxis_transform()
+    for i, (k, what, pair, ref) in enumerate(names):
+        r = d.loc[k]
+        c = S.MUTED if ref else S.CONDITIONS["English CoT"]["color"]
+        ax.errorbar(r.full, i, xerr=[[r.full - r.full_lo], [r.full_hi - r.full]], color=c, marker="o" if ref else "s",
+                    mfc="white" if ref else c, ms=4, lw=0.9, capsize=1.5)
+        ax.annotate(f"{r.full:.3f}", (r.full_hi, i), xytext=(3, 0), textcoords="offset points", va="center", fontsize=7, color=S.INK)
+        ax.text(-0.03, i - 0.04, what, transform=tr, ha="right", va="bottom", fontsize=6.5, fontweight="bold", color=S.INK)
+        ax.text(-0.03, i + 0.04, pair, transform=tr, ha="right", va="top", fontsize=6, color=S.MUTED)
+    ax.text(-0.03, 1.01, "What differs between the two traces", transform=ax.transAxes, ha="right", va="bottom", fontsize=6,
+            fontstyle="italic", color=S.MUTED)
+    ax.set_yticks([])
+    ax.set_ylim(len(names) - 0.4, -0.6)
+    ax.set_xlim(0.68, 1.0)
+    ax.set_xticks([0.7, 0.8, 0.9, 1.0])
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
-    ax.set_xlabel("Mean normalised edit distance")
+    ax.set_xlabel("Mean RDS\n(0 = same steps, 1 = no steps shared)", fontsize=7)
     S.save(fig, OUT / "distance")
 
 
