@@ -1,0 +1,144 @@
+           Reasoning Divergence and Cross-Lingual Correctness:
+                     A Logistic Regression Analysis
+
+
+
+1     Question
+
+Does a larger Reasoning Divergence Score (RDS) between English and Hindi reasoning traces
+go with a higher chance that the two languages get different correctness outcomes on the same
+question? All results come from existing Sarvam-105B outputs. No model was retrained or rerun.
+
+
+2     Method
+
+Outcome. For each English and Hindi question pair we define
+                                {
+                                  0 both correct or both incorrect,
+                     disagree =
+                                  1 exactly one language is correct.
+
+Predictor. RDS is the normalized edit distance between the English and Hindi reasoning traces,
+ranging from 0 (identical) to 1 (completely different).
+Models. We fit logistic regressions with standard errors clustered by question, since each question
+appears in up to three insertion variants and both reasoning modes.
+
+    • Primary: disagree ∼ RDS + diﬀiculty + task + insertion type + reasoning mode.
+
+    • Length-adjusted: the primary model plus a trace length gap, |ℓen − ℓhi |/ max(ℓen , ℓhi ).
+
+    • Per-mode: the RDS slope estimated separately for reasoning OFF and reasoning ON.
+
+Reference levels are short diﬀiculty, the date_addition task, no insertion, and reasoning OFF.
+Sample. Of 21,600 loaded pairs, 938 (4.3%) were dropped because the English or Hindi answer
+could not be parsed. The analysed sample has 20,662 pairs covering 6,739 unique questions:
+19,471 with reasoning OFF and 1,191 with reasoning ON.
+
+
+3     Results
+
+3.1    How often do the languages disagree?
+
+English and Hindi disagreed on 31.4% of pairs (95% CI [30.7, 32.0]). The disagreement is lopsided:
+92% of cases are English correct and Hindi wrong.
+
+                                                 1
+                       Table 1: Correctness outcomes by reasoning mode.
+
+             Mode    Both correct   EN only    HI only    Both wrong   Disagree rate
+             All           12,468      5,967        516        1,711          31.4%
+             OFF           11,309      5,947        505        1,710          33.1%
+             ON             1,159         20         11            1           2.6%
+
+
+Disagreement rises with diﬀiculty, from 26.7% on short questions to 38.6% on very very long ones.
+It varies most by task: date_recurrence (65.1%) and day_of_week (55.2%) are highest, while
+date_duration (12.7%) and date_addition (14.9%) are lowest. Insertion type has almost no
+effect (30.7% to 32.2%).
+
+
+3.2   Is RDS higher when the languages disagree?
+
+Yes. Mean RDS is 0.809 when the languages agree and 0.917 when they disagree (medians 0.828
+and 0.933). A Mann-Whitney test confirms the gap (p < 0.001): a randomly chosen disagreeing
+pair has a higher RDS than a randomly chosen agreeing pair 80% of the time.
+
+
+
+
+   Figure 1: RDS distribution for agreeing and disagreeing pairs. Dashed lines mark medians.
+
+
+
+
+                                                2
+3.3   Regression estimates
+
+Table 2: RDS coeﬀicient across models. OR and AME are per 0.1 increase in RDS. AME is the
+average change in disagreement probability in percentage points.
+
+      Model             Sample         n       β         OR [95% CI]         AME (pp)   Reliable
+      Primary           All       20,662   15.94        4.93 [4.58, 5.30]        22.9     yes
+      Length-adjusted   All       20,662   17.20        5.58 [5.18, 6.03]        24.5     yes
+      OFF, adjusted     OFF       19,471   15.83        4.87 [4.53, 5.24]        24.0     yes
+      OFF, RDS only     OFF       19,471   13.92        4.02 [3.81, 4.25]        24.0     yes
+      ON, adjusted      ON         1,191   24.67       11.79 [4.90, 28.37]        4.6     no
+      ON, RDS only      ON         1,191   20.46       7.74 [3.49, 17.18]         4.6     yes
+
+
+All RDS coeﬀicients are positive with p < 0.001.
+Primary model. Holding diﬀiculty, task, insertion type and reasoning mode fixed, a 0.1 increase
+in RDS multiplies the odds of disagreement by 4.93. On the probability scale this averages to
+about 23 percentage points per 0.1 of RDS. The effect is not linear: predicted disagreement stays
+near zero below RDS 0.7 and climbs steeply above 0.8 (Figure 2).
+Length-adjusted model. Edit distance can grow just because one trace is longer. Adding the
+length gap does not weaken the result: the RDS odds ratio rises slightly to 5.58. The length gap
+itself has a negative coeﬀicient (β = −1.19, p < 0.001), so trace length differences do not explain
+the association.
+Reasoning ON vs OFF. Disagreement is far lower with reasoning ON (2.6%) than OFF (33.1%),
+and reasoning ON lowers the adjusted odds of disagreement by about 90% (OR 0.10). The RDS
+slope is positive in both modes. However, reasoning ON has only 31 disagreements. Its fully
+adjusted model did not converge because the time_duration task had zero disagreements, so only
+its RDS-only model should be read, and with caution.
+
+
+
+
+        Figure 2: Observed disagreement rate by RDS bin (unadjusted, Wilson 95% CI).
+
+
+                                                   3
+4    Limitations
+
+    • Observational. RDS and correctness come from the same generations, so we cannot say
+      divergence causes errors. Both may reflect question diﬀiculty not captured by the controls.
+
+    • Mode imbalance. Reasoning OFF makes up 94% of the pooled sample, so the pooled slope
+      mostly describes reasoning OFF.
+
+    • Asymmetric outcome. Since 92% of disagreements are Hindi failures, the outcome mainly
+      tracks Hindi-specific errors.
+
+    • Narrow RDS range. 88% of pairs have RDS above 0.7, so the slope is estimated mainly
+      from the upper range.
+
+    • Measurement. RDS depends on the step parser and edit-distance costs. Pairs with un-
+      parseable answers were dropped.
+
+    • In-sample. The models describe associations in this dataset, not predictive accuracy on new
+      questions.
+
+
+5    Conclusion
+
+Greater divergence between English and Hindi reasoning traces is strongly associated with the
+two languages reaching different correctness outcomes. The association holds after controlling for
+diﬀiculty, task, insertion type, reasoning mode and trace length. RDS is therefore a useful signal of
+cross-lingual reasoning inconsistency, though the analysis is correlational and does not show that
+divergence causes the errors.
+
+
+
+
+                                                 4
+
