@@ -36,7 +36,7 @@
 \noindent\textbf{Hinglish.} On Hindi questions, Hinglish lowers date duration by 5.5 points and raises date subtraction by 5.1, which cancel in the mean. Roman traces do no better than Devanagari ones ($-$2.8 [$-$5.2, $-$0.5]).
 
 \smallskip
-\noindent\textbf{Interventions.} The net 8.8\% has interval [5.5, 12.1], and resampling the 29 sentences widens the Q$-$P interval to [$-$0.3, 9.4]. The mention test is (M$-$P)$-$(P$-$P1) $=-$4.6 [$-$9.6, 0.6]. Agreement with the API on 90 calibration questions is $-$2.2 points [$-$13.3, 7.8], which does not establish that the two are the same.
+\noindent\textbf{Interventions.} The 222 deletion traces may not be representative: keeping the mention lowers accuracy by 1.0 points in them, against 5.0 in the other 304. The net 8.8\% has interval [5.5, 12.1], and resampling the 29 sentences widens the Q$-$P interval to [$-$0.3, 9.4]. Counting only answered continuations, Q$-$P is +3.6 [1.5, 5.7] and M$-$P is $-$3.2 [$-$5.5, $-$0.9], so both keep their direction. The mention test is (M$-$P)$-$(P$-$P1) $=-$4.6 [$-$9.6, 0.6]. In later traces, M$-$P is $-$5.2 and P$-$P1 is $-$0.7, so the estimates lean towards the mention mattering more, although the test is not significant. Agreement with the API on 90 calibration questions is $-$2.2 points [$-$13.3, 7.8], which does not establish that the two are the same.
 
 \section*{Appendix C. Secondary Figures and Tables}
 \addcontentsline{toc}{section}{Appendix C. Secondary Figures and Tables}
@@ -79,7 +79,7 @@
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{interventions}
-\caption{Resampling contrasts with 95\% intervals. Q is the continuation without the distractor in the question, P with it, M after the mention, and P1 one sentence earlier. \emph{Opening} traces mention the distractor in their first sentence and \emph{later} traces after it. English is descriptive.}
+\caption{Resampling contrasts with 95\% intervals. Q is the continuation without the distractor in the question, P with it, M after the mention, and P1 one sentence earlier. \emph{Opening} traces mention the distractor in their first sentence and \emph{later} traces after it; P$-$P1 uses only later traces. Traces were selected for being wrong, and unanswered continuations count as wrong. English is descriptive.}
 \label{fig:interventions}
 \end{figure}
 
@@ -96,7 +96,7 @@ B\enspace mention deleted & s0 to s2 & 1 of 1 \\
 C\enspace neutral deleted & s1 to s3 & 1 of 1 \\
 \addlinespace
 \multicolumn{3}{@{}l}{\emph{Resampling: seven at temperature 0.8}} \\
-P\enspace before the mention & s0 to s2 & 6 of 7 \\
+P\enspace before the mention & s0 to s2 & 7 of 7 \\
 Q\enspace P, distractor removed & s0 to s2 & 7 of 7 \\
 M\enspace after the mention & s0 to s3 & 7 of 7 \\
 P1\enspace a sentence earlier & s0 to s1 & 6 of 7 \\

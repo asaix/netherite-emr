@@ -35,7 +35,7 @@
 \maketitle
 
 \begin{abstract}
-Does asking a language model to think step by step help it reason about dates and times, and does the answer change with language? We test Sarvam-105B on 6,750 questions from the Temporal Reasoning Dataset in English and Hindi, with and without distractor sentences. Chain-of-thought (CoT) raises English accuracy by 29.5 points and Hindi accuracy by 4.7, so the gap between the languages grows from about 4 points to about 29. Asking for English reasoning on the same Hindi questions closes about four-fifths of this gap. A two-turn cross-lingual prompt closes about a third, and Hinglish reasoning closes none of it on Hindi questions. Hidden thinking mode almost closes the gap, although a third of its steps on Hindi direct prompts argue about the output format. The Hindi losses appear to come from methods the model uses mainly when it writes Hindi, such as subtracting dates by counting forward. Traces that differ more go with answers that disagree, but much of this link seems to come from the answers themselves. Our trace experiments could not show that a distractor caused an error. All results come from one model and one prompt per condition.
+Does asking a language model to think step by step help it reason about dates and times, and does the answer change with language? We test Sarvam-105B on 6,750 questions from the Temporal Reasoning Dataset in English and Hindi, with and without distractor sentences. Chain-of-thought (CoT) raises English accuracy by 29.5 points and Hindi accuracy by 4.7, so the gap between the languages grows from about 4 points to about 29. Asking for English reasoning on the same Hindi questions closes about four-fifths of this gap. A two-turn cross-lingual prompt closes about a third, and Hinglish reasoning closes none of it on Hindi questions. Hidden thinking mode almost closes the gap, although a third of its steps on Hindi direct prompts argue about the output format. The Hindi losses appear to come from methods the model uses mainly when it writes Hindi, such as subtracting dates by counting forward. Traces that differ more go with answers that disagree, but much of this link seems to come from the answers themselves. Removing the distractor prevented few errors in the traces we tested, and we could not isolate the written mention. All results come from one model and one prompt per condition.
 \end{abstract}
 
 \section{Introduction}
@@ -200,7 +200,7 @@ RQ2 & Slightly in Hindi, largely through one sentence (penalty 2.2). & \ref{sec:
 RQ3 & Most of it, descriptively: 23.5 of the 29.5-point gap. & \ref{sec:encot} \\
 RQ4 & No: $-$0.0 on Hindi questions, $-$18.0 on English ones. & \ref{sec:hinglish} \\
 RQ5 & Yes as an association (OR 4.93), though much of it seems to come from the answers. & \ref{sec:rds} \\
-RQ6 & No. Removing the distractor helps a little (+5.3). & \ref{sec:interventions} \\
+RQ6 & Partly: removing the distractor helps a little (+5.3), but the written mention could not be isolated. & \ref{sec:interventions} \\
 \bottomrule
 \end{tabularx}
 \caption{Short answers to the research questions.}
@@ -380,10 +380,10 @@ The English loss seems to go beyond the cost of writing Hindi. English-question 
 \textbf{Removing the distractor helps a little, and we could not isolate the written mention.} A mention may lead the model astray, or traces already going wrong may tend to talk about it.
 
 \paragraph{Setup.}
-We take wrong CoT responses to questions with a time-related distractor that mention it before answering: 526 Hindi and 37 English. Each experiment cuts the trace at or before the first mention, changes one thing, and lets the model continue (Appendix Table~\ref{tab:intervention}). The API always starts a new reply, so we served an FP8 build with vLLM. It scored 5.7 points above the API on 278 Hindi questions and 24.7 below on 22 English ones, so English results are descriptive only.
+We take wrong CoT responses to questions with a time-related distractor that mention it before answering: 526 Hindi and 37 English, which are 18.8\% and 4.7\% of wrong answers to such questions. Each experiment cuts the trace around the first mention, changes one thing, and lets the model continue (Appendix Table~\ref{tab:intervention}). The API always starts a new reply, so we served an FP8 build with vLLM. It scored 5.7 points above the API on 278 Hindi questions and 24.7 below on 22 English ones, so English results are descriptive only.
 
 \paragraph{Deletion.}
-On 222 Hindi traces, deleting the mention helps no more than deleting a neutral sentence (+0.0 [$-$6.8, 7.2]). With one continuation per version this test had about 24\% power for a 5-point effect, so it does not show the effect is zero.
+On the 222 Hindi traces that have a neutral sentence to delete, deleting the mention helps no more than deleting that sentence (+0.0 [$-$6.8, 7.2]). With one continuation per version this test had about 24\% power for a 5-point effect, so it does not show the effect is zero.
 
 \paragraph{Resampling.}
 Hand edits may understate effects \citep{macar-etal-2026-branches}, so, following \citet{bogdan-etal-2025-anchors}, we also regenerate seven continuations per trace from four starting points. In Hindi, continuing without the distractor in the question (Q) reaches 45.2\% and with it (P) 40.0\%, a difference of +5.3 points [3.2, 7.4] (Appendix Figure~\ref{fig:interventions}). This suggests the distractor was necessary for at least 8.8\% of the errors made from that point \citep{tian-pearl-2000-probabilities}. Most continuations that go wrong with it also go wrong without it. The January sentence supplies 58\% of the effect (without it, +2.8 [0.4, 5.0]), and the interval reaches zero once the 29 sentences are treated as a sample.
@@ -399,7 +399,7 @@ Across accuracy, trace distance, verification and error types, the requested lan
 \section{Conclusion}
 \label{sec:conclusion}
 
-On Sarvam-105B and TRD, CoT widens the English-Hindi gap from about 4 points to about 29. On the same Hindi questions, English reasoning closes most of it, CLP about a third, and Hinglish none. Hidden thinking nearly closes it at four times the token budget. The Hindi losses appear tied to methods seen mainly when writing Hindi. Trace divergence goes with disagreement, much of it through the answers, and we could not show that distractors in traces cause errors.
+On Sarvam-105B and TRD, CoT widens the English-Hindi gap from about 4 points to about 29. On the same Hindi questions, English reasoning closes most of it, CLP about a third, and Hinglish none. Hidden thinking nearly closes it at four times the token budget. The Hindi losses appear tied to methods seen mainly when writing Hindi. Trace divergence goes with disagreement, much of it through the answers. Removing the distractor prevented few errors in the traces we tested, and we could not isolate the written mention.
 
 \section*{Limitations}
 \label{sec:limitations}
@@ -412,7 +412,7 @@ On Sarvam-105B and TRD, CoT widens the English-Hindi gap from about 4 points to 
 
 \paragraph{Measurement.} The parser is regex-based and imperfect, RDS depends on it and on the edit-distance costs, and RQ5 drops pairs with unparseable answers. \texttt{FORMAT} cues are broad and can catch ordinary uses of words such as ``English''. Mention and verification rules are lexical. The error labels come from a script, leave about two-thirds of wrong standard responses unlabelled, and their percentages were not checked by hand. All hand-labelled samples were read by a single LLM annotator without human validation, including parser precision and our review of the Hindi templates.
 
-\paragraph{Interventions.} Both experiments cover only originally wrong traces and time-related distractors, on a quantised self-hosted model, and resampling uses a different temperature from the source traces. Unanswered Hindi rollouts rise from 5.7\% to 10.0\% with the distractor there, which the API data does not show, so part of the effect may belong to this setting. The resampling design was first committed after the run and was not publicly registered. We did not test whether mentions harm traces that would otherwise be correct.
+\paragraph{Interventions.} Both experiments cover only originally wrong traces and time-related distractors, on a quantised self-hosted model, and resampling uses a different temperature from the source traces. With seven samples per arm, the mention test can detect only differences of about 7 points, and the lexical mention detector has no false-negative estimate. Unanswered Hindi rollouts rise from 5.7\% to 10.0\% with the distractor there, which the API data does not show, so part of the effect may belong to this setting. The resampling design was first committed after the run and was not publicly registered. We did not test whether mentions harm traces that would otherwise be correct.
 
 \paragraph{Thinking mode.} This set has 10 questions per cell and changes thinking and token budget together.
 

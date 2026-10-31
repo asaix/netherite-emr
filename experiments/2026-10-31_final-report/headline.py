@@ -48,7 +48,7 @@ class Grid:
 
 def ci(boot, point):
     lo, hi = np.percentile(boot, [2.5, 97.5])
-    return [round(float(point), 2), round(float(lo), 2), round(float(hi), 2)]
+    return [round(float(point), 4), round(float(lo), 4), round(float(hi), 4)]
 
 
 def diff(g, a, b, strict=False, **f):
@@ -73,7 +73,7 @@ res = {"bootstrap": {"B": B, "seed": SEED, "unit": "question"}}
 full = Grid(d[d["source"] == "standard"])
 res["full"] = {"questions": full.Q, "acc": {}, "cot_delta": {}, "gap_cot": {}, "gap_direct": {}, "drop": {}, "penalty": {}}
 for c in ["en_direct", "en_cot", "hi_direct", "hi_cot"]:
-    res["full"]["acc"][c] = {s: round(full.acc(c, st)[1], 2) for s, st in [("answered", False), ("strict", True)]}
+    res["full"]["acc"][c] = {s: round(full.acc(c, st)[1], 4) for s, st in [("answered", False), ("strict", True)]}
 res["full"]["cot_delta"]["en"] = splits(full, "en_cot", "en_direct")
 res["full"]["cot_delta"]["hi"] = splits(full, "hi_cot", "hi_direct")
 res["full"]["gap_cot"] = splits(full, "en_cot", "hi_cot")
@@ -109,8 +109,8 @@ sub = Grid(d[d["qn"] < 50])
 CONDS = ["en_direct", "en_cot", "hi_direct", "hi_cot", "clp", "encot", "en_hing", "hi_hing"]
 res["subset"] = {"questions": sub.Q, "acc": {}, "contrast": {}, "by_level": {}, "by_task": {}}
 for c in CONDS:
-    res["subset"]["acc"][c] = {s: round(sub.acc(c, st)[1], 2) for s, st in [("answered", False), ("strict", True)]}
-    res["subset"]["acc"][c]["by_ins"] = {i: {s: round(sub.acc(c, st, ins=i)[1], 2) for s, st in [("answered", False), ("strict", True)]} for i in INS}
+    res["subset"]["acc"][c] = {s: round(sub.acc(c, st)[1], 4) for s, st in [("answered", False), ("strict", True)]}
+    res["subset"]["acc"][c]["by_ins"] = {i: {s: round(sub.acc(c, st, ins=i)[1], 4) for s, st in [("answered", False), ("strict", True)]} for i in INS}
 PAIRS = {"clp-hi_cot": ("clp", "hi_cot"), "clp-hi_direct": ("clp", "hi_direct"), "encot-hi_cot": ("encot", "hi_cot"),
          "encot-hi_direct": ("encot", "hi_direct"), "encot-clp": ("encot", "clp"), "en_cot-encot": ("en_cot", "encot"),
          "en_cot-hi_cot": ("en_cot", "hi_cot"), "en_cot-clp": ("en_cot", "clp"), "en_hing-en_cot": ("en_hing", "en_cot"),
@@ -118,9 +118,9 @@ PAIRS = {"clp-hi_cot": ("clp", "hi_cot"), "clp-hi_direct": ("clp", "hi_direct"),
 for k, (a, b) in PAIRS.items():
     res["subset"]["contrast"][k] = splits(sub, a, b)
 for l in LEVELS:
-    res["subset"]["by_level"][l] = {c: {s: round(sub.acc(c, st, difficulty=l)[1], 2) for s, st in [("answered", False), ("strict", True)]} for c in CONDS}
+    res["subset"]["by_level"][l] = {c: {s: round(sub.acc(c, st, difficulty=l)[1], 4) for s, st in [("answered", False), ("strict", True)]} for c in CONDS}
 for t in TASKS:
-    res["subset"]["by_task"][t] = {c: {s: round(sub.acc(c, st, task=t)[1], 2) for s, st in [("answered", False), ("strict", True)]} for c in CONDS}
+    res["subset"]["by_task"][t] = {c: {s: round(sub.acc(c, st, task=t)[1], 4) for s, st in [("answered", False), ("strict", True)]} for c in CONDS}
 
 ba, pa = sub.acc("encot", False)
 bb, pb = sub.acc("hi_cot", False)
